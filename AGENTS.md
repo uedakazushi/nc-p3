@@ -1,4 +1,4 @@
-# ASZ4 Codex 研究指示 — 2026-11-12 / v1
+# ASZ4 Codex 研究指示 — 2026-11-12 / v2
 
 最初に `research/plan_ja.tex` を読み、`research/notes_ja.tex`、`research/BASELINE.md`、`research/STATE.json`、`papers/asz4_classification.tex` の順に確認する。**目的は4次元 quadratic AS-regular Z-algebra の完全分類**であり、`as4` のgraded分類の移植ではない。未完成の分類を完成と報告しない。
 
@@ -13,7 +13,11 @@
 
 ## 作業順と成果
 
-最優先 `Z4-WINDOW-001`: 4周期同型を選んだ二次代数の四窓/関係空間群oidを定式化し、完全なゲージ同型を証明。次 `Z4-FORGET-002`: 周期同型を忘れるファイバーと4周期性からの還元。次 `PERIOD-STRATA-003`: 1/2/4の各軌跡、周期2族の特殊値/族内同型。次 `Z4-AS-004`: AS性の必要十分条件と閉値上の計算証明。次 `GLOBAL-005`: 全被覆、全同型、モジュライ成分を判定。価値の大きい発見で順序を柔軟に変更してよい。
+**現在の最優先は `Z4-AS-004`**：四窓の双対Eの次数0--5の有限Frobenius条件と元のKoszul性を結び、全特殊値でのAS正則性の必要十分条件と有限atlasを作る。次の課題は `PERIOD-STRATA-003`（既存2/4周期族への有限軌道条件の適用、特殊値と同型）と `Z4-FORGET-002`（幾何学的点ではFrobenius標準化で解決済み、相対族とstackの差）。`GLOBAL-005`では全被覆と成分を分類する。
+
+**到達済みの構造結果**：原稿 `thm:canonical-four` で、Koszul双対の最高次数traceから得るFrobenius標準4周期同型は全traceの選択について頂点スカラー共役となる。`cor:canonical-slice` により、標準化された四窓のG軌道は裸のZ代数の幾何学的同型類と一対一。`prop:canonical-matrix` で四つの4×4積行列 `P_i^T=Q_i` に帰着。`thm:finite-period-test` で周期1/2/4を四つの可逆写像 `g_i` と関係空間の有限多項式条件で判定。`prop:finite-frobenius` の有限条件からKoszul性を誤って導かない。
+
+既存の2周期族について `A(λ)(1)=A(-λ)` だが、最小周期2の点では `A(λ)≄A(-λ)`（添字保持同型）を証明済み。添字を一つ平行移動する操作を、今の分類で同型として扱わない。
 
 毎回「対象域・具体命題・依存・検証」を最初に確定し、計算を走らせる前に何の含意を証明するか決める。巨大な係数消去を目的化せず、既知のKoszul–Frobenius・helix理論で先に縮約する。新しい議論は現行論文の適切な箇所に組み込み、過去版のappend-only追記を作らない。
 
