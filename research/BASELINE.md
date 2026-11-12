@@ -22,7 +22,7 @@
 - I. Mori, A. Nyman, *A categorical characterization of quantum projective Z-spaces*, Applied Categorical Structures 33 (2025), DOI https://doi.org/10.1007/s10485-025-09806-2, arXiv:2307.15253。周期の定義、AS-regular Zとqgr、特にLemma 2.20（版による番号差は原稿照合）。
 - M. Van den Bergh, *Non-commutative quadrics*, IMRN (2011), arXiv:0807.3753。3次元quadraticの1周期性とcubicの違いの比較。
 - J. J. Zhang, *Twisted graded algebras and equivalences of graded categories*, Proc. LMS 72 (1996), 281–311。Zhang twistの一般概念（詳細な等価条件の適用は一次資料で再確認）。
-- S. J. Sierra, *G-algebras, twistings, and equivalences of graded categories*, Algebr. Represent. Theory 14 (2011)（正確な巻・頁は今回未照合；引用前に確認）、arXiv:math/0608791。graded categoryの同値・twisting system。
+- S. J. Sierra, *G-algebras, twistings, and equivalences of graded categories*, Algebras and Representation Theory **14** (2011), no. 2, 377–390, DOI https://doi.org/10.1007/s10468-009-9193-y, arXiv:math/0608791。graded categoryの同値・twisting system。書誌情報はエディンバラ大学の公開出版記録で照合。
 - P. Belmansの[4d-AS-regularデータベース](https://4d-as.ncag.info/)（https://github.com/pbelmans/4d-as, 2026年閲覧）。graded側の既知族56件の検索・比較に有用。ただし一般ファイバー中心であり、完成した4次元Z代数の分類でも完全な全閉値網羅でもない。サイトの引用 DOI 10.5281/zenodo.21296619（サイトで表示、原リリースとの照合は未実施）。
 
 上記の外部結果の新規性・仮定を推測しない。ASZ4の定理の証明で依存する結果は、実際の引用版の箇所を再確認する。
