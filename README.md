@@ -29,11 +29,13 @@
 
 さらにFrobenius標準四窓では、裸のCの最小周期1/2/4を、四つの可逆写像 \(g_i:V_i\to V_{i+p}\) が \((g_i\otimes g_{i+1})R_i=R_{i+p}\) を満たすかという有限可解性で完全に判定できる（定理 `thm:finite-period-test`）。
 
+二つの既知の標準AS正則Z代数の**添字保持同型**も、Frobenius標準四窓の関係行列を比較する同じ212未知数・388式で必要十分に判定できます（系 `cor:finite-isom-test`）。
+
 周期の存在はさらに、4個の\(16\times6\)関係行列と未知\(4\times4\)行列・補助\(6\times6\)行列による **212変数・388式の有限多項式系**に書けます。候補を厳密な有理数階数で検証する[証明書検証器](computations/verify_period_witness.py)も追加・実行済みです。
 
 既存as4の2周期族 \(A(\lambda)\) では \(A(\lambda)(1)=A(-\lambda)\) だが、最小周期2では \(A(\lambda)\not\simeq A(-\lambda)\)（添字保持同型）。添字平行移動を誤ってmoduli同型に読み替えない。標準例の外積代数のtrace符号規格化は [正確な検証コード](computations/verify_exterior_trace.py) で確認済み。
 
-**証明全文**：[分類論文](papers/asz4_classification.tex)（v5）。既存の最小周期2/4と非1周期的平坦族は引き続き [as4の周期性研究](https://github.com/uedakazushi/as4/tree/main/research/z_periodicity) を参照し、重複実装を避ける。
+**証明全文**：[分類論文](papers/asz4_classification.tex)（v6）。既存の最小周期2/4と非1周期的平坦族は引き続き [as4の周期性研究](https://github.com/uedakazushi/as4/tree/main/research/z_periodicity) を参照し、重複実装を避ける。
 
 ## 残る核心：Z4-AS-004
 
