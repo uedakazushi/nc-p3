@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project_id": "asz4",
   "date": "2026-11-12",
-  "version": 2,
+  "version": 3,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/asz4/main",
   "field": "algebraically closed char 0",
@@ -137,10 +137,10 @@
     }
   ],
   "validation": {
-    "github_commit_source": "main writes and explicit readback of updated mathematics; final audit to follow",
-    "static_structure": "pending fresh audit after revision",
-    "python_checker_execution": "not_run",
-    "latexmk_compilation": "not_run",
+    "github_commit_source": "all 15 ASZ4 project files read back from GitHub main; validation report v3 saved",
+    "static_structure": "PASS: 15 remote files, three TeX sources bracket/environment audit; 20 unique labels, 25 refs resolved, 5 bib keys and 8 cites, both executed Python sources match Git blobs",
+    "python_checker_execution": "not_run (no cloned working tree in local runtime)",
+    "latexmk_compilation": "not_run (no cloned working tree in local runtime)",
     "as4_periodicity_code_rerun": "not_run",
     "formal_proof": "not_done",
     "independent_peer_review": "not_done",
