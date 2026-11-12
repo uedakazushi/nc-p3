@@ -7,13 +7,12 @@
   "static_checks": {
     "result": "PASS",
     "details": [
-      "15 required project and computational files fetched from remote main",
-      "research state and VS Code JSON parsed",
-      "no missing research/STATE.json document targets",
-      "3 LuaLaTeX source brace and environment counts balanced (static check only)",
-      "20 distinct TeX labels; 25 internal references resolved",
-      "5 bibliography keys covering all 8 citation uses",
-      "both Python computations exactly match the local executed Git blobs"
+      "15 ASZ4 source/config/computation files read back from main",
+      "all state document references exist, JSON parsed",
+      "3 LuaLaTeX documents have balanced TeX braces/environments under static lexical check; not a compile",
+      "21 unique paper labels and 26 internal references resolved",
+      "5 bibliography keys and all 8 citations resolved",
+      "both exact Python scripts matched locally executed Git blobs"
     ]
   },
   "computations": [
@@ -34,17 +33,17 @@
   ],
   "theorem_proof_status": "mathematical proofs written in papers/asz4_classification.tex; logical checks performed but independent refereeing and formal verification not claimed",
   "not_executed": [
-    "scripts/check_project.py against a cloned complete GitHub checkout (network DNS unavailable in runtime)",
-    "LuaLaTeX/latexmk build of the complete source tree",
-    "as4 periodicity scripts verify_periodicity.py and verify_period4.py for this work unit",
-    "full noncommutative AS-regular locus computation",
-    "general polynomial-system elimination for all periods/coefficients",
-    "external referee review and formal proof checking"
+    "LuaLaTeX/latexmk compile of complete GitHub source tree (local runtime cannot clone GitHub)",
+    "scripts/check_project.py in a cloned repository",
+    "as4 periodicity code rerun in this work unit",
+    "any symbolic elimination over the complete 212-variable polynomial systems",
+    "full AS-regularity/Koszul sufficiency conditions for arbitrary four windows",
+    "independent peer review and formal verification"
   ],
   "open_obligations": [
-    "Koszul exactness and AS-regular sufficiency beyond finite Frobenius rank test",
-    "all closed special parameter families and orbit elimination",
-    "relative-family or moduli-stack descent of canonical Frobenius marking",
-    "global classification and irreducible components"
+    "Koszul exactness and all-fiber AS-regular sufficiency for four-window data",
+    "eliminate 212-variable isomorphism equations in actual families and prove full orbit classification",
+    "relative-family and moduli-stack descent of Frobenius normalization",
+    "global moduli irreducible components and full exhaustiveness"
   ]
 }
