@@ -1,6 +1,6 @@
 # ASZ4 — 4次元 quadratic AS-regular Z-algebra の完全分類
 
-**2026-11-12 / v2・研究継続。分類未完。GitHub `main` を正本とする。**
+**2026-11-12 / v3・研究継続。分類未完。GitHub `main` を正本とする。**
 
 再開時は [研究方針](research/plan_ja.tex) → [Codex指示](AGENTS.md) → [研究ノート](research/notes_ja.tex) → [分類原稿](papers/asz4_classification.tex) の順に読む。次の最優先課題は **Z4-AS-004**（Koszul/AS正則な四窓locusの分類）。
 
@@ -29,9 +29,11 @@
 
 さらにFrobenius標準四窓では、裸のCの最小周期1/2/4を、四つの可逆写像 \(g_i:V_i\to V_{i+p}\) が \((g_i\otimes g_{i+1})R_i=R_{i+p}\) を満たすかという有限可解性で完全に判定できる（定理 `thm:finite-period-test`）。
 
+周期の存在はさらに、4個の\(16\times6\)関係行列と未知\(4\times4\)行列・補助\(6\times6\)行列による **212変数・388式の有限多項式系**に書けます。候補を厳密な有理数階数で検証する[証明書検証器](computations/verify_period_witness.py)も追加・実行済みです。
+
 既存as4の2周期族 \(A(\lambda)\) では \(A(\lambda)(1)=A(-\lambda)\) だが、最小周期2では \(A(\lambda)\not\simeq A(-\lambda)\)（添字保持同型）。添字平行移動を誤ってmoduli同型に読み替えない。標準例の外積代数のtrace符号規格化は [正確な検証コード](computations/verify_exterior_trace.py) で確認済み。
 
-**証明全文**：[分類論文](papers/asz4_classification.tex)（v4）。既存の最小周期2/4と非1周期的平坦族は引き続き [as4の周期性研究](https://github.com/uedakazushi/as4/tree/main/research/z_periodicity) を参照し、重複実装を避ける。
+**証明全文**：[分類論文](papers/asz4_classification.tex)（v5）。既存の最小周期2/4と非1周期的平坦族は引き続き [as4の周期性研究](https://github.com/uedakazushi/as4/tree/main/research/z_periodicity) を参照し、重複実装を避ける。
 
 ## 残る核心：Z4-AS-004
 
@@ -47,6 +49,7 @@ latexmk papers/asz4_classification.tex
 latexmk research/plan_ja.tex
 latexmk research/notes_ja.tex
 python3 computations/verify_exterior_trace.py
+python3 computations/verify_period_witness.py
 ```
 
 TeX Live / LuaLaTeX / latexmk / luatexja を使用し、PDF・auxは追跡せず `build/` に出力。GitHub Actionsは使わない。個々の検算は内容を説明したコードで実行する。GitHub `main` に直接fast-forwardで保存し、push成功時にLibraryへ重複保存しない。GitHubへの書込みが失敗した場合のみLibraryへ緊急退避する。
