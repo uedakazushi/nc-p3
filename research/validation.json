@@ -1,24 +1,50 @@
 {
   "date": "2026-11-12",
-  "version": 1,
-  "scope": "ASZ4 initialization",
-  "remote_files_refetched": 13,
-  "checks_done": [
-    "GitHub main readback of all 13 files",
-    "JSON syntax of project state and VS Code settings",
-    "all state document references exist",
-    "static brace and environment checks of three LuaLaTeX documents",
-    "no duplicate six theorem labels",
-    "five bibliography entries resolve all seven citation uses"
+  "version": 3,
+  "scope": "ASZ4 v3 Frobenius-normalized four-window research / indexed periodicity",
+  "canonical": "github:uedakazushi/asz4/main",
+  "files_read_back": 15,
+  "static_checks": {
+    "result": "PASS",
+    "details": [
+      "15 required project and computational files fetched from remote main",
+      "research state and VS Code JSON parsed",
+      "no missing research/STATE.json document targets",
+      "3 LuaLaTeX source brace and environment counts balanced (static check only)",
+      "20 distinct TeX labels; 25 internal references resolved",
+      "5 bibliography keys covering all 8 citation uses",
+      "both Python computations exactly match the local executed Git blobs"
+    ]
+  },
+  "computations": [
+    {
+      "path": "computations/verify_exterior_trace.py",
+      "git_blob": "9b405622b981535de5450c4bfaa80c275121d3d8",
+      "result": "PASS",
+      "scope": "four-vertex exterior dual trace pairing and arbitrary rational rescaling formula",
+      "environment": "Python 3, stdlib Fraction, local exact script bytes match GitHub blob"
+    },
+    {
+      "path": "computations/verify_period_witness.py",
+      "git_blob": "65ce96907baff0daf764688e76874be2e8d9e81c",
+      "result": "PASS",
+      "scope": "four period-2 PBW relation ranks, p2 identity witness, p1 commutative identity witness, lambda -> -lambda index shift; FAILURE of identity p1 witness is not proof of nonexistence",
+      "environment": "Python 3, stdlib Fraction, local exact script bytes match GitHub blob"
+    }
   ],
-  "checks_not_done": [
-    "run scripts/check_project.py from a cloned checkout",
-    "compile three documents using LuaLaTeX/latexmk",
-    "rerun as4 periodicity verification scripts",
-    "independent verification of published-source assumptions",
-    "prove AS-regular finite necessary-and-sufficient locus",
-    "finish classification"
+  "theorem_proof_status": "mathematical proofs written in papers/asz4_classification.tex; logical checks performed but independent refereeing and formal verification not claimed",
+  "not_executed": [
+    "scripts/check_project.py against a cloned complete GitHub checkout (network DNS unavailable in runtime)",
+    "LuaLaTeX/latexmk build of the complete source tree",
+    "as4 periodicity scripts verify_periodicity.py and verify_period4.py for this work unit",
+    "full noncommutative AS-regular locus computation",
+    "general polynomial-system elimination for all periods/coefficients",
+    "external referee review and formal proof checking"
   ],
-  "result": "initialization and static refetch verified; mathematical classification incomplete",
-  "canonical": "github:uedakazushi/asz4/main"
+  "open_obligations": [
+    "Koszul exactness and AS-regular sufficiency beyond finite Frobenius rank test",
+    "all closed special parameter families and orbit elimination",
+    "relative-family or moduli-stack descent of canonical Frobenius marking",
+    "global classification and irreducible components"
+  ]
 }
