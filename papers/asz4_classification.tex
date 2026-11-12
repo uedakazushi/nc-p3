@@ -24,7 +24,7 @@
 \title{四次元二次AS正則\texorpdfstring{$\ZZ$}{Z}-代数の分類\\
 \large 4周期表示・1周期構造の忘却・全分類への有限atlas}
 \author{}
-\date{2026年11月12日\quad 研究原稿 v3（完全分類は未完成）}
+\date{2026年11月12日\quad 研究原稿 v4（完全分類は未完成）}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -560,6 +560,37 @@ $\lambda=0$は1周期、ある非空Zariski開集合では最小周期2である
 また別の例で最小周期4が実現される。
 これらの例が全$\ZZ$-moduliのどの既約成分に属するか、
 全特殊値の族内外同型がどうなるかは未解決である。
+
+\begin{proposition}[添字移動とパラメータ符号]\label{prop:period-two-sign}
+上の2周期族$A(\lambda)$について、表示により
+\[
+ A(\lambda)(1)=A(-\lambda)
+\]
+が厳密に成り立つ。
+とくに$A(\lambda)$が最小周期2であるとき、
+$A(\lambda)$と$A(-\lambda)$は
+\emph{添字保持$\mathbb Z$-代数として非同型}である。
+特に既存の非1周期性の証明が適用できる$\lambda=1$について
+$A(1)\not\simeq A(-1)$である。
+\end{proposition}
+\begin{proof}
+六つの二次関係のうち添字$i$に依存するものは
+$XZ+ZX=(-1)^i\lambda WY$だけである。
+すべての始点を$i+1$に移すと係数は
+$(-1)^{i+1}\lambda=(-1)^i(-\lambda)$となるため、
+自由経路$\mathbb Z$-代数と二次関係イデアルが対応し、
+$A(\lambda)(1)=A(-\lambda)$が表示上厳密に成立する。
+もし$A(\lambda)\simeq A(-\lambda)$なら
+$A(\lambda)\simeq A(\lambda)(1)$となり、
+最小周期2に矛盾する。
+$\lambda=1$での最小周期2は既存の非1周期性定理を使う。
+\end{proof}
+\begin{remark}
+添字全体の平行移動も同一視する\emph{別の分類}では
+$\lambda$と$-\lambda$を同一視する余地がある。
+しかし本稿の同値関係は添字保持同型なので、この同一視は誤りとなる。
+$A(0)$は1周期的であり、上の非同型性は$\lambda=0$には適用しない。
+\end{remark}
 
 今後の分類では、(i) $\mathfrak P$に課すKoszul/AS条件、
 (ii) $(C,\tau_4)\mapsto C$の同型群oidのファイバー、
