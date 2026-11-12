@@ -155,6 +155,23 @@ PBW/低次数のHilbert値、全Koszul解消の正確性は異なる条件。
 証明は\texttt{as4}の元原稿・コードから再利用する。
 \end{enumerate}
 
+\section{2周期例での添字移動の非同型性}
+既存の$A(\lambda)$は、関係の唯一の添字依存が
+$XZ+ZX=(-1)^i\lambda WY$なので、
+\[
+ A(\lambda)(1)=A(-\lambda)
+\]
+が表示上厳密に成立する。
+しかし最小周期2の$\lambda$では
+$A(\lambda)\not\simeq A(\lambda)(1)$なので
+\[
+ A(\lambda)\not\simeq A(-\lambda)
+\]
+である。特に既存の非1周期性証明がある$\lambda=1$で成立する。
+論文の命題\texttt{prop:period-two-sign}を参照。
+添字全体の平行移動を同一視する\emph{別の}moduliとの違いを明示する。
+一般$\lambda,\mu$の同型条件は未解決。
+
 \section{検証と依存}
 既知の周期性結果・検証コードへの固定SHAは
 \texttt{research/BASELINE.md}に記録した。
