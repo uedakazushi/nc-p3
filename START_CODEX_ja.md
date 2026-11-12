@@ -1,6 +1,6 @@
 # Codex 起動指示 — ASZ4
 
-\`uedakazushi/asz4\` の \`main\` 上で研究する。まず \`research/plan_ja.tex\` → \`AGENTS.md\` → \`research/STATE.json\` → \`papers/asz4_classification.tex\` → \`research/notes_ja.tex\` → \`research/BASELINE.md\` を読む。
+`uedakazushi/asz4` の `main` 上で研究する。まず `research/plan_ja.tex` → `AGENTS.md` → `research/STATE.json` → `papers/asz4_classification.tex` → `research/notes_ja.tex` → `research/BASELINE.md` を読む。
 
 **現在の具体的課題は Z4-AS-004。** 構造定理は既に原稿に統合したので、四窓群oidやFrobenius標準化の同じ整理を繰り返さずにKoszul条件・全AS正則性の正確な証明へ進む。
 
