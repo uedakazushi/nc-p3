@@ -84,12 +84,14 @@
     }
   ],
   "validation": {
-    "github_commit_source": "written_and_refetch_to_confirm",
-    "paper_latex_build": "not_run_yet",
-    "code_checked": "static_project_checker_pending",
+    "github_commit_source": "created_and_refetched_12_files_on_main_2026-11-12",
+    "static_structure": "PASS:12 files present, no duplicate TeX labels/bibitems, citations resolved, no unmatched braces in tracked TeX (JS audit)",
+    "python_checker_execution": "not_run",
+    "latexmk_compilation": "not_run",
     "as4_periodicity_code_rerun": "not_run",
     "formal_proof": "not_done",
-    "independent_peer_review": "not_done"
+    "independent_peer_review": "not_done",
+    "citation_reference_added": "Sierra publication data verified at University of Edinburgh record; as4 primary theorem assumptions need article-level review"
   },
   "document_paths": {
     "plan": "research/plan_ja.tex",
