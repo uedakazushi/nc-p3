@@ -144,8 +144,8 @@
     }
   ],
   "validation": {
-    "github_commit_source": "all 15 ASZ4 project files read back from GitHub main; validation report v3 saved",
-    "static_structure": "PASS: 15 remote files, three TeX sources bracket/environment audit; 20 unique labels, 25 refs resolved, 5 bib keys and 8 cites, both executed Python sources match Git blobs",
+    "github_commit_source": "all 15 ASZ4 sources/configuration/computation files fetched from remote GitHub main; validation v3 saved",
+    "static_structure": "PASS: 15 remote files; 3 LuaLaTeX source brace/environment audit; 21 unique theorem labels and 26 refs resolved, 5 bibitems with 8 citations; two exact Python scripts match GitHub blobs",
     "python_checker_execution": "not_run (no cloned working tree in local runtime)",
     "latexmk_compilation": "not_run (no cloned working tree in local runtime)",
     "as4_periodicity_code_rerun": "not_run",
