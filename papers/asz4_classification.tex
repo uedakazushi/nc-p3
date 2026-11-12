@@ -24,7 +24,7 @@
 \title{四次元二次AS正則\texorpdfstring{$\ZZ$}{Z}-代数の分類\\
 \large 4周期表示・1周期構造の忘却・全分類への有限atlas}
 \author{}
-\date{2026年11月12日\quad 研究原稿 v4（完全分類は未完成）}
+\date{2026年11月12日\quad 研究原稿 v5（完全分類は未完成）}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -440,6 +440,41 @@ $f'$が二次関係を保つことから
 一般の4周期同型を選んだ場合には、この補正が可能とは
 限らないので、Frobenius標準という仮定が不可欠である。
 \end{proof}
+
+\begin{proposition}[周期の有限多項式判定式]\label{prop:period-polynomial-system}
+定理\ref{thm:finite-period-test}の標準四窓に対し、
+$R_i$の基底を列とする階数6の$16\times6$行列を
+$M_i$と書く。$p=1$または$2$の周期同型が存在するための
+必要十分条件は、$4$個の$4\times4$行列
+$G_i$、$4$個の$6\times6$行列$H_i$、
+および$4$個のスカラー$u_i$に関して
+\begin{equation}\label{eq:period-polynomial-system}
+ (G_i\otimes G_{i+1})M_i=M_{i+p}H_i,\qquad
+ u_i\det G_i-1=0\qquad(i\in\ZZ/4)
+\end{equation}
+が解を持つことである。
+これは64個の$G_i$の成分、144個の$H_i$の成分、
+4個の$u_i$、合計212個の未知数に対する
+384個の行列成分等式と4個の可逆性等式である。
+$H_i$の行列式非零条件は追加する必要がない。
+\end{proposition}
+\begin{proof}
+$G_i$が可逆なら$(G_i\otimes G_{i+1})M_i$は階数6なので、
+右辺を与える$H_i$も自動的に階数6となる。
+従って式\eqref{eq:period-polynomial-system}は
+$(G_i\otimes G_{i+1})R_i=R_{i+p}$と同値である。
+$G_i$の可逆性は$u_i\det G_i=1$によって
+多項式方程式として表せる。
+定理\ref{thm:finite-period-test}を適用する。
+\end{proof}
+\begin{remark}
+この式は\emph{周期同型の存在}の正確な有限判定式であり、
+特定の候補$G_i$が失敗しても、別の候補の存在を否定しない。
+また式の可解性とAS正則性は別である。
+明示的な候補を有理数の厳密階数計算で検証するコード
+\texttt{computations/verify\_period\_witness.py}を付属させた。
+一般解の消去や全軌道分類は今後の課題である。
+\end{remark}
 
 \begin{corollary}[回転軌道による周期層の記述]\label{cor:period-orbits}
 Frobenius標準の四窓データに対して、
