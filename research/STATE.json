@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project_id": "asz4",
   "date": "2026-11-12",
-  "version": 1,
+  "version": 2,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/asz4/main",
   "field": "algebraically closed char 0",
@@ -49,55 +49,95 @@
       "claim": "For p=1 or 2, a chosen 4-period sigma4 equal to a (4/p)-power of a p-period induces compatible p-periodic diagonal four-window data, and conversely",
       "status": "proof_written_not_externally_refereed",
       "proof": "papers/asz4_classification.tex:prop:compatible-periodic-windows"
-    }
-  ],
-  "next_task_id": "Z4-WINDOW-001",
-  "tasks": [
-    {
-      "id": "Z4-WINDOW-001",
-      "priority": 1,
-      "status": "in_progress",
-      "objective": "Turn four-window groupoid theorem into a verified AS-regular finite chart, identify exactness/Frobenius conditions without losing special fibers",
-      "done_when": "proved necessary-sufficient finite conditions on four R_i, with reproducible tests and application to period2/4 examples"
     },
     {
-      "id": "Z4-FORGET-002",
-      "priority": 2,
-      "status": "planned",
-      "objective": "Classify fibers of forgetting chosen tau4 and the genuine Z-algebra isomorphism relation; compare one-periodic graded forgetful morphism",
-      "dependency": "Z4-WINDOW-001"
+      "id": "R7",
+      "claim": "Frobenius/Nakayama 4-periodicity on the quadratic dual from any two top traces differs by diagonal vertex conjugacy; canonical-marked and unmarked standard ASZ4 have the same geometric isomorphism classes",
+      "status": "proved_in_manuscript_not_externally_refereed",
+      "proof": "papers/asz4_classification.tex:thm:canonical-four and cor:canonical-slice",
+      "dependence": "local Koszul-Frobenius duality"
+    },
+    {
+      "id": "R8",
+      "claim": "On the canonical four-window, canonical marking is equivalent to four trace-pairing matrix equalities P_i^T=Q_i with nonzero traces",
+      "status": "proved_in_manuscript",
+      "proof": "papers/asz4_classification.tex:prop:canonical-matrix"
+    },
+    {
+      "id": "R9",
+      "claim": "Frobenius property of quadratic dual in strict four-window can be certified from degrees 0..5 and complementary multiplication pairing ranks, not sufficient for Koszulity",
+      "status": "proved_finite_criterion_only",
+      "proof": "papers/asz4_classification.tex:prop:finite-frobenius"
+    },
+    {
+      "id": "R10",
+      "claim": "For canonical Frobenius four-window, an unmarked period p exists iff 4 invertible maps g_i satisfy (g_i⊗g_{i+1})R_i=R_{i+p}; hence periods 1/2/4 are finite orbital solvability tests",
+      "status": "proved_in_manuscript",
+      "proof": "papers/asz4_classification.tex:thm:finite-period-test and cor:period-orbits"
+    },
+    {
+      "id": "R11",
+      "claim": "A(lambda)(1)=A(-lambda) strictly, while A(lambda) is not isomorphic to A(-lambda) for every parameter with minimal period 2 (in particular lambda=1)",
+      "status": "proved_using_existing_as4_non1_periodicity",
+      "proof": "papers/asz4_classification.tex:prop:period-two-sign"
+    },
+    {
+      "id": "R12",
+      "claim": "Polynomial 4-space exterior dual trace alternating (-1)^i normalizes Nakayama to strict period4; exact Python check passed",
+      "status": "worked_example_computed_exactly",
+      "proof": "research/notes_ja.tex",
+      "code": "computations/verify_exterior_trace.py",
+      "verification": "local file hash matched GitHub Git blob sha 9b405622b981535de5450c4bfaa80c275121d3d8"
+    }
+  ],
+  "next_task_id": "Z4-AS-004",
+  "tasks": [
+    {
+      "id": "Z4-AS-004",
+      "priority": 1,
+      "status": "in_progress",
+      "objective": "Classify locus of Koszul AS-regular relations inside four-window; Frobenius ranks finite (R9), but Koszul exactness and all boundary fibers need proof",
+      "dependency": "R3,R9"
     },
     {
       "id": "PERIOD-STRATA-003",
-      "priority": 3,
-      "status": "planned",
-      "objective": "Classify period 1/2/4 loci including all exceptional parameters in existing AS4 period2 family, specializations, stabilizers and orbit equivalence",
-      "dependency": "Z4-WINDOW-001"
+      "priority": 2,
+      "status": "finite_test_proved_parameter_classification_pending",
+      "objective": "Apply finite 4-matrix orbit condition on canonical locus to period1/2/4 and classify special coefficients, family-wise isomorphisms and component relations",
+      "dependency": "R10"
     },
     {
-      "id": "Z4-AS-004",
+      "id": "Z4-WINDOW-001",
+      "priority": 3,
+      "status": "structural_phase_completed",
+      "objective": "Proved 4-window quadratic marked groupoid and canonical Frobenius normalization on geometric classes; full AS-locus transferred to Z4-AS-004",
+      "done_when": "marked quadratic 4-window groupoid; canonical Frobenius normalization; concrete finite matrix and period criterion (completed at theorem level)"
+    },
+    {
+      "id": "Z4-FORGET-002",
       "priority": 4,
-      "status": "planned",
-      "objective": "Full closed-fiber AS-regular sufficiency and groupoid moduli for four-window data",
-      "dependency": "Z4-WINDOW-001"
+      "status": "point_level_completed_stack_pending",
+      "objective": "Canonical-marked vs unmarked geometric isomorphism classes proved equivalent; relative families/stack and descent remain unresolved",
+      "dependency": "R7"
     },
     {
       "id": "GLOBAL-005",
       "priority": 5,
       "status": "planned",
       "objective": "Prove exhaustiveness, family-wise and between-family isomorphism tests, irreducible components and specialization",
-      "dependency": "Z4-FORGET-002"
+      "dependency": "Z4-AS-004,Z4-FORGET-002,PERIOD-STRATA-003"
     }
   ],
   "validation": {
-    "github_commit_source": "created_and_refetched_13_files_on_main_2026-11-12",
-    "static_structure": "PASS:13 files present; 6 distinct TeX labels, 5 bibitems/7 citations resolved, brace/environment syntax static audit",
+    "github_commit_source": "main writes and explicit readback of updated mathematics; final audit to follow",
+    "static_structure": "pending fresh audit after revision",
     "python_checker_execution": "not_run",
     "latexmk_compilation": "not_run",
     "as4_periodicity_code_rerun": "not_run",
     "formal_proof": "not_done",
     "independent_peer_review": "not_done",
-    "citation_reference_added": "Sierra publication data verified at University of Edinburgh record; as4 primary theorem assumptions need article-level review"
+    "citation_reference_added": "Sierra publication data verified at University of Edinburgh record; as4 primary theorem assumptions need article-level review",
+    "new_exterior_python": "PASS exact rational computation: 4 vertices; Git blob sha 9b405622b981535de5450c4bfaa80c275121d3d8 matches executed bytes"
   },
   "document_paths": {
     "plan": "research/plan_ja.tex",
@@ -107,7 +147,7 @@
     "instructions": "AGENTS.md"
   },
   "progress": {
-    "revision": 1,
-    "meaning": "initial independent finite four-window and compatible period-diagonal lemmas; AS regular locus and full classification still open"
+    "revision": 2,
+    "meaning": "Frobenius canonical period marking unique up to diagonal gauge, point-level orbit classification of unmarked C, finite matrix periodicity tests and A(lambda) shift-sign distinction"
   }
 }
