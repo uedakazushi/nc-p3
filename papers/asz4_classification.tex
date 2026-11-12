@@ -232,6 +232,46 @@ gradedの同型条件を$\ZZ$-同型条件とみなしてはならない。
 Nakayama自己同型やCY性は選んだgraded表示に依存するため、
 Z側の不変量としてそのまま採用しない。
 
+\begin{proposition}[整合する周期同型と四窓の対角表示]\label{prop:compatible-periodic-windows}
+$(C,\tau_4)$を4周期同型付き二次$\mathbb Z$-代数とし，
+$p=1$または$2$とする。
+$\sigma_p:C\xrightarrow{\sim}C(p)$が存在し，
+その$4/p$回の合成が$\tau_4$に等しいとする。
+このとき四窓の基底を適切に選ぶと，
+$V_i=k^4$の同定の下で
+\[
+ R_i=R_{i+p}\quad(i\in\mathbb Z/4)
+\]
+が成立する。
+逆に四窓の座標でこの等式が成立するならば，
+指定した4周期同型$\tau_4$を$(4/p)$乗として与える
+$p$周期同型が存在する。
+\end{proposition}
+\begin{proof}
+$p$個の剰余類代表$i=0,\dots,p-1$の次数一空間に基底を選ぶ。
+それらの基底を$\sigma_p$で整数全体に運ぶと，
+$\sigma_p$は各次数一空間の間で同一の座標を持つ。
+その$(4/p)$乗が$\tau_4$であるため，
+この基底は定理\ref{thm:four-window}で選んだ4周期座標とも両立する。
+$\sigma_p$が二次関係を保つので，$R_i=R_{i+p}$である。
+
+逆に四窓の座標で$R_i=R_{i+p}$ならば，
+頂点$i$から$i+p$への同一座標写像は二次関係空間を保つ。
+命題\ref{prop:period-relations}によって
+$\sigma_p:C\xrightarrow{\sim}C(p)$を定める。
+その$(4/p)$乗は座標上の厳密な4移動，すなわち選んだ$\tau_4$である。
+\end{proof}
+
+\begin{remark}[1周期性と対角軌跡の違い]
+$p=1$では四つの関係空間が同一になる\emph{完全対角}，
+$p=2$では$(R_0,R_1,R_0,R_1)$型の\emph{二周期対角}が現れる。
+しかしこれは$\tau_4=\sigma_p^{4/p}$という\emph{整合する選択}の結果である。
+ある$C$が1周期的または2周期的であっても，
+\emph{任意に選ばれた}$\tau_4$がその形の根を持つとは限らない。
+従って完全対角軌跡の$G$-軌道を取るだけで，裸の$C$の
+1周期的部分全体を分類したとは言えない。
+\end{remark}
+
 \section{既存の非1周期例と今後の完全分類}
 既存研究\texttt{as4/research/z\_periodicity}では、
 $\varepsilon_i=(-1)^i$として各位置の四生成元$X,Y,Z,W$に
