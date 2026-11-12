@@ -1,0 +1,15 @@
+# Build products: source-only Git policy
+build/
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.pdf
+*.zip
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
