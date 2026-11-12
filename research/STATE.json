@@ -96,6 +96,13 @@
       "proof": "papers/asz4_classification.tex:prop:period-polynomial-system",
       "code": "computations/verify_period_witness.py",
       "computation": "local exact positive-witness and shift-sign checks PASS; executed source matches Git blob 65ce96907baff0daf764688e76874be2e8d9e81c"
+    },
+    {
+      "id": "R14",
+      "claim": "Any two known standard AS-regular Z-algebras, represented by Frobenius-canonical four-window matrices, are index-preserving isomorphic iff a finite polynomial system of 212 unknowns and 388 equations has a solution",
+      "status": "proved_in_manuscript_point_level",
+      "proof": "papers/asz4_classification.tex:cor:finite-isom-test",
+      "limitations": "Does not classify all AS-regular points or make the polynomial system computationally easy"
     }
   ],
   "next_task_id": "Z4-AS-004",
@@ -156,7 +163,7 @@
     "instructions": "AGENTS.md"
   },
   "progress": {
-    "revision": 3,
-    "meaning": "Canonically normalized Frobenius marked 4-window gives point-level unmarked classification and complete finite p-period criterion; explicit finite polynomial equations, checked positive witness for as4 period2 family"
+    "revision": 4,
+    "meaning": "Frobenius canonical orbit classification on geometric isomorphism classes; full finite 212-variable polynomial isomorphism and periodicity criteria; AS/Koszul full-locus classification remains open"
   }
 }
