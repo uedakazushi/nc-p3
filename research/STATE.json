@@ -43,6 +43,12 @@
       "claim": "1-periodic Z-algebras with selected isomorphism correspond to graded algebras; forgetting yields coarser equivalence",
       "status": "proof_written_with_existing_twist_literature",
       "proof": "papers/asz4_classification.tex:prop:graded-period"
+    },
+    {
+      "id": "R6",
+      "claim": "For p=1 or 2, a chosen 4-period sigma4 equal to a (4/p)-power of a p-period induces compatible p-periodic diagonal four-window data, and conversely",
+      "status": "proof_written_not_externally_refereed",
+      "proof": "papers/asz4_classification.tex:prop:compatible-periodic-windows"
     }
   ],
   "next_task_id": "Z4-WINDOW-001",
@@ -99,5 +105,9 @@
     "paper": "papers/asz4_classification.tex",
     "baseline": "research/BASELINE.md",
     "instructions": "AGENTS.md"
+  },
+  "progress": {
+    "revision": 1,
+    "meaning": "initial independent finite four-window and compatible period-diagonal lemmas; AS regular locus and full classification still open"
   }
 }
