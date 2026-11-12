@@ -2,23 +2,22 @@
   "date": "2026-11-12",
   "version": 1,
   "scope": "ASZ4 initialization",
-  "remote_files_refetched": 12,
+  "remote_files_refetched": 13,
   "checks_done": [
-    "GitHub main readback of all initialized sources",
-    "JSON parse of project state and VS Code settings",
+    "GitHub main readback of all 13 files",
+    "JSON syntax of project state and VS Code settings",
     "all state document references exist",
-    "TeX brace balance in 3 documents (static JS check)",
-    "TeX environment count static check",
-    "no duplicate TeX labels",
-    "bibliography keys used by the classification draft are present"
+    "static brace and environment checks of three LuaLaTeX documents",
+    "no duplicate six theorem labels",
+    "five bibliography entries resolve all seven citation uses"
   ],
   "checks_not_done": [
-    "execution of scripts/check_project.py in cloned GitHub checkout",
-    "LuaLaTeX/latexmk build of all three documents",
-    "AS4 period-2/4 exact computation rerun",
-    "formal/peer review of 4-window proof",
-    "verification of sufficiency of regularity conditions",
-    "full classification"
+    "run scripts/check_project.py from a cloned checkout",
+    "compile three documents using LuaLaTeX/latexmk",
+    "rerun as4 periodicity verification scripts",
+    "independent verification of published-source assumptions",
+    "prove AS-regular finite necessary-and-sufficient locus",
+    "finish classification"
   ],
   "result": "initialization and static refetch verified; mathematical classification incomplete",
   "canonical": "github:uedakazushi/asz4/main"
