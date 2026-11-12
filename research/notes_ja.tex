@@ -97,6 +97,34 @@ $E_{i,i+5}=0$なら次数一生成性により全高次が零。
 \emph{ただしKoszul性・AS正則性はこの有限検査から自動ではない。}
 原稿命題\texttt{prop:finite-frobenius}。
 
+\section{周期判定の明示的な多項式系と証明書}
+四窓の$R_i$に階数6の列行列$M_i\in
+\operatorname{Mat}_{16\times6}(k)$を選ぶ。
+Frobenius標準4周期の場合、
+$p=1,2$を判定する有限条件は
+\[
+ (G_i\otimes G_{i+1})M_i=M_{i+p}H_i,\qquad
+ u_i\det G_i=1\quad(i\in\mathbb Z/4),
+\]
+$G_i\in\operatorname{Mat}_{4\times4}$、
+$H_i\in\operatorname{Mat}_{6\times6}$、$u_i\in k$。
+未知数は$4(16+36+1)=212$、行列等式は$4\cdot16\cdot6=384$
+成分、可逆性は4式。
+$G_i$の可逆性と$M_i$の階数6から$H_i$も可逆となる。
+証明は原稿命題\texttt{prop:period-polynomial-system}。
+全方程式の可解性を判定する作業と、
+特定の$G_i$という\emph{正の証明書}を検証する作業は別である。
+
+\texttt{computations/verify\_period\_witness.py}は
+Fractionによる厳密階数計算で正の証明書をチェックする。
+可換4変数多項式環の$p=1$の恒等行列、
+AS4の$A(1)$の$p=2$の恒等行列、
+$A(\lambda)(1)=A(-\lambda)$の表示恒等式はPASS。
+$A(1)$の$p=1$に対する\emph{恒等行列の候補}はFAILしたが、
+これは$p=1$の全候補がないという証明ではない。
+その非存在はas4の点配置の証明に依存する。
+コードとローカル実行ファイルのGit blob SHA一致を確認した。
+
 \section{正確な有効群作用}
 四つの関係空間のGrassmannianに作用する
 $G=\prod_{i=0}^{3}\GL(V_i)$のうち、
