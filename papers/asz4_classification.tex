@@ -24,7 +24,7 @@
 \title{四次元二次AS正則\texorpdfstring{$\ZZ$}{Z}-代数の分類\\
 \large 4周期表示・1周期構造の忘却・全分類への有限atlas}
 \author{}
-\date{2026年11月12日\quad 研究原稿 v5（完全分類は未完成）}
+\date{2026年11月12日\quad 研究原稿 v6（完全分類は未完成）}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -475,6 +475,29 @@ $G_i$の可逆性は$u_i\det G_i=1$によって
 \texttt{computations/verify\_period\_witness.py}を付属させた。
 一般解の消去や全軌道分類は今後の課題である。
 \end{remark}
+
+\begin{corollary}[二つの裸のZ代数の有限同型判定]\label{cor:finite-isom-test}
+$C,C'$を標準14641型とし、それぞれのFrobenius標準4周期同型を
+選んだ有限四窓を階数6の$16\times6$行列
+$M_i,M'_i$で表す。
+\emph{添字を保つ}同型$C\simeq C'$が存在する必要十分条件は、
+4つの$4\times4$行列$G_i$、4つの$6\times6$行列$H_i$、
+4つのスカラー$u_i$について
+\[
+ (G_i\otimes G_{i+1})M_i=M'_iH_i,\qquad
+ u_i\det G_i=1\qquad(i\in\ZZ/4)
+\]
+が可解であることである。
+従って二つの\emph{既にAS正則性が保証された}標準型の
+幾何学的点について、Z代数同型の存在は
+同じ212未知数・388式の有限代数的可解性問題になる。
+\end{corollary}
+\begin{proof}
+系\ref{cor:canonical-slice}により、裸の$C,C'$が同型であることと
+Frobenius標準四窓が$G$の同一軌道にあることは同値。
+それを階数6の関係行列で書けば上の式であり、
+$H_i$の可逆性は$G_i$の可逆性から従う。
+\end{proof}
 
 \begin{corollary}[回転軌道による周期層の記述]\label{cor:period-orbits}
 Frobenius標準の四窓データに対して、
