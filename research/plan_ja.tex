@@ -8,7 +8,7 @@
 \newcommand{\Gr}{\operatorname{Gr}}
 \title{四次元二次AS正則\texorpdfstring{$\ZZ$}{Z}-代数の完全分類\\研究方針と再開手順}
 \author{}
-\date{2026年11月12日\quad 第2版}
+\date{2026年11月12日\quad 第3版}
 \begin{document}
 \maketitle
 \section{最初に読む：目的と達成基準}
@@ -80,6 +80,11 @@ Frobenius標準化条件は適切な最高次traceを選べる範囲で
  (g_i\otimes g_{i+1})R_i=R_{i+p}\qquad(i\bmod4)
 \]
 を満たすことと同値。原稿定理\texttt{thm:finite-period-test}。
+さらに\texttt{prop:period-polynomial-system}により、
+周期$p=1,2$を与える四つの$4\times4$行列$G_i$と補助の
+$6\times6$行列$H_i$、逆行列式用変数$u_i$を使い、
+212未知数、384行列成分等式と4可逆性等式へ書ける。
+これは有限条件の定式化であり、全パラメータにおける消去の完成ではない。
 従って1/2/4の周期層は、標準四窓の四つの有限方程式の
 可解性・四重回転軌道として決定できる。
 ただし各層の\emph{パラメータ分類や既約成分}はまだ未解決。
@@ -147,6 +152,8 @@ Koszul双対のquantum determinant/4-helixを優先し、
 定理番号・リンクを保存し、公開原稿のIntroductionで寄与と違いを説明する。
 \begin{verbatim}
 python3 scripts/check_project.py
+python3 computations/verify_exterior_trace.py
+python3 computations/verify_period_witness.py
 latexmk papers/asz4_classification.tex
 latexmk research/plan_ja.tex
 latexmk research/notes_ja.tex
