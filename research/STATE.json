@@ -90,8 +90,8 @@
     }
   ],
   "validation": {
-    "github_commit_source": "created_and_refetched_12_files_on_main_2026-11-12",
-    "static_structure": "PASS:12 files present, no duplicate TeX labels/bibitems, citations resolved, no unmatched braces in tracked TeX (JS audit)",
+    "github_commit_source": "created_and_refetched_13_files_on_main_2026-11-12",
+    "static_structure": "PASS:13 files present; 6 distinct TeX labels, 5 bibitems/7 citations resolved, brace/environment syntax static audit",
     "python_checker_execution": "not_run",
     "latexmk_compilation": "not_run",
     "as4_periodicity_code_rerun": "not_run",
