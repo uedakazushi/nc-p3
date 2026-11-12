@@ -1,0 +1,68 @@
+\documentclass[11pt,a4paper]{ltjsarticle}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,hyperref}
+\usepackage[haranoaji]{luatexja-preset}
+\hypersetup{unicode=true,hidelinks}
+\title{ASZ4研究ノート：有限四窓と周期同型}
+\author{}
+\date{2026年11月12日\quad 第1版}
+\begin{document}
+\maketitle
+\section{現在有効な知識と記法}
+$C=(C_{ij})$を正連結な二次$\mathbb Z$-代数とする。
+$V_i=C_{i,i+1}$，$R_i=\ker(V_i\otimes V_{i+1}\to C_{i,i+2})$と置く。
+標準14641型では$\dim V_i=4$，$\dim R_i=6$。
+$C(r)_{ij}=C_{i+r,j+r}$。
+$\operatorname{Per}(C)=\{r\in\mathbb Z:C\simeq C(r)\}$は部分群であり、
+標準14641型の左右AS双対性から$4\in\operatorname{Per}(C)$。
+最小周期1、2、4が実例で実現し、周期を全閉ファイバーにわたり
+一定と見なすことはできない（既存as4周期性論文を引用）。
+
+\section{証明済み（ASZ4原稿）}
+\emph{4周期同型の選択を保持する}二次代数の群oidは、
+四頂点の$V_i,R_i$および$G=\prod_{i=0}^3\GL(V_i)$の作用群oidで記述できる。
+ここで「厳密4周期的」な基底の選択を含む表現からの主張である。
+証明全文は\texttt{papers/asz4\_classification.tex}の定理
+\texttt{thm:four-window}とその証明。
+Grassmannianのパラメータ全体がAS正則とは主張していない。
+AS正則性の locus のscheme構造・開閉性も未証明。
+
+\section{最重要の論理的落とし穴}
+\begin{itemize}
+\item $C\simeq C(4)$の存在と、$\tau_4:C\to C(4)$の指定の違い。
+四窓の$\GL_4^4$商は$(C,\tau_4)$の分類であって、$C$単独の分類ではない。
+\item 任意の1周期同型$\sigma:C\to C(1)$が、あらかじめ選んだ$\tau_4$と
+可換するとは限らない。四窓の「巡回対称性」を固定$\tau_4$と可換に
+限定して判定すると、周期1の対象を見落とす危険がある。
+\item graded同型、Zhang twist同値、indexを忘れた同値、
+qgr同値、導来同値は同一ではない。
+\item Koszul双対の次元$(1,4,6,4,1)$、Frobenius完全対合、
+PBW/低次数のHilbert値、全Koszul解消の正確性は異なる条件。
+\item 点配置が隣接して異なれば1周期性を排除できるが、
+点配置が同型でも関係テンソルが同型とは限らない。
+\item 非1周期性を満たす一般点を持つ平坦族は、周期種別が
+既約成分を切るとの推測への障害である。
+\end{itemize}
+
+\section{新たに証明すべき問題}
+\begin{enumerate}
+\item 四窓のKoszul/AS locus を有限条件で記述する：
+どの全次数の解消exactnessが必要か、通常のFrobeniusだけで
+足りるためのKoszul性仮定の具体化。
+\item $(C,\tau_4)\to C$の同型ファイバーを、自己同型群の作用と
+周期同型の変更を通じて正確に定式化する。
+\item graded側\texttt{as4}からの忘却像を\emph{周期構造の同型}で粗くし、
+像のclosureや階数・周期と既約成分の関係を決める。
+\item as4の2周期族$A(\lambda)$と4周期例を四窓に載せ、
+全特殊値の同型・変形を調べる。周期性の非一致の
+証明は\texttt{as4}の元原稿・コードから再利用する。
+\end{enumerate}
+
+\section{検証と依存}
+既知の周期性結果・検証コードへの固定SHAは
+\texttt{research/BASELINE.md}に記録した。
+ASZ4の現段階で再実行した数値計算はない。
+定理\texttt{thm:four-window}の有限表示の証明は
+基底変更と二次関係の普遍性からの数学的証明であり、
+計算的観察ではない。
+\end{document}
