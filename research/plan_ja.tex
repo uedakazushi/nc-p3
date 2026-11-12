@@ -1,0 +1,130 @@
+\documentclass[11pt,a4paper]{ltjsarticle}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,hyperref}
+\usepackage[haranoaji]{luatexja-preset}
+\hypersetup{unicode=true,hidelinks}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\Gr}{\operatorname{Gr}}
+\title{四次元二次AS正則\texorpdfstring{$\ZZ$}{Z}-代数の完全分類\\研究方針と再開手順}
+\author{}
+\date{2026年11月12日\quad 第1版}
+\begin{document}
+\maketitle
+\section{最初に読む：目的と達成基準}
+標数零の代数閉体$k$上の正連結・局所有限なquadratic AS正則$\ZZ$-代数$C$を分類する。
+主要対象は各一次生成空間の次元が4、各二次関係が6次元、全単純加群の有限最小
+線型解消が$(1,4,6,4,1)$型で、左右AS双対性を持つ標準Koszul型とする。
+行Hilbert級数は$(1-t)^{-4}$である。
+最初からdomain, noetherian, PBW, Nakayamaの半単純性、Calabi--Yau性を仮定しない。
+一般のquadratic 4次元AS正則性からこの標準型が自動的に従うかは
+独立の境界問題であり、証明なしに全対象と同一視しない。
+
+分類の同値関係は\textbf{添字を保つ$\ZZ$-代数同型}とする。
+添字の平行移動をさらに同一視した無標識分類、$\operatorname{qgr}$の同値、
+導来同値、周期構造を選んだ同型はそれぞれ別問題として扱う。
+完成条件は全対象被覆、特殊値を含むAS正則性の必要十分条件、
+全族内外同型の必要十分条件、最小周期1/2/4、
+モジュライの適切な表現と既約成分・特殊化の記述である。
+有限atlas・有限判定手続きでも、適用域と比較が完全なら分類として認める。
+
+\section{確定済みの出発点と未確認点}
+Bondal--PolishchukのKoszul--Frobenius/helix理論に基づき、標準14641型は
+4周期的である。既存\texttt{as4}の\texttt{research/z\_periodicity}には
+最小周期2の平坦なPBW族、最小周期4の具体例、各種有限恒等式と証明がある。
+最小周期1は通常の4変数多項式環で実現する。
+平坦な族に1周期的特殊点と一般に最小周期2の点が共存するため、
+周期は変形で一定でなく、周期種別だけで既約成分を数えない。
+これらの研究原稿は独立の査読・先行研究上の初出確認が未了であり、
+今回のASZ4開始時にその全検証コードを再実行したわけではない。
+正確なGit SHA、証明・計算の所在は\texttt{research/BASELINE.md}を参照する。
+
+既存\texttt{as4}のgraded同型分類は未完成だが、CY、quantum、Q/V、
+非共鳴、単冪twist、特殊値の多くの部分結果がある。
+graded $A$ に付随する$\check A_{ij}=A_{j-i}$と、
+1周期同型の選択が定めるgraded algebraの関係を用いる。
+Zhang twist同値の1周期的対象は$\ZZ$-代数として同一視され得る。
+ただし$\check A$が1周期的であることと、
+\emph{選んだ}1周期構造まで同じであることは違う。
+
+\section{核心となる新しい分類方針}
+\subsection{第一：4周期表示の有限atlas}
+$C\simeq C(4)$の同型$\tau$を選び、四つの一次空間
+$V_i$（$i\in\ZZ/4$、$\dim V_i=4$）と
+\[
+R_i\subset V_i\otimes V_{i+1},\qquad\dim R_i=6
+\]
+による二次表示へ還元する。
+基底を選んだ有限パラメータ空間
+\[
+\mathfrak P=\prod_{i\in\ZZ/4}\Gr(6,V_i\otimes V_{i+1})
+\]
+には$\prod_i\GL(V_i)$が作用する。
+これは最初、$\tau$を選んだ4周期表示の群oidであり、
+$C$単独のモジュライ空間と同じではない。
+定理・証明は\texttt{papers/asz4\_classification.tex}の第2節。
+
+\subsection{第二：正則性と4周期の同型}
+$\mathfrak P$の上で14641型の左右線型Koszul解消とAS双対性を満たす
+正確な条件を定式化する。対合行列や次数別Hilbert一致は必要条件であり、
+Koszul性と全AS正則性の十分条件を無断で結論しない。
+四窓の群作用で判定できる同型と、
+周期構造を忘れた任意の添字保持同型を区別し、
+4周期同型の変更・余分な自己同型を処理する。
+
+\subsection{第三：1周期的部分の利用と周期2/4の分類}
+1周期構造を選んだ場合はgraded AS4へ戻り、既存as4の定理に正確に依存する。
+未監査の論文を「既知の完成分類」と扱わない。
+周期2族のパラメータに対する同型・特殊値・点配置・量子行列式の条件を追う。
+最小周期4の例も同様に有限atlasへ入れ、変形と周期種別の閉包を調べる。
+独立な射影点配置は非同型を示す必要条件として使い、
+同型の十分条件とは区別する。
+
+\subsection{第四：全被覆とモジュライ幾何}
+上の全対象に必要十分な有限条件を証明し、残る未分類軌跡を潰す。
+元のgraded側の既約成分がZ側で合流・包含されることを許す。
+最小周期別の集合を既約成分と混同しない。
+Koszul双対のquantum determinant/4-helixを優先し、
+任意の4重テンソルの\emph{無条件の}AS正則性を主張しない。
+
+\section{初動課題：Z4-WINDOW-001}
+証明すべきは、$(C,\tau_4)$と有限四窓データとの同値、
+$\GL_4^4$同型条件、四窓表示から標準14641解消に至る
+\emph{追加の}証明義務の明文化である。
+その後、2周期族の関係$R_i$を有限四窓へ入れ、実際のゲージと
+周期を忘れる際の余剰同型を解析する。
+当面は既存as4計算の再作成より、4周期固有の理論を優先する。
+
+\section{研究継続と検証}
+現在の証明、未証明事項、検算は\texttt{research/notes\_ja.tex}に整理し、
+論文に十分な証明を置いた事項は重複収録しない。
+論文は\texttt{papers/asz4\_classification.tex}の一つに整理し、
+未完成箇所は明示する。外部の一次文献は\texttt{research/BASELINE.md}に
+定理番号・リンクを保存し、公開原稿のIntroductionで寄与と違いを説明する。
+\begin{verbatim}
+python3 scripts/check_project.py
+latexmk papers/asz4_classification.tex
+latexmk research/plan_ja.tex
+latexmk research/notes_ja.tex
+\end{verbatim}
+版・日付・参照先を一致させ、計算や組版を行ったときのみ成功と報告する。
+
+\section{研究全般の原則・保存許可（上の具体的計画とは別）}
+数学的重要性・新規性・理解・応用可能性・正確性・実現可能性を総合して
+目標・方針を柔軟に更新する。重要な変更では理由と解決済み・未解決の核心を
+現行方針として整理し、作業履歴を積み重ねない。
+証明済み、仮定付き、未完成、予想、計算的観察、独立監査済みを厳密に区別する。
+誤りがあれば依存する定理・要約・研究方針を訂正し、再発防止に有用な障害をノートに残す。
+公表原稿では重要な一次資料を調べ、適用範囲と新規性を明示する。
+証明や計算を削って軽量化せず、重複・履歴・中間出力を除き、
+現在の一式のみで再開できるようにする。
+
+ユーザーは研究区切りごとの承諾不要の保存を許可している。
+本プロジェクトの正本はGitHub\texttt{uedakazushi/asz4}の\texttt{main}である。
+区切りごとに直接fast-forwardで保存し、GitHub保存が成功すればLibraryへ
+二重保存せず、GitHub保存が実際に失敗した場合のみLibraryへ緊急退避する。
+既存のLibraryファイルは明示指示なく削除しない。
+PDFはGitで追跡せず、LuaLaTeXで再生成する。
+GitHub Actions、PR、force push、過去ZIPの入れ子収録を避ける。
+ファイル生成・数学的検証・組版検証・リモート保存の成功を別々に報告する。
+\end{document}
