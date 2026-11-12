@@ -8,7 +8,7 @@
 \newcommand{\Gr}{\operatorname{Gr}}
 \title{四次元二次AS正則\texorpdfstring{$\ZZ$}{Z}-代数の完全分類\\研究方針と再開手順}
 \author{}
-\date{2026年11月12日\quad 第1版}
+\date{2026年11月12日\quad 第2版}
 \begin{document}
 \maketitle
 \section{最初に読む：目的と達成基準}
@@ -47,6 +47,43 @@ Zhang twist同値の1周期的対象は$\ZZ$-代数として同一視され得�
 ただし$\check A$が1周期的であることと、
 \emph{選んだ}1周期構造まで同じであることは違う。
 
+\section{新しく確立した中核：Frobenius標準4周期}
+$C$のKoszul双対の最高次数traceから局所Nakayama同型
+$\nu^\lambda:E\to E(4)$を作り、二次双対に
+$\tau^\lambda:C\to C(4)$を得る。
+$\lambda'_i=t_i\lambda_i$による変化は
+$\nu^{\lambda'}_{ij}=(t_i/t_j)\nu^\lambda_{ij}$。
+$s_{i+4}/s_i=t_i$を満たす$s_i$を選んだ頂点スカラー自己同型で
+二つの4周期同型は共役になる。
+従って\textbf{幾何学的点の同型類}では、
+裸の$C$はFrobenius標準4周期付きの組と一対一に対応する。
+これは$4$周期同型を忘れる際の主要な障害を解決したものであり、
+\emph{モジュライstack全体の同値}を証明したとはしない。
+証明全文は\texttt{papers/asz4\_classification.tex}
+定理\texttt{thm:canonical-four}。
+
+四窓の双対の1--3積と3--1積から得る
+四つの4次正則行列$P_i,Q_i$に対し、
+Frobenius標準化条件は適切な最高次traceを選べる範囲で
+\[
+ P_i^{\mathsf T}=Q_i\quad(0\le i<4)
+\]
+となる。最高次双対の局所Frobenius性は、
+各始点の長さ0--5の次元および相補次数積の有限行列階数から
+完全に検査できる。ただし\emph{これだけではKoszul性を証明できない}。
+証明は命題\texttt{prop:canonical-matrix}、
+\texttt{prop:finite-frobenius}。
+
+さらに標準4周期四窓では、裸の$C$が$p$周期的であることは、
+四つの可逆な$g_i:V_i\to V_{i+p}$が
+\[
+ (g_i\otimes g_{i+1})R_i=R_{i+p}\qquad(i\bmod4)
+\]
+を満たすことと同値。原稿定理\texttt{thm:finite-period-test}。
+従って1/2/4の周期層は、標準四窓の四つの有限方程式の
+可解性・四重回転軌道として決定できる。
+ただし各層の\emph{パラメータ分類や既約成分}はまだ未解決。
+
 \section{核心となる新しい分類方針}
 \subsection{第一：4周期表示の有限atlas}
 $C\simeq C(4)$の同型$\tau$を選び、四つの一次空間
@@ -60,17 +97,19 @@ R_i\subset V_i\otimes V_{i+1},\qquad\dim R_i=6
 \mathfrak P=\prod_{i\in\ZZ/4}\Gr(6,V_i\otimes V_{i+1})
 \]
 には$\prod_i\GL(V_i)$が作用する。
-これは最初、$\tau$を選んだ4周期表示の群oidであり、
-$C$単独のモジュライ空間と同じではない。
+一般の$\tau$を選んだ4周期表示の群oidは$C$のモジュライそのものではない。
+しかしFrobenius標準化条件$P_i^{\mathsf T}=Q_i$の部分では、
+emph{幾何学的同型類}について裸の$C$と同じ分類になる。
 定理・証明は\texttt{papers/asz4\_classification.tex}の第2節。
 
 \subsection{第二：正則性と4周期の同型}
 $\mathfrak P$の上で14641型の左右線型Koszul解消とAS双対性を満たす
 正確な条件を定式化する。対合行列や次数別Hilbert一致は必要条件であり、
 Koszul性と全AS正則性の十分条件を無断で結論しない。
-四窓の群作用で判定できる同型と、
-周期構造を忘れた任意の添字保持同型を区別し、
-4周期同型の変更・余分な自己同型を処理する。
+Frobenius標準四窓では上の有限群作用による同型類比較が
+裸の$C$についても完全である。
+次の核心はKoszul条件をどこまで有限条件として証明できるか、
+全特殊値に適用できる構造定理・明示atlasを作ることである。
 
 \subsection{第三：1周期的部分の利用と周期2/4の分類}
 1周期構造を選んだ場合はgraded AS4へ戻り、既存as4の定理に正確に依存する。
@@ -88,11 +127,16 @@ Koszul双対のquantum determinant/4-helixを優先し、
 任意の4重テンソルの\emph{無条件の}AS正則性を主張しない。
 
 \section{初動課題：Z4-WINDOW-001}
-証明すべきは、$(C,\tau_4)$と有限四窓データとの同値、
-$\GL_4^4$同型条件、四窓表示から標準14641解消に至る
-\emph{追加の}証明義務の明文化である。
-その後、2周期族の関係$R_i$を有限四窓へ入れ、実際のゲージと
-周期を忘れる際の余剰同型を解析する。
+四窓群oid、Frobenius標準化、標準化された周期判定の理論は
+証明済みである。次は\textbf{Z4-AS-004}を最優先とし、
+四窓から作る二次双対の有限Frobenius階数条件と、
+元代数のKoszul解消の正確性を結ぶ\emph{適用域を明示した}
+必要十分条件を追う。
+特に、まずPBW性など既に正則性を認定できるatlas上で
+四つのtrace行列$P_i,Q_i$を計算し、既存の最小周期2/4の
+族をFrobenius標準軌道へ入れる。
+その後、PBWを仮定しない全候補への被覆・十分性を証明する。
+有限次元双対のFrobenius性だけでKoszulを結論してはいけない。
 当面は既存as4計算の再作成より、4周期固有の理論を優先する。
 
 \section{研究継続と検証}
