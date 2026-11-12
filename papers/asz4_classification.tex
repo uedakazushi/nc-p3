@@ -16,6 +16,7 @@
 \newcommand{\DD}{\mathcal D}
 \newcommand{\CC}{\mathbb C}
 \newcommand{\GL}{\operatorname{GL}}
+\newcommand{\PGL}{\operatorname{PGL}}
 \newcommand{\Gr}{\operatorname{Gr}}
 \newcommand{\Aut}{\operatorname{Aut}}
 \newcommand{\Per}{\operatorname{Per}}
@@ -23,7 +24,7 @@
 \title{四次元二次AS正則\texorpdfstring{$\ZZ$}{Z}-代数の分類\\
 \large 4周期表示・1周期構造の忘却・全分類への有限atlas}
 \author{}
-\date{2026年11月12日\quad 研究原稿 v2（完全分類は未完成）}
+\date{2026年11月12日\quad 研究原稿 v3（完全分類は未完成）}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -390,6 +391,76 @@ $\mathfrak P$のうち\emph{Koszul AS正則かつ}
 4周期同型を保つ同型で比較できる。
 定理\ref{thm:four-window}の同型判定から、
 それらは$G$の同一軌道になる。逆方向は忘却で得られる。
+\end{proof}
+
+\begin{theorem}[裸の周期性の有限四窓判定]\label{thm:finite-period-test}
+$C$を標準14641型とし、Frobenius標準4周期同型を選んで
+定理\ref{thm:four-window}の厳密4周期データ
+$(R_0,R_1,R_2,R_3)$に直す。
+任意の整数$p$に対して、
+\[
+ C\simeq C(p)
+\]
+となることは、四つの可逆線型写像
+$g_i:V_i\xrightarrow{\sim}V_{i+p}$（$i\in\ZZ/4$）が存在して
+\begin{equation}\label{eq:finite-period-test}
+ (g_i\otimes g_{i+1})R_i=R_{i+p}
+ \qquad(i\in\ZZ/4)
+\end{equation}
+を満たすことと同値である。添字は4を法として読む。
+従って最小周期1、2、4の判定は、
+Frobenius標準四窓上の\emph{有限個の多項式方程式と行列式非零条件}
+による可解性判定に還元される。
+\end{theorem}
+\begin{proof}
+\eqref{eq:finite-period-test}があれば$g_{i+4}=g_i$と延長し、
+命題\ref{prop:period-relations}により
+$C\xrightarrow{\sim}C(p)$を得る。
+
+逆に$f:C\xrightarrow{\sim}C(p)$があるとする。
+$\tau:C\to C(4)$を選んだFrobenius標準同型とすると、
+そのシフト$\tau(p):C(p)\to C(p+4)$も
+$C(p)$のFrobenius標準同型である。
+$f$を使って$\tau$を$C(p)$へ移送して得られる4周期同型
+$f(4)\tau f^{-1}$もFrobenius標準である。
+定理\ref{thm:canonical-four}の証明で示した
+\emph{頂点スカラーによる共役}を使えば、
+$C(p)$の添字保持自己同型$h$が存在して
+\[
+ \tau(p)=h(4)\,[f(4)\tau f^{-1}]\,h^{-1}
+\]
+となる。$f'=hf$と置くと
+\[
+ \tau(p)\,f'=f'(4)\,\tau
+\]
+である。従って$f'$の次数一部分は
+Frobenius標準4周期座標で$g_{i+4}=g_i$を満たす。
+$f'$が二次関係を保つことから
+\eqref{eq:finite-period-test}が従う。
+一般の4周期同型を選んだ場合には、この補正が可能とは
+限らないので、Frobenius標準という仮定が不可欠である。
+\end{proof}
+
+\begin{corollary}[回転軌道による周期層の記述]\label{cor:period-orbits}
+Frobenius標準の四窓データに対して、
+四つの関係空間の添字を一つ移す回転を$r$と書く。
+このとき、裸の$\ZZ$-代数$C$の最小正周期は
+\[
+ \begin{array}{c|l}
+ 1& r(R)\text{が}R\text{と}G\text{-同一軌道},\\
+ 2& r^2(R)\text{が}R\text{と同一軌道で、}r(R)\text{は異軌道},\\
+ 4& r^2(R)\text{が}R\text{と異軌道}
+ \end{array}
+\]
+で判定できる。
+これらは同型類についての判定であって、
+周期種別が既約成分を切り分けるとは主張しない。
+\end{corollary}
+\begin{proof}
+定理\ref{thm:finite-period-test}の有限行列式条件が、
+$R$と回転した$R$が$G$-同一軌道にあることと同値である。
+補題\ref{lem:period-subgroup}によって最小周期は
+$1,2,4$のいずれかである。
 \end{proof}
 
 \begin{remark}[有限atlasのスカラーkernel]
