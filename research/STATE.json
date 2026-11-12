@@ -88,6 +88,14 @@
       "proof": "research/notes_ja.tex",
       "code": "computations/verify_exterior_trace.py",
       "verification": "local file hash matched GitHub Git blob sha 9b405622b981535de5450c4bfaa80c275121d3d8"
+    },
+    {
+      "id": "R13",
+      "claim": "The p=1,2 periodicity condition on canonical four-window is equivalently 384 polynomial matrix equations plus 4 determinant invertibility equations in 212 unknowns (4 g_i, 4 h_i, 4 scalar inverses)",
+      "status": "proved_in_manuscript",
+      "proof": "papers/asz4_classification.tex:prop:period-polynomial-system",
+      "code": "computations/verify_period_witness.py",
+      "computation": "local exact positive-witness and shift-sign checks PASS; executed source matches Git blob 65ce96907baff0daf764688e76874be2e8d9e81c"
     }
   ],
   "next_task_id": "Z4-AS-004",
@@ -137,7 +145,8 @@
     "formal_proof": "not_done",
     "independent_peer_review": "not_done",
     "citation_reference_added": "Sierra publication data verified at University of Edinburgh record; as4 primary theorem assumptions need article-level review",
-    "new_exterior_python": "PASS exact rational computation: 4 vertices; Git blob sha 9b405622b981535de5450c4bfaa80c275121d3d8 matches executed bytes"
+    "new_exterior_python": "PASS exact rational computation: 4 vertices; Git blob sha 9b405622b981535de5450c4bfaa80c275121d3d8 matches executed bytes",
+    "new_period_witness_python": "PASS exact Fraction: relation ranks (6,6,6,6), A(1) identity period2, polynomial ring identity period1, shift-sign identity; identity fails for p1 at A(1) (not proof of absence), Git blob 65ce96907baff0daf764688e76874be2e8d9e81c matched executed bytes"
   },
   "document_paths": {
     "plan": "research/plan_ja.tex",
@@ -147,7 +156,7 @@
     "instructions": "AGENTS.md"
   },
   "progress": {
-    "revision": 2,
-    "meaning": "Frobenius canonical period marking unique up to diagonal gauge, point-level orbit classification of unmarked C, finite matrix periodicity tests and A(lambda) shift-sign distinction"
+    "revision": 3,
+    "meaning": "Canonically normalized Frobenius marked 4-window gives point-level unmarked classification and complete finite p-period criterion; explicit finite polynomial equations, checked positive witness for as4 period2 family"
   }
 }
