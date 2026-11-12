@@ -5,7 +5,7 @@
 \hypersetup{unicode=true,hidelinks}
 \title{ASZ4研究ノート：有限四窓と周期同型}
 \author{}
-\date{2026年11月12日\quad 第1版}
+\date{2026年11月12日\quad 第2版}
 \begin{document}
 \maketitle
 \section{現在有効な知識と記法}
@@ -38,13 +38,97 @@ $\tau_4=\sigma_2^2$なら$R_0=R_2,\ R_1=R_3$とできる。
 この点がgradedの1周期的対角軌跡と4周期全体を比較する
 最初の重要な補正である。
 
+\section{Koszul--Frobenius標準4周期と同型類の簡約（証明済み）}
+\emph{最も重要な新しい構造結果。} 有限最小Koszul解消と左右AS双対性から
+$E=C^!$の各$E_{i,i+4}$は一次元で、相補次数積が完全である。
+非零trace $\lambda_i:E_{i,i+4}\to k$を選ぶと
+\[
+ \lambda_i(ab)=\lambda_j(b\nu^\lambda_{ij}(a))
+\]
+が$\nu^\lambda:E\to E(4)$を定め、二次双対に
+$\tau^\lambda:C\to C(4)$を定める。
+別のtrace $\lambda'_i=t_i\lambda_i$に対して
+\[
+ \nu^{\lambda'}_{ij}=(t_i/t_j)\nu^\lambda_{ij}.
+\]
+$s_{i+4}/s_i=t_i$を満たす非零$s_i$を四つの整数剰余類上の
+再帰式で選び、頂点スカラー自己同型
+$h_{ij}(a)=(s_i/s_j)a$とすると
+$\nu^{\lambda'}=h(4)\nu^\lambda h^{-1}$。
+二次双対でも同様の共役性が成り立つ。
+さらに任意の$C\cong C'$はtraceを移送するので、
+\textbf{裸の標準14641型Z代数の幾何学的同型類は、
+Frobenius標準4周期同型付きの組の同型類に一対一に対応する。}
+証明全文は原稿定理\texttt{thm:canonical-four}と系
+\texttt{cor:canonical-slice}。群oidの同値・相対族上の下降は未証明。
+
+\section{有限なtrace行列と周期判定（証明済み）}
+四窓の二次双対について、四つの最高次traceを選び、
+$E_{i,i+1}$の基底$u_a$、$E_{i+1,i+4}$の基底$v_b$、
+厳密4移動した$E_{i+4,i+5}$の基底$u'_c$で
+\[
+ P_i=(\lambda_i(u_a v_b))_{a b},\qquad
+ Q_i=(\lambda_{i+1}(v_b u'_c))_{b c}.
+\]
+局所中山同型の行列は$N_i=Q_i^{-1}P_i^\mathsf T$。
+$\tau$がFrobenius標準であることは、適切な非零traceを選び
+$P_i^\mathsf T=Q_i$を$i=0,1,2,3$で満たすことと同値。
+原稿命題\texttt{prop:canonical-matrix}。
+
+裸の$C$が$p$周期的であることは、Frobenius標準四窓で
+四つの可逆$g_i:V_i\to V_{i+p}$（添字mod 4）が存在し
+\[
+ (g_i\otimes g_{i+1})R_i=R_{i+p}
+\]
+を満たすことと同値。証明の核心は、任意の$p$周期同型で
+移送したFrobenius標準$\tau$とシフトした$\tau(p)$は
+頂点スカラー共役であり、その補正により$p$周期同型を
+4周期同型と可換に取れること。従って\emph{標準四窓に限って}
+周期1/2/4を四つの有限多項式方程式とdet非零条件で判定できる。
+原稿定理\texttt{thm:finite-period-test}と系
+\texttt{cor:period-orbits}。まだこれを個々の族で消去してはいない。
+
+四窓二次双対$E$の局所Frobenius条件自体は
+長さ$0,\ldots,5$の次元と相補次数の対合行列の
+階数という有限検査で認定できる。
+$E_{i,i+5}=0$なら次数一生成性により全高次が零。
+\emph{ただしKoszul性・AS正則性はこの有限検査から自動ではない。}
+原稿命題\texttt{prop:finite-frobenius}。
+
+\section{正確な有効群作用}
+四つの関係空間のGrassmannianに作用する
+$G=\prod_{i=0}^{3}\GL(V_i)$のうち、
+各$V_i$のスカラー$(k^\times)^4$は\emph{全点}を固定する。
+従って点集合の有効作用は$\prod_i\PGL(V_i)$に因子化する。
+ただしstack/群oidにおける自己同型は消えない。
+Grassmannian全体のdim240から有効群dim60を引いた180は、
+AS正則モジュライの次元ではない。
+
+\section{外積代数による明示検算}
+可換多項式環$k[x_0,\ldots,x_3]$の双対は外積代数
+$E=\Lambda(e_0,\ldots,e_3)$である。
+最高次数$\omega=e_0e_1e_2e_3$に対するtraceを
+$\lambda_i(\omega)=(-1)^i$と選び、次数三基底を
+$v_b=(-1)^b\prod_{c\ne b}e_c$とすると
+\[
+ P_i=(-1)^i I_4,\qquad Q_i=(-1)^i I_4.
+\]
+従って$N_i=I_4$、厳密4移動は標準4周期となる。
+一定traceなら$N_i=-I_4$であり、\emph{同じ代数でtraceの選択により
+表示が変わる}ことに注意。
+正確な全4頂点の計算は
+\texttt{computations/verify\_exterior\_trace.py}にあり、
+Python 3の分数計算でPASSした。これは一般のAS正則条件の
+計算認証ではない。
+
 \section{最重要の論理的落とし穴}
 \begin{itemize}
 \item $C\simeq C(4)$の存在と、$\tau_4:C\to C(4)$の指定の違い。
 四窓の$\GL_4^4$商は$(C,\tau_4)$の分類であって、$C$単独の分類ではない。
 \item 任意の1周期同型$\sigma:C\to C(1)$が、あらかじめ選んだ$\tau_4$と
-可換するとは限らない。四窓の「巡回対称性」を固定$\tau_4$と可換に
-限定して判定すると、周期1の対象を見落とす危険がある。
+可換するとは限らない。任意の4周期同型では、この可換性を先に要求すると周期1を見落とす。
+Frobenius標準4周期同型なら、頂点スカラー共役によって
+$p$周期同型を可換に補正でき、有限四窓の完全判定が可能である。
 \item graded同型、Zhang twist同値、indexを忘れた同値、
 qgr同値、導来同値は同一ではない。
 \item Koszul双対の次元$(1,4,6,4,1)$、Frobenius完全対合、
@@ -60,10 +144,10 @@ PBW/低次数のHilbert値、全Koszul解消の正確性は異なる条件。
 \item 四窓のKoszul/AS locus を有限条件で記述する：
 どの全次数の解消exactnessが必要か、通常のFrobeniusだけで
 足りるためのKoszul性仮定の具体化。
-\item $(C,\tau_4)\to C$の同型ファイバーを、自己同型群の作用と
-周期同型の変更を通じて正確に定式化する。
-\item graded側\texttt{as4}からの忘却像を\emph{周期構造の同型}で粗くし、
-像のclosureや階数・周期と既約成分の関係を決める。
+\item Frobenius標準4周期による幾何学的同型類の全単射を
+相対族/モジュライstackの同値へ強化できる条件を調べる。
+\item 有限四窓の周期可解性方程式を既存2周期/4周期族で消去し、
+閉値の同型・例外・像のclosureと既約成分の関係を決める。
 \item as4の2周期族$A(\lambda)$と4周期例を四窓に載せ、
 全特殊値の同型・変形を調べる。周期性の非一致の
 証明は\texttt{as4}の元原稿・コードから再利用する。
@@ -72,7 +156,8 @@ PBW/低次数のHilbert値、全Koszul解消の正確性は異なる条件。
 \section{検証と依存}
 既知の周期性結果・検証コードへの固定SHAは
 \texttt{research/BASELINE.md}に記録した。
-ASZ4の現段階で再実行した数値計算はない。
+新しい外積代数trace検算だけはPython 3で今回実行し、PASSを確認。
+一般的なAS正則性の検算、既存as4の周期性コード再実行はしていない。
 定理\texttt{thm:four-window}の有限表示の証明は
 基底変更と二次関係の普遍性からの数学的証明であり、
 計算的観察ではない。
