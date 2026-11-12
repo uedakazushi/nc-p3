@@ -23,7 +23,7 @@
 \title{四次元二次AS正則\texorpdfstring{$\ZZ$}{Z}-代数の分類\\
 \large 4周期表示・1周期構造の忘却・全分類への有限atlas}
 \author{}
-\date{2026年11月12日\quad 研究原稿 v1（完全分類は未完成）}
+\date{2026年11月12日\quad 研究原稿 v2（完全分類は未完成）}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -202,6 +202,207 @@ $\ZZ$-代数同型を次数一に制限すれば必要性は直ちに従う。
 最初から$g_{i+4}=g_i$という条件だけで1周期性を調べると、
 選んだ$\tau$と可換しない周期同型を見落とす。
 この点が未標識moduliの分類で最初に解決すべき障害となる。
+\end{remark}
+
+
+\section{Koszul--Frobenius標準4周期構造と忘却}\label{sec:canonical-four}
+以下の結果は、4周期同型を任意に選ぶことの余分な自由度を
+\emph{幾何学的点の同型類}の水準で取り除く。
+モジュライstackの同値や族上の大域的な標準化は、
+この段階では主張しない。
+
+$C$を標準14641型とし、前向き二次Koszul双対を
+$E=C^!$と書く。ここでは双対の矢印を
+$E_{i,i+1}=C_{i,i+1}^{*}$とする規約を採用する。
+左右AS双対性とKoszul性により、各$i$に
+\[
+ E_{i,i+4}\simeq k,\quad
+ \dim E_{i,i+p}={4\choose p}\ (0\le p\le4),
+ \quad E_{i,i+p}=0\ (p>4)
+\]
+があり、任意の$p$について積による相補次数の対合が完全である
+\cite{BP}。
+
+各$i$に非零な最高次数のtrace
+$\lambda_i:E_{i,i+4}\xrightarrow{\sim}k$を選ぶ。
+相補次数の完全性から、一意的な線型同型
+\[
+ \nu^\lambda_{ij}:E_{ij}\xrightarrow{\sim}E_{i+4,j+4}
+\]
+が
+\begin{equation}\label{eq:nakayama-pair}
+ \lambda_i(ab)=\lambda_j\bigl(b\,\nu^\lambda_{ij}(a)\bigr),
+ \quad a\in E_{ij},\ b\in E_{j,i+4}
+\end{equation}
+で定まる。この$\nu^\lambda$は積を保つ$\mathbb Z$-代数同型である。
+実際、$a\in E_{ij}$、$c\in E_{j\ell}$、$b\in E_{\ell,i+4}$に対して
+\[
+ \lambda_i((ac)b)
+ =\lambda_j((cb)\nu^\lambda(a))
+ =\lambda_\ell(b\,\nu^\lambda(a)\nu^\lambda(c))
+\]
+なので、完全対合から
+$\nu^\lambda(ac)=\nu^\lambda(a)\nu^\lambda(c)$となる。
+次数一部分を逆双対化し、二次関係が保たれることから、
+$C$にも4周期同型
+\[
+ \tau^\lambda:C\xrightarrow{\sim}C(4)
+\]
+が定まる。これを\emph{Frobenius標準4周期同型}と呼ぶ。
+
+\begin{theorem}[標準4周期同型の選択独立性]\label{thm:canonical-four}
+$C$を標準14641型のKoszul AS正則$\mathbb Z$-代数とする。
+任意の二つの非零trace族$\lambda=(\lambda_i)$と
+$\lambda'=(\lambda'_i)$から得られる
+$\tau^\lambda$と$\tau^{\lambda'}$は、$C$の
+添字保持自己同型$h$により
+\[
+ \tau^{\lambda'}=h(4)\,\tau^\lambda\,h^{-1}
+\]
+の形で共役になる。
+さらに、$C$と$C'$が$\mathbb Z$-代数として同型なら、
+それぞれのFrobenius標準4周期同型付きの組も同型である。
+従って\emph{幾何学的点の同型類}に限れば、
+裸の標準14641型$\mathbb Z$-代数の分類は、
+Frobenius標準4周期同型を選んだ組の分類に一致する。
+\end{theorem}
+\begin{proof}
+$\lambda'_i=t_i\lambda_i$（$t_i\in k^\times$）と置く。
+式\eqref{eq:nakayama-pair}を双方で比較すると
+\begin{equation}\label{eq:trace-change}
+ \nu^{\lambda'}_{ij}=(t_i/t_j)\nu^\lambda_{ij}
+\end{equation}
+を得る。
+各整数$i$にスカラー$s_i\in k^\times$を、
+\[
+ s_{i+4}/s_i=t_i
+\]
+となるように選べる。これは四つの剰余類でそれぞれ
+$s_i$を一つ選び、正負両方向へ漸化式で延ばせばよい。
+頂点スカラーによる自己同型
+\[
+ h^E_{ij}:E_{ij}\longrightarrow E_{ij},
+ \qquad a\longmapsto(s_i/s_j)a
+\]
+は積を保つ。従って
+\[
+ h^E(4)\nu^\lambda(h^E)^{-1}(a)
+ =\frac{s_{i+4}s_j}{s_{j+4}s_i}\nu^\lambda(a)
+ =\frac{t_i}{t_j}\nu^\lambda(a)
+ =\nu^{\lambda'}(a).
+\]
+二次双対により、$C$上の二つの$\tau$も
+対応する頂点スカラー自己同型によって共役となる。
+（双対化でスカラーの逆が現れるが、共役の向きは保たれる。）
+
+次に$f:C\xrightarrow{\sim}C'$が与えられれば、
+二次双対の同型を通じて$\lambda$を$E'=(C')^!$に移送できる。
+式\eqref{eq:nakayama-pair}の特徴付けにより、
+移送したtraceから得られる4周期同型と$\tau^\lambda$は
+$f$と両立する。任意の$\lambda'$を指定した場合も
+既に示した頂点スカラー共役で補正すればよい。
+よって忘却はFrobenius標準の組の\emph{同型類の集合}上で
+全単射である。これを群oidそのものの完全忠実性とはしていない。
+\end{proof}
+
+\begin{proposition}[有限四窓でのFrobenius標準化条件]\label{prop:canonical-matrix}
+定理\ref{thm:four-window}の厳密4周期表示で、二次双対$E$が
+上述の局所Frobenius条件を満たすとする。
+4つの非零trace$\lambda_i:E_{i,i+4}\to k$
+（$i\in\mathbb Z/4$）を選び、厳密4移動によって延長する。
+$E_{i,i+1}$と$E_{i+1,i+4}$の基底を選び、
+$E_{i+4,i+5}=E_{i,i+1}$を厳密移動で同定する。
+\[
+ P_i=(\lambda_i(u_a v_b))_{a,b},\qquad
+ Q_i=(\lambda_{i+1}(v_b u'_c))_{b,c}
+\]
+を、$u_a\in E_{i,i+1}$、$v_b\in E_{i+1,i+4}$、
+$u'_c\in E_{i+4,i+5}$の対応する基底により定める。
+このとき両行列は4次正則行列で、
+\[
+ N_i:=Q_i^{-1}P_i^{\mathsf T}
+\]
+は$\nu^\lambda_{i,i+1}$を厳密4移動で同定した行列である。
+従って選んだ厳密4周期同型がFrobenius標準になることは、
+\emph{四つのtraceを適切に選んで}
+\begin{equation}\label{eq:canonical-matrix-test}
+ P_i^{\mathsf T}=Q_i\quad(i=0,1,2,3)
+\end{equation}
+を満たせることと同値である。
+\end{proposition}
+\begin{proof}
+$N_i$の列を$\nu^\lambda(u_a)$の係数とすると、
+式\eqref{eq:nakayama-pair}は各$b,a$について
+$P_{i,ab}=\sum_c Q_{i,bc}(N_i)_{ca}$であり、
+$P_i^{\mathsf T}=Q_iN_i$となる。
+完全対合から$Q_i$は可逆である。
+従って$N_i=I$は\eqref{eq:canonical-matrix-test}と同値。
+$E$は次数一生成なので、$\nu^\lambda$が次数一で
+厳密4移動に一致すれば、全積でも一致する。
+その逆双対の$C$の4周期同型についても同様である。
+\end{proof}
+
+\begin{proposition}[有限次数で検査できるFrobenius条件]\label{prop:finite-frobenius}
+任意の$\mathfrak P$の四窓データから構成する二次双対$E$について、
+各始点$i\in\mathbb Z/4$で、
+\[
+ \dim(E_{i,i+p})=(1,4,6,4,1)_p\quad(0\le p\le4),
+ \qquad E_{i,i+5}=0
+\]
+を検査し、各$0\le p\le4$の積
+\[
+ E_{i,i+p}\otimes E_{i+p,i+4}\longrightarrow E_{i,i+4}
+\]
+が完全対合であることを確認すれば、
+$E$の局所Frobenius性は全次数で成立する。
+これらは四窓の関係係数に対する\emph{有限回の線型代数}
+（商空間の次元・積行列の階数）で判定できる。
+ただしこの有限検査\emph{だけ}から元の二次代数$C$のKoszul性、
+AS正則性は結論できない。
+\end{proposition}
+\begin{proof}
+$E$は次数一生成であるため、各始点で長さ5の全語が零なら、
+長さ6以上の語も先頭5語を用いて零となる。
+有限次元の相補次数対合の完全性は仮定した積行列の
+行列式の非消滅と同値である。
+必要な関係空間、低次成分、積行列は、いずれも長さ5以下の
+テンソル積空間から二次関係による部分空間を割るだけで
+構成でき、4周期性により始点は4通りで足りる。
+Koszul複体の正確性は別途要求されるので、
+次数情報とFrobenius性だけをAS性へすり替えてはいない。
+\end{proof}
+
+\begin{corollary}[幾何学的点の標準化された分類問題]\label{cor:canonical-slice}
+標準14641型の全$\mathbb Z$-代数の幾何学的同型類は、
+$\mathfrak P$のうち\emph{Koszul AS正則かつ}
+\eqref{eq:canonical-matrix-test}を満たすtraceの選択がある
+四窓データの$G$-軌道と全単射になる。
+ここで$G=\prod_{i=0}^{3}\GL(V_i)$は定理\ref{thm:four-window}の群である。
+この軌道の幾何学的分類、AS locusの有限な必要十分条件、
+相対族のstack構造はまだ未完成である。
+\end{corollary}
+\begin{proof}
+任意の$C$には局所Frobenius traceから構成した4周期同型があるので
+定理\ref{thm:four-window}で厳密4周期表示を選べる。
+その表示は命題\ref{prop:canonical-matrix}を満たす。
+定理\ref{thm:canonical-four}によって、
+同じ裸の$C$から生じる二つのFrobenius標準表示は、
+4周期同型を保つ同型で比較できる。
+定理\ref{thm:four-window}の同型判定から、
+それらは$G$の同一軌道になる。逆方向は忘却で得られる。
+\end{proof}
+
+\begin{remark}[有限atlasのスカラーkernel]
+$G=\prod_{i=0}^{3}\GL(V_i)$の中で、
+各$V_i$にスカラーとして作用する$(k^\times)^4$は
+$\mathfrak P$の全ての点を固定する。
+実際、$R_i\subset V_i\otimes V_{i+1}$には
+$(s_i s_{i+1})$倍として作用するからである。
+従って作用の有効部分は$\prod_i\PGL(V_i)$を通る。
+ただしこの四次元トーラスは\emph{同型群oidの自己同型}
+として残るため、stackを作る際に自動的に取り去ってはならない。
+$\dim\mathfrak P=240$と有効群の次元60の差180を
+AS正則モジュライの次元と呼ぶのも誤りである。
 \end{remark}
 
 \section{1周期的部分とgraded AS4の再利用}
