@@ -1,0 +1,284 @@
+\documentclass[11pt,a4paper]{ltjsarticle}
+\usepackage[margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs}
+\usepackage[haranoaji]{luatexja-preset}
+\usepackage[unicode,hidelinks]{hyperref}
+\newtheorem{theorem}{定理}[section]
+\newtheorem{proposition}[theorem]{命題}
+\newtheorem{lemma}[theorem]{補題}
+\newtheorem{corollary}[theorem]{系}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{定義}
+\newtheorem{remark}[theorem]{注意}
+\renewcommand{\proofname}{証明}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\BB}{\mathcal B}
+\newcommand{\DD}{\mathcal D}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\Gr}{\operatorname{Gr}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\Per}{\operatorname{Per}}
+\newcommand{\qgr}{\operatorname{qgr}}
+\title{四次元二次AS正則\texorpdfstring{$\ZZ$}{Z}-代数の分類\\
+\large 4周期表示・1周期構造の忘却・全分類への有限atlas}
+\author{}
+\date{2026年11月12日\quad 研究原稿 v1（完全分類は未完成）}
+\begin{document}
+\maketitle
+\begin{abstract}
+本稿は標準$(1,4,6,4,1)$型のquadratic Koszul AS正則$\ZZ$-代数の
+完全分類を目標とする研究原稿である。
+4周期同型を\emph{選んだ}二次$\ZZ$-代数が四つの4次元生成空間と
+四つの6次元関係空間によって記述されることを証明し、その群作用を同定する。
+この有限atlasは、選んだ4周期同型を\emph{忘れた}対象のモジュライではない。
+既存のgraded AS4分類の結果を1周期的部分の研究基盤として利用し、
+既に構成された最小周期2、4の反例を全体問題に位置づける。
+AS正則性の全条件、周期構造忘却のファイバー、全閉値の同型条件、
+全対象の被覆および既約成分の分類は未完成として明記する。
+\end{abstract}
+\tableofcontents
+
+\section{Introduction：対象と分類問題}
+本稿を通じて$k$は標数零の代数閉体とする。
+\emph{正連結な$\ZZ$-代数}$C=(C_{ij})_{i,j\in\ZZ}$とは
+\[
+ C_{ii}=k,\quad C_{ij}=0\ (i>j),\quad
+ C_{ij}C_{j\ell}\subseteq C_{i\ell}
+\]
+を満たす局所有限な代数である。$C(s)_{ij}=C_{i+s,j+s}$とする。
+\[
+ \Per(C)=\{s\in\ZZ:C\xrightarrow{\sim}C(s)
+ \text{という添字保持同型が存在する}\}
+\]
+を周期群と呼ぶ。
+通常のconnected graded algebra $A=\bigoplus_{n\ge0}A_n$からの
+付随$\ZZ$-代数$\check A$は$\check A_{ij}=A_{j-i}$である。
+\emph{1周期同型の存在}と、その\emph{具体的な選択}は区別する。
+
+本研究の中心対象を\emph{標準14641型}と呼ぶ。
+これは次数一生成、二次関係のみを持ち、
+\[
+ \dim_k C_{i,i+n}={n+3\choose3}\quad(n\ge0)
+\]
+であり、各右単純加群$S_i$に有限最小線型解消
+\[
+ 0\longrightarrow P_{i+4}
+ \longrightarrow P_{i+3}^{\,4}
+ \longrightarrow P_{i+2}^{\,6}
+ \longrightarrow P_{i+1}^{\,4}
+ \longrightarrow P_i\longrightarrow S_i\longrightarrow0
+\]
+が存在し、左側の対応解消とAS双対性を満たすものをいう。
+ここで$P_i=e_iC$である。
+これはKoszul型であり、大域次元4を意図する。
+数値だけを仮定する弱い意味のquadratic AS正則代数との違いは保持する。
+domain、noetherian、PBW、Calabi--Yau性を全域に仮定しない。
+
+本研究では、添字保持$\ZZ$-代数同型を同値関係とする。
+graded algebra同型を分類する\texttt{as4}の成果を参照するが、
+その分類は現在なお未完成である
+（\href{https://github.com/uedakazushi/as4}{\texttt{uedakazushi/as4}}の現行研究方針）。
+SierraやZhangのtwisting systemによる同一視は、
+graded同型より粗い$\ZZ$-代数同型を生む
+\cite{Zhang,Sierra,MoriNyman}。
+
+\subsection*{既知の出発点と本稿の新しい位置づけ}
+標準14641型の4周期性はKoszul--Frobenius双対性から従い、
+最小正周期は1、2、4のいずれかである
+\cite{BP,MoriNyman}。
+\texttt{as4}の
+\href{https://github.com/uedakazushi/as4/blob/main/research/z_periodicity/papers/as4_z_periodicity_ja.tex}
+{周期性研究原稿}には、最小周期2の平坦PBW族、
+最小周期4の明示例、全閉値でのKoszul/AS正則性の証明、
+有限恒等式の検証コードが記されている。
+この原稿の独立査読・結果の新規性の最終判定は未了である。
+特に、1周期的な特殊ファイバーと非1周期的な一般ファイバーを
+結ぶ平坦族があるので、周期1/2/4を既約成分のラベルだとみなしてはならない。
+本稿はそれらの証明を重複せず、**周期の選択を忘れる際の問題**に焦点を当てる。
+
+既存の\texttt{as4}のgraded結果をすべて分類し終えても、
+最小周期2、4の対象はそこから復元できない。
+一方で、それらが必ず新しい既約成分を与えるとも限らない。
+Bondal--Polishchukのhelix・quantum determinantの方法\cite{BP}と、
+正則$\ZZ$-空間の圏的構成\cite{MoriNyman}を使うのが自然である。
+
+\section{周期群と4周期の有限表示}
+\begin{lemma}\label{lem:period-subgroup}
+$\Per(C)\subset\ZZ$は部分群である。
+特に$C$が4周期的なら、その最小正周期は$1,2,4$のいずれかである。
+\end{lemma}
+\begin{proof}
+$s$周期同型と$t$周期同型は、後者を$s$だけ平行移動させて合成できるから
+$s+t$は周期である。逆同型を$-s$だけ移動させると$-s$も周期となる。
+$0$は自明に周期である。よって$\Per(C)=p\ZZ$。
+$4\in p\ZZ$なら$p\mid4$となる。
+\end{proof}
+
+以下、\emph{4周期同型付き}対象$(C,\tau)$とは
+\[
+ \tau_{ij}:C_{ij}\xrightarrow{\sim}C_{i+4,j+4}
+\]
+が積を保つものとする。対象の同型は$\tau$と可換する添字保持
+$\ZZ$-代数同型である。
+$\tau$の存在のみを要求する裸の$C$とは別である。
+
+四つの4次元$k$-空間$V_0,V_1,V_2,V_3$を固定し、添字を法4で読む。
+\[
+ \mathfrak P=\prod_{i=0}^{3}\Gr(6,V_i\otimes V_{i+1}),
+ \qquad G=\prod_{i=0}^3\GL(V_i)
+\]
+とおく。$\Gr(6,16)$の次元は60なので、$\dim\mathfrak P=240$、
+$\dim G=64$である。
+ただし、この差176はAS正則モジュライの次元ではない。
+AS条件をまだ課しておらず、安定化群もあるためである。
+
+\begin{theorem}[4周期表示の有限四窓atlas]\label{thm:four-window}
+各$C_{i,i+1}$が4次元で各二次関係空間が6次元の
+\emph{次数一生成・二次}正連結$\ZZ$-代数$(C,\tau)$で、
+4周期同型$\tau$を指定したものの同型群oidは、
+$\mathfrak P$の$k$-点に対する$G$の作用群oidと同値である。
+この定理ではAS正則性やKoszul性を仮定しない。
+それらの条件を満たす全部分群oidにも同じ対応が制限される。
+\end{theorem}
+\begin{proof}
+$(C,\tau)$が与えられたとき、$C_{i,i+1}$（$0\le i<4$）の基底を選び
+$V_i$と同一視する。$\tau$の反復により全整数$i$へ基底を延長する。
+$C$の二次関係空間
+\[
+ R_i=\ker\left(C_{i,i+1}\otimes C_{i+1,i+2}
+ \longrightarrow C_{i,i+2}\right)
+\]
+は$\tau$と両立するので$R_{i+4}=R_i$となり、
+$\dim R_i=6$である。従って$\mathfrak P(k)$の点を定める。
+
+逆に$(R_0,R_1,R_2,R_3)$が与えられれば、整数列上、
+頂点$i$から$i+1$へ$V_{i\bmod4}$の四つの矢印を置く。
+自由な経路$\ZZ$-代数の中で、
+各$i$の$R_{i\bmod4}\subset V_i\otimes V_{i+1}$から生成される
+二次両側イデアルを商に取る。
+この商は正連結、次数一生成、二次で、
+二次成分の核はちょうど与えた$R_i$である。
+係数が4ごとに一致するので、添字を4移す厳密な同型$\tau$を持つ。
+
+選んだ基底を変えると$G$の自然な作用になる。
+逆向きに$\tau$と可換する同型は、全ての次数一生成元上で
+四つの可逆写像$g_i:V_i\to V'_i$から定まり、
+二次関係を保つことは
+$(g_i\otimes g_{i+1})(R_i)=R'_i$に同値である。
+二次生成性からこの条件は全積を保つ同型の十分条件でもある。
+同型の合成も同じなので群oid同値が従う。
+\end{proof}
+
+\begin{remark}[分類上の重要な違い]\label{rem:forget4}
+定理\ref{thm:four-window}は、
+4周期同型$\tau$を選んだ$(C,\tau)$の分類であり、
+裸の$C$に対する全単射を与えない。
+同じ$C$の上に相異なる4周期同型が存在し得る。
+周期性の存在とその選択の違いを処理しない限り、
+$[\mathfrak P/G]$を求めても全$\ZZ$-代数の分類は完成しない。
+また、$\mathfrak P$の大部分がKoszul AS正則であるとは主張していない。
+\end{remark}
+
+\begin{proposition}[次数一の関係式による周期の判定]\label{prop:period-relations}
+二次$\ZZ$-代数$C$について、整数$s$が周期であることは、
+全$i\in\ZZ$に対する可逆線型写像
+$g_i:V_i=C_{i,i+1}\to V_{i+s}=C_{i+s,i+s+1}$が存在して
+\[
+ (g_i\otimes g_{i+1})R_i=R_{i+s}
+\]
+を満たすことと同値である。
+\end{proposition}
+\begin{proof}
+$\ZZ$-代数同型を次数一に制限すれば必要性は直ちに従う。
+逆に与えられた可逆写像は自由な経路$\ZZ$-代数の同型を定め、
+各二次関係生成空間を対応する関係生成空間へ送る。
+従って二次イデアル全体を保ち、商に同型を誘導する。
+\end{proof}
+
+\begin{remark}
+命題\ref{prop:period-relations}の写像$g_i$は、
+あらかじめ選んだ4周期$\tau$と\emph{可換する必要がない}。
+最初から$g_{i+4}=g_i$という条件だけで1周期性を調べると、
+選んだ$\tau$と可換しない周期同型を見落とす。
+この点が未標識moduliの分類で最初に解決すべき障害となる。
+\end{remark}
+
+\section{1周期的部分とgraded AS4の再利用}
+\begin{proposition}\label{prop:graded-period}
+二次正連結$\ZZ$-代数$C$は、
+$C\simeq C(1)$であることと、ある次数一生成二次のconnected
+graded algebra $A$の付随代数$\check A$と同型であることが同値である。
+1周期同型を\emph{選んだ組}$(C,\sigma)$は、
+graded代数の同型類と同値な分類問題を与える。
+\end{proposition}
+\begin{proof}
+$C=\check A$のとき、添字を一つ移す恒等同型が存在する。
+逆に$\sigma:C\to C(1)$を選び、$A_n=C_{0n}$として
+$a\in A_m,b\in A_n$の積を
+$a*b=a\,\sigma^m_{0n}(b)$と定める。
+$\sigma$が積を保つことから結合律が従う。
+$A_0=k$で、次数一生成・二次関係も引き継がれる。
+$\sigma$を使い添字ごとの成分を同定すると
+$\check A\simeq C$が得られる。
+これらの構成を同型に適用すれば組とgraded代数の同値を得る。
+\end{proof}
+
+従ってgraded側である\texttt{as4}の定理を利用するには
+既知族を$\ZZ$-代数へ写す際の\emph{忘却}を明示しなければならない。
+gradedの同型条件を$\ZZ$-同型条件とみなしてはならない。
+また、Zhang twistによる同型はperiodic presentationにより
+同じ裸の$C$を与え得る。
+Nakayama自己同型やCY性は選んだgraded表示に依存するため、
+Z側の不変量としてそのまま採用しない。
+
+\section{既存の非1周期例と今後の完全分類}
+既存研究\texttt{as4/research/z\_periodicity}では、
+$\varepsilon_i=(-1)^i$として各位置の四生成元$X,Y,Z,W$に
+\begin{align*}
+ XY+YX&=Z^2+W^2,& XZ+ZX&=\varepsilon_i\lambda WY,\\
+ XW+WX&=Z^2,&YZ+ZY&=W^2,\\
+ YW+WY&=0,&ZW+WZ&=0
+\end{align*}
+を課した2周期PBW族が調べられている。
+全ての閉パラメータで14641型・Koszul・左右AS正則であり、
+$\lambda=0$は1周期、ある非空Zariski開集合では最小周期2である。
+この結果は\texttt{as4}の原稿・有限検証コードを参照しており、
+本稿が再び検証を実行したとは主張しない。
+また別の例で最小周期4が実現される。
+これらの例が全$\ZZ$-moduliのどの既約成分に属するか、
+全特殊値の族内外同型がどうなるかは未解決である。
+
+今後の分類では、(i) $\mathfrak P$に課すKoszul/AS条件、
+(ii) $(C,\tau_4)\mapsto C$の同型群oidのファイバー、
+(iii) 1/2/4の周期構造とgraded側の忘却、
+(iv) 全特殊値の必要十分条件、
+(v) 全対象被覆とモジュライ成分を順に調べる。
+$\mathbb Z$-代数の最小周期が4を割ることだけでは
+全てを分類したことにはならない。
+
+\begin{thebibliography}{9}
+\bibitem{BP}
+A.~I.~Bondal and A.~E.~Polishchuk,
+\emph{Homological properties of associative algebras: the method of helices},
+Russian Acad. Sci. Izv. Math. \textbf{42} (1994), no.~2, 219--260.
+\href{https://doi.org/10.1070/IM1994v042n02ABEH001536}{doi:10.1070/IM1994v042n02ABEH001536}.
+\bibitem{MoriNyman}
+I.~Mori and A.~Nyman,
+\emph{A categorical characterization of quantum projective $\mathbb Z$-spaces},
+Applied Categorical Structures \textbf{33} (2025).
+\href{https://doi.org/10.1007/s10485-025-09806-2}{doi:10.1007/s10485-025-09806-2};
+\href{https://arxiv.org/abs/2307.15253}{arXiv:2307.15253}.
+\bibitem{Zhang}
+J.~J.~Zhang, \emph{Twisted graded algebras and equivalences of graded categories},
+Proc. Lond. Math. Soc. \textbf{72} (1996), 281--311.
+\bibitem{Sierra}
+S.~J.~Sierra, \emph{G-algebras, twistings, and equivalences of graded categories},
+\href{https://arxiv.org/abs/math/0608791}{arXiv:math/0608791}.
+\bibitem{as4period}
+AS4周期性研究原稿, 
+\emph{四次元二次AS正則$\mathbb Z$-代数の周期性：最小周期1,2,4と非1周期的な平坦族},
+2026年11月12日・第2版,
+\url{https://github.com/uedakazushi/as4/blob/main/research/z_periodicity/papers/as4_z_periodicity_ja.tex}.
+\end{thebibliography}
+\end{document}
