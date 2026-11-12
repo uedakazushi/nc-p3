@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "project_id": "asz4",
+  "date": "2026-11-12",
+  "version": 1,
+  "status": "active_classification_incomplete",
+  "canonical": "github:uedakazushi/asz4/main",
+  "field": "algebraically closed char 0",
+  "scope": {
+    "target": "positive locally finite connected quadratic Koszul AS-regular indexed Z-algebras of standard 14641 type; 4 generators and 6 quadratic relations at every index",
+    "equivalence": "index-preserving Z-algebra isomorphism; not graded isomorphism, marked-period isomorphism, qgr or derived equivalence",
+    "additional_global_assumptions": [],
+    "boundary": "whether every four-dimensional quadratic AS-regular Z-algebra lies in the standard 14641 framework is not assumed"
+  },
+  "mathematical_results": [
+    {
+      "id": "R1",
+      "claim": "For the standard 14641 class, C≅C(4); p∈{1,2,4}",
+      "status": "existing_manuscript_proof_not_independently_audited_here",
+      "source": "uedakazushi/as4:research/z_periodicity/papers/as4_z_periodicity_ja.tex",
+      "blob_sha": "cc475fae425a23a02fd8559e403ad2ec375302f3"
+    },
+    {
+      "id": "R2",
+      "claim": "Exist period-2 and period-4 AS-regular Z-algebras and a flat family with period-1 special and generic period 2",
+      "status": "existing_manuscript_plus_finite_exact_code_not_rerun_here",
+      "source": "uedakazushi/as4:research/z_periodicity/"
+    },
+    {
+      "id": "R3",
+      "claim": "Marked 4-periodic quadratic Z-algebra presentations with dim V=4 dim R=6 are equivalent to four Grassmannian factors modulo GL4^4",
+      "status": "proof_written_not_externally_refereed",
+      "proof": "papers/asz4_classification.tex:thm:four-window"
+    },
+    {
+      "id": "R4",
+      "claim": "Periodic shift s iff all integer-index degree-one isomorphisms preserve R_i; no periodicity of the gauge relative to a chosen tau4 assumed",
+      "status": "proof_written",
+      "proof": "papers/asz4_classification.tex:prop:period-relations"
+    },
+    {
+      "id": "R5",
+      "claim": "1-periodic Z-algebras with selected isomorphism correspond to graded algebras; forgetting yields coarser equivalence",
+      "status": "proof_written_with_existing_twist_literature",
+      "proof": "papers/asz4_classification.tex:prop:graded-period"
+    }
+  ],
+  "next_task_id": "Z4-WINDOW-001",
+  "tasks": [
+    {
+      "id": "Z4-WINDOW-001",
+      "priority": 1,
+      "status": "in_progress",
+      "objective": "Turn four-window groupoid theorem into a verified AS-regular finite chart, identify exactness/Frobenius conditions without losing special fibers",
+      "done_when": "proved necessary-sufficient finite conditions on four R_i, with reproducible tests and application to period2/4 examples"
+    },
+    {
+      "id": "Z4-FORGET-002",
+      "priority": 2,
+      "status": "planned",
+      "objective": "Classify fibers of forgetting chosen tau4 and the genuine Z-algebra isomorphism relation; compare one-periodic graded forgetful morphism",
+      "dependency": "Z4-WINDOW-001"
+    },
+    {
+      "id": "PERIOD-STRATA-003",
+      "priority": 3,
+      "status": "planned",
+      "objective": "Classify period 1/2/4 loci including all exceptional parameters in existing AS4 period2 family, specializations, stabilizers and orbit equivalence",
+      "dependency": "Z4-WINDOW-001"
+    },
+    {
+      "id": "Z4-AS-004",
+      "priority": 4,
+      "status": "planned",
+      "objective": "Full closed-fiber AS-regular sufficiency and groupoid moduli for four-window data",
+      "dependency": "Z4-WINDOW-001"
+    },
+    {
+      "id": "GLOBAL-005",
+      "priority": 5,
+      "status": "planned",
+      "objective": "Prove exhaustiveness, family-wise and between-family isomorphism tests, irreducible components and specialization",
+      "dependency": "Z4-FORGET-002"
+    }
+  ],
+  "validation": {
+    "github_commit_source": "written_and_refetch_to_confirm",
+    "paper_latex_build": "not_run_yet",
+    "code_checked": "static_project_checker_pending",
+    "as4_periodicity_code_rerun": "not_run",
+    "formal_proof": "not_done",
+    "independent_peer_review": "not_done"
+  },
+  "document_paths": {
+    "plan": "research/plan_ja.tex",
+    "notes": "research/notes_ja.tex",
+    "paper": "papers/asz4_classification.tex",
+    "baseline": "research/BASELINE.md",
+    "instructions": "AGENTS.md"
+  }
+}
