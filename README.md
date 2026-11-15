@@ -1,12 +1,12 @@
 # nc-p3 — 非可換射影三空間の周期構造と代数的変形
 
-**2026-11-16 / v18。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-16 / v19。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 最初に読む
 
 [研究方針](research/plan_ja.tex) → [主論文](nc-p3.tex) → [必要な研究ノート](research/notes_ja.tex)。
 実行規則は [AGENTS.md](AGENTS.md)、終盤を見据えた分類の方法は [分類アトラス設計](research/classification_architecture.md)、
-一次文献と外部依存は [BASELINE.md](research/BASELINE.md)、
+一次文献と外部依存は [BASELINE.md](research/BASELINE.md)（as4は必要箇所だけ取得）、
 主張と課題の索引は [STATE.json](research/STATE.json)、今回の検証範囲は [validation.json](research/validation.json) を参照する。
 
 対象は、標数零の代数閉体上の標準14641型 quadratic Koszul AS-regular indexed Z-algebra。

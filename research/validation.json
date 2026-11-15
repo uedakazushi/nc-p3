@@ -1,14 +1,14 @@
 {
   "schema_version": 2,
   "date": "2026-11-16",
-  "version": 18,
+  "version": 19,
   "reviewed_input": {
-    "source_commit": "163de8bdbe2c4c1abfc2ce3c63466b9843f0d64b",
-    "source_tree": "d973cfd8621e0c223f7ad02879541c82392cfc65"
+    "source_commit": "21fac7fee3ec485afa108df4a33c40792b41a934",
+    "source_tree": "291d2d1bbc3e25d2d86981652ad01ae8fb2c634a"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Documentation-only research strategy change: a classification-atlas architecture, reordered task priorities and Codex guidance. All prior mathematics results/labels and computation code unchanged.",
+    "scope": "Codex instructions updated to reuse external as4 only through a small pinned dependency index and on-demand theorem/code fetches, with no default repository-wide read or periodic full sync. No mathematical content edited.",
     "new_mathematical_theorem": false
   },
   "environment": {
@@ -17,20 +17,14 @@
     "tex_engine": "LuaHBTeX 1.18.0 (TeX Live 2025/dev/Debian)",
     "tex_format": "LaTeX2e 2024-11-01 patch level 2"
   },
-  "checks": [
-    {
-      "command": "Remote JSON parse and consistency checks of architecture, plan, agents, task index and validation",
-      "result": "PASS",
-      "scope": "One new atlas design file and six modified current project files exist; priority task has id Z4-AS-004, 35 mathematical result records preserved."
-    }
-  ],
+  "checks": [],
   "certificate_comparison": {
     "result": "NOT_RUN",
-    "scope": "Mathematical verifier source and certificates unchanged; prior PASS not represented as rerun in v18."
+    "scope": "No mathematical computations or certificate regeneration performed for instruction-only update."
   },
   "proof_review": {
     "result": "NOT_RUN",
-    "scope": "No new mathematical proof; existing results preserved and classification-coverage status explicitly remains open."
+    "scope": "No new mathematical proof added; all 35 result records retained."
   },
   "literature_review": {
     "primary_text": [
@@ -46,20 +40,16 @@
   },
   "tex": {
     "result": "NOT_RUN",
-    "scope": "The plan source has changed. No v18 LuaLaTeX compilation has yet been performed."
+    "scope": "No LuaLaTeX recompilation performed for v19 instruction update."
   },
   "visual_inspection": {
     "result": "NOT_RUN",
-    "scope": "No v18 PDF produced."
+    "scope": "No new PDF produced."
   },
   "github_save": {
-    "result": "PASS",
+    "result": "pending",
     "branch": "main",
-    "validated_content_commit": "0e7e762aade3913e2bbfd2c11dc8709e78678595",
-    "validated_content_tree": "d5a6f3a4405e1919a7db5edef4bf30f129fcb472",
-    "fast_forward": true,
-    "verified_remote_file_count": 47,
-    "scope": "The branch head and full recursive tree were read back; all 47 paths were visible, and the seven changed files were fetched and checked."
+    "expected_parent": "21fac7fee3ec485afa108df4a33c40792b41a934"
   },
   "library_save": {
     "result": "not_saved_project_policy",
@@ -79,5 +69,5 @@
     "The boundary five-parameter family has generic minimal period two and lies in Z7; it is not an independently established component.",
     "Eleven individually integrable tangent directions have the mixed obstruction lambda*c and do not yield a smooth simultaneous eleven-dimensional family."
   ],
-  "checks_execution_note": "No mathematical verifiers rerun and no v18 TeX compilation; source code and mathematical results were not edited. Static JSON+path+cross-reference checks and GitHub remote readback passed."
+  "checks_execution_note": "Source-specific static checks before GitHub create_tree. No mathematical verifier rerun, no LuaLaTeX run; GitHub remote reread to follow."
 }
