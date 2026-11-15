@@ -351,6 +351,12 @@
       "claim": "Symmetric-chart membership of any finite Frobenius tensor is equivalent to each of three 16-unknown linear symmetrizer spaces containing an invertible matrix. Degree-four determinant polynomials decide this and construct rational certificates on rational input. Passing certifies Koszul/AS by the symmetric chart theorem.",
       "proof": "nc-p3.tex:prop:linear-symmetrization-test",
       "status": "proof_written"
+    },
+    {
+      "id": "NO-OPPOSITE-RANK-TWO",
+      "claim": "No finite-Frobenius 14641 candidate has opposite rank two. Singular matrix pencils force adjacent rank >=8; regular pencils with adjacent rank six reduce to semisimple or rank-one nilpotent types, each with W3 dimension 12 instead of 4. Global bound improves to 3<=rho<=16.",
+      "proof": "nc-p3.tex:prop:no-opposite-rank-two",
+      "status": "proof_written"
     }
   ],
   "document_paths": {
@@ -403,7 +409,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "cf5a3f2851038051e06d634024928eb3a1e9780e",
+  "reviewed_source_commit": "e3a67ea9547938678ef7b26c7edb303cb5b6258d",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -412,7 +418,7 @@
     "task_id": "Z4-AS-004",
     "status": "open_with_tensor_reconstruction_and_rank_split",
     "objective": "Find structurally meaningful necessary and sufficient Koszul/AS regularity criteria across the canonical 4-window representation; classify all exceptional loci.",
-    "immediate_next_action": "Use the linear symmetrizer spaces to remove the certified symmetric chart before searching the low-rank residual for Frobenius/non-Koszul examples. A concrete structural next step is rho=2: write w=a_02 tensor b_13+c_02 tensor d_13 and analyze whether full singleton ranks plus W3=4 can hold; block-diagonal pencil examples have excess W3. If this stalls, return to quintic rank(d3) outside the symmetric chart. Do not rerun known quantum/symmetric normalizations or infer generic seven/nine ranks from samples.",
+    "immediate_next_action": "Analyze the remaining rho=3,4,5 low-rank tensor locus after the proved exclusion of rho=2. Avoid simultaneous-diagonal matrix-space ansatz: six adjacent support entries already force W3>=10. Use linear symmetrizers to remove the certified symmetric chart (rho=6), then test quartic/quintic Koszul obstructions on genuinely residual candidates. If low-rank matrix-space classification stalls, return to quintic rank(d3) outside the symmetric chart. Seven/nine rho=8 remains sampled, not a generic/all-fiber result.",
     "read_first": [
       "research/plan_ja.tex",
       "AGENTS.md",
@@ -424,7 +430,7 @@
       "computations/tensor_symmetrization.py"
     ],
     "known_obstruction": "Higher Koszul homology outside certified charts unresolved; no finite-Frobenius non-Koszul counterexample certified. Full symbolic seven-parameter elimination has intermediate rational-function GCD growth, so sampled rho=8 is not a generic/all-fiber theorem. Explicit GL4 orbit normal forms of all U quadric systems are also not supplied.",
-    "state_of_claim": "Frobenius degree-four reduction, tensor reconstruction, exhaustive rank split, quantum rank strata/minimal-rank normal forms, symmetric-chart all-fiber regularity, complete indexed criterion and constructive linear membership test have written proofs and targeted exact checks. Full global classification remains incomplete.",
+    "state_of_claim": "Frobenius degree-four reduction, tensor reconstruction, exhaustive rank split, quantum rank strata/minimal-rank normal forms, symmetric-chart all-fiber regularity, complete indexed criterion and constructive linear membership test have written proofs and targeted exact checks. Full global classification remains incomplete. Opposite rank two is now excluded for all finite Frobenius candidates via a complete pencil split; ranks 3,4,5 are unresolved.",
     "handoff_rule": "Overwrite with the current next concrete research action before task termination; no chronological status log."
   },
   "execution_policy": {

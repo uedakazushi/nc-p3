@@ -137,3 +137,15 @@ nc-p3 の `lem:symmetric-tensor-congruence` は完全対称・一因子完全階
 一般原理は新規成果として数えず、`cor:symmetric-chart-isomorphism` で
 対称Cliffordチャートの裸のindexed同型と通常の四二次式の線型同値を結ぶために用いる。
 その他のテンソル分類文献との新規性比較は未完。
+
+## 第三階数2の除外に用いる行列束の標準形
+
+F. De Terán, F. M. Dopico and J. M. Landsberg,
+*An explicit description of the irreducible components of the set of matrix pencils with bounded normal rank*,
+著者原稿（2017-01-27版） https://gauss.uc3m.es/fdopico/papers/laa2016-2.pdf 。
+本文 pp.5–6、Theorem 1 と直後の L_0/L_0^T の零列・零行の説明を確認。
+資料の定式化は複素数体上。nc-p3では、代数閉体上の通常の代数的Kronecker標準形の
+右・左特異ブロックとJordanブロックだけを用い、位相・軌道閉包の結果を移植しない。
+`prop:no-opposite-rank-two` の特異束の階数下界、正則束の核次元10の場合分け、
+二つの残るテンソルの三次交差次元12はnc-p3本文で証明し、固定小表と交差空間をコードで検算する。
+この出典の成分定理や未確認の出版版ページは引用していない。

@@ -3,11 +3,11 @@
   "date": "2026-11-16",
   "version": 22,
   "reviewed_input": {
-    "source_commit": "cf5a3f2851038051e06d634024928eb3a1e9780e"
+    "source_commit": "e3a67ea9547938678ef7b26c7edb303cb5b6258d"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Frobenius tensor reconstruction and exhaustive split, all quantum rank strata, symmetric-chart all-fiber regularity, complete indexed equivalence (33 unknowns/41 equations) and constructive linear symmetrization membership. First checkpoint saved; this update adds symmetric-chart proofs, code and targeted literature comparison. Existing results retained.",
+    "scope": "Frobenius tensor reconstruction and exhaustive split, all quantum rank strata, symmetric-chart all-fiber regularity, complete indexed equivalence (33 unknowns/41 equations) and constructive linear symmetrization membership. First checkpoint saved; this update adds symmetric-chart proofs, code and targeted literature comparison. Existing results retained. Further proved complete exclusion of opposite rank two and retained the useful diagonal-ansatz obstruction; current bound is 3<=rho<=16.",
     "new_mathematical_theorem": true
   },
   "checks": [
@@ -40,11 +40,16 @@
       "command": "python3 computations/verify_symmetric_congruence.py",
       "result": "PASS",
       "scope": "Semisimple and nilpotent centroids, polynomial fourth roots and common congruence; determinant-span construction when each basis matrix is singular, rejection of an all-singular space, zero-coefficient sparse regression."
+    },
+    {
+      "command": "python3 computations/verify_rank_two_exclusion.py",
+      "result": "PASS",
+      "scope": "All 16 pairs of non-scalar single-eigenvalue Jordan partitions: kernel table [[10,8,7,4],[8,8,6,4],[7,6,6,4],[4,4,4,4]]. Both canonical rank-two tensors have singleton ranks 4, pair ranks (6,6,2), and W3 dimensions 12 at every start. Full coverage uses the written pencil proof, not sampled matrices alone."
     }
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed W5 intersection/rank-one contradiction; tensor contractions and complementary perfect pairings; canonical trace rotation; opposite rank invariance, lower bound and disjoint covering; quantum block rank formula and indexed diagonal normalization; distinct point-projection supports separate the two normal forms. No formalization, independent review or novelty verification. Also reviewed the four-quadric height/regular-sequence criterion, the symmetric-chart Tate argument, independent equivalence to common congruence via a commutative centroid and polynomial roots, complete indexed-to-graded chart equivalence, disjointness of alternating/symmetric orbits, and the three independent linear symmetrizer conditions."
+    "scope": "Reviewed W5 intersection/rank-one contradiction; tensor contractions and complementary perfect pairings; canonical trace rotation; opposite rank invariance, lower bound and disjoint covering; quantum block rank formula and indexed diagonal normalization; distinct point-projection supports separate the two normal forms. No formalization, independent review or novelty verification. Also reviewed the four-quadric height/regular-sequence criterion, the symmetric-chart Tate argument, independent equivalence to common congruence via a commutative centroid and polynomial roots, complete indexed-to-graded chart equivalence, disjointness of alternating/symmetric orbits, and the three independent linear symmetrizer conditions. Audited the rank-two exclusion: full singleton ranks remove zero minimal indices; singular left/right Kronecker blocks force rank>=8; generic dual pencil basis normalizes both leading matrices; Jordan nullity 10 yields only two canonical types, both with explicit W3 dimension 12."
   },
   "tex": {
     "result": "BLOCKED_MISSING_DEPENDENCIES",
@@ -57,12 +62,12 @@
   },
   "literature_review": {
     "result": "TARGETED_PRIMARY_TEXT",
-    "scope": "Belitskii--Sergeichuk, Congruence of multilinear forms, arXiv:0710.0834, Definition 1, Theorem 2(a), Lemma 4(a) and polynomial-root proof read in primary PDF pp.2-4. Original statement is over C; manuscript supplies its own needed full-rank symmetric four-tensor proof over algebraically closed char 0. General congruence principle and Clifford/CI methods not claimed novel. No finite-Frobenius non-Koszul example certified by literature search."
+    "scope": "Belitskii--Sergeichuk, Congruence of multilinear forms, arXiv:0710.0834, Definition 1, Theorem 2(a), Lemma 4(a) and polynomial-root proof read in primary PDF pp.2-4. Original statement is over C; manuscript supplies its own needed full-rank symmetric four-tensor proof over algebraically closed char 0. General congruence principle and Clifford/CI methods not claimed novel. No finite-Frobenius non-Koszul example certified by literature search. De Terán--Dopico--Landsberg author PDF (2017-01-27), Theorem 1 and zero-minimal-index discussion pp.5-6 also read. Only the algebraic KCF is used; no transfer of complex-topological results."
   },
   "github_save": {
     "result": "PENDING",
     "branch": "main",
-    "scope": "Previous checkpoint cf5a3f2 was pushed and read back; current symmetric-chart changes await commit, fast-forward push and new readback."
+    "scope": "Checkpoints cf5a3f2 and e3a67ea pushed. Current rank-two exclusion and current receipt await final fast-forward push/readback."
   },
   "library_save": {
     "result": "not_saved_project_policy",
@@ -73,6 +78,7 @@
     "Both global rank branches retain unclassified residuals. Symmetric U-chart regularity and a complete indexed equivalence criterion are proved, but explicit normal forms of all four-quadric systems remain unresolved.",
     "Quintic d3 automatic rank and certified finite-Frobenius non-Koszul counterexamples remain unresolved.",
     "Quantum rank-six has two indexed classes only within the quantum polynomial locus.",
-    "Full components, period strata, degenerations and novelty remain unresolved."
+    "Full components, period strata, degenerations and novelty remain unresolved.",
+    "Opposite ranks 3,4,5: existence of finite-Frobenius/regular objects unresolved; rank two is now excluded."
   ]
 }

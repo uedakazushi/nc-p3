@@ -6,11 +6,12 @@
     "name": "rho",
     "definition": "Rank of the 02|13 flattening of the canonical top Frobenius tensor",
     "bounds": [
-      2,
+      3,
       16
     ],
     "isomorphism_invariance": "proof_written",
-    "complete_invariant": false
+    "complete_invariant": false,
+    "bound_proof": "prop:no-opposite-rank-two and prop:opposite-rank-split"
   },
   "branches": [
     {
@@ -77,7 +78,7 @@
   ],
   "limits": [
     "Coverage is a partition of already regular objects, not a proof that every tensor candidate is Koszul/AS.",
-    "No claim that all integers 2..16 occur, or that a rank is a full isomorphism invariant.",
+    "No claim that all integers 3..16 occur, or that a rank is a full isomorphism invariant.",
     "Quantum rank strata and their minimal-rank subcase do not exhaust either global branch."
   ]
 }
