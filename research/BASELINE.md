@@ -1,4 +1,4 @@
-# 依存・一次文献・証明位置 — 2026-11-15 / v10
+# 依存・一次文献・証明位置 — 2026-11-15 / v11
 
 ## 現行プロジェクト
 
@@ -54,3 +54,9 @@
 - 楕円曲線上の次数12の因子、反不変6＋不変3の切断空間、有限射影自己同型の回避による非1周期性は本文で証明する。単一の数値点や七変数族の特殊化だけから一般点へ外挿しない。
 - Bhatoyほかのgraded Cliffordモジュライとの比較は、通常gradedの変形と添字依存の交代変形を区別する。文献照合だけで九変数族が新しい既約成分だと結論しない。
 - 九変数族の既存のOre型・Clifford型・非可換P3の族との完全な同定、新規性・優先権の最終確認は未了。新規性の不存在・存在を検索結果の有無だけで主張しない。
+
+## Hesse三次曲線の不変量と指定Ore構成の導分分類
+
+- V. Knibbeler, S. Lombardo, A. P. Veselov, *Automorphic Lie algebras and modular forms*, International Mathematics Research Notices 2023, no. 6, 5209–5262, DOI https://doi.org/10.1093/imrn/rnab376 。出版社HTML §7.3 式(42)にHesseの古典的$j$公式を確認。原稿 `prop:elliptic-j-obstruction` の具体式へ代入する。
+- `computations/verify_ore_derivations.py`: 三生成Clifford部分の30×18制約行列、通常導分階数12・捩れ導分階数9を全パラメータで証明補助する小行列式を生成し、一般のindexed同型に関する楕円$j$必要条件の有理関数を検算する。
+- 導分の完全性は固定Clifford部分と指定された符号Ore形式に限定。全四窓分類、楕円$j$一致による十分同型判定、全モジュライの成分最大性は未証明。

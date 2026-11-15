@@ -6,7 +6,7 @@
 \usepackage{xurl}
 \title{nc-p3研究方針と再開手順}
 \author{}
-\date{2026年11月15日\quad 第10版}
+\date{2026年11月15日\quad 第11版}
 \begin{document}
 \maketitle
 \section{最初に読む：目標・達成基準・現在の保存状態}
@@ -89,9 +89,24 @@ $t=h=0$は七変数族そのもの。中心平方上のClifford基底とOre拡�
 $1+th=0$では三生成部分の次数3が跳ぶ例があり、除外条件を外さない。
 二次Gr\"obner基底は一般の$t,h$では主張しない。新規性は未確認である。
 
+\subsection*{Ore導分の完全分類と楕円同型不変量}
+定理\texttt{thm:ore-derivations}と系\texttt{cor:ore-slice}（\path{sections/ore_complete.tex}）は、
+固定された三生成Clifford部分上の次数一Ore型導分を分類する。
+通常導分は自由階数6（内3＋外3）、符号捩れ導分は自由階数9（中心二次式値）。
+位置依存の$X$の基底変更と対角規格化により、九変数正規形は
+指定された二周期Ore構成の一般表示を尽くす。一般四窓の分類・成分最大性ではない。
+
+命題\texttt{prop:elliptic-j-obstruction}は、一般のindexed同型の必要条件
+$J(th)=J(t'h')$を与える。$J$は$th$の次数12の有理関数で、
+固定した同型類に現れる一般の$th$の値は高々12個。逆は未証明。
+再現は\path{computations/verify_ore_derivations.py}、
+証明書は\path{research/ore_derivation_certificate.json}。
+Hesse標準公式の一次資料は\path{research/BASELINE.md}に記載した。
+
 \section{優先課題と具体的な着手方法}
 \paragraph{最優先：ALGEBRAIC-FAMILY-008。}
 形式的な高次障害計算より明示的な代数的族の拡張を優先する。
+Ore形式内部の次数一導分分類は完了したので、別のClifford部分かOre以外の代数的構成で新しい変形方向を探す。
 九変数族の一般点における同型・特殊化・成分としての最大性を調べる。
 まず三生成楕円曲線と次数12の因子のデータから族内同型を必要十分に記述し、
 その記述で残る偶・交代方向を持つ別のOreチャートを探す。
@@ -134,6 +149,8 @@ python3 computations/verify_moduli_jets.py \
   --output research/moduli_certificate.json
 python3 computations/verify_algebraic_family.py \
   --output research/algebraic_family_certificate.json
+python3 computations/verify_ore_derivations.py \
+  --output research/ore_derivation_certificate.json
 python3 computations/verify_elliptic_family.py \
   --output research/elliptic_family_certificate.json
 latexmk nc-p3.tex

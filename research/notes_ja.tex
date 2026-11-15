@@ -6,7 +6,7 @@
 \usepackage{xurl}
 \title{nc-p3研究ノート：周期構造・局所変形・未解決の障害}
 \author{}
-\date{2026年11月15日\quad 第10版}
+\date{2026年11月15日\quad 第11版}
 \begin{document}
 \maketitle
 \section{記法と確実性}
@@ -189,6 +189,32 @@ $th(1+th)(th-8)\ne0$なら滑らか。
 非1周期性には非零な不変部分との混合が重要である。
 12点の単根性と有限群$\operatorname{Aut}(E,\mathcal O_E(1))$の固有空間の回避で非空開集合を得る。
 唯一の非被約点は局所長8、接空間次元3であり、その点から射影する操作が内在的になる。
+
+\paragraph{Clifford–Ore構成の導分分類。}
+$B_{t,h}$上の次数一の通常導分は
+$\operatorname{ad}_W,\operatorname{ad}_Y,\operatorname{ad}_Z,d_a,d_b,d_c$の自由階数6、
+符号捩れ導分は中心二次式値の自由階数9である（$1+th\ne0$）。
+$\mathbb Q[t,h]$上の30行18列の制約行列を厳密計算し、
+通常導分の12次小行列式$-2048$と六導分基底の6次小行列式$4$を確認した。
+捩れ導分の9次小行列式は
+$4(th-2)(th+4)^2$と$3ht^3(th-8)^2$で、零点が交わらない。
+$X_i\mapsto X_i+\ell+(-1)^im$と二つの対角規格化を除くと、
+印付きOre構成の一般表示は九変数正規形へ移る。
+証明は\path{sections/ore_complete.tex}、再現コードは
+\path{computations/verify_ore_derivations.py}。
+固定したClifford–Oreクラスの完全性と全AS正則代数の分類を混同しない。
+
+\paragraph{内在的な楕円$j$-不変量。}
+一般の左点配置は唯一の非被約点からの射影で楕円曲線上の12点を与え、
+その12点が載る滑らかな平面三次曲線はB\'ezoutにより一意である。
+従ってindexed同型はその$j$を保つ。
+$x=th$とすると
+\[
+ J(x)=\frac{(x-2)^3(x^3-6x^2+228x-8)^3}{x(x-8)^3(x+1)^6}
+\]
+となり、有理写像の次数は12である。
+一般のindexed同型には$J(th)=J(t'h')$が必要で、固定同型類の$x$は高々12値。
+$j$の一致は十分条件ではない。Hesse公式は\texttt{KLV}の式(42)と照合した。
 
 \paragraph{拡張候補と本質的な障害。}
 三生成部分を動かしても偶9方向のうち3方向と交代6方向のうち3方向が残る。
