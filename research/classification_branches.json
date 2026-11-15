@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "scope": "standard 14641 quadratic Koszul AS-regular indexed Z-algebras; index-preserving isomorphism",
+  "source": "sections/frobenius_tensor.tex:prop:opposite-rank-split",
+  "invariant": {
+    "name": "rho",
+    "definition": "Rank of the 02|13 flattening of the canonical top Frobenius tensor",
+    "bounds": [2, 16],
+    "isomorphism_invariance": "proof_written",
+    "complete_invariant": false
+  },
+  "branches": [
+    {
+      "id": "AS14641",
+      "parent": null,
+      "predicate": "the target AS/Koszul class",
+      "children": ["OPPOSITE-LOW", "OPPOSITE-HIGH"],
+      "coverage": "disjoint exhaustive split proved in prop:opposite-rank-split",
+      "normal_forms": "unresolved"
+    },
+    {
+      "id": "OPPOSITE-LOW",
+      "parent": "AS14641",
+      "predicate": "rho <= 6",
+      "relative_geometry": "closed in the finite Frobenius tensor candidate locus",
+      "nonempty_witness": "commutative polynomial ring, rho=6",
+      "known_subcase": "Quantum polynomial members have rho=6 and exactly two indexed classes, represented by q_ab=1 and q_ab=-1; prop:quantum-opposite-rank",
+      "normal_forms": "unresolved outside this quantum subcase",
+      "regularity_of_all_tensor_candidates": "unresolved",
+      "complete_isomorphism": "unresolved"
+    },
+    {
+      "id": "OPPOSITE-HIGH",
+      "parent": "AS14641",
+      "predicate": "rho >= 7",
+      "relative_geometry": "open in the finite Frobenius tensor candidate locus",
+      "nonempty_witness": "quantum polynomial sample rho=12; signed seven/nine samples rho=8",
+      "normal_forms": "unresolved",
+      "regularity_of_all_tensor_candidates": "unresolved",
+      "complete_isomorphism": "unresolved"
+    }
+  ],
+  "limits": [
+    "Coverage is a partition of already regular objects, not a proof that every tensor candidate is Koszul/AS.",
+    "No claim that all integers 2..16 occur, or that a rank is a full isomorphism invariant.",
+    "Quantum rank strata and their minimal-rank subcase do not exhaust either global branch."
+  ]
+}

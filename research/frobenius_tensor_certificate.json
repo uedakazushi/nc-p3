@@ -1,0 +1,148 @@
+{
+  "result": "PASS",
+  "arithmetic": "exact rational",
+  "samples": {
+    "polynomial": {
+      "single_ranks": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "adjacent_pair_ranks": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "opposite_rank": 6,
+      "intersection_dimensions_3_4": [
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "canonical_rotation": "PASS",
+      "basis_shear_invariance": "PASS"
+    },
+    "quantum": {
+      "single_ranks": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "adjacent_pair_ranks": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "opposite_rank": 12,
+      "intersection_dimensions_3_4": [
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "canonical_rotation": "PASS",
+      "basis_shear_invariance": "PASS"
+    },
+    "seven_signed": {
+      "single_ranks": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "adjacent_pair_ranks": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "opposite_rank": 8,
+      "intersection_dimensions_3_4": [
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "canonical_rotation": "PASS",
+      "basis_shear_invariance": "PASS"
+    },
+    "nine_signed": {
+      "single_ranks": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "adjacent_pair_ranks": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "opposite_rank": 8,
+      "intersection_dimensions_3_4": [
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "canonical_rotation": "PASS",
+      "basis_shear_invariance": "PASS"
+    }
+  },
+  "rank_one_exclusion_control": "PASS",
+  "scope": "Finite tensor/Frobenius reconstruction and sampled ranks; no general Koszul certification or new family completeness/novelty claim."
+}

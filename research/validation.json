@@ -3,43 +3,48 @@
   "date": "2026-11-16",
   "version": 22,
   "reviewed_input": {
-    "source_commit": "86ecc73b80bab6fd6cb205dc66411c8220d26214"
+    "source_commit": "695e96a2dcd11006225bbbcd8e9298e3f74cdb8b"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Added prop:quartic-koszul-obstruction, exact rank regression, README command, plan and current STATE/resume point. Existing results retained. Added prop:quintic-koszul-obstruction and quotient-based degree-five d3 regression.",
+    "scope": "Degree-four finite Frobenius reduction, canonical tensor reconstruction, first exhaustive opposite-rank split, all quantum rank strata and the two indexed normal forms of the quantum rank-six subcase. Minimal branch records and current resume point updated. Existing proofs retained.",
     "new_mathematical_theorem": true
   },
   "checks": [
     {
       "command": "bash scripts/cloud_preflight.sh",
       "result": "PASS",
-      "scope": "Python/SymPy and structure only."
+      "scope": "Python/SymPy and structural checks."
     },
     {
-      "command": "python3 scripts/check_project.py",
+      "command": "python3 computations/verify_frobenius_tensor.py --output work/frobenius_tensor_check.json",
       "result": "PASS",
-      "scope": "Paths, JSON, expanded TeX inputs and references; not a mathematical proof."
+      "scope": "Exact rational reconstruction, W3/W4 dimensions at all four starts, canonical rotations, singleton/adjacent/opposite ranks, shear invariance on polynomial, quantum, signed seven and signed nine samples. Opposite ranks 6,12,8,8; certificate matches tracked JSON."
+    },
+    {
+      "command": "python3 computations/verify_quantum_tensor_rank.py",
+      "result": "PASS",
+      "scope": "All 24 permutation coefficients and adjacent-relation membership, six symbolic 2x2 determinant factorizations, samples of ranks 6/8/10/12 and both symbolic diagonal indexed normal forms."
     },
     {
       "command": "python3 computations/verify_quartic_obstruction.py",
       "result": "PASS",
-      "scope": "Exact rational insertion ranks (6,44,221,968), degree-five d3 rank 36 and dual dimensions (6,4,1) at all four starts for polynomial and one signed seven-family sample. Negative control rank 187 lies outside the Frobenius locus. No general AS sufficiency asserted."
+      "scope": "Existing exact quartic/quintic rank regression, all four starts, dual dimensions and negative control."
     },
     {
-      "command": "python3 computations/verify_algebraic_family.py --output work/algebraic_family_certificate.json",
+      "command": "python3 scripts/check_project.py; git diff --check",
       "result": "PASS",
-      "scope": "Eight polynomial overlap identities, parameter tangent ranks, existing point-geometry sample. Regenerated certificate agrees with tracked certificate."
+      "scope": "Required paths, JSON, expanded TeX labels/citations, whitespace only."
     }
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed W3/W4 intersection identifications, degree-four Koszul complex exactness except H2, Euler characteristic and rank semicontinuity in prop:quartic-koszul-obstruction. Written proof; no formalization or independent review. Also reviewed degree-five top injectivity via W5=0 and separate H2/H3 dimension formulas in prop:quintic-koszul-obstruction."
+    "scope": "Reviewed W5 intersection/rank-one contradiction; tensor contractions and complementary perfect pairings; canonical trace rotation; opposite rank invariance, lower bound and disjoint covering; quantum block rank formula and indexed diagonal normalization; distinct point-projection supports separate the two normal forms. No formalization, independent review or novelty verification."
   },
   "tex": {
     "result": "BLOCKED_MISSING_DEPENDENCIES",
     "command": "latexmk nc-p3.tex",
-    "scope": "LuaLaTeX exits before document processing: ltjsarticle.cls and luaotfload-main unavailable. No PDF built. Plan compile not run because the same class is missing."
+    "scope": "Missing ltjsarticle.cls and luaotfload-main. System package helper is unavailable; no PDF built. Other two TeX builds not run because they require the same missing class."
   },
   "visual_inspection": {
     "result": "NOT_RUN",
@@ -47,24 +52,22 @@
   },
   "literature_review": {
     "result": "NOT_RUN",
-    "scope": "No new source or novelty claim; existing dependencies in BASELINE.md."
+    "scope": "Self-contained proofs; no novelty claim for tensor/superpotential methods. Existing external dependencies remain in BASELINE.md."
   },
   "github_save": {
-    "result": "PASS",
+    "result": "PENDING",
     "branch": "main",
-    "validated_content_commit": "7ff7fb96254fe6e7fbcd221e4fe0e7b72d2d05f0",
-    "validated_content_tree": "ef0eceb08c199b26e2d7c8619696c8bd141f8ed1",
-    "fast_forward": true,
-    "verified_edited_files": 6,
-    "scope": "Push succeeded; ls-remote confirmed main SHA. Fetch/readback of all six changed files matches local bytes. This receipt is saved in a subsequent commit."
+    "scope": "Checkpoint commit, fast-forward push and remote readback still required."
   },
   "library_save": {
-    "result": "not_saved_project_policy",
-    "scope": "GitHub main save succeeded."
+    "result": "not_attempted",
+    "scope": "Reserved for GitHub save failure."
   },
   "open_mathematics": [
-    "Quartic filter is necessary only; higher Koszul obstructions and exhaustive AS charts unresolved.",
-    "No finite-Frobenius non-Koszul counterexample certified by this change.",
-    "Full classification, isomorphism strata, components and novelty remain unresolved."
+    "General tensor conditions are finite Frobenius conditions, not a full Koszul/AS criterion.",
+    "Neither global rank branch has exhaustive normal forms or complete indexed isomorphism conditions.",
+    "Quintic d3 automatic rank and certified finite-Frobenius non-Koszul counterexamples remain unresolved.",
+    "Quantum rank-six has two indexed classes only within the quantum polynomial locus.",
+    "Full components, period strata, degenerations and novelty remain unresolved."
   ]
 }

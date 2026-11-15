@@ -5,7 +5,10 @@
 対象は標準14641型の四次元quadratic Koszul AS-regular indexed Z-algebra、
 同値は添字保持同型とする。最終成果は族の羅列ではなく、
 **全対象の被覆定理、各枝の正規形・全同型判定・特殊化関係**を備えた分類である。
-以下は研究方法の設計であって、網羅的な場合分けや正則判定が証明されたという主張ではない。
+以下は研究方法の設計である。現在、第三のテンソル行列階数による二分岐の被覆のみ証明した
+（`sections/frobenius_tensor.tex:prop:opposite-rank-split`）。
+最小の現行枝データは `research/classification_branches.json` に置く。
+各子枝の一般正規形・Koszul/AS判定・完全同型は未解決であり、設計自体をそれらの証明と見なさない。
 
 標準Frobenius四周期の四窓表示では、各 V_i は4次元、各 R_i は
 V_i⊗V_{i+1} 内の6次元関係空間であり、表示データは四つの

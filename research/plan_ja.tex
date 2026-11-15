@@ -122,12 +122,19 @@ $\delta_i=221-\operatorname{rank}D_{i,4}=\dim C_{i,i+4}-35$として切り出し
 $120\times40$微分行列の階数36が正確性の必要十分条件である
 （\texttt{prop:quintic-koszul-obstruction}）。次は後者が四次切断上で自動かを調べる。
 一般の四窓の巨大な方程式を一度に消去する方法に固執しない。
+双対Frobenius検査は完全対合込みなら四次までで足りる
+（\texttt{prop:frobenius-degree-four}）。標準候補を最上次数四階テンソルから復元する
+有限条件を\path{sections/frobenius_tensor.tex}に与えたが、Koszul性は別条件である。
 
 \paragraph{優先2：STRUCTURE-009。}
 添字保持同型で不変なテンソル・Frobenius・幾何データを見つけ、
 条件による場合分けが全対象を覆うことを証明する。
 点スキーム等が同型の完全不変量でない可能性に注意する。
 生成した各子枝について未処理の親残余を記録する。
+最初の被覆分岐として、第三の二対二階数$\rho\leq6$と$\rho\geq7$を証明した
+（\texttt{prop:opposite-rank-split}）。最小の枝台帳は
+\path{research/classification_branches.json}。量子部分の$\rho=6$は二つのindexed同型類に帰着するが、
+全$\rho\leq6$枝の分類ではない。
 
 \paragraph{優先3：ATLAS-010。}
 各枝に有限型パラメータ族と正規形を与え、一般点だけでなく

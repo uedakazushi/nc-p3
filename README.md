@@ -48,6 +48,11 @@ t=h=0 は [七変数族](sections/algebraic_family.tex) そのものであり、
 nonore_* という既存ファイル名・ラベルは参照の安定性のため保持するが、その意味は**指定した三生成部分に関して非Ore**というものに限る。
 [別の三生成部分によるOre表示と閉包包含](sections/ore_boundary.tex) は既に証明されている。
 
+最上次数テンソルによる [Frobenius候補の復元](sections/frobenius_tensor.tex) と、
+第三の行列階数による全対象の二分岐を証明した。
+[枝台帳](research/classification_branches.json) の両枝の一般正規形・正則性判定は未完成。
+量子部分では階数6・8・10・12の全条件を求め、階数6はindexed同型で二種類に分類した。
+
 ### 次の研究
 
 **最優先は全四窓のAS正則条件・構造的不変量から網羅的な分類木を構築すること。**
@@ -68,6 +73,8 @@ python3 scripts/check_project.py
 python3 computations/verify_exterior_trace.py
 python3 computations/verify_period_witness.py
 python3 computations/verify_quartic_obstruction.py
+python3 computations/verify_frobenius_tensor.py --output research/frobenius_tensor_certificate.json
+python3 computations/verify_quantum_tensor_rank.py
 python3 computations/verify_moduli_jets.py --output research/moduli_certificate.json
 python3 computations/verify_algebraic_family.py --output research/algebraic_family_certificate.json
 python3 computations/verify_elliptic_family.py --output research/elliptic_family_certificate.json
