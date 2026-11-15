@@ -8,7 +8,7 @@
 \newcommand{\PGL}{\operatorname{PGL}}
 \title{nc-p3研究ノート：周期構造・局所変形・未解決の障害}
 \author{}
-\date{2026年11月15日\quad 第16版}
+\date{2026年11月15日\quad 第17版}
 \begin{document}
 \maketitle
 \section{記法と確実性}
@@ -56,6 +56,75 @@ $A(\lambda)(1)=A(-\lambda)$は表示上の等式であり、最小周期2なら�
 \path{computations/verify_period_witness.py}は$A(1)$の恒等行列による周期2、
 可換例の周期1、符号移動を検査する。$A(1)$で周期1の恒等行列が失敗することは、
 他の周期1同型の不存在の証明ではない。後者はas4原稿の点配置の議論に依存する。
+
+\section{1周期性と変形連結性}
+\subsection*{標準14641型で現在分かっていること}
+変形連結性は、添字を固定し、各成分が有限局所自由で全幾何学的ファイバーがAS正則である
+連結基底上の族で考える。九変数族では交代係数を
+$(a,b,c)\mapsto(\lambda a,\lambda b,\lambda c)$とすれば、
+$\lambda=1$が元の対象、$\lambda=0$が1周期的対象となる。
+全域で正則性を保つ証明は主論文\texttt{cor:nine-to-period-one}に置く。
+五変数境界族も$a_0\mapsto\lambda a_0$で同様である。
+従ってこれらの族は、1周期的対象へ変形できない例ではない。
+標準14641型で1周期的locusと変形連結に分離した例があるかは、本研究では未解決である。
+一般点が非1周期的な既約成分が存在しても、その成分が1周期的な特殊点を含む可能性はある。
+さらに連結族による到達不能を示すには、他成分との交点を通る連結も排除する必要がある。
+
+局所Artin基底上の族に周期同型$\mathcal C\simeq\mathcal C(1)$があれば、
+特殊化により基点も1周期になる。非1周期的基点にはそのような相対周期同型は存在しない。
+しかし、分数体上だけの周期同型は特殊点へ可逆に延長できるとは限らず、
+この議論だけで1周期的な一般ファイバーを持つ変形を排除してはならない。
+九変数族の非1周期的開集合についての結果も、任意の変形方向に対する開性ではない。
+
+\subsection*{数値型を外した一般AS正則代数の障害例}
+以下は既知のヘリックス定理の適用であり、本研究の新規性とはしない。
+$X=\mathbb P^1\times\mathbb P^2$上で
+\[
+ (E_0,\ldots,E_5)=
+ (\mathcal O,\mathcal O(0,1),\mathcal O(0,2),
+ \mathcal O(1,0),\mathcal O(1,1),\mathcal O(1,2)),\qquad
+ E_{i+6}=E_i(2,3)
+\]
+とする。最初の六項は二つのBeilinson列の外積による充満強例外列であり、
+$\omega_X^{-1}=\mathcal O(2,3)$による延長は充満ヘリックスになる。
+幾何性はK\"unneth公式で確認できる。同じ六項ブロック内の前向き差は
+$(0,1),(0,2)$または$(1,b)$（$-2\le b\le2$）であり、
+$\mathbb P^2$上の$\mathcal O(-1),\mathcal O(-2)$はacyclicである。
+一ブロック以上先への差は
+$(2m+\delta a,3m+\delta b)$（$m\ge1,|\delta a|\le1,|\delta b|\le2$）で、
+両成分が正となる。よって前向きの高次Extは全て消える。
+各剰余類では豊富な$\mathcal O(2,3)$のべきで動くため、
+Serreの消滅と大域生成から列はampleである。
+
+Mori--Nyman,
+\textit{A categorical characterization of quantum projective $\mathbb Z$-spaces},
+著者公開原稿のTheorems 6.4, 6.5およびSection 4の
+$\mathrm{ASF}^{++}\Rightarrow\mathrm{AS}$により、
+\[
+ C_{ij}=\operatorname{Hom}_X(E_{-j},E_{-i})\quad(i\le j),\qquad
+ C_{ij}=0\quad(i>j)
+\]
+は大域次元4、Gorenstein parameter 6の右Noether AS正則$\mathbb Z$-代数である。
+Homの次元は添字差について三次以下の増大なので、多項式増大条件も満たす。
+一次資料は\url{https://faculty.nymana.wwu.edu/regV8.pdf}
+（定義4.2、5.22、定理6.4、6.5を確認）。
+
+この規約では
+\[
+ \bigl(\dim C_{i,i+1}\bigr)_{i\bmod6}=(6,3,3,0,3,3).
+\]
+例えば$E_{-1}=\mathcal O(-1,-1)$、
+$E_{-2}=\mathcal O(-1,-2)$なので、
+$\dim C_{01}=6$、$\dim C_{12}=3$である。
+連結基底上の成分ごとに有限局所自由な変形では、これらの階数は一定である。
+一方、1周期同型は全ての$C_{i,i+1}$の次元を等しくするため、
+$6\ne3$はそのような変形では消えない障害である。
+同じ理由で連結平坦族の鎖を経ても1周期化できない。
+
+ただしこの例は標準14641型ではなく、一次生成ですらない。
+従ってnc-p3の主問題への反例として使用しない。
+ここでの障害は添字付き座標代数の平坦変形に対するものであり、
+$qgr$同値を許して別のヘリックスや偏極を選ぶ問題とは区別する。
 
 \section{量子多項式成分の比較}
 $q_{ab}$の順序は$(01,02,03,12,13,23)$、関係は$x_bx_a=q_{ab}x_ax_b$。

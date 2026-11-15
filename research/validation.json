@@ -1,26 +1,28 @@
 {
   "schema_version": 2,
   "date": "2026-11-15",
-  "version": 16,
+  "version": 17,
   "reviewed_input": {
-    "source_commit": "c6e3a63a24a1e35be969d3f44c1cc7a7202b6f8c",
-    "source_tree": "7c37b432570ca98fd6e6d7aa7579b271f3c9d609",
+    "source_commit": "3a6e8410c4925f5d9cb53b0617aaf98db30ec3bf",
+    "source_tree": "e93ef12e8644e827e8d6e1dc318ededdf1155f46",
     "all_46_source_blobs_matched_before_editing": true
   },
   "generation": {
     "result": "PASS",
-    "scope": "Current paper, research plan, notes, instructions, source-backed bibliography and claim index; no mathematical result or proof removed.",
+    "scope": "Current paper, plan, notes and claim index clarify period-one specialization and deformation-connectedness; no existing mathematical result or proof removed.",
     "preservation": {
-      "all_101_tex_labels_retained": true,
-      "all_34_result_ids_retained": true,
+      "all_previous_101_tex_labels_retained": true,
+      "all_previous_34_result_ids_retained": true,
+      "new_result": "cor:nine-to-period-one",
+      "current_result_count": 35,
       "statement_environment_counts": {
         "theorem": 18,
         "lemma": 8,
         "proposition": 10,
-        "corollary": 6,
+        "corollary": 7,
         "conjecture": 1
       },
-      "proof_changes": "Quantum local proof expanded to justify generic normalization; one boundary proof changes only the family name. All other proof environments are unchanged."
+      "proof_changes": "Existing proof bodies are unchanged from the reviewed input. One specialization corollary and a source-dependent nonstandard helix example have been added."
     }
   },
   "environment": {
@@ -121,7 +123,9 @@
       "Standard four-periodicity, finite isomorphism/period criteria and relative Artin normalization.",
       "Quantum local comparison, Clifford tangent and quadratic-obstruction interpretation.",
       "Seven/nine-parameter regularity, image dimensions and generic period two.",
-      "Marked Ore derivations, intrinsic 2-isogeny, boundary inclusion and orbit-closure singularity."
+      "Marked Ore derivations, intrinsic 2-isogeny, boundary inclusion and orbit-closure singularity.",
+      "One-periodic specialization of the nine-family by uniform scaling of the alternating coefficients, with the regularity exclusion preserved.",
+      "Application of the Mori-Nyman ample geometric-helix theorem to P1 x P2 and the flat-invariance obstruction from adjacent ranks 6 and 3; outside standard 14641."
     ],
     "repair": "The passage from the normalized quantum point to a nonempty open set now explicitly normalizes row products by a diagonal Zhang twist after an etale cover; theorem statements are unchanged.",
     "limitations": "No claim of exhaustive independent proof verification, formal verification, external as4 reexecution, peer review or established novelty."
@@ -130,7 +134,8 @@
     "primary_text": [
       "arXiv:2511.08390v1, Table 2 and Proposition 5.1",
       "Vancliff--Van Rompay--Willaert, author PDF, Introduction and Section 3",
-      "arXiv:2602.13178v1, Introduction and Sections 3,6"
+      "arXiv:2602.13178v1, Introduction and Sections 3,6",
+      "Mori--Nyman, A categorical characterization of quantum projective Z-spaces, author manuscript regV8.pdf, Definitions 4.2,5.22 and Theorems 6.4,6.5; https://faculty.nymana.wwu.edu/regV8.pdf"
     ],
     "abstract_and_bibliography_only": [
       "Stephenson--Vancliff (2007), DOI 10.1016/j.jalgebra.2007.02.015; publisher full text unavailable"
@@ -144,12 +149,12 @@
       "latexmk research/plan_ja.tex",
       "latexmk research/notes_ja.tex"
     ],
-    "execution_environment_note": "The container default could not locate lualatex.fmt. A temporary wrapper loaded an existing TeX runtime and set TEXFORMATS to its luahbtex format directory, using the existing font cache. Repository TeX sources and .latexmkrc require standard LuaLaTeX, luatexja, latexmk and Harano Aji dependencies; no claim is made that these dependencies were present in the unmodified default container.",
+    "execution_environment_note": "A temporary wrapper loads an existing TeX runtime and sets TEXFORMATS to its luahbtex directory, using the existing font cache, because the default container could not locate lualatex.fmt. Standard LuaLaTeX, luatexja, latexmk and Harano Aji dependencies are required.",
     "documents": [
       {
         "source": "nc-p3.tex",
-        "pages": 34,
-        "generated_pdf_sha256": "fe065130e92f0a987c65a1c6d49588247f6f5d7ebf583c7754e9785456147da9",
+        "pages": 35,
+        "generated_pdf_sha256": "370489a1f1329e2ef13fb2d66ea05b673c7993d241b8582cfff3b04bdd81621d",
         "overfull_count": 0,
         "underfull_count": 0,
         "undefined_reference_warning": false,
@@ -158,7 +163,7 @@
       {
         "source": "research/plan_ja.tex",
         "pages": 4,
-        "generated_pdf_sha256": "d7cc24a78c55c273aa7bd74bea4b6b0f136fac58f603bd0e4e78dda060ab2bac",
+        "generated_pdf_sha256": "7858785db14433e8aed2351965615245efad628880042ea5a1e6bea1289c789b",
         "overfull_count": 0,
         "underfull_count": 0,
         "undefined_reference_warning": false,
@@ -166,8 +171,8 @@
       },
       {
         "source": "research/notes_ja.tex",
-        "pages": 7,
-        "generated_pdf_sha256": "cc9d9d2e14489e670b2cb6d6bfd4e04e14fd60572507c3ff61db995b43257bb4",
+        "pages": 8,
+        "generated_pdf_sha256": "fc51fad24602bf2dd00ba5b64e3536dd9b0ad183d0ad4b3a55bda180c4b76349",
         "overfull_count": 0,
         "underfull_count": 0,
         "undefined_reference_warning": false,
@@ -175,47 +180,43 @@
       }
     ],
     "all_final_tex_input_sha256": {
-      "nc-p3.tex": "cb67a26636dfd9dd0d44debf80a9a702e702c6f821d57620c0ed7c6ca18ed4a0",
-      "research/notes_ja.tex": "ec99e9f120a57428068a27a2a15a735360350ea65c8c862e1168da552e5c42dd",
-      "research/plan_ja.tex": "39ad713d75d79bff84ede827fe0d2e8cf358d200fd68a26c3348786e159ff510",
+      "nc-p3.tex": "d8b216b2d3076c12a02589b552cc4ce722ee17d3f488569f1e445b3594cf58f1",
+      "research/notes_ja.tex": "42600c84aa67e337007666b92f054066b6fa9247a21802aca181576760c5141b",
+      "research/plan_ja.tex": "f18ed943b59d8a9243900c79212738be9495748cc9a6c613db9e9aedf5301411",
       "sections/isogeny_invariant.tex": "caab2e1640d9a279eb24022ef78eb194aa94b87ac7ad1830f8b10dcfddcf028a",
       "sections/nonore_period_two.tex": "60bacc2c037e8020c3d4b444288578dc5be286e407c04dc646c4fd550d57a188",
       "sections/nine_closure.tex": "795d1b16eeab80bd4dcbe5745131efe2852b34673155ebbe1e47cbcd239e2816",
       "sections/four_window.tex": "c04a639fda9e02822737d2cbb517e5a433b2d4df65c391765b10cc3a83091fa7",
-      "sections/elliptic_ore_family.tex": "83e946f9a796583e90e9ebf99d86333e239abd3656533aa609b76974b663a897",
+      "sections/elliptic_ore_family.tex": "15dc0e42ca3a26df70d3ef122b0538b7fd5e9987e03f4808d99d876b796feb5d",
       "sections/ore_complete.tex": "8e79f26fb063caf32b55311be5878748d468ee60fa5612166b4640e69c607adf",
       "sections/local_moduli.tex": "211d5817ff91a7d5808be5b2d02c18f63da89eda1cf3e38e83c1b8541f02a725",
       "sections/ore_boundary.tex": "50b35d6784f41436c04510499c9f7e40f941b80fbd05c2359ace46c85a7673e3",
       "sections/algebraic_family.tex": "4f68950de606b87f083a8d5f8653fd4ddbaa1e73cb01c87cab2539b27373c353",
       "sections/nonore_family.tex": "ffbbcadad9c2ffcfb1a5eccff6a54e8c90c1c9fcd248664f23fbb5b9e87aeedf"
     },
-    "nonfatal_warnings": "Main paper retains a 4.5pt-to-5pt math-font substitution, legacy math command warnings and bookmark math-string sanitization. These did not cause missing content or overflow.",
+    "nonfatal_warnings": "Inherited small math-font substitution, legacy math commands and PDF bookmark sanitization warnings; no missing text or overflow.",
     "pdfs_tracked": false
   },
   "visual_inspection": {
     "result": "PASS",
-    "scope": "All 34 paper pages, 4 plan pages and 7 notes pages reviewed as contact sheets. Paper pages 1, 4 and 11 and notes page 3 also inspected at full rendered size; final changed plan pages 3 and 4 rechecked in the refreshed contact sheet.",
-    "findings": "No visible clipping, overlap, missing text or broken tables. This records layout review, not an independent mathematical proof."
+    "scope": "All current pages reviewed as contact sheets: paper 35, plan 4, notes 8. New paper page 22 and notes pages 2-3 also inspected at full rendered size.",
+    "findings": "No visible clipping, overlapping text or broken equations/tables. Layout review is distinct from mathematical verification."
   },
   "github_save": {
-    "result": "PASS",
+    "result": "pending",
     "branch": "main",
-    "validated_content_commit": "bf7d894bbabbb9a646ee5bcb662a310a4254ef56",
-    "validated_content_tree": "96ffba23ba9dd8bba8ef4926d5800dfebf4574e0",
-    "parent_commit": "c6e3a63a24a1e35be969d3f44c1cc7a7202b6f8c",
-    "fast_forward": true,
-    "verified_blob_count": 46,
-    "scope": "After the update, main and its recursive tree were read back. All 46 blob SHAs matched the reviewed local files. This confirmation changes only the validation record in a subsequent receipt commit."
+    "expected_parent": "3a6e8410c4925f5d9cb53b0617aaf98db30ec3bf"
   },
   "library_save": {
-    "result": "not_saved_project_policy",
-    "policy": "GitHub main save succeeded. Project-specific instruction prohibits duplicate Library storage after success."
+    "result": "not_requested_when_github_succeeds",
+    "policy": "GitHub main is canonical; no duplicate Library storage after success."
   },
   "open_mathematics": [
     "Necessary and sufficient general four-window Koszul/AS conditions and exhaustive explicit regular charts.",
     "Component maximality and complete indexed isomorphism of the nine-dimensional image.",
     "All higher Clifford obstruction equations and all one-period structures.",
-    "All global components, dimensions, period strata and degenerations."
+    "All global components, dimensions, period strata and degenerations.",
+    "Existence of a standard 14641 AS-regular indexed algebra that cannot be connected to any period-one object through regular flat families. The nonstandard helix example does not settle this."
   ],
   "interpretation_limits": [
     "The 9-to-15 comparison is of tangent spaces, not dimensions of irreducible components.",
@@ -224,5 +225,5 @@
     "The boundary five-parameter family has generic minimal period two and lies in Z7; it is not an independently established component.",
     "Eleven individually integrable tangent directions have the mixed obstruction lambda*c and do not yield a smooth simultaneous eleven-dimensional family."
   ],
-  "checks_execution_note": "Listed commands are the repository reproduction commands. During this audit certificate output paths were redirected to temporary files and compared with the tracked certificates; the repaired --output interface was separately executed and compared. No mathematical source or computation input differs."
+  "checks_execution_note": "The twelve mathematical scripts were executed on 2026-11-15 before this textual clarification; their source blobs and calculation inputs remain unchanged and their exact results are retained. Certificate output paths were redirected to temporary files and compared with tracked certificates; the repaired --output interface was separately executed. The structural check is rerun on the current documents. New specialization and helix arguments are proof reviews, not new computer calculations."
 }

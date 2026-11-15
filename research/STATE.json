@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-15",
-  "version": 16,
+  "version": 17,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -261,6 +261,12 @@
       "claim": "Nine family plus two boundary degenerations span eleven individually algebraically integrable first-order classes, seven even and four odd, but their Clifford quadratic obstruction restricts to lambda*c, ruling out a smooth eleven-parameter simultaneous family with that tangent image.",
       "proof": "nc-p3.tex:prop:nine-closure-obstruction",
       "status": "proof_written"
+    },
+    {
+      "id": "NINE-PERIOD1-SPECIALIZATION",
+      "claim": "Every member of the nine-parameter family, including the seven-parameter specialization, is connected to a strictly one-periodic member by the componentwise-free A1 family (a,b,c)->(lambda*a,lambda*b,lambda*c), with every fiber standard quadratic Koszul AS-regular.",
+      "proof": "nc-p3.tex:cor:nine-to-period-one",
+      "status": "proof_written"
     }
   ],
   "document_paths": {
@@ -303,8 +309,9 @@
     "Equal J(th) values are necessary but not sufficient for indexed isomorphism.",
     "Equality of U(th) is only a necessary indexed-isomorphism condition, not sufficient.",
     "The boundary two-dimensional image is in the seven-dimensional Ore image closure. This does not establish a separate component, a global moduli singularity, or generic fiber isomorphism.",
-    "Even seven plus odd four algebraic curve tangents do not imply an eleven-dimensional smooth simultaneous family: Q restricted is lambda*c."
+    "Even seven plus odd four algebraic curve tangents do not imply an eleven-dimensional smooth simultaneous family: Q restricted is lambda*c.",
+    "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type."
   ],
-  "reviewed_source_commit": "c6e3a63a24a1e35be969d3f44c1cc7a7202b6f8c",
+  "reviewed_source_commit": "3a6e8410c4925f5d9cb53b0617aaf98db30ec3bf",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json."
 }

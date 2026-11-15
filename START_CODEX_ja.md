@@ -1,4 +1,4 @@
-# Codex起動指示 — nc-p3 / 2026-11-15 / v16
+# Codex起動指示 — nc-p3 / 2026-11-15 / v17
 
 GitHub uedakazushi/nc-p3 のmain先端を確認する。
 研究方針 research/plan_ja.tex → AGENTS.md → 主論文 nc-p3.tex の順に読み、
