@@ -2,12 +2,14 @@
 """Exact top-tensor reconstruction/rank regression; not an all-AS-locus test."""
 import argparse
 import json
+from itertools import permutations
 from fractions import Fraction as F
 from pathlib import Path
 from frobenius_tensor import (digits, exact_rank, flatten, insertion_columns,
     nullspace_sparse, orthogonal_windows, reconstructed_windows, rotate,
     top_tensor)
 from verify_quartic_obstruction import seven_window
+from tensor_symmetrization import symmetrize
 
 
 def nine_window(sign):
@@ -56,7 +58,11 @@ def main():
     poly=[{(b,a):1,(a,b):-1} for a in range(4) for b in range(a+1,4)]
     quantum=[{(b,a):1,(a,b):-F(2+a+2*b)}
              for a in range(4) for b in range(a+1,4)]
-    samples={'polynomial':[poly]*4,'quantum':[quantum]*4,
+    anti=[{(b,a):1,(a,b):1} for a in range(4) for b in range(a+1,4)]
+    symmetric_ci=[dict(r) for r in anti]
+    symmetric_ci[0][(3,3)]=-1
+    samples={'polynomial':[poly]*4,'anticommutative':[anti]*4,
+             'symmetric_ci':[symmetric_ci]*4,'quantum':[quantum]*4,
              'seven_signed':[seven_window((-1)**i) for i in range(4)],
              'nine_signed':[nine_window((-1)**i) for i in range(4)]}
     results={}
@@ -66,6 +72,13 @@ def main():
         adjacent=[flatten(w,(i,(i+1)%4)) for i in range(4)]
         rho=flatten(w,(0,2))
         assert singles==[4]*4 and adjacent==[6]*4
+        if name in ('anticommutative','symmetric_ci'):
+            for index, value in w.items():
+                for word in set(permutations(digits(index))):
+                    permuted = 0
+                    for letter in word:
+                        permuted = 4*permuted+letter
+                    assert w.get(permuted, F(0)) == value
         recovered=reconstructed_windows(w)
         # These are the original first three windows. The fourth is the
         # canonical completion, which need not equal a noncanonical input R3.
@@ -83,11 +96,22 @@ def main():
         assert [flatten(changed,(i,)) for i in range(4)]==singles
         assert [flatten(changed,(i,(i+1)%4)) for i in range(4)]==adjacent
         assert flatten(changed,(0,2))==rho
+        symmetric, spaces, witnesses = symmetrize(w)
+        expected = name in ('anticommutative', 'symmetric_ci')
+        assert (symmetric is not None) == expected
+        changed_symmetric, _, changed_witnesses = symmetrize(changed)
+        assert (changed_symmetric is not None) == expected
+        membership = {'symmetric_chart': expected,
+                      'linear_space_dimensions': [len(space) for space in spaces],
+                      'basis_shear_invariance': 'PASS'}
+        if expected:
+            membership['witness_determinants'] = [str(matrix.det()) for matrix in witnesses]
         results[name]={'single_ranks':singles,'adjacent_pair_ranks':adjacent,
                        'opposite_rank':rho,'intersection_dimensions_3_4':dims,
-                       'canonical_rotation':'PASS','basis_shear_invariance':'PASS'}
+                       'canonical_rotation':'PASS','basis_shear_invariance':'PASS',
+                       'linear_symmetrization':membership}
         print(f'PASS {name}: rho={rho}, reconstruction and canonical rotations',flush=True)
-    assert [results[n]['opposite_rank'] for n in results]==[6,12,8,8]
+    assert [results[n]['opposite_rank'] for n in results]==[6,6,6,12,8,8]
     # Opposite rank one with all singleton ranks four has adjacent rank sixteen.
     rank_one={64*a+16*b+4*a+b:F(1) for a in range(4) for b in range(4)}
     assert flatten(rank_one,(0,2))==1

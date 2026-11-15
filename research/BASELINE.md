@@ -124,3 +124,16 @@ as4のCodex指示はnc-p3の実行指示ではない。
 
 公表前の未解決作業は、これらの具体的なgraded族と現行族の1周期的特殊化を照合し、
 非1周期的な一般ファイバー・境界・必要不変量のどこが既知結果を超えるかを明確にすることである。
+
+## 対称テンソルの独立同値と合同
+
+G. R. Belitskii and V. V. Sergeichuk, *Congruence of multilinear forms*,
+Linear Algebra Appl. 418 (2006), 751–762, DOI https://doi.org/10.1016/j.laa.2006.03.003 ;
+著者原稿 https://arxiv.org/pdf/0710.0834 。
+本文 pp.2–4 の Definition 1、Theorem 2(a)、Lemma 4(a) と行列根のTaylor展開を確認。
+原文の主張は複素数体上での symmetric equivalence から congruence への含意。
+nc-p3 の `lem:symmetric-tensor-congruence` は完全対称・一因子完全階数の四階テンソルについて、
+中心の可換性と多項式四乗根を用い、標数零の代数閉体上で必要な場合を直接証明する。
+一般原理は新規成果として数えず、`cor:symmetric-chart-isomorphism` で
+対称Cliffordチャートの裸のindexed同型と通常の四二次式の線型同値を結ぶために用いる。
+その他のテンソル分類文献との新規性比較は未完。

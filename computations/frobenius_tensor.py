@@ -17,7 +17,7 @@ def nullspace_sparse(rows, size):
     """Nullspace of sparse row equations over Q by triangular back substitution."""
     pivots={}
     for row in rows:
-        row=dict(row)
+        row={i: value for i, value in row.items() if value}
         while row:
             i=min(row)
             if i not in pivots:
@@ -73,7 +73,7 @@ def top_tensor(windows, start=0):
 def independent_columns(columns):
     pivots = {}
     for column in columns:
-        col = dict(column)
+        col = {i: value for i, value in column.items() if value}
         while col:
             i = min(col)
             if i not in pivots:

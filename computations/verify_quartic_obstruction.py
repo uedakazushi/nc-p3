@@ -12,6 +12,8 @@ def insertion_columns(windows, start, degree):
                 for relation in windows[(start + pos) % 4]:
                     col = {}
                     for pair, value in relation.items():
+                        if not value:
+                            continue
                         index = 0
                         for letter in left + pair + right:
                             index = 4 * index + letter
@@ -23,7 +25,7 @@ def exact_rank(columns):
     """Sparse Gaussian elimination over Q, with no numerical tolerance."""
     pivots = {}
     for column in columns:
-        col = dict(column)
+        col = {i: value for i, value in column.items() if value}
         while col:
             pivot = min(col)
             if pivot not in pivots:

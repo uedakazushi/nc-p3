@@ -3,11 +3,11 @@
   "date": "2026-11-16",
   "version": 22,
   "reviewed_input": {
-    "source_commit": "695e96a2dcd11006225bbbcd8e9298e3f74cdb8b"
+    "source_commit": "cf5a3f2851038051e06d634024928eb3a1e9780e"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Degree-four finite Frobenius reduction, canonical tensor reconstruction, first exhaustive opposite-rank split, all quantum rank strata and the two indexed normal forms of the quantum rank-six subcase. Minimal branch records and current resume point updated. Existing proofs retained.",
+    "scope": "Frobenius tensor reconstruction and exhaustive split, all quantum rank strata, symmetric-chart all-fiber regularity, complete indexed equivalence (33 unknowns/41 equations) and constructive linear symmetrization membership. First checkpoint saved; this update adds symmetric-chart proofs, code and targeted literature comparison. Existing results retained.",
     "new_mathematical_theorem": true
   },
   "checks": [
@@ -19,7 +19,7 @@
     {
       "command": "python3 computations/verify_frobenius_tensor.py --output work/frobenius_tensor_check.json",
       "result": "PASS",
-      "scope": "Exact rational reconstruction, W3/W4 dimensions at all four starts, canonical rotations, singleton/adjacent/opposite ranks, shear invariance on polynomial, quantum, signed seven and signed nine samples. Opposite ranks 6,12,8,8; certificate matches tracked JSON."
+      "scope": "Exact rational reconstruction, W3/W4 dimensions at all four starts, canonical rotations, singleton/adjacent/opposite ranks, shear invariance on six samples: polynomial, anti-commutative, non-diagonal symmetric CI, quantum, signed seven and signed nine. Opposite ranks 6,6,6,12,8,8. Exact linear symmetrizer membership and independent-shear invariance also checked. Certificate matches tracked JSON."
     },
     {
       "command": "python3 computations/verify_quantum_tensor_rank.py",
@@ -35,11 +35,16 @@
       "command": "python3 scripts/check_project.py; git diff --check",
       "result": "PASS",
       "scope": "Required paths, JSON, expanded TeX labels/citations, whitespace only."
+    },
+    {
+      "command": "python3 computations/verify_symmetric_congruence.py",
+      "result": "PASS",
+      "scope": "Semisimple and nilpotent centroids, polynomial fourth roots and common congruence; determinant-span construction when each basis matrix is singular, rejection of an all-singular space, zero-coefficient sparse regression."
     }
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed W5 intersection/rank-one contradiction; tensor contractions and complementary perfect pairings; canonical trace rotation; opposite rank invariance, lower bound and disjoint covering; quantum block rank formula and indexed diagonal normalization; distinct point-projection supports separate the two normal forms. No formalization, independent review or novelty verification."
+    "scope": "Reviewed W5 intersection/rank-one contradiction; tensor contractions and complementary perfect pairings; canonical trace rotation; opposite rank invariance, lower bound and disjoint covering; quantum block rank formula and indexed diagonal normalization; distinct point-projection supports separate the two normal forms. No formalization, independent review or novelty verification. Also reviewed the four-quadric height/regular-sequence criterion, the symmetric-chart Tate argument, independent equivalence to common congruence via a commutative centroid and polynomial roots, complete indexed-to-graded chart equivalence, disjointness of alternating/symmetric orbits, and the three independent linear symmetrizer conditions."
   },
   "tex": {
     "result": "BLOCKED_MISSING_DEPENDENCIES",
@@ -51,21 +56,21 @@
     "scope": "No PDF built."
   },
   "literature_review": {
-    "result": "NOT_RUN",
-    "scope": "Self-contained proofs; no novelty claim for tensor/superpotential methods. Existing external dependencies remain in BASELINE.md."
+    "result": "TARGETED_PRIMARY_TEXT",
+    "scope": "Belitskii--Sergeichuk, Congruence of multilinear forms, arXiv:0710.0834, Definition 1, Theorem 2(a), Lemma 4(a) and polynomial-root proof read in primary PDF pp.2-4. Original statement is over C; manuscript supplies its own needed full-rank symmetric four-tensor proof over algebraically closed char 0. General congruence principle and Clifford/CI methods not claimed novel. No finite-Frobenius non-Koszul example certified by literature search."
   },
   "github_save": {
     "result": "PENDING",
     "branch": "main",
-    "scope": "Checkpoint commit, fast-forward push and remote readback still required."
+    "scope": "Previous checkpoint cf5a3f2 was pushed and read back; current symmetric-chart changes await commit, fast-forward push and new readback."
   },
   "library_save": {
-    "result": "not_attempted",
-    "scope": "Reserved for GitHub save failure."
+    "result": "not_saved_project_policy",
+    "scope": "GitHub main checkpoint succeeded."
   },
   "open_mathematics": [
     "General tensor conditions are finite Frobenius conditions, not a full Koszul/AS criterion.",
-    "Neither global rank branch has exhaustive normal forms or complete indexed isomorphism conditions.",
+    "Both global rank branches retain unclassified residuals. Symmetric U-chart regularity and a complete indexed equivalence criterion are proved, but explicit normal forms of all four-quadric systems remain unresolved.",
     "Quintic d3 automatic rank and certified finite-Frobenius non-Koszul counterexamples remain unresolved.",
     "Quantum rank-six has two indexed classes only within the quantum polynomial locus.",
     "Full components, period strata, degenerations and novelty remain unresolved."

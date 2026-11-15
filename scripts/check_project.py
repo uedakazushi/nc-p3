@@ -14,7 +14,7 @@ REQUIRED = [
     'sections/ore_boundary.tex', 'sections/nine_closure.tex', 'sections/four_window.tex',
     'sections/local_moduli.tex', 'sections/algebraic_family.tex', 'sections/frobenius_tensor.tex',
     'computations/frobenius_tensor.py', 'computations/verify_frobenius_tensor.py',
-    'computations/verify_quantum_tensor_rank.py', 'research/frobenius_tensor_certificate.json',
+    'computations/verify_quantum_tensor_rank.py', 'computations/verify_symmetric_congruence.py', 'computations/tensor_symmetrization.py', 'research/frobenius_tensor_certificate.json',
     'research/classification_branches.json', 'research/plan_ja.tex',
     'research/notes_ja.tex', 'research/BASELINE.md', 'research/STATE.json',
     'research/validation.json', 'research/moduli_certificate.json',

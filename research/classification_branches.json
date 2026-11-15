@@ -5,7 +5,10 @@
   "invariant": {
     "name": "rho",
     "definition": "Rank of the 02|13 flattening of the canonical top Frobenius tensor",
-    "bounds": [2, 16],
+    "bounds": [
+      2,
+      16
+    ],
     "isomorphism_invariance": "proof_written",
     "complete_invariant": false
   },
@@ -14,7 +17,10 @@
       "id": "AS14641",
       "parent": null,
       "predicate": "the target AS/Koszul class",
-      "children": ["OPPOSITE-LOW", "OPPOSITE-HIGH"],
+      "children": [
+        "OPPOSITE-LOW",
+        "OPPOSITE-HIGH"
+      ],
       "coverage": "disjoint exhaustive split proved in prop:opposite-rank-split",
       "normal_forms": "unresolved"
     },
@@ -27,7 +33,12 @@
       "known_subcase": "Quantum polynomial members have rho=6 and exactly two indexed classes, represented by q_ab=1 and q_ab=-1; prop:quantum-opposite-rank",
       "normal_forms": "unresolved outside this quantum subcase",
       "regularity_of_all_tensor_candidates": "unresolved",
-      "complete_isomorphism": "unresolved"
+      "complete_isomorphism": "unresolved",
+      "children": [
+        "SYMMETRIC-CHART",
+        "LOW-RESIDUAL"
+      ],
+      "coverage": "symmetrizability existence predicate and its negation; cor:symmetric-rank-six"
     },
     {
       "id": "OPPOSITE-HIGH",
@@ -38,6 +49,30 @@
       "normal_forms": "unresolved",
       "regularity_of_all_tensor_candidates": "unresolved",
       "complete_isomorphism": "unresolved"
+    },
+    {
+      "id": "SYMMETRIC-CHART",
+      "parent": "OPPOSITE-LOW",
+      "predicate": "canonical tensor orbit meets Sym^4 V under an identification of all four spaces",
+      "parameter_chart": "U in Gr(4,Sym^2 V*): four quadrics have no common projective zero",
+      "source": "sections/frobenius_tensor.tex:thm:symmetric-frobenius-chart",
+      "coverage": "chart surjects onto this predicate locus",
+      "regularity_of_all_chart_fibers": "proved: quadratic complete intersection dual",
+      "period": "one-periodic",
+      "complete_isomorphism": "proved for all U: GL4 equivalence of quadric spaces; 33-variable 41-equation criterion, cor:symmetric-chart-isomorphism",
+      "normal_forms": "complete-intersection chart; no complete residual orbit normalization",
+      "membership": "three linear symmetrizer spaces contain invertible matrices; degree-four determinant nonidentity test, prop:linear-symmetrization-test"
+    },
+    {
+      "id": "LOW-RESIDUAL",
+      "parent": "OPPOSITE-LOW",
+      "predicate": "rho<=6 and canonical tensor orbit does not meet the symmetric locus",
+      "coverage": "complement by definition; cor:symmetric-rank-six",
+      "normal_forms": "unresolved",
+      "regularity_of_all_tensor_candidates": "unresolved",
+      "complete_isomorphism": "unresolved",
+      "nonempty_witness": "commutative polynomial indexed class, alternating top tensor; proven disjoint from symmetric chart",
+      "known_subcase": "alternating tensor orbit: exactly the commutative polynomial indexed class"
     }
   ],
   "limits": [

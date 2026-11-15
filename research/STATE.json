@@ -35,7 +35,7 @@
     {
       "id": "ISOM-011",
       "priority": 4,
-      "status": "planned",
+      "status": "active_symmetric_chart_criterion",
       "objective": "Classify indexed isomorphisms within and between normal-form branches; use invariant filters first, universal finite isomorphism equations only as needed."
     },
     {
@@ -321,6 +321,36 @@
       "claim": "For nonzero quantum parameters, rho=6+2 times the number of nonzero F1,F2,F3. All four ranks 6,8,10,12 occur; rho=6 quantum objects have exactly two indexed classes represented by all q=1 and all q=-1. Not the full global rho=6 classification.",
       "proof": "nc-p3.tex:prop:quantum-opposite-rank",
       "status": "proof_written"
+    },
+    {
+      "id": "SYMMETRIC-FROBENIUS-CHART",
+      "claim": "Symmetrizable canonical Frobenius tensors are covered by the nonempty open U in Gr(4,Sym^2 V*) of basepoint-free four-quadric systems. Their commutative complete-intersection duals are Koszul, hence all chart fibers are standard AS-regular and one-periodic.",
+      "proof": "nc-p3.tex:thm:symmetric-frobenius-chart",
+      "status": "proof_written"
+    },
+    {
+      "id": "SYMMETRIC-RANK-SIX",
+      "claim": "The symmetric chart lies in rho=6; it and its complement cover the low-rank branch. The alternating tensor orbit is the commutative polynomial indexed class and is disjoint from the symmetric chart.",
+      "proof": "nc-p3.tex:cor:symmetric-rank-six",
+      "status": "proof_written"
+    },
+    {
+      "id": "SYMMETRIC-TENSOR-CONGRUENCE",
+      "claim": "Full-single-rank symmetric fourth-order tensors independently GL-equivalent are commonly GL-congruent over algebraically closed char 0; direct centroid/root proof, standard general principle not claimed novel.",
+      "proof": "nc-p3.tex:lem:symmetric-tensor-congruence",
+      "status": "proof_written_existing_principle"
+    },
+    {
+      "id": "SYMMETRIC-CHART-ISOM",
+      "claim": "For all U-chart members, bare indexed isomorphism is equivalent to ordinary GL4 equivalence of the four-dimensional quadric spaces, hence graded isomorphism of the chosen presentations. Complete solvability criterion: 33 variables, 41 equations; explicit orbit normal forms remain unresolved.",
+      "proof": "nc-p3.tex:cor:symmetric-chart-isomorphism",
+      "status": "proof_written"
+    },
+    {
+      "id": "LINEAR-SYMMETRIZATION-TEST",
+      "claim": "Symmetric-chart membership of any finite Frobenius tensor is equivalent to each of three 16-unknown linear symmetrizer spaces containing an invertible matrix. Degree-four determinant polynomials decide this and construct rational certificates on rational input. Passing certifies Koszul/AS by the symmetric chart theorem.",
+      "proof": "nc-p3.tex:prop:linear-symmetrization-test",
+      "status": "proof_written"
     }
   ],
   "document_paths": {
@@ -352,7 +382,8 @@
     "cloud_codex_guide": "docs/cloud_codex_ja.md",
     "frobenius_tensor_section": "sections/frobenius_tensor.tex",
     "frobenius_tensor_certificate": "research/frobenius_tensor_certificate.json",
-    "classification_branches": "research/classification_branches.json"
+    "classification_branches": "research/classification_branches.json",
+    "tensor_symmetrization_code": "computations/tensor_symmetrization.py"
   },
   "unresolved_cautions": [
     "No proof of dimension 14 for the Clifford component.",
@@ -372,7 +403,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "695e96a2dcd11006225bbbcd8e9298e3f74cdb8b",
+  "reviewed_source_commit": "cf5a3f2851038051e06d634024928eb3a1e9780e",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -381,17 +412,19 @@
     "task_id": "Z4-AS-004",
     "status": "open_with_tensor_reconstruction_and_rank_split",
     "objective": "Find structurally meaningful necessary and sufficient Koszul/AS regularity criteria across the canonical 4-window representation; classify all exceptional loci.",
-    "immediate_next_action": "Use the projective tensor conditions in sections/frobenius_tensor.tex to search for finite-Frobenius non-Koszul candidates, starting in OPPOSITE-LOW outside the two quantum normal forms. Reuse reconstructed_windows/top_tensor and the quartic/quintic obstruction verifiers. In parallel mathematical alternatives, determine whether quintic rank(d3)=36 follows from quartic exactness, or characterize extra low-rank tensor constraints; do not infer AS regularity from tensor/Frobenius conditions.",
+    "immediate_next_action": "Use the linear symmetrizer spaces to remove the certified symmetric chart before searching the low-rank residual for Frobenius/non-Koszul examples. A concrete structural next step is rho=2: write w=a_02 tensor b_13+c_02 tensor d_13 and analyze whether full singleton ranks plus W3=4 can hold; block-diagonal pencil examples have excess W3. If this stalls, return to quintic rank(d3) outside the symmetric chart. Do not rerun known quantum/symmetric normalizations or infer generic seven/nine ranks from samples.",
     "read_first": [
       "research/plan_ja.tex",
       "AGENTS.md",
       "sections/frobenius_tensor.tex",
       "research/classification_branches.json",
       "computations/frobenius_tensor.py",
-      "computations/verify_quartic_obstruction.py"
+      "computations/verify_quartic_obstruction.py",
+      "computations/verify_symmetric_congruence.py",
+      "computations/tensor_symmetrization.py"
     ],
-    "known_obstruction": "Finite tensor/Frobenius conditions do not settle higher Koszul homology. No certified finite-Frobenius non-Koszul counterexample found; neither global rank branch has exhaustive normal forms. The quantum rho=6 classification is restricted to quantum polynomial members.",
-    "state_of_claim": "Degree-four Frobenius reduction, tensor reconstruction, exhaustive rank split and quantum rank formula/minimal-rank indexed normal forms have written proofs and targeted exact checks. Full classification remains incomplete.",
+    "known_obstruction": "Higher Koszul homology outside certified charts unresolved; no finite-Frobenius non-Koszul counterexample certified. Full symbolic seven-parameter elimination has intermediate rational-function GCD growth, so sampled rho=8 is not a generic/all-fiber theorem. Explicit GL4 orbit normal forms of all U quadric systems are also not supplied.",
+    "state_of_claim": "Frobenius degree-four reduction, tensor reconstruction, exhaustive rank split, quantum rank strata/minimal-rank normal forms, symmetric-chart all-fiber regularity, complete indexed criterion and constructive linear membership test have written proofs and targeted exact checks. Full global classification remains incomplete.",
     "handoff_rule": "Overwrite with the current next concrete research action before task termination; no chronological status log."
   },
   "execution_policy": {
