@@ -354,6 +354,18 @@ $H=h_j$が$\mathcal S_j(w)$に属する条件と一致する。
 有理数上の可逆証明書を構成できる。
 \end{remark}
 
+\begin{corollary}[可換多項式indexed類の線型認識]\label{cor:linear-alternating-test}
+命題\ref{prop:linear-symmetrization-test}で解空間を
+$\mathcal S_j^-(w)=\{H:H^{(j)}w=-H^{(0)}P_{0j}w\}$に置き換えると、
+三空間が全て可逆元を持つことは、$w$を四因子の独立変換で完全交代にできることと同値である。
+有限Frobenius候補では、これは元代数が可換多項式代数のindexed類に属する必要十分条件となる。
+\end{corollary}
+\begin{proof}
+線型対称化判定の証明で三つの交換に対する固有値を全て$-1$にすれば、
+変換後のテンソルは対称群の符号表現に従う。
+非零の$\Lambda^4 V$は一次元なので、系\ref{cor:symmetric-rank-six}の交代テンソルの議論を適用する。
+\end{proof}
+
 \subsection{行列束による階数2候補の除外}
 \begin{proposition}[第三階数2はFrobenius候補に現れない]\label{prop:no-opposite-rank-two}
 テンソル復元定理の有限Frobenius候補には$\rho=2$のものはない。
@@ -441,4 +453,3 @@ $(\mu/\lambda)N'\otimes I+I\otimes M'$へ直り、各平方零行列を$N$へ正
 従ってこの二条件だけで有限Frobenius候補を認定してはいけない。
 \path{computations/verify_rank_two_exclusion.py}はJordan核次元の全小表と両型の交差次元を検算する。
 \end{remark}
-

@@ -3,11 +3,11 @@
   "date": "2026-11-16",
   "version": 22,
   "reviewed_input": {
-    "source_commit": "f42db2602c43d71e2cf76aee92900ec9676b1202"
+    "source_commit": "97a09066ee4e78175cd7693c1805fc89fa2e44df"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Frobenius tensor reconstruction and exhaustive split, all quantum rank strata, symmetric-chart all-fiber regularity, complete indexed equivalence (33 unknowns/41 equations) and constructive linear symmetrization membership. First checkpoint saved; this update adds symmetric-chart proofs, code and targeted literature comparison. Existing results retained. Further proved complete exclusion of opposite rank two and retained the useful diagonal-ansatz obstruction; current bound is 3<=rho<=16. Completed the nonzero quantum indexed locus via all exceptional point-support cases and an explicit (Gm)^3/S4 normal-form criterion; proof isolated in sections/quantum_indexed.tex.",
+    "scope": "Frobenius tensor reconstruction and exhaustive split, all quantum rank strata, symmetric-chart all-fiber regularity, complete indexed equivalence (33 unknowns/41 equations) and constructive linear symmetrization membership. First checkpoint saved; this update adds symmetric-chart proofs, code and targeted literature comparison. Existing results retained. Further proved complete exclusion of opposite rank two and retained the useful diagonal-ansatz obstruction; current bound is 3<=rho<=16. Completed the nonzero quantum indexed locus via all exceptional point-support cases and an explicit (Gm)^3/S4 normal-form criterion; proof isolated in sections/quantum_indexed.tex. Extended the constructive linear test to the alternating polynomial orbit and isolated the residual low-rank locus, which contains no quantum class.",
     "new_mathematical_theorem": true
   },
   "checks": [
@@ -19,7 +19,7 @@
     {
       "command": "python3 computations/verify_frobenius_tensor.py --output work/frobenius_tensor_check.json",
       "result": "PASS",
-      "scope": "Exact rational reconstruction, W3/W4 dimensions at all four starts, canonical rotations, singleton/adjacent/opposite ranks, shear invariance on six samples: polynomial, anti-commutative, non-diagonal symmetric CI, quantum, signed seven and signed nine. Opposite ranks 6,6,6,12,8,8. Exact linear symmetrizer membership and independent-shear invariance also checked. Certificate matches tracked JSON."
+      "scope": "Exact rational reconstruction, W3/W4 dimensions at all four starts, canonical rotations, singleton/adjacent/opposite ranks, shear invariance on six samples: polynomial, anti-commutative, non-diagonal symmetric CI, quantum, signed seven and signed nine. Opposite ranks 6,6,6,12,8,8. Exact linear symmetrizer membership and independent-shear invariance also checked. Certificate matches tracked JSON. Negative-swap linear spaces also exactly recognize the polynomial fixture and reject all five other fixtures, including after independent shears."
     },
     {
       "command": "python3 computations/verify_quantum_tensor_rank.py",
@@ -54,7 +54,7 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed W5 intersection/rank-one contradiction; tensor contractions and complementary perfect pairings; canonical trace rotation; opposite rank invariance, lower bound and disjoint covering; quantum block rank formula and indexed diagonal normalization; distinct point-projection supports separate the two normal forms. No formalization, independent review or novelty verification. Also reviewed the four-quadric height/regular-sequence criterion, the symmetric-chart Tate argument, independent equivalence to common congruence via a commutative centroid and polynomial roots, complete indexed-to-graded chart equivalence, disjointness of alternating/symmetric orbits, and the three independent linear symmetrizer conditions. Audited the rank-two exclusion: full singleton ranks remove zero minimal indices; singular left/right Kronecker blocks force rank>=8; generic dual pencil basis normalizes both leading matrices; Jordan nullity 10 yields only two canonical types, both with explicit W3 dimension 12. Quantum all-parameter necessity audited from the complete support classification: six lines, plane plus three lines, two planes plus a line, full P3. The two-plane GL2 freedom is removed only after vertex-gauge normalization makes the shared generators commute and have identical outside parameters. Remaining maps are monomial with a common permutation. Triple cocycles and all S4 normal-form formulas reviewed."
+    "scope": "Reviewed W5 intersection/rank-one contradiction; tensor contractions and complementary perfect pairings; canonical trace rotation; opposite rank invariance, lower bound and disjoint covering; quantum block rank formula and indexed diagonal normalization; distinct point-projection supports separate the two normal forms. No formalization, independent review or novelty verification. Also reviewed the four-quadric height/regular-sequence criterion, the symmetric-chart Tate argument, independent equivalence to common congruence via a commutative centroid and polynomial roots, complete indexed-to-graded chart equivalence, disjointness of alternating/symmetric orbits, and the three independent linear symmetrizer conditions. Audited the rank-two exclusion: full singleton ranks remove zero minimal indices; singular left/right Kronecker blocks force rank>=8; generic dual pencil basis normalizes both leading matrices; Jordan nullity 10 yields only two canonical types, both with explicit W3 dimension 12. Quantum all-parameter necessity audited from the complete support classification: six lines, plane plus three lines, two planes plus a line, full P3. The two-plane GL2 freedom is removed only after vertex-gauge normalization makes the shared generators commute and have identical outside parameters. Remaining maps are monomial with a common permutation. Triple cocycles and all S4 normal-form formulas reviewed. Alternating recognition reviewed by the signed transposition argument and uniqueness of the four-dimensional volume tensor."
   },
   "tex": {
     "result": "BLOCKED_MISSING_DEPENDENCIES",
@@ -72,7 +72,7 @@
   "github_save": {
     "result": "PENDING",
     "branch": "main",
-    "scope": "Prior checkpoints pushed. Current all-parameter quantum classification and final validation receipt await fast-forward save/readback."
+    "scope": "Mathematical checkpoints cf5a3f2, e3a67ea, f42db26 and 97a0906 pushed; latest alternating-recognition refinement and final current receipt await save/readback."
   },
   "library_save": {
     "result": "not_saved_project_policy",
@@ -84,6 +84,7 @@
     "Quintic d3 automatic rank and certified finite-Frobenius non-Koszul counterexamples remain unresolved.",
     "Quantum rank-six has two indexed classes only within the quantum polynomial locus.",
     "Full components, period strata, degenerations and novelty remain unresolved.",
-    "Opposite ranks 3,4,5: existence of finite-Frobenius/regular objects unresolved; rank two is now excluded."
+    "Opposite ranks 3,4,5: existence of finite-Frobenius/regular objects unresolved; rank two is now excluded.",
+    "LOW-UNCLASSIFIED (low opposite rank, neither symmetric nor alternating) has no established nonempty witness or emptiness theorem; it contains no quantum indexed object."
   ]
 }

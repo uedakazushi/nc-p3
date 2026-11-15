@@ -101,9 +101,15 @@ def main():
         assert (symmetric is not None) == expected
         changed_symmetric, _, changed_witnesses = symmetrize(changed)
         assert (changed_symmetric is not None) == expected
+        alternating, alternating_spaces, _ = symmetrize(w, symmetry=-1)
+        changed_alternating, _, _ = symmetrize(changed, symmetry=-1)
+        assert (alternating is not None) == (name == 'polynomial')
+        assert (changed_alternating is not None) == (name == 'polynomial')
         membership = {'symmetric_chart': expected,
                       'linear_space_dimensions': [len(space) for space in spaces],
-                      'basis_shear_invariance': 'PASS'}
+                      'basis_shear_invariance': 'PASS',
+                      'alternating_chart': name == 'polynomial',
+                      'alternating_space_dimensions': [len(space) for space in alternating_spaces]}
         if expected:
             membership['witness_determinants'] = [str(matrix.det()) for matrix in witnesses]
         results[name]={'single_ranks':singles,'adjacent_pair_ranks':adjacent,

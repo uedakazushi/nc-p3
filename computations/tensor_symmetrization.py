@@ -34,7 +34,9 @@ def swap_factors(tensor, left, right):
     return result
 
 
-def symmetrizer_space(tensor, factor):
+def symmetrizer_space(tensor, factor, symmetry=1):
+    if symmetry not in (1, -1):
+        raise ValueError("symmetry must be +1 or -1")
     swapped = swap_factors(tensor, 0, factor)
     equations = {}
     for column in range(16):
@@ -43,7 +45,7 @@ def symmetrizer_space(tensor, factor):
         lhs = act_factor(tensor, elementary, factor)
         rhs = act_factor(swapped, elementary, 0)
         for key in lhs.keys() | rhs.keys():
-            value = lhs.get(key, F(0)) - rhs.get(key, F(0))
+            value = lhs.get(key, F(0)) - symmetry * rhs.get(key, F(0))
             if value:
                 equations.setdefault(key, {})[column] = value
     kernel = nullspace_sparse(equations.values(), 16)
@@ -77,13 +79,14 @@ def invertible_witness(basis):
     return result
 
 
-def symmetrize(tensor):
-    spaces = [symmetrizer_space(tensor, j) for j in (1, 2, 3)]
+def symmetrize(tensor, symmetry=1):
+    spaces = [symmetrizer_space(tensor, j, symmetry) for j in (1, 2, 3)]
     witnesses = [invertible_witness(space) for space in spaces]
     if any(matrix is None for matrix in witnesses):
         return None, spaces, witnesses
     result = tensor
     for factor, matrix in enumerate(witnesses, 1):
         result = act_factor(result, matrix, factor)
-    assert all(swap_factors(result, 0, j) == result for j in (1, 2, 3))
+    expected = {i: symmetry * value for i, value in result.items()}
+    assert all(swap_factors(result, 0, j) == expected for j in (1, 2, 3))
     return result, spaces, witnesses

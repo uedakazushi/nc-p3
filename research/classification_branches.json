@@ -68,12 +68,37 @@
       "id": "LOW-RESIDUAL",
       "parent": "OPPOSITE-LOW",
       "predicate": "rho<=6 and canonical tensor orbit does not meet the symmetric locus",
-      "coverage": "complement by definition; cor:symmetric-rank-six",
+      "coverage": "alternatizability predicate and its negation; cor:linear-alternating-test",
       "normal_forms": "unresolved",
       "regularity_of_all_tensor_candidates": "unresolved",
       "complete_isomorphism": "unresolved",
       "nonempty_witness": "commutative polynomial indexed class, alternating top tensor; proven disjoint from symmetric chart",
-      "known_subcase": "alternating tensor orbit: exactly the commutative polynomial indexed class"
+      "known_subcase": "alternating tensor orbit: exactly the commutative polynomial indexed class",
+      "children": [
+        "POLYNOMIAL-ORBIT",
+        "LOW-UNCLASSIFIED"
+      ]
+    },
+    {
+      "id": "POLYNOMIAL-ORBIT",
+      "parent": "LOW-RESIDUAL",
+      "predicate": "canonical tensor orbit meets Lambda^4 V",
+      "membership": "three negative-swap linear spaces contain invertible matrices; cor:linear-alternating-test",
+      "normal_forms": "one indexed class: commutative polynomial ring",
+      "regularity_of_all_chart_fibers": "proved",
+      "complete_isomorphism": "one class",
+      "period": "one-periodic"
+    },
+    {
+      "id": "LOW-UNCLASSIFIED",
+      "parent": "LOW-RESIDUAL",
+      "predicate": "rho<=6 and neither symmetrizable nor alternatizable",
+      "coverage": "complement by definition",
+      "nonemptiness": "unresolved",
+      "normal_forms": "unresolved",
+      "regularity_of_all_tensor_candidates": "unresolved",
+      "complete_isomorphism": "unresolved",
+      "excluded_subfamilies": "contains no quantum polynomial indexed class, by quantum rank formula and its two rank-six normal forms"
     }
   ],
   "limits": [
