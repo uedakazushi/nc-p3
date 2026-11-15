@@ -4,9 +4,11 @@
   "generated": "current Japanese LuaLaTeX sources and exact certificates",
   "verification_status": "PASS_with_explicit_scope_limits",
   "github_save": {
-    "status": "pending_remote_write",
+    "status": "PASS",
     "repository": "uedakazushi/nc-p3",
-    "branch": "main"
+    "branch": "main",
+    "source_commit": "c164f415fda70b0066b5bc533cedd5cb5c11ae4e",
+    "verification": "GitHub main remote tree read back, 31 source/config/certificate blobs; all current file paths, 73 TeX labels, citations and main-paper proof references resolved. Final validation saved in a subsequent commit."
   },
   "library_save": {
     "status": "not_performed",
@@ -54,7 +56,7 @@
       "scope": "exact symbolic 30x18 derivation matrices, polynomial minors, J(x) and its degree"
     }
   ],
-  "certificate_comparison": "Recomputed moduli certificate equals retained data; seven-family regenerated; serialization compacted without changing JSON values.",
+  "certificate_comparison": "All 8 local v11 commands were executed and passed, including existing numerical checks and new Ore derivation verifier. No unrun mathematical check is claimed.",
   "tex": {
     "engine": "LuaLaTeX via latexmk",
     "result": "PASS",
@@ -67,7 +69,7 @@
   },
   "visual_inspection": {
     "result": "PASS",
-    "scope": "Main paper pages 17 and 20 rendered and inspected; no clipping or overflow."
+    "scope": "Current v11 paper pages 18 and 22 rendered and visually inspected; no clipping or overflow"
   },
   "not_claimed": [
     "formal verification",
@@ -76,29 +78,26 @@
     "nine-dimensional image is a full moduli component",
     "all higher-order Clifford equations",
     "all one-period structures",
-    "all original as4 computations rerun"
+    "all original as4 computations rerun",
+    "Global completeness beyond the marked Clifford-Ore construction",
+    "Sufficiency of equality of elliptic J(th) for indexed isomorphism"
   ],
-  "source_hashes": {
-    "computations/pbw_complex.py": "d2d3ccb71192a4ecfa549ed6ec6af49715db88821d8e48372275529346accf89",
-    "computations/verify_algebraic_family.py": "dff74dd1d0756dc4bf6d868f597c0d7bb5d242a6e2fa32525c80db035d3b8376",
-    "computations/verify_elliptic_family.py": "f0dbc30744335caacafa12d883a0e7655f4e8d62daa16361e2ed3aaa391b2ec4",
-    "computations/verify_exterior_trace.py": "28abfb5914086e48547b63481305847548299cff9f5bd2f7580ebe3c914ae5e5",
-    "computations/verify_moduli_jets.py": "39e6ae7ef2259c109145a85b44fd0e72ae653d10106e8e3f89c4d46e61fcc878",
-    "computations/verify_period_witness.py": "8b2e2446732358fbc6a0edbf8dbc841bd0d7647ffa6e18d766d3d3a11024bbc0",
-    "computations/verify_third_order_samples.py": "f4ff61b3645c12ddfb395469c15a789c733e9ed02c7378dff644c87c7d734314",
-    "nc-p3.tex": "12fd6d72e5da04b64bd73aada3fe48d5dcc7addeb8827433fda9ac53ac1c88fc",
-    "research/notes_ja.tex": "ec61ea59ff2f9a2c3949b210e4062c8c691f590750f8d3f9861f010c75de3f24",
-    "research/plan_ja.tex": "a21a1de0b4a8e68bf8f07af61881d504b4c97aeaaaf9f4d7860339cd248633e7",
-    "scripts/check_project.py": "4ad205ee42a419045149f5b27dd58cd1043e0470e81525e7e5f73d6e98c24107",
-    "sections/algebraic_family.tex": "4f68950de606b87f083a8d5f8653fd4ddbaa1e73cb01c87cab2539b27373c353",
-    "sections/elliptic_ore_family.tex": "83e946f9a796583e90e9ebf99d86333e239abd3656533aa609b76974b663a897",
-    "sections/four_window.tex": "c04a639fda9e02822737d2cbb517e5a433b2d4df65c391765b10cc3a83091fa7",
-    "sections/local_moduli.tex": "a7d0a59ec0201d395ebb6ca80337dfff5d4b384fa3d8d716366fe50df3563cd6"
-  },
   "new_results": {
     "ordinary_derivations": "free rank six, symbolic constant minors",
     "sigma_derivations": "free rank nine, globally covering symbolic minors",
     "ore_slice": "generic within specified marked Clifford-Ore presentations only",
     "elliptic_j": "degree-12 rational invariant, necessary for indexed isomorphism"
+  },
+  "verified_remote_blobs": {
+    "nc-p3.tex": "ac6a0f30d89c1a1793c3eb873657898f168fd427",
+    "sections/ore_complete.tex": "240f34113eb6ec34d27d658da14251e42f6a995b",
+    "computations/verify_ore_derivations.py": "04331baadb68c2e1e5eedd0ff2e7ebe146bfa7a6",
+    "research/ore_derivation_certificate.json": "14e1ad1a978d0535c030d09fbdbc70337918a3f6",
+    "research/plan_ja.tex": "c953576eca884c8be2ed94d522fee4c6d16052b4",
+    "research/notes_ja.tex": "c254a39347c968267d7229a0296535dd7fb75074",
+    "research/STATE.json": "3d4d7a4fcffb5655b64d561b68b4a56cae082903",
+    "README.md": "d5303326838ae2eaf6f909aa0053c02b5bc2b6ce",
+    "AGENTS.md": "8783188008cf13a671515a4e7a1efb757e9d969c",
+    "scripts/check_project.py": "0a65c2cc4f63feb39547b4d914f9561837984a39"
   }
 }
