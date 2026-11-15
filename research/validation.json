@@ -17,7 +17,13 @@
     "tex_engine": "LuaHBTeX 1.18.0 (TeX Live 2025/dev/Debian)",
     "tex_format": "LaTeX2e 2024-11-01 patch level 2"
   },
-  "checks": [],
+  "checks": [
+    {
+      "command": "Remote branch/tree readback and static instruction cross-check",
+      "result": "PASS",
+      "scope": "All 8 changed files matched the main tree; 35 existing mathematical claims intact, fixed as4 blob reference retained. No TeX/math code changed."
+    }
+  ],
   "certificate_comparison": {
     "result": "NOT_RUN",
     "scope": "No mathematical computations or certificate regeneration performed for instruction-only update."
@@ -47,13 +53,27 @@
     "scope": "No new PDF produced."
   },
   "github_save": {
-    "result": "pending",
+    "result": "PASS",
     "branch": "main",
-    "expected_parent": "21fac7fee3ec485afa108df4a33c40792b41a934"
+    "validated_content_commit": "c334bea79ac8f516ff3d63decd66a2d22a4d204d",
+    "validated_content_tree": "da66ae5001cc4a6e82990da90b5be6fde66d4359",
+    "fast_forward": true,
+    "remote_blob_count": 47,
+    "checked_files": [
+      "AGENTS.md",
+      "START_CODEX_ja.md",
+      "research/BASELINE.md",
+      "research/classification_architecture.md",
+      "research/plan_ja.tex",
+      "README.md",
+      "research/STATE.json",
+      "research/validation.json"
+    ],
+    "scope": "Remote main and full 47-blob tree read back; edited file contents and result count verified. Receipt is recorded in a follow-up commit."
   },
   "library_save": {
     "result": "not_saved_project_policy",
-    "policy": "GitHub main save succeeded. No duplicate Library storage after success."
+    "policy": "GitHub main save succeeded; Library reserved for failed GitHub saves."
   },
   "open_mathematics": [
     "Necessary and sufficient general four-window Koszul/AS conditions and exhaustive explicit regular charts.",
@@ -69,5 +89,5 @@
     "The boundary five-parameter family has generic minimal period two and lies in Z7; it is not an independently established component.",
     "Eleven individually integrable tangent directions have the mixed obstruction lambda*c and do not yield a smooth simultaneous eleven-dimensional family."
   ],
-  "checks_execution_note": "Source-specific static checks before GitHub create_tree. No mathematical verifier rerun, no LuaLaTeX run; GitHub remote reread to follow."
+  "checks_execution_note": "Instruction-only v19 revision. Remote GitHub saved and read back; no LuaLaTeX rebuild, mathematical verifier or independent proof audit executed."
 }
