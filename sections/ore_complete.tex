@@ -1,0 +1,146 @@
+\section{Ore型構成の内部完全性と楕円同型不変量}\label{sec:ore-complete}
+\subsection{次数一のOre導分の完全な分類}\label{subsec:ore-derivations}
+固定された$B_{t,h}$の上でのOre型構成がどの程度一般的かを、
+具体的な導分空間の分類によって明らかにする。ここで$R=k[t,h,(1+th)^{-1}]$、
+$\sigma_B|_{(B_{t,h})_1}=-1$とする。
+$\operatorname{Der}_1(B)$は内部次数1の通常の導分、
+$\operatorname{Der}_{\sigma_B,1}(B)$は内部次数1の$\sigma_B$-導分の$R$-加群とする。
+
+\begin{theorem}[固定Clifford部分のOre導分の全分類]\label{thm:ore-derivations}
+$R$上、次の自由加群としての等式が成立する。
+\begin{align}
+ \operatorname{Der}_1(B_{t,h})
+ &=R\operatorname{ad}_W\oplus R\operatorname{ad}_Y\oplus R\operatorname{ad}_Z
+   \oplus Rd_a\oplus Rd_b\oplus Rd_c,\label{eq:ordinary-derivations}\\
+ \operatorname{Der}_{\sigma_B,1}(B_{t,h})
+ &=\operatorname{Hom}_R\bigl((B_{t,h})_1,
+       RW^2\oplus RY^2\oplus RZ^2\bigr)\simeq R^9.
+       \label{eq:sign-derivations}
+\end{align}
+ここで$d_a,d_b,d_c$は式\eqref{eq:elliptic-derivation}の$a,b,c$の係数である。
+従って、$Xj+jX=p_j+(-1)^i d_j$で表される二周期Ore型拡大で、
+$p$を次数1の$\sigma_B$-導分、$d$を通常の次数1の導分とするものは、
+固定した$B_{t,h}$上では$9+6=15$個の線型係数を持つ。
+$X_i\mapsto X_i+\ell+(-1)^i m$（$\ell,m\in(B_{t,h})_1$）による
+六つの独立な冗長性を除くと、残る係数は$6+3=9$個である。
+この完全性は\emph{指定したClifford部分代数とOre形式を保持する構成}に限る。
+一般の四次元AS正則$\mathbb Z$-代数全体の分類を意味しない。
+\end{theorem}
+\begin{proof}
+$(B_{t,h})_2$の基底を$(W^2,WY,WZ,Y^2,YZ,Z^2)$とする。
+補題\ref{lem:ternary-clifford}の中心平方上の表示によって、
+三次成分には
+\[
+ W(W^2,Y^2,Z^2),\quad Y(W^2,Y^2,Z^2),\quad
+ Z(W^2,Y^2,Z^2),\quad WYZ
+\]
+の10個の基底がある。生成元3個の各像を六つの基底で書くと18未知数となる。
+$YW+WY-tZ^2,ZW+WZ-hY^2,ZY+YZ-W^2$への
+Leibniz則または$\sigma_B$-Leibniz則の適用は、
+これらの三次基底上に30行18列の行列$M_{\rm ord},M_\sigma$を与える。
+
+通常導分の行列には、$t,h$に依存しない行列式$-2048$を持つ
+12次正方小行列がある。よって$\operatorname{rank}M_{\rm ord}\ge12$。
+一方、三つの内導分と式\eqref{eq:elliptic-derivation}の三つの導分は核に属し、
+それらの18行6列の係数行列には、行列式$4$の6次正方小行列がある。
+従って全ファイバーで核の次元は少なくとも6であり、上の12次小行列とあわせて
+厳密に6となる。二つの定数小行列式が単元であるため、$R$上でも
+六つの導分が核の自由基底となる。
+
+$\sigma_B$-導分については、三つの生成元の像を任意の中心二次式とすれば
+三関係への適用が零となるので、$R^9$が核に含まれる。
+一方$M_\sigma$には、二つの9次正方小行列があり、その行列式は
+\[
+ 4(th-2)(th+4)^2,\qquad 3ht^3(th-8)^2
+\]
+である。これらは同時に零にならないため、全ファイバーで階数は9以上である。
+中心二次式を取る九つの標準導分は直和因子であり、
+二つの小行列が覆う開集合上で$M_\sigma$の核と一致する。
+ゆえに$R$上でも式\eqref{eq:sign-derivations}を得る。
+
+最後に$\ell,m\in(B_{t,h})_1$として生成元を変えると、
+関係の右辺への変化は
+\[
+ p_j\longmapsto p_j+\ell j+j\ell,\qquad
+ d_j\longmapsto d_j+mj-jm
+\]
+である。前者は三次元の中心二次式値の$\sigma_B$-内導分、
+後者は三次元の通常の内導分であり、互いに独立である。
+実際$\ell=\alpha W+\beta Y+\gamma Z$とすれば、
+$p_W$の$W^2$係数、$p_Z$の$W^2,Z^2$係数への寄与は
+$2\alpha,\beta,2\gamma$なので、前者は全ファイバーで自由に作用する。
+後者の独立性は上の六導分の自由基底性から従う。
+全行列、小行列の行・列番号、厳密な多項式恒等式は
+\path{computations/verify_ore_derivations.py}で再現できる。
+\end{proof}
+
+\begin{corollary}[九変数正規形のOre型での十分性]\label{cor:ore-slice}
+$B_{t,h}$と符号自己同型$\sigma_B$を固定した上の二周期Ore型構成を考える。
+$X_i\mapsto X_i+\ell+(-1)^im$という変更を許せば、
+$d$は一意に$d_a,d_b,d_c$の線型結合へ移せる。
+また$p$は$p_W$の$W^2$係数と$p_Z$の$W^2,Z^2$係数を零にした六係数の形へ移せる。
+
+さらに$B_{t,h}$の三関係の形を保つ対角変換
+$W\mapsto\lambda W,Y\mapsto\mu Y,Z\mapsto\nu Z,X\mapsto\rho X$
+（$\lambda^2=\mu\nu$）を許し、残る$p_Y$の$W^2,Z^2$係数が非零な開集合に限ると、
+両係数を1にできる。従ってこの\emph{印付きOre型構成}の稠密開集合は、
+有限個の対角正規化の選択を除いて式\eqref{eq:nine-family}の九変数族で表される。
+従って同じClifford部分のOre形式を固定したまま、さらに自由な
+次数一の導分係数を付け加えても、一般の同型類の次元は増えない。
+\end{corollary}
+\begin{proof}
+定理\ref{thm:ore-derivations}の六つの基底変更によって所要の切片を取る。
+前者三個は通常の内導分を除き、後者三個は中心二次式の三係数を除く。
+$\lambda^2=\mu\nu$を満たす対角変換は、全体スカラーを除いて二次元のトーラスをなす。
+$p_Y$の$W^2,Z^2$係数を$A_0,B_0$とすると、変換後は
+$\rho A_0/\nu,\rho\mu B_0/\nu^2$である。
+従って$A_0B_0\ne0$なら$\rho/\nu=A_0^{-1}$、
+$\mu/\nu=A_0/B_0$と取って両者を1にできる。
+$\lambda^2=\mu\nu$に残る符号の有限選択だけは同型類の次元に影響しない。
+残る六つの中心係数は$(u,v,r,s)$および規格化された二係数、
+通常導分の外部三係数は$(a,b,c)$へ整理され、
+式\eqref{eq:nine-family}と一致する。$t,h$も動かした全パラメータ数は
+$2+15-3-3-2=9$である。
+これは印付きを忘れた同型の完全分類ではない。
+九変数族の\emph{裸の}indexed同型類の像の次元9は、前節の独立な階数証明による。
+\end{proof}
+
+\subsection{内在的な楕円$j$-不変量による同型の必要条件}
+\begin{proposition}[九変数族の同型に対する明示的障害]\label{prop:elliptic-j-obstruction}
+九変数族のうち、$E_{t,h}$が滑らかで、唯一の非被約左点が$e_X$、
+その点からの射影で残りの左点が$E_{t,h}$上の相異なる12点となる開集合を考える。
+この開集合の二つのファイバーが\emph{添字保持}$\ZZ$-代数として同型なら、
+$x=th$、$x'=t'h'$に対して
+\begin{equation}\label{eq:elliptic-j}
+ J(x)=J(x'),\qquad
+ J(x)=\frac{(x-2)^3(x^3-6x^2+228x-8)^3}
+                 {x(x-8)^3(x+1)^6}
+\end{equation}
+が必要である。$J:\mathbb P^1_x\to\mathbb P^1_j$は次数12の非定数有理写像である。
+従って同型類を一つ固定したとき、その同型類に属し得る一般の$x=th$の値は
+高々12個である。ただし$j$の一致は同型の\emph{十分条件ではない}。
+\end{proposition}
+\begin{proof}
+添字保持同型は左点スキームの射影同型を誘導する。
+その唯一の非被約点$e_X$は内在的であるから射影同型で保たれる。
+従ってそこからの射影が作る平面上の12点集合も射影同型で対応する。
+それらを通る平面三次曲線は$E_{t,h}$ただ一つである。
+実際、滑らかな既約三次曲線と異なる三次曲線は、共通成分がなければ
+B\'ezoutの定理により9点を超えて相異なる点で交わらない。
+よって二つのファイバーが同型なら$E_{t,h}$と$E_{t',h'}$が同型となり、
+それらの$j$-不変量は一致する。
+
+標数零の代数閉体上で$w,y,z$をそれぞれ適切に三乗根で規格化すると、
+式\eqref{eq:elliptic-cubic}はHesse標準形
+$W^3+Y^3+Z^3-3\kappa WYZ=0$になり、
+\[
+ \kappa^3=-\frac{(2-th)^3}{27th}.
+\]
+Hesse三次曲線の古典的公式
+$j=27\kappa^3(\kappa^3+8)^3/(\kappa^3-1)^3$
+（\cite[\S7.3, (42)]{KLV}）へ代入して式\eqref{eq:elliptic-j}を得る。
+分子の次数12、分母の次数10で、両者に共通因子はない。
+従って有理写像の次数は12であり、各幾何学的ファイバーに含まれる
+$x$の値は高々12個である。
+多項式恒等式と次数の検証は\path{computations/verify_ore_derivations.py}にある。
+\end{proof}

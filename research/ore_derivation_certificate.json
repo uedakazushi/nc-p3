@@ -1,0 +1,49 @@
+{
+  "field": "char 0; on B(t,h) require 1+t*h != 0",
+  "degree_one_derivations": {
+    "ordinary": {
+      "dimension": 6,
+      "constraint_rank": 12,
+      "constant_constraint_minor": "-2048",
+      "basis": [
+        "ad_W",
+        "ad_Y",
+        "ad_Z",
+        "d_a",
+        "d_b",
+        "d_c"
+      ],
+      "constant_basis_minor": "4"
+    },
+    "parity_sigma": {
+      "dimension": 9,
+      "constraint_rank": 9,
+      "solutions": "arbitrary central quadratic forms p_W,p_Y,p_Z",
+      "covering_minors": [
+        "4*(h*t - 2)*(h*t + 4)**2",
+        "3*h*t**3*(h*t - 8)**2"
+      ]
+    }
+  },
+  "ore_slice": {
+    "raw_p_coefficients": 9,
+    "raw_d_coefficients": 6,
+    "even_X_shift_gauge": 3,
+    "odd_X_shift_gauge": 3,
+    "fixed_B_effective": 9,
+    "ternary_parameters": 2,
+    "diagonal_scaling_gauge": 2,
+    "normal_slice_parameters": 9
+  },
+  "elliptic_j": {
+    "x": "t*h",
+    "formula": "(x - 2)**3*(x**3 - 6*x**2 + 228*x - 8)**3/(x*(x - 8)**3*(x + 1)**6)",
+    "map_degree": 12,
+    "usage": "necessary generic indexed isomorphism condition, not sufficient"
+  },
+  "limitations": [
+    "Not a global AS-regular Z-algebra classification",
+    "Completeness only for the chosen Clifford B and specified Ore form",
+    "No assertion of nine-family irreducible component maximality"
+  ]
+}
