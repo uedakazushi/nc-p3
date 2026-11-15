@@ -285,6 +285,18 @@
       "claim": "Every member of the nine-parameter family, including the seven-parameter specialization, is connected to a strictly one-periodic member by the componentwise-free A1 family (a,b,c)->(lambda*a,lambda*b,lambda*c), with every fiber standard quadratic Koszul AS-regular.",
       "proof": "nc-p3.tex:cor:nine-to-period-one",
       "status": "proof_written"
+    },
+    {
+      "id": "QUARTIC-KOSZUL-OBSTRUCTION",
+      "claim": "On the finite Frobenius four-window locus, the first possible right Koszul homology is H_2 in internal degree four, of dimension delta_i=221-rank D_i,4=dim C_i,i+4-35 >=0. Simultaneous vanishing is an indexed-isomorphism-invariant relatively open necessary filter, not a sufficient AS/Koszul criterion.",
+      "proof": "nc-p3.tex:prop:quartic-koszul-obstruction",
+      "status": "proof_written"
+    },
+    {
+      "id": "QUINTIC-KOSZUL-OBSTRUCTION",
+      "claim": "On the delta=0 finite-Frobenius locus, degree-five exactness is equivalent to h_i,5=56 and rank of the 120x40 Koszul d3 matrix equal to 36. H3=36-rank(d3), H2=h_i,5-20-rank(d3); higher degrees unresolved.",
+      "proof": "nc-p3.tex:prop:quintic-koszul-obstruction",
+      "status": "proof_written"
     }
   ],
   "document_paths": {
@@ -333,23 +345,24 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "62180435ab0547abdc48fe26a51d0c3681805119",
+  "reviewed_source_commit": "86ecc73b80bab6fd6cb205dc66411c8220d26214",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
   "cloud_codex_status": "Repository-side Cloud guidance and preflight added; actual Cloud environment publishing, TeX tools and Git push permissions are not verifiable from repository alone.",
   "resume_point": {
     "task_id": "Z4-AS-004",
-    "status": "open",
+    "status": "open_with_quartic_filter",
     "objective": "Find structurally meaningful necessary and sufficient Koszul/AS regularity criteria across the canonical 4-window representation; classify all exceptional loci.",
-    "immediate_next_action": "Using sections/four_window.tex, seek one index-isomorphism-invariant polynomial/tensor-rank condition that partitions the standard AS 4-window locus, and prove coverage of the split; if a candidate is only necessary, produce an AS/Koszul obstruction or counterexample rather than declaring a classified branch.",
+    "immediate_next_action": "Determine whether the quintic rank(d3)=36 condition is forced on the quartic delta=0 finite-Frobenius locus, or construct a finite-Frobenius counterexample. Use the explicit quotient-based d3 construction in computations/verify_quartic_obstruction.py; distinguish H2 from H3 rather than testing Hilbert coefficients alone. If quintic exactness is automatic, move to the first nonautomatic higher strand.",
     "read_first": [
       "research/plan_ja.tex",
       "AGENTS.md",
-      "sections/four_window.tex"
+      "sections/four_window.tex",
+      "computations/verify_quartic_obstruction.py"
     ],
-    "known_obstruction": "Finite Frobenius checks do not by themselves imply Koszul/AS regularity; no global exhaustive set of regular 4-window charts is proved.",
-    "state_of_claim": "open; not a proved classification split",
+    "known_obstruction": "Quartic rank=221 at all four starts eliminates the first possible obstruction only. Higher Koszul homology and exhaustive regular charts remain unresolved; a non-Koszul input passing the finite Frobenius checks has not been exhibited here.",
+    "state_of_claim": "Quartic obstruction and quintic two-rank criterion proved in prop:quartic-koszul-obstruction and prop:quintic-koszul-obstruction. No complete regularity criterion or classified AS branch.",
     "handoff_rule": "Overwrite with the current next concrete research action before task termination; no chronological status log."
   },
   "execution_policy": {

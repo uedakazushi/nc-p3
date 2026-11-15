@@ -18,7 +18,7 @@ Cloud Codexの環境準備・権限・止まりにくい研究ループ・再開
 
 | 主題 | 原稿に証明がある結果 | まだ結論していないこと |
 | --- | --- | --- |
-| 有限四窓 | Frobenius標準4周期、幾何学的同型類の四窓への還元、認証済みAS対象の同型・周期の有限方程式 | 一般四窓のKoszul/AS条件の有限な必要十分判定、明示的な正則族による全被覆 |
+| 有限四窓 | Frobenius標準4周期、幾何学的同型類の四窓への還元、認証済みAS対象の同型・周期の有限方程式 | 四次の必要階数条件と五次までの正確性の二階数判定は証明済み。一般四窓のKoszul/AS条件の有限な必要十分判定、明示的な正則族による全被覆は未解決 |
 | 量子多項式 | 一般の局所成分でgraded同型類6次元、indexed同型類3次元 | 非1周期的対象が増える現象ではない。三つのtwist方向を忘れる比較 |
 | Clifford点 | 選んだgraded表示の接空間9、indexed変形の接空間15。全15変数の二次障害は、六つの交代変数上で非退化な二次式 Q 一つ | 成分次元14、高次障害の消滅、全1周期構造の分類 |
 | 楕円Clifford–Ore族 | 九変数の実際の代数的族。全ファイバーAS正則、同型類の像9次元、一般の最小周期2 | 九次元像が既約成分であること、全特殊値の周期、完全な族内同型判定 |
@@ -67,6 +67,7 @@ python3 -m pip install -r requirements.txt
 python3 scripts/check_project.py
 python3 computations/verify_exterior_trace.py
 python3 computations/verify_period_witness.py
+python3 computations/verify_quartic_obstruction.py
 python3 computations/verify_moduli_jets.py --output research/moduli_certificate.json
 python3 computations/verify_algebraic_family.py --output research/algebraic_family_certificate.json
 python3 computations/verify_elliptic_family.py --output research/elliptic_family_certificate.json

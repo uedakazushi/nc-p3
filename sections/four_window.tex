@@ -141,6 +141,113 @@ $(1,4,6,4,1,0)$であり、相補次数の積対合が完全なら、全次数�
 Koszul複体の正確性は、この有限検査とは別の条件である。
 \end{proof}
 
+\begin{proposition}[最初のKoszul障害と四次階数切断]\label{prop:quartic-koszul-obstruction}
+命題\ref{prop:finite-frobenius}の有限検査を通る四窓を考える。
+$T_{i,n}=V_i\otimes\cdots\otimes V_{i+n-1}$とし、関係挿入写像
+\[
+ D_{i,4}:\bigoplus_{a=0}^2
+ T_{i,a}\otimes R_{i+a}\otimes T_{i+a+2,2-a}
+ \longrightarrow T_{i,4}
+\]
+を自然な包含の和で定める（$T_{i,0}=k$）。これは$256\times288$行列である。
+各始点について
+\[
+ \delta_i=221-\rk D_{i,4}
+ =\dim C_{i,i+4}-35\geq0
+\]
+が成り立つ。$\delta_i$は増大右Koszul複体の内部次数4、ホモロジー次数2の
+ホモロジー次元に等しい。内部次数$0,1,2,3$の鎖と、内部次数4の
+他の位置は自動的に正確である。
+従って$\delta_i>0$が一つでもあればKoszulではなく、対象の標準AS正則locusに入らない。
+$\delta_i=0$が全ての$i$で成立する条件は、このFrobenius locus内で相対的に開であり、
+添字保持同型不変である。ただし高次のKoszul障害の消滅は主張しない。
+\end{proposition}
+\begin{proof}
+$W_{i,p}$を、$T_{i,p}$内で全ての隣接位置に関係を課した交差空間とする。
+すなわち$W_{i,0}=k$, $W_{i,1}=V_i$で、$p\geq2$では
+\[
+ W_{i,p}=\bigcap_{a=0}^{p-2}
+ T_{i,a}\otimes R_{i+a}\otimes T_{i+a+2,p-a-2}.
+\]
+二次双対性により$W_{i,p}=E_{i,i+p}^*$であり、次元は$1,4,6,4,1,0,\ldots$である。
+右Koszul複体の内部次数$n$の項を
+$K_p(i,n)=W_{i,p}\otimes C_{i+p,i+n}$とする。
+微分は$W_{i,p}\subset W_{i,p-1}\otimes V_{i+p-1}$と右因子の積から得る。
+二次表示の定義から$n>0$では$K_1\to K_0\to0$は正確であり、
+$\ker(K_1\to K_0)=\operatorname{im}(K_2\to K_1)$である。
+実際、テンソル代数で関係イデアルを展開すると、最初の文字以降にある関係は
+$V_i\otimes C_{i+1,i+n}$ですでに零であり、残る関係は最初の二文字の$R_i$から来る。
+
+$n=3$では$K_3=W_{i,3}\to R_i\otimes V_{i+2}=K_2$は包含であり、
+その像は$(R_i\otimes V_{i+2})\cap(V_i\otimes R_{i+1})$、すなわち$d_2$の核である。
+従って三次まで正確で、$\dim C_{i,i+3}=64-48+4=20$を得る。
+$n=4$では複体の次元列は
+\[
+ 0\longrightarrow k\longrightarrow k^{16}\longrightarrow k^{60}
+ \longrightarrow k^{80}\longrightarrow C_{i,i+4}\longrightarrow0.
+\]
+最初の微分は包含である。$K_3=W_{i,3}\otimes V_{i+3}$から
+$K_2=R_i\otimes C_{i+2,i+4}$への微分の核は
+\[
+ (W_{i,3}\otimes V_{i+3})\cap(R_i\otimes R_{i+2})=W_{i,4}.
+\]
+等式は$W_{i,3}$の二つの交差条件に末尾の関係条件を追加して得られる。
+従って$d_3$の階数は15であり、唯一残り得るホモロジーは$H_2$である。
+Euler標数から$\dim C_{i,i+4}=35+\dim H_2$を得る。
+一方$C_{i,i+4}=\operatorname{coker}D_{i,4}$だから所要の階数公式が成立する。
+
+基底変更は$D_{i,4}$の定義域と値域に可逆写像を誘導するので階数を保存する。
+二次関係の局所基底を選べば$\rk D_{i,4}\geq221$は221次小行列式の
+少なくとも一つの非消滅である。上の上界$\rk D_{i,4}\leq221$と合わせて、
+$\delta_i=0$はFrobenius locus内の相対開条件である。
+4周期性により四つの始点だけでよい。
+\end{proof}
+\begin{remark}
+この切断はFrobenius候補を、四次で除外できる部分と未解決の残余に分ける。
+残余を正則な分類枝と呼ばない。また有限Frobenius条件そのものは
+交差条件を含むため、上の開性を$\mathfrak P$全体での開性に読み替えない。
+\path{computations/verify_quartic_obstruction.py}は関係挿入行列を有理数上で検算する。
+\end{remark}
+
+\begin{proposition}[五次で必要な二つの階数]\label{prop:quintic-koszul-obstruction}
+命題\ref{prop:quartic-koszul-obstruction}の仮定の下で、全ての$\delta_i=0$とする。
+前証明の$K_p(i,5)$に対し$B_i=d_3:K_3(i,5)\to K_2(i,5)$を取る。
+これは$120\times40$行列であり、$\rk B_i\leq36$である。
+$h_{i,5}=\dim C_{i,i+5}$とすると、内部次数5の残るホモロジーは
+\[
+ \dim H_3=36-\rk B_i,\qquad
+ \dim H_2=h_{i,5}-20-\rk B_i,
+ \qquad h_{i,5}=56+\dim H_2-\dim H_3.
+\]
+従って五次までの正確性は、各始点で同時に
+$h_{i,5}=56$かつ$\rk B_i=36$となることと同値である。
+前者は四つの位置への関係挿入による$1024\times1536$行列$D_{i,5}$の
+階数が968となることに等しい。
+ここでも六次以上の正確性は未判定である。
+\end{proposition}
+\begin{proof}
+四次の切断により、内部次数5の複体の次元は
+\[
+ 0\longrightarrow k^4\longrightarrow k^{40}\longrightarrow k^{120}
+ \longrightarrow k^{140}\longrightarrow C_{i,i+5}\longrightarrow0.
+\]
+最左の微分の核は、テンソル空間の中で
+$(W_{i,4}\otimes V_{i+4})\cap(W_{i,3}\otimes R_{i+3})=W_{i,5}$である。
+有限Frobenius検査から$W_{i,5}=0$なので、この微分は単射で階数4。
+よって$\dim H_3=40-\rk B_i-4$を得る。
+次数一・二の表示による末尾の正確性から$d_2$の階数は$140-h_{i,5}$であり、
+$\dim H_2=120-(140-h_{i,5})-\rk B_i$となる。
+他の位置は正確なので、これらの式が必要十分性を与える。
+最後に$C_{i,i+5}=\operatorname{coker}D_{i,5}$である。
+\end{proof}
+\begin{remark}
+五次Hilbert係数の一致だけから正確性を結論するには、別途$H_3=0$を示す必要がある。
+上式は非零の$H_2,H_3$の相殺をそれ自体では排除しない。
+これは相殺する具体例の存在を主張するものではない。
+次の構造的課題は、四次切断上で$\rk B_i=36$が自動かどうか、
+またはどの追加条件で保証されるかを決めることである。
+\end{remark}
+
 \begin{corollary}\label{cor:canonical-slice}
 裸の標準14641型$\ZZ$-代数の幾何学的同型類は、
 $\mathfrak P$のうちKoszul AS正則で式\eqref{eq:canonical-matrix-test}を満たすtraceを持つ点の

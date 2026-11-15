@@ -3,91 +3,64 @@
   "date": "2026-11-16",
   "version": 22,
   "reviewed_input": {
-    "source_commit": "62180435ab0547abdc48fe26a51d0c3681805119",
-    "source_tree": "b5aa24abcbbedc82a3cc006edf2b4e08339602ea"
+    "source_commit": "86ecc73b80bab6fd6cb205dc66411c8220d26214"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Only Cloud Codex research-continuity instructions and current resume point updated, plus three missing TeX path-command backslashes repaired in plan source. All existing 35 mathematical result entries and math proofs unchanged.",
-    "new_mathematical_theorem": false
-  },
-  "environment": {
-    "python": "3.12.14",
-    "sympy": "1.14.0",
-    "tex_engine": "LuaHBTeX 1.18.0 (TeX Live 2025/dev/Debian)",
-    "tex_format": "LaTeX2e 2024-11-01 patch level 2"
+    "scope": "Added prop:quartic-koszul-obstruction, exact rank regression, README command, plan and current STATE/resume point. Existing results retained. Added prop:quintic-koszul-obstruction and quotient-based degree-five d3 regression.",
+    "new_mathematical_theorem": true
   },
   "checks": [
     {
-      "command": "Read back 8 edited GitHub files and match the recursive tree",
+      "command": "bash scripts/cloud_preflight.sh",
       "result": "PASS",
-      "scope": "All 8 changed file blobs matched tree. STATE version 22, 35 prior claims and active resume point consistent. TeX source includes repaired three path references."
+      "scope": "Python/SymPy and structure only."
     },
     {
-      "command": "Static cross-reference and JSON parse checks",
+      "command": "python3 scripts/check_project.py",
       "result": "PASS",
-      "scope": "Instruction names, 15-minute goal, Cloud non-autostart caveat, resume-point alignment and structured state verified. Does not verify mathematical assertions or compile TeX."
+      "scope": "Paths, JSON, expanded TeX inputs and references; not a mathematical proof."
+    },
+    {
+      "command": "python3 computations/verify_quartic_obstruction.py",
+      "result": "PASS",
+      "scope": "Exact rational insertion ranks (6,44,221,968), degree-five d3 rank 36 and dual dimensions (6,4,1) at all four starts for polynomial and one signed seven-family sample. Negative control rank 187 lies outside the Frobenius locus. No general AS sufficiency asserted."
+    },
+    {
+      "command": "python3 computations/verify_algebraic_family.py --output work/algebraic_family_certificate.json",
+      "result": "PASS",
+      "scope": "Eight polynomial overlap identities, parameter tangent ranks, existing point-geometry sample. Regenerated certificate agrees with tracked certificate."
     }
   ],
-  "certificate_comparison": {
-    "result": "NOT_RUN",
-    "scope": "Math verifier scripts and inputs unchanged; no mathematics was recomputed."
-  },
   "proof_review": {
-    "result": "NOT_RUN",
-    "scope": "No new mathematical proof; existing claims were not independently reaudited."
-  },
-  "literature_review": {
-    "primary_text": [
-      "arXiv:2511.08390v1, Table 2 and Proposition 5.1",
-      "Vancliff--Van Rompay--Willaert, author PDF, Introduction and Section 3",
-      "arXiv:2602.13178v1, Introduction and Sections 3,6",
-      "Mori--Nyman, A categorical characterization of quantum projective Z-spaces, author manuscript regV8.pdf, Definitions 4.2,5.22 and Theorems 6.4,6.5; https://faculty.nymana.wwu.edu/regV8.pdf"
-    ],
-    "abstract_and_bibliography_only": [
-      "Stephenson--Vancliff (2007), DOI 10.1016/j.jalgebra.2007.02.015; publisher full text unavailable"
-    ],
-    "limits": "These checks identify relevant prior work; they do not establish novelty or a full equivalence with all earlier families."
+    "result": "TARGETED",
+    "scope": "Reviewed W3/W4 intersection identifications, degree-four Koszul complex exactness except H2, Euler characteristic and rank semicontinuity in prop:quartic-koszul-obstruction. Written proof; no formalization or independent review. Also reviewed degree-five top injectivity via W5=0 and separate H2/H3 dimension formulas in prop:quintic-koszul-obstruction."
   },
   "tex": {
-    "result": "NOT_RUN",
-    "scope": "No v22 LuaLaTeX compile performed. Fixed three malformed \\path commands in the plan."
+    "result": "BLOCKED_MISSING_DEPENDENCIES",
+    "command": "latexmk nc-p3.tex",
+    "scope": "LuaLaTeX exits before document processing: ltjsarticle.cls and luaotfload-main unavailable. No PDF built. Plan compile not run because the same class is missing."
   },
   "visual_inspection": {
     "result": "NOT_RUN",
-    "scope": "No PDF built or viewed."
+    "scope": "No PDF built."
+  },
+  "literature_review": {
+    "result": "NOT_RUN",
+    "scope": "No new source or novelty claim; existing dependencies in BASELINE.md."
   },
   "github_save": {
-    "result": "PASS",
+    "result": "PENDING",
     "branch": "main",
-    "validated_content_commit": "75baa42c051a1e1b2e4931c652b6ea3d763acfda",
-    "validated_content_tree": "432230b57f64afb8688021ff41c3529101b33fc4",
-    "fast_forward": true,
-    "verified_remote_blob_count": 49,
-    "verified_edited_files": 8,
-    "scope": "Read back main, recursive tree, and each of the eight changed files. Confirmed stable 35 result entries and valid resume point. This receipt is saved by a second commit."
+    "scope": "Commit/push and remote content readback still required."
   },
   "library_save": {
-    "result": "not_saved_project_policy",
-    "policy": "GitHub main save succeeded; Library reserved for failed GitHub saves."
+    "result": "not_attempted",
+    "scope": "Reserved for GitHub save failure."
   },
   "open_mathematics": [
-    "Necessary and sufficient general four-window Koszul/AS conditions and exhaustive explicit regular charts.",
-    "Component maximality and complete indexed isomorphism of the nine-dimensional image.",
-    "All higher Clifford obstruction equations and all one-period structures.",
-    "All global components, dimensions, period strata and degenerations.",
-    "Existence of a standard 14641 AS-regular indexed algebra that cannot be connected to any period-one object through regular flat families. The nonstandard helix example does not settle this."
-  ],
-  "interpretation_limits": [
-    "The 9-to-15 comparison is of tangent spaces, not dimensions of irreducible components.",
-    "Equality of U(th) is necessary, not sufficient, for indexed isomorphism.",
-    "Z7 and Z9 are orbit-saturated closures of a single relation space, not asserted to be global coarse moduli spaces.",
-    "The boundary five-parameter family has generic minimal period two and lies in Z7; it is not an independently established component.",
-    "Eleven individually integrable tangent directions have the mixed obstruction lambda*c and do not yield a smooth simultaneous eleven-dimensional family."
-  ],
-  "checks_execution_note": "Documentation-only research-continuity update. Static checks and GitHub readback passed. Math verifiers, LuaLaTeX compilation, and Codex Cloud task execution NOT_RUN.",
-  "cloud_environment": {
-    "result": "NOT_CONFIGURED_BY_THIS_CHANGE",
-    "scope": "No Cloud task created, resumed, published or tested. Runtime and push permissions must be checked in Codex Cloud."
-  }
+    "Quartic filter is necessary only; higher Koszul obstructions and exhaustive AS charts unresolved.",
+    "No finite-Frobenius non-Koszul counterexample certified by this change.",
+    "Full classification, isomorphism strata, components and novelty remain unresolved."
+  ]
 }
