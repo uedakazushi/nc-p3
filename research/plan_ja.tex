@@ -8,7 +8,7 @@
 \newcommand{\Gr}{\operatorname{Gr}}
 \title{四次元二次AS正則\texorpdfstring{$\ZZ$}{Z}-代数の完全分類\\研究方針と再開手順}
 \author{}
-\date{2026年11月12日\quad 第3版}
+\date{2026年11月15日\quad 第3版}
 \begin{document}
 \maketitle
 \section{最初に読む：目的と達成基準}
@@ -59,7 +59,7 @@ $s_{i+4}/s_i=t_i$を満たす$s_i$を選んだ頂点スカラー自己同型で
 裸の$C$はFrobenius標準4周期付きの組と一対一に対応する。
 これは$4$周期同型を忘れる際の主要な障害を解決したものであり、
 \emph{モジュライstack全体の同値}を証明したとはしない。
-証明全文は\texttt{papers/asz4\_classification.tex}
+証明全文は\texttt{nc-p3.tex}
 定理\texttt{thm:canonical-four}。
 
 四窓の双対の1--3積と3--1積から得る
@@ -109,7 +109,7 @@ R_i\subset V_i\otimes V_{i+1},\qquad\dim R_i=6
 一般の$\tau$を選んだ4周期表示の群oidは$C$のモジュライそのものではない。
 しかしFrobenius標準化条件$P_i^{\mathsf T}=Q_i$の部分では、
 emph{幾何学的同型類}について裸の$C$と同じ分類になる。
-定理・証明は\texttt{papers/asz4\_classification.tex}の第2節。
+定理・証明は\texttt{nc-p3.tex}の第2節。
 
 \subsection{第二：正則性と4周期の同型}
 $\mathfrak P$の上で14641型の左右線型Koszul解消とAS双対性を満たす
@@ -151,14 +151,14 @@ Koszul双対のquantum determinant/4-helixを優先し、
 \section{研究継続と検証}
 現在の証明、未証明事項、検算は\texttt{research/notes\_ja.tex}に整理し、
 論文に十分な証明を置いた事項は重複収録しない。
-論文は\texttt{papers/asz4\_classification.tex}の一つに整理し、
+論文は\texttt{nc-p3.tex}の一つに整理し、
 未完成箇所は明示する。外部の一次文献は\texttt{research/BASELINE.md}に
 定理番号・リンクを保存し、公開原稿のIntroductionで寄与と違いを説明する。
 \begin{verbatim}
 python3 scripts/check_project.py
 python3 computations/verify_exterior_trace.py
 python3 computations/verify_period_witness.py
-latexmk papers/asz4_classification.tex
+latexmk nc-p3.tex
 latexmk research/plan_ja.tex
 latexmk research/notes_ja.tex
 \end{verbatim}
@@ -175,7 +175,7 @@ latexmk research/notes_ja.tex
 現在の一式のみで再開できるようにする。
 
 ユーザーは研究区切りごとの承諾不要の保存を許可している。
-本プロジェクトの正本はGitHub\texttt{uedakazushi/asz4}の\texttt{main}である。
+本プロジェクトの正本はGitHub\texttt{uedakazushi/nc-p3}の\texttt{main}である。
 区切りごとに直接fast-forwardで保存し、GitHub保存が成功すればLibraryへ
 二重保存せず、GitHub保存が実際に失敗した場合のみLibraryへ緊急退避する。
 既存のLibraryファイルは明示指示なく削除しない。

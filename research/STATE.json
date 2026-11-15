@@ -1,16 +1,17 @@
 {
   "schema_version": 1,
-  "project_id": "asz4",
-  "date": "2026-11-12",
-  "version": 3,
+  "project_id": "nc-p3",
+  "date": "2026-11-15",
+  "version": 4,
   "status": "active_classification_incomplete",
-  "canonical": "github:uedakazushi/asz4/main",
+  "canonical": "github:uedakazushi/nc-p3/main",
   "field": "algebraically closed char 0",
   "scope": {
     "target": "positive locally finite connected quadratic Koszul AS-regular indexed Z-algebras of standard 14641 type; 4 generators and 6 quadratic relations at every index",
     "equivalence": "index-preserving Z-algebra isomorphism; not graded isomorphism, marked-period isomorphism, qgr or derived equivalence",
     "additional_global_assumptions": [],
-    "boundary": "whether every four-dimensional quadratic AS-regular Z-algebra lies in the standard 14641 framework is not assumed"
+    "boundary": "whether every four-dimensional quadratic AS-regular Z-algebra lies in the standard 14641 framework is not assumed",
+    "project_description": "Noncommutative projective three-space via standard 14641 quadratic AS-regular indexed Z-algebras; current classification results and open moduli problems"
   },
   "mathematical_results": [
     {
@@ -144,10 +145,10 @@
     }
   ],
   "validation": {
-    "github_commit_source": "all 15 ASZ4 sources/configuration/computation files fetched from remote GitHub main; validation v3 saved",
-    "static_structure": "PASS: 15 remote files; 3 LuaLaTeX source brace/environment audit; 21 unique theorem labels and 26 refs resolved, 5 bibitems with 8 citations; two exact Python scripts match GitHub blobs",
-    "python_checker_execution": "not_run (no cloned working tree in local runtime)",
-    "latexmk_compilation": "not_run (no cloned working tree in local runtime)",
+    "github_commit_source": "Repository nc-p3 sources inspected; rename and reference migration on main; prior mathematical computations not rerun",
+    "static_structure": "Historical 2026-11-12 ASZ4 checks only; current rename validation is limited to structural consistency and remote readback",
+    "python_checker_execution": "not_run_for_2026-11-15_rename",
+    "latexmk_compilation": "not_run_for_2026-11-15_rename",
     "as4_periodicity_code_rerun": "not_run",
     "formal_proof": "not_done",
     "independent_peer_review": "not_done",
@@ -158,7 +159,7 @@
   "document_paths": {
     "plan": "research/plan_ja.tex",
     "notes": "research/notes_ja.tex",
-    "paper": "papers/asz4_classification.tex",
+    "paper": "nc-p3.tex",
     "baseline": "research/BASELINE.md",
     "instructions": "AGENTS.md"
   },

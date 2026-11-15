@@ -1,10 +1,10 @@
-# ASZ4の既存成果・先行研究への参照（2026-11-12 / v1）
+# nc-p3の既存成果・先行研究への参照（2026-11-12 / v1）
 
-目的：必要な定理・証明位置・根拠・未検証を把握し、as4を丸ごと複製せずに現行ASZ4を再開する。as4の全分類は完成していない。以下は固定されたGit **blob SHA** を持つ資料への参照であり、as4側の内容・現行revisionをASZ4の成果として再宣言しない。
+目的：必要な定理・証明位置・根拠・未検証を把握し、as4を丸ごと複製せずに現行nc-p3を再開する。as4の全分類は完成していない。以下は固定されたGit **blob SHA** を持つ資料への参照であり、as4側の内容・現行revisionをASZ4の成果として再宣言しない。
 
 ## as4の一次的研究成果（私的研究原稿）
 
-| 対象 | パスと内容 | 2026-11-12確認blob SHA | ASZ4での使用 |
+| 対象 | パスと内容 | 2026-11-12確認blob SHA | nc-p3での使用 |
 |---|---|---|---|
 | 現状と研究方針 | [as4/README.md](https://github.com/uedakazushi/as4/blob/main/README.md) | `b19baa4a10997d53de8261ff7a502a018f835af2` | graded側の完成範囲・課題 |
 | graded 4D分類の研究方針 | [as4/research/plan_ja.tex](https://github.com/uedakazushi/as4/blob/main/research/plan_ja.tex) | `b6192a518477fda5963af6d878c18d8bb065a584` | graded同型とZhang twistの分離 |

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Static self-consistency checks for the ASZ4 research project (no network)."""
+"""Static self-consistency checks for the nc-p3 research project (no network)."""
 from pathlib import Path
 import json
 import re
@@ -10,7 +10,7 @@ REQUIRED = [
     "README.md", "AGENTS.md", "START_CODEX_ja.md",
     "research/plan_ja.tex", "research/notes_ja.tex",
     "research/BASELINE.md", "research/STATE.json",
-    "papers/asz4_classification.tex", ".latexmkrc", ".gitignore",
+    "nc-p3.tex", ".latexmkrc", ".gitignore",
 ]
 errors = []
 for rel in REQUIRED:
@@ -29,7 +29,7 @@ if state_path.exists():
         errors.append("Duplicate task ID")
 
 labels = []
-for rel in ["papers/asz4_classification.tex", "research/plan_ja.tex", "research/notes_ja.tex"]:
+for rel in ["nc-p3.tex", "research/plan_ja.tex", "research/notes_ja.tex"]:
     path = ROOT / rel
     if not path.exists():
         continue
@@ -59,5 +59,5 @@ if errors:
     for err in errors:
         print("FAIL:", err)
     sys.exit(1)
-print("PASS: ASZ4 file presence, paths, state, TeX structure (static only)")
+print("PASS: nc-p3 file presence, paths, state, TeX structure (static only)")
 print("NOTE: this does not compile TeX or prove any mathematical theorem.")

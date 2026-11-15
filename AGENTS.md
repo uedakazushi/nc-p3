@@ -1,6 +1,6 @@
-# ASZ4 Codex 研究指示 — 2026-11-12 / v2
+# nc-p3 Codex 研究指示 — 2026-11-15 / v3
 
-最初に `research/plan_ja.tex` を読み、`research/notes_ja.tex`、`research/BASELINE.md`、`research/STATE.json`、`papers/asz4_classification.tex` の順に確認する。**目的は4次元 quadratic AS-regular Z-algebra の完全分類**であり、`as4` のgraded分類の移植ではない。未完成の分類を完成と報告しない。
+最初に `research/plan_ja.tex` を読み、`research/notes_ja.tex`、`research/BASELINE.md`、`research/STATE.json`、`nc-p3.tex` の順に確認する。**目的は非可換射影3空間を与える4次元 quadratic AS-regular Z-algebra の完全分類**であり、`as4` のgraded分類の移植ではない。未完成の分類を完成と報告しない。
 
 ## 研究上の絶対区別
 
@@ -27,7 +27,7 @@
 
 ## 保存と実行
 
-保存先 `uedakazushi/asz4` の `main`。単独担当による通常fast-forward commit/pushのみ。PR、force push、GitHub Actionsは使わない。別の作業によってmainが進んだら先端を読み直して統合する。GitでPDFやビルド中間物は追跡せず、LuaLaTeX+latexmkで生成。検証未実行の成果はPASSとしない。GitHubへの保存の成功を確認し、失敗した場合のみLibraryへ緊急退避する。旧ZIPやログを追加しない。GitHubの別リポジトリ`as4`には、明示指示なく書き込まない。
+保存先 `uedakazushi/nc-p3` の `main`。単独担当による通常fast-forward commit/pushのみ。PR、force push、GitHub Actionsは使わない。別の作業によってmainが進んだら先端を読み直して統合する。GitでPDFやビルド中間物は追跡せず、LuaLaTeX+latexmkで生成。検証未実行の成果はPASSとしない。GitHubへの保存の成功を確認し、失敗した場合のみLibraryへ緊急退避する。旧ZIPやログを追加しない。GitHubの別リポジトリ`as4`には、明示指示なく書き込まない。
 
 ## 常設の研究原則・保存許可（具体的課題とは独立）
 

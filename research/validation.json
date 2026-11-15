@@ -1,18 +1,14 @@
 {
-  "date": "2026-11-12",
-  "version": 3,
-  "scope": "ASZ4 v3 Frobenius-normalized four-window research / indexed periodicity",
-  "canonical": "github:uedakazushi/asz4/main",
+  "date": "2026-11-15",
+  "version": 4,
+  "scope": "nc-p3: classification of noncommutative projective three-spaces via standard 14641 quadratic AS-regular Z-algebras; repository rename",
+  "canonical": "github:uedakazushi/nc-p3/main",
   "files_read_back": 15,
   "static_checks": {
-    "result": "PASS",
+    "result": "NOT_RERUN",
     "details": [
-      "15 ASZ4 source/config/computation files read back from main",
-      "all state document references exist, JSON parsed",
-      "3 LuaLaTeX documents have balanced TeX braces/environments under static lexical check; not a compile",
-      "21 unique paper labels and 26 internal references resolved",
-      "5 bibliography keys and all 8 citations resolved",
-      "both exact Python scripts matched locally executed Git blobs"
+      "Prior 2026-11-12 checks refer to old ASZ4 tree and are historical; not revalidated in this renaming operation",
+      "Renamed paths and JSON references prepared for new main commit"
     ]
   },
   "computations": [
@@ -31,14 +27,16 @@
       "environment": "Python 3, stdlib Fraction, local exact script bytes match GitHub blob"
     }
   ],
-  "theorem_proof_status": "mathematical proofs written in papers/asz4_classification.tex; logical checks performed but independent refereeing and formal verification not claimed",
+  "theorem_proof_status": "mathematical proofs written in nc-p3.tex; logical checks performed but independent refereeing and formal verification not claimed",
   "not_executed": [
     "LuaLaTeX/latexmk compile of complete GitHub source tree (local runtime cannot clone GitHub)",
     "scripts/check_project.py in a cloned repository",
     "as4 periodicity code rerun in this work unit",
     "any symbolic elimination over the complete 212-variable polynomial systems",
     "full AS-regularity/Koszul sufficiency conditions for arbitrary four windows",
-    "independent peer review and formal verification"
+    "independent peer review and formal verification",
+    "2026-11-15 latexmk compilation after rename",
+    "2026-11-15 scripts/check_project.py execution after rename"
   ],
   "open_obligations": [
     "Koszul exactness and all-fiber AS-regular sufficiency for four-window data",

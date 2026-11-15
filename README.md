@@ -1,10 +1,13 @@
-# ASZ4 — 4次元 quadratic AS-regular Z-algebra の完全分類
+# nc-p3 — 非可換射影3空間（quadratic AS-regular Z-algebra）の分類
 
-**2026-11-12 / v3・研究継続。分類未完。GitHub `main` を正本とする。**
+**2026-11-15 / v4・研究継続。完全分類は未完成。GitHub `main` を正本とする。**
 
-再開時は [研究方針](research/plan_ja.tex) → [Codex指示](AGENTS.md) → [研究ノート](research/notes_ja.tex) → [分類原稿](papers/asz4_classification.tex) の順に読む。次の最優先課題は **Z4-AS-004**（Koszul/AS正則な四窓locusの分類）。
+再開時は [研究方針](research/plan_ja.tex) → [Codex指示](AGENTS.md) → [研究ノート](research/notes_ja.tex) → [分類原稿](nc-p3.tex) の順に読む。次の最優先課題は **Z4-AS-004**（Koszul/AS正則な四窓locusの分類）。
 
 ## 目標
+
+非可換射影3空間を、標準 $(1,4,6,4,1)$ 型の4次元 quadratic AS-regular $\mathbb Z$-代数（および関連する非可換射影圏）の観点から研究する。現行原稿はこのうち、添字保持同型による代数の分類問題を扱う。圏の同値による分類とは区別する。
+
 
 標数0の代数閉体上、標準14641型の局所有限・正連結・quadratic・Koszul、左右AS正則なZ-algebra `C` を**添字を保つZ-algebra同型**で完全分類する。全対象被覆・各閉パラメータの正則性・同型の必要十分条件・周期1/2/4・変形/既約成分の適切な記述を達成する。domain / noetherian / PBW は全体の追加仮定にしない。一般の「4次元 quadratic AS-regular」が標準14641型から外れる可能性は研究範囲の境界として明記する。
 
@@ -12,7 +15,7 @@
 
 ## 既存研究と新研究の分担
 
-| 分野 | 基本の再利用元 | asz4で解く問題 |
+| 分野 | 基本の再利用元 | nc-p3で解く問題 |
 |---|---|---|
 | 1周期的な部分 | [as4](https://github.com/uedakazushi/as4) graded分類（未完） | Zhang twist同値、周期構造のファイバー、Z側での像と特殊化 |
 | 全14641型の4周期性 | [as4周期性論文](https://github.com/uedakazushi/as4/tree/main/research/z_periodicity) | 4周期の同型を**選んだ**有限atlasと、選択を忘れた分類の差 |
@@ -35,7 +38,7 @@
 
 既存as4の2周期族 \(A(\lambda)\) では \(A(\lambda)(1)=A(-\lambda)\) だが、最小周期2では \(A(\lambda)\not\simeq A(-\lambda)\)（添字保持同型）。添字平行移動を誤ってmoduli同型に読み替えない。標準例の外積代数のtrace符号規格化は [正確な検証コード](computations/verify_exterior_trace.py) で確認済み。
 
-**証明全文**：[分類論文](papers/asz4_classification.tex)（v6）。既存の最小周期2/4と非1周期的平坦族は引き続き [as4の周期性研究](https://github.com/uedakazushi/as4/tree/main/research/z_periodicity) を参照し、重複実装を避ける。
+**証明全文**：[分類論文](nc-p3.tex)（v6）。既存の最小周期2/4と非1周期的平坦族は引き続き [as4の周期性研究](https://github.com/uedakazushi/as4/tree/main/research/z_periodicity) を参照し、重複実装を避ける。
 
 ## 残る核心：Z4-AS-004
 
@@ -47,7 +50,7 @@
 
 ```sh
 python3 scripts/check_project.py
-latexmk papers/asz4_classification.tex
+latexmk nc-p3.tex
 latexmk research/plan_ja.tex
 latexmk research/notes_ja.tex
 python3 computations/verify_exterior_trace.py
