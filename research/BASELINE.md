@@ -1,4 +1,4 @@
-# 依存・一次文献・証明位置 — 2026-11-15 / v13
+# 依存・一次文献・証明位置 — 2026-11-15 / v14
 
 ## 現行プロジェクト
 
@@ -73,3 +73,8 @@
 - 主論文 `thm:nonore-generic-two`（`sections/nonore_period_two.tex`）で左点スキームの支持を一本の直線と五孤立点に明示し、射影非同型を証明する。`computations/verify_nonore_point_geometry.py` は全15小行列式、五次式による消去、標本 `z^5+z^2+1` の mod 2 既約性・mod 5 の因子型 `(2,3)`、残る座標の行列式を厳密に検査する。
 - Galois群 `S5` と Möbius安定化群の自明性は本文に素数次数の原始性と一点固定部分群の巡回性による証明を記載。計算コードのPASSだけから周期の不存在を結論しない。
 - 一般非Ore族と一般九変数楕円族では左点スキームの支持の次元が異なるので非同型。ただし成分の閉包・特殊化・既約成分への所属はなお不明。
+
+## 七変数族への境界退化とClifford点の特異性
+
+- 主論文 `thm:nonore-in-seven-closure` および `thm:seven-closure-singular`（`sections/ore_boundary.tex`）。固定した三生成部分代数の選択を変えたOre表示と、平坦一変数退化を使う。全AS正則モジュライの成分最大性は未解決。
+- `computations/verify_ore_boundary.py` と `research/ore_boundary_certificate.json`：代替Ore表示の八つの三次重なり、全六関係の同型への変換、元の七変数族の正規形、Clifford点での軌道飽和閉包の厳密階数 `30,37,38,38,39` を記録。

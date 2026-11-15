@@ -1,0 +1,39 @@
+{
+  "result": "PASS",
+  "exact_arithmetic": "QQ(K,V,B,S,A,D)",
+  "parameter_base": "Spec k[K,V,V^-1,B,S,A,D]",
+  "two_periodic_PBW_overlaps": 8,
+  "all_six_original_relations_and_generic_seven_isomorphism": {
+    "seven_parameters": {
+      "u": "K/D",
+      "v": "0",
+      "r": "-2*S/(D*V)",
+      "s": "B/(D*V)",
+      "a": "0",
+      "b": "A*V/D",
+      "c": "0"
+    },
+    "change_of_generators": [
+      "W_new=Z",
+      "Y_new=W",
+      "Z_new=X/V",
+      "X_new=Y/D - S*W/(V*D)"
+    ]
+  },
+  "singularity_certificate": {
+    "orbit_and_boundary_ranks": [
+      30,
+      37,
+      38,
+      38,
+      39
+    ],
+    "orbit_closure_dimension": 37,
+    "tangent_lower_bound_at_Clifford": 39
+  },
+  "scope": [
+    "NonOre five-family image is in seven-family orbit-saturated closure",
+    "That 37-dimensional Grassmannian image closure is singular at Clifford point",
+    "No assertion about distinct full moduli irreducible components"
+  ]
+}

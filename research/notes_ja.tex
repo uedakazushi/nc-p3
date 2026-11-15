@@ -4,9 +4,11 @@
 \usepackage[haranoaji]{luatexja-preset}
 \usepackage[unicode,hidelinks]{hyperref}
 \usepackage{xurl}
+\newcommand{\Gr}{\operatorname{Gr}}
+\newcommand{\PGL}{\operatorname{PGL}}
 \title{nc-p3研究ノート：周期構造・局所変形・未解決の障害}
 \author{}
-\date{2026年11月15日\quad 第13版}
+\date{2026年11月15日\quad 第14版}
 \begin{document}
 \maketitle
 \section{記法と確実性}
@@ -259,6 +261,18 @@ $\mathbb F_5$上の因子次数は$(2,3)$、ガロア群は$S_5$。
 完全な幾何学的証明は\path{sections/nonore_period_two.tex}。
 厳密計算の入力と出力は\path{research/nonore_point_certificate.json}。
 
+\section{七変数族の境界にある代数的変形}
+五変数族がOre型でないという表現は$\langle W,Y,Z\rangle$の選択に相対的．
+$\langle Z,W,X\rangle$を用いるとOre表示となる．
+一変数の平坦変形では$d=0$が五変数族，$d\ne0$が七変数族と同型で，
+後者への基底変更に$d^{-1}$の極がある．
+証明は論文\texttt{thm:nonore-in-seven-closure}．
+七変数族の位置0の関係空間の軌道飽和閉包は既約37次元であり，
+Clifford点では従来の37次元の微分像に，退化族由来の独立な二方向を加えて
+階数は39となる．正確な階数列は$30,37,38,38,39$．
+この軌道飽和閉包の特異性を全モジュライやstackの特異性と混同しない．
+計算証明書は\path{research/ore_boundary_certificate.json}．
+
 \section{重要な障害と誤推論の防止}
 \paragraph{接空間の次元と成分次元。}
 $15-1=14$は高次関係式がない場合の候補であって結論ではない。
@@ -285,7 +299,7 @@ $-1$なら$L_2\simeq L_0$となり非退化条件に反するため、translatio
 
 \section{次の具体的な作業}
 九変数族の楕円曲線・2等分点・次数12の因子から、次数4の不変量$U(th)$を超える族内同型の必要十分条件を記述する。
-非Ore型五変数族の一般最小周期2は証明済み。九変数族との成分関係を調べる。
+非Ore型五変数族の一般最小周期2は証明済み。七変数族への閉包包含は解決済み。七・九変数族の成分としての最大性を調べる。
 同時に別のOreチャートを探して、未積分の偶・交代方向を代数的に動かす。
 二次障害$Q$は候補選別と重複の検出に使い、形式計算だけを主目標にしない。
 全1周期構造、一般AS locus、非PBW点、最小周期4への接続は未解決のまま保持する。

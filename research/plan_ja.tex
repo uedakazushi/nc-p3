@@ -4,9 +4,11 @@
 \usepackage[haranoaji]{luatexja-preset}
 \usepackage[unicode,hidelinks]{hyperref}
 \usepackage{xurl}
+\newcommand{\Gr}{\operatorname{Gr}}
+\newcommand{\PGL}{\operatorname{PGL}}
 \title{nc-p3研究方針と再開手順}
 \author{}
-\date{2026年11月15日\quad 第13版}
+\date{2026年11月15日\quad 第14版}
 \begin{document}
 \maketitle
 \section{最初に読む：目標・達成基準・現在の保存状態}
@@ -129,11 +131,28 @@ Clifford基点での$o_0$方向は九変数Ore族の交代接像に含まれな�
 全モジュライでの成分包含は未決定。
 再現は\path{computations/verify_nonore_family.py}。
 
+\subsection*{七変数族への退化とClifford点の特異性}
+主論文\texttt{thm:nonore-in-seven-closure}で，非Ore型五変数族は
+別の三生成部分$\langle Z,W,X\rangle$を選ぶとOre表示を持ち，
+\[
+ YW+WY=(-1)^ia_0ZX+d(Z^2+X^2/v_0^2)
+\]
+による平坦な一変数退化で七変数族の軌道飽和閉包に入ることを証明した．
+$d=0$で五変数族，$d\ne0$では七変数族に同型となる．
+そのため「元の九変数切片の接像にない」ことは独立既約成分の証明でない．
+さらに\texttt{thm:seven-closure-singular}により，
+$\Gr(6,16)$内での七変数族の37次元軌道飽和閉包$Z_7$は
+Clifford点で接空間次元39以上となり特異．
+これは全AS正則モジュライの粗商の特異性を意味しない．
+厳密再現は\path{computations/verify_ore_boundary.py}と
+\path{research/ore_boundary_certificate.json}．
+
 \section{優先課題と具体的な着手方法}
 \paragraph{最優先：ALGEBRAIC-FAMILY-008。}
 形式的な高次障害計算より明示的な代数的族の拡張を優先する。
 九変数族の2-isogenyと12点因子から同型の必要十分条件を決定する。
-非Ore型五変数族について一般の最小周期と九変数族の像との交わりを調べ、
+五変数族の七変数族への閉包包含は解決済みなので，この閉包の外へ出る
+代数的変形があるかと七・九変数族の最大性を調べ，
 複数の交代方向を同時に積分する高次元の代数的族を優先する。
 五変数族の左点スキームは一本の直線と五つの孤立点からなり、
 五次式とガロア群$S_5$を用いた射影非同型により一般の非1周期性を証明済み。
@@ -185,6 +204,8 @@ python3 computations/verify_isogeny_invariant.py \
   --output research/isogeny_certificate.json
 python3 computations/verify_nonore_family.py \
   --output research/nonore_certificate.json
+python3 computations/verify_ore_boundary.py \
+  --output research/ore_boundary_certificate.json
 python3 computations/verify_nonore_point_geometry.py \
   --output research/nonore_point_certificate.json
 python3 computations/verify_ore_derivations.py \

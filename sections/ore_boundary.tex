@@ -1,0 +1,142 @@
+\section{別のOre表示と七変数族への境界退化}\label{sec:ore-boundary}
+「非Ore型」という呼称は，最初に選んだ三生成部分
+$\langle W,Y,Z\rangle$に関するものであった．
+別の三生成部分を選べば，この族はOre表示を持つ．
+さらにその表示により，既存の七変数族への閉包関係を完全に決定できる．
+
+\begin{theorem}[非Ore型二次元族は七変数族の閉包に含まれる]
+\label{thm:nonore-in-seven-closure}
+式\eqref{eq:nonore-five}の全パラメータから得られる幾何学的同型類の像は，
+式\eqref{eq:seven-family}の七変数族の同型類の像のZariski閉包に含まれる．
+正確には，一つの関係空間を記録する
+$\Gr(6,k^4\otimes k^4)$で，七変数族の
+$\PGL_4\times\PGL_4$軌道飽和の閉包に，非Ore型族の関係空間が全て属する．
+
+実際，$v_0\ne0$上に，パラメータ$d$を持つ次の代数的平坦族が存在する．
+式\eqref{eq:nonore-five}の最初の関係を
+\begin{equation}\label{eq:ore-boundary-family}
+ YW+WY=(-1)^i a_0ZX+d\left(Z^2+\frac{X^2}{v_0^2}\right)
+\end{equation}
+に置き換え，残りの五関係は変えない．
+$d=0$は元の非Ore型族であり，$d\ne0$の各ファイバーは
+七変数族に添字保持同型である．
+\end{theorem}
+\begin{proof}
+$K=k_0,V=v_0,B=b_0,S=s_0,A=a_0$と書く．
+$V\ne0$のもとで新しい生成元
+\[
+ \widehat W=Z,\qquad \widehat Y=W,\qquad
+ \widehat Z=X/V,\qquad\widehat X=Y
+\]
+を取ると，全$d$において関係は
+\begin{equation}\label{eq:ore-boundary-primed}
+\begin{aligned}
+ \widehat Y\widehat W+\widehat W\widehat Y&=0, &
+ \widehat Z\widehat W+\widehat W\widehat Z&=0, &
+ \widehat Z\widehat Y+\widehat Y\widehat Z&=\widehat W^2,\\
+ \widehat X\widehat W+\widehat W\widehat X&=K\widehat Y^2,\\
+ \widehat X\widehat Y+\widehat Y\widehat X
+  &=d(\widehat W^2+\widehat Z^2)+(-1)^i AV\widehat W\widehat Z,\\
+ \widehat X\widehat Z+\widehat Z\widehat X
+  &=\frac BV\widehat Y^2+\frac SV\widehat W^2
+\end{aligned}
+\end{equation}
+となる．上の三関係はClifford型三生成代数$B_{0,0}$を与え，
+下の三関係は符号自己同型に関するOre拡大である．
+通常導分の交代部分を$\partial$と書くと
+$\partial(\widehat W)=\partial(\widehat Z)=0$，
+$\partial(\widehat Y)=AV\widehat W\widehat Z$であり，
+偶部分は三つの生成元を中心二次式に送る符号捩れ導分である．
+既に証明したClifford--Oreの自由基底とフィルター付きKoszul--Frobenius性を適用できる．
+また補助重み$(1,2,2,4)$のモニック二次規則を使うと，
+全$d$で書換えが停止し，始点二通りの全八つの三次重なりが
+$k[K,V,V^{-1},B,S,A,d]$上の恒等式として解消する．
+従ってこの族は全次数で自由で，全ファイバーが標準14641型AS正則である．
+
+$d\ne0$ではさらに
+\[
+ \widetilde W=\widehat W,\quad
+ \widetilde Y=\widehat Y,\quad
+ \widetilde Z=\widehat Z,\quad
+ \widetilde X=\frac{\widehat X}{d}-\frac{S}{Vd}\widehat Y
+\]
+を取る．関係\eqref{eq:ore-boundary-primed}に代入すると，
+七変数族\eqref{eq:seven-family}の正規形を得る．
+具体的なパラメータ対応は
+\begin{equation}\label{eq:boundary-to-seven}
+ (u,v,r,s,a,b,c)
+ =\left(\frac Kd,0,-\frac{2S}{Vd},
+          \frac B{Vd},0,\frac{AV}{d},0\right).
+\end{equation}
+いずれも隣接する生成空間の可逆な基底変更であり，
+添字の平行移動を同型として使っていない．
+
+よって$V\ne0$を固定して$d$を零へ近づけると，
+$d\ne0$のファイバーは七変数族と同型で，特殊ファイバーは非Ore型族である．
+この操作は関係空間のGrassmannianの代数的な射で実現される．
+$V=0$のファイバーも，非Ore型五変数族の$V\ne0$部分から
+その関係空間を特殊化すれば得られる．
+従って閉包への包含は全パラメータで成立する．
+式と三次重なりの厳密検算は
+\path{computations/verify_ore_boundary.py}に収めた．
+\end{proof}
+
+\begin{theorem}[七変数族の軌道飽和閉包はClifford点で特異]
+\label{thm:seven-closure-singular}
+$\Phi_7:\mathbb A^7\to\Gr(6,k^4\otimes k^4)$を，
+七変数族の位置零の関係空間を記録する射とし，
+$G=\PGL_4\times\PGL_4$と置く．
+$Z_7=\overline{G\cdot\Phi_7(\mathbb A^7)}$は既約な37次元部分多様体である．
+Clifford基点$z_0=\Phi_7(0,1,0,0,0,0,0)$において
+\[
+ \dim T_{z_0}Z_7\ge39>37=\dim Z_7.
+\]
+特に$Z_7$は$z_0$で特異である．
+これは有限表示の軌道飽和閉包についての主張であり，
+全AS正則モジュライの既約成分や粗モジュライの特異性を断定しない．
+\end{theorem}
+\begin{proof}
+前節の厳密計算では，$G\times\mathbb A^7$からGrassmannianへの
+微分の階数は$z_0$で37，$G$軌道の階数は30である．
+源$G\times\mathbb A^7$は既約37次元なので，
+$Z_7$は既約かつ次元37である．
+
+Clifford基点の元の$W,Y,Z,X$座標で，次の二つの関係の接方向を考える．
+\[
+ \eta:\quad YW+WY\mapsto Z^2+X^2,\qquad
+ \xi:\quad YW+WY\mapsto ZX.
+\]
+第一は\eqref{eq:ore-boundary-family}で
+$K=V=B=S=1,A=0,d=q$とした$q=0$での導関数である．
+第二は$K=V=B=S=1,A=q,d=q^2$とした導関数である．
+$q\ne0$ではいずれも定理\ref{thm:nonore-in-seven-closure}によって
+七変数族の$G$軌道に属するため，
+$\eta,\xi\in T_{z_0}Z_7$である．
+
+群作用の微分$[N_0\ N_1]$，七変数族のパラメータ微分$J_7$に対し，
+$\mathbb Q$上の厳密階数計算は
+\[
+ \begin{aligned}
+ \operatorname{rank}[N_0\ N_1]&=30,\\
+ \operatorname{rank}[N_0\ N_1\ J_7]&=37,\\
+ \operatorname{rank}[N_0\ N_1\ J_7\ \eta]&=38,\\
+ \operatorname{rank}[N_0\ N_1\ J_7\ \xi]&=38,\\
+ \operatorname{rank}[N_0\ N_1\ J_7\ \eta\ \xi]&=39.
+ \end{aligned}
+\]
+これは\path{computations/verify_ore_boundary.py}が関係行列から直接計算する．
+従って$T_{z_0}Z_7$には39次元の部分空間があり，
+37次元の既約多様体のこの閉点は正則でない．
+\end{proof}
+
+\begin{remark}
+以前の「九変数Ore族の選んだパラメータ切片では$o_0$方向が出ない」
+という接空間計算は正しいが，
+その事実から「$o_0$方向はOre族の閉包の外」という結論は出ない．
+実際，基底変更が$d^{-1}$の極を持つ上の退化が別の接方向を作る．
+また非Ore型五変数族の一般点と楕円Ore九変数族の一般点は
+点スキームの次元により非同型であるが，
+それと閉包への包含は矛盾しない．
+\textbf{二つの族の像を，独立した既約成分として数えるべきではない．}
+これらの像を含む全モジュライの既約成分の次元と最大性はなお未解決である．
+\end{remark}

@@ -1,19 +1,17 @@
 {
   "date": "2026-11-15",
-  "version": 13,
+  "version": 14,
   "generated": "current Japanese LuaLaTeX sources and exact certificates",
   "verification_status": "PASS_with_explicit_scope_limits",
   "github_save": {
-    "status": "PASS",
+    "status": "pending_fast_forward",
     "repository": "uedakazushi/nc-p3",
     "branch": "main",
-    "content_commit": "04bf216ff96e765e1312b5b6365956c3ea5e598c",
-    "remote_tree_sha": "43eabdc37b01e8c5cd46cf3955fa7a5d43cab93f",
-    "verification": "Fast-forward main update succeeded. Remote tree and current source/certificate paths read back. Expanded main manuscript has 91 unique labels, all ref/citation keys resolve, required STATE paths and proof references present. Final validation metadata stored in a subsequent commit."
+    "base_commit": "439c708e66a08a97a4daa199c04eccd953eef48e"
   },
   "library_save": {
     "status": "not_performed",
-    "reason": "GitHub main push succeeded; per user's instruction no Library save."
+    "reason": "User directs no Library save when GitHub main push succeeds."
   },
   "checks": [
     {
@@ -70,22 +68,27 @@
       "command": "python3 computations/verify_nonore_point_geometry.py",
       "result": "PASS",
       "scope": "15 exact rank-4 minors for both parities, reductions by projected quintics, mod-2 irreducibility/mod-5 factor degrees, nonzero coordinate span determinant. Galois/PGL2 reasoning written in paper."
+    },
+    {
+      "command": "python3 computations/verify_ore_boundary.py --output research/ore_boundary_certificate.json",
+      "result": "PASS",
+      "scope": "Exact polynomial PBW overlaps, relation-space equivalence for both parities, rational tangent ranks 30/37/38/38/39."
     }
   ],
   "certificate_comparison": "All 8 local v11 commands were executed and passed, including existing numerical checks and new Ore derivation verifier. No unrun mathematical check is claimed.",
   "tex": {
+    "engine": "LuaLaTeX via latexmk",
     "result": "PASS",
-    "engine": "LuaLaTeX/latexmk",
     "documents": {
-      "paper": 30,
-      "plan": 5,
-      "notes": 6
+      "paper": 32,
+      "plan": 6,
+      "notes": 7
     },
-    "scope": "Current v13 local sources compiled and structural checker passed; font substitutions only, no unresolved references/citations or overfull boxes."
+    "scope": "Local v14 rebuilt; no unresolved references/citations, errors or overfull hboxes."
   },
   "visual_inspection": {
-    "result": "not_rerun_for_v13",
-    "scope": "TeX compiled and page count checked; no new page-by-page visual inspection claimed"
+    "result": "PASS",
+    "scope": "New theorem section around manuscript pages 29-30 rendered and inspected; typographic command corrected."
   },
   "not_claimed": [
     "formal verification",
@@ -99,14 +102,17 @@
     "Sufficiency of equality of elliptic J(th) for indexed isomorphism",
     "Full indexed isomorphism classification from U(th) alone",
     "Generic period two or component membership for new non-Ore chart",
-    "Any assertion that non-Ore and nine-dimensional Ore families belong to distinct irreducible components."
+    "Any assertion that non-Ore and nine-dimensional Ore families belong to distinct irreducible components.",
+    "Distinct irreducible component for nonOre two-family",
+    "Singularity of global coarse moduli or whole AS regular moduli stack"
   ],
   "new_results": {
     "intrinsic_2isogeny": "Proof written; polarized elliptic correspondence recovered at generic nine-family points",
     "explicit_quotient": "Polynomial quotient cubic and both j-invariants verified exactly",
     "modular_U": "Degree-four necessary indexed-isomorphism invariant and A4 Galois closure",
     "nonore_five": "All-parameter quadratic PBW standard AS4 chart, two-dimensional indexed image, o0 outside earlier Ore tangent span",
-    "nonore_period_two": "Generic minimal period exactly two, from intrinsic line plus five points and projective nonisomorphism; image dimension two established by v12."
+    "nonore_period_two": "Generic minimal period exactly two, from intrinsic line plus five points and projective nonisomorphism; image dimension two established by v12.",
+    "ore_boundary": "Entire five-family inside seven-family orbit-saturated closure, and 37-dimensional Grassmannian orbit closure singular at Clifford with tangent >=39."
   },
   "verified_remote_blobs": {
     "nc-p3.tex": "ac6a0f30d89c1a1793c3eb873657898f168fd427",
