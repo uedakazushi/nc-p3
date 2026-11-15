@@ -1,20 +1,16 @@
 {
   "date": "2026-11-15",
-  "version": 10,
+  "version": 11,
   "generated": "current Japanese LuaLaTeX sources and exact certificates",
   "verification_status": "PASS_with_explicit_scope_limits",
   "github_save": {
-    "status": "PASS",
+    "status": "pending_remote_write",
     "repository": "uedakazushi/nc-p3",
-    "branch": "main",
-    "base_commit": "98c0401f931123a796ee6df032b4a6430d668785",
-    "content_commit": "294030e3260d98401f4023e326c189514763205b",
-    "source_tree": "a63e81ca8413b2dd50f2dca4d942f2734b90437c",
-    "verification": "Fast-forward main update succeeded. Remote main tree read back; all 28 source/configuration/certificate blob SHAs equal locally verified files. This validation status is saved in a subsequent commit."
+    "branch": "main"
   },
   "library_save": {
     "status": "not_performed",
-    "reason": "User instruction: do not save to Library after successful GitHub push."
+    "reason": "Do not save to Library after successful GitHub push."
   },
   "checks": [
     {
@@ -51,22 +47,23 @@
       "command": "python3 scripts/check_project.py",
       "result": "PASS",
       "scope": "file paths, JSON, tasks, recursively included TeX labels/citations and syntax"
+    },
+    {
+      "command": "python3 computations/verify_ore_derivations.py --output research/ore_derivation_certificate.json",
+      "result": "PASS",
+      "scope": "exact symbolic 30x18 derivation matrices, polynomial minors, J(x) and its degree"
     }
   ],
   "certificate_comparison": "Recomputed moduli certificate equals retained data; seven-family regenerated; serialization compacted without changing JSON values.",
   "tex": {
+    "engine": "LuaLaTeX via latexmk",
     "result": "PASS",
-    "engine": "LuaHBTeX / LuaLaTeX, TeX Live 2025 Debian",
-    "command": "latexmk -lualatex -interaction=nonstopmode -halt-on-error nc-p3.tex research/plan_ja.tex research/notes_ja.tex",
-    "pages": {
-      "paper": 22,
-      "plan": 4,
-      "notes": 5
+    "documents": {
+      "paper": 24,
+      "plan": 5,
+      "notes": 6
     },
-    "undefined_refs_or_citations": false,
-    "overfull_boxes": false,
-    "notes": "Non-fatal Japanese italic font substitutions; no missing glyphs.",
-    "source_layout": "nc-p3.tex includes four current thematic files in sections/; the expanded manuscript was preserved and recompiled."
+    "scope": "Compiled all three updated v11 documents locally; no overfull boxes or unresolved references detected."
   },
   "visual_inspection": {
     "result": "PASS",
@@ -97,5 +94,11 @@
     "sections/elliptic_ore_family.tex": "83e946f9a796583e90e9ebf99d86333e239abd3656533aa609b76974b663a897",
     "sections/four_window.tex": "c04a639fda9e02822737d2cbb517e5a433b2d4df65c391765b10cc3a83091fa7",
     "sections/local_moduli.tex": "a7d0a59ec0201d395ebb6ca80337dfff5d4b384fa3d8d716366fe50df3563cd6"
+  },
+  "new_results": {
+    "ordinary_derivations": "free rank six, symbolic constant minors",
+    "sigma_derivations": "free rank nine, globally covering symbolic minors",
+    "ore_slice": "generic within specified marked Clifford-Ore presentations only",
+    "elliptic_j": "degree-12 rational invariant, necessary for indexed isomorphism"
   }
 }
