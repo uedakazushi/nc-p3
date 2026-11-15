@@ -52,7 +52,8 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 第三の行列階数による全対象の二分岐を証明した。
 行列束の全場合分けにより階数2を除外し、全対象の階数範囲を3以上16以下へ絞った。
 [枝台帳](research/classification_branches.json) の両枝の一般正規形・正則性判定は未完成。
-量子部分では階数6・8・10・12の全条件を求め、階数6はindexed同型で二種類に分類した。
+量子部分では階数6・8・10・12の全条件を求めた。さらに [量子部分の全indexed分類](sections/quantum_indexed.tex) として、
+全ての非零パラメータを三次元トーラスの明示的なS4作用へ還元した。特殊値も含み、階数6は二種類となる。
 対称テンソル部分は四二次式の完全交叉によるチャートで全ファイバー正則性を認証し、
 その全特殊値を含むindexed同型を33未知数41方程式へ還元した。
 このチャートへの所属は三つの線型解空間内の可逆行列の存在で必要十分に判定できる。
@@ -81,6 +82,7 @@ python3 computations/verify_frobenius_tensor.py --output research/frobenius_tens
 python3 computations/verify_quantum_tensor_rank.py
 python3 computations/verify_symmetric_congruence.py
 python3 computations/verify_rank_two_exclusion.py
+python3 computations/verify_quantum_indexed.py
 python3 computations/verify_moduli_jets.py --output research/moduli_certificate.json
 python3 computations/verify_algebraic_family.py --output research/algebraic_family_certificate.json
 python3 computations/verify_elliptic_family.py --output research/elliptic_family_certificate.json

@@ -80,5 +80,21 @@
     "Coverage is a partition of already regular objects, not a proof that every tensor candidate is Koszul/AS.",
     "No claim that all integers 3..16 occur, or that a rank is a full isomorphism invariant.",
     "Quantum rank strata and their minimal-rank subcase do not exhaust either global branch."
+  ],
+  "known_charts": [
+    {
+      "id": "QUANTUM-TORUS",
+      "scope": "quantum polynomial indexed locus only; intersects low and high rank branches",
+      "parameters": "(p,q,r) in (Gm)^3, q01=q02=q03=1",
+      "regularity": "all parameters: quantum PBW and exterior dual",
+      "complete_indexed_isomorphism": "explicit S4 orbit, cor:quantum-torus-normal-form; all special parameters included",
+      "residual_generators": [
+        "(1/p,1/q,p*r/q)",
+        "(1/p,r,q)",
+        "(q,p,1/r)"
+      ],
+      "source": "sections/quantum_indexed.tex",
+      "global_coverage": false
+    }
   ]
 }

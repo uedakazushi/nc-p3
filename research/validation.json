@@ -3,11 +3,11 @@
   "date": "2026-11-16",
   "version": 22,
   "reviewed_input": {
-    "source_commit": "e3a67ea9547938678ef7b26c7edb303cb5b6258d"
+    "source_commit": "f42db2602c43d71e2cf76aee92900ec9676b1202"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Frobenius tensor reconstruction and exhaustive split, all quantum rank strata, symmetric-chart all-fiber regularity, complete indexed equivalence (33 unknowns/41 equations) and constructive linear symmetrization membership. First checkpoint saved; this update adds symmetric-chart proofs, code and targeted literature comparison. Existing results retained. Further proved complete exclusion of opposite rank two and retained the useful diagonal-ansatz obstruction; current bound is 3<=rho<=16.",
+    "scope": "Frobenius tensor reconstruction and exhaustive split, all quantum rank strata, symmetric-chart all-fiber regularity, complete indexed equivalence (33 unknowns/41 equations) and constructive linear symmetrization membership. First checkpoint saved; this update adds symmetric-chart proofs, code and targeted literature comparison. Existing results retained. Further proved complete exclusion of opposite rank two and retained the useful diagonal-ansatz obstruction; current bound is 3<=rho<=16. Completed the nonzero quantum indexed locus via all exceptional point-support cases and an explicit (Gm)^3/S4 normal-form criterion; proof isolated in sections/quantum_indexed.tex.",
     "new_mathematical_theorem": true
   },
   "checks": [
@@ -45,11 +45,16 @@
       "command": "python3 computations/verify_rank_two_exclusion.py",
       "result": "PASS",
       "scope": "All 16 pairs of non-scalar single-eigenvalue Jordan partitions: kernel table [[10,8,7,4],[8,8,6,4],[7,6,6,4],[4,4,4,4]]. Both canonical rank-two tensors have singleton ranks 4, pair ranks (6,6,2), and W3 dimensions 12 at every start. Full coverage uses the written pencil proof, not sampled matrices alone."
+    },
+    {
+      "command": "python3 computations/verify_quantum_indexed.py",
+      "result": "PASS",
+      "scope": "All 24 permutations and rational vertex-gauge certificates for each of the four support types, relation ratios at negative/positive indexed positions, two negative isomorphism controls, three-torus normalization and symbolic S4 Coxeter relations."
     }
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed W5 intersection/rank-one contradiction; tensor contractions and complementary perfect pairings; canonical trace rotation; opposite rank invariance, lower bound and disjoint covering; quantum block rank formula and indexed diagonal normalization; distinct point-projection supports separate the two normal forms. No formalization, independent review or novelty verification. Also reviewed the four-quadric height/regular-sequence criterion, the symmetric-chart Tate argument, independent equivalence to common congruence via a commutative centroid and polynomial roots, complete indexed-to-graded chart equivalence, disjointness of alternating/symmetric orbits, and the three independent linear symmetrizer conditions. Audited the rank-two exclusion: full singleton ranks remove zero minimal indices; singular left/right Kronecker blocks force rank>=8; generic dual pencil basis normalizes both leading matrices; Jordan nullity 10 yields only two canonical types, both with explicit W3 dimension 12."
+    "scope": "Reviewed W5 intersection/rank-one contradiction; tensor contractions and complementary perfect pairings; canonical trace rotation; opposite rank invariance, lower bound and disjoint covering; quantum block rank formula and indexed diagonal normalization; distinct point-projection supports separate the two normal forms. No formalization, independent review or novelty verification. Also reviewed the four-quadric height/regular-sequence criterion, the symmetric-chart Tate argument, independent equivalence to common congruence via a commutative centroid and polynomial roots, complete indexed-to-graded chart equivalence, disjointness of alternating/symmetric orbits, and the three independent linear symmetrizer conditions. Audited the rank-two exclusion: full singleton ranks remove zero minimal indices; singular left/right Kronecker blocks force rank>=8; generic dual pencil basis normalizes both leading matrices; Jordan nullity 10 yields only two canonical types, both with explicit W3 dimension 12. Quantum all-parameter necessity audited from the complete support classification: six lines, plane plus three lines, two planes plus a line, full P3. The two-plane GL2 freedom is removed only after vertex-gauge normalization makes the shared generators commute and have identical outside parameters. Remaining maps are monomial with a common permutation. Triple cocycles and all S4 normal-form formulas reviewed."
   },
   "tex": {
     "result": "BLOCKED_MISSING_DEPENDENCIES",
@@ -67,7 +72,7 @@
   "github_save": {
     "result": "PENDING",
     "branch": "main",
-    "scope": "Checkpoints cf5a3f2 and e3a67ea pushed. Current rank-two exclusion and current receipt await final fast-forward push/readback."
+    "scope": "Prior checkpoints pushed. Current all-parameter quantum classification and final validation receipt await fast-forward save/readback."
   },
   "library_save": {
     "result": "not_saved_project_policy",
@@ -75,7 +80,7 @@
   },
   "open_mathematics": [
     "General tensor conditions are finite Frobenius conditions, not a full Koszul/AS criterion.",
-    "Both global rank branches retain unclassified residuals. Symmetric U-chart regularity and a complete indexed equivalence criterion are proved, but explicit normal forms of all four-quadric systems remain unresolved.",
+    "Both global rank branches retain unclassified residuals. Symmetric U-chart regularity and a complete indexed equivalence criterion are proved, but explicit normal forms of all four-quadric systems remain unresolved. Quantum locus complete indexed normal forms are proved, but neither known chart exhausts the AS locus.",
     "Quintic d3 automatic rank and certified finite-Frobenius non-Koszul counterexamples remain unresolved.",
     "Quantum rank-six has two indexed classes only within the quantum polynomial locus.",
     "Full components, period strata, degenerations and novelty remain unresolved.",
