@@ -4,13 +4,16 @@
   "generated": "current Japanese LuaLaTeX sources and exact certificates",
   "verification_status": "PASS_with_explicit_scope_limits",
   "github_save": {
-    "status": "pending_fast_forward",
+    "status": "PASS",
+    "repository": "uedakazushi/nc-p3",
     "branch": "main",
-    "base_commit": "018e2f1dd6bb8dfae36344f05d09d56bc27bca2f"
+    "content_commit": "04bf216ff96e765e1312b5b6365956c3ea5e598c",
+    "remote_tree_sha": "43eabdc37b01e8c5cd46cf3955fa7a5d43cab93f",
+    "verification": "Fast-forward main update succeeded. Remote tree and current source/certificate paths read back. Expanded main manuscript has 91 unique labels, all ref/citation keys resolve, required STATE paths and proof references present. Final validation metadata stored in a subsequent commit."
   },
   "library_save": {
     "status": "not_performed",
-    "reason": "Do not save to Library after successful GitHub push."
+    "reason": "GitHub main push succeeded; per user's instruction no Library save."
   },
   "checks": [
     {
@@ -117,5 +120,16 @@
     "AGENTS.md": "8783188008cf13a671515a4e7a1efb757e9d969c",
     "scripts/check_project.py": "0a65c2cc4f63feb39547b4d914f9561837984a39"
   },
-  "reproduction_note": "Published scripts and exact certificates for new v12 results. Compare remote file content SHAs to generated local files before asserting complete source equivalence."
+  "reproduction_note": "Published scripts and exact certificates for new v12 results. Compare remote file content SHAs to generated local files before asserting complete source equivalence.",
+  "remote_verified_blobs": {
+    "nc-p3.tex": "d6bb02b70d3dad1f986cc36f3d62cadb9aa2c6c1",
+    "sections/nonore_period_two.tex": "8b128e012658a7f034131bf239b4356a582d226c",
+    "sections/nonore_family.tex": "17253c13d7a896b450ee0ab7fc24e4b4e5d58a1f",
+    "computations/verify_nonore_point_geometry.py": "fa5da1e91b1cd343f72e8b4a1fbc167fbb8114e6",
+    "research/nonore_point_certificate.json": "42a1b10e28617b494de7e1dca777f97730af7599",
+    "research/STATE.json": "f259fcda99ed384be7024b60151cb3812f3e537d",
+    "research/plan_ja.tex": "42bd955d4c8a10a0ecf4e8c168a7347bbbedfd3f",
+    "research/notes_ja.tex": "84e666c5a52de4116eb4c185cceb6cfa73180889",
+    "scripts/check_project.py": "39fb5c3988aff6cb8b88a9264ca470f895e30fe7"
+  }
 }
