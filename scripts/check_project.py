@@ -11,7 +11,7 @@ REQUIRED = [
     'sections/elliptic_ore_family.tex', 'sections/ore_complete.tex',
     'sections/isogeny_invariant.tex', 'sections/nonore_family.tex',
     'sections/nonore_period_two.tex',
-    'sections/ore_boundary.tex', 'sections/four_window.tex',
+    'sections/ore_boundary.tex', 'sections/nine_closure.tex', 'sections/four_window.tex',
     'sections/local_moduli.tex', 'sections/algebraic_family.tex', 'research/plan_ja.tex',
     'research/notes_ja.tex', 'research/BASELINE.md', 'research/STATE.json',
     'research/validation.json', 'research/moduli_certificate.json',
@@ -19,14 +19,14 @@ REQUIRED = [
     'research/elliptic_family_certificate.json', 'research/ore_derivation_certificate.json',
     'research/isogeny_certificate.json', 'research/nonore_certificate.json',
     'research/nonore_point_certificate.json',
-    'research/ore_boundary_certificate.json', '.latexmkrc', '.gitignore',
+    'research/ore_boundary_certificate.json', 'research/nine_closure_certificate.json', '.latexmkrc', '.gitignore',
     '.vscode/settings.json', 'requirements.txt', 'computations/pbw_complex.py',
     'computations/verify_moduli_jets.py', 'computations/verify_exterior_trace.py',
     'computations/verify_period_witness.py', 'computations/verify_third_order_samples.py',
     'computations/verify_algebraic_family.py', 'computations/verify_elliptic_family.py', 'computations/verify_ore_derivations.py',
     'computations/verify_isogeny_invariant.py', 'computations/verify_nonore_family.py',
     'computations/verify_nonore_point_geometry.py',
-    'computations/verify_ore_boundary.py',
+    'computations/verify_ore_boundary.py', 'computations/verify_nine_closure_tangent.py',
 ]
 errors = []
 for name in REQUIRED:

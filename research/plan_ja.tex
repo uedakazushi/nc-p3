@@ -8,7 +8,7 @@
 \newcommand{\PGL}{\operatorname{PGL}}
 \title{nc-p3研究方針と再開手順}
 \author{}
-\date{2026年11月15日\quad 第14版}
+\date{2026年11月15日\quad 第15版}
 \begin{document}
 \maketitle
 \section{最初に読む：目標・達成基準・現在の保存状態}
@@ -147,10 +147,27 @@ Clifford点で接空間次元39以上となり特異．
 厳密再現は\path{computations/verify_ore_boundary.py}と
 \path{research/ore_boundary_certificate.json}．
 
+\subsection*{九変数族の軌道飽和閉包の特異性}
+主論文\texttt{thm:nine-closure-singular}により九変数族の
+$G=\PGL_4\times\PGL_4$軌道飽和閉包$Z_9\subset\Gr(6,16)$は既約39次元。
+七変数族の$Z_7$は余次元2の真の閉部分。
+Clifford点で九変数族の9方向と七変数族の境界退化二方向は
+互いに独立で、$\dim T_{C_0}Z_9\ge41$、従って$Z_9$は特異。
+商接方向の個別の代数的一変数変形による線型包は
+偶方向7と交代方向4の計11次元。
+しかし二次障害の制限は$Q|_L=\lambda c$であり、
+この11方向を全て接像に持つ滑らかな代数的基底は存在しない。
+本結果は有限Grassmannianの軌道飽和閉包についてであり，
+全AS正則代数モジュライの既約成分数・次元を決定していない。
+再現は\path{computations/verify_nine_closure_tangent.py}と
+\path{research/nine_closure_certificate.json}。
+
 \section{優先課題と具体的な着手方法}
 \paragraph{最優先：ALGEBRAIC-FAMILY-008。}
 形式的な高次障害計算より明示的な代数的族の拡張を優先する。
 九変数族の2-isogenyと12点因子から同型の必要十分条件を決定する。
+七・九変数族の軌道飽和閉包のClifford特異性は解決済み。
+二次障害が許す一方で九変数族の閉包に入らない方向を明示的代数的族として構成できるかを調べる。
 五変数族の七変数族への閉包包含は解決済みなので，この閉包の外へ出る
 代数的変形があるかと七・九変数族の最大性を調べ，
 複数の交代方向を同時に積分する高次元の代数的族を優先する。
@@ -204,6 +221,8 @@ python3 computations/verify_isogeny_invariant.py \
   --output research/isogeny_certificate.json
 python3 computations/verify_nonore_family.py \
   --output research/nonore_certificate.json
+python3 computations/verify_nine_closure_tangent.py \
+  --output research/nine_closure_certificate.json
 python3 computations/verify_ore_boundary.py \
   --output research/ore_boundary_certificate.json
 python3 computations/verify_nonore_point_geometry.py \

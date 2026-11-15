@@ -1,0 +1,115 @@
+\section{九変数族の軌道飽和閉包とClifford点の特異性}\label{sec:nine-closure}
+九変数の楕円Clifford--Ore族の関係空間を位置$0$で取り、
+\[
+ \Phi_9:S_9\longrightarrow\Gr(6,k^4\otimes k^4),\qquad
+ G=\PGL_4\times\PGL_4
+\]
+とする。ここで$S_9=\operatorname{Spec}k[u,v,r,s,a,b,c,t,h,(1+th)^{-1}]$である。
+この射の像の$G$-軌道飽和のZariski閉包を
+$Z_9=\overline{G\cdot\Phi_9(S_9)}$とし、七変数族について同様に$Z_7$を定める。
+これは\emph{位置0の有限関係表示の空間}における閉包であり、
+裸の$\mathbb Z$-代数の粗モジュライ空間であるとは主張しない。
+
+\begin{theorem}[九変数族の閉包のClifford特異性]\label{thm:nine-closure-singular}
+標数$0$の代数閉体上で
+\[
+ Z_7\subset Z_9,\qquad
+ \dim Z_7=37,\qquad \dim Z_9=39
+\]
+が成立する。特に$Z_7$は$Z_9$の余次元$2$の真の閉部分多様体である。
+Clifford基点$z_0$において
+\[
+ \boxed{\dim T_{z_0}Z_9\ge41>39=\dim Z_9}
+\]
+だから、$Z_9$は$z_0$で特異である。
+さらに、$G$の基底変更による接方向を除くと、
+$z_0$における\emph{実際の代数的一変数変形から得られる方向の線型包}は
+少なくとも$11$次元であり、偶方向$7$個、交代方向$4$個を含む。
+ただし、これら全方向を同時に積分する滑らかな$11$次元族は存在するとは主張しない。
+\end{theorem}
+\begin{proof}
+七変数族は九変数族の$t=h=0$という閉切片だから$Z_7\subset Z_9$である。
+$S_9$は既約な9次元の滑らかなスキームであり、$G$の次元は30である。
+Clifford点で、$G\times S_9$からGrassmannianへの微分の階数は39である
+（定理\ref{thm:algebraic-nine}の次元計算）。
+従って像の閉包は39次元で既約である。
+同様に七変数族では次元37となる（定理\ref{thm:seven-image}）。
+
+前節の代数的退化\eqref{eq:ore-boundary-family}から得られる
+二つの接方向を$\eta,\xi$とする。元の$W,Y,Z,X$の順序で、
+$\eta$は$YW+WY$の右辺に$Z^2+X^2$を加える偶方向、
+$\xi$は$YW+WY$に$(-1)^iZX$を加える交代方向である。
+定理\ref{thm:nonore-in-seven-closure}と
+\ref{thm:seven-closure-singular}により、両者は$T_{z_0}Z_7$、
+従って$T_{z_0}Z_9$にも属する。
+
+$N_0,N_1$を基底変更の$60\times16$行列、$J_9$を九変数の
+関係係数の$60\times9$ Jacobianとする。Clifford点での階数は
+\begin{equation}\label{eq:nine-closure-ranks}
+\begin{aligned}
+ \operatorname{rk}[N_0\ N_1]&=30,\\
+ \operatorname{rk}[N_0\ N_1\ J_9]&=39,\\
+ \operatorname{rk}[N_0\ N_1\ J_9\ \eta]&=40,\\
+ \operatorname{rk}[N_0\ N_1\ J_9\ \xi]&=40,\\
+ \operatorname{rk}[N_0\ N_1\ J_9\ \eta\ \xi]&=41.
+\end{aligned}
+\end{equation}
+すべて有理数上の厳密階数であり、
+\path{computations/verify_nine_closure_tangent.py}が標準四生成の関係行列から
+再生成して検査する。従って$\dim T_{z_0}Z_9\ge41$を得て、特異性が従う。
+
+最後に偶・交代のFourierモードを分ける。
+九変数族の偶パラメータ$u,v,r,s,t,h$の微分$J_9^{+}$と
+交代パラメータ$a,b,c$の微分$J_9^{-}$について
+\[
+ \begin{array}{c|ccc}
+ &\operatorname{rk}D_1&\operatorname{rk}[D_1\ J_9]&
+ \operatorname{rk}[D_1\ J_9\ \text{境界接方向}]\\\hline
+ \text{偶}&15&21&22\\
+ \text{交代}&15&18&19
+ \end{array}
+\]
+である。従って基底変更で割った線型包には偶方向7個、交代方向4個が存在する。
+九変数族の九方向は滑らかな代数的基底上で与えられ、追加の$\eta,\xi$は
+前節の明示的な一変数退化で与えられるので、これらは全て\emph{個別には}
+実際の代数的変形の接方向である。
+\end{proof}
+
+\begin{proposition}[11接方向の同時積分を妨げる二次障害]
+\label{prop:nine-closure-obstruction}
+上の$11$個の変形方向の線型包$L$をClifford基点の
+基点付きindexed変形の$15$次元接空間に写す。
+交代方向の座標を定理\ref{thm:clifford-quadratic}の
+$(o_0,o_1,o_2,o_3,o_4,o_5)$とすると、$L$の交代部分は
+\[
+ (o_0,o_1,o_2,o_3,o_4,o_5)=(\lambda,-b,-a,-b,0,c)
+\]
+であり、二次障害は
+\[
+ \left.Q\right|_L=\lambda c.
+\]
+従って、$L$を接像とする\emph{滑らかな}基底上の基点付き平坦AS正則族は存在しない。
+これは特異な基底上の同時積分や全モジュライの成分次元を排除するものではない。
+\end{proposition}
+\begin{proof}
+七・九変数族の交代基底は式\eqref{eq:seven-odd-plane}で与えられ、
+追加の$\xi$は$o_0$である。
+従って式\eqref{eq:clifford-Q}へ代入すると
+\[
+ Q=o_0o_5+o_1o_2-o_2o_3+o_3o_4=\lambda c.
+\]
+接写像が$L$へ同型となる滑らかな局所基底があれば、その完備局所環で
+$\lambda,c$は独立な一次座標となる。
+変形の二次持上げの必要条件$Q=0$は一次座標の二次部分に
+$\lambda c=0$を要求するが、滑らかな基底の形式冪級数環では
+この積は零でない。矛盾である。
+\end{proof}
+
+\begin{remark}
+$Z_9$の特異性は，九次元族とは異なる成分を構成したことを意味しない。
+また，$Z_9$の接空間が大きいことをもって非1周期的な成分の
+同型類次元が$11$以上であるとは結論しない。
+本節の二つの追加方向のうち、$\xi$と九変数族の$c$方向は
+二次で混合障害を持つ。閉包の大きな接空間は、滑らかな高次元族の存在とは
+両立しない場合があることを明示する。
+\end{remark}

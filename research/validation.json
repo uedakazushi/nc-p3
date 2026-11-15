@@ -1,19 +1,17 @@
 {
   "date": "2026-11-15",
-  "version": 14,
+  "version": 15,
   "generated": "current Japanese LuaLaTeX sources and exact certificates",
   "verification_status": "PASS_with_explicit_scope_limits",
   "github_save": {
-    "status": "PASS",
+    "status": "pending_remote_save",
+    "base_commit": "85108b4327d7c2edf049fb57cc52c9cfb64bbd86",
     "repository": "uedakazushi/nc-p3",
-    "branch": "main",
-    "content_commit": "7163fd2db2f6aa8ec272d777bc96587b09e5844d",
-    "source_tree": "b52e6f8f049b65a60fb050abeeafb5add687ef5e",
-    "verification": "Fast-forward succeeded. Remote main tree read back: 43 tracked blobs, including all current LuaLaTeX sources, numerical certificates, and new Ore-boundary theorem."
+    "branch": "main"
   },
   "library_save": {
     "status": "not_performed",
-    "reason": "GitHub push succeeded; the user requested no Library save."
+    "reason": "Do not save to Library if GitHub main push succeeds."
   },
   "checks": [
     {
@@ -75,22 +73,22 @@
       "command": "python3 computations/verify_ore_boundary.py --output research/ore_boundary_certificate.json",
       "result": "PASS",
       "scope": "Exact polynomial PBW overlaps, relation-space equivalence for both parities, rational tangent ranks 30/37/38/38/39."
+    },
+    {
+      "command": "python3 computations/verify_nine_closure_tangent.py --output research/nine_closure_certificate.json",
+      "result": "PASS",
+      "scope": "Executed locally against previous source-identical v10 module versions of pbw_complex, verify_algebraic_family, verify_elliptic_family; exact QQ ranks, parity split and Q restriction."
     }
   ],
   "certificate_comparison": "All 8 local v11 commands were executed and passed, including existing numerical checks and new Ore derivation verifier. No unrun mathematical check is claimed.",
   "tex": {
-    "engine": "LuaLaTeX/latexmk",
-    "result": "PASS_local_v14",
-    "documents": {
-      "paper": 32,
-      "plan": 6,
-      "notes": 7
-    },
-    "scope": "Local v14 source tree compiled. Exact remote bytes were validated structurally but not independently compiled after push."
+    "result": "partial_standalone_PASS_full_v15_not_run",
+    "engine": "LuaLaTeX",
+    "scope": "New Japanese TeX theorem section compiled in standalone ltjsarticle wrapper; full v15 manuscript build not rerun in this turn. v14 full source compiled in previous turn."
   },
   "visual_inspection": {
-    "result": "PASS_local",
-    "scope": "New theorem material around manuscript pages 29-31 visually checked; no clipping. Inadvertent literal extbf corrected in working source and GitHub theorem source contains \\textbf."
+    "result": "not_performed_for_full_v15",
+    "scope": "Standalone TeX syntax compiled; no full v15 visual inspection"
   },
   "not_claimed": [
     "formal verification",
@@ -109,7 +107,9 @@
     "Singularity of global coarse moduli or whole AS regular moduli stack",
     "That the two-dimensional nonOre image is a separate irreducible component",
     "Global moduli singularity or component dimension 14",
-    "Generic pointwise isomorphism between nonOre five-family and seven-family"
+    "Generic pointwise isomorphism between nonOre five-family and seven-family",
+    "Full v15 LuaLaTeX build or exhaustive proof audit this turn",
+    "A new irreducible component of dimension eleven"
   ],
   "new_results": {
     "intrinsic_2isogeny": "Proof written; polarized elliptic correspondence recovered at generic nine-family points",
@@ -117,7 +117,8 @@
     "modular_U": "Degree-four necessary indexed-isomorphism invariant and A4 Galois closure",
     "nonore_five": "All-parameter quadratic PBW standard AS4 chart, two-dimensional indexed image, o0 outside earlier Ore tangent span",
     "nonore_period_two": "Generic minimal period exactly two, from intrinsic line plus five points and projective nonisomorphism; image dimension two established by v12.",
-    "ore_boundary": "Entire five-family inside seven-family orbit-saturated closure, and 37-dimensional Grassmannian orbit closure singular at Clifford with tangent >=39."
+    "ore_boundary": "Entire five-family inside seven-family orbit-saturated closure, and 37-dimensional Grassmannian orbit closure singular at Clifford with tangent >=39.",
+    "nine_closure_singular": "dim Z9=39; at Clifford tangent >=41; codim Z7 in Z9=2; eleven separate algebraic curve tangents with obstruction lambda*c."
   },
   "verified_remote_blobs": {
     "nc-p3.tex": "16dabb0207261e8adc2ef2a2be4f38431bd699e3",

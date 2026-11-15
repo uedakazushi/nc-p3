@@ -1,4 +1,4 @@
-# 依存・一次文献・証明位置 — 2026-11-15 / v14
+# 依存・一次文献・証明位置 — 2026-11-15 / v15
 
 ## 現行プロジェクト
 
@@ -78,3 +78,9 @@
 
 - 主論文 `thm:nonore-in-seven-closure` および `thm:seven-closure-singular`（`sections/ore_boundary.tex`）。固定した三生成部分代数の選択を変えたOre表示と、平坦一変数退化を使う。全AS正則モジュライの成分最大性は未解決。
 - `computations/verify_ore_boundary.py` と `research/ore_boundary_certificate.json`：代替Ore表示の八つの三次重なり、全六関係の同型への変換、元の七変数族の正規形、Clifford点での軌道飽和閉包の厳密階数 `30,37,38,38,39` を記録。
+
+## 九変数族の軌道閉包の特異性
+
+- 証明：主論文 `thm:nine-closure-singular`, `prop:nine-closure-obstruction`（`sections/nine_closure.tex`）。七・九変数族の有限関係表示と、`thm:nonore-in-seven-closure` における二つの代数的退化に依存。
+- 厳密再現：`computations/verify_nine_closure_tangent.py`、証明書 `research/nine_closure_certificate.json`。有理数上の階数30,37,39,40,40,41、偶方向7・交代方向4と二次障害 `lambda*c` を検査。
+- 楕円Ore族の既約成分としての最大性や全AS正則moduliの特異性、新規性の最終確認をこの結果からは主張しない。

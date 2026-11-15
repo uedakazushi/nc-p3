@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の分類
 
-**2026-11-15 / v14。完全分類は未完成。正本は GitHub `main`。**
+**2026-11-15 / v15。完全分類は未完成。正本は GitHub `main`。**
 
 再開は [研究方針](research/plan_ja.tex) → [研究指示](AGENTS.md) → [研究ノート](research/notes_ja.tex) → [主論文](nc-p3.tex) の順。
 
@@ -28,11 +28,13 @@
 
 **閉包包含と特異性（今回）**：五変数族は三生成部分 `Z,W,X` を選べばOre型になる。`YW+WY=(-1)^i a ZX+d(Z^2+X^2/v^2)` の平坦な一変数変形は、`d=0`で五変数族、`d≠0`で七変数族に同型。従って二次元の同型類像は七変数族の軌道飽和閉包に含まれる。七変数族の位置0の関係空間の37次元軌道飽和閉包はClifford点で接次元39以上となり特異。証明 `thm:nonore-in-seven-closure`, `thm:seven-closure-singular`（`sections/ore_boundary.tex`）、検算 `computations/verify_ore_boundary.py`。全モジュライの成分性はなお未解決。
 
+**九変数族の軌道閉包の特異性（v15）**：位置0の関係空間の軌道飽和閉包 `Z9` は既約39次元で、`Z7 ⊂ Z9` は余次元2。Clifford点の接空間は41次元以上で、従って特異。九変数族自身の偶6＋交代3方向に、七変数族の境界退化由来の偶1・交代1方向を足した11方向が、個別の代数的一変数族の接方向として独立。ただし既知の二次障害はこの線型包上 `lambda*c` となるため、滑らかな11次元の同時変形族は構成できない。証明 `thm:nine-closure-singular`, `prop:nine-closure-obstruction`（`sections/nine_closure.tex`）、検証 `computations/verify_nine_closure_tangent.py`。
+
 九変数族は基点で偶6・交代3方向を積分する。**9次元の像が全モジュライの既約成分であるとは未主張**。14次元のClifford局所模型、残る方向の代数的積分、全1周期構造、全成分分類は未解決。具体的な九変数族と先行研究との最終的な新規性比較は未了。
 
 ## 次の課題
 
-**ALGEBRAIC-FAMILY-008**：九変数族の2-isogenyと12点因子から完全な同型判定を求める。非Ore五変数族の一般最小周期2は解決。七変数族への閉包包含は解決済み。七・九変数族の成分としての最大性を判定し、既知の閉包に属さない代数的変形を探す。全モジュライの既約成分と14次元Clifford局所模型は未決定。
+**ALGEBRAIC-FAMILY-008**：九変数族の2-isogenyと12点因子から完全な同型判定を求める。非Ore五変数族の一般最小周期2は解決。七変数族への閉包包含は解決済み。九変数族の軌道飽和閉包も特異であると分かったので、二次障害の許す未実現方向に対し既存閉包外の代数的変形を探し、七・九変数族の成分最大性と全モジュライの既約成分を判定する。全モジュライの既約成分と14次元Clifford局所模型は未決定。
 
 ## 再現
 
@@ -49,6 +51,7 @@ python3 computations/verify_isogeny_invariant.py --output research/isogeny_certi
 python3 computations/verify_nonore_family.py --output research/nonore_certificate.json
 python3 computations/verify_nonore_point_geometry.py --output research/nonore_point_certificate.json
 python3 computations/verify_ore_boundary.py --output research/ore_boundary_certificate.json
+python3 computations/verify_nine_closure_tangent.py --output research/nine_closure_certificate.json
 python3 computations/verify_third_order_samples.py
 latexmk nc-p3.tex
 latexmk research/plan_ja.tex

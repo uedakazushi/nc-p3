@@ -1,4 +1,4 @@
-# Codex起動指示 — nc-p3 / 2026-11-15 / v14
+# Codex起動指示 — nc-p3 / 2026-11-15 / v15
 
 `uedakazushi/nc-p3` の `main` を確認し、研究方針 → AGENTS → STATE → 主論文 → 研究ノート → BASELINE の順に読む。主論文は `nc-p3.tex`、九変数族の節は `sections/elliptic_ore_family.tex`。
 
@@ -8,6 +8,8 @@
 
 偶6＋交代3方向の積分から全15方向や14次元成分を宣言しない。`1+t*h != 0` の条件を保ち、一般のt,hで元の関係が二次Gröbner基底だと仮定しない。形式的障害計算は候補選別の補助手段とする。
 
-`sections/isogeny_invariant.tex`（内在的2-isogeny、次数4の同型必要不変量）と`sections/nonore_family.tex`（全ファイバーAS正則な五変数族、像の次元2、別の交代接方向）を読む。非Ore族の一般周期2は`sections/nonore_period_two.tex`で証明済み。新たな厳密検算は`computations/verify_nonore_point_geometry.py`。五変数族は七変数族の閉包に入ることが証明済みで、七変数族の軌道飽和閉包はClifford点で特異。証明 `sections/ore_boundary.tex`、厳密検算 `computations/verify_ore_boundary.py`。今後は閉包外の代数的変形と七・九変数族の成分最大性を調べる。
+`sections/isogeny_invariant.tex`（内在的2-isogeny、次数4の同型必要不変量）と`sections/nonore_family.tex`（全ファイバーAS正則な五変数族、像の次元2、別の交代接方向）を読む。非Ore族の一般周期2は`sections/nonore_period_two.tex`で証明済み。新たな厳密検算は`computations/verify_nonore_point_geometry.py`。九変数の軌道飽和閉包もClifford点で特異：次元39に対して接空間41以上、境界退化を含め偶7・交代4の個別に代数的積分可能な11方向を確保。ただし二次障害`lambda*c`によって滑らかな11方向同時積分は不可能。証明は`sections/nine_closure.tex`、計算は`computations/verify_nine_closure_tangent.py`。接空間次元と新成分の次元を混同しない。
+
+五変数族は七変数族の閉包に入ることが証明済みで、七変数族の軌道飽和閉包はClifford点で特異。証明 `sections/ore_boundary.tex`、厳密検算 `computations/verify_ore_boundary.py`。今後は閉包外の代数的変形と七・九変数族の成分最大性を調べる。
 
 READMEの検証を実行し、成功したものだけをPASSにする。証明・ノート・方針・STATEを現行内容へ統合してmainへ通常fast-forwardでpushし、遠隔を読み戻す。PR・force push・GitHub Actions・無断のas4書込みをしない。PDFとキャッシュはGitで追跡しない。GitHubへのpushが成功した場合はLibraryに保存しない。

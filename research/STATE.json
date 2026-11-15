@@ -2,10 +2,10 @@
   "schema_version": 2,
   "project_id": "nc-p3",
   "date": "2026-11-15",
-  "version": 14,
+  "version": 15,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
-  "remote_base_commit": "439c708e66a08a97a4daa199c04eccd953eef48e",
+  "remote_base_commit": "85108b4327d7c2edf049fb57cc52c9cfb64bbd86",
   "delivery_status": "see research/validation.json for separately verified generation, execution and remote save",
   "scope": {
     "target": "standard 14641 quadratic Koszul left/right AS-regular indexed Z-algebras over algebraically closed char 0",
@@ -19,7 +19,7 @@
       "id": "ALGEBRAIC-FAMILY-008",
       "priority": 1,
       "status": "active",
-      "objective": "Determine component maximality and closures of the seven- and nine-dimensional Ore images, and construct algebraic deformations outside these closures; sharpen indexed isomorphism using elliptic/isogeny point configurations."
+      "objective": "Find explicit algebraic curves and families outside the singular nine-family orbit-saturated closure, characterize its tangent cone and component maximality; classify indexed isomorphism using intrinsic elliptic 2-isogeny and twelve-point configurations."
     },
     {
       "id": "MODULI-HIGHER-006",
@@ -250,6 +250,18 @@
       "claim": "The orbit-saturated 37-dimensional Grassmannian image closure of the seven-family is singular at the Clifford point, with tangent dimension at least 39.",
       "proof": "nc-p3.tex:thm:seven-closure-singular",
       "status": "proved_with_exact_rational_rank_certificate"
+    },
+    {
+      "id": "NINE-CLOSURE-SINGULAR",
+      "claim": "The nine-parameter elliptic Ore family has irreducible orbit-saturated relation-space closure Z9 of dimension 39, containing Z7 in codimension two; tangent space at Clifford is at least 41, hence Z9 singular.",
+      "proof": "nc-p3.tex:thm:nine-closure-singular",
+      "status": "proof_written_with_exact_rational_rank_certificate"
+    },
+    {
+      "id": "NINE-CURVE-OBSTRUCTION",
+      "claim": "Nine family plus two boundary degenerations span eleven individually algebraically integrable first-order classes, seven even and four odd, but their Clifford quadratic obstruction restricts to lambda*c, ruling out a smooth eleven-parameter simultaneous family with that tangent image.",
+      "proof": "nc-p3.tex:prop:nine-closure-obstruction",
+      "status": "proof_from_existing_Q_and_new_exact_rank_certificate"
     }
   ],
   "document_paths": {
@@ -274,7 +286,9 @@
     "nonore_period_section": "sections/nonore_period_two.tex",
     "nonore_point_certificate": "research/nonore_point_certificate.json",
     "ore_boundary_section": "sections/ore_boundary.tex",
-    "ore_boundary_certificate": "research/ore_boundary_certificate.json"
+    "ore_boundary_certificate": "research/ore_boundary_certificate.json",
+    "nine_closure_section": "sections/nine_closure.tex",
+    "nine_closure_certificate": "research/nine_closure_certificate.json"
   },
   "unresolved_cautions": [
     "No proof of dimension 14 for the Clifford component.",
@@ -289,6 +303,7 @@
     "Ore completeness only for fixed ternary Clifford B and the specified signed Ore form.",
     "Equal J(th) values are necessary but not sufficient for indexed isomorphism.",
     "Equality of U(th) is only a necessary indexed-isomorphism condition, not sufficient.",
-    "The nonOre two-dimensional image is in the seven-dimensional Ore image closure. This does not establish a separate component, a global moduli singularity, or generic fiber isomorphism."
+    "The nonOre two-dimensional image is in the seven-dimensional Ore image closure. This does not establish a separate component, a global moduli singularity, or generic fiber isomorphism.",
+    "Even seven plus odd four algebraic curve tangents do not imply an eleven-dimensional smooth simultaneous family: Q restricted is lambda*c."
   ]
 }
