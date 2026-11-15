@@ -1,63 +1,58 @@
 #!/usr/bin/env python3
-"""Static self-consistency checks for the nc-p3 research project (no network)."""
+"""Offline structural checks; not a mathematical proof or a TeX compile."""
 from pathlib import Path
 import json
 import re
 import sys
 
-ROOT = Path(__file__).resolve().parents[1]
-REQUIRED = [
-    "README.md", "AGENTS.md", "START_CODEX_ja.md",
-    "research/plan_ja.tex", "research/notes_ja.tex",
-    "research/BASELINE.md", "research/STATE.json",
-    "nc-p3.tex", ".latexmkrc", ".gitignore",
-]
-errors = []
-for rel in REQUIRED:
-    if not (ROOT / rel).is_file():
-        errors.append("missing: " + rel)
-
-state_path = ROOT / "research/STATE.json"
-if state_path.exists():
-    state = json.loads(state_path.read_text(encoding="utf-8"))
-    if state.get("next_task_id") != "Z4-WINDOW-001":
-        errors.append("Unexpected next task; synchronize instructions")
-    for path in state.get("document_paths", {}).values():
-        if not (ROOT / path).exists():
-            errors.append("Broken document path: " + path)
-    if len({task["id"] for task in state["tasks"]}) != len(state["tasks"]):
-        errors.append("Duplicate task ID")
-
-labels = []
-for rel in ["nc-p3.tex", "research/plan_ja.tex", "research/notes_ja.tex"]:
-    path = ROOT / rel
-    if not path.exists():
-        continue
-    source = path.read_text(encoding="utf-8")
-    depth = 0
-    for line in source.splitlines():
-        # TeX comment stripping, approximate but catches accidental brace loss
-        line = re.split(r"(?<!\\)%", line, maxsplit=1)[0]
-        for char in re.findall(r"(?<!\\)[{}]", line):
-            depth += 1 if char == "{" else -1
-            if depth < 0:
-                errors.append("Closing brace without open: " + rel)
-                depth = 0
-    if depth:
-        errors.append("Unbalanced curly braces: " + rel)
-    labels += re.findall(r"\\label\{([^}]+)\}", source)
-    envs = ["theorem", "lemma", "proposition", "corollary", "proof", "remark", "definition", "document", "abstract"]
-    for env in envs:
-        if source.count(r"\begin{" + env + "}") != source.count(r"\end{" + env + "}"):
-            errors.append("Unbalanced TeX environment " + env + ": " + rel)
-if len(labels) != len(set(labels)):
-    errors.append("Duplicate TeX labels")
-
-if (ROOT / ".github" / "workflows").exists():
-    errors.append("GitHub Actions not allowed")
+ROOT=Path(__file__).resolve().parents[1]
+required=['README.md','AGENTS.md','START_CODEX_ja.md','nc-p3.tex',
+          'research/plan_ja.tex','research/notes_ja.tex','research/BASELINE.md',
+          'research/STATE.json','research/validation.json','research/moduli_certificate.json',
+          '.latexmkrc','.gitignore','.vscode/settings.json','requirements.txt',
+          'computations/pbw_complex.py','computations/verify_moduli_jets.py',
+          'computations/verify_exterior_trace.py','computations/verify_period_witness.py',
+          'computations/verify_third_order_samples.py',
+          'computations/verify_algebraic_family.py','research/algebraic_family_certificate.json']
+errors=[]
+for name in required:
+    if not (ROOT/name).is_file():errors.append('missing '+name)
+state=json.loads((ROOT/'research/STATE.json').read_text())
+for path in state['document_paths'].values():
+    if not (ROOT/path).is_file():errors.append('broken document path '+path)
+ids=[x['id'] for x in state['tasks']]
+if len(ids)!=len(set(ids)):errors.append('duplicate task id')
+if state['next_task_id'] not in ids:errors.append('next task not present')
+for path in ROOT.rglob('*.json'):
+    if 'build' not in path.parts:json.loads(path.read_text())
+labels=set()
+for name in ['nc-p3.tex','research/plan_ja.tex','research/notes_ja.tex']:
+    source=(ROOT/name).read_text()
+    clean='\n'.join(re.split(r'(?<!\\)%',line,maxsplit=1)[0] for line in source.splitlines())
+    depth=0
+    for ch in re.findall(r'(?<!\\)[{}]',clean):
+        depth+=1 if ch=='{' else -1
+        if depth<0:errors.append('closing brace without open '+name);depth=0
+    if depth:errors.append('unbalanced braces '+name)
+    stack=[]
+    for op,env in re.findall(r'\\(begin|end)\{([^}]+)\}',clean):
+        if op=='begin':stack.append(env)
+        elif not stack or stack.pop()!=env:errors.append('environment mismatch '+name)
+    if stack:errors.append('unclosed environment '+name)
+    labs=re.findall(r'\\label\{([^}]+)\}',clean)
+    if len(labs)!=len(set(labs)):errors.append('duplicate label '+name)
+    for key in re.findall(r'\\(?:eqref|ref)\{([^}]+)\}',clean):
+        if key not in labs:errors.append('unresolved ref '+name+':'+key)
+    bib=set(re.findall(r'\\bibitem\{([^}]+)\}',clean))
+    for entry in re.findall(r'\\cite(?:\[[^]]*\])?\{([^}]+)\}',clean):
+        for key in entry.split(','):
+            if key.strip() not in bib:errors.append('unresolved citation '+name+':'+key)
+    if name=='nc-p3.tex':labels=set(labs)
+for result in state['mathematical_results']:
+    if result.get('proof','').startswith('nc-p3.tex:'):
+        if result['proof'].split(':',1)[1] not in labels:errors.append('broken proof reference '+result['id'])
+if (ROOT/'.github/workflows').exists():errors.append('GitHub Actions forbidden')
 if errors:
-    for err in errors:
-        print("FAIL:", err)
-    sys.exit(1)
-print("PASS: nc-p3 file presence, paths, state, TeX structure (static only)")
-print("NOTE: this does not compile TeX or prove any mathematical theorem.")
+    print('\n'.join('FAIL: '+x for x in errors));sys.exit(1)
+print('PASS: current paths, JSON, task ids, proof labels, citations, TeX braces/environments.')
+print('NOTE: this is not a compile, formal proof, or verification of higher-order obstructions.')

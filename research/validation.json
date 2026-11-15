@@ -1,47 +1,88 @@
 {
   "date": "2026-11-15",
-  "version": 4,
-  "scope": "nc-p3: classification of noncommutative projective three-spaces via standard 14641 quadratic AS-regular Z-algebras; repository rename",
-  "canonical": "github:uedakazushi/nc-p3/main",
-  "files_read_back": 15,
+  "version": 9,
+  "generated": "local_sources_and_calculation_certificate",
+  "verification_status": "PASS_with_explicit_scope_limits",
+  "github_save": {
+    "status": "pending",
+    "base_commit": "c387e8ceb8f1a3ca48e05d28d01c00aad69d4038"
+  },
+  "library_save": {
+    "status": "not_performed",
+    "reason": "GitHub main is the target; no Library save after successful push"
+  },
+  "not_claimed": [
+    "formal verification",
+    "independent peer review",
+    "full higher-order Clifford equations",
+    "full component classification",
+    "all original as4 computations rerun"
+  ],
   "static_checks": {
-    "result": "NOT_RERUN",
-    "details": [
-      "Prior 2026-11-12 checks refer to old ASZ4 tree and are historical; not revalidated in this renaming operation",
-      "Renamed paths and JSON references prepared for new main commit"
-    ]
+    "result": "PASS",
+    "command": "python3 scripts/check_project.py",
+    "scope": "file presence, JSON, task ids, manuscript labels and citations, TeX brace/environment structure"
   },
   "computations": [
     {
       "path": "computations/verify_exterior_trace.py",
-      "git_blob": "9b405622b981535de5450c4bfaa80c275121d3d8",
       "result": "PASS",
-      "scope": "four-vertex exterior dual trace pairing and arbitrary rational rescaling formula",
-      "environment": "Python 3, stdlib Fraction, local exact script bytes match GitHub blob"
+      "arithmetic": "Fraction",
+      "scope": "four-vertex exterior trace signs and trace rescaling"
     },
     {
       "path": "computations/verify_period_witness.py",
-      "git_blob": "65ce96907baff0daf764688e76874be2e8d9e81c",
       "result": "PASS",
-      "scope": "four period-2 PBW relation ranks, p2 identity witness, p1 commutative identity witness, lambda -> -lambda index shift; FAILURE of identity p1 witness is not proof of nonexistence",
-      "environment": "Python 3, stdlib Fraction, local exact script bytes match GitHub blob"
+      "arithmetic": "Fraction",
+      "scope": "positive period witnesses and shift-sign identity, not nonexistence of other witnesses"
+    },
+    {
+      "path": "computations/verify_moduli_jets.py",
+      "result": "PASS",
+      "arithmetic": "QQ and QQ(i)",
+      "scope": "quantum and Clifford Fourier ranks, full 15-variable quadratic obstruction, symbolic PBW axes, lambda=1,2 periodic tangent ranks"
+    },
+    {
+      "path": "computations/verify_third_order_samples.py",
+      "result": "PASS",
+      "arithmetic": "QQ",
+      "scope": "only the three listed isotropic directions; no universal or all-order conclusion"
+    },
+    {
+      "path": "computations/verify_algebraic_family.py",
+      "result": "PASS",
+      "arithmetic": "QQ[u,v,r,s,a,b,c] and QQ",
+      "scope": "all 8 polynomial overlaps, decreasing weights, exact ranks 30 and 37, isotropic plane coordinates, rational point configurations and unique conic checks"
     }
   ],
-  "theorem_proof_status": "mathematical proofs written in nc-p3.tex; logical checks performed but independent refereeing and formal verification not claimed",
-  "not_executed": [
-    "LuaLaTeX/latexmk compile of complete GitHub source tree (local runtime cannot clone GitHub)",
-    "scripts/check_project.py in a cloned repository",
-    "as4 periodicity code rerun in this work unit",
-    "any symbolic elimination over the complete 212-variable polynomial systems",
-    "full AS-regularity/Koszul sufficiency conditions for arbitrary four windows",
-    "independent peer review and formal verification",
-    "2026-11-15 latexmk compilation after rename",
-    "2026-11-15 scripts/check_project.py execution after rename"
-  ],
-  "open_obligations": [
-    "Koszul exactness and all-fiber AS-regular sufficiency for four-window data",
-    "eliminate 212-variable isomorphism equations in actual families and prove full orbit classification",
-    "relative-family and moduli-stack descent of Frobenius normalization",
-    "global moduli irreducible components and full exhaustiveness"
-  ]
+  "tex": {
+    "engine": "LuaHBTeX / LuaLaTeX, TeX Live 2025 Debian",
+    "command": "latexmk -lualatex -interaction=nonstopmode -halt-on-error nc-p3.tex research/plan_ja.tex research/notes_ja.tex",
+    "result": "PASS",
+    "documents": {
+      "paper": 16,
+      "plan": 4,
+      "notes": 5
+    },
+    "undefined_refs_or_citations": false,
+    "overfull_boxes": false,
+    "notes": "Non-fatal Japanese italic font substitution and legacy font-command warnings; no missing glyphs detected."
+  },
+  "visual_inspection": {
+    "result": "PASS",
+    "scope": "main paper pages 13 and 15 rendered and inspected; no clipping or overflow"
+  },
+  "zip_integrity": "pending",
+  "source_hashes": {
+    "computations/pbw_complex.py": "d2d3ccb71192a4ecfa549ed6ec6af49715db88821d8e48372275529346accf89",
+    "computations/verify_algebraic_family.py": "dff74dd1d0756dc4bf6d868f597c0d7bb5d242a6e2fa32525c80db035d3b8376",
+    "computations/verify_exterior_trace.py": "28abfb5914086e48547b63481305847548299cff9f5bd2f7580ebe3c914ae5e5",
+    "computations/verify_moduli_jets.py": "39e6ae7ef2259c109145a85b44fd0e72ae653d10106e8e3f89c4d46e61fcc878",
+    "computations/verify_period_witness.py": "8b2e2446732358fbc6a0edbf8dbc841bd0d7647ffa6e18d766d3d3a11024bbc0",
+    "computations/verify_third_order_samples.py": "f4ff61b3645c12ddfb395469c15a789c733e9ed02c7378dff644c87c7d734314",
+    "nc-p3.tex": "7c88fafbe94cdbfd1f3c9fc675aabd48525b8d01ac34e97fb6fab433b32e29c2",
+    "research/notes_ja.tex": "c32870f95760c74eec98ea9da064eed1770cfaafffe45f697c386d61a83dbd69",
+    "research/plan_ja.tex": "a0eddf759b40afc9c528c342b56a7bc8533c27c726802c297d38bf1235206f54",
+    "scripts/check_project.py": "e2c7dccf695b1862ffea8ce1c870820cefd4629c5f5cd62e58a677c421641d9d"
+  }
 }

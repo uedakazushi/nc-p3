@@ -48,14 +48,13 @@ def verify():
         assert p0 == [[int(r == c) for c in range(DEG)] for r in range(DEG)]
         assert q0 == [[-int(r == c) for c in range(DEG)] for r in range(DEG)]
         assert transpose(p1) == q1, f"canonical trace identity fails at {i}"
-        unnormalized.append(-1)   # Q0^-1 P0^T
-        normalized.append(1)      # Q1^-1 P1^T
-    # An arbitrary periodic rescaling t_i changes the Nakayama matrix by t_i/t_{i+1}.
+        unnormalized.append(-1)
+        normalized.append(1)
     t = [Fraction(2), Fraction(3), Fraction(5), Fraction(7)]
     altered_eigenvalues = []
     for i in range(4):
         p, q = matrix(i, t)
-        assert p[i % DEG]  # actual matrices were constructed, not floating point
+        assert p[i % DEG]
         eigen = -t[i] / t[(i + 1) % 4]
         assert all(p[a][b] == (eigen * q[b][a]) for a in range(DEG) for b in range(DEG))
         altered_eigenvalues.append(str(eigen))

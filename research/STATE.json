@@ -1,170 +1,201 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "project_id": "nc-p3",
   "date": "2026-11-15",
-  "version": 4,
+  "version": 9,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
-  "field": "algebraically closed char 0",
+  "remote_base_commit": "c387e8ceb8f1a3ca48e05d28d01c00aad69d4038",
+  "delivery_status": "generation_and_validation_complete; remote_save_status_in_research/validation.json",
   "scope": {
-    "target": "positive locally finite connected quadratic Koszul AS-regular indexed Z-algebras of standard 14641 type; 4 generators and 6 quadratic relations at every index",
-    "equivalence": "index-preserving Z-algebra isomorphism; not graded isomorphism, marked-period isomorphism, qgr or derived equivalence",
+    "target": "standard 14641 quadratic Koszul left/right AS-regular indexed Z-algebras over algebraically closed char 0",
+    "equivalence": "index-preserving Z-algebra isomorphism; graded and selected-period isomorphism are separate comparison problems",
     "additional_global_assumptions": [],
-    "boundary": "whether every four-dimensional quadratic AS-regular Z-algebra lies in the standard 14641 framework is not assumed",
-    "project_description": "Noncommutative projective three-space via standard 14641 quadratic AS-regular indexed Z-algebras; current classification results and open moduli problems"
+    "boundary": "not assuming every quadratic AS4 algebra has the standard numerical type"
   },
-  "mathematical_results": [
-    {
-      "id": "R1",
-      "claim": "For the standard 14641 class, C≅C(4); p∈{1,2,4}",
-      "status": "existing_manuscript_proof_not_independently_audited_here",
-      "source": "uedakazushi/as4:research/z_periodicity/papers/as4_z_periodicity_ja.tex",
-      "blob_sha": "cc475fae425a23a02fd8559e403ad2ec375302f3"
-    },
-    {
-      "id": "R2",
-      "claim": "Exist period-2 and period-4 AS-regular Z-algebras and a flat family with period-1 special and generic period 2",
-      "status": "existing_manuscript_plus_finite_exact_code_not_rerun_here",
-      "source": "uedakazushi/as4:research/z_periodicity/"
-    },
-    {
-      "id": "R3",
-      "claim": "Marked 4-periodic quadratic Z-algebra presentations with dim V=4 dim R=6 are equivalent to four Grassmannian factors modulo GL4^4",
-      "status": "proof_written_not_externally_refereed",
-      "proof": "nc-p3.tex:thm:four-window"
-    },
-    {
-      "id": "R4",
-      "claim": "Periodic shift s iff all integer-index degree-one isomorphisms preserve R_i; no periodicity of the gauge relative to a chosen tau4 assumed",
-      "status": "proof_written",
-      "proof": "nc-p3.tex:prop:period-relations"
-    },
-    {
-      "id": "R5",
-      "claim": "1-periodic Z-algebras with selected isomorphism correspond to graded algebras; forgetting yields coarser equivalence",
-      "status": "proof_written_with_existing_twist_literature",
-      "proof": "nc-p3.tex:prop:graded-period"
-    },
-    {
-      "id": "R6",
-      "claim": "For p=1 or 2, a chosen 4-period sigma4 equal to a (4/p)-power of a p-period induces compatible p-periodic diagonal four-window data, and conversely",
-      "status": "proof_written_not_externally_refereed",
-      "proof": "nc-p3.tex:prop:compatible-periodic-windows"
-    },
-    {
-      "id": "R7",
-      "claim": "Frobenius/Nakayama 4-periodicity on the quadratic dual from any two top traces differs by diagonal vertex conjugacy; canonical-marked and unmarked standard nc-p3 objects have the same geometric isomorphism classes",
-      "status": "proved_in_manuscript_not_externally_refereed",
-      "proof": "nc-p3.tex:thm:canonical-four and cor:canonical-slice",
-      "dependence": "local Koszul-Frobenius duality"
-    },
-    {
-      "id": "R8",
-      "claim": "On the canonical four-window, canonical marking is equivalent to four trace-pairing matrix equalities P_i^T=Q_i with nonzero traces",
-      "status": "proved_in_manuscript",
-      "proof": "nc-p3.tex:prop:canonical-matrix"
-    },
-    {
-      "id": "R9",
-      "claim": "Frobenius property of quadratic dual in strict four-window can be certified from degrees 0..5 and complementary multiplication pairing ranks, not sufficient for Koszulity",
-      "status": "proved_finite_criterion_only",
-      "proof": "nc-p3.tex:prop:finite-frobenius"
-    },
-    {
-      "id": "R10",
-      "claim": "For canonical Frobenius four-window, an unmarked period p exists iff 4 invertible maps g_i satisfy (g_i⊗g_{i+1})R_i=R_{i+p}; hence periods 1/2/4 are finite orbital solvability tests",
-      "status": "proved_in_manuscript",
-      "proof": "nc-p3.tex:thm:finite-period-test and cor:period-orbits"
-    },
-    {
-      "id": "R11",
-      "claim": "A(lambda)(1)=A(-lambda) strictly, while A(lambda) is not isomorphic to A(-lambda) for every parameter with minimal period 2 (in particular lambda=1)",
-      "status": "proved_using_existing_as4_non1_periodicity",
-      "proof": "nc-p3.tex:prop:period-two-sign"
-    },
-    {
-      "id": "R12",
-      "claim": "Polynomial 4-space exterior dual trace alternating (-1)^i normalizes Nakayama to strict period4; exact Python check passed",
-      "status": "worked_example_computed_exactly",
-      "proof": "research/notes_ja.tex",
-      "code": "computations/verify_exterior_trace.py",
-      "verification": "local file hash matched GitHub Git blob sha 9b405622b981535de5450c4bfaa80c275121d3d8"
-    },
-    {
-      "id": "R13",
-      "claim": "The p=1,2 periodicity condition on canonical four-window is equivalently 384 polynomial matrix equations plus 4 determinant invertibility equations in 212 unknowns (4 g_i, 4 h_i, 4 scalar inverses)",
-      "status": "proved_in_manuscript",
-      "proof": "nc-p3.tex:prop:period-polynomial-system",
-      "code": "computations/verify_period_witness.py",
-      "computation": "local exact positive-witness and shift-sign checks PASS; executed source matches Git blob 65ce96907baff0daf764688e76874be2e8d9e81c"
-    },
-    {
-      "id": "R14",
-      "claim": "Any two known standard AS-regular Z-algebras, represented by Frobenius-canonical four-window matrices, are index-preserving isomorphic iff a finite polynomial system of 212 unknowns and 388 equations has a solution",
-      "status": "proved_in_manuscript_point_level",
-      "proof": "nc-p3.tex:cor:finite-isom-test",
-      "limitations": "Does not classify all AS-regular points or make the polynomial system computationally easy"
-    }
-  ],
-  "next_task_id": "Z4-AS-004",
+  "next_task_id": "ALGEBRAIC-FAMILY-008",
   "tasks": [
     {
-      "id": "Z4-AS-004",
+      "id": "ALGEBRAIC-FAMILY-008",
       "priority": 1,
-      "status": "in_progress",
-      "objective": "Classify locus of Koszul AS-regular relations inside four-window; Frobenius ranks finite (R9), but Koszul exactness and all boundary fibers need proof",
-      "dependency": "R3,R9"
+      "status": "active",
+      "objective": "Extend the actual seven-parameter algebraic AS-regular family using varying three-generator subalgebras or new PBW charts; determine isomorphisms and component closures."
+    },
+    {
+      "id": "MODULI-HIGHER-006",
+      "priority": 2,
+      "status": "open",
+      "objective": "Use quadratic/higher obstructions to select algebraic-family candidates; higher formal equations remain open."
+    },
+    {
+      "id": "PERIOD-ROOTS-007",
+      "priority": 3,
+      "status": "open",
+      "objective": "Classify the finite projective automorphism group and all one-period structures at the Clifford point."
+    },
+    {
+      "id": "Z4-AS-004",
+      "priority": 4,
+      "status": "open",
+      "objective": "Necessary and sufficient global Koszul/AS conditions on four windows, all special fibers, non-PBW cases and exhaustive charts."
     },
     {
       "id": "PERIOD-STRATA-003",
-      "priority": 2,
-      "status": "finite_test_proved_parameter_classification_pending",
-      "objective": "Apply finite 4-matrix orbit condition on canonical locus to period1/2/4 and classify special coefficients, family-wise isomorphisms and component relations",
-      "dependency": "R10"
-    },
-    {
-      "id": "Z4-WINDOW-001",
-      "priority": 3,
-      "status": "structural_phase_completed",
-      "objective": "Proved 4-window quadratic marked groupoid and canonical Frobenius normalization on geometric classes; full AS-locus transferred to Z4-AS-004",
-      "done_when": "marked quadratic 4-window groupoid; canonical Frobenius normalization; concrete finite matrix and period criterion (completed at theorem level)"
+      "priority": 5,
+      "status": "open",
+      "objective": "Classify period strata and isomorphism conditions in existing two/four-period families."
     },
     {
       "id": "Z4-FORGET-002",
-      "priority": 4,
-      "status": "point_level_completed_stack_pending",
-      "objective": "Canonical-marked vs unmarked geometric isomorphism classes proved equivalent; relative families/stack and descent remain unresolved",
-      "dependency": "R7"
+      "priority": 6,
+      "status": "point_level_solved_global_stack_open",
+      "objective": "Global relative descent and stack comparison beyond the local Artin result."
     },
     {
       "id": "GLOBAL-005",
-      "priority": 5,
-      "status": "planned",
-      "objective": "Prove exhaustiveness, family-wise and between-family isomorphism tests, irreducible components and specialization",
-      "dependency": "Z4-AS-004,Z4-FORGET-002,PERIOD-STRATA-003"
+      "priority": 7,
+      "status": "open",
+      "objective": "All components, dimensions, degenerations and exhaustive classification."
     }
   ],
-  "validation": {
-    "github_commit_source": "Repository nc-p3 sources inspected; rename and reference migration on main; prior mathematical computations not rerun",
-    "static_structure": "Historical 2026-11-12 ASZ4 checks only; current rename validation is limited to structural consistency and remote readback",
-    "python_checker_execution": "not_run_for_2026-11-15_rename",
-    "latexmk_compilation": "not_run_for_2026-11-15_rename",
-    "as4_periodicity_code_rerun": "not_run",
-    "formal_proof": "not_done",
-    "independent_peer_review": "not_done",
-    "citation_reference_added": "Sierra publication data verified at University of Edinburgh record; as4 primary theorem assumptions need article-level review",
-    "new_exterior_python": "PASS exact rational computation: 4 vertices; Git blob sha 9b405622b981535de5450c4bfaa80c275121d3d8 matches executed bytes",
-    "new_period_witness_python": "PASS exact Fraction: relation ranks (6,6,6,6), A(1) identity period2, polynomial ring identity period1, shift-sign identity; identity fails for p1 at A(1) (not proof of absence), Git blob 65ce96907baff0daf764688e76874be2e8d9e81c matched executed bytes"
-  },
+  "mathematical_results": [
+    {
+      "id": "PERIOD4",
+      "claim": "Standard 14641 objects have canonical Frobenius 4-periodicity; geometric isomorphism classes do not depend on the trace choice.",
+      "proof": "nc-p3.tex:thm:canonical-four",
+      "status": "proof_written"
+    },
+    {
+      "id": "FOUR-WINDOW",
+      "claim": "Marked four-periodic quadratic presentations form the four-window GL4^4 action groupoid.",
+      "proof": "nc-p3.tex:thm:four-window",
+      "status": "proof_written"
+    },
+    {
+      "id": "CANONICAL-MATRIX",
+      "claim": "Canonical marking is P_i^T=Q_i with suitable traces.",
+      "proof": "nc-p3.tex:prop:canonical-matrix",
+      "status": "proof_written"
+    },
+    {
+      "id": "FINITE-FROBENIUS",
+      "claim": "Frobenius can be checked in degrees 0..5; this alone does not imply Koszulity.",
+      "proof": "nc-p3.tex:prop:finite-frobenius",
+      "status": "proof_written"
+    },
+    {
+      "id": "FINITE-PERIOD",
+      "claim": "Unmarked periods on canonical four windows are finite relation-space solvability conditions.",
+      "proof": "nc-p3.tex:thm:finite-period-test",
+      "status": "proof_written"
+    },
+    {
+      "id": "POLYNOMIAL-SYSTEM",
+      "claim": "Period conditions have 212 variables and 388 equations.",
+      "proof": "nc-p3.tex:prop:period-polynomial-system",
+      "status": "proof_written"
+    },
+    {
+      "id": "FINITE-ISOM",
+      "claim": "The same finite format tests indexed isomorphism of two certified standard AS objects.",
+      "proof": "nc-p3.tex:cor:finite-isom-test",
+      "status": "proof_written"
+    },
+    {
+      "id": "GRADED-MARKING",
+      "claim": "A selected one-period structure corresponds to a graded presentation.",
+      "proof": "nc-p3.tex:prop:graded-period",
+      "status": "proof_written"
+    },
+    {
+      "id": "COMPATIBLE-PERIOD",
+      "claim": "Compatible roots of a selected period-four structure give diagonal periodic windows.",
+      "proof": "nc-p3.tex:prop:compatible-periodic-windows",
+      "status": "proof_written"
+    },
+    {
+      "id": "SIGN-SHIFT",
+      "claim": "A(lambda)(1)=A(-lambda); minimal period two implies indexed nonisomorphism.",
+      "proof": "nc-p3.tex:prop:period-two-sign",
+      "status": "proof_written_using_external_period_two_example"
+    },
+    {
+      "id": "RELATIVE-FOUR",
+      "claim": "Flat quadratic Artin deformations of the standard class are relative Koszul-Frobenius and admit canonical four-periodic coordinates.",
+      "proof": "nc-p3.tex:lem:relative-four",
+      "status": "proof_written_audited_here_not_formalized"
+    },
+    {
+      "id": "QUANTUM-ORBITS",
+      "claim": "Generic quantum graded isomorphism parameters have dimension six; indexed Z isomorphism parameters have dimension three.",
+      "proof": "nc-p3.tex:thm:quantum-orbits",
+      "status": "proof_written_not_novelty_claim"
+    },
+    {
+      "id": "QUANTUM-LOCAL",
+      "claim": "Generic quantum local deformations are exhausted by the quantum family; local component dimensions are six and three for the two equivalence relations.",
+      "proof": "nc-p3.tex:thm:quantum-local",
+      "status": "proof_written_with_exact_finite_rank_verification"
+    },
+    {
+      "id": "CLIFFORD-TANGENT",
+      "claim": "At the chosen Clifford point the graded deformation tangent is 9 and the indexed Z deformation tangent is 15; the specific forgetful differential has cokernel 6.",
+      "proof": "nc-p3.tex:thm:clifford-tangent",
+      "status": "proof_written_with_exact_finite_rank_verification"
+    },
+    {
+      "id": "CLIFFORD-QUADRATIC",
+      "claim": "All fifteen-variable quadratic obstructions span Q=o0*o5+o1*o2-o2*o3+o3*o4, of rank six.",
+      "proof": "nc-p3.tex:thm:clifford-quadratic",
+      "status": "computer_assisted_proof_exact_QQ_not_formal_verification"
+    },
+    {
+      "id": "TWO-AXES",
+      "claim": "The two indicated alternating axes are exact PBW families; the mixed tangent has obstruction ab.",
+      "proof": "nc-p3.tex:prop:two-axes",
+      "status": "proof_written_with_polynomial_overlap_verification"
+    },
+    {
+      "id": "CLIFFORD-HULL",
+      "claim": "The full Clifford deformation ring is the 14-dimensional hypersurface suggested by Q.",
+      "proof": "nc-p3.tex:conj:clifford-model",
+      "status": "conjecture_only_two_jet_verified"
+    },
+    {
+      "id": "ALGEBRAIC-SEVEN",
+      "claim": "Polynomial PBW family over A7; every geometric fiber is standard 14641 AS-regular.",
+      "proof": "nc-p3.tex:thm:algebraic-seven",
+      "status": "proof_written_and_polynomial_overlaps_verified"
+    },
+    {
+      "id": "SEVEN-IMAGE",
+      "claim": "The indexed isomorphism-class image has dimension seven; three alternating directions integrate algebraically.",
+      "proof": "nc-p3.tex:thm:seven-image",
+      "status": "proof_written_with_exact_rank_certificate"
+    },
+    {
+      "id": "SEVEN-PERIOD-TWO",
+      "claim": "On an explicitly specified nonempty Zariski-open set the family has minimal period two; no graded presentation exists.",
+      "proof": "nc-p3.tex:thm:seven-period-two",
+      "status": "proof_written_with_exact_point_configuration_certificate"
+    }
+  ],
   "document_paths": {
     "plan": "research/plan_ja.tex",
     "notes": "research/notes_ja.tex",
     "paper": "nc-p3.tex",
     "baseline": "research/BASELINE.md",
-    "instructions": "AGENTS.md"
+    "instructions": "AGENTS.md",
+    "certificate": "research/moduli_certificate.json",
+    "algebraic_certificate": "research/algebraic_family_certificate.json"
   },
-  "progress": {
-    "revision": 4,
-    "meaning": "Frobenius canonical orbit classification on geometric isomorphism classes; full finite 212-variable polynomial isomorphism and periodicity criteria; AS/Koszul full-locus classification remains open"
-  }
+  "unresolved_cautions": [
+    "No proof of dimension 14 for the Clifford component.",
+    "The nine-dimensional tangent image is for the selected graded presentation, not every one-period structure.",
+    "A quadratic obstruction cone is not automatically the full tangent cone.",
+    "Novelty and independent refereeing are unconfirmed."
+  ],
+  "limits": [
+    "The seven-dimensional family is not asserted to be a full moduli component."
+  ]
 }

@@ -1,8 +1,9 @@
 \documentclass[11pt,a4paper]{ltjsarticle}
 \usepackage[margin=24mm]{geometry}
-\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,longtable,array}
 \usepackage[haranoaji]{luatexja-preset}
 \usepackage[unicode,hidelinks]{hyperref}
+\usepackage{xurl}
 \newtheorem{theorem}{定理}[section]
 \newtheorem{proposition}[theorem]{命題}
 \newtheorem{lemma}[theorem]{補題}
@@ -10,679 +11,997 @@
 \theoremstyle{definition}
 \newtheorem{definition}[theorem]{定義}
 \newtheorem{remark}[theorem]{注意}
+\newtheorem{conjecture}[theorem]{予想}
 \renewcommand{\proofname}{証明}
 \newcommand{\ZZ}{\mathbb Z}
-\newcommand{\BB}{\mathcal B}
-\newcommand{\DD}{\mathcal D}
-\newcommand{\CC}{\mathbb C}
+\newcommand{\QQ}{\mathbb Q}
 \newcommand{\GL}{\operatorname{GL}}
 \newcommand{\PGL}{\operatorname{PGL}}
 \newcommand{\Gr}{\operatorname{Gr}}
 \newcommand{\Aut}{\operatorname{Aut}}
 \newcommand{\Per}{\operatorname{Per}}
 \newcommand{\qgr}{\operatorname{qgr}}
-\title{非可換射影三空間と四次元二次AS正則\texorpdfstring{$\ZZ$}{Z}-代数の分類\\
-\large 4周期表示・1周期構造の忘却・全分類への有限atlas}
+\newcommand{\rk}{\operatorname{rank}}
+\newcommand{\Spec}{\operatorname{Spec}}
+\newcommand{\Sym}{\operatorname{Sym}}
+\newcommand{\HH}{\operatorname{HH}}
+\newcommand{\NF}{\operatorname{NF}}
+\title{非可換射影三空間の周期構造と局所モジュライ\\
+\large 四窓による分類・量子多項式成分・代数的2周期族}
 \author{}
-\date{2026年11月15日\quad 研究原稿 v7（完全分類は未完成）}
+\date{2026年11月15日\quad 研究原稿 v9\\
+\small 全分類およびClifford点の高次障害の決定は未完成}
 \begin{document}
 \maketitle
 \begin{abstract}
-本稿でいう非可換射影三空間は、標準14641型の四次元二次AS正則$\mathbb Z$-代数に対応する非可換射影圏を念頭に置く。ここではまず代数を添字保持同型で分類する問題を扱い、圏の同値関係による分類とは区別する。
-本稿は標準$(1,4,6,4,1)$型のquadratic Koszul AS正則$\ZZ$-代数の
-完全分類を目標とする研究原稿である。
-4周期同型を\emph{選んだ}二次$\ZZ$-代数が四つの4次元生成空間と
-四つの6次元関係空間によって記述されることを証明し、その群作用を同定する。
-この有限atlasは、選んだ4周期同型を\emph{忘れた}対象のモジュライではない。
-既存のgraded AS4分類の結果を1周期的部分の研究基盤として利用し、
-既に構成された最小周期2、4の反例を全体問題に位置づける。
-AS正則性の全条件、周期構造忘却のファイバー、全閉値の同型条件、
-全対象の被覆および既約成分の分類は未完成として明記する。
+標準$(1,4,6,4,1)$型の四次元二次Koszul AS正則$\ZZ$-代数を、
+添字保持同型で分類する問題を扱う。
+局所Frobenius traceによる標準4周期構造を用いて、幾何学的同型類と周期判定を
+有限四窓の軌道問題に還元する。
+局所モジュライについては二つの異なる現象を分離する。
+一般の四変数量子多項式代数ではgraded同型類の6パラメータが、
+$\ZZ$-代数同型では三つのZhang twist方向を忘れるため3パラメータになる。
+具体的な有理数点で周期4の変形複体を厳密に計算し、
+滑らかな量子多項式族と基底変更が全接空間を張ることから、
+この点の近傍に非1周期的な新しい成分方向がないことも示す。
+一方、既存の2周期PBW族のClifford特殊点では、選んだgraded表示の一次変形が9次元、
+標準AS正則$\ZZ$-代数の一次変形が15次元となる。
+追加の六方向の二次障害は非退化Pl\"ucker二次式一つに集約される。
+この最後の結果には同梱コードによる有理数上の計算補助証明を与える。
+接空間15次元と二次障害一つから、実際の成分次元を14と結論してはいない。
+さらにClifford点を通る七変数の多項式関係による族を構成し、全ファイバーのAS正則性、
+同型類の像の次元7、一般点の最小周期2を証明する。この族は三つの独立な交代方向を同時に代数的に積分する。
 \end{abstract}
 \tableofcontents
 
-\section{Introduction：対象と分類問題}
+\section{対象・比較する同値関係・先行研究}
 本稿を通じて$k$は標数零の代数閉体とする。
-\emph{正連結な$\ZZ$-代数}$C=(C_{ij})_{i,j\in\ZZ}$とは
+正連結な局所有限$\ZZ$-代数$C=(C_{ij})$とは
 \[
- C_{ii}=k,\quad C_{ij}=0\ (i>j),\quad
- C_{ij}C_{j\ell}\subseteq C_{i\ell}
+ C_{ii}=k,\qquad C_{ij}=0\ (i>j),\qquad C_{ij}C_{j\ell}\subset C_{i\ell}
 \]
-を満たす局所有限な代数である。$C(s)_{ij}=C_{i+s,j+s}$とする。
+を満たすものをいう。$C(s)_{ij}=C_{i+s,j+s}$とし、
 \[
- \Per(C)=\{s\in\ZZ:C\xrightarrow{\sim}C(s)
- \text{という添字保持同型が存在する}\}
+ \Per(C)=\{s\in\ZZ:C\simeq C(s)\text{ が添字保持同型で成立する}\}
 \]
-を周期群と呼ぶ。
-通常のconnected graded algebra $A=\bigoplus_{n\ge0}A_n$からの
-付随$\ZZ$-代数$\check A$は$\check A_{ij}=A_{j-i}$である。
-\emph{1周期同型の存在}と、その\emph{具体的な選択}は区別する。
+を周期群とする。通常のconnected graded algebra $A$からは
+$\check A_{ij}=A_{j-i}$を作る。
 
-本研究の中心対象を\emph{標準14641型}と呼ぶ。
-これは次数一生成、二次関係のみを持ち、
-\[
- \dim_k C_{i,i+n}={n+3\choose3}\quad(n\ge0)
-\]
-であり、各右単純加群$S_i$に有限最小線型解消
-\[
- 0\longrightarrow P_{i+4}
- \longrightarrow P_{i+3}^{\,4}
- \longrightarrow P_{i+2}^{\,6}
- \longrightarrow P_{i+1}^{\,4}
- \longrightarrow P_i\longrightarrow S_i\longrightarrow0
-\]
-が存在し、左側の対応解消とAS双対性を満たすものをいう。
-ここで$P_i=e_iC$である。
-これはKoszul型であり、大域次元4を意図する。
-数値だけを仮定する弱い意味のquadratic AS正則代数との違いは保持する。
-domain、noetherian、PBW、Calabi--Yau性を全域に仮定しない。
+中心対象は\emph{標準14641型}、すなわち次数一生成、二次関係を持ち、
+各右単純加群$S_i$に有限最小線型解消
+\begin{equation}\label{eq:standard-resolution}
+0\longrightarrow P_{i+4}\longrightarrow P_{i+3}^{4}
+\longrightarrow P_{i+2}^{6}\longrightarrow P_{i+1}^{4}
+\longrightarrow P_i\longrightarrow S_i\longrightarrow0
+\end{equation}
+があり、左側の対応する解消とAS双対性を持つものとする。
+ここで$P_i=e_iC$である。行Hilbert級数は$(1-t)^{-4}$である。
+domain、noetherian、PBW、Calabi--Yau性を全対象の追加仮定としない。
+一般の四次元quadratic AS正則性からこの数値型が自動的に従うかは別問題とする。
 
-本研究では、添字保持$\ZZ$-代数同型を同値関係とする。
-graded algebra同型を分類する\texttt{as4}の成果を参照するが、
-その分類は現在なお未完成である
-（\href{https://github.com/uedakazushi/as4}{\texttt{uedakazushi/as4}}の現行研究方針）。
-SierraやZhangのtwisting systemによる同一視は、
-graded同型より粗い$\ZZ$-代数同型を生む
-\cite{Zhang,Sierra,MoriNyman}。
+\paragraph{二つの分類問題。}
+$\mathcal M_{\rm gr}$ではgraded algebraのgraded同型を、
+$\mathcal M_{\ZZ}$では添字保持$\ZZ$-代数同型を使う。
+忘却$F:A\mapsto\check A$の像は1周期的部分であるが、
+$F$は一般に同型類上で単射でない。
+Zhang twistとgraded module圏、$\ZZ$-代数同型との関係は
+\cite{Zhang,Sierra,VdB}を参照する。
+$qgr$同値、導来同値、添字平行移動をさらに割る同値は、本稿の同値関係ではない。
+また本稿でいう\emph{同型類の次元}は幾何学的商・有理商の次元であり、
+自己同型群を含めて差し引くstackの次元とは区別する。
 
-\subsection*{既知の出発点と本稿の新しい位置づけ}
-標準14641型の4周期性はKoszul--Frobenius双対性から従い、
-最小正周期は1、2、4のいずれかである
-\cite{BP,MoriNyman}。
-\texttt{as4}の
-\href{https://github.com/uedakazushi/as4/blob/main/research/z_periodicity/papers/as4_z_periodicity_ja.tex}
-{周期性研究原稿}には、最小周期2の平坦PBW族、
-最小周期4の明示例、全閉値でのKoszul/AS正則性の証明、
-有限恒等式の検証コードが記されている。
-この原稿の独立査読・結果の新規性の最終判定は未了である。
-特に、1周期的な特殊ファイバーと非1周期的な一般ファイバーを
-結ぶ平坦族があるので、周期1/2/4を既約成分のラベルだとみなしてはならない。
-本稿はそれらの証明を重複せず、\emph{周期の選択を忘れる際の問題}に焦点を当てる。
+\paragraph{既存の周期性と本稿の有限表示。}
+Koszul--Frobenius双対性とhelixの方法\cite{BP}、
+正則$\ZZ$-空間の圏的構成\cite{MoriNyman}を出発点とする。
+標準14641型の一般4周期性は本稿でもtraceにより説明する。
+最小周期2の平坦PBW族と最小周期4の例は私的研究原稿\cite{as4period}にある。
+その全証明の今回の独立監査、第三者査読、新規性の確定は主張しない。
+同原稿に依存する箇所は明記する。
 
-既存の\texttt{as4}のgraded結果をすべて分類し終えても、
-最小周期2、4の対象はそこから復元できない。
-一方で、それらが必ず新しい既約成分を与えるとも限らない。
-Bondal--Polishchukのhelix・quantum determinantの方法\cite{BP}と、
-正則$\ZZ$-空間の圏的構成\cite{MoriNyman}を使うのが自然である。
+\paragraph{局所モジュライの既知研究との関係。}
+Bhatoy--Ingalls--LaRoche--Nookala\cite{BILN}は四次元Koszul AS正則graded代数の
+Hochschild cohomologyとKodaira--Spencer写像を調べている。
+同論文\S3.1の量子多項式族とTable 2のgraded Clifford族は本稿の比較基準になる。
+本稿の追加計算は\emph{周期的な添字依存のある}関係式を許し、
+$\zeta=1,-1,\sqrt{-1},-\sqrt{-1}$の四つのFourier成分を分ける点にある。
+graded接空間の次元だけで$\ZZ$-代数の変形を決定したとはしない。
+新規性の最終確認は未了である。
+
+\paragraph{三次元三次の場合との違い。}
+Van den Bergh\cite[Theorem 5.5.10, \S5.6]{VdB}の非可換quadricは、
+楕円曲線と次数2の三つの直線束$(E,L_0,L_1,L_2)$で記述される。
+滑らかな楕円曲線の一般部分でのパラメータ数は$1+3-1=3$である。
+一般の$j$について1周期性は$L_0\otimes L_2\simeq L_1^{\otimes2}$を課し、
+2次元の部分になる。ただし特殊な$j$までこの等式だけを必要条件とするのは正しくない。
+正確には\cite[\S5.6]{VdB}の自己同型$\sigma$を用いた条件を使う。
+この三次元三次の結果を、四次元二次の場合の成分次元にそのまま移してはならない。
+
+本稿の代数的構成（第\ref{sec:algebraic-family}節）は、中心二次式と通常の導分を
+偶奇に応じて組み合わせたOre型の構成であり、基底の存在にはDiamond lemmaを使う。
+PBW性からKoszul性への含意はPriddyの理論\cite{Priddy}による。
+本稿で個別に証明するのは七変数の具体的関係、全ファイバーのFrobenius双対性、
+隣接する点射影の配置による一般点の非1周期性、および同型による重複を除いた次元である。
+これらの具体的族と既存の非可換射影三空間の族との完全な文献上の同定・新規性確認は未了である。
 
 \section{周期群と4周期の有限表示}
 \begin{lemma}\label{lem:period-subgroup}
-$\Per(C)\subset\ZZ$は部分群である。
-特に$C$が4周期的なら、その最小正周期は$1,2,4$のいずれかである。
+$\Per(C)$は$\ZZ$の部分群である。$C$が4周期的なら最小正周期は$1,2,4$のいずれかである。
 \end{lemma}
 \begin{proof}
-$s$周期同型と$t$周期同型は、後者を$s$だけ平行移動させて合成できるから
-$s+t$は周期である。逆同型を$-s$だけ移動させると$-s$も周期となる。
-$0$は自明に周期である。よって$\Per(C)=p\ZZ$。
-$4\in p\ZZ$なら$p\mid4$となる。
+$s$周期同型と$t$周期同型は、後者を$s$だけ平行移動して合成できる。
+逆同型を$-s$だけ移動すれば$-s$も周期となる。$0$は自明に周期である。
+従って$\Per(C)=p\ZZ$であり、$4\in p\ZZ$なら$p\mid4$である。
 \end{proof}
 
-以下、\emph{4周期同型付き}対象$(C,\tau)$とは
+4周期同型付き対象$(C,\tau)$とは、積を保つ同型
+$\tau_{ij}:C_{ij}\to C_{i+4,j+4}$を選んだ組をいう。
+対象の同型は$\tau$と可換する添字保持同型とする。
+四つの4次元空間$V_i$を固定し、添字を法4で読むと、
 \[
- \tau_{ij}:C_{ij}\xrightarrow{\sim}C_{i+4,j+4}
+ \mathfrak P=\prod_{i=0}^3\Gr(6,V_i\otimes V_{i+1}),\qquad
+ G=\prod_{i=0}^3\GL(V_i)
 \]
-が積を保つものとする。対象の同型は$\tau$と可換する添字保持
-$\ZZ$-代数同型である。
-$\tau$の存在のみを要求する裸の$C$とは別である。
-
-四つの4次元$k$-空間$V_0,V_1,V_2,V_3$を固定し、添字を法4で読む。
-\[
- \mathfrak P=\prod_{i=0}^{3}\Gr(6,V_i\otimes V_{i+1}),
- \qquad G=\prod_{i=0}^3\GL(V_i)
-\]
-とおく。$\Gr(6,16)$の次元は60なので、$\dim\mathfrak P=240$、
-$\dim G=64$である。
-ただし、この差176はAS正則モジュライの次元ではない。
-AS条件をまだ課しておらず、安定化群もあるためである。
+が有限表示の空間と基底変更群になる。
 
 \begin{theorem}[4周期表示の有限四窓atlas]\label{thm:four-window}
-各$C_{i,i+1}$が4次元で各二次関係空間が6次元の
-\emph{次数一生成・二次}正連結$\ZZ$-代数$(C,\tau)$で、
-4周期同型$\tau$を指定したものの同型群oidは、
-$\mathfrak P$の$k$-点に対する$G$の作用群oidと同値である。
-この定理ではAS正則性やKoszul性を仮定しない。
-それらの条件を満たす全部分群oidにも同じ対応が制限される。
+各一次空間が4次元、各二次関係空間が6次元の次数一生成・二次正連結
+$\ZZ$-代数$(C,\tau)$の同型群oidは、$\mathfrak P(k)$に対する$G$の作用群oidと同値である。
+Koszul性やAS正則性を仮定しなくても成立し、それらを満たす全部分群oidへ制限できる。
 \end{theorem}
 \begin{proof}
-$(C,\tau)$が与えられたとき、$C_{i,i+1}$（$0\le i<4$）の基底を選び
-$V_i$と同一視する。$\tau$の反復により全整数$i$へ基底を延長する。
-$C$の二次関係空間
+$i=0,1,2,3$で$C_{i,i+1}$の基底を選び、$\tau$の反復で全整数へ延長する。
 \[
- R_i=\ker\left(C_{i,i+1}\otimes C_{i+1,i+2}
- \longrightarrow C_{i,i+2}\right)
+ R_i=\ker(C_{i,i+1}\otimes C_{i+1,i+2}\longrightarrow C_{i,i+2})
 \]
-は$\tau$と両立するので$R_{i+4}=R_i$となり、
-$\dim R_i=6$である。従って$\mathfrak P(k)$の点を定める。
-
-逆に$(R_0,R_1,R_2,R_3)$が与えられれば、整数列上、
-頂点$i$から$i+1$へ$V_{i\bmod4}$の四つの矢印を置く。
-自由な経路$\ZZ$-代数の中で、
-各$i$の$R_{i\bmod4}\subset V_i\otimes V_{i+1}$から生成される
-二次両側イデアルを商に取る。
-この商は正連結、次数一生成、二次で、
-二次成分の核はちょうど与えた$R_i$である。
-係数が4ごとに一致するので、添字を4移す厳密な同型$\tau$を持つ。
-
-選んだ基底を変えると$G$の自然な作用になる。
-逆向きに$\tau$と可換する同型は、全ての次数一生成元上で
-四つの可逆写像$g_i:V_i\to V'_i$から定まり、
-二次関係を保つことは
-$(g_i\otimes g_{i+1})(R_i)=R'_i$に同値である。
-二次生成性からこの条件は全積を保つ同型の十分条件でもある。
-同型の合成も同じなので群oid同値が従う。
+は$R_{i+4}=R_i$を満たすので$\mathfrak P$の点になる。
+逆に四窓$(R_i)$から、整数頂点列上の自由経路$\ZZ$-代数を、各位置の$R_i$が生成する
+二次両側イデアルで割る。二次成分の核は指定した$R_i$に等しく、厳密4移動が周期同型を与える。
+基底変更は$G$の作用である。
+$\tau$と可換する同型は四つの可逆写像$g_i:V_i\to V'_i$で決まり、
+二次関係の保存は$(g_i\otimes g_{i+1})R_i=R'_i$と同値である。
+次数一生成・二次性により、この条件は商代数の同型の十分条件でもある。
+合成も一致するので群oid同値を得る。
 \end{proof}
 
-\begin{remark}[分類上の重要な違い]\label{rem:forget4}
-定理\ref{thm:four-window}は、
-4周期同型$\tau$を選んだ$(C,\tau)$の分類であり、
-裸の$C$に対する全単射を与えない。
-同じ$C$の上に相異なる4周期同型が存在し得る。
-周期性の存在とその選択の違いを処理しない限り、
-$[\mathfrak P/G]$を求めても全$\ZZ$-代数の分類は完成しない。
-また、$\mathfrak P$の大部分がKoszul AS正則であるとは主張していない。
+\begin{remark}\label{rem:forget4}
+一般の4周期同型を選んだ$(C,\tau)$と、裸の$C$は異なる分類問題である。
+$\mathfrak P$全体がAS正則とも、$[\mathfrak P/G]$が裸のAS正則代数のモジュライとも主張しない。
+$\dim\mathfrak P=240$、$\dim G=64$という数だけからモジュライ次元を計算してはならない。
 \end{remark}
 
-\begin{proposition}[次数一の関係式による周期の判定]\label{prop:period-relations}
-二次$\ZZ$-代数$C$について、整数$s$が周期であることは、
-全$i\in\ZZ$に対する可逆線型写像
-$g_i:V_i=C_{i,i+1}\to V_{i+s}=C_{i+s,i+s+1}$が存在して
-\[
- (g_i\otimes g_{i+1})R_i=R_{i+s}
-\]
-を満たすことと同値である。
+\begin{proposition}\label{prop:period-relations}
+二次$\ZZ$-代数$C$について$s\in\Per(C)$となることは、全$i\in\ZZ$に可逆写像
+$g_i:V_i\to V_{i+s}$があり、$(g_i\otimes g_{i+1})R_i=R_{i+s}$を満たすことと同値である。
 \end{proposition}
 \begin{proof}
-$\ZZ$-代数同型を次数一に制限すれば必要性は直ちに従う。
-逆に与えられた可逆写像は自由な経路$\ZZ$-代数の同型を定め、
-各二次関係生成空間を対応する関係生成空間へ送る。
-従って二次イデアル全体を保ち、商に同型を誘導する。
+同型の次数一への制限から必要性を得る。逆に指定した可逆写像は自由経路代数の同型を定め、
+二次イデアルの生成空間を対応する生成空間へ送るため商代数へ降りる。
 \end{proof}
-
 \begin{remark}
-命題\ref{prop:period-relations}の写像$g_i$は、
-あらかじめ選んだ4周期$\tau$と\emph{可換する必要がない}。
-最初から$g_{i+4}=g_i$という条件だけで1周期性を調べると、
-選んだ$\tau$と可換しない周期同型を見落とす。
-この点が未標識moduliの分類で最初に解決すべき障害となる。
+この$g_i$は、任意に選んだ4周期同型と可換する必要がない。
+初めから$g_{i+4}=g_i$だけを調べると周期同型を見落とし得る。
+次節のFrobenius標準化がこの問題を解決する。
 \end{remark}
 
-
 \section{Koszul--Frobenius標準4周期構造と忘却}\label{sec:canonical-four}
-以下の結果は、4周期同型を任意に選ぶことの余分な自由度を
-\emph{幾何学的点の同型類}の水準で取り除く。
-モジュライstackの同値や族上の大域的な標準化は、
-この段階では主張しない。
-
-$C$を標準14641型とし、前向き二次Koszul双対を
-$E=C^!$と書く。ここでは双対の矢印を
-$E_{i,i+1}=C_{i,i+1}^{*}$とする規約を採用する。
-左右AS双対性とKoszul性により、各$i$に
+前向き二次双対を$E=C^!$とし、$E_{i,i+1}=C_{i,i+1}^*$の規約を使う。
+標準14641型の左右AS双対性とKoszul性から、
 \[
- E_{i,i+4}\simeq k,\quad
- \dim E_{i,i+p}={4\choose p}\ (0\le p\le4),
- \quad E_{i,i+p}=0\ (p>4)
+ \dim E_{i,i+p}={4\choose p}\ (0\le p\le4),\quad E_{i,i+p}=0\ (p>4)
 \]
-があり、任意の$p$について積による相補次数の対合が完全である
-\cite{BP}。
+であり、相補次数の積$E_{i,i+p}\otimes E_{i+p,i+4}\to E_{i,i+4}$は完全対合である。
+これは有限Koszul解消のAS双対性をYoneda積に移したものである\cite{BP,as4period}。
 
-各$i$に非零な最高次数のtrace
-$\lambda_i:E_{i,i+4}\xrightarrow{\sim}k$を選ぶ。
-相補次数の完全性から、一意的な線型同型
-\[
- \nu^\lambda_{ij}:E_{ij}\xrightarrow{\sim}E_{i+4,j+4}
-\]
-が
+非零trace $\lambda_i:E_{i,i+4}\to k$を選ぶと、一意の線型同型
+$\nu^\lambda_{ij}:E_{ij}\to E_{i+4,j+4}$が
 \begin{equation}\label{eq:nakayama-pair}
- \lambda_i(ab)=\lambda_j\bigl(b\,\nu^\lambda_{ij}(a)\bigr),
- \quad a\in E_{ij},\ b\in E_{j,i+4}
+ \lambda_i(ab)=\lambda_j(b\nu^\lambda_{ij}(a)),\qquad b\in E_{j,i+4}
 \end{equation}
-で定まる。この$\nu^\lambda$は積を保つ$\mathbb Z$-代数同型である。
-実際、$a\in E_{ij}$、$c\in E_{j\ell}$、$b\in E_{\ell,i+4}$に対して
+で定まる。$a\in E_{ij},c\in E_{j\ell},b\in E_{\ell,i+4}$に対して
 \[
- \lambda_i((ac)b)
- =\lambda_j((cb)\nu^\lambda(a))
- =\lambda_\ell(b\,\nu^\lambda(a)\nu^\lambda(c))
+ \lambda_i((ac)b)=\lambda_j((cb)\nu(a))
+ =\lambda_\ell(b\nu(a)\nu(c))
 \]
-なので、完全対合から
-$\nu^\lambda(ac)=\nu^\lambda(a)\nu^\lambda(c)$となる。
-次数一部分を逆双対化し、二次関係が保たれることから、
-$C$にも4周期同型
-\[
- \tau^\lambda:C\xrightarrow{\sim}C(4)
-\]
-が定まる。これを\emph{Frobenius標準4周期同型}と呼ぶ。
+だから$\nu(ac)=\nu(a)\nu(c)$である。
+次数一部分の逆双対$(\nu^{-1}_{i,i+1})^*$は元の二次関係を保存し、
+$\tau^\lambda:C\simeq C(4)$を与える。これをFrobenius標準4周期同型と呼ぶ。
+特に標準14641型は4周期的である。
 
 \begin{theorem}[標準4周期同型の選択独立性]\label{thm:canonical-four}
-$C$を標準14641型のKoszul AS正則$\mathbb Z$-代数とする。
-任意の二つの非零trace族$\lambda=(\lambda_i)$と
-$\lambda'=(\lambda'_i)$から得られる
-$\tau^\lambda$と$\tau^{\lambda'}$は、$C$の
-添字保持自己同型$h$により
-\[
- \tau^{\lambda'}=h(4)\,\tau^\lambda\,h^{-1}
-\]
-の形で共役になる。
-さらに、$C$と$C'$が$\mathbb Z$-代数として同型なら、
-それぞれのFrobenius標準4周期同型付きの組も同型である。
-従って\emph{幾何学的点の同型類}に限れば、
-裸の標準14641型$\mathbb Z$-代数の分類は、
-Frobenius標準4周期同型を選んだ組の分類に一致する。
+任意の二つのtrace族から得る$\tau^\lambda,\tau^{\lambda'}$は、添字保持自己同型$h$により
+$\tau^{\lambda'}=h(4)\tau^\lambda h^{-1}$と書ける。
+裸の$C,C'$が同型なら、それぞれのFrobenius標準4周期同型付きの組も同型である。
+従って幾何学的点の同型類では、標準4周期構造を選ぶことは余分な分類情報を持たない。
 \end{theorem}
 \begin{proof}
-$\lambda'_i=t_i\lambda_i$（$t_i\in k^\times$）と置く。
-式\eqref{eq:nakayama-pair}を双方で比較すると
+$\lambda'_i=t_i\lambda_i$と置くと
 \begin{equation}\label{eq:trace-change}
- \nu^{\lambda'}_{ij}=(t_i/t_j)\nu^\lambda_{ij}
+ \nu^{\lambda'}_{ij}=(t_i/t_j)\nu^\lambda_{ij}.
 \end{equation}
-を得る。
-各整数$i$にスカラー$s_i\in k^\times$を、
-\[
- s_{i+4}/s_i=t_i
-\]
-となるように選べる。これは四つの剰余類でそれぞれ
-$s_i$を一つ選び、正負両方向へ漸化式で延ばせばよい。
-頂点スカラーによる自己同型
-\[
- h^E_{ij}:E_{ij}\longrightarrow E_{ij},
- \qquad a\longmapsto(s_i/s_j)a
-\]
-は積を保つ。従って
+四つの整数剰余類ごとに初期値を選び、$s_{i+4}/s_i=t_i$を正負両方向へ解く。
+頂点スカラー自己同型$h^E_{ij}(a)=(s_i/s_j)a$に対して
 \[
  h^E(4)\nu^\lambda(h^E)^{-1}(a)
  =\frac{s_{i+4}s_j}{s_{j+4}s_i}\nu^\lambda(a)
- =\frac{t_i}{t_j}\nu^\lambda(a)
- =\nu^{\lambda'}(a).
+ =\frac{t_i}{t_j}\nu^\lambda(a)=\nu^{\lambda'}(a).
 \]
-二次双対により、$C$上の二つの$\tau$も
-対応する頂点スカラー自己同型によって共役となる。
-（双対化でスカラーの逆が現れるが、共役の向きは保たれる。）
-
-次に$f:C\xrightarrow{\sim}C'$が与えられれば、
-二次双対の同型を通じて$\lambda$を$E'=(C')^!$に移送できる。
-式\eqref{eq:nakayama-pair}の特徴付けにより、
-移送したtraceから得られる4周期同型と$\tau^\lambda$は
-$f$と両立する。任意の$\lambda'$を指定した場合も
-既に示した頂点スカラー共役で補正すればよい。
-よって忘却はFrobenius標準の組の\emph{同型類の集合}上で
-全単射である。これを群oidそのものの完全忠実性とはしていない。
+逆双対で$C$上の共役性を得る。
+次に$f:C\simeq C'$があればtraceを双対同型で移送する。
+式\eqref{eq:nakayama-pair}の特徴付けにより、移送したtraceの周期構造は$f$と両立する。
+別のtraceが指定されても上のスカラー共役で補正できる。
+これは同型類の集合上の全単射であり、群oidの完全忠実性を主張するものではない。
 \end{proof}
 
-\begin{proposition}[有限四窓でのFrobenius標準化条件]\label{prop:canonical-matrix}
-定理\ref{thm:four-window}の厳密4周期表示で、二次双対$E$が
-上述の局所Frobenius条件を満たすとする。
-4つの非零trace$\lambda_i:E_{i,i+4}\to k$
-（$i\in\mathbb Z/4$）を選び、厳密4移動によって延長する。
-$E_{i,i+1}$と$E_{i+1,i+4}$の基底を選び、
-$E_{i+4,i+5}=E_{i,i+1}$を厳密移動で同定する。
+\begin{proposition}[有限四窓での標準化]\label{prop:canonical-matrix}
+厳密4周期表示で局所Frobeniusな双対$E$を考える。
+四つのtraceを厳密4移動で延長し、$E_{i,i+1}$の基底$u_a$、
+$E_{i+1,i+4}$の基底$v_b$と、移動した基底$u'_c$に対して
 \[
- P_i=(\lambda_i(u_a v_b))_{a,b},\qquad
- Q_i=(\lambda_{i+1}(v_b u'_c))_{b,c}
+ P_i=(\lambda_i(u_a v_b))_{ab},\quad
+ Q_i=(\lambda_{i+1}(v_bu'_c))_{bc},\quad N_i=Q_i^{-1}P_i^{\mathsf T}
 \]
-を、$u_a\in E_{i,i+1}$、$v_b\in E_{i+1,i+4}$、
-$u'_c\in E_{i+4,i+5}$の対応する基底により定める。
-このとき両行列は4次正則行列で、
-\[
- N_i:=Q_i^{-1}P_i^{\mathsf T}
-\]
-は$\nu^\lambda_{i,i+1}$を厳密4移動で同定した行列である。
-従って選んだ厳密4周期同型がFrobenius標準になることは、
-\emph{四つのtraceを適切に選んで}
+と置く。$N_i$は局所Nakayama同型の行列である。
+選んだ厳密4移動がFrobenius標準であることは、traceを選んで
 \begin{equation}\label{eq:canonical-matrix-test}
- P_i^{\mathsf T}=Q_i\quad(i=0,1,2,3)
+ P_i^{\mathsf T}=Q_i\qquad(i\bmod4)
 \end{equation}
 を満たせることと同値である。
 \end{proposition}
 \begin{proof}
-$N_i$の列を$\nu^\lambda(u_a)$の係数とすると、
-式\eqref{eq:nakayama-pair}は各$b,a$について
-$P_{i,ab}=\sum_c Q_{i,bc}(N_i)_{ca}$であり、
-$P_i^{\mathsf T}=Q_iN_i$となる。
-完全対合から$Q_i$は可逆である。
-従って$N_i=I$は\eqref{eq:canonical-matrix-test}と同値。
-$E$は次数一生成なので、$\nu^\lambda$が次数一で
-厳密4移動に一致すれば、全積でも一致する。
-その逆双対の$C$の4周期同型についても同様である。
+$N_i$の列を$\nu(u_a)$の係数とすると、特徴付けの式は
+$P_{i,ab}=\sum_cQ_{i,bc}(N_i)_{ca}$、すなわち$P_i^{\mathsf T}=Q_iN_i$である。
+対合の完全性から$Q_i$は可逆である。$E$は次数一生成なので、
+次数一での$N_i=I$は全積での厳密4移動との一致を意味する。
 \end{proof}
 
-\begin{proposition}[有限次数で検査できるFrobenius条件]\label{prop:finite-frobenius}
-任意の$\mathfrak P$の四窓データから構成する二次双対$E$について、
-各始点$i\in\mathbb Z/4$で、
-\[
- \dim(E_{i,i+p})=(1,4,6,4,1)_p\quad(0\le p\le4),
- \qquad E_{i,i+5}=0
-\]
-を検査し、各$0\le p\le4$の積
-\[
- E_{i,i+p}\otimes E_{i+p,i+4}\longrightarrow E_{i,i+4}
-\]
-が完全対合であることを確認すれば、
-$E$の局所Frobenius性は全次数で成立する。
-これらは四窓の関係係数に対する\emph{有限回の線型代数}
-（商空間の次元・積行列の階数）で判定できる。
-ただしこの有限検査\emph{だけ}から元の二次代数$C$のKoszul性、
-AS正則性は結論できない。
+\begin{proposition}[有限次数のFrobenius検査]\label{prop:finite-frobenius}
+任意の四窓の二次双対$E$について、各始点で次数$0,\ldots,5$の次元が
+$(1,4,6,4,1,0)$であり、相補次数の積対合が完全なら、全次数の局所Frobenius性が成立する。
+これらは有限回の線型代数で検査できる。ただしこれだけから元代数のKoszul性は従わない。
 \end{proposition}
 \begin{proof}
-$E$は次数一生成であるため、各始点で長さ5の全語が零なら、
-長さ6以上の語も先頭5語を用いて零となる。
-有限次元の相補次数対合の完全性は仮定した積行列の
-行列式の非消滅と同値である。
-必要な関係空間、低次成分、積行列は、いずれも長さ5以下の
-テンソル積空間から二次関係による部分空間を割るだけで
-構成でき、4周期性により始点は4通りで足りる。
-Koszul複体の正確性は別途要求されるので、
-次数情報とFrobenius性だけをAS性へすり替えてはいない。
+次数一生成性により長さ5の全語が零なら全高次も零である。
+相補次数の対合の完全性は積行列の行列式の非消滅に等しい。
+必要な商空間と積行列は長さ5以下のテンソル空間と二次関係から構成でき、始点も4通りで足りる。
+Koszul複体の正確性は、この有限検査とは別の条件である。
 \end{proof}
 
-\begin{corollary}[幾何学的点の標準化された分類問題]\label{cor:canonical-slice}
-標準14641型の全$\mathbb Z$-代数の幾何学的同型類は、
-$\mathfrak P$のうち\emph{Koszul AS正則かつ}
-\eqref{eq:canonical-matrix-test}を満たすtraceの選択がある
-四窓データの$G$-軌道と全単射になる。
-ここで$G=\prod_{i=0}^{3}\GL(V_i)$は定理\ref{thm:four-window}の群である。
-この軌道の幾何学的分類、AS locusの有限な必要十分条件、
-相対族のstack構造はまだ未完成である。
+\begin{corollary}\label{cor:canonical-slice}
+裸の標準14641型$\ZZ$-代数の幾何学的同型類は、
+$\mathfrak P$のうちKoszul AS正則で式\eqref{eq:canonical-matrix-test}を満たすtraceを持つ点の
+$G$-軌道と全単射になる。
 \end{corollary}
 \begin{proof}
-任意の$C$には局所Frobenius traceから構成した4周期同型があるので
-定理\ref{thm:four-window}で厳密4周期表示を選べる。
-その表示は命題\ref{prop:canonical-matrix}を満たす。
-定理\ref{thm:canonical-four}によって、
-同じ裸の$C$から生じる二つのFrobenius標準表示は、
-4周期同型を保つ同型で比較できる。
-定理\ref{thm:four-window}の同型判定から、
-それらは$G$の同一軌道になる。逆方向は忘却で得られる。
+任意の$C$には標準4周期構造があり、定理\ref{thm:four-window}で厳密表示に直せる。
+命題\ref{prop:canonical-matrix}が標準化条件を与え、
+定理\ref{thm:canonical-four}が裸の同型から標準構造を保つ同型への補正を与える。
+最後に四窓群oidの同型判定を使う。
 \end{proof}
 
-\begin{theorem}[裸の周期性の有限四窓判定]\label{thm:finite-period-test}
-$C$を標準14641型とし、Frobenius標準4周期同型を選んで
-定理\ref{thm:four-window}の厳密4周期データ
-$(R_0,R_1,R_2,R_3)$に直す。
-任意の整数$p$に対して、
-\[
- C\simeq C(p)
-\]
-となることは、四つの可逆線型写像
-$g_i:V_i\xrightarrow{\sim}V_{i+p}$（$i\in\ZZ/4$）が存在して
+\begin{theorem}[裸の周期性の有限判定]\label{thm:finite-period-test}
+Frobenius標準四窓$(R_0,R_1,R_2,R_3)$に対して$C\simeq C(p)$であることは、
+四つの可逆写像$g_i:V_i\to V_{i+p}$が
 \begin{equation}\label{eq:finite-period-test}
- (g_i\otimes g_{i+1})R_i=R_{i+p}
- \qquad(i\in\ZZ/4)
+ (g_i\otimes g_{i+1})R_i=R_{i+p}\quad(i\bmod4)
 \end{equation}
-を満たすことと同値である。添字は4を法として読む。
-従って最小周期1、2、4の判定は、
-Frobenius標準四窓上の\emph{有限個の多項式方程式と行列式非零条件}
-による可解性判定に還元される。
+を満たすことと同値である。
 \end{theorem}
 \begin{proof}
-\eqref{eq:finite-period-test}があれば$g_{i+4}=g_i$と延長し、
-命題\ref{prop:period-relations}により
-$C\xrightarrow{\sim}C(p)$を得る。
-
-逆に$f:C\xrightarrow{\sim}C(p)$があるとする。
-$\tau:C\to C(4)$を選んだFrobenius標準同型とすると、
-そのシフト$\tau(p):C(p)\to C(p+4)$も
-$C(p)$のFrobenius標準同型である。
-$f$を使って$\tau$を$C(p)$へ移送して得られる4周期同型
-$f(4)\tau f^{-1}$もFrobenius標準である。
-定理\ref{thm:canonical-four}の証明で示した
-\emph{頂点スカラーによる共役}を使えば、
-$C(p)$の添字保持自己同型$h$が存在して
-\[
- \tau(p)=h(4)\,[f(4)\tau f^{-1}]\,h^{-1}
-\]
-となる。$f'=hf$と置くと
-\[
- \tau(p)\,f'=f'(4)\,\tau
-\]
-である。従って$f'$の次数一部分は
-Frobenius標準4周期座標で$g_{i+4}=g_i$を満たす。
-$f'$が二次関係を保つことから
-\eqref{eq:finite-period-test}が従う。
-一般の4周期同型を選んだ場合には、この補正が可能とは
-限らないので、Frobenius標準という仮定が不可欠である。
+式があれば$g_{i+4}=g_i$と延長し、命題\ref{prop:period-relations}を適用する。
+逆に$f:C\simeq C(p)$と標準$\tau$を取る。
+$\tau(p)$と$f(4)\tau f^{-1}$は$C(p)$の二つの標準4周期構造である。
+定理\ref{thm:canonical-four}によって頂点スカラー自己同型$h$を選び
+$\tau(p)=h(4)[f(4)\tau f^{-1}]h^{-1}$とできる。
+$f'=hf$は$\tau(p)f'=f'(4)\tau$を満たすので、その次数一行列は4周期的である。
+二次関係の保存が所要の式を与える。
 \end{proof}
 
-\begin{proposition}[周期の有限多項式判定式]\label{prop:period-polynomial-system}
-定理\ref{thm:finite-period-test}の標準四窓に対し、
-$R_i$の基底を列とする階数6の$16\times6$行列を
-$M_i$と書く。$p=1$または$2$の周期同型が存在するための
-必要十分条件は、$4$個の$4\times4$行列
-$G_i$、$4$個の$6\times6$行列$H_i$、
-および$4$個のスカラー$u_i$に関して
+\begin{proposition}[多項式系]\label{prop:period-polynomial-system}
+$R_i$の列基底を階数6の$16\times6$行列$M_i$で表す。
+$p=1,2$の周期の存在は
 \begin{equation}\label{eq:period-polynomial-system}
- (G_i\otimes G_{i+1})M_i=M_{i+p}H_i,\qquad
- u_i\det G_i-1=0\qquad(i\in\ZZ/4)
+ (G_i\otimes G_{i+1})M_i=M_{i+p}H_i,\qquad u_i\det G_i=1
 \end{equation}
-が解を持つことである。
-これは64個の$G_i$の成分、144個の$H_i$の成分、
-4個の$u_i$、合計212個の未知数に対する
-384個の行列成分等式と4個の可逆性等式である。
-$H_i$の行列式非零条件は追加する必要がない。
+の可解性に等しい。未知数は$G_i$の64成分、$H_i$の144成分、$u_i$の4個、合計212個、
+方程式は384成分等式と4可逆性等式、合計388個である。
 \end{proposition}
 \begin{proof}
-$G_i$が可逆なら$(G_i\otimes G_{i+1})M_i$は階数6なので、
-右辺を与える$H_i$も自動的に階数6となる。
-従って式\eqref{eq:period-polynomial-system}は
-$(G_i\otimes G_{i+1})R_i=R_{i+p}$と同値である。
-$G_i$の可逆性は$u_i\det G_i=1$によって
-多項式方程式として表せる。
-定理\ref{thm:finite-period-test}を適用する。
+$G_i$が可逆で$M_i$の階数が6なら、等式を満たす$H_i$も自動的に可逆である。
+従ってこれは関係空間の一致を行列で書いたものであり、前定理を適用できる。
+\end{proof}
+
+\begin{corollary}\label{cor:finite-isom-test}
+既にAS正則性が保証された標準型の$C,C'$のFrobenius標準関係行列を$M_i,M'_i$とする。
+添字保持同型の存在は
+$(G_i\otimes G_{i+1})M_i=M'_iH_i$, $u_i\det G_i=1$の可解性に等しい。
+\end{corollary}
+\begin{proof}
+系\ref{cor:canonical-slice}の同一$G$-軌道という条件を行列表示する。
+$H_i$の可逆性は前命題と同様に自動である。
+\end{proof}
+
+\begin{corollary}\label{cor:period-orbits}
+四窓の添字を一つ回転する操作を$r$とする。
+最小周期1は$r(R)\in G\cdot R$、最小周期2は$r^2(R)\in G\cdot R$かつ$r(R)\notin G\cdot R$、
+最小周期4は$r^2(R)\notin G\cdot R$で判定できる。
+\end{corollary}
+\begin{proof}
+定理\ref{thm:finite-period-test}と補題\ref{lem:period-subgroup}による。
 \end{proof}
 \begin{remark}
-この式は\emph{周期同型の存在}の正確な有限判定式であり、
-特定の候補$G_i$が失敗しても、別の候補の存在を否定しない。
-また式の可解性とAS正則性は別である。
-明示的な候補を有理数の厳密階数計算で検証するコード
-\texttt{computations/verify\_period\_witness.py}を付属させた。
-一般解の消去や全軌道分類は今後の課題である。
+$G$の頂点ごとのスカラー$(k^\times)^4$は全ての関係空間を固定し、有効作用は$\PGL_4^4$を通る。
+しかしstackの自己同型としては残る。$240-60=180$をAS正則モジュライの次元と呼ぶのも誤りである。
+有限判定式の解を一つ検証することと、解の非存在を示すことも異なる。
+\path{computations/verify_period_witness.py}は正の証明書だけを検査する。
 \end{remark}
 
-\begin{corollary}[二つの裸のZ代数の有限同型判定]\label{cor:finite-isom-test}
-$C,C'$を標準14641型とし、それぞれのFrobenius標準4周期同型を
-選んだ有限四窓を階数6の$16\times6$行列
-$M_i,M'_i$で表す。
-\emph{添字を保つ}同型$C\simeq C'$が存在する必要十分条件は、
-4つの$4\times4$行列$G_i$、4つの$6\times6$行列$H_i$、
-4つのスカラー$u_i$について
-\[
- (G_i\otimes G_{i+1})M_i=M'_iH_i,\qquad
- u_i\det G_i=1\qquad(i\in\ZZ/4)
-\]
-が可解であることである。
-従って二つの\emph{既にAS正則性が保証された}標準型の
-幾何学的点について、Z代数同型の存在は
-同じ212未知数・388式の有限代数的可解性問題になる。
-\end{corollary}
-\begin{proof}
-系\ref{cor:canonical-slice}により、裸の$C,C'$が同型であることと
-Frobenius標準四窓が$G$の同一軌道にあることは同値。
-それを階数6の関係行列で書けば上の式であり、
-$H_i$の可逆性は$G_i$の可逆性から従う。
-\end{proof}
-
-\begin{corollary}[回転軌道による周期層の記述]\label{cor:period-orbits}
-Frobenius標準の四窓データに対して、
-四つの関係空間の添字を一つ移す回転を$r$と書く。
-このとき、裸の$\ZZ$-代数$C$の最小正周期は
-\[
- \begin{array}{c|l}
- 1& r(R)\text{が}R\text{と}G\text{-同一軌道},\\
- 2& r^2(R)\text{が}R\text{と同一軌道で、}r(R)\text{は異軌道},\\
- 4& r^2(R)\text{が}R\text{と異軌道}
- \end{array}
-\]
-で判定できる。
-これらは同型類についての判定であって、
-周期種別が既約成分を切り分けるとは主張しない。
-\end{corollary}
-\begin{proof}
-定理\ref{thm:finite-period-test}の有限行列式条件が、
-$R$と回転した$R$が$G$-同一軌道にあることと同値である。
-補題\ref{lem:period-subgroup}によって最小周期は
-$1,2,4$のいずれかである。
-\end{proof}
-
-\begin{remark}[有限atlasのスカラーkernel]
-$G=\prod_{i=0}^{3}\GL(V_i)$の中で、
-各$V_i$にスカラーとして作用する$(k^\times)^4$は
-$\mathfrak P$の全ての点を固定する。
-実際、$R_i\subset V_i\otimes V_{i+1}$には
-$(s_i s_{i+1})$倍として作用するからである。
-従って作用の有効部分は$\prod_i\PGL(V_i)$を通る。
-ただしこの四次元トーラスは\emph{同型群oidの自己同型}
-として残るため、stackを作る際に自動的に取り去ってはならない。
-$\dim\mathfrak P=240$と有効群の次元60の差180を
-AS正則モジュライの次元と呼ぶのも誤りである。
-\end{remark}
-
-\section{1周期的部分とgraded AS4の再利用}
+\section{1周期構造、graded表示、既存の2周期族}
 \begin{proposition}\label{prop:graded-period}
-二次正連結$\ZZ$-代数$C$は、
-$C\simeq C(1)$であることと、ある次数一生成二次のconnected
-graded algebra $A$の付随代数$\check A$と同型であることが同値である。
-1周期同型を\emph{選んだ組}$(C,\sigma)$は、
-graded代数の同型類と同値な分類問題を与える。
+二次正連結$C$が1周期的であることと、ある次数一生成二次graded algebra $A$について
+$C\simeq\check A$となることは同値である。1周期同型を選んだ組の分類はgraded同型分類に等しい。
 \end{proposition}
 \begin{proof}
-$C=\check A$のとき、添字を一つ移す恒等同型が存在する。
-逆に$\sigma:C\to C(1)$を選び、$A_n=C_{0n}$として
-$a\in A_m,b\in A_n$の積を
-$a*b=a\,\sigma^m_{0n}(b)$と定める。
-$\sigma$が積を保つことから結合律が従う。
-$A_0=k$で、次数一生成・二次関係も引き継がれる。
-$\sigma$を使い添字ごとの成分を同定すると
-$\check A\simeq C$が得られる。
-これらの構成を同型に適用すれば組とgraded代数の同値を得る。
+$\check A$には厳密1移動がある。
+逆に$\sigma:C\to C(1)$を選び、$A_n=C_{0n}$、
+$a*b=a\,\sigma^m_{0n}(b)$（$a\in A_m,b\in A_n$）と定義する。
+$\sigma$が積を保つので結合律が成立する。次数一生成・二次性も引き継がれる。
+$\sigma$による各成分の同定から$\check A\simeq C$を得る。同型もこの対応を保つ。
 \end{proof}
 
-従ってgraded側である\texttt{as4}の定理を利用するには
-既知族を$\ZZ$-代数へ写す際の\emph{忘却}を明示しなければならない。
-gradedの同型条件を$\ZZ$-同型条件とみなしてはならない。
-また、Zhang twistによる同型はperiodic presentationにより
-同じ裸の$C$を与え得る。
-Nakayama自己同型やCY性は選んだgraded表示に依存するため、
-Z側の不変量としてそのまま採用しない。
-
-\begin{proposition}[整合する周期同型と四窓の対角表示]\label{prop:compatible-periodic-windows}
-$(C,\tau_4)$を4周期同型付き二次$\mathbb Z$-代数とし，
-$p=1$または$2$とする。
-$\sigma_p:C\xrightarrow{\sim}C(p)$が存在し，
-その$4/p$回の合成が$\tau_4$に等しいとする。
-このとき四窓の基底を適切に選ぶと，
-$V_i=k^4$の同定の下で
-\[
- R_i=R_{i+p}\quad(i\in\mathbb Z/4)
-\]
-が成立する。
-逆に四窓の座標でこの等式が成立するならば，
-指定した4周期同型$\tau_4$を$(4/p)$乗として与える
-$p$周期同型が存在する。
+\begin{proposition}\label{prop:compatible-periodic-windows}
+$(C,\tau_4)$に対し$p=1,2$とする。
+$p$周期同型$\sigma_p$の$(4/p)$乗が$\tau_4$であるなら、四窓の基底を選んで$R_i=R_{i+p}$とできる。
+逆にこの等式は、指定した$\tau_4$を$(4/p)$乗として与える$p$周期同型を定める。
 \end{proposition}
 \begin{proof}
-$p$個の剰余類代表$i=0,\dots,p-1$の次数一空間に基底を選ぶ。
-それらの基底を$\sigma_p$で整数全体に運ぶと，
-$\sigma_p$は各次数一空間の間で同一の座標を持つ。
-その$(4/p)$乗が$\tau_4$であるため，
-この基底は定理\ref{thm:four-window}で選んだ4周期座標とも両立する。
-$\sigma_p$が二次関係を保つので，$R_i=R_{i+p}$である。
-
-逆に四窓の座標で$R_i=R_{i+p}$ならば，
-頂点$i$から$i+p$への同一座標写像は二次関係空間を保つ。
-命題\ref{prop:period-relations}によって
-$\sigma_p:C\xrightarrow{\sim}C(p)$を定める。
-その$(4/p)$乗は座標上の厳密な4移動，すなわち選んだ$\tau_4$である。
+$p$個の剰余類代表の基底を$\sigma_p$で全整数へ運ぶ。
+その$(4/p)$乗が$\tau_4$なので、この基底は指定された4周期座標とも両立し、関係が$p$周期になる。
+逆に関係が$p$周期なら同一座標の移動が代数同型へ降り、その$(4/p)$乗は厳密4移動である。
 \end{proof}
-
-\begin{remark}[1周期性と対角軌跡の違い]
-$p=1$では四つの関係空間が同一になる\emph{完全対角}，
-$p=2$では$(R_0,R_1,R_0,R_1)$型の\emph{二周期対角}が現れる。
-しかしこれは$\tau_4=\sigma_p^{4/p}$という\emph{整合する選択}の結果である。
-ある$C$が1周期的または2周期的であっても，
-\emph{任意に選ばれた}$\tau_4$がその形の根を持つとは限らない。
-従って完全対角軌跡の$G$-軌道を取るだけで，裸の$C$の
-1周期的部分全体を分類したとは言えない。
+\begin{remark}
+これは整合する周期構造を選んだ結果である。
+裸の1周期性から、任意の4周期構造が1周期構造の4乗になるとは従わない。
+Nakayama自己同型やgraded CY性も、裸の$\ZZ$-代数不変量として無条件に採用しない。
 \end{remark}
 
-\section{既存の非1周期例と今後の完全分類}
-既存研究\texttt{as4/research/z\_periodicity}では、
-$\varepsilon_i=(-1)^i$として各位置の四生成元$X,Y,Z,W$に
-\begin{align*}
+既存のPBW族\cite{as4period}は、$\varepsilon_i=(-1)^i$として
+\begin{equation}\label{eq:period-two-family}
+\begin{aligned}
  XY+YX&=Z^2+W^2,& XZ+ZX&=\varepsilon_i\lambda WY,\\
  XW+WX&=Z^2,&YZ+ZY&=W^2,\\
  YW+WY&=0,&ZW+WZ&=0
-\end{align*}
-を課した2周期PBW族が調べられている。
-全ての閉パラメータで14641型・Koszul・左右AS正則であり、
-$\lambda=0$は1周期、ある非空Zariski開集合では最小周期2である。
-この結果は\texttt{as4}の原稿・有限検証コードを参照しており、
-本稿が再び検証を実行したとは主張しない。
-また別の例で最小周期4が実現される。
-これらの例が全$\ZZ$-moduliのどの既約成分に属するか、
-全特殊値の族内外同型がどうなるかは未解決である。
+\end{aligned}
+\end{equation}
+で与えられる。同原稿では全閉値でのKoszul性・左右AS正則性、14641型、
+$\lambda=0$での1周期性と、非空開集合での最小周期2が証明されている。
+最小周期4の別の例もある。本稿はその全コードを再実行したとの主張はしない。
 
-\begin{proposition}[添字移動とパラメータ符号]\label{prop:period-two-sign}
-上の2周期族$A(\lambda)$について、表示により
-\[
- A(\lambda)(1)=A(-\lambda)
-\]
-が厳密に成り立つ。
-とくに$A(\lambda)$が最小周期2であるとき、
-$A(\lambda)$と$A(-\lambda)$は
-\emph{添字保持$\mathbb Z$-代数として非同型}である。
-特に既存の非1周期性の証明が適用できる$\lambda=1$について
-$A(1)\not\simeq A(-1)$である。
+\begin{proposition}\label{prop:period-two-sign}
+表示上$A(\lambda)(1)=A(-\lambda)$である。
+$A(\lambda)$が最小周期2なら、$A(\lambda)$と$A(-\lambda)$は添字保持同型では非同型である。
+特に既存の非1周期性の証明を使えば$\lambda=1$に適用できる。
 \end{proposition}
 \begin{proof}
-六つの二次関係のうち添字$i$に依存するものは
-$XZ+ZX=(-1)^i\lambda WY$だけである。
-すべての始点を$i+1$に移すと係数は
-$(-1)^{i+1}\lambda=(-1)^i(-\lambda)$となるため、
-自由経路$\mathbb Z$-代数と二次関係イデアルが対応し、
-$A(\lambda)(1)=A(-\lambda)$が表示上厳密に成立する。
-もし$A(\lambda)\simeq A(-\lambda)$なら
-$A(\lambda)\simeq A(\lambda)(1)$となり、
-最小周期2に矛盾する。
-$\lambda=1$での最小周期2は既存の非1周期性定理を使う。
+唯一の添字依存係数$(-1)^i\lambda$は、一つ移動すると$(-1)^i(-\lambda)$になる。
+もし両者が添字保持同型なら$A(\lambda)\simeq A(\lambda)(1)$となり、最小周期2に矛盾する。
 \end{proof}
 \begin{remark}
-添字全体の平行移動も同一視する\emph{別の分類}では
-$\lambda$と$-\lambda$を同一視する余地がある。
-しかし本稿の同値関係は添字保持同型なので、この同一視は誤りとなる。
-$A(0)$は1周期的であり、上の非同型性は$\lambda=0$には適用しない。
+添字移動をさらに同一視する別のモジュライと混同しない。
+また、非1周期的な点を含む族があることだけから、その族の成分次元や1周期的部分の余次元は決まらない。
 \end{remark}
 
-今後の分類では、(i) $\mathfrak P$に課すKoszul/AS条件、
-(ii) $(C,\tau_4)\mapsto C$の同型群oidのファイバー、
-(iii) 1/2/4の周期構造とgraded側の忘却、
-(iv) 全特殊値の必要十分条件、
-(v) 全対象被覆とモジュライ成分を順に調べる。
-$\mathbb Z$-代数の最小周期が4を割ることだけでは
-全てを分類したことにはならない。
+\section{Artin環上の標準化と周期的変形複体}\label{sec:deformation-complex}
+以下、変形とは局所Artin $k$-代数$B$上の変形であり、特殊ファイバーとの同定を保持する。
+各$C_{ij}$は有限自由$B$-加群とし、同型は特殊ファイバー上で恒等とする。
+有限自己同型群による粗モジュライの商と、この基点付き変形問題は区別する。
+
+\begin{lemma}[相対Koszul性と相対4周期性]\label{lem:relative-four}
+標準14641型$C_0$の成分ごとに平坦な二次変形$C_B$は相対Koszulであり、
+双対の各成分は自由で特殊ファイバーと同じ階数を持ち、相補次数積は完全である。
+従って$C_B$はFrobenius標準4周期構造を持つ。
+trace変更の頂点スカラー共役と、同型によるtrace移送も$B$上で成立する。
+\end{lemma}
+\begin{proof}
+内部次数$n$を固定した相対bar複体は、有界な有限自由$B$-加群の複体である。
+剰余体上ではKoszul性によりホモロジーはホモロジー次数$n$にのみ存在する。
+剰余体上の可縮な二項対を、単元の行列成分を使うGaussian消去で$B$上へ持ち上げて除く。
+残る複体は一つの次数にのみ自由加群を持つため、ホモロジーは自由で、他の次数では零である。
+これを各内部次数で行うと相対Koszul性と、対角Tor、従って二次双対の階数が得られる。
+特殊ファイバーで完全な積対合は、その行列式が$B$の単元なので完全である。
+最高次数成分は自由階数1だからtraceを選べる。
+前節の$\nu$の構成、積の保存、逆双対化は完全対合だけを用い、$B$上でも同じである。
+traceの比は$B^\times$に属し、$s_{i+4}/s_i=t_i$は四つの剰余類で解ける。
+従って共役性と同型による移送も成立する。
+\end{proof}
+
+\paragraph{PBW座標。}
+生成元を$x_0<x_1<x_2<x_3$とし、基点の収束二次書換え則を
+\[
+ x_bx_a\longmapsto F_{ba}(x_0,x_1,x_2,x_3)\quad(a<b)
+\]
+と書く。右辺は順序付き二次単項式10個の線型結合とする。
+位置$i$での変形は$F_{ba}+\alpha_{i,ba}$で表し、$\alpha_i$には$6\cdot10=60$成分がある。
+基点での書換えは単項式順序を減らし、変形部分はArtin環の極大イデアルの次数を上げる。
+従ってこの二つを組み合わせた有限の還元手順により、Artin環上の正規形を定義できる。
+唯一の重なりは$x_cx_bx_a$（$a<b<c$）の4個である。
+各重なりの差を順序付き三次単項式20個に展開し、全$4\cdot20=80$成分を零とすることが、
+相対Diamond lemmaによる平坦性の必要十分条件になる。
+これは通常の数値的Hilbert一致だけをAS正則性の証明に使う議論ではない。
+
+\paragraph{一次複体。}
+基底の一次変更を$f_i\in\operatorname{End}(k^4)$とする。
+関係の変化と重なりの線型項は
+\begin{equation}\label{eq:linear-complex}
+ \alpha_i=N_0f_i+N_1f_{i+1},\qquad
+ M_0\alpha_i+M_1\alpha_{i+1}=0
+\end{equation}
+である。$N_0,N_1$は$60\times16$、$M_0,M_1$は$80\times60$行列である。
+定義は次の通りで、同梱\path{computations/pbw_complex.py}にもそのまま実装する。
+関係$r_{ba}=x_bx_a-F_{ba}$の第$j$因子を$f$で置換し基点で正規化したものが$N_jf$である。
+三次重なりを左先行・右先行の二通りで還元し、位置0または1で一度だけ
+$F$を$\alpha$に置換した項の差が$M_0\alpha$または$M_1\alpha$である。
+全ての語・対・三つ組・単項式は辞書式順序に固定する。
+
+周期$m\mid4$の変形をFourier分解して$\alpha_i=\zeta^i\alpha$と書くと
+\begin{equation}\label{eq:fourier-complex}
+ k^{16}\xrightarrow{D_1(\zeta)=N_0+\zeta N_1}
+ k^{60}\xrightarrow{D_2(\zeta)=M_0+\zeta M_1}k^{80},\qquad\zeta^m=1
+\end{equation}
+を得る。$D_2D_1=0$は基底変更による変形が結合的であることから従う。
+コードでは$M_0N_0=M_1N_1=M_0N_1+M_1N_0=0$も個別に検査する。
+一次変形の同値類は$H^2_\zeta=\ker D_2(\zeta)/\operatorname{im}D_1(\zeta)$である。
+
+\begin{lemma}[滑らかな族を用いる局所完全性]\label{lem:smooth-source}
+有限型の表示空間の点$x$について、滑らかなパラメータ空間からの射が$x$で接空間を全射するなら、
+$x$の表示空間は滑らかであり、その族は形式的局所的に全ての変形を含む。
+同じ結論は有限変数・有限形式方程式で与えた完備局所環にも成立する。
+\end{lemma}
+\begin{proof}
+$d=\dim T_x$とする。滑らかな源の完備局所座標から、接写像が同型となる$d$変数の形式的切片を選ぶ。
+標的の完備局所環を$k[[u_1,\ldots,u_d]]/I$と書く。
+切片への写像における$u_i$の像の線型部は独立なので、形式的逆写像定理により
+$k[[u_1,\ldots,u_d]]\to k[[t_1,\ldots,t_d]]$は同型である。
+この写像が$I$を零へ送るため$I=0$であり、結論を得る。
+\end{proof}
+\begin{remark}
+\emph{源の滑らかさ}を省いて接写像の全射性だけを使ってはいけない。
+例えば尖点曲線$y^2=x^3$の$\mathbb A^2$への包含は原点で接空間を全射するが、
+曲線は平面の既約成分ではない。
+本稿では\cite[Proposition 5.1]{BILN}をこの一般性では用いず、上の補題を直接使う。
+\end{remark}
+
+\section{量子多項式成分：同型類次元6と3}\label{sec:quantum}
+$q_{ab}\in k^\times$（$a<b$）に対し
+\[
+ A_q=k\langle x_0,x_1,x_2,x_3\rangle/
+ (x_bx_a-q_{ab}x_ax_b\mid a<b)
+\]
+と置く。$q_{ba}=q_{ab}^{-1}$と約束する。
+全ての$q$で順序付き単項式が基底となり、双対量子外積代数の相補次数積が完全なので、
+$A_q$は標準14641型である。次の開集合を考える。
+\[
+ U=\{q:c_{abc}:=q_{ab}q_{bc}/q_{ac}\ne1\quad(a<b<c)\}.
+\]
+
+\begin{theorem}[量子多項式族の二つの同型分類]\label{thm:quantum-orbits}
+$U$上で次が成立する。
+\begin{enumerate}
+\item graded同型は、四生成元の同じ置換による$q$の変換に尽きる。
+従って同型類の有理商の次元は6である。
+\item 添字保持同型$\check A_q\simeq\check A_{q'}$は、上の置換に加えて
+\begin{equation}\label{eq:quantum-twist}
+ q'_{ab}=q_{ab}\,s_a/s_b\qquad(s_a\in k^\times)
+\end{equation}
+を許したものに尽きる。この同型類の次元は3である。
+\item 置換で割る前の商は、例えば
+$(c_{012},c_{013},c_{023})$で記述できる。
+$c_{123}=c_{012}c_{023}/c_{013}$であり、独立な不変量は三つである。
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+多重線型化は$p_bq_a-q_{ab}p_aq_b=0$である。
+$p$の非零成分が三つ以上あると、対応する三点で$c_{abc}=1$が必要となる。
+また$p$の支持と$q$の支持は一致する。従って$U$上の点スキームは六つの座標直線の和であり、
+その特異点は四つの座標頂点である。関係対応は各座標頂点を同じ頂点へ送る。
+
+この配置を保つ射影線型写像は四頂点を置換するので単項行列である。
+graded同型に対しては両テンソル因子に同じ単項行列が働くため、
+対角成分は$q$を変えず、置換だけが残る。
+
+$\ZZ$-代数同型の次数一部分を$g_i$とする。
+各$g_i$は単項行列であり、頂点対応の保存により隣接位置の置換は同じである。
+共通の置換を除き、$g_i(x_a)=t_{i,a}x'_a$と書くと
+\[
+ \frac{q'_{ab}}{q_{ab}}
+ =\frac{t_{i,a}t_{i+1,b}}{t_{i,b}t_{i+1,a}}.
+\]
+$i=0$の式だけから$q'/q$は$s_a/s_b$の形になる。
+逆に式\eqref{eq:quantum-twist}があれば$t_{i,a}=s_a^{-i}$とすることで全位置に同型を作れる。
+有効な対角twist群は$(k^\times)^4/k^\times$、次元3であり、自由に作用する。
+その商の次元は$6-3=3$である。
+三角積はこの作用で不変であり、三つの辺$q_{01},q_{02},q_{03}$を1に規格化すれば、
+残りの三つの辺はこれらの三角積で復元される。
+最後の$S_4$という有限群の商は次元を変えない。
+\end{proof}
+
+\paragraph{次数零自己同型とstack次元。}
+一般点でgraded自己同型群は対角$(k^\times)^4$である。
+従ってgraded族のstack次元と同型類次元6を混同してはならない。
+$\ZZ$-代数ではさらに各頂点のスカラーがあり、ここでの3もstack次元の主張ではない。
+
+\begin{theorem}[一般量子多項式点の局所成分]\label{thm:quantum-local}
+量子多項式族のある非空開部分では、標準AS正則$\ZZ$-代数の全Artin変形は、
+同型を除いて量子多項式族から得られる。
+従ってこの成分の一般点で、graded同型類の局所次元は6、
+裸の添字保持同型類の局所次元は3である。
+この点の近傍の次元差はtwist方向の忘却によるものであり、
+非1周期的対象を加えたことによる増大ではない。
+この主張の行列階数部分は計算補助証明である。
+\end{theorem}
+\begin{proof}
+次の有理数点を使う。順序は$(01,02,03,12,13,23)$である。
+\begin{equation}\label{eq:quantum-sample}
+ q_*=(2,3,1/6,5,2/5,15).
+\end{equation}
+この点では各行の積$\prod_{b\ne a}q_{ab}=1$であり、全ての三角積が1と異なる。
+双対量子外積代数のNakayama作用は次数一で$-I$、最高次traceを$(-1)^i$倍すると
+厳密4移動がFrobenius標準構造になる。
+
+式\eqref{eq:fourier-complex}の厳密階数は
+\[
+\begin{array}{c|rrr}
+\zeta&\rk D_1&\rk D_2&\dim H^2_\zeta\\\hline
+1&12&42&6\\
+-1&15&45&0\\
+\sqrt{-1}&15&45&0\\
+-\sqrt{-1}&15&45&0
+\end{array}
+\]
+である。さらに六つの$q$の微分を$K$と書くと
+$D_2(1)K=0$、$\rk(D_1(1)\mid K)=18$である。
+これらは\path{computations/verify_moduli_jets.py}で$\QQ$および$\QQ(\sqrt{-1})$上で検証する。
+行列の定義は前節の有限還元手順であり、入力は式\eqref{eq:quantum-sample}だけである。
+
+四窓表示の接空間は$6+57=63$次元である。
+滑らかな族$\GL_4^4\times(k^\times)^6$の接写像は、基底変更の57方向と$q$の6方向により
+全63次元を張る。補題\ref{lem:smooth-source}により四周期PBW表示の形式的局所空間は滑らかで、
+この族が全変形を含む。
+相対Diamond lemmaにより、ここで使う形式方程式は平坦二次変形を記述する。
+補題\ref{lem:relative-four}によって、裸の標準AS正則変形も標準4周期座標に直せるため、
+この議論から漏れる無周期の形式的方向はない。
+
+従って裸の同型類は量子多項式族における同型類の商で尽くされる。
+前定理の三次元twist群と有限置換群による分類を適用して局所次元3を得る。
+graded側には同じ議論を$\zeta=1$で適用して局所次元6を得る。
+非零小行列式とKodaira--Spencer写像の階数条件は開条件なので、結論は非空開部分で成立する。
+滑らかな形式的近傍は既約であるから、これは族内の次元だけでなく、対応する一般点の局所成分の次元である。
+\end{proof}
+
+\begin{remark}
+この定理は全ての成分が量子多項式成分であるとの主張ではない。
+特に次節のClifford点は異なる変形挙動を示す。
+また一般の4周期表示の接空間の6を、裸の$\ZZ$-代数の同型類次元と読み替えてはいけない。
+標準化しない周期構造と、twistによる同一視の余分な自由度が残っているためである。
+\end{remark}
+
+\section{Clifford特殊点の一次変形と二次障害}\label{sec:clifford}
+式\eqref{eq:period-two-family}の$\lambda=0$を$C_0=\check A_0$とする。
+ここでは$x_0=W,x_1=Y,x_2=Z,x_3=X$の順序を使う。書換えは
+\begin{equation}\label{eq:clifford-rules}
+\begin{array}{lll}
+YW\mapsto-WY,& ZW\mapsto-WZ,& ZY\mapsto-YZ+W^2,\\
+XW\mapsto-WX+Z^2,& XY\mapsto-YX+Z^2+W^2,& XZ\mapsto-ZX.
+\end{array}
+\end{equation}
+この六規則の四つの重なりは解消する。
+双対を$x,y,z,w$（それぞれ$X,Y,Z,W$に双対）で書くと
+\[
+ E_0=k[x,y,z,w]/(x^2,y^2,z^2+xw+xy,w^2+yz+xy)
+\]
+である。四つの二次式の共通零点は原点だけなので正則列であり、
+$E_0$はHilbert級数$(1+t)^4$のFrobenius代数である。
+元代数の二次PBW性と併せて$C_0$の標準14641型を確認できる。
+$E_0$は可換なので一定traceのNakayama作用は恒等であり、厳密4移動がFrobenius標準である。
+
+\begin{theorem}[Clifford点の変形接空間]\label{thm:clifford-tangent}
+式\eqref{eq:clifford-rules}に対するFourier複体の厳密階数は
+\begin{equation}\label{eq:clifford-ranks}
+\begin{array}{c|rrr}
+\zeta&\rk D_1&\rk D_2&\dim H^2_\zeta\\\hline
+1&15&36&9\\
+-1&15&39&6\\
+\sqrt{-1}&15&45&0\\
+-\sqrt{-1}&15&45&0
+\end{array}
+\end{equation}
+である。選んだgraded表示$A_0$から裸の$C_0$への忘却の接写像は単射で、
+その像は9次元の偶成分、余核は6次元の交代成分である。
+$C_0$の基点付き標準AS正則$\ZZ$-代数変形の接空間は15次元である。
+\end{theorem}
+\begin{proof}
+階数は式\eqref{eq:clifford-rules}から前節の算法で作った行列を有理数上で消去して得る。
+同梱コードは$D_2D_1=0$、各階数、核と像の商の基底を独立に検査する。
+四周期変形は四つのFourier成分の直和だから、その商接空間は$9+6=15$であり、
+graded変形の像は$\zeta=1$成分である。
+
+裸の変形への移行でこの次元を失わないことを確認する。
+$C_0$の任意の無限小自己同型は、標準4周期構造の自然性により、
+頂点スカラーを除けば4周期的である。
+各Fourier成分で$D_1$の核はスカラー行列の一次元だけなので、
+射影的な無限小自己同型は零である。
+Artin変形上で恒等に還元される自己同型も、極大イデアルのべきに沿う帰納法により頂点スカラーに限る。
+従って厳密4周期構造と相対標準4周期構造との差は、頂点スカラー共役で取り除ける。
+二つの裸の同型の比較にも同じ議論が適用できる。
+補題\ref{lem:relative-four}により全ての裸の変形を4周期表示にできるので、
+ここでは4周期構造を忘れても、スカラーを除いた基点付き変形接空間は変わらない。
+\end{proof}
+
+\paragraph{座標の固定。}
+各モードで$\ker D_2$と$\operatorname{im}D_1$を通常の有理数rrefで計算し、
+像の列基底の後に核の列基底を並べて、ピボットとして新しく残る核の列を商基底とする。
+この決定的な手順で偶基底$e_0,\ldots,e_8$、交代基底$o_0,\ldots,o_5$を固定する。
+全係数は\path{research/moduli_certificate.json}に記録する。
+特に$o_0$は$YW$の右辺へ$ZX$を、$o_5$は$XZ$の右辺へ$WY$を加える基底ベクトルである。
+位置$i$での交代変化には$(-1)^i$を掛ける。
+
+\begin{theorem}[全15方向の二次障害]\label{thm:clifford-quadratic}
+上の基底で、一次変形$e+o$が二次まで持ち上がるための必要十分条件は
+\begin{equation}\label{eq:clifford-Q}
+ Q(o)=o_0o_5+o_1o_2-o_2o_3+o_3o_4=0
+\end{equation}
+である。偶方向同士と偶・交代の混合の二次障害は零である。
+$Q$の階数は6である。従って基点付き変形のminiversal環を$R$と書くと、適当な形式座標で
+\[
+ R/\mathfrak m^3\simeq
+ k[e_0,\ldots,e_8,o_0,\ldots,o_5]/(Q,(e,o)^3).
+\]
+この命題は\emph{二次まで}の主張であり、完備局所環$R$全体を決定するものではない。
+\end{theorem}
+\begin{proof}[計算補助証明]
+書換え則を$F+t\alpha+t^2\beta$とし、三次重なりの$t^2$係数を取る。
+その式は$D_2\beta+\operatorname{Ob}_2(\alpha)=0$である。
+$\alpha_i=e+(-1)^i o$なので、二次残差は偶・交代成分だけを持つ。
+$L_+$を$D_2(1)^{\mathsf T}$の核の転置、$L_-$を$D_2(-1)^{\mathsf T}$の核の転置とする。
+それぞれ$44\times80$、$41\times80$であり、
+残差が$D_2$の像に入ることは$L_+\operatorname{Ob}_{2,+}=0$と
+$L_-\operatorname{Ob}_{2,-}=0$に同値である。
+
+15個の基底ベクトルとその異なる二つの和で残差を評価する。
+二次式であるため、この$15+\binom{15}{2}=120$回の厳密計算で全係数が決まる。
+得られた85成分の二次式は全て$0,Q,-Q$のいずれかであり、少なくとも一つが$Q$または$-Q$である。
+これを\path{computations/verify_moduli_jets.py}が有理数のみで検査する。
+$\pm\sqrt{-1}$成分には残差がないので、四周期の二次補正を許しても条件は変わらない。
+前定理の相対標準化により裸の変形でも同じ条件である。
+
+この検査は単に正の持上げ候補を見つけるものではない。
+$L_\pm$が左核全体の基底なので、像への所属の必要性と十分性を同時に証明している。
+また一般の二次式の全係数を検査しており、特定のパラメータ値だけの数値観察ではない。
+$rref$によって線型方程式と基底変更方向を除いた局所方程式の二次部分も同じ残差であるため、
+表示した$R/\mathfrak m^3$を得る。
+最後に
+\[
+ z_1=o_0,\ z_2=o_5,\ z_3=o_1-o_3,\ z_4=o_2,\ z_5=o_3,\ z_6=o_4
+\]
+は可逆な線型変換であり、$Q=z_1z_2+z_3z_4+z_5z_6$となる。従って階数は6である。
+\end{proof}
+
+\begin{corollary}[Pl\"ucker型の最初の障害]\label{cor:plucker-obstruction}
+六つの交代方向に対する二次障害の零点錐は、
+Pl\"ucker埋込み$\Gr(2,4)\subset\mathbb P^5$上のアフィン錐と線型同型である。
+これは\emph{二次障害が許す候補錐}の記述であり、実際の接錐や成分全体の同定ではない。
+\end{corollary}
+\begin{proof}
+$\Gr(2,4)$のPl\"ucker式$p_{01}p_{23}-p_{02}p_{13}+p_{03}p_{12}=0$に
+$(p_{01},p_{23},p_{02},p_{13},p_{03},p_{12})=(z_1,z_2,z_3,-z_4,z_5,z_6)$を代入する。
+\end{proof}
+
+\begin{proposition}[二つの積分可能な軸と混合障害]\label{prop:two-axes}
+式\eqref{eq:clifford-rules}のうち、それぞれ一方だけを
+\[
+ YW\mapsto-WY+(-1)^i aZX,\qquad
+ XZ\mapsto-ZX+(-1)^i bWY
+\]
+に置き換えると、各軸上で全パラメータの二次PBW族を得る。
+原点での形式変形は相対AS正則である。
+しかし両軸の接方向を同時に取った一次変形には二次障害$ab$があり、
+$a=b=1$という接方向は、任意の二次補正を許しても持ち上がらない。
+\end{proposition}
+\begin{proof}
+各軸について二つの始点と四つの三次重なり、合計8個の重なり差は$\QQ[a]$または$\QQ[b]$上で恒等的に零である。
+同梱コードは記号多項式としてこれを確認する。
+$b$軸では通常の次数付き辞書式順序を使える。
+$a$軸では重み$(W,Y,Z,X)=(1,4,1,1)$を先に比較し、同じ重みでは$X>Z>Y>W$の辞書式順序を使うと
+全規則が減少する。Diamond lemmaから順序付き単項式基底と平坦性を得る。
+形式的なAS正則性は補題\ref{lem:relative-four}による。
+新しい$a$軸の\emph{全閉ファイバー}のAS正則性は、この議論だけでは主張しない。
+接方向は$o_0,o_5$なので、式\eqref{eq:clifford-Q}を制限すると$ab$になる。
+\end{proof}
+
+\subsection{まだ結論できないこと}
+上の計算から、Clifford点における成分次元が14であるとは結論できない。
+三次以上の独立な関係式が残る可能性がある。
+また$9\to15$は\emph{選んだgraded表示}$A_0$での忘却写像の微分である。
+同じ裸の$C_0$に別の1周期構造を付けたときのgraded表示は別途調べる必要がある。
+全ての1周期的部分の局所余次元を6または5と断定してはならない。
+
+\begin{conjecture}[検証対象の局所模型]\label{conj:clifford-model}
+Clifford点の基点付き変形環は
+\[
+ k[[e_0,\ldots,e_8,z_1,\ldots,z_6]]/
+ (z_1z_2+z_3z_4+z_5z_6)
+\]
+と同型である。
+\end{conjecture}
+この予想を裏付ける確定事項は定理\ref{thm:clifford-quadratic}の二次切断までである。
+この模型が正しければ局所次元14となるが、その十分性・高次持上げ・全周期1構造の分類は未解決である。
+
+\section{7変数の代数的族と一般点の最小周期2}\label{sec:algebraic-family}
+ここでは形式的な持上げから離れ、全パラメータで定義された代数的族を構成する。
+基底体は引き続き標数零とする。基底を
+\[
+ S=\operatorname{Spec}k[u,v,r,s,a,b,c]\simeq\mathbb A^7
+\]
+とし、位置$i$で$\varepsilon=(-1)^i$と置く。積は隣接する一次生成空間の積を表す。
+\begin{equation}\label{eq:seven-family}
+\begin{aligned}
+ YW+WY&=0,& ZW+WZ&=0,& ZY+YZ&=W^2,\\
+ XW+WX&=uY^2+vZ^2+\varepsilon a(YZ-\tfrac12W^2),\\
+ XY+YX&=W^2+Z^2+rY^2+\varepsilon(aWY+bWZ),\\
+ XZ+ZX&=sY^2+\varepsilon cWY.
+\end{aligned}
+\end{equation}
+この二次$\ZZ$-代数を$\mathcal C$と書く。
+点$p_0=(0,1,0,0,0,0,0)$では$\mathcal C_{p_0}=C_0$である。
+$u=r=s=a=b=0,\ v=1$に制限すると、既存の2周期族$A(c)$を得る。
+
+\begin{theorem}[全ファイバーで正則な代数的族]\label{thm:algebraic-seven}
+式\eqref{eq:seven-family}の$\mathcal C$は$S$上成分ごとに自由であり、
+各$\mathcal C_{i,i+n}$の基底は
+\[
+ \{W^{h}Y^{j}Z^{\ell}X^{m}:h+j+\ell+m=n\}
+\]
+である。任意の幾何学的ファイバーは行Hilbert級数$(1-t)^{-4}$の
+標準14641型quadratic Koszul AS正則$\ZZ$-代数である。
+全ファイバーが2周期的である。ここには一般性条件や分母の非零条件を課さない。
+\end{theorem}
+\begin{proof}
+$W<Y<Z<X$とし、逆順の二次語を順序付き語へ書き換える。
+補助重みを$(1,2,2,4)$とし、重みが同じなら辞書式順序で比較する。
+各規則の$-x_ax_b$以外の項は左辺より真に重みが小さく、
+$-x_ax_b$も辞書式順序を小さくする。
+従って全パラメータで還元は停止する。
+重なりは$ZYW,XYW,XZW,XZY$の四つで、始点の偶奇を含めて8個である。
+全ての差は$k[u,v,r,s,a,b,c]$上で恒等的に零となる。
+再現コード\path{computations/verify_algebraic_family.py}は、特殊化や次数打切りを行わず
+8個を多項式として検査する。Diamond lemma\cite[Theorem 1.2]{Bergman}から主張の自由基底を得る。
+
+この恒等式には次の構造的説明もある。
+\[
+ B=k\langle W,Y,Z\rangle/(YW+WY,ZW+WZ,ZY+YZ-W^2),\quad T=YZ-\tfrac12W^2
+\]
+と置く。$W^2,Y^2,Z^2$は中心的で、$T$は$W$と可換、$Y,Z$と反可換である。
+通常の次数1の導分$d$を
+\[
+ d(W)=aT,\qquad d(Y)=aWY+bWZ,\qquad d(Z)=cWY
+\]
+で定められる。最初の二関係の像は零であり、第三関係については
+\[
+ \{d(Z),Y\}+\{Z,d(Y)\}=2aWT=\{d(W),W\}
+\]
+となる。ここで$\{x,y\}=xy+yx$である。
+一方、$\sigma_B(W,Y,Z)=(-W,-Y,-Z)$に対し、
+\[
+ p_W=uY^2+vZ^2,\quad p_Y=W^2+Z^2+rY^2,\quad p_Z=sY^2
+\]
+は、$\delta_p(fh)=\delta_p(f)h+\sigma_B(f)\delta_p(h)$を満たす$\sigma_B$-導分を定める。
+各$p_j$が中心的なので関係の像は交換子の和として零になる。
+$g^2=1$、$gW=-Wg,gY=-Yg,gZ=-Zg$を追加した環に
+\[
+ \sigma(g)=-g,\quad\sigma(W,Y,Z)=(-W,-Y,-Z),\quad
+ \delta(g)=0,\quad\delta(j)=p_j+g d(j)
+\]
+を定めると、$\delta$は$\sigma$-導分である。
+Ore拡大$Xh=\sigma(h)X+\delta(h)$の二つの冪等元$(1\pm g)/2$に沿った
+展開が式\eqref{eq:seven-family}である。これも全パラメータでの基底を説明する。
+
+AS正則性をHilbert級数だけから結論しない。
+二次Gr\"obner基底からKoszul性が従う\cite[Theorem 5.3]{Priddy}。
+そのbar複体のフィルトレーションによる証明は、各経路の始点・終点を固定すれば$\ZZ$-代数にも適用できる。
+補助重みの随伴次数代数は、全ての相異なる生成元が反可換する四変数の量子多項式代数である。
+二次双対$E$には逆重みのフィルトレーションを入れる。
+二次関係の直交補空間の初期空間を取ることで、その随伴次数代数は
+\[
+ k[\xi_W,\xi_Y,\xi_Z,\xi_X]/(\xi_W^2,\xi_Y^2,\xi_Z^2,\xi_X^2)
+\]
+の対応する$\ZZ$-版からの商となる。
+Koszul性とHilbert級数の逆数公式により$\dim E_{i,i+n}=\binom4n$なので、この全射は同型である。
+随伴次数代数の相補次数積は完全である。
+任意の非零な先頭項に相補単項式を掛ければ最高次数で非零になるから、
+元の$E$の相補次数積も非退化であり、同じ次元より完全である。
+従って局所Frobenius性が全ファイバーで成り立つ。
+左右のKoszul複体をこの完全対合で双対化すると、単純加群に対するExtは
+次数4だけに一次元存在し、左右AS条件と14641型解消を得る。
+Koszul双加群解消の長さも4であり、大域次元は4となる。
+係数が偶奇だけに依存するので厳密2移動は同型である。
+\end{proof}
+
+\begin{theorem}[同型類の7次元性と三つの交代方向]\label{thm:seven-image}
+この族のindexed $\ZZ$-代数同型類の像は7次元である。
+正確には、稠密開集合上でパラメータの同型類への写像は一般に有限対一であり、
+この意味で有効パラメータは7個ある。
+$p_0$における接方向は偶4方向と交代3方向に分かれ、いずれも同型で消えない。
+交代3方向の前節の座標は
+\begin{equation}\label{eq:seven-odd-plane}
+ (o_0,o_1,o_2,o_3,o_4,o_5)=(0,-b,-a,-b,0,c).
+\end{equation}
+これは$Q=0$の最大等方3平面であり、本族はその全方向を代数的に同時に積分している。
+\end{theorem}
+\begin{proof}
+位置0の一つの関係空間だけを取り、
+$\phi:S\to\Gr(6,k^4\otimes k^4)$と
+$G=\PGL_4\times\PGL_4$の作用を考える。
+$p_0$での関係座標における群作用の微分は$[N_0\ N_1]$であり、階数は30である。
+式\eqref{eq:seven-family}を七つのパラメータで微分した$60\times7$行列を$J$とすると
+\[
+ \rk[N_0\ N_1]=30,\qquad \rk[N_0\ N_1\ J]=37.
+\]
+同梱コードはこれらを有理数上で厳密に検証する。
+従って滑らかな37次元の源$G\times S$からGrassmannianへの軌道飽和写像は
+$p_0$で階数37を持ち、その像の閉包は37次元である。
+一般の$G$軌道は30次元なので、一般軌道を分離する有理商の次元は7である。
+別の言い方では、一般のパラメータに対し、その関係空間と$G$-同値なパラメータは有限個である。
+裸のindexed同型は必ず位置0の関係空間の$G$-同値を誘導するので、
+同型による同一視はこれ以上の正次元ファイバーを生まない。
+全域モジュライstackの存在や全周期構造の分類は、この次元評価に不要である。
+
+偶方向について$\rk[D_1(1)\ J_{u,v,r,s}]=19=15+4$、
+交代方向について$\rk[D_1(-1)\ J_{a,b,c}]=18=15+3$となる。
+商基底へ移すと式\eqref{eq:seven-odd-plane}を得る。
+代入すれば$Q=0$であり、階数6の非退化二次形式の等方空間として次元3は最大である。
+積分可能性は単なる接空間の主張ではなく、前定理の全$S$上の族によって与えられる。
+\end{proof}
+
+\subsection{隣接する点対応の射影配置による非1周期性}
+関係を双線型化し、始点の座標を$[w:y:z:x]\in\mathbb P^3$とする。
+次の$6\times4$行列が標点の座標に掛かる。
+\begin{equation}\label{eq:seven-point-matrix}
+ M_\varepsilon(w,y,z,x)=
+ \begin{pmatrix}
+ y&w&0&0\\z&0&w&0\\-w&z&y&0\\
+ x+\varepsilon aw/2&-uy&-vz-\varepsilon ay&w\\
+ -w&x-ry-\varepsilon aw&-z-\varepsilon bw&y\\
+ 0&-sy-\varepsilon cw&x&z
+ \end{pmatrix}.
+\end{equation}
+$E_\varepsilon\subset\mathbb P^3$をその$4\times4$小行列式の零点スキームとする。
+これは位置の偶奇に対応する点対応の左射影である。
+1周期同型が存在すれば$E_+$と$E_-$は射影線型同型でなければならない。
+
+\begin{theorem}[一般のファイバーは最小周期2]\label{thm:seven-period-two}
+$S$の非空なZariski開集合上で、$\mathcal C$の最小周期は2である。
+従って7次元の同型類の像の一般点は、どのgraded代数にも由来しない。
+これは特定のgraded表示からの変形枝だけを排除する主張ではない。
+\end{theorem}
+\begin{proof}
+$e_X=[0:0:0:1]$以外の点を$e_X$から$\mathbb P^2_{w,y,z}$へ射影する。
+行列\eqref{eq:seven-point-matrix}の最初の三行の行列式は$-w(w^2+2yz)$である。
+従って射影像は直線$L=(w=0)$と非特異二次曲線$D=(w^2+2yz=0)$の上にある。
+
+$L$上で$[w:y:z]=[0:1:\ell]$とすると、標点の前三座標は$[0:1:-\ell]$であり、
+必要十分条件は
+\begin{equation}\label{eq:seven-line}
+ v\ell^2+\varepsilon a\ell-u=0.
+\end{equation}
+$uv(a^2+4uv)\ne0$なら相異なる二点を得る。
+残る座標は$x+x'=r-\ell^2,\ x'-x=s/\ell$から一意に決まる。
+
+$D\setminus L$上では$[w:y:z]=[1:t:-1/(2t)]$で$t\ne0$と書け、
+標点は$[1:-t:1/(2t)]$へ射影される。
+最後の三関係から$x,x'$を消去すると
+\begin{equation}\label{eq:seven-sextic}
+ F_\varepsilon(t)=8st^6+8\varepsilon ct^5+4rt^4+4\varepsilon at^3
+                   -4t^2-2\varepsilon bt+1=0
+\end{equation}
+を得る。$s\ne0$かつ$F_+$が重根を持たなければ、二次曲線上に相異なる六点がある。
+それぞれの点で$x,x'$は一意に決まる。
+この八点は、対応する一変数方程式の単根性から$E_\varepsilon$の被約点である。
+一方$e_X$では最後の三行を用いて標点の三座標を局所的に消去でき、
+残る方程式は二次以上である。従ってその接空間は三次元である。
+上の条件では支持が有限なので$e_X$は非被約点であり、唯一の非被約支持点となる。
+
+さらに、射影された八点のうち六点を通る二次曲線が$D$だけであるという条件を、
+両符号について課す。これは単根の有限\'etale被覆上で有限個の行列式の非零として書ける開条件である。
+この条件下で$E_+\simeq E_-$という射影線型同型は$e_X$を固定し、
+商平面の射影変換を誘導する。その変換は$D$を保ち、残る二点を結ぶ$L$も保つ。
+$D$上の座標$t$では、従って$t\mapsto\rho t$または$t\mapsto\rho/t$である。
+
+$F_-(\rho t)$の根が$F_+(t)$の根に一致する場合、定数項は両方1なので両多項式は等しい。
+$t^2$係数から$\rho^2=1$、$a\ne0$なら$t^3$係数から$\rho=-1$である。
+反転型の場合は$t^6F_-(\rho/t)=F_+(t)/(8s)$となる。
+$t^4,t^2$係数を比較して
+\[
+ -4\rho^2=\frac{r}{2s},\qquad 4r\rho^4=-\frac1{2s}
+\]
+を得るので、$r^3+8s=0$が必要である。これを非零と仮定すれば反転型はない。
+残る$t\mapsto-t$は平面上で$[w:y:z]\mapsto[w:-y:-z]$であり、$L$上では恒等である。
+しかし$a\ne0$なら式\eqref{eq:seven-line}の正負の二点集合は異なる。
+従ってこの変換も両配置を対応させず、$E_+$と$E_-$は射影線型非同型である。
+
+以上の開条件が非空であることを、次の有理数点で確認する。
+\begin{equation}\label{eq:seven-rational-point}
+ (u,v,r,s,a,b,c)=
+ (13/3,-13/6,-1/4,1/2,13/2,13/5,-13/5).
+\end{equation}
+$F_+$の根は$1/5,1/2,1,5,-1,-1/2$、直線上の正符号の根は$1,2$、負符号では$-1,-2$である。
+$r^3+8s=255/64$、$a^2+4uv=169/36$となる。
+射影平面上の八点から六点を選ぶ28通りについて、二次単項式の評価行列を有理数上で計算すると、
+行列式が零になるのは二次曲線上の六点を取った場合だけである。
+その場合の階数は5であり、二次曲線は一意である。両符号とも同じ検査に成功する。
+具体的な点、行列、根の検査は同梱コードに実装し、証明書に記録する。
+従って全条件を満たす非空開集合が存在し、その上では1周期性が排除される。
+全ファイバーが2周期的なので、そこでの最小周期は2である。
+\end{proof}
+
+\begin{remark}[何を決定し、何をまだ決定していないか]
+本節は、形式級数の存在ではなく全$\mathbb A^7$上の多項式関係、全閉ファイバーの正則性、
+一般点の非1周期性、同型類の像の次元7を与える。
+ただしこの像が全モジュライの既約成分であるとは主張しない。
+Clifford点の全九つの偶方向を含む族でもなく、残る交代方向の代数的積分、
+全成分の次元、全1周期構造の分類は未解決である。
+特に本節の7次元を、前節の14次元候補と取り違えてはならない。
+\end{remark}
+
+\section{残る分類問題と検証範囲}
+一般の四窓のKoszul/AS正則locusの必要十分条件、全対象被覆、閉特殊値、相対族の大域的下降、
+全モジュライの既約成分は未解決である。
+現在の最優先は、式\eqref{eq:seven-family}を拡大し、より多くの偶・交代方向を含む
+明示的な代数的AS正則族とその族内外同型を求めることである。
+導分と中心二次式による構成を出発点とし、別の三生成部分代数や重み順序を使うチャートを比較する。
+形式的障害計算は候補の除外・必要条件の抽出に使い、代数的な全パラメータ族の構成を優先する。
+全九つの偶方向、残る交代方向、全1周期構造、成分としての最大性は未解決である。
+同時に$C_0$の有限射影自己同型群と全1周期構造を調べ、選んだgraded枝と1周期的全体を分離する。
+
+本稿の有限線型代数・二次障害・二つの軸の重なりは今回厳密に実行した。
+全定理の形式化、第三者査読、\cite{as4period}の全計算の再実行はしていない。
+文献による既知結果と今回の計算を区別し、コードの成功だけで高次障害の消滅や全分類を主張しない。
 
 \begin{thebibliography}{9}
-\bibitem{BP}
-A.~I.~Bondal and A.~E.~Polishchuk,
+\bibitem{BP} A.~I.~Bondal and A.~E.~Polishchuk,
 \emph{Homological properties of associative algebras: the method of helices},
 Russian Acad. Sci. Izv. Math. \textbf{42} (1994), no.~2, 219--260.
 \href{https://doi.org/10.1070/IM1994v042n02ABEH001536}{doi:10.1070/IM1994v042n02ABEH001536}.
-\bibitem{MoriNyman}
-I.~Mori and A.~Nyman,
+\bibitem{MoriNyman} I.~Mori and A.~Nyman,
 \emph{A categorical characterization of quantum projective $\mathbb Z$-spaces},
 Applied Categorical Structures \textbf{33} (2025).
 \href{https://doi.org/10.1007/s10485-025-09806-2}{doi:10.1007/s10485-025-09806-2};
 \href{https://arxiv.org/abs/2307.15253}{arXiv:2307.15253}.
-\bibitem{Zhang}
-J.~J.~Zhang, \emph{Twisted graded algebras and equivalences of graded categories},
+\bibitem{Zhang} J.~J.~Zhang,
+\emph{Twisted graded algebras and equivalences of graded categories},
 Proc. Lond. Math. Soc. \textbf{72} (1996), 281--311.
-\bibitem{Sierra}
-S.~J.~Sierra, \emph{G-algebras, twistings, and equivalences of graded categories},
+\bibitem{Sierra} S.~J.~Sierra,
+\emph{G-algebras, twistings, and equivalences of graded categories},
 Algebras and Representation Theory \textbf{14} (2011), no.~2, 377--390.
 \href{https://doi.org/10.1007/s10468-009-9193-y}{doi:10.1007/s10468-009-9193-y};
 \href{https://arxiv.org/abs/math/0608791}{arXiv:math/0608791}.
-\bibitem{as4period}
-AS4周期性研究原稿, 
+\bibitem{VdB} M.~Van den Bergh, \emph{Non-commutative quadrics},
+\href{https://arxiv.org/abs/0807.3753v3}{arXiv:0807.3753v3} (2010).
+使用箇所：Proposition 3.3, Theorem 5.5.10, \S5.6.
+\bibitem{BILN} V.~Bhatoy, C.~Ingalls, F.~LaRoche and R.~Nookala,
+\emph{Some components of the moduli space of Koszul Artin-Schelter regular algebras of dimension four},
+\href{https://arxiv.org/abs/2511.08390v1}{arXiv:2511.08390v1} (2025).
+使用箇所：\S3.1, Table 2. Proposition 5.1の一般的な接空間判定は本稿では採用しない。
+\bibitem{as4period} AS4周期性研究原稿,
 \emph{四次元二次AS正則$\mathbb Z$-代数の周期性：最小周期1,2,4と非1周期的な平坦族},
-2026年11月12日・第2版,
+2026年11月12日・第2版（私的原稿、独立査読・新規性未確認）.
 \url{https://github.com/uedakazushi/as4/blob/main/research/z_periodicity/papers/as4_z_periodicity_ja.tex}.
+確認済み本文のGit blob SHAは\path{research/BASELINE.md}を参照。
+\bibitem{Bergman}
+G.~M.~Bergman, \emph{The diamond lemma for ring theory},
+Adv. Math. \textbf{29} (1978), 178--218.
+\url{https://math.berkeley.edu/~gbergman/papers/updates/diamond.html}.
+\bibitem{Priddy}
+S.~B.~Priddy, \emph{Koszul resolutions}, Trans. Amer. Math. Soc.
+\textbf{152} (1970), 39--60.
+\url{https://math.mit.edu/~hrm/palestine/priddy-koszul-resolutions.pdf}.
 \end{thebibliography}
 \end{document}

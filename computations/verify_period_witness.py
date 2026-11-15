@@ -55,7 +55,6 @@ def relation(*terms):
     return v
 
 def family(lam):
-    # Order X,Y,Z,W = 0,1,2,3. Six relations for each initial vertex.
     w = []
     for i in range(4):
         eps = (-1)**i
@@ -91,7 +90,7 @@ def verify():
     g = [identity() for _ in range(4)]
     r = family(Fraction(1))
     assert has_period_witness(r, g, 2)
-    assert not has_period_witness(r, g, 1)  # ONLY identity witness fails
+    assert not has_period_witness(r, g, 1)
     assert has_period_witness(commutative(), g, 1)
     assert family(Fraction(-1)) == [r[(i+1)%4] for i in range(4)]
     return {

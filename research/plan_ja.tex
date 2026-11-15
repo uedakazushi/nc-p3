@@ -1,185 +1,151 @@
 \documentclass[11pt,a4paper]{ltjsarticle}
 \usepackage[margin=25mm]{geometry}
-\usepackage{amsmath,amssymb,amsthm,booktabs,hyperref}
+\usepackage{amsmath,amssymb,booktabs}
 \usepackage[haranoaji]{luatexja-preset}
-\hypersetup{unicode=true,hidelinks}
-\newcommand{\ZZ}{\mathbb Z}
-\newcommand{\GL}{\operatorname{GL}}
-\newcommand{\Gr}{\operatorname{Gr}}
-\title{四次元二次AS正則\texorpdfstring{$\ZZ$}{Z}-代数の完全分類\\研究方針と再開手順}
+\usepackage[unicode,hidelinks]{hyperref}
+\usepackage{xurl}
+\title{nc-p3研究方針と再開手順}
 \author{}
-\date{2026年11月15日\quad 第3版}
+\date{2026年11月15日\quad 第9版}
 \begin{document}
 \maketitle
-\section{最初に読む：目的と達成基準}
-標数零の代数閉体$k$上の正連結・局所有限なquadratic AS正則$\ZZ$-代数$C$を分類する。
-主要対象は各一次生成空間の次元が4、各二次関係が6次元、全単純加群の有限最小
-線型解消が$(1,4,6,4,1)$型で、左右AS双対性を持つ標準Koszul型とする。
-行Hilbert級数は$(1-t)^{-4}$である。
-最初からdomain, noetherian, PBW, Nakayamaの半単純性、Calabi--Yau性を仮定しない。
-一般のquadratic 4次元AS正則性からこの標準型が自動的に従うかは
-独立の境界問題であり、証明なしに全対象と同一視しない。
+\section{最初に読む：目標・達成基準・現在の保存状態}
+標数零の代数閉体上、標準14641型の四次元quadratic Koszul AS正則
+$\mathbb Z$-代数を添字保持同型で分類する。
+全対象にdomain、noetherian、PBW、CYを追加仮定しない。
+$qgr$同値、導来同値、添字移動を割る同値、周期構造を選んだ同値は別問題とする。
+最終的な達成基準は全対象被覆、AS正則性の必要十分条件、特殊値を含む同型判定、
+周期層、既約成分とその次元・特殊化の記述である。全分類は未完成である。
 
-分類の同値関係は\textbf{添字を保つ$\ZZ$-代数同型}とする。
-添字の平行移動をさらに同一視した無標識分類、$\operatorname{qgr}$の同値、
-導来同値、周期構造を選んだ同型はそれぞれ別問題として扱う。
-完成条件は全対象被覆、特殊値を含むAS正則性の必要十分条件、
-全族内外同型の必要十分条件、最小周期1/2/4、
-モジュライの適切な表現と既約成分・特殊化の記述である。
-有限atlas・有限判定手続きでも、適用域と比較が完全なら分類として認める。
+\textbf{現在の直近の目標}は、graded同型分類と$\mathbb Z$-代数同型分類の
+成分次元の差を、twist忘却による減少と非1周期的変形による増大に分離して決定すること。
+量子多項式成分の一般点では前者を決定した。
+Clifford点では後者の接空間と二次障害を得たが、実際の成分次元は未決定である。
 
-\section{確定済みの出発点と未確認点}
-Bondal--PolishchukのKoszul--Frobenius/helix理論に基づき、標準14641型は
-4周期的である。既存\texttt{as4}の\texttt{research/z\_periodicity}には
-最小周期2の平坦なPBW族、最小周期4の具体例、各種有限恒等式と証明がある。
-最小周期1は通常の4変数多項式環で実現する。
-平坦な族に1周期的特殊点と一般に最小周期2の点が共存するため、
-周期は変形で一定でなく、周期種別だけで既約成分を数えない。
-これらの研究原稿は独立の査読・先行研究上の初出確認が未了であり、
-本研究の開始時にその全検証コードを再実行したわけではない。
-正確なGit SHA、証明・計算の所在は\texttt{research/BASELINE.md}を参照する。
+正本はGitHub \texttt{uedakazushi/nc-p3}の\texttt{main}である。
+生成・計算・組版と遠隔保存の状態は\path{research/validation.json}で区別する。
+再開時は遠隔先端を確認し、競合があれば有効な内容を統合する。
+GitHubへの保存が成功した場合、Libraryへの保存は行わない。
 
-既存\texttt{as4}のgraded同型分類は未完成だが、CY、quantum、Q/V、
-非共鳴、単冪twist、特殊値の多くの部分結果がある。
-graded $A$ に付随する$\check A_{ij}=A_{j-i}$と、
-1周期同型の選択が定めるgraded algebraの関係を用いる。
-Zhang twist同値の1周期的対象は$\ZZ$-代数として同一視され得る。
-ただし$\check A$が1周期的であることと、
-\emph{選んだ}1周期構造まで同じであることは違う。
+\section{主要な到達点と根拠}
+\subsection*{継続して保持する構造結果}
+Frobenius traceによる一般4周期性、標準4周期同型の頂点スカラー共役による選択独立性、
+四窓の$\mathrm{GL}_4^4$軌道による幾何学的同型類の記述を保持する。
+trace行列の標準化条件$P_i^{\mathsf T}=Q_i$、二次双対の次数0--5によるFrobenius検査、
+周期・同型の212未知数388式の有限条件も現行論文に証明を置く。
+有限Frobenius性だけからKoszul性を結論しない。
+既存as4の最小周期2/4の例は固定blob SHAと証明箇所を\path{BASELINE.md}で参照する。
+$A(\lambda)(1)=A(-\lambda)$と、最小周期2での両者の非同型性を保持する。
 
-\section{新しく確立した中核：Frobenius標準4周期}
-$C$のKoszul双対の最高次数traceから局所Nakayama同型
-$\nu^\lambda:E\to E(4)$を作り、二次双対に
-$\tau^\lambda:C\to C(4)$を得る。
-$\lambda'_i=t_i\lambda_i$による変化は
-$\nu^{\lambda'}_{ij}=(t_i/t_j)\nu^\lambda_{ij}$。
-$s_{i+4}/s_i=t_i$を満たす$s_i$を選んだ頂点スカラー自己同型で
-二つの4周期同型は共役になる。
-従って\textbf{幾何学的点の同型類}では、
-裸の$C$はFrobenius標準4周期付きの組と一対一に対応する。
-これは$4$周期同型を忘れる際の主要な障害を解決したものであり、
-\emph{モジュライstack全体の同値}を証明したとはしない。
-証明全文は\texttt{nc-p3.tex}
-定理\texttt{thm:canonical-four}。
+\subsection*{量子多項式成分}
+\path{nc-p3.tex}の定理\texttt{thm:quantum-orbits}と\texttt{thm:quantum-local}。
+一般の六つの量子パラメータ$q_{ab}$に対して、graded同型は有限置換だけ、
+$\mathbb Z$-同型はさらに$q_{ab}\mapsto q_{ab}s_a/s_b$を許す。
+従って同型類の局所成分次元は6と3である。
+有理数点$(2,3,1/6,5,2/5,15)$で周期4の変形複体の階数を厳密に検証した。
+滑らかな量子族と基底変更が全接空間を張り、相対4周期性により裸の変形も含む。
+この成分の一般点では新しい非1周期的方向はない。
+既知のtwist理論と既知の量子族に基づく比較であり、新規性は主張しない。
 
-四窓の双対の1--3積と3--1積から得る
-四つの4次正則行列$P_i,Q_i$に対し、
-Frobenius標準化条件は適切な最高次traceを選べる範囲で
+\subsection*{Clifford点}
+\path{nc-p3.tex}の定理\texttt{thm:clifford-tangent}、\texttt{thm:clifford-quadratic}。
+既存PBW族の$\lambda=0$で、選んだgraded表示の接空間は9、裸の$\mathbb Z$-変形は15である。
+追加の六方向を$o_0,\ldots,o_5$とすると二次障害は
 \[
- P_i^{\mathsf T}=Q_i\quad(0\le i<4)
+ Q=o_0o_5+o_1o_2-o_2o_3+o_3o_4.
 \]
-となる。最高次双対の局所Frobenius性は、
-各始点の長さ0--5の次元および相補次数積の有限行列階数から
-完全に検査できる。ただし\emph{これだけではKoszul性を証明できない}。
-証明は命題\texttt{prop:canonical-matrix}、
-\texttt{prop:finite-frobenius}。
+全15変数の二次障害を120回の厳密評価で決定し、偶・交代の混合障害も零と確認した。
+$Q$は階数6で、Pl\"ucker二次式へ変換できる。
+二つの簡単な交代方向はそれぞれPBW軸に積分できるが、その混合には$ab$という二次障害がある。
+これらは計算補助証明であり、全証明の形式化・第三者査読ではない。
+\textbf{15次元の接空間から14次元成分を断定していない。}
 
-さらに標準4周期四窓では、裸の$C$が$p$周期的であることは、
-四つの可逆な$g_i:V_i\to V_{i+p}$が
-\[
- (g_i\otimes g_{i+1})R_i=R_{i+p}\qquad(i\bmod4)
-\]
-を満たすことと同値。原稿定理\texttt{thm:finite-period-test}。
-さらに\texttt{prop:period-polynomial-system}により、
-周期$p=1,2$を与える四つの$4\times4$行列$G_i$と補助の
-$6\times6$行列$H_i$、逆行列式用変数$u_i$を使い、
-212未知数、384行列成分等式と4可逆性等式へ書ける。
-これは有限条件の定式化であり、全パラメータにおける消去の完成ではない。
-さらに\texttt{cor:finite-isom-test}により、既知の標準AS正則な
-任意の二つの幾何学的点$C,C'$が同型であることも、
-二つのFrobenius標準四窓の関係行列を比較する
-同じ212未知数・388多項式条件と同値になった。
-従って1/2/4の周期層は、標準四窓の四つの有限方程式の
-可解性・四重回転軌道として決定できる。
-ただし各層の\emph{パラメータ分類や既約成分}はまだ未解決。
+\subsection*{代数的な七変数族}
+\path{nc-p3.tex}の定理\texttt{thm:algebraic-seven}, \texttt{thm:seven-image},
+\texttt{thm:seven-period-two}に完全な証明を置く。
+$S=\mathbb A^7_{u,v,r,s,a,b,c}$上の多項式関係で標準14641型の族を構成した。
+全パラメータでPBW自由基底を持ち、補助重み$(1,2,2,4)$と双対のFrobenius性から全ファイバーがAS正則である。
+一般点の最小周期は2。唯一の非被約点から射影して得る二次曲線上六点・直線上二点の配置で非1周期性を証明する。
+一つの二次関係空間の基底変更微分とパラメータ微分の階数は30と37なので、同型類の像の次元は7である。
+交代部分は$(o_0,o_1,o_2,o_3,o_4,o_5)=(0,-b,-a,-b,0,c)$という最大等方3平面を全次数で代数的に積分する。
+これは7次元の\emph{族の像}であり、全モジュライの既約成分や14次元の局所模型の完成ではない。
 
-\section{核心となる新しい分類方針}
-\subsection{第一：4周期表示の有限atlas}
-$C\simeq C(4)$の同型$\tau$を選び、四つの一次空間
-$V_i$（$i\in\ZZ/4$、$\dim V_i=4$）と
-\[
-R_i\subset V_i\otimes V_{i+1},\qquad\dim R_i=6
-\]
-による二次表示へ還元する。
-基底を選んだ有限パラメータ空間
-\[
-\mathfrak P=\prod_{i\in\ZZ/4}\Gr(6,V_i\otimes V_{i+1})
-\]
-には$\prod_i\GL(V_i)$が作用する。
-一般の$\tau$を選んだ4周期表示の群oidは$C$のモジュライそのものではない。
-しかしFrobenius標準化条件$P_i^{\mathsf T}=Q_i$の部分では、
-emph{幾何学的同型類}について裸の$C$と同じ分類になる。
-定理・証明は\texttt{nc-p3.tex}の第2節。
+\section{優先課題と具体的な着手方法}
+\paragraph{最優先：ALGEBRAIC-FAMILY-008。}
+形式級数の高次消去より、明示的な代数的AS正則族を優先する。
+現行の七変数族は、三生成部分代数$B$の中心二次式と次数1の導分の組合せによる。
+まず$B$自体を動かす族、異なる三生成部分代数・補助重みを使うチャート、
+七変数族の一般点での族内同型を調べる。
+目標は、残る偶・交代方向を積分し、既存族との包含・閉包・既約成分としての最大性を決めること。
+全ファイバーのAS正則性と一般の非1周期性を別々に証明する。
+開始点は\path{computations/verify_algebraic_family.py}と原稿式\texttt{eq:seven-family}。
 
-\subsection{第二：正則性と4周期の同型}
-$\mathfrak P$の上で14641型の左右線型Koszul解消とAS双対性を満たす
-正確な条件を定式化する。対合行列や次数別Hilbert一致は必要条件であり、
-Koszul性と全AS正則性の十分条件を無断で結論しない。
-Frobenius標準四窓では上の有限群作用による同型類比較が
-裸の$C$についても完全である。
-次の核心はKoszul条件をどこまで有限条件として証明できるか、
-全特殊値に適用できる構造定理・明示atlasを作ることである。
+\paragraph{補助課題：MODULI-HIGHER-006。}
+Clifford点の全15変数の二次障害$Q$は確定しているが、高次関係は未確定である。
+形式計算は新しい代数的族の候補や障害の検出に用いる。
+七変数族で三つの交代方向を積分できたことを、六方向全体や14次元模型の証明に拡張しない。
+必要なら$rref$右逆による三次残差と二次補正の自由度を調べるが、それだけを主目標にしない。
 
-\subsection{第三：1周期的部分の利用と周期2/4の分類}
-1周期構造を選んだ場合はgraded AS4へ戻り、既存as4の定理に正確に依存する。
-未監査の論文を「既知の完成分類」と扱わない。
-周期2族のパラメータに対する同型・特殊値・点配置・量子行列式の条件を追う。
-最小周期4の例も同様に有限atlasへ入れ、変形と周期種別の閉包を調べる。
-独立な射影点配置は非同型を示す必要条件として使い、
-同型の十分条件とは区別する。
+\paragraph{並行課題：PERIOD-ROOTS-007。}
+Clifford点の有限射影自己同型群を計算し、全1周期構造を分類する。
+現在の9次元は特定のgraded表示からの枝であり、1周期的部分全体の次元とは限らない。
+四窓の有限同型式を使い、基点の自己同型と周期構造の根を分離する。
+全ての枝と高次障害が分かってから1周期的部分の余次元を述べる。
 
-\subsection{第四：全被覆とモジュライ幾何}
-上の全対象に必要十分な有限条件を証明し、残る未分類軌跡を潰す。
-元のgraded側の既約成分がZ側で合流・包含されることを許す。
-最小周期別の集合を既約成分と混同しない。
-Koszul双対のquantum determinant/4-helixを優先し、
-任意の4重テンソルの\emph{無条件の}AS正則性を主張しない。
+\paragraph{継続課題：Z4-AS-004。}
+全四窓のAS/Koszul条件と有限atlasの全被覆を追う。
+局所変形問題の成果を全域の必要十分条件へ誤って一般化しない。
+非PBW点、閉特殊値、最小周期4の例、族間同型・既約成分の比較を残す。
 
-\section{初動課題：Z4-WINDOW-001}
-四窓群oid、Frobenius標準化、標準化された周期判定の理論は
-証明済みである。次は\textbf{Z4-AS-004}を最優先とし、
-四窓から作る二次双対の有限Frobenius階数条件と、
-元代数のKoszul解消の正確性を結ぶ\emph{適用域を明示した}
-必要十分条件を追う。
-特に、まずPBW性など既に正則性を認定できるatlas上で
-四つのtrace行列$P_i,Q_i$を計算し、既存の最小周期2/4の
-族をFrobenius標準軌道へ入れる。
-その後、PBWを仮定しない全候補への被覆・十分性を証明する。
-有限次元双対のFrobenius性だけでKoszulを結論してはいけない。
-当面は既存as4計算の再作成より、4周期固有の理論を優先する。
+この優先順位は、同型類の次元を実際の代数的族で比較するためであり、
+接空間の数え上げだけで成分を推測することを避ける。
+元の完全分類目標は維持する。有限表示と周期判定は解決済み、全AS locusと全成分分類は未解決である。
+方針変更の時系列履歴は蓄積しない。
 
-\section{研究継続と検証}
-現在の証明、未証明事項、検算は\texttt{research/notes\_ja.tex}に整理し、
-論文に十分な証明を置いた事項は重複収録しない。
-論文は\texttt{nc-p3.tex}の一つに整理し、
-未完成箇所は明示する。外部の一次文献は\texttt{research/BASELINE.md}に
-定理番号・リンクを保存し、公開原稿のIntroductionで寄与と違いを説明する。
+\section{再現手順と依存}
+再開は本方針、\path{AGENTS.md}、\path{research/notes_ja.tex}、\path{nc-p3.tex}の順に読む。
+Python 3.13.5とSymPy 1.14.0、TeX LiveのLuaLaTeX/latexmk/luatexjaで検証した。
 \begin{verbatim}
+python3 -m pip install -r requirements.txt
 python3 scripts/check_project.py
 python3 computations/verify_exterior_trace.py
 python3 computations/verify_period_witness.py
+python3 computations/verify_moduli_jets.py \
+  --output research/moduli_certificate.json
+python3 computations/verify_algebraic_family.py \
+  --output research/algebraic_family_certificate.json
 latexmk nc-p3.tex
 latexmk research/plan_ja.tex
 latexmk research/notes_ja.tex
 \end{verbatim}
-版・日付・参照先を一致させ、計算や組版を行ったときのみ成功と報告する。
+\path{moduli_certificate.json}は入力点、商基底、階数、障害式、制限を記録する。
+容易に再生成できる行列キャッシュ・pickle・ログは収録しない。
+\path{validation.json}で生成、実行、組版、遠隔保存の状態を分ける。
 
-\section{研究全般の原則・保存許可（上の具体的計画とは別）}
-数学的重要性・新規性・理解・応用可能性・正確性・実現可能性を総合して
-目標・方針を柔軟に更新する。重要な変更では理由と解決済み・未解決の核心を
-現行方針として整理し、作業履歴を積み重ねない。
-証明済み、仮定付き、未完成、予想、計算的観察、独立監査済みを厳密に区別する。
-誤りがあれば依存する定理・要約・研究方針を訂正し、再発防止に有用な障害をノートに残す。
-公表原稿では重要な一次資料を調べ、適用範囲と新規性を明示する。
-証明や計算を削って軽量化せず、重複・履歴・中間出力を除き、
-現在の一式のみで再開できるようにする。
+\section{常設の研究原則と保存許可（具体的計画とは独立）}
+数学的重要性、新規性、理解の深化、応用、正確性、実現可能性を総合し、目標と方針を柔軟に最適化する。
+重要な変更では有効な理由、元の目標の達成・未達を簡潔に整理し、履歴を積み重ねない。
+証明済み、追加仮定付き、未完、予想、計算的観察を区別する。
+原稿に証明があること、今回監査したこと、計算で確認したこと、形式化・査読は別状態とする。
+誤りがあれば依存する本文・要約・方針を直し、有用な反例と障害だけをノートに保持する。
 
-ユーザーは研究区切りごとの承諾不要の保存を許可している。
-本プロジェクトの正本はGitHub\texttt{uedakazushi/nc-p3}の\texttt{main}である。
-区切りごとに直接fast-forwardで保存し、GitHub保存が成功すればLibraryへ
-二重保存せず、GitHub保存が実際に失敗した場合のみLibraryへ緊急退避する。
-既存のLibraryファイルは明示指示なく削除しない。
-PDFはGitで追跡せず、LuaLaTeXで再生成する。
-GitHub Actions、PR、force push、過去ZIPの入れ子収録を避ける。
-ファイル生成・数学的検証・組版検証・リモート保存の成功を別々に報告する。
+公表論文は原則日本語LuaLaTeXで書き、関連する一次文献の仮定・適用範囲と寄与をIntroductionで説明する。
+未確認の書誌・内容を推測しない。公表価値のある既存の主張と十分な証明を現行論文に保持する。
+ノートは作業日誌ではなく、未収載の有効な知識、反例、計算、失敗した方法の障害、文献比較を整理する。
+論文の完全な証明はノートへ重複させず参照する。
+
+再開に必要な内容を現行の方針・ノート・論文・最小限のコードと入力に集約する。
+旧bundle、旧原稿、過去会話を再開の前提にしない。
+旧ZIP、バックアップ、変更履歴、作業ログ、キャッシュ、コンパイル中間物、重複資料をbundleから除く。
+数学的内容・証明書・再取得困難な入力を容量制限のために削らない。
+日付・版・参照・記法を整合させ、更新は現行内容の整理・置換によって行う。
+
+ユーザーは研究の区切りごとの承認不要の保存を許可している。
+本プロジェクトの正本はGitHub \texttt{uedakazushi/nc-p3}の\texttt{main}とし、通常のfast-forwardで直接保存する。
+PR、force push、GitHub Actionsは使わず、別リポジトリas4へ無断で書き込まない。
+GitではPDFを追跡せず、ソースと再現可能な資産を追跡する。
+GitHub保存が成功した場合はLibraryへ重複保存せず、GitHubへ保存できない場合は常設許可によりLibraryへの緊急退避を試みる。
+既存Libraryファイルは明示指示なく削除しない。
+操作手段がなければ保存済みと報告せず、生成・検証・GitHub保存・Library保存を別々に明示する。
+配布前に欠落・参照切れ・組版・主要計算・ZIP整合性を確認し、未実行の検証や再現上の制約を明記する。
 \end{document}

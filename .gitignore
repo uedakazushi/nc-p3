@@ -1,5 +1,7 @@
-# Build products: source-only Git policy
 build/
+__pycache__/
+*.pyc
+*.pdf
 *.aux
 *.log
 *.out
@@ -7,9 +9,3 @@ build/
 *.fls
 *.fdb_latexmk
 *.synctex.gz
-*.pdf
-*.zip
-__pycache__/
-*.pyc
-.ipynb_checkpoints/
-.DS_Store
