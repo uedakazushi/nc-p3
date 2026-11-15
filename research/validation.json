@@ -53,9 +53,13 @@
     "scope": "No PDF generated."
   },
   "github_save": {
-    "result": "pending",
+    "result": "PASS",
     "branch": "main",
-    "expected_parent": "9541eaa9f7a61de0b58b99bc64bb392c1ee5e30c"
+    "validated_content_commit": "bc44a9403a0aefcde733a62c317560687b9dea72",
+    "validated_content_tree": "dac7e77ad5a56958016fa79b55fbab7f95359f28",
+    "fast_forward": true,
+    "verified_blob_count": 47,
+    "scope": "Read back branch main, complete tree and all seven edited file blobs; 35 mathematical result IDs preserved. Receipt committed separately."
   },
   "library_save": {
     "result": "not_saved_project_policy",
@@ -75,5 +79,5 @@
     "The boundary five-parameter family has generic minimal period two and lies in Z7; it is not an independently established component.",
     "Eleven individually integrable tangent directions have the mixed obstruction lambda*c and do not yield a smooth simultaneous eleven-dimensional family."
   ],
-  "checks_execution_note": "Final GitHub saving and reread will be recorded after initial push. Math/TeX verifiers not rerun; no math files changed."
+  "checks_execution_note": "Instruction/documentation-only update. Static cross-checks and remote GitHub reread passed. No mathematical verifier or LuaLaTeX compilation run; no claims made about those tests."
 }
