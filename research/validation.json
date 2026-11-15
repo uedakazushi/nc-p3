@@ -1,165 +1,223 @@
 {
+  "schema_version": 2,
   "date": "2026-11-15",
-  "version": 15,
-  "generated": "current Japanese LuaLaTeX sources and exact certificates",
-  "verification_status": "PASS_with_explicit_scope_limits",
-  "github_save": {
-    "status": "PASS",
-    "repository": "uedakazushi/nc-p3",
-    "branch": "main",
-    "content_commit": "326eeca36071c42d445ea56e7e1447d97d768aa4",
-    "verification_commit": "69b3d13ae30e96ae7aa2f8a99fcffac9857cdf16",
-    "source_tree": "69b3d13ae30e96ae7aa2f8a99fcffac9857cdf16",
-    "verification": "Both fast-forward main updates succeeded; remote tree read back and exact locally executed checker source blob matched. Validation is stored in a later commit."
+  "version": 16,
+  "reviewed_input": {
+    "source_commit": "c6e3a63a24a1e35be969d3f44c1cc7a7202b6f8c",
+    "source_tree": "7c37b432570ca98fd6e6d7aa7579b271f3c9d609",
+    "all_46_source_blobs_matched_before_editing": true
   },
-  "library_save": {
-    "status": "not_performed",
-    "reason": "GitHub main push succeeded; explicit instruction prohibits duplicate Library save."
+  "generation": {
+    "result": "PASS",
+    "scope": "Current paper, research plan, notes, instructions, source-backed bibliography and claim index; no mathematical result or proof removed.",
+    "preservation": {
+      "all_101_tex_labels_retained": true,
+      "all_34_result_ids_retained": true,
+      "statement_environment_counts": {
+        "theorem": 18,
+        "lemma": 8,
+        "proposition": 10,
+        "corollary": 6,
+        "conjecture": 1
+      },
+      "proof_changes": "Quantum local proof expanded to justify generic normalization; one boundary proof changes only the family name. All other proof environments are unchanged."
+    }
+  },
+  "environment": {
+    "python": "3.12.14",
+    "sympy": "1.14.0",
+    "tex_engine": "LuaHBTeX 1.18.0 (TeX Live 2025/dev/Debian)",
+    "tex_format": "LaTeX2e 2024-11-01 patch level 2"
   },
   "checks": [
     {
-      "command": "python3 computations/verify_exterior_trace.py",
-      "result": "PASS",
-      "scope": "four-vertex exterior trace and rational rescaling"
-    },
-    {
-      "command": "python3 computations/verify_period_witness.py",
-      "result": "PASS",
-      "scope": "positive period witnesses and sign shift; not all negative witnesses"
-    },
-    {
       "command": "python3 computations/verify_algebraic_family.py --output research/algebraic_family_certificate.json",
       "result": "PASS",
-      "scope": "all eight polynomial overlaps; exact ranks 30/37; rational point-configuration proof checks"
+      "scope": "Polynomial PBW overlaps, weights, exact orbit ranks and selected point-configuration identities; AS regularity and generic period two also require the written proofs.",
+      "source_git_blob": "b7c12da993335d25353efc720b015626f1a7a74d"
     },
     {
       "command": "python3 computations/verify_elliptic_family.py --output research/elliptic_family_certificate.json",
       "result": "PASS",
-      "scope": "Clifford overlaps, ordinary/sign derivations, ranks 30/39, elliptic formulas, excluded-boundary ranks 17/15"
+      "scope": "Clifford multiplication, derivation identities, exact orbit ranks, quadratic dual conditions and sample elliptic identities; not a general-period-two proof by samples.",
+      "source_git_blob": "a52d18e83a662053b939c2e4789923d9a2e30782"
     },
     {
-      "command": "python3 computations/verify_moduli_jets.py --output research/moduli_certificate.json",
+      "command": "python3 computations/verify_exterior_trace.py",
       "result": "PASS",
-      "scope": "all four Fourier modes, full fifteen-variable quadratic obstruction, two axes and periodic tangent ranks"
-    },
-    {
-      "command": "python3 computations/verify_third_order_samples.py",
-      "result": "PASS",
-      "scope": "only three stated isotropic directions; not universal or all-orders"
-    },
-    {
-      "command": "python3 scripts/check_project.py",
-      "result": "PASS",
-      "scope": "file paths, JSON, tasks, recursively included TeX labels/citations and syntax"
-    },
-    {
-      "command": "python3 computations/verify_ore_derivations.py --output research/ore_derivation_certificate.json",
-      "result": "PASS",
-      "scope": "exact symbolic 30x18 derivation matrices, polynomial minors, J(x) and its degree"
+      "scope": "Exterior-algebra trace sign example and rescalings; not the general four-periodicity theorem.",
+      "source_git_blob": "1d7e6e76460b839442597e46ccbaa7d06f70da69"
     },
     {
       "command": "python3 computations/verify_isogeny_invariant.py --output research/isogeny_certificate.json",
       "result": "PASS",
-      "scope": "exact cubic quotient identity, two Hesse j-invariants, degree-four U and ramification"
+      "scope": "Polynomial quotient cubic, two rational j formulas, degree-four U and ramification; intrinsic recovery uses the written geometric proof.",
+      "source_git_blob": "52a446109673b5269cfef576894b7341fce012aa"
     },
     {
-      "command": "python3 computations/verify_nonore_family.py --output research/nonore_certificate.json",
+      "command": "python3 computations/verify_moduli_jets.py --output research/moduli_certificate.json",
       "result": "PASS",
-      "scope": "eight polynomial overlaps, positive weights, orbit rank 30/32 and effective three-torus"
-    },
-    {
-      "command": "python3 computations/verify_nonore_point_geometry.py",
-      "result": "PASS",
-      "scope": "15 exact rank-4 minors for both parities, reductions by projected quintics, mod-2 irreducibility/mod-5 factor degrees, nonzero coordinate span determinant. Galois/PGL2 reasoning written in paper."
-    },
-    {
-      "command": "python3 computations/verify_ore_boundary.py --output research/ore_boundary_certificate.json",
-      "result": "PASS",
-      "scope": "Exact polynomial PBW overlaps, relation-space equivalence for both parities, rational tangent ranks 30/37/38/38/39."
+      "scope": "Exact Fourier ranks and all 120 polarizations of the complete fifteen-variable quadratic obstruction, projected to full left kernels; not all higher obstructions.",
+      "source_git_blob": "fd0c578b5b1ba69d80256df8db949bfbdf6f3a8b"
     },
     {
       "command": "python3 computations/verify_nine_closure_tangent.py --output research/nine_closure_certificate.json",
       "result": "PASS",
-      "scope": "Executed locally against previous source-identical v10 module versions of pbw_complex, verify_algebraic_family, verify_elliptic_family; exact QQ ranks, parity split and Q restriction."
+      "scope": "Exact tangent ranks 30/37/39/40/40/41, parity ranks and Q=lambda*c; actual closure membership uses the written boundary family.",
+      "source_git_blob": "3a836dc78059abdef4baaead596157bcb0d8bb7e"
+    },
+    {
+      "command": "python3 computations/verify_nonore_family.py --output research/nonore_certificate.json",
+      "result": "PASS",
+      "scope": "All eight polynomial overlaps, positive weights, ranks 30/32 and effective diagonal-torus rank three.",
+      "source_git_blob": "a6c3fde381e0b0868889d216a398497de17c254b"
+    },
+    {
+      "command": "python3 computations/verify_nonore_point_geometry.py --output research/nonore_point_certificate.json",
+      "result": "PASS",
+      "scope": "All fifteen minors for both parities, quintic reductions and finite-field factorization types; Galois/PGL2 argument is in the proof.",
+      "source_git_blob": "c07311501d74860a016aae8da346ce1f8d8ed200"
+    },
+    {
+      "command": "python3 computations/verify_ore_boundary.py --output research/ore_boundary_certificate.json",
+      "result": "PASS",
+      "scope": "Polynomial PBW overlaps, generator transformations for both parities and exact ranks 30/37/38/38/39.",
+      "source_git_blob": "bb05fb09d948d47a1ddc0ca264c11e2a604affdf"
+    },
+    {
+      "command": "python3 computations/verify_ore_derivations.py --output research/ore_derivation_certificate.json",
+      "result": "PASS",
+      "scope": "Symbolic derivation constraint matrices, all-parameter rank witnesses and rational J formula.",
+      "source_git_blob": "04331baadb68c2e1e5eedd0ff2e7ebe146bfa7a6"
+    },
+    {
+      "command": "python3 computations/verify_period_witness.py",
+      "result": "PASS",
+      "scope": "Specified identity-matrix period witnesses and sign shift only; does not exclude all period-one witnesses.",
+      "source_git_blob": "c4a4cd6cebb0f4dd94f73e7550ad8e61c1053d13"
+    },
+    {
+      "command": "python3 computations/verify_third_order_samples.py",
+      "result": "PASS",
+      "scope": "Three specified Q-isotropic directions through order three only; an observation, not a universal theorem.",
+      "source_git_blob": "59f0f789b5f124a057a83dcc54391f16a2d5b26a"
+    },
+    {
+      "command": "python3 scripts/check_project.py",
+      "result": "PASS",
+      "scope": "Current file paths, JSON, task IDs, expanded TeX labels and citation keys; not mathematical verification.",
+      "source_git_blob": "86596fc6ac2866348c57f2eb8e8cbe75cbc12bd2"
     }
   ],
-  "certificate_comparison": "All 8 local v11 commands were executed and passed, including existing numerical checks and new Ore derivation verifier. No unrun mathematical check is claimed.",
+  "certificate_comparison": {
+    "result": "PASS",
+    "count": 9,
+    "scope": "All regenerated mathematical contents agree. The moduli certificate Python metadata was refreshed to this execution environment.",
+    "output_argument_fix": "verify_nonore_point_geometry.py now accepts --output and creates parent directories; generated JSON equals the previous certificate and stdout remains unchanged."
+  },
+  "proof_review": {
+    "result": "targeted_review_completed",
+    "scope": [
+      "Standard four-periodicity, finite isomorphism/period criteria and relative Artin normalization.",
+      "Quantum local comparison, Clifford tangent and quadratic-obstruction interpretation.",
+      "Seven/nine-parameter regularity, image dimensions and generic period two.",
+      "Marked Ore derivations, intrinsic 2-isogeny, boundary inclusion and orbit-closure singularity."
+    ],
+    "repair": "The passage from the normalized quantum point to a nonempty open set now explicitly normalizes row products by a diagonal Zhang twist after an etale cover; theorem statements are unchanged.",
+    "limitations": "No claim of exhaustive independent proof verification, formal verification, external as4 reexecution, peer review or established novelty."
+  },
+  "literature_review": {
+    "primary_text": [
+      "arXiv:2511.08390v1, Table 2 and Proposition 5.1",
+      "Vancliff--Van Rompay--Willaert, author PDF, Introduction and Section 3",
+      "arXiv:2602.13178v1, Introduction and Sections 3,6"
+    ],
+    "abstract_and_bibliography_only": [
+      "Stephenson--Vancliff (2007), DOI 10.1016/j.jalgebra.2007.02.015; publisher full text unavailable"
+    ],
+    "limits": "These checks identify relevant prior work; they do not establish novelty or a full equivalence with all earlier families."
+  },
   "tex": {
-    "result": "standalone_new_section_PASS_full_v15_not_run",
-    "engine": "LuaLaTeX",
-    "scope": "The exact new sections/nine_closure.tex source matched the locally compiled Git blob 5f6e019cb9eb7665c1da0d1d9ed41275f0fd7154. It compiled in a standalone Japanese ltjsarticle wrapper (2 pages). Previous v14 full manuscript compiled, but full v15 compilation not rerun."
+    "result": "PASS",
+    "commands": [
+      "latexmk nc-p3.tex",
+      "latexmk research/plan_ja.tex",
+      "latexmk research/notes_ja.tex"
+    ],
+    "execution_environment_note": "The container default could not locate lualatex.fmt. A temporary wrapper loaded an existing TeX runtime and set TEXFORMATS to its luahbtex format directory, using the existing font cache. Repository TeX sources and .latexmkrc require standard LuaLaTeX, luatexja, latexmk and Harano Aji dependencies; no claim is made that these dependencies were present in the unmodified default container.",
+    "documents": [
+      {
+        "source": "nc-p3.tex",
+        "pages": 34,
+        "generated_pdf_sha256": "fe065130e92f0a987c65a1c6d49588247f6f5d7ebf583c7754e9785456147da9",
+        "overfull_count": 0,
+        "underfull_count": 0,
+        "undefined_reference_warning": false,
+        "missing_character_warning": false
+      },
+      {
+        "source": "research/plan_ja.tex",
+        "pages": 4,
+        "generated_pdf_sha256": "d7cc24a78c55c273aa7bd74bea4b6b0f136fac58f603bd0e4e78dda060ab2bac",
+        "overfull_count": 0,
+        "underfull_count": 0,
+        "undefined_reference_warning": false,
+        "missing_character_warning": false
+      },
+      {
+        "source": "research/notes_ja.tex",
+        "pages": 7,
+        "generated_pdf_sha256": "cc9d9d2e14489e670b2cb6d6bfd4e04e14fd60572507c3ff61db995b43257bb4",
+        "overfull_count": 0,
+        "underfull_count": 0,
+        "undefined_reference_warning": false,
+        "missing_character_warning": false
+      }
+    ],
+    "all_final_tex_input_sha256": {
+      "nc-p3.tex": "cb67a26636dfd9dd0d44debf80a9a702e702c6f821d57620c0ed7c6ca18ed4a0",
+      "research/notes_ja.tex": "ec99e9f120a57428068a27a2a15a735360350ea65c8c862e1168da552e5c42dd",
+      "research/plan_ja.tex": "39ad713d75d79bff84ede827fe0d2e8cf358d200fd68a26c3348786e159ff510",
+      "sections/isogeny_invariant.tex": "caab2e1640d9a279eb24022ef78eb194aa94b87ac7ad1830f8b10dcfddcf028a",
+      "sections/nonore_period_two.tex": "60bacc2c037e8020c3d4b444288578dc5be286e407c04dc646c4fd550d57a188",
+      "sections/nine_closure.tex": "795d1b16eeab80bd4dcbe5745131efe2852b34673155ebbe1e47cbcd239e2816",
+      "sections/four_window.tex": "c04a639fda9e02822737d2cbb517e5a433b2d4df65c391765b10cc3a83091fa7",
+      "sections/elliptic_ore_family.tex": "83e946f9a796583e90e9ebf99d86333e239abd3656533aa609b76974b663a897",
+      "sections/ore_complete.tex": "8e79f26fb063caf32b55311be5878748d468ee60fa5612166b4640e69c607adf",
+      "sections/local_moduli.tex": "211d5817ff91a7d5808be5b2d02c18f63da89eda1cf3e38e83c1b8541f02a725",
+      "sections/ore_boundary.tex": "50b35d6784f41436c04510499c9f7e40f941b80fbd05c2359ace46c85a7673e3",
+      "sections/algebraic_family.tex": "4f68950de606b87f083a8d5f8653fd4ddbaa1e73cb01c87cab2539b27373c353",
+      "sections/nonore_family.tex": "ffbbcadad9c2ffcfb1a5eccff6a54e8c90c1c9fcd248664f23fbb5b9e87aeedf"
+    },
+    "nonfatal_warnings": "Main paper retains a 4.5pt-to-5pt math-font substitution, legacy math command warnings and bookmark math-string sanitization. These did not cause missing content or overflow.",
+    "pdfs_tracked": false
   },
   "visual_inspection": {
-    "result": "not_performed_for_full_v15",
-    "scope": "Standalone TeX compiled; full v15 visually not inspected."
+    "result": "PASS",
+    "scope": "All 34 paper pages, 4 plan pages and 7 notes pages reviewed as contact sheets. Paper pages 1, 4 and 11 and notes page 3 also inspected at full rendered size; final changed plan pages 3 and 4 rechecked in the refreshed contact sheet.",
+    "findings": "No visible clipping, overlap, missing text or broken tables. This records layout review, not an independent mathematical proof."
   },
-  "not_claimed": [
-    "formal verification",
-    "independent peer review",
-    "confirmed novelty",
-    "nine-dimensional image is a full moduli component",
-    "all higher-order Clifford equations",
-    "all one-period structures",
-    "all original as4 computations rerun",
-    "Global completeness beyond the marked Clifford-Ore construction",
-    "Sufficiency of equality of elliptic J(th) for indexed isomorphism",
-    "Full indexed isomorphism classification from U(th) alone",
-    "Generic period two or component membership for new non-Ore chart",
-    "Any assertion that non-Ore and nine-dimensional Ore families belong to distinct irreducible components.",
-    "Distinct irreducible component for nonOre two-family",
-    "Singularity of global coarse moduli or whole AS regular moduli stack",
-    "That the two-dimensional nonOre image is a separate irreducible component",
-    "Global moduli singularity or component dimension 14",
-    "Generic pointwise isomorphism between nonOre five-family and seven-family",
-    "Full v15 LuaLaTeX build or exhaustive proof audit this turn",
-    "A new irreducible component of dimension eleven",
-    "Full v15 manuscript LuaLaTeX build or visual inspection this turn",
-    "Proof of global AS-regular moduli stack or coarse moduli singularity"
+  "github_save": {
+    "result": "pending",
+    "branch": "main",
+    "expected_parent": "c6e3a63a24a1e35be969d3f44c1cc7a7202b6f8c"
+  },
+  "library_save": {
+    "result": "not_requested_when_github_succeeds",
+    "policy": "Project-specific instruction: GitHub main is canonical; no duplicate Library save after success."
+  },
+  "open_mathematics": [
+    "Necessary and sufficient general four-window Koszul/AS conditions and exhaustive explicit regular charts.",
+    "Component maximality and complete indexed isomorphism of the nine-dimensional image.",
+    "All higher Clifford obstruction equations and all one-period structures.",
+    "All global components, dimensions, period strata and degenerations."
   ],
-  "new_results": {
-    "intrinsic_2isogeny": "Proof written; polarized elliptic correspondence recovered at generic nine-family points",
-    "explicit_quotient": "Polynomial quotient cubic and both j-invariants verified exactly",
-    "modular_U": "Degree-four necessary indexed-isomorphism invariant and A4 Galois closure",
-    "nonore_five": "All-parameter quadratic PBW standard AS4 chart, two-dimensional indexed image, o0 outside earlier Ore tangent span",
-    "nonore_period_two": "Generic minimal period exactly two, from intrinsic line plus five points and projective nonisomorphism; image dimension two established by v12.",
-    "ore_boundary": "Entire five-family inside seven-family orbit-saturated closure, and 37-dimensional Grassmannian orbit closure singular at Clifford with tangent >=39.",
-    "nine_closure_singular": "dim Z9=39; at Clifford tangent >=41; codim Z7 in Z9=2; eleven separate algebraic curve tangents with obstruction lambda*c."
-  },
-  "verified_remote_blobs": {
-    "nc-p3.tex": "088b503a90f94c90fa879d945f88d5baf844d834",
-    "sections/nine_closure.tex": "5f6e019cb9eb7665c1da0d1d9ed41275f0fd7154",
-    "computations/verify_nine_closure_tangent.py": "3a836dc78059abdef4baaead596157bcb0d8bb7e",
-    "research/nine_closure_certificate.json": "e996282ba013dde98dbf55dd34da02c751f49547",
-    "research/plan_ja.tex": "9b5a74da5eeec32ebf6e528db0114c603e9907cc",
-    "research/notes_ja.tex": "51025914d8e204b8b2189d79367d68323fe186e3",
-    "research/STATE.json": "56fe35adc1f1cd5b4a4cb1515fa902250bcaa476",
-    "scripts/check_project.py": "86596fc6ac2866348c57f2eb8e8cbe75cbc12bd2",
-    "README.md": "ecf6e06995f070e3fd2e779d1b4c640877f0ddac"
-  },
-  "reproduction_note": "Published scripts and exact certificates for new v12 results. Compare remote file content SHAs to generated local files before asserting complete source equivalence.",
-  "remote_verified_blobs": {
-    "nc-p3.tex": "d6bb02b70d3dad1f986cc36f3d62cadb9aa2c6c1",
-    "sections/nonore_period_two.tex": "8b128e012658a7f034131bf239b4356a582d226c",
-    "sections/nonore_family.tex": "17253c13d7a896b450ee0ab7fc24e4b4e5d58a1f",
-    "computations/verify_nonore_point_geometry.py": "fa5da1e91b1cd343f72e8b4a1fbc167fbb8114e6",
-    "research/nonore_point_certificate.json": "42a1b10e28617b494de7e1dca777f97730af7599",
-    "research/STATE.json": "f259fcda99ed384be7024b60151cb3812f3e537d",
-    "research/plan_ja.tex": "42bd955d4c8a10a0ecf4e8c168a7347bbbedfd3f",
-    "research/notes_ja.tex": "84e666c5a52de4116eb4c185cceb6cfa73180889",
-    "scripts/check_project.py": "39fb5c3988aff6cb8b88a9264ca470f895e30fe7"
-  },
-  "static_readback": {
-    "result": "PASS",
-    "scope": "46 tracked blobs, 101 unique TeX labels, no missing paper refs/bibliography keys, no missing STATE paths, no missing proof references, and all 11 section input paths present. Verified against remote content in this turn."
-  },
-  "math_reexecution": {
-    "result": "PASS",
-    "scope": "Executed exact rational code for ranks 30/37/39/40/40/41, even ranks 15/21/22, odd ranks 15/18/19, and Q=c*lambda; the locally executed file's Git blob matched the remote blob after replacement.",
-    "module_blobs": {
-      "computations/pbw_complex.py": "9ce3a50ba3802cfa213ee648892ca0181f2c915f",
-      "computations/verify_elliptic_family.py": "a52d18e83a662053b939c2e4789923d9a2e30782",
-      "computations/verify_algebraic_family.py": "b7c12da993335d25353efc720b015626f1a7a74d",
-      "computations/verify_nine_closure_tangent.py": "3a836dc78059abdef4baaead596157bcb0d8bb7e"
-    }
-  }
+  "interpretation_limits": [
+    "The 9-to-15 comparison is of tangent spaces, not dimensions of irreducible components.",
+    "Equality of U(th) is necessary, not sufficient, for indexed isomorphism.",
+    "Z7 and Z9 are orbit-saturated closures of a single relation space, not asserted to be global coarse moduli spaces.",
+    "The boundary five-parameter family has generic minimal period two and lies in Z7; it is not an independently established component.",
+    "Eleven individually integrable tangent directions have the mixed obstruction lambda*c and do not yield a smooth simultaneous eleven-dimensional family."
+  ],
+  "checks_execution_note": "Listed commands are the repository reproduction commands. During this audit certificate output paths were redirected to temporary files and compared with the tracked certificates; the repaired --output interface was separately executed and compared. No mathematical source or computation input differs."
 }

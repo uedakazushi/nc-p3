@@ -1,12 +1,11 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-15",
-  "version": 15,
+  "version": 16,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
-  "remote_base_commit": "85108b4327d7c2edf049fb57cc52c9cfb64bbd86",
-  "delivery_status": "see research/validation.json for separately verified generation, execution and remote save",
+  "delivery_status": "See research/validation.json; re-read current main at each restart.",
   "scope": {
     "target": "standard 14641 quadratic Koszul left/right AS-regular indexed Z-algebras over algebraically closed char 0",
     "equivalence": "index-preserving Z-algebra isomorphism; graded and selected-period isomorphism are separate comparison problems",
@@ -19,19 +18,19 @@
       "id": "ALGEBRAIC-FAMILY-008",
       "priority": 1,
       "status": "active",
-      "objective": "Find explicit algebraic curves and families outside the singular nine-family orbit-saturated closure, characterize its tangent cone and component maximality; classify indexed isomorphism using intrinsic elliptic 2-isogeny and twelve-point configurations."
-    },
-    {
-      "id": "MODULI-HIGHER-006",
-      "priority": 2,
-      "status": "open",
-      "objective": "Use higher obstructions only to test candidates for actual algebraic families; full higher-order Clifford equations remain open."
+      "objective": "At a generic smooth elliptic point of the nine-parameter family compare the full period-two/canonical-period-four deformation space with the family tangent image; determine maximality or integrate missing directions algebraically. Determine sufficient indexed-isomorphism conditions from the polarized elliptic 2-isogeny, twelve-point divisor and lifting data."
     },
     {
       "id": "PERIOD-ROOTS-007",
-      "priority": 3,
+      "priority": 2,
       "status": "open",
       "objective": "Classify the finite projective automorphism group and all one-period structures at the Clifford point."
+    },
+    {
+      "id": "MODULI-HIGHER-006",
+      "priority": 3,
+      "status": "open",
+      "objective": "Use higher obstructions only to test candidates for actual algebraic families; full higher-order Clifford equations remain open."
     },
     {
       "id": "Z4-AS-004",
@@ -117,151 +116,151 @@
       "id": "SIGN-SHIFT",
       "claim": "A(lambda)(1)=A(-lambda); minimal period two implies indexed nonisomorphism.",
       "proof": "nc-p3.tex:prop:period-two-sign",
-      "status": "proof_written_using_external_period_two_example"
+      "status": "proof_written_external_dependency"
     },
     {
       "id": "RELATIVE-FOUR",
       "claim": "Flat quadratic Artin deformations of the standard class are relative Koszul-Frobenius and admit canonical four-periodic coordinates.",
       "proof": "nc-p3.tex:lem:relative-four",
-      "status": "proof_written_audited_here_not_formalized"
+      "status": "proof_written"
     },
     {
       "id": "QUANTUM-ORBITS",
       "claim": "Generic quantum graded isomorphism parameters have dimension six; indexed Z isomorphism parameters have dimension three.",
       "proof": "nc-p3.tex:thm:quantum-orbits",
-      "status": "proof_written_not_novelty_claim"
+      "status": "proof_written"
     },
     {
       "id": "QUANTUM-LOCAL",
       "claim": "Generic quantum local deformations are exhausted by the quantum family; local component dimensions are six and three for the two equivalence relations.",
       "proof": "nc-p3.tex:thm:quantum-local",
-      "status": "proof_written_with_exact_finite_rank_verification"
+      "status": "proof_written"
     },
     {
       "id": "CLIFFORD-TANGENT",
       "claim": "At the chosen Clifford point the graded deformation tangent is 9 and the indexed Z deformation tangent is 15; the specific forgetful differential has cokernel 6.",
       "proof": "nc-p3.tex:thm:clifford-tangent",
-      "status": "proof_written_with_exact_finite_rank_verification"
+      "status": "proof_written"
     },
     {
       "id": "CLIFFORD-QUADRATIC",
       "claim": "All fifteen-variable quadratic obstructions span Q=o0*o5+o1*o2-o2*o3+o3*o4, of rank six.",
       "proof": "nc-p3.tex:thm:clifford-quadratic",
-      "status": "computer_assisted_proof_exact_QQ_not_formal_verification"
+      "status": "proof_written"
     },
     {
       "id": "TWO-AXES",
       "claim": "The two indicated alternating axes are exact PBW families; the mixed tangent has obstruction ab.",
       "proof": "nc-p3.tex:prop:two-axes",
-      "status": "proof_written_with_polynomial_overlap_verification"
+      "status": "proof_written"
     },
     {
       "id": "CLIFFORD-HULL",
       "claim": "The full Clifford deformation ring is the 14-dimensional hypersurface suggested by Q.",
       "proof": "nc-p3.tex:conj:clifford-model",
-      "status": "conjecture_only_two_jet_verified"
+      "status": "conjecture"
     },
     {
       "id": "ALGEBRAIC-SEVEN",
       "claim": "Polynomial PBW family over A7; every geometric fiber is standard 14641 AS-regular.",
       "proof": "nc-p3.tex:thm:algebraic-seven",
-      "status": "proof_written_and_polynomial_overlaps_verified"
+      "status": "proof_written"
     },
     {
       "id": "SEVEN-IMAGE",
       "claim": "The indexed isomorphism-class image has dimension seven; three alternating directions integrate algebraically.",
       "proof": "nc-p3.tex:thm:seven-image",
-      "status": "proof_written_with_exact_rank_certificate"
+      "status": "proof_written"
     },
     {
       "id": "SEVEN-PERIOD-TWO",
       "claim": "An explicitly specified nonempty open set has minimal period two.",
       "proof": "nc-p3.tex:thm:seven-period-two",
-      "status": "proof_written_with_exact_point_configuration_certificate"
+      "status": "proof_written"
     },
     {
       "id": "ALGEBRAIC-NINE",
       "claim": "Over Spec k[u,v,r,s,a,b,c,t,h,(1+th)^(-1)] all fibers are standard AS-regular; t=h=0 is the seven-family; indexed image dimension nine; a nonempty open set has minimal period two.",
       "proof": "nc-p3.tex:thm:algebraic-nine",
-      "status": "proof_written_audited_with_exact_Clifford_derivation_and_rank_checks_not_formalized"
+      "status": "proof_written"
     },
     {
       "id": "ELLIPTIC-DIVISOR",
       "claim": "The nine-family nonperiodicity follows from twelve-point elliptic divisors in an anti-invariant six plus invariant three section space; the unique nonreduced point has length eight.",
       "proof": "nc-p3.tex:lem:elliptic-nonperiod",
-      "status": "geometric_proof_written_not_a_numerical_sample"
+      "status": "proof_written"
     },
     {
       "id": "ORE-DERIVATIONS",
       "claim": "For 1+t*h != 0, degree-one ordinary derivations of ternary Clifford B(t,h) form a free rank-six module generated by three inner and three explicit outer derivations. Parity-twisted degree-one derivations are all central-quadratic-valued maps, free rank nine.",
       "proof": "nc-p3.tex:thm:ore-derivations",
-      "status": "proof_written_with_exact_symbolic_minors_checked"
+      "status": "proof_written"
     },
     {
       "id": "ORE-SLICE",
       "claim": "Generic marked parity-Ore extensions over the specified ternary Clifford B(t,h) are represented by the existing nine-parameter normal form after shifts and diagonal scalings. Not all AS regular Z algebras.",
       "proof": "nc-p3.tex:cor:ore-slice",
-      "status": "proved_within_specified_ore_class"
+      "status": "proof_written"
     },
     {
       "id": "ELLIPTIC-J",
       "claim": "On the smooth elliptic twelve-point open, indexed-isomorphic members have equal J(th), an explicit rational function of degree twelve. Equality is only necessary.",
       "proof": "nc-p3.tex:prop:elliptic-j-obstruction",
-      "status": "proof_written_plus_rational_formula_verified"
+      "status": "proof_written"
     },
     {
       "id": "INTRINSIC-2ISOGENY",
       "claim": "At a generic nine-family member, the unique nonreduced point intrinsically recovers the ternary Clifford indexed subalgebra, polarized elliptic curve with nontrivial order-two translation, and its 2-isogenous quotient.",
       "proof": "nc-p3.tex:lem:intrinsic-elliptic-tau",
-      "status": "proof_written_with_degree_three_polarization_argument"
+      "status": "proof_written"
     },
     {
       "id": "EXPLICIT-2ISOGENY",
       "claim": "The elliptic quotient has cubic th*A^3+t*B^3+h*C^3-(th+4)*ABC=0. The ordered two j invariants give U(x)=4096(x+1)^3/[x*(x-8)^3], degree four; generic indexed isomorphism implies equal U(th).",
       "proof": "nc-p3.tex:thm:explicit-two-isogeny",
-      "status": "proof_written_with_exact_polynomial_certificate"
+      "status": "proof_written"
     },
     {
       "id": "ISOGENY-MONODROMY",
       "claim": "The rational degree-four map x->U(x) has ramification types (3,1),(2,2),(3,1) and Galois closure A4.",
       "proof": "nc-p3.tex:cor:isogeny-a4",
-      "status": "proved_by_ramification_and_exact_derivative"
+      "status": "proof_written"
     },
     {
       "id": "NONORE-FIVE",
       "claim": "The five-parameter 2-periodic family YW+WY=(-1)^i*a*ZX is PBW and standard 14641 quadratic Koszul AS-regular for all parameters; indexed-isomorphism image has dimension exactly two.",
       "proof": "nc-p3.tex:thm:nonore-five",
-      "status": "proof_written_with_polynomial_overlaps_and_exact_rank_certificate"
+      "status": "proof_written"
     },
     {
       "id": "NONORE-GENERIC-PERIOD2",
-      "claim": "On a nonempty Zariski open of the non-Ore A5 family, left point-scheme support is one line plus five isolated points and even/odd supports are not projectively isomorphic. Hence generic minimal period is exactly 2.",
+      "claim": "On a nonempty Zariski open of the alternative Ore A5 family, left point-scheme support is one line plus five isolated points and even/odd supports are not projectively isomorphic. Hence generic minimal period is exactly 2.",
       "proof": "nc-p3.tex:thm:nonore-generic-two",
-      "status": "mathematical_proof_with_symbolic_minors_and_Galois_certificate"
+      "status": "proof_written"
     },
     {
       "id": "NONORE-CLOSURE",
-      "claim": "The entire nonOre five-parameter family lies in the orbit-saturated Zariski closure of the seven-parameter Ore family, via a flat one-parameter family and a singular generic change of generators.",
+      "claim": "The entire five-parameter boundary family lies in the orbit-saturated Zariski closure of the seven-parameter Ore family, via a flat one-parameter family and a singular generic change of generators.",
       "proof": "nc-p3.tex:thm:nonore-in-seven-closure",
-      "status": "proved_with_symbolic_PBW_and_generic_isomorphism_certificate"
+      "status": "proof_written"
     },
     {
       "id": "SEVEN-SINGULAR",
       "claim": "The orbit-saturated 37-dimensional Grassmannian image closure of the seven-family is singular at the Clifford point, with tangent dimension at least 39.",
       "proof": "nc-p3.tex:thm:seven-closure-singular",
-      "status": "proved_with_exact_rational_rank_certificate"
+      "status": "proof_written"
     },
     {
       "id": "NINE-CLOSURE-SINGULAR",
       "claim": "The nine-parameter elliptic Ore family has irreducible orbit-saturated relation-space closure Z9 of dimension 39, containing Z7 in codimension two; tangent space at Clifford is at least 41, hence Z9 singular.",
       "proof": "nc-p3.tex:thm:nine-closure-singular",
-      "status": "proof_written_with_exact_rational_rank_certificate"
+      "status": "proof_written"
     },
     {
       "id": "NINE-CURVE-OBSTRUCTION",
       "claim": "Nine family plus two boundary degenerations span eleven individually algebraically integrable first-order classes, seven even and four odd, but their Clifford quadratic obstruction restricts to lambda*c, ruling out a smooth eleven-parameter simultaneous family with that tangent image.",
       "proof": "nc-p3.tex:prop:nine-closure-obstruction",
-      "status": "proof_from_existing_Q_and_new_exact_rank_certificate"
+      "status": "proof_written"
     }
   ],
   "document_paths": {
@@ -303,7 +302,9 @@
     "Ore completeness only for fixed ternary Clifford B and the specified signed Ore form.",
     "Equal J(th) values are necessary but not sufficient for indexed isomorphism.",
     "Equality of U(th) is only a necessary indexed-isomorphism condition, not sufficient.",
-    "The nonOre two-dimensional image is in the seven-dimensional Ore image closure. This does not establish a separate component, a global moduli singularity, or generic fiber isomorphism.",
+    "The boundary two-dimensional image is in the seven-dimensional Ore image closure. This does not establish a separate component, a global moduli singularity, or generic fiber isomorphism.",
     "Even seven plus odd four algebraic curve tangents do not imply an eleven-dimensional smooth simultaneous family: Q restricted is lambda*c."
-  ]
+  ],
+  "reviewed_source_commit": "c6e3a63a24a1e35be969d3f44c1cc7a7202b6f8c",
+  "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json."
 }

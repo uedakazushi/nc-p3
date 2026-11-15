@@ -26,46 +26,31 @@
 \newcommand{\Sym}{\operatorname{Sym}}
 \newcommand{\HH}{\operatorname{HH}}
 \newcommand{\NF}{\operatorname{NF}}
-\title{非可換射影三空間の周期構造と局所モジュライ\\
-\large 四窓による分類・量子多項式成分・代数的2周期族}
+\title{非可換射影三空間の周期構造と代数的変形\\
+\large 四窓への還元・Clifford点の変形・楕円Ore族}
 \author{}
-\date{2026年11月15日\quad 研究原稿 v15\\
+\date{2026年11月15日\quad 研究原稿 v16\\
 \small 全分類およびClifford点の高次障害の決定は未完成}
 \begin{document}
 \maketitle
 \begin{abstract}
-標準$(1,4,6,4,1)$型の四次元二次Koszul AS正則$\ZZ$-代数を、
-添字保持同型で分類する問題を扱う。
-局所Frobenius traceによる標準4周期構造を用いて、幾何学的同型類と周期判定を
-有限四窓の軌道問題に還元する。
-局所モジュライについては二つの異なる現象を分離する。
-一般の四変数量子多項式代数ではgraded同型類の6パラメータが、
-$\ZZ$-代数同型では三つのZhang twist方向を忘れるため3パラメータになる。
-具体的な有理数点で周期4の変形複体を厳密に計算し、
-滑らかな量子多項式族と基底変更が全接空間を張ることから、
-この点の近傍に非1周期的な新しい成分方向がないことも示す。
-一方、既存の2周期PBW族のClifford特殊点では、選んだgraded表示の一次変形が9次元、
-標準AS正則$\ZZ$-代数の一次変形が15次元となる。
-追加の六方向の二次障害は非退化Pl\"ucker二次式一つに集約される。
-この最後の結果には同梱コードによる有理数上の計算補助証明を与える。
-接空間15次元と二次障害一つから、実際の成分次元を14と結論してはいない。
-さらにClifford点を通る七変数の多項式関係による族を構成し、全ファイバーのAS正則性、
-同型類の像の次元7、一般点の最小周期2を証明する。この族は三つの独立な交代方向を同時に代数的に積分する。
-さらに三生成Clifford部分代数を動かし、七変数族を含む九変数の代数的AS正則族を構成する。
-その同型類の像は9次元で、一般点の最小周期2を楕円曲線上の12点配置によって証明する。
-固定した三生成Clifford部分上の次数一Ore導分を完全に分類し、
-通常の導分6次元と符号捩れ導分9次元から九変数正規形を得る。
-さらに楕円曲線の$j$-不変量を$th$の次数12の有理関数として計算し、同型の必要条件を得る。
-さらに非零2等分点を含む楕円データが内在的に復元されることを示し、
-商の明示的三次式および次数4の有理不変量$U(th)$を求める。
-固定Clifford--Ore型に属さない交代接方向を実現する五変数の代数的二周期族も構成し、
-全ファイバーのAS正則性とその同型類の像の次元2を証明する。
-さらに点スキームを直線と五点の配置として計算し、一般ファイバーの最小周期2を証明する。
-この二次元族は別の三生成部分についてOre表示を持ち、平坦な一変数族で七変数族へ退化する。
-七変数族の37次元軌道飽和閉包はClifford点で接次元39以上となり特異である。
-さらに九変数族の軌道飽和閉包は39次元で，Clifford点に41次元以上の
-接空間を持ち特異である。11個の代数的一変数変形の接方向は独立だが，
-その全方向を同時に動かす滑らかな族は二次障害によって排除される。
+標準$(1,4,6,4,1)$型の四次元二次Koszul AS正則$\ZZ$-代数について、
+添字保持同型による分類の有限表示と、graded代数には由来しない代数的族を研究する。
+Frobenius traceにより標準4周期構造を構成し、幾何学的同型類・周期判定を四窓へ還元する。
+中心となる構成は、三生成Clifford部分を動かす九変数の楕円Ore族である。
+全ファイバーのAS正則性、同型類の像の次元9、一般点の最小周期2を証明する。
+非1周期性は楕円曲線上の12点因子と非零2等分点による平行移動を用いて示す。
+
+局所変形では、量子多項式族のgraded同型類6次元からindexed同型類3次元へのtwist忘却と、
+Clifford点における接空間9次元から15次元への増大を区別する。
+後者の全二次障害は、六つの交代変数上で非退化な二次式一つとなる。
+九変数族の内在的な2-isogenyから次数4の必要同型不変量を得る。
+さらに別のOre表示を持つ境界族を構成し、七・九変数族の有限関係空間における
+軌道閉包がClifford点で特異となることを示す。
+
+有限線型代数と多項式恒等式には再現可能な厳密計算を付す。
+九次元の族の像の成分としての最大性、完全な族内同型判定、
+Clifford点の高次障害、全AS正則locusの分類および新規性の最終確認は未完成である。
 \end{abstract}
 \tableofcontents
 
@@ -141,6 +126,50 @@ PBW性からKoszul性への含意はPriddyの理論\cite{Priddy}による。
 12点配置を組み合わせた非1周期性の証明を第\ref{sec:elliptic-ore}節に置く。
 これらの具体的族と既存の非可換射影三空間の族との完全な文献上の同定・新規性確認は未了である。
 
+\paragraph{Clifford/Ore構成と幾何的不変量の先行研究。}
+Vancliff--Van Rompay--Willaert\cite[\S3]{VVRW}はgraded Clifford代数の
+iterated Ore変形と点加群・直線加群を調べている。
+Stephenson--Vancliff\cite{SV}も三生成Clifford部分と平面三次曲線を用いる
+四次元graded Clifford代数の構成を扱う。
+従ってClifford部分・Ore拡大・点配置という方法自体を本稿の新規性とはしない。
+本稿で検討すべき追加の寄与は、添字に依存する交代変形、
+一般点での非1周期性とindexed同型類像の次元、および境界の具体的な幾何である。
+両文献の構成と本稿の全特殊化の完全な同定は未了である。
+またBhatoy--Ingalls\cite{BI}は既知の四次元graded族のsuperpotentialから離散不変量を構成する。
+これらはgraded側の族との比較に有用だが、本稿のindexed同型関係や全成分数へそのまま適用しない。
+
+\subsection*{主結果の位置と読み方}
+証明の依存順は、有限四窓、局所変形、代数的族、同型不変量、境界である。
+結果の種類と未解決部分を次のように区別する。
+\begin{longtable}{p{.24\linewidth}p{.69\linewidth}}
+\toprule
+内容 & 主な結果と射程\\
+\midrule
+\endhead
+有限表示 &
+定理\ref{thm:canonical-four}、\ref{thm:finite-period-test}。
+AS正則な標準型対象の同型・周期を有限表示へ還元する。
+一般四窓のAS正則性まで判定したものではない。\\
+二つの次元比較 &
+定理\ref{thm:quantum-orbits}、\ref{thm:quantum-local}の$6\to3$は同型類の局所成分。
+定理\ref{thm:clifford-tangent}の$9\to15$は接空間。
+二次障害は定理\ref{thm:clifford-quadratic}、全局所模型は予想\ref{conj:clifford-model}。\\
+中心となる代数的族 &
+定理\ref{thm:algebraic-seven}、\ref{thm:algebraic-nine}。
+全ファイバー正則性、同型類像の次元、一般最小周期2を別々に証明する。
+七変数族の証明も保持する。\\
+同型への手掛かり &
+定理\ref{thm:ore-derivations}は指定Ore構成の導分分類。
+補題\ref{lem:intrinsic-elliptic-tau}と定理\ref{thm:explicit-two-isogeny}は
+内在的データと必要不変量を与える。完全なindexed同型分類は未完成。\\
+境界の幾何 &
+定理\ref{thm:nonore-in-seven-closure}の閉包包含、
+定理\ref{thm:seven-closure-singular}、\ref{thm:nine-closure-singular}の特異性、
+命題\ref{prop:nine-closure-obstruction}の同時積分障害。
+対象は位置0の関係空間の軌道閉包である。\\
+\bottomrule
+\end{longtable}
+
 \input{sections/four_window}
 \input{sections/local_moduli}
 \input{sections/algebraic_family}
@@ -154,31 +183,48 @@ PBW性からKoszul性への含意はPriddyの理論\cite{Priddy}による。
 \input{sections/nine_closure}
 
 \section{残る分類問題と検証範囲}
-一般の四窓のKoszul/AS正則locusの必要十分条件、全対象被覆、閉特殊値、相対族の大域的下降、
-全モジュライの既約成分は未解決である。
-現在の最優先は、式\eqref{eq:nonore-five}の非Ore型交代方向も含めて、
-実際の代数的族を拡張することである。式\eqref{eq:isogeny-modular-u}による
-九変数族の同型障害を十二点因子の完全な比較へ強化する。
-式\eqref{eq:nine-family}の一般点で族の最大性も調べ、
-残る変形方向を含む明示的な代数的AS正則族を構成することである。
-楕円曲線上の12点の線型系と、中心二次式・導分によるOre表示を対応させ、
-異なるClifford部分代数を使う表示の族内外同型と閉包を比較する。
-非Ore型五変数族の一般の最小周期2と、七変数族の軌道飽和閉包への包含は確定した。
-ただし全モジュライの既約成分次元・最大性は未解決なので、閉包に含まれない方向を代数的に探す。
-九変数族の39次元軌道飽和閉包はClifford点で接空間41次元以上となり特異であることも証明した。
-曲線として積分可能な接方向が11個あっても、それらを同時に動かす滑らかな11次元族は二次障害で排除される。
-形式的障害計算は候補の除外・必要条件の抽出に使い、代数的な全パラメータ族の構成を優先する。
-全九つの偶方向、残る交代方向、全1周期構造、成分としての最大性は未解決である。
-同時に$C_0$の有限射影自己同型群と全1周期構造を調べ、選んだgraded枝と1周期的全体を分離する。
+標準四窓への抽象的な還元は得られたが、一般四窓のKoszul/AS正則locusの
+明示的な必要十分条件、正則な代数的族による全被覆、全閉特殊値、
+相対族の大域的下降、全モジュライの既約成分は未解決である。
 
-本稿の有限線型代数・二次障害・七変数族の重なり・九変数族の導分恒等式に加え、
-非Ore型五変数族の全三次重なり、商楕円三次式、次数4の有理不変量と分岐は
-新しい一変数退化の全8個の重なりと階数計算も含め、厳密な有理数・多項式演算で検査した。
-各検証の実行日は\path{research/validation.json}に区別して記録する。
-全定理の形式化、第三者査読、\cite{as4period}の全計算の再実行はしていない。
-文献による既知結果と今回の計算を区別し、コードの成功だけで高次障害の消滅や全分類を主張しない。
+九変数族については、一般点の全変形と既存族の接像を比較し、
+像が成分を尽くすかを決める必要がある。
+楕円曲線・2等分点・12点因子と第四座標の持上げから、
+式\eqref{eq:isogeny-modular-u}を超える十分な同型条件を求めることも課題である。
+五変数境界族の一般最小周期2と七変数族への閉包包含は既に証明したので、
+残るのは全AS正則locusにおける最大性と、閉包の外にある代数的変形である。
+Clifford点では全1周期構造と高次障害が未決定であり、
+特定のgraded表示の9次元接像を1周期的部分全体と同一視しない。
 
-\begin{thebibliography}{9}
+有限線型代数、全二次障害、PBW重なり、導分恒等式、
+点配置の小行列式、2-isogenyの明示式と分岐、境界の基底変更には
+有理数・多項式による検算コードを付す。
+各計算は対応する有限恒等式を支え、一般非1周期性、全ファイバーAS正則性、
+閉包包含はそれぞれ本文の構造的な証明に依存する。
+\path{research/validation.json}に今回の論理監査、計算、組版、保存の範囲を分けて記録する。
+全定理の形式化、第三者査読、新規性の確定、
+外部原稿\cite{as4period}の全計算の再実行は行っていない。
+
+\begin{thebibliography}{99}
+\bibitem{VVRW}
+M.~Vancliff, K.~Van Rompay and L.~Willaert,
+\emph{Some quantum $\mathbb P^3$s with finitely many points},
+Communications in Algebra \textbf{26} (1998), 1193--1208.
+\url{https://bpb-us-e1.wpmucdn.com/websites.uta.edu/dist/0/5123/files/2022/10/finpts.pdf}.
+使用箇所：Introduction, \S3（graded Clifford代数のOre変形）。
+\bibitem{SV}
+D.~R.~Stephenson and M.~Vancliff,
+\emph{Constructing Clifford quantum $\mathbb P^3$s with finitely many points},
+Journal of Algebra \textbf{312} (2007), 86--110.
+\href{https://doi.org/10.1016/j.jalgebra.2007.02.015}{doi:10.1016/j.jalgebra.2007.02.015}.
+本稿の全特殊化との同定は未確認。
+\bibitem{BI}
+V.~Bhatoy and C.~Ingalls,
+\emph{Discrete Invariants of Koszul Artin-Schelter Regular Algebras of Dimension four},
+\href{https://arxiv.org/abs/2602.13178v1}{arXiv:2602.13178v1} (2026).
+使用箇所：Introduction, \S3, \S6。graded側の比較文献であり、
+本稿のindexed成分数の根拠としては使わない。
+
 \bibitem{BP} A.~I.~Bondal and A.~E.~Polishchuk,
 \emph{Homological properties of associative algebras: the method of helices},
 Russian Acad. Sci. Izv. Math. \textbf{42} (1994), no.~2, 219--260.

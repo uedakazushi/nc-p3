@@ -6,6 +6,8 @@ uses irreducibility mod 2, factor type (2,3) mod 5, and PGL_2 stabilizers.
 See the manuscript for the proof; this program certifies the algebraic input.
 """
 from itertools import combinations
+from pathlib import Path
+import argparse
 import sympy as sp
 import json
 
@@ -56,4 +58,12 @@ def verify():
                       'Generic non-periodicity is proved from point schemes, not from tangent-space rank',
                       'No assertion of distinct irreducible moduli components']}
 if __name__=='__main__':
-    print(json.dumps(verify(),indent=2,ensure_ascii=False))
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--output',type=Path,
+                        help='write the exact JSON certificate to this path')
+    args=parser.parse_args()
+    text=json.dumps(verify(),indent=2,ensure_ascii=False)+'\n'
+    if args.output:
+        args.output.parent.mkdir(parents=True,exist_ok=True)
+        args.output.write_text(text,encoding='utf-8')
+    print(text,end='')

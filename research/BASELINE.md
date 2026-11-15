@@ -1,8 +1,14 @@
-# 依存・一次文献・証明位置 — 2026-11-15 / v15
+# 依存・一次文献・証明位置 — 2026-11-15 / v16
 
-## 現行プロジェクト
+## 現行プロジェクトと確認範囲
 
-今回の出発点は `uedakazushi/nc-p3` のmain commit `98c0401f931123a796ee6df032b4a6430d668785`、tree `03ee44eec79aab9c77cbfbfc1ecbaa6bc77e7261`。主論文blob `d171321028573f757a0101d961e43762eaa841ac` を完全照合した上で、既存本文を保持して九変数族を統合した。遠隔保存状態は `validation.json` に記録する。
+主論文は `nc-p3.tex`、証明の対応表は `research/STATE.json`、検証対象のcommit・コード・実行結果は `research/validation.json` に集約する。
+この文書は有効な一次文献、利用箇所、外部依存と未確認点を記す。旧版の取得経緯や先端履歴は蓄積しない。
+
+以下の既存文献の「確認済み」は以前の本文確認記録を含み、今回すべてを再監査したという意味ではない。
+今回の重点照合は Bhatoy–Ingalls–LaRoche–Nookala のTable 2とProposition 5.1、
+および下記のClifford/Ore先行研究と2026年の離散不変量論文である。
+各資料について本文確認と要旨・書誌確認を区別する。
 
 ## as4から再利用する結果
 
@@ -12,7 +18,7 @@
 参照： https://github.com/uedakazushi/as4/blob/main/research/z_periodicity/papers/as4_z_periodicity_ja.tex
 
 - 原稿前半の局所Frobenius・4周期性の議論：有限Koszul解消・左右AS双対性からのFrobenius性と4周期性。現行論文でもtrace構成を説明する。
-- 2周期族の関係式・PBW表示・二次双対・対合行列を与える箇所：2周期PBW族、全λの基底、二次双対、完全対合。今回確認した本文に所在。
+- 2周期族の関係式・PBW表示・二次双対・対合行列を与える箇所：2周期PBW族、全λの基底、二次双対、完全対合。上記固定blobの本文に所在。
 - 2周期例の非1周期性を扱う箇所：五根配置を使う非1周期性。λ=1で最小周期2。計算で恒等候補が失敗することだけとは異なる。
 - 最小周期4の例と平坦族も同原稿を参照するが、今回その全証明・全計算を再実行したわけではない。
 
@@ -32,7 +38,7 @@
 5. Van den Bergh, *Non-commutative quadrics*, https://arxiv.org/abs/0807.3753v3 (2010); 出版版 IMRN 2011, no.17, 3983–4026（著者publication listで確認）。arXiv PDF pp.3,21、Proposition 3.3、Theorem 5.5.10、§5.6式(5.10)、Proposition 5.6.1、Proposition 6.6を比較に用いた。滑らかな楕円曲線の3パラメータ、正確な1周期条件、2周期性、graded4D ambientを混同しない。等差条件だけの記述は一般jに限定する。
 6. Bhatoy–Ingalls–LaRoche–Nookala, *Some components of the moduli space of Koszul Artin-Schelter regular algebras of dimension four*, https://arxiv.org/abs/2511.08390v1 (2025-11-11)。§3.1の量子多項式、Table 2 (p.18) のCliffordのgraded HH²=9と量子多項式の6を確認。Table 2およびProposition 5.1 (p.20) はPDF画像でも確認した。Proposition 5.1を無条件の接空間判定として採用しない。尖点曲線の反例と滑らかな源を使う代替補題は現行論文・ノートに記す。
 
-## 今回の結果の位置づけ
+## 現行結果の位置づけ
 
 量子6→3は既知の量子族・twist理論を結ぶ具体的比較で、新規性を主張しない。4周期変形複体、Clifford点の全15変数の二次障害、相対標準化の局所適用は現行原稿に証明・計算を置いた。先行研究との最終的な優先権比較は未完。外部PDFや検索ログをbundleへ大量収録しない。
 
@@ -61,18 +67,18 @@
 - `computations/verify_ore_derivations.py`: 三生成Clifford部分の30×18制約行列、通常導分階数12・捩れ導分階数9を全パラメータで証明補助する小行列式を生成し、一般のindexed同型に関する楕円$j$必要条件の有理関数を検算する。
 - 導分の完全性は固定Clifford部分と指定された符号Ore形式に限定。全四窓分類、楕円$j$一致による十分同型判定、全モジュライの成分最大性は未証明。
 
-## 楕円2-isogenyと非Ore型代数的チャートの参照
+## 楕円2-isogenyと別のOreチャートの参照
 
 - A. S. I. Anema, J. Top and A. Tuijp, *Hesse Pencils and 3-Torsion Structures*, SIGMA 14 (2018), article 102, DOI https://doi.org/10.3842/SIGMA.2018.102 。Hesse pencilと楕円3-torsionの基本構造に関する一次文献。商曲線と四対一の具体公式は本文の直接計算で証明し、この文献の結果として推測しない。
 - `computations/verify_isogeny_invariant.py` は楕円点対応の外積、2-isogenous cubicの多項式恒等式、二つの$j$公式、次数4の$U(x)$と分岐を厳密に検証する。2-isogenyのindexed不変性は論文内の偏極次数3と2-torsionの議論による。
 - `computations/verify_nonore_family.py` は選んだClifford--Ore構成を離れる五変数族の全8個の三次重なり、正の重みによる停止性、Clifford基点の軌道階数30から32、有効対角トーラス階数3を検証する。全ファイバーのAS正則性は原稿のKoszul--Frobenius構造証明に依存する。
 - P. Belmans, *4d-AS-regular --- the classification of 4-dimensional Artin--Schelter regular algebras*, https://4d-as.ncag.info (2026), DOI https://doi.org/10.5281/zenodo.21296619。graded側の関連族と既知文献を探すための公開データベースであって、indexed Z-algebraの既約成分分類や本結果の新規性を保証するものではない。
 
-## 非Ore型族の一般最小周期2の証明
+## 五変数境界族の一般最小周期2の証明
 
 - 主論文 `thm:nonore-generic-two`（`sections/nonore_period_two.tex`）で左点スキームの支持を一本の直線と五孤立点に明示し、射影非同型を証明する。`computations/verify_nonore_point_geometry.py` は全15小行列式、五次式による消去、標本 `z^5+z^2+1` の mod 2 既約性・mod 5 の因子型 `(2,3)`、残る座標の行列式を厳密に検査する。
 - Galois群 `S5` と Möbius安定化群の自明性は本文に素数次数の原始性と一点固定部分群の巡回性による証明を記載。計算コードのPASSだけから周期の不存在を結論しない。
-- 一般非Ore族と一般九変数楕円族では左点スキームの支持の次元が異なるので非同型。ただし成分の閉包・特殊化・既約成分への所属はなお不明。
+- 一般の五変数境界族と一般九変数楕円族では左点スキームの支持の次元が異なるので非同型。五変数族の七変数族への軌道閉包包含は後述の定理で証明済み。ただし全AS正則locusにおける成分性・最大性は未決定。
 
 ## 七変数族への境界退化とClifford点の特異性
 
@@ -84,3 +90,12 @@
 - 証明：主論文 `thm:nine-closure-singular`, `prop:nine-closure-obstruction`（`sections/nine_closure.tex`）。七・九変数族の有限関係表示と、`thm:nonore-in-seven-closure` における二つの代数的退化に依存。
 - 厳密再現：`computations/verify_nine_closure_tangent.py`、証明書 `research/nine_closure_certificate.json`。有理数上の階数30,37,39,40,40,41、偶方向7・交代方向4と二次障害 `lambda*c` を検査。
 - 楕円Ore族の既約成分としての最大性や全AS正則moduliの特異性、新規性の最終確認をこの結果からは主張しない。
+
+## Clifford/Ore構成と新規性比較に必要な追加文献
+
+- M. Vancliff, K. Van Rompay, L. Willaert, *Some quantum P^3s with finitely many points*, Communications in Algebra 26 (1998), 1193–1208。著者PDF https://bpb-us-e1.wpmucdn.com/websites.uta.edu/dist/0/5123/files/2022/10/finpts.pdf 。Introduction・§3、Definition 3.1、Lemma 3.2とその直後、Lemma 3.3、Proposition 3.5（著者PDF pp.8–11）を本文で確認。標数零で q^4=1, λ≠0 の通常graded iterated Ore拡大と点・直線加群を扱う。従ってCliffordからOre変形を作る方法自体は既知。本稿の添字依存する交代変形、一般非1周期性、族内外同型との完全な比較は未了。
+- D. R. Stephenson, M. Vancliff, *Constructing Clifford quantum P^3s with finitely many points*, Journal of Algebra 312 (2007), 86–110。DOI https://doi.org/10.1016/j.jalgebra.2007.02.015 。出版社要旨・書誌で三次元Clifford部分と平面三次曲線を利用する四次元graded構成を確認。出版社本文は取得できず、定理番号・詳細仮定・証明は今回未確認。現行九変数族の全特殊化との比較も未了。indexed非1周期族がそのままgraded構成に含まれるとは推論しない。
+- V. Bhatoy, C. Ingalls, *Discrete Invariants of Koszul Artin-Schelter Regular Algebras of Dimension four*, arXiv:2602.13178v1 (2026-02-13), https://arxiv.org/html/2602.13178v1 。Introduction、§3、§6の一次本文を確認。既知のgraded族のsuperpotentialをSchur–Weyl分解し幾何的な離散不変量を比較する。対角的な生成空間の同型を扱うため、独立な頂点基底変更を許すindexed同型へ無条件には移せない。同論文の成分数の記述を本稿の全分類の根拠にしない。
+
+公表前の未解決作業は、これらの具体的なgraded族と現行族の1周期的特殊化を照合し、
+非1周期的な一般ファイバー・境界・必要不変量のどこが既知結果を超えるかを明確にすることである。

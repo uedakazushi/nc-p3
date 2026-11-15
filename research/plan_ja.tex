@@ -1,6 +1,6 @@
 \documentclass[11pt,a4paper]{ltjsarticle}
 \usepackage[margin=25mm]{geometry}
-\usepackage{amsmath,amssymb,booktabs}
+\usepackage{amsmath,amssymb,booktabs,longtable,array}
 \usepackage[haranoaji]{luatexja-preset}
 \usepackage[unicode,hidelinks]{hyperref}
 \usepackage{xurl}
@@ -8,236 +8,161 @@
 \newcommand{\PGL}{\operatorname{PGL}}
 \title{nc-p3研究方針と再開手順}
 \author{}
-\date{2026年11月15日\quad 第15版}
+\date{2026年11月15日\quad 第16版}
 \begin{document}
 \maketitle
-\section{最初に読む：目標・達成基準・現在の保存状態}
+
+\section{最初に読む：目標と達成基準}
 標数零の代数閉体上、標準14641型の四次元quadratic Koszul AS正則
-$\mathbb Z$-代数を添字保持同型で分類する。
+$\mathbb Z$-代数を\textbf{添字保持同型}で完全分類する。
 全対象にdomain、noetherian、PBW、CYを追加仮定しない。
-$qgr$同値、導来同値、添字移動を割る同値、周期構造を選んだ同値は別問題とする。
-最終的な達成基準は全対象被覆、AS正則性の必要十分条件、特殊値を含む同型判定、
-周期層、既約成分とその次元・特殊化の記述である。全分類は未完成である。
+$qgr$同値、導来同値、添字移動の商、周期構造を選んだ同型は別問題とする。
+達成基準は、正則locusの必要十分条件、明示的な族による全被覆、特殊値を含む同型判定、
+全周期層、および既約成分・次元・特殊化の決定である。完全分類は未完成である。
 
-\textbf{現在の直近の目標}は、graded同型分類と$\mathbb Z$-代数同型分類の
-成分次元の差を、twist忘却による減少と非1周期的変形による増大に分離して決定すること。
-量子多項式成分の一般点では前者を決定した。
-Clifford点では後者の接空間と二次障害を得たが、実際の成分次元は未決定である。
+直近の数学的目標は、graded同型分類とindexed分類の次元差を、
+twist忘却による減少と非1周期的な対象の出現に分けて決めること。
+前者は一般量子成分で決定した。後者について一般最小周期2の九次元の同型類像を構成したが、
+その像が成分を尽くすか、Clifford点の成分次元がいくつかは未決定である。
 
-正本はGitHub \texttt{uedakazushi/nc-p3}の\texttt{main}である。
-具体的な保存先と検証済みの先端は\path{research/validation.json}に記載する。
-生成・数学的検算・組版・遠隔保存は\path{research/validation.json}で別状態として記録する。
-再開時は先端を確認し、別の更新があれば有効な内容を統合する。
-GitHubへのpushが成功した場合はLibraryへの保存を行わない。
+正本はGitHub \texttt{uedakazushi/nc-p3}の\texttt{main}。
+再開時は先端を確認し、本方針、\path{AGENTS.md}、主論文\path{nc-p3.tex}を読み、
+必要な計算・障害は\path{research/notes_ja.tex}へ進む。
+証明位置と課題は\path{research/STATE.json}、文献と外部依存は\path{research/BASELINE.md}、
+今回の生成・計算・組版・保存の別状態は\path{research/validation.json}に置く。
+GitHubへのpush成功時はLibraryへの重複保存を行わない。
 
-\section{主要な到達点と根拠}
-\subsection*{継続して保持する構造結果}
-Frobenius traceによる一般4周期性、標準4周期同型の頂点スカラー共役による選択独立性、
-四窓の$\mathrm{GL}_4^4$軌道による幾何学的同型類の記述を保持する。
-trace行列の標準化条件$P_i^{\mathsf T}=Q_i$、二次双対の次数0--5によるFrobenius検査、
-周期・同型の212未知数388式の有限条件も現行論文に証明を置く。
-有限Frobenius性だけからKoszul性を結論しない。
-既存as4の最小周期2/4の例は固定blob SHAと証明箇所を\path{BASELINE.md}で参照する。
-$A(\lambda)(1)=A(-\lambda)$と、最小周期2での両者の非同型性を保持する。
+\section{現状評価と主要な到達点}
+公表原稿の中心は\textbf{非1周期的な代数的族とその幾何}である。
+有限四窓表示は分類の基礎、量子成分とClifford点の比較は変形の説明、
+境界退化は像の大きさと接空間の違いを示す具体例として位置づける。
+以下の「証明」は原稿に論証があるという意味であり、形式化・第三者査読・新規性確定とは区別する。
 
-\subsection*{量子多項式成分}
-\path{nc-p3.tex}の定理\texttt{thm:quantum-orbits}と\texttt{thm:quantum-local}。
-一般の六つの量子パラメータ$q_{ab}$に対して、graded同型は有限置換だけ、
-$\mathbb Z$-同型はさらに$q_{ab}\mapsto q_{ab}s_a/s_b$を許す。
-従って同型類の局所成分次元は6と3である。
-有理数点$(2,3,1/6,5,2/5,15)$で周期4の変形複体の階数を厳密に検証した。
-滑らかな量子族と基底変更が全接空間を張り、相対4周期性により裸の変形も含む。
-この成分の一般点では新しい非1周期的方向はない。
-既知のtwist理論と既知の量子族に基づく比較であり、新規性は主張しない。
+\begin{longtable}{p{.24\linewidth}p{.69\linewidth}}
+\toprule
+主題 & 確定範囲と証明位置\\
+\midrule
+\endhead
+標準4周期と有限表示 &
+Frobenius traceから標準4周期を構成し、幾何学的同型類を四窓へ還元。
+AS正則性が既に認証された標準四窓の同型・周期は212未知数388式で判定する。
+双対Frobenius性の有限検査はKoszul判定を含まない。
+\path{sections/four_window.tex}。\\
+量子成分 &
+一般点でgraded同型類6次元、indexed同型類3次元。
+三つのtwist方向を忘れる比較である。
+\path{sections/local_moduli.tex}の
+\texttt{thm:quantum-orbits}, \texttt{thm:quantum-local}。\\
+Clifford点 &
+選んだgraded表示の一次変形は9、indexed一次変形は15。
+全15変数の二次障害は下記$Q$。
+\texttt{thm:clifford-tangent}, \texttt{thm:clifford-quadratic}。
+成分次元14は予想にとどまる。\\
+七・九変数族 &
+七変数族は全$\mathbb A^7$上PBW自由。
+九変数族の基底は$S_9=\operatorname{Spec}k[u,v,r,s,a,b,c,t,h,(1+th)^{-1}]$、
+$t=h=0$が七変数族。ともに全ファイバーAS正則、同型類像の次元は7と9、
+一般最小周期2。
+\path{sections/algebraic_family.tex},
+\path{sections/elliptic_ore_family.tex}。\\
+Ore表示と不変量 &
+固定三生成Clifford部分上の次数一導分は通常6、符号捩れ9。
+基底変更を除く九変数正規形は指定Ore構成の一般表示を尽くす。
+楕円曲線・2等分点は内在的で、$U(th)$は同型の必要不変量。
+\path{sections/ore_complete.tex},
+\path{sections/isogeny_invariant.tex}。\\
+境界チャート &
+五変数表示の同型類像は2次元、一般最小周期2。
+別の三生成部分を用いるとOre表示を持ち、七変数族の軌道閉包に含まれる。
+\path{sections/nonore_family.tex},
+\path{sections/nonore_period_two.tex},
+\path{sections/ore_boundary.tex}。\\
+閉包の特異性 &
+位置0の関係空間の軌道閉包$Z_7,Z_9\subset\Gr(6,16)$について
+$\dim Z_7=37,\ \dim Z_9=39$、
+Clifford点の接次元はそれぞれ39以上、41以上。
+\path{sections/ore_boundary.tex},
+\path{sections/nine_closure.tex}。\\
+\bottomrule
+\end{longtable}
 
-\subsection*{Clifford点}
-\path{nc-p3.tex}の定理\texttt{thm:clifford-tangent}、\texttt{thm:clifford-quadratic}。
-既存PBW族の$\lambda=0$で、選んだgraded表示の接空間は9、裸の$\mathbb Z$-変形は15である。
-追加の六方向を$o_0,\ldots,o_5$とすると二次障害は
+再開時に使う二つの式は
 \[
- Q=o_0o_5+o_1o_2-o_2o_3+o_3o_4.
+ Q=o_0o_5+o_1o_2-o_2o_3+o_3o_4,\qquad
+ U(x)=\frac{4096(x+1)^3}{x(x-8)^3},\quad x=th.
 \]
-全15変数の二次障害を120回の厳密評価で決定し、偶・交代の混合障害も零と確認した。
-$Q$は階数6で、Pl\"ucker二次式へ変換できる。
-二つの簡単な交代方向はそれぞれPBW軸に積分できるが、その混合には$ab$という二次障害がある。
-これらは計算補助証明であり、全証明の形式化・第三者査読ではない。
-\textbf{15次元の接空間から14次元成分を断定していない。}
+$Q$は全変形環ではなく二次障害であり、$U$は十分な同型不変量ではない。
+境界を加えた11個の個別に積分可能な接方向では$Q|_L=\lambda c$となるため、
+その全方向を接像に持つ滑らかな基底上の同時積分は不可能である。
+閉包の特異性は、全モジュライの特異性や新しい成分を意味しない。
 
-\subsection*{明示的な七変数族と九変数族}
-七変数族は\path{nc-p3.tex}の\texttt{thm:algebraic-seven}, \texttt{thm:seven-image},
-\texttt{thm:seven-period-two}に完全な証明がある。全$\mathbb A^7$上PBW自由、
-全ファイバーAS正則、同型類の像は7次元、一般点は最小周期2である。
-三つの交代方向は$(0,-b,-a,-b,0,c)$という$Q=0$の最大等方3平面を積分する。
-
-九変数族は\texttt{thm:algebraic-nine}、ソースは\path{sections/elliptic_ore_family.tex}。
-三生成部分を
-\[
- YW+WY=tZ^2,\quad ZW+WZ=hY^2,\quad ZY+YZ=W^2
-\]
-へ動かし、$S_9=\operatorname{Spec}k[u,v,r,s,a,b,c,t,h,(1+th)^{-1}]$上に構成する。
-$t=h=0$は七変数族そのもの。中心平方上のClifford基底とOre拡大により自由性、
-二次完全交叉双対とフィルター付きbar複体により全ファイバーのAS正則性を証明した。
-関係空間の群作用微分の階数30に対し、九パラメータを加えると39となる。
-従って同型類の像は9次元。基点で偶6方向と交代3方向を積分している。
-
-一般の三生成部分の点曲線は滑らかな平面三次曲線である。
-その固定点のない対合$\tau$は非零2等分点による平行移動で、平面の射影変換から来ない。
-隣接する点スキームは長さ8の唯一の非被約点と12個の単純点を持つ。
-その12点の因子$D$と$\tau D$の非射影同型性から、九変数族の一般点の最小周期2を証明した。
-切断空間は反不変6次元と不変3次元であり、射影自己同型の有限個の固有空間を除く。
-これは特殊点の非1周期性を一般点へ無断で移した議論ではない。
-
-\textbf{九次元は族の同型類の像の次元であり、全モジュライの成分次元ではない。}
-$1+th=0$では三生成部分の次数3が跳ぶ例があり、除外条件を外さない。
-二次Gr\"obner基底は一般の$t,h$では主張しない。新規性は未確認である。
-
-\subsection*{Ore型の導分分類と内在的な楕円同型不変量}
-\path{sections/ore_complete.tex}の定理\texttt{thm:ore-derivations}と系\texttt{cor:ore-slice}。
-固定されたClifford部分$B_{t,h}$上で、次数1の通常導分は自由階数6
-（内3＋外3）、符号自己同型の捩れ導分は自由階数9（中心二次式値）。
-$X_i\mapsto X_i+\ell+(-1)^im$と残る二次元対角変換を除くと、
-九変数正規形は\emph{指定された二周期Ore型構成内の}一般表示を尽くす。
-これにより単純にOre導分係数を増やすだけでは新しい同型類の次元を増やせない。
-全四窓のAS分類・成分最大性はなお未解決。
-
-命題\texttt{prop:elliptic-j-obstruction}は、一般ファイバーに固有の滑らかな楕円曲線の
-$j$不変量が$x=th$の次数12の有理関数$J(x)$となることを証明する。
-indexed同型なら$J(th)=J(t'h')$が必要で、同型類一つに現れる一般の$x$の値は高々12個。
-これは同型判定の\emph{必要条件}であり、十分条件ではない。
-厳密多項式検算\path{computations/verify_ore_derivations.py}、
-証明書\path{research/ore_derivation_certificate.json}、Hesse公式の一次資料は\path{research/BASELINE.md}に記録する。
-
-\subsection*{2-isogenyによる強化された同型障害}
-論文\texttt{lem:intrinsic-elliptic-tau}で、一般の九変数族のindexed同型が
-三生成部分の偏極付き楕円曲線と非零2等分点による平行移動を保つことを証明した。
-商曲線の具体方程式は\texttt{eq:isogenous-cubic}。
-$x=th$とすると二曲線の$j$は
-\[
- j(E)=(U+256)^3/U^2,\quad j(E')=(U+16)^3/U,
- \quad U=4096(x+1)^3/[x(x-8)^3]
-\]
-であり、一般のindexed同型なら$U(x)=U(x')$が必要。
-$U$の次数は4なので$x$は高々4候補へ減る。逆は未証明。
-$U$の分岐とGalois閉包群$A_4$も確定。
-証明は\path{sections/isogeny_invariant.tex}、再現は
-\path{computations/verify_isogeny_invariant.py}。
-
-\subsection*{指定Ore型の外の代数的族}
-\path{sections/nonore_family.tex}で$YW+WY=(-1)^i a_0 ZX$を含む
-五変数の二周期族を得た。重み$(3,5,2,2)$により全幾何学的ファイバーが
-標準14641型Koszul AS正則である。添字保持同型類の像は2次元。
-Clifford基点での$o_0$方向は九変数Ore族の交代接像に含まれない。
-一般の最小周期は定理\texttt{thm:nonore-generic-two}で正確に2と決定した。
-全モジュライでの成分包含は未決定。
-再現は\path{computations/verify_nonore_family.py}。
-
-\subsection*{七変数族への退化とClifford点の特異性}
-主論文\texttt{thm:nonore-in-seven-closure}で，非Ore型五変数族は
-別の三生成部分$\langle Z,W,X\rangle$を選ぶとOre表示を持ち，
-\[
- YW+WY=(-1)^ia_0ZX+d(Z^2+X^2/v_0^2)
-\]
-による平坦な一変数退化で七変数族の軌道飽和閉包に入ることを証明した．
-$d=0$で五変数族，$d\ne0$では七変数族に同型となる．
-そのため「元の九変数切片の接像にない」ことは独立既約成分の証明でない．
-さらに\texttt{thm:seven-closure-singular}により，
-$\Gr(6,16)$内での七変数族の37次元軌道飽和閉包$Z_7$は
-Clifford点で接空間次元39以上となり特異．
-これは全AS正則モジュライの粗商の特異性を意味しない．
-厳密再現は\path{computations/verify_ore_boundary.py}と
-\path{research/ore_boundary_certificate.json}．
-
-\subsection*{九変数族の軌道飽和閉包の特異性}
-主論文\texttt{thm:nine-closure-singular}により九変数族の
-$G=\PGL_4\times\PGL_4$軌道飽和閉包$Z_9\subset\Gr(6,16)$は既約39次元。
-七変数族の$Z_7$は余次元2の真の閉部分。
-Clifford点で九変数族の9方向と七変数族の境界退化二方向は
-互いに独立で、$\dim T_{C_0}Z_9\ge41$、従って$Z_9$は特異。
-商接方向の個別の代数的一変数変形による線型包は
-偶方向7と交代方向4の計11次元。
-しかし二次障害の制限は$Q|_L=\lambda c$であり、
-この11方向を全て接像に持つ滑らかな代数的基底は存在しない。
-本結果は有限Grassmannianの軌道飽和閉包についてであり，
-全AS正則代数モジュライの既約成分数・次元を決定していない。
-再現は\path{computations/verify_nine_closure_tangent.py}と
-\path{research/nine_closure_certificate.json}。
-
-\section{優先課題と具体的な着手方法}
+\section{未解決の核心と優先順位}
 \paragraph{最優先：ALGEBRAIC-FAMILY-008。}
-形式的な高次障害計算より明示的な代数的族の拡張を優先する。
-九変数族の2-isogenyと12点因子から同型の必要十分条件を決定する。
-七・九変数族の軌道飽和閉包のClifford特異性は解決済み。
-二次障害が許す一方で九変数族の閉包に入らない方向を明示的代数的族として構成できるかを調べる。
-五変数族の七変数族への閉包包含は解決済みなので，この閉包の外へ出る
-代数的変形があるかと七・九変数族の最大性を調べ，
-複数の交代方向を同時に積分する高次元の代数的族を優先する。
-五変数族の左点スキームは一本の直線と五つの孤立点からなり、
-五次式とガロア群$S_5$を用いた射影非同型により一般の非1周期性を証明済み。
-九変数族の一般点の左点スキームは零次元であるが、これだけで成分の非一致を結論しない。
-Ore型の内部での一次導分分類は完了したので、独立な代数的拡張は別のClifford部分またはOre以外の構成に求める。
-九変数族の一般点における同型・特殊化・成分としての最大性を調べる。
-まず三生成楕円曲線と次数12の因子のデータから族内同型を必要十分に記述し、
-その記述で残る偶・交代方向を持つ別のOreチャートを探す。
-現行族は偶6方向しか動かさず、Clifford点の偶9方向の全てを含まない。
-$X^2$を三生成関係へ加えると現在のOre構成は使えなくなるため、別の構造証明を要する。
-証明・計算の開始点は\path{sections/elliptic_ore_family.tex}、
-\path{computations/verify_elliptic_family.py}である。
+九変数族の\emph{一般点}の変形を調べ、像の最大性を判定する。
+Clifford特殊点だけの接空間計算を重ねるより、既存族が一般点で尽くす方向と不足方向を分ける方が
+成分問題に直結する。明示的な代数的変形を優先する方針は維持する。
+着手は次の順に行う。
+\begin{enumerate}
+\item $th(1+th)(th-8)\ne0$かつ12点が単純な開集合で、
+周期2および標準周期4の変形複体を構成する。
+階数を標本で探索した後、記号的小行列式または構造論で一般値を証明する。
+現在の$\mathrm{PBW}$書換えコードを一般$t,h$へそのまま流用せず、
+中心平方上のClifford基底とOre積を使う。
+\item 九パラメータと基底変更の接像を全変形と比較する。
+全射なら滑らかな源を用いた局所完全性の議論を行う。
+余核があればその点の障害写像（Clifford点では$Q$）と必要な高次障害で候補を絞り、
+実際の代数的族を構成する。
+接次元が大きいことだけから高次元成分を宣言しない。
+\item 偏極付き楕円曲線、2等分点、12点因子と第四座標の持上げデータから、
+indexed同型の必要十分条件を求める。
+$U(th)$で高々4候補へ減らした後も残る有限同一視を調べる。
+12点の支持だけで関係空間が回収されるとは未証明なので、必要なら非被約点の局所構造も含める。
+\end{enumerate}
+五変数境界族の七変数族への閉包包含と一般最小周期2は解決済みであり、再探索しない。
+未解決なのは全AS正則locusにおける成分性・最大性と、閉包の外へ出る代数的変形である。
 
-\paragraph{補助課題：MODULI-HIGHER-006。}
-二次障害$Q$を代数的族の候補選別に使う。
-九変数族でも交代部分は三方向であり、六方向全体や14次元局所模型は証明していない。
-必要な場合のみ高次補正を計算し、一つの補正の失敗を非持上げの証明としない。
-全次数の主張には構造証明か実際の族を要求する。
+\paragraph{次順位：PERIOD-ROOTS-007。}
+Clifford点の射影自己同型と全1周期構造を分類する。
+特定のgraded表示の9次元接像だけから1周期的部分全体を決定したことにはならない。
+標準四窓の有限同型式を使い、自己同型と周期構造の根を分離する。
+この比較が終わるまで非1周期的部分の余次元を確定しない。
 
-\paragraph{並行課題：PERIOD-ROOTS-007。}
-Clifford点の有限射影自己同型群を計算し、全1周期構造を分類する。
-現在の9次元は特定のgraded表示からの枝であり、1周期的部分全体の次元とは限らない。
-四窓の有限同型式を使い、基点の自己同型と周期構造の根を分離する。
-全ての枝と高次障害が分かってから1周期的部分の余次元を述べる。
+\paragraph{補助手段：MODULI-HIGHER-006。}
+二次障害$Q$を候補選別に用い、代数的族の構成または不存在証明に必要な高次補正だけを計算する。
+一つの補正の失敗は非持上げの証明にならず、有限個の三次サンプルの成功も全次数を保証しない。
 
-\paragraph{継続課題：Z4-AS-004。}
-全四窓のAS/Koszul条件と有限atlasの全被覆を追う。
-局所変形問題の成果を全域の必要十分条件へ誤って一般化しない。
-非PBW点、閉特殊値、最小周期4の例、族間同型・既約成分の比較を残す。
+\paragraph{全体目標への接続：Z4-AS-004。}
+標準四窓への抽象的な全対象還元は得られている。
+残るのは一般四窓のKoszul/AS条件の明示的な必要十分判定、
+正則な代数的チャートによる全被覆、非PBW点・閉特殊値・最小周期4の層と族間同型である。
+相対族の大域的下降、全成分の次元と特殊化も未解決として保持する。
+元の完全分類目標を局所例の構成で達成済みにしない。
 
-この優先順位は、同型類の次元と周期を実際の代数的族で比較し、
-接空間の数え上げだけから成分を推測することを避けるためである。
-元の完全分類目標は維持する。有限表示と周期判定は解決済み、全AS locusと全成分分類は未解決である。
-方針変更の時系列履歴は蓄積しない。
+\section{公表原稿と文献比較}
+主論文は当面一つに保ち、有限表示、局所比較、代数的族、同型不変量、境界の順に読む構成とする。
+七変数族の独立した全パラメータ証明や境界の有用な証明を削らない。
+研究ノートには本文にない基底データ、反例、失敗した方法の障害を残し、本文の証明を重複させない。
 
-\section{再現手順と依存}
-再開は本方針、\path{AGENTS.md}、\path{research/notes_ja.tex}、\path{nc-p3.tex}の順に読む。
-Python 3.13.5とSymPy 1.14.0、TeX LiveのLuaLaTeX/latexmk/luatexjaで検証した。
-\begin{verbatim}
-python3 -m pip install -r requirements.txt
-python3 scripts/check_project.py
-python3 computations/verify_exterior_trace.py
-python3 computations/verify_period_witness.py
-python3 computations/verify_moduli_jets.py \
-  --output research/moduli_certificate.json
-python3 computations/verify_algebraic_family.py \
-  --output research/algebraic_family_certificate.json
-python3 computations/verify_isogeny_invariant.py \
-  --output research/isogeny_certificate.json
-python3 computations/verify_nonore_family.py \
-  --output research/nonore_certificate.json
-python3 computations/verify_nine_closure_tangent.py \
-  --output research/nine_closure_certificate.json
-python3 computations/verify_ore_boundary.py \
-  --output research/ore_boundary_certificate.json
-python3 computations/verify_nonore_point_geometry.py \
-  --output research/nonore_point_certificate.json
-python3 computations/verify_ore_derivations.py \
-  --output research/ore_derivation_certificate.json
-python3 computations/verify_elliptic_family.py \
-  --output research/elliptic_family_certificate.json
-latexmk nc-p3.tex
-latexmk research/plan_ja.tex
-latexmk research/notes_ja.tex
-\end{verbatim}
-\path{moduli_certificate.json}は入力点、商基底、階数、障害式、制限を記録する。
-容易に再生成できる行列キャッシュ・pickle・ログは収録しない。
-\path{validation.json}で生成、実行、組版、遠隔保存の状態を分ける。
+新規性比較の優先対象は、Vancliff--Van Rompay--Willaertのgraded Clifford/Ore変形、
+Stephenson--Vancliffの三生成Clifford部分を用いた構成、
+Bhatoy--Ingalls--LaRoche--Nookalaのgraded変形計算、
+Bhatoy--Ingallsのsuperpotential不変量である。
+本稿の候補となる寄与は添字依存の交代変形と非1周期性、同型類像の次元、
+境界の具体的な幾何に置く。
+一般的なClifford/Ore手法そのものや、graded側の既知の9次元を新規成果として売らない。
+確認した一次資料・参照位置と未確認点は\path{research/BASELINE.md}に集約する。
+
+\section{再現・検証と継続}
+全コマンドの正本は\path{README.md}の「再現」節。
+Python/SymPyによる構造検査と厳密検算、LuaLaTeXによる主論文・方針・ノートの組版を行う。
+証明書は現行コードと入力から再生成し、数学的内容と環境表示の差を分けて比較する。
+\path{scripts/check_project.py}の成功は数学的証明を意味しない。
+未実行の検証を過去版のPASSで置き換えない。
+
+研究の区切りでは本文・要約・方針・索引の不整合を直し、再開可能な現行一式をmainへ保存する。
+不要な作業履歴・二重の先端表・旧版の未解決項目は蓄積しない。
+保存結果は遠隔を読み戻して確認する。外部as4の結果は固定した出典を使い、
+その全計算を再実行していない場合は明記する。
 
 \section{常設の研究原則と保存許可（具体的計画とは独立）}
 数学的重要性、新規性、理解の深化、応用、正確性、実現可能性を総合し、目標と方針を柔軟に最適化する。
