@@ -17,7 +17,18 @@
     "tex_engine": "LuaHBTeX 1.18.0 (TeX Live 2025/dev/Debian)",
     "tex_format": "LaTeX2e 2024-11-01 patch level 2"
   },
-  "checks": [],
+  "checks": [
+    {
+      "command": "Static repo cross-reference and JSON checks",
+      "result": "PASS",
+      "scope": "All changed docs link to the Cloud guide and preflight; mathematical result records remain 35."
+    },
+    {
+      "command": "bash -n scripts/cloud_preflight.sh (syntax duplicate)",
+      "result": "PASS",
+      "scope": "Script text validated with bash -n in local container; script not executed in Codex Cloud."
+    }
+  ],
   "certificate_comparison": {
     "result": "NOT_RUN",
     "scope": "No mathematical computations rerun."
@@ -47,9 +58,13 @@
     "scope": "No PDF produced."
   },
   "github_save": {
-    "result": "pending",
+    "result": "PASS",
     "branch": "main",
-    "expected_parent": "1146023ebd9925ba103444464d23039f62279d2d"
+    "validated_content_commit": "5eddbf218f85dd788f658bc5b97616699d5e532f",
+    "validated_content_tree": "0daad9814d77f4d3ea6ca8d45d1ab4712154d90b",
+    "fast_forward": true,
+    "verified_blob_count": 49,
+    "scope": "Remote main and full recursive tree confirmed; all eight changed blobs reread and matched. Receipt stored in a follow-up commit."
   },
   "library_save": {
     "result": "not_saved_project_policy",
@@ -69,7 +84,7 @@
     "The boundary five-parameter family has generic minimal period two and lies in Z7; it is not an independently established component.",
     "Eleven individually integrable tangent directions have the mixed obstruction lambda*c and do not yield a smooth simultaneous eleven-dimensional family."
   ],
-  "checks_execution_note": "Repo-side static checks performed; shell script is not tested inside a published Codex Cloud environment.",
+  "checks_execution_note": "Cloud environment setup was not performed. Cloud tool installation and GitHub task push permissions remain unverified. No mathematical verifier nor LuaLaTeX compilation rerun for v21.",
   "cloud_environment": {
     "result": "NOT_CONFIGURED_BY_THIS_CHANGE",
     "scope": "Published Codex Cloud environment, tool installation and Git credentials are external to the GitHub repository; require user-side environment setup and tests."
