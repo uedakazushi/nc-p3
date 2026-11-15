@@ -4,14 +4,16 @@
   "generated": "current Japanese LuaLaTeX sources and exact certificates",
   "verification_status": "PASS_with_explicit_scope_limits",
   "github_save": {
-    "status": "pending_fast_forward",
+    "status": "PASS",
     "repository": "uedakazushi/nc-p3",
     "branch": "main",
-    "base_commit": "439c708e66a08a97a4daa199c04eccd953eef48e"
+    "content_commit": "7163fd2db2f6aa8ec272d777bc96587b09e5844d",
+    "source_tree": "b52e6f8f049b65a60fb050abeeafb5add687ef5e",
+    "verification": "Fast-forward succeeded. Remote main tree read back: 43 tracked blobs, including all current LuaLaTeX sources, numerical certificates, and new Ore-boundary theorem."
   },
   "library_save": {
     "status": "not_performed",
-    "reason": "User directs no Library save when GitHub main push succeeds."
+    "reason": "GitHub push succeeded; the user requested no Library save."
   },
   "checks": [
     {
@@ -77,18 +79,18 @@
   ],
   "certificate_comparison": "All 8 local v11 commands were executed and passed, including existing numerical checks and new Ore derivation verifier. No unrun mathematical check is claimed.",
   "tex": {
-    "engine": "LuaLaTeX via latexmk",
-    "result": "PASS",
+    "engine": "LuaLaTeX/latexmk",
+    "result": "PASS_local_v14",
     "documents": {
       "paper": 32,
       "plan": 6,
       "notes": 7
     },
-    "scope": "Local v14 rebuilt; no unresolved references/citations, errors or overfull hboxes."
+    "scope": "Local v14 source tree compiled. Exact remote bytes were validated structurally but not independently compiled after push."
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "New theorem section around manuscript pages 29-30 rendered and inspected; typographic command corrected."
+    "result": "PASS_local",
+    "scope": "New theorem material around manuscript pages 29-31 visually checked; no clipping. Inadvertent literal extbf corrected in working source and GitHub theorem source contains \\textbf."
   },
   "not_claimed": [
     "formal verification",
@@ -104,7 +106,10 @@
     "Generic period two or component membership for new non-Ore chart",
     "Any assertion that non-Ore and nine-dimensional Ore families belong to distinct irreducible components.",
     "Distinct irreducible component for nonOre two-family",
-    "Singularity of global coarse moduli or whole AS regular moduli stack"
+    "Singularity of global coarse moduli or whole AS regular moduli stack",
+    "That the two-dimensional nonOre image is a separate irreducible component",
+    "Global moduli singularity or component dimension 14",
+    "Generic pointwise isomorphism between nonOre five-family and seven-family"
   ],
   "new_results": {
     "intrinsic_2isogeny": "Proof written; polarized elliptic correspondence recovered at generic nine-family points",
@@ -115,16 +120,15 @@
     "ore_boundary": "Entire five-family inside seven-family orbit-saturated closure, and 37-dimensional Grassmannian orbit closure singular at Clifford with tangent >=39."
   },
   "verified_remote_blobs": {
-    "nc-p3.tex": "ac6a0f30d89c1a1793c3eb873657898f168fd427",
-    "sections/ore_complete.tex": "240f34113eb6ec34d27d658da14251e42f6a995b",
-    "computations/verify_ore_derivations.py": "04331baadb68c2e1e5eedd0ff2e7ebe146bfa7a6",
-    "research/ore_derivation_certificate.json": "14e1ad1a978d0535c030d09fbdbc70337918a3f6",
-    "research/plan_ja.tex": "c953576eca884c8be2ed94d522fee4c6d16052b4",
-    "research/notes_ja.tex": "c254a39347c968267d7229a0296535dd7fb75074",
-    "research/STATE.json": "3d4d7a4fcffb5655b64d561b68b4a56cae082903",
-    "README.md": "d5303326838ae2eaf6f909aa0053c02b5bc2b6ce",
-    "AGENTS.md": "8783188008cf13a671515a4e7a1efb757e9d969c",
-    "scripts/check_project.py": "0a65c2cc4f63feb39547b4d914f9561837984a39"
+    "nc-p3.tex": "16dabb0207261e8adc2ef2a2be4f38431bd699e3",
+    "sections/ore_boundary.tex": "ce9698e2627d0244807085c7bd8122e7c26fe64f",
+    "sections/nonore_period_two.tex": "d42028460d72d17c1f7c5f40c75b1a8ff53d351c",
+    "research/STATE.json": "f77747da77a60a240cb811a10470a2ae71e3b6cb",
+    "computations/verify_ore_boundary.py": "bb05fb09d948d47a1ddc0ca264c11e2a604affdf",
+    "research/ore_boundary_certificate.json": "437b04b4c62efc977f39173d73722eb536ad0578",
+    "README.md": "70fb0f12153d371acdf7de7696802a908d113447",
+    "research/plan_ja.tex": "46270e7f723a70d77329bef26ac6ab9b97b58fdf",
+    "research/notes_ja.tex": "8caa1eb7a3b4cc00e50d233f4f76332e7b5cbd04"
   },
   "reproduction_note": "Published scripts and exact certificates for new v12 results. Compare remote file content SHAs to generated local files before asserting complete source equivalence.",
   "remote_verified_blobs": {
@@ -137,5 +141,9 @@
     "research/plan_ja.tex": "42bd955d4c8a10a0ecf4e8c168a7347bbbedfd3f",
     "research/notes_ja.tex": "84e666c5a52de4116eb4c185cceb6cfa73180889",
     "scripts/check_project.py": "39fb5c3988aff6cb8b88a9264ca470f895e30fe7"
+  },
+  "static_readback": {
+    "result": "PASS",
+    "scope": "97 unique main manuscript labels; all TeX refs and bibliography keys resolve; all research/STATE document paths and proof labels resolve."
   }
 }
