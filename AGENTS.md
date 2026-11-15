@@ -1,4 +1,4 @@
-# nc-p3研究指示 — 2026-11-15 / v12
+# nc-p3研究指示 — 2026-11-15 / v13
 
 最初に `research/plan_ja.tex` を読む。次に `research/notes_ja.tex`, `research/BASELINE.md`, `research/STATE.json`, `nc-p3.tex` を確認する。目的は標準14641型の四次元 quadratic Koszul AS-regular indexed Z-algebra の添字保持同型による完全分類。明示的な代数的変形を優先し、形式計算だけを進めることを主目標にしない。
 
@@ -6,7 +6,7 @@
 
 **ALGEBRAIC-FAMILY-008**：九変数の楕円Clifford–Ore族は、全ファイバーAS正則、同型類の像の次元9、一般の最小周期2を証明した。`sections/elliptic_ore_family.tex` を主論文の一部として読む。次は楕円曲線・次数12因子による族内同型の必要十分条件、像の閉包と最大性、別のOreチャートによる残る偶・交代方向の積分を調べる。七変数族は `t=h=0` の特殊化として保持する。
 
-**v12の追加結果**：`sections/isogeny_invariant.tex`は内在的2-isogenyと次数4の必要不変量$U(th)$および$A_4$被覆を与える。`sections/nonore_family.tex`は五変数の代数的二周期族を与え、全ファイバーAS正則でindexed同型類の像は2次元、交代$o_0$方向は九変数Ore族の接像にない。ただし一般点が最小周期2かは未解決。次は非Oreチャートを拡大し、他の交代方向と同時に代数的に積分すること、2-isogeny不変量と12点配置の十分な同型判定を優先する。
+**v12の追加結果**：`sections/isogeny_invariant.tex`は内在的2-isogenyと次数4の必要不変量$U(th)$および$A_4$被覆を与える。`sections/nonore_family.tex`は五変数の代数的二周期族を与え、全ファイバーAS正則でindexed同型類の像は2次元、交代$o_0$方向は九変数Ore族の接像にない。さらに`sections/nonore_period_two.tex`で点スキームの支持が直線と五点と分かり、一般点の最小周期が正確に2と証明された。次は非Oreチャートと九変数族の成分関係を決定し、他の交代方向と同時に代数的に積分すること、2-isogeny不変量と12点配置の十分な同型判定を優先する。
 
 固定した三生成Clifford部分上の次数一Ore導分は分類済み：通常導分6（内3＋外3）、符号捩れ導分9（中心二次値）。`sections/ore_complete.tex` の `thm:ore-derivations` と `cor:ore-slice` により九変数族は一般の印付きOre表示を尽くす。`prop:elliptic-j-obstruction` は同型の必要条件 `J(th)=J(t'h')` を与える。$J$の一致だけで同型とはしない。実質的に新しい方向は別のClifford部分・Ore以外の代数的構成に求める。
 

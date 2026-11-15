@@ -1,0 +1,40 @@
+{
+  "result": "PASS",
+  "coefficients": "exact QQ[k,v,b,s,a,z]",
+  "point_schemes": {
+    "1": {
+      "rank_four_minors": 15,
+      "all_isolated_point_minors_vanish_mod_quintic": true,
+      "line_w=z=0_in_point_scheme": true,
+      "projected_quintic": "a*v**2*z**5 - 4*b + 4*s*z**2"
+    },
+    "-1": {
+      "rank_four_minors": 15,
+      "all_isolated_point_minors_vanish_mod_quintic": true,
+      "line_w=z=0_in_point_scheme": true,
+      "projected_quintic": "-a*v**2*z**5 - 4*b + 4*s*z**2"
+    }
+  },
+  "generic_support": "line w=z=0 plus five points off the line",
+  "separable_sample": {
+    "k": 1,
+    "v": 1,
+    "b": "-1/4",
+    "s": "1/4",
+    "a": 1,
+    "P_plus": "z**5+z**2+1",
+    "mod_2_factors": [
+      5
+    ],
+    "mod_5_factors": [
+      2,
+      3
+    ]
+  },
+  "last_span_determinant": "-a**2*k*v**3/(16*b)",
+  "limitations": [
+    "Group-theoretic proof that the sample has no PGL2 symmetry is in paper",
+    "Generic non-periodicity is proved from point schemes, not from tangent-space rank",
+    "No assertion of distinct irreducible moduli components"
+  ]
+}

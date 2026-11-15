@@ -6,7 +6,7 @@
 \usepackage{xurl}
 \title{nc-p3研究方針と再開手順}
 \author{}
-\date{2026年11月15日\quad 第12版}
+\date{2026年11月15日\quad 第13版}
 \begin{document}
 \maketitle
 \section{最初に読む：目標・達成基準・現在の保存状態}
@@ -125,7 +125,8 @@ $U$の分岐とGalois閉包群$A_4$も確定。
 五変数の二周期族を得た。重み$(3,5,2,2)$により全幾何学的ファイバーが
 標準14641型Koszul AS正則である。添字保持同型類の像は2次元。
 Clifford基点での$o_0$方向は九変数Ore族の交代接像に含まれない。
-一般点が最小周期2かどうか、全モジュライでの成分包含は未決定。
+一般の最小周期は定理\texttt{thm:nonore-generic-two}で正確に2と決定した。
+全モジュライでの成分包含は未決定。
 再現は\path{computations/verify_nonore_family.py}。
 
 \section{優先課題と具体的な着手方法}
@@ -134,6 +135,9 @@ Clifford基点での$o_0$方向は九変数Ore族の交代接像に含まれな�
 九変数族の2-isogenyと12点因子から同型の必要十分条件を決定する。
 非Ore型五変数族について一般の最小周期と九変数族の像との交わりを調べ、
 複数の交代方向を同時に積分する高次元の代数的族を優先する。
+五変数族の左点スキームは一本の直線と五つの孤立点からなり、
+五次式とガロア群$S_5$を用いた射影非同型により一般の非1周期性を証明済み。
+九変数族の一般点の左点スキームは零次元であるが、これだけで成分の非一致を結論しない。
 Ore型の内部での一次導分分類は完了したので、独立な代数的拡張は別のClifford部分またはOre以外の構成に求める。
 九変数族の一般点における同型・特殊化・成分としての最大性を調べる。
 まず三生成楕円曲線と次数12の因子のデータから族内同型を必要十分に記述し、
@@ -181,6 +185,8 @@ python3 computations/verify_isogeny_invariant.py \
   --output research/isogeny_certificate.json
 python3 computations/verify_nonore_family.py \
   --output research/nonore_certificate.json
+python3 computations/verify_nonore_point_geometry.py \
+  --output research/nonore_point_certificate.json
 python3 computations/verify_ore_derivations.py \
   --output research/ore_derivation_certificate.json
 python3 computations/verify_elliptic_family.py \

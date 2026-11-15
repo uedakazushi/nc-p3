@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の分類
 
-**2026-11-15 / v12。完全分類は未完成。正本は GitHub `main`。**
+**2026-11-15 / v13。完全分類は未完成。正本は GitHub `main`。**
 
 再開は [研究方針](research/plan_ja.tex) → [研究指示](AGENTS.md) → [研究ノート](research/notes_ja.tex) → [主論文](nc-p3.tex) の順。
 
@@ -24,13 +24,13 @@
 
 **楕円2-isogenyの内在的な同型障害**：一意の非被約点から三生成部分代数を復元し、任意のindexed同型は偏極付き楕円曲線の非零2等分点$\tau$を保存する。商曲線は $th A^3+t B^3+h C^3-(th+4)ABC=0$。$x=th$に対して$U(x)=4096(x+1)^3/(x(x-8)^3)$は次数4の有理関数で、一般の同型なら$U(th)=U(t'h')$が必要。以前の$j(E)$だけによる高々12候補を高々4候補へ改善した。$x\mapsto U$のGalois閉包の群は$A_4$。証明は`sections/isogeny_invariant.tex`。
 
-**非Ore型の別の代数的チャート**：`sections/nonore_family.tex`では$YW+WY=(-1)^i a_0 ZX$を含む五変数の二周期族を構成。全ファイバー標準14641型AS正則、indexed同型類の像は2次元。Clifford点での交代接方向$o_0$は従来の九変数族の接像に含まれない。一般点の最小周期は未確定。
+**非Ore型の別の代数的チャート**：`sections/nonore_family.tex`では$YW+WY=(-1)^i a_0 ZX$を含む五変数の二周期族を構成。全ファイバー標準14641型AS正則、indexed同型類の像は2次元。Clifford点での交代接方向$o_0$は従来の九変数族の接像に含まれない。さらに点スキームの支持を直線と五点に明示し、一般点の最小周期が正確に2であることを証明（`thm:nonore-generic-two`、`sections/nonore_period_two.tex`）。
 
 九変数族は基点で偶6・交代3方向を積分する。**9次元の像が全モジュライの既約成分であるとは未主張**。14次元のClifford局所模型、残る方向の代数的積分、全1周期構造、全成分分類は未解決。具体的な九変数族と先行研究との最終的な新規性比較は未了。
 
 ## 次の課題
 
-**ALGEBRAIC-FAMILY-008**：九変数族の2-isogenyと12点因子から完全な同型判定を求める。非Ore五変数族の一般最小周期と九変数族との成分関係を解決し、複数の非Ore交代方向を同時に積分する高次元の代数的族を優先する。全モジュライの既約成分と14次元Clifford局所模型は未決定。
+**ALGEBRAIC-FAMILY-008**：九変数族の2-isogenyと12点因子から完全な同型判定を求める。非Ore五変数族の一般最小周期2は解決。九変数族との成分関係を決め、複数の非Ore交代方向を同時に積分する高次元の代数的族を優先する。全モジュライの既約成分と14次元Clifford局所模型は未決定。
 
 ## 再現
 
@@ -45,6 +45,7 @@ python3 computations/verify_elliptic_family.py --output research/elliptic_family
 python3 computations/verify_ore_derivations.py --output research/ore_derivation_certificate.json
 python3 computations/verify_isogeny_invariant.py --output research/isogeny_certificate.json
 python3 computations/verify_nonore_family.py --output research/nonore_certificate.json
+python3 computations/verify_nonore_point_geometry.py --output research/nonore_point_certificate.json
 python3 computations/verify_third_order_samples.py
 latexmk nc-p3.tex
 latexmk research/plan_ja.tex

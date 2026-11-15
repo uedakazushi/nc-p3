@@ -1,4 +1,4 @@
-# 依存・一次文献・証明位置 — 2026-11-15 / v12
+# 依存・一次文献・証明位置 — 2026-11-15 / v13
 
 ## 現行プロジェクト
 
@@ -67,3 +67,9 @@
 - `computations/verify_isogeny_invariant.py` は楕円点対応の外積、2-isogenous cubicの多項式恒等式、二つの$j$公式、次数4の$U(x)$と分岐を厳密に検証する。2-isogenyのindexed不変性は論文内の偏極次数3と2-torsionの議論による。
 - `computations/verify_nonore_family.py` は選んだClifford--Ore構成を離れる五変数族の全8個の三次重なり、正の重みによる停止性、Clifford基点の軌道階数30から32、有効対角トーラス階数3を検証する。全ファイバーのAS正則性は原稿のKoszul--Frobenius構造証明に依存する。
 - P. Belmans, *4d-AS-regular --- the classification of 4-dimensional Artin--Schelter regular algebras*, https://4d-as.ncag.info (2026), DOI https://doi.org/10.5281/zenodo.21296619。graded側の関連族と既知文献を探すための公開データベースであって、indexed Z-algebraの既約成分分類や本結果の新規性を保証するものではない。
+
+## 非Ore型族の一般最小周期2の証明
+
+- 主論文 `thm:nonore-generic-two`（`sections/nonore_period_two.tex`）で左点スキームの支持を一本の直線と五孤立点に明示し、射影非同型を証明する。`computations/verify_nonore_point_geometry.py` は全15小行列式、五次式による消去、標本 `z^5+z^2+1` の mod 2 既約性・mod 5 の因子型 `(2,3)`、残る座標の行列式を厳密に検査する。
+- Galois群 `S5` と Möbius安定化群の自明性は本文に素数次数の原始性と一点固定部分群の巡回性による証明を記載。計算コードのPASSだけから周期の不存在を結論しない。
+- 一般非Ore族と一般九変数楕円族では左点スキームの支持の次元が異なるので非同型。ただし成分の閉包・特殊化・既約成分への所属はなお不明。

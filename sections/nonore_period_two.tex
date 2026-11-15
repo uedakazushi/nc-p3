@@ -1,0 +1,132 @@
+\subsection{非Ore型族の一般点は最小周期2である}\label{subsec:nonore-period}
+式\eqref{eq:nonore-five}について，この小節だけ
+$(K,V,B,S,A)=(k_0,v_0,b_0,s_0,a_0)$と略記する．
+点対応の双線型化を用いて，接方向だけでなく実際の
+非1周期的な代数を得る．
+
+\begin{theorem}[非Ore型五変数族の一般最小周期2]\label{thm:nonore-generic-two}
+式\eqref{eq:nonore-five}の基底$\mathbb A^5$には非空なZariski開集合
+$\mathcal U$があり，その上で最小正周期はちょうど$2$である．
+したがって\emph{どのgraded algebraにも由来しない}二次元の
+同型類の代数的族が得られる．さらにこの族の一般点の左点スキームは
+一次元の支持を持つため，十二個の単純点と一個の非被約点を持つ
+九変数楕円Clifford--Ore族の一般点とは非同型である．
+ただし二つの族の閉包が異なる既約成分であるとは主張しない．
+\end{theorem}
+\begin{proof}
+位置$i$で$\varepsilon=(-1)^i$とする．左点スキーム$E_\varepsilon$は，
+始点座標$[w:y:z:x]\in\mathbb P^3$に対し，次の$6\times4$行列の
+階数が$3$以下となる零点スキームである．
+\begin{equation}\label{eq:nonore-point-matrix}
+ M_\varepsilon=\begin{pmatrix}
+ y&w&0&-\varepsilon Az\\
+ z&0&w&0\\
+ -Kw&z&y&0\\
+ x&0&-Vz&w\\
+ -Bw&x&-Sz&y\\
+ 0&0&x&z
+ \end{pmatrix}.
+\end{equation}
+$AKVBS\ne0$とし，次の五次式は重根を持たないと仮定する．
+\begin{equation}\label{eq:nonore-quintic}
+ Q_\varepsilon(z)=\varepsilon AV^2z^5+4Sz^2-4B.
+\end{equation}
+全$4\times4$小行列式を調べると，$E_\varepsilon$の支持は一本の直線
+\[
+ \ell=\{w=z=0\}
+\]
+および，$Q_\varepsilon(z)=0$を満たす相異なる五つの点
+\begin{equation}\label{eq:nonore-five-points}
+ p_\varepsilon(z)=
+ \left[1:-\frac K{2z}-\frac{\varepsilon AV}4z^3:
+              z:-\frac V2z^2\right]
+\end{equation}
+に正確に一致する．必要性を得るには，例えば行列の行番号を$0$から数え，
+$(1,2,3,5)$行の小行列式
+$-z^2(Vz^2+2wx)$，$(0,1,2,5)$行の
+$z(\varepsilon Axz^2-Kw^3-2wyz)$，$(0,1,4,5)$行の
+$z(\varepsilon Ax^2z-Bw^3+Swz^2)$を用いればよい．
+$z=0$なら$(0,1,2,3)$行の小行列式から$Kw^4=0$，従って$w=0$となる．
+$z\ne0$では第一式により$w\ne0$なので$w=1$とでき，
+後二式が\eqref{eq:nonore-five-points}と\eqref{eq:nonore-quintic}を与える．
+逆に式\eqref{eq:nonore-five-points}を代入した全15小行列式は
+$Q_\varepsilon$で割り切れる．$w=z=0$上でも全15小行列式は零になる．
+これらの恒等式は\path{computations/verify_nonore_point_geometry.py}で，
+パラメータを特殊化せず厳密に確認する．
+従って$\ell$は唯一の正次元既約支持成分であり，
+任意の$E_+\simeq E_-$の射影線型同型は$\ell$を固定する．
+
+$Q_-( -z)=Q_+(z)$なので，$E_-$の五つの孤立点の
+直線$\ell$からの射影座標は，$E_+$の五つの根の負である．
+ここで一般の$Q_+$の根の集合には$\operatorname{PGL}_2$の非自明な
+自己同型がないことを確認する．非空性は
+\[
+ K=V=A=1,\qquad B=-\tfrac14,\quad S=\tfrac14
+\]
+という有理数点で示せる．この点では$Q_+(z)=z^5+z^2+1$である．
+この多項式は$\mathbb F_2$上既約で，$\mathbb F_5$上では
+\[
+ (z^2-z+2)(z^3+z^2-z-2)
+\]
+と，次数$(2,3)$の相異なる既約因子に分かれる．従ってガロア群は
+推移的な5次置換群で，5-cycleと$(2,3)$型の置換を含み，
+特にtranspositionを含む．推移的な5次置換群は素数次数ゆえ原始的であり，
+原始置換群にtranspositionがあれば，その共役の作る辺グラフは連結で，
+対応するtranspositionが$S_5$を生成する．従ってガロア群は$S_5$である．
+
+五根の$\operatorname{PGL}_2$安定化群$\Gamma$は，五根への作用として
+$S_5$へ忠実に埋まる．ガロア共役で$\Gamma$は保たれるから，
+その像は$S_5$の正規部分群である．非自明なら$A_5$を含むが，
+その五点作用で一点を固定する部分群は$A_4$を含む．
+これは有限な$\operatorname{PGL}_2$部分群の一点安定化群が，
+標数零では巡回群でなければならないことに矛盾する．
+よって$\Gamma=1$である．異なる五点に対する非自明な置換が
+$\operatorname{PGL}_2$で実現する条件は，各置換ごとの閉条件である．
+五点の有限\'etale被覆から降下すれば，安定化群が自明な領域は
+非空なZariski開集合となる．以下この開集合上で議論する．
+
+$\ell$を固定する射影変換は商平面の射影直線
+$[w:z]$にM\"obius変換を誘導する．
+五根の集合をその負の集合へ送るM\"obius変換は，
+上の安定化群の自明性から$z\mapsto-z$ただ一つである．
+従ってもし$E_+\simeq E_-$なら，
+$w,z$の二座標上では$[w:z]\mapsto[w:-z]$であり，
+その$y$座標は五つの根上で
+$1,z,z^2,y_+(z)$の線型結合として$y_-(-z)$に一致しなければならない．
+
+ところが$Q_+(z)=0$より
+\[
+ z^{-1}=\frac{AV^2z^4+4Sz}{4B}
+\]
+である．従って$k[z]/(Q_+)$の部分空間
+$\langle1,z,z^2\rangle$で割ると，
+\[
+ \begin{aligned}
+ y_+(z)&\equiv-\frac{AV}{4}z^3-\frac{KAV^2}{8B}z^4,\\
+ y_-(-z)&\equiv-\frac{AV}{4}z^3+\frac{KAV^2}{8B}z^4.
+ \end{aligned}
+\]
+この二つの係数ベクトルの行列式は
+\[
+ -\frac{KA^2V^3}{16B}\ne0.
+\]
+すなわち後者は$1,z,z^2,y_+(z)$の線型包に入らない．
+相異なる五根での関数の一致は$k[z]/(Q_+)$での一致と同値なので，
+上で必要とされた射影変換は存在しない．
+従って$E_+$と$E_-$は射影同型でない．
+
+1周期同型があれば，隣接する位置の左点スキームが射影同型になるから，
+これは1周期性を排除する．全ファイバーには厳密2周期があるので，
+最小正周期は2である．同型類の像が二次元であることは
+定理\ref{thm:nonore-five}ですでに証明した．
+最後に，一般の九変数楕円Clifford--Ore族の左点スキームは
+非被約一点と十二個の単純点という零次元支持を持つのに対し，
+本族の左点スキームは直線$\ell$を含む．
+同型は点スキームを保つので，両一般点は非同型である．
+\end{proof}
+
+\begin{remark}
+この定理は，非Ore型族の一般点が新たな非1周期的代数を与えることを示すが，
+九変数族や他の族と異なる\emph{既約成分}に属することまでは示さない．
+Clifford基点では両族が交わり，変形の高次障害と成分の閉包は別途調べる必要がある．
+\end{remark}

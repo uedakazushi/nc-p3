@@ -1,17 +1,16 @@
 {
   "date": "2026-11-15",
-  "version": 12,
+  "version": 13,
   "generated": "current Japanese LuaLaTeX sources and exact certificates",
   "verification_status": "PASS_with_explicit_scope_limits",
   "github_save": {
-    "status": "pending_remote_write",
-    "repository": "uedakazushi/nc-p3",
+    "status": "pending_fast_forward",
     "branch": "main",
-    "base_commit": "449a408bc8ccdabde4c9975fa3cdfddee6316cb3"
+    "base_commit": "018e2f1dd6bb8dfae36344f05d09d56bc27bca2f"
   },
   "library_save": {
     "status": "not_performed",
-    "reason": "After a successful GitHub push, no Library save is performed."
+    "reason": "Do not save to Library after successful GitHub push."
   },
   "checks": [
     {
@@ -63,22 +62,27 @@
       "command": "python3 computations/verify_nonore_family.py --output research/nonore_certificate.json",
       "result": "PASS",
       "scope": "eight polynomial overlaps, positive weights, orbit rank 30/32 and effective three-torus"
+    },
+    {
+      "command": "python3 computations/verify_nonore_point_geometry.py",
+      "result": "PASS",
+      "scope": "15 exact rank-4 minors for both parities, reductions by projected quintics, mod-2 irreducibility/mod-5 factor degrees, nonzero coordinate span determinant. Galois/PGL2 reasoning written in paper."
     }
   ],
   "certificate_comparison": "All 8 local v11 commands were executed and passed, including existing numerical checks and new Ore derivation verifier. No unrun mathematical check is claimed.",
   "tex": {
     "result": "PASS",
-    "engine": "LuaLaTeX via latexmk",
+    "engine": "LuaLaTeX/latexmk",
     "documents": {
-      "paper": 28,
+      "paper": 30,
       "plan": 5,
       "notes": 6
     },
-    "scope": "Local v12 sources compiled; remote sources will be separately checked for structural reference consistency."
+    "scope": "Current v13 local sources compiled and structural checker passed; font substitutions only, no unresolved references/citations or overfull boxes."
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Locally rendered main-paper pages 24 and 27 inspected, no clipping."
+    "result": "not_rerun_for_v13",
+    "scope": "TeX compiled and page count checked; no new page-by-page visual inspection claimed"
   },
   "not_claimed": [
     "formal verification",
@@ -91,13 +95,15 @@
     "Global completeness beyond the marked Clifford-Ore construction",
     "Sufficiency of equality of elliptic J(th) for indexed isomorphism",
     "Full indexed isomorphism classification from U(th) alone",
-    "Generic period two or component membership for new non-Ore chart"
+    "Generic period two or component membership for new non-Ore chart",
+    "Any assertion that non-Ore and nine-dimensional Ore families belong to distinct irreducible components."
   ],
   "new_results": {
     "intrinsic_2isogeny": "Proof written; polarized elliptic correspondence recovered at generic nine-family points",
     "explicit_quotient": "Polynomial quotient cubic and both j-invariants verified exactly",
     "modular_U": "Degree-four necessary indexed-isomorphism invariant and A4 Galois closure",
-    "nonore_five": "All-parameter quadratic PBW standard AS4 chart, two-dimensional indexed image, o0 outside earlier Ore tangent span"
+    "nonore_five": "All-parameter quadratic PBW standard AS4 chart, two-dimensional indexed image, o0 outside earlier Ore tangent span",
+    "nonore_period_two": "Generic minimal period exactly two, from intrinsic line plus five points and projective nonisomorphism; image dimension two established by v12."
   },
   "verified_remote_blobs": {
     "nc-p3.tex": "ac6a0f30d89c1a1793c3eb873657898f168fd427",
