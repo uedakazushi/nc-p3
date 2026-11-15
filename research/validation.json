@@ -17,7 +17,13 @@
     "tex_engine": "LuaHBTeX 1.18.0 (TeX Live 2025/dev/Debian)",
     "tex_format": "LaTeX2e 2024-11-01 patch level 2"
   },
-  "checks": [],
+  "checks": [
+    {
+      "command": "Remote JSON parse and consistency checks of architecture, plan, agents, task index and validation",
+      "result": "PASS",
+      "scope": "One new atlas design file and six modified current project files exist; priority task has id Z4-AS-004, 35 mathematical result records preserved."
+    }
+  ],
   "certificate_comparison": {
     "result": "NOT_RUN",
     "scope": "Mathematical verifier source and certificates unchanged; prior PASS not represented as rerun in v18."
@@ -47,9 +53,13 @@
     "scope": "No v18 PDF produced."
   },
   "github_save": {
-    "result": "pending",
+    "result": "PASS",
     "branch": "main",
-    "expected_parent": "163de8bdbe2c4c1abfc2ce3c63466b9843f0d64b"
+    "validated_content_commit": "0e7e762aade3913e2bbfd2c11dc8709e78678595",
+    "validated_content_tree": "d5a6f3a4405e1919a7db5edef4bf30f129fcb472",
+    "fast_forward": true,
+    "verified_remote_file_count": 47,
+    "scope": "The branch head and full recursive tree were read back; all 47 paths were visible, and the seven changed files were fetched and checked."
   },
   "library_save": {
     "result": "not_saved_project_policy",
@@ -69,5 +79,5 @@
     "The boundary five-parameter family has generic minimal period two and lies in Z7; it is not an independently established component.",
     "Eleven individually integrable tangent directions have the mixed obstruction lambda*c and do not yield a smooth simultaneous eleven-dimensional family."
   ],
-  "checks_execution_note": "No mathematical calculations or TeX compilation rerun for v18 documentation revision; structural JS checks performed before GitHub write; exact scope and save receipt will be recorded."
+  "checks_execution_note": "No mathematical verifiers rerun and no v18 TeX compilation; source code and mathematical results were not edited. Static JSON+path+cross-reference checks and GitHub remote readback passed."
 }
