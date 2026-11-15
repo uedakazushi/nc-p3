@@ -31,56 +31,56 @@
       "id": "R3",
       "claim": "Marked 4-periodic quadratic Z-algebra presentations with dim V=4 dim R=6 are equivalent to four Grassmannian factors modulo GL4^4",
       "status": "proof_written_not_externally_refereed",
-      "proof": "papers/asz4_classification.tex:thm:four-window"
+      "proof": "nc-p3.tex:thm:four-window"
     },
     {
       "id": "R4",
       "claim": "Periodic shift s iff all integer-index degree-one isomorphisms preserve R_i; no periodicity of the gauge relative to a chosen tau4 assumed",
       "status": "proof_written",
-      "proof": "papers/asz4_classification.tex:prop:period-relations"
+      "proof": "nc-p3.tex:prop:period-relations"
     },
     {
       "id": "R5",
       "claim": "1-periodic Z-algebras with selected isomorphism correspond to graded algebras; forgetting yields coarser equivalence",
       "status": "proof_written_with_existing_twist_literature",
-      "proof": "papers/asz4_classification.tex:prop:graded-period"
+      "proof": "nc-p3.tex:prop:graded-period"
     },
     {
       "id": "R6",
       "claim": "For p=1 or 2, a chosen 4-period sigma4 equal to a (4/p)-power of a p-period induces compatible p-periodic diagonal four-window data, and conversely",
       "status": "proof_written_not_externally_refereed",
-      "proof": "papers/asz4_classification.tex:prop:compatible-periodic-windows"
+      "proof": "nc-p3.tex:prop:compatible-periodic-windows"
     },
     {
       "id": "R7",
-      "claim": "Frobenius/Nakayama 4-periodicity on the quadratic dual from any two top traces differs by diagonal vertex conjugacy; canonical-marked and unmarked standard ASZ4 have the same geometric isomorphism classes",
+      "claim": "Frobenius/Nakayama 4-periodicity on the quadratic dual from any two top traces differs by diagonal vertex conjugacy; canonical-marked and unmarked standard nc-p3 objects have the same geometric isomorphism classes",
       "status": "proved_in_manuscript_not_externally_refereed",
-      "proof": "papers/asz4_classification.tex:thm:canonical-four and cor:canonical-slice",
+      "proof": "nc-p3.tex:thm:canonical-four and cor:canonical-slice",
       "dependence": "local Koszul-Frobenius duality"
     },
     {
       "id": "R8",
       "claim": "On the canonical four-window, canonical marking is equivalent to four trace-pairing matrix equalities P_i^T=Q_i with nonzero traces",
       "status": "proved_in_manuscript",
-      "proof": "papers/asz4_classification.tex:prop:canonical-matrix"
+      "proof": "nc-p3.tex:prop:canonical-matrix"
     },
     {
       "id": "R9",
       "claim": "Frobenius property of quadratic dual in strict four-window can be certified from degrees 0..5 and complementary multiplication pairing ranks, not sufficient for Koszulity",
       "status": "proved_finite_criterion_only",
-      "proof": "papers/asz4_classification.tex:prop:finite-frobenius"
+      "proof": "nc-p3.tex:prop:finite-frobenius"
     },
     {
       "id": "R10",
       "claim": "For canonical Frobenius four-window, an unmarked period p exists iff 4 invertible maps g_i satisfy (g_i⊗g_{i+1})R_i=R_{i+p}; hence periods 1/2/4 are finite orbital solvability tests",
       "status": "proved_in_manuscript",
-      "proof": "papers/asz4_classification.tex:thm:finite-period-test and cor:period-orbits"
+      "proof": "nc-p3.tex:thm:finite-period-test and cor:period-orbits"
     },
     {
       "id": "R11",
       "claim": "A(lambda)(1)=A(-lambda) strictly, while A(lambda) is not isomorphic to A(-lambda) for every parameter with minimal period 2 (in particular lambda=1)",
       "status": "proved_using_existing_as4_non1_periodicity",
-      "proof": "papers/asz4_classification.tex:prop:period-two-sign"
+      "proof": "nc-p3.tex:prop:period-two-sign"
     },
     {
       "id": "R12",
@@ -94,7 +94,7 @@
       "id": "R13",
       "claim": "The p=1,2 periodicity condition on canonical four-window is equivalently 384 polynomial matrix equations plus 4 determinant invertibility equations in 212 unknowns (4 g_i, 4 h_i, 4 scalar inverses)",
       "status": "proved_in_manuscript",
-      "proof": "papers/asz4_classification.tex:prop:period-polynomial-system",
+      "proof": "nc-p3.tex:prop:period-polynomial-system",
       "code": "computations/verify_period_witness.py",
       "computation": "local exact positive-witness and shift-sign checks PASS; executed source matches Git blob 65ce96907baff0daf764688e76874be2e8d9e81c"
     },
@@ -102,7 +102,7 @@
       "id": "R14",
       "claim": "Any two known standard AS-regular Z-algebras, represented by Frobenius-canonical four-window matrices, are index-preserving isomorphic iff a finite polynomial system of 212 unknowns and 388 equations has a solution",
       "status": "proved_in_manuscript_point_level",
-      "proof": "papers/asz4_classification.tex:cor:finite-isom-test",
+      "proof": "nc-p3.tex:cor:finite-isom-test",
       "limitations": "Does not classify all AS-regular points or make the polynomial system computationally easy"
     }
   ],
