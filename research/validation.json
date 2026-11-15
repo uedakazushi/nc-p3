@@ -203,13 +203,18 @@
     "findings": "No visible clipping, overlapping text or broken equations/tables. Layout review is distinct from mathematical verification."
   },
   "github_save": {
-    "result": "pending",
+    "result": "PASS",
     "branch": "main",
-    "expected_parent": "3a6e8410c4925f5d9cb53b0617aaf98db30ec3bf"
+    "validated_content_commit": "ce1a50f2230ad9fa04b26a86abec96edbb632d2e",
+    "validated_content_tree": "46168d6d5ae0f025a5910ab5b0b7cd4897ddff6b",
+    "parent_commit": "3a6e8410c4925f5d9cb53b0617aaf98db30ec3bf",
+    "fast_forward": true,
+    "verified_blob_count": 46,
+    "scope": "After the update, main and its recursive tree were read back. All 46 blob SHAs matched the reviewed local files. This confirmation changes only the validation record in a subsequent receipt commit."
   },
   "library_save": {
-    "result": "not_requested_when_github_succeeds",
-    "policy": "GitHub main is canonical; no duplicate Library storage after success."
+    "result": "not_saved_project_policy",
+    "policy": "GitHub main save succeeded. No duplicate Library storage after success."
   },
   "open_mathematics": [
     "Necessary and sufficient general four-window Koszul/AS conditions and exhaustive explicit regular charts.",
