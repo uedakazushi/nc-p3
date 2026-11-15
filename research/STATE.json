@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
   "project_id": "nc-p3",
-  "date": "2026-11-15",
-  "version": 17,
+  "date": "2026-11-16",
+  "version": 18,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -12,49 +12,67 @@
     "additional_global_assumptions": [],
     "boundary": "not assuming every quadratic AS4 algebra has the standard numerical type"
   },
-  "next_task_id": "ALGEBRAIC-FAMILY-008",
+  "next_task_id": "Z4-AS-004",
   "tasks": [
     {
-      "id": "ALGEBRAIC-FAMILY-008",
+      "id": "Z4-AS-004",
       "priority": 1,
       "status": "active",
-      "objective": "At a generic smooth elliptic point of the nine-parameter family compare the full period-two/canonical-period-four deformation space with the family tangent image; determine maximality or integrate missing directions algebraically. Determine sufficient indexed-isomorphism conditions from the polarized elliptic 2-isogeny, twelve-point divisor and lifting data."
+      "objective": "Find necessary and sufficient general four-window Koszul/AS regularity criteria, structurally rather than by unscoped brute-force elimination; track all exceptional values."
     },
     {
-      "id": "PERIOD-ROOTS-007",
+      "id": "STRUCTURE-009",
       "priority": 2,
-      "status": "open",
-      "objective": "Classify the finite projective automorphism group and all one-period structures at the Clifford point."
+      "status": "active",
+      "objective": "Prove intrinsic, indexed-isomorphism-invariant structural splits that cover the standard four-window AS locus; record residual cases, do not presume completeness."
     },
     {
-      "id": "MODULI-HIGHER-006",
+      "id": "ATLAS-010",
       "priority": 3,
-      "status": "open",
-      "objective": "Use higher obstructions only to test candidates for actual algebraic families; full higher-order Clifford equations remain open."
+      "status": "planned",
+      "objective": "Build a proven exhaustive atlas of branches with normal forms, validity regions, exceptional fibers and covering claims, introducing minimal machine-readable records only when the first genuine branch is proved."
     },
     {
-      "id": "Z4-AS-004",
+      "id": "ISOM-011",
       "priority": 4,
-      "status": "open",
-      "objective": "Necessary and sufficient global Koszul/AS conditions on four windows, all special fibers, non-PBW cases and exhaustive charts."
-    },
-    {
-      "id": "PERIOD-STRATA-003",
-      "priority": 5,
-      "status": "open",
-      "objective": "Classify period strata and isomorphism conditions in existing two/four-period families."
-    },
-    {
-      "id": "Z4-FORGET-002",
-      "priority": 6,
-      "status": "point_level_solved_global_stack_open",
-      "objective": "Global relative descent and stack comparison beyond the local Artin result."
+      "status": "planned",
+      "objective": "Classify indexed isomorphisms within and between normal-form branches; use invariant filters first, universal finite isomorphism equations only as needed."
     },
     {
       "id": "GLOBAL-005",
-      "priority": 7,
+      "priority": 5,
       "status": "open",
-      "objective": "All components, dimensions, degenerations and exhaustive classification."
+      "objective": "After structural coverage and isomorphism, determine all irreducible components, dimensions, degenerations and how families glue."
+    },
+    {
+      "id": "PERIOD-STRATA-003",
+      "priority": 6,
+      "status": "open",
+      "objective": "Determine minimal-period 1/2/4 strata and overlaps, including exceptional parameters and isomorphisms."
+    },
+    {
+      "id": "ALGEBRAIC-FAMILY-008",
+      "priority": 7,
+      "status": "auxiliary",
+      "objective": "Use nine-parameter elliptic family as a regression/testbed; analyze generic deformation maximality or complete family isomorphism only when it advances global classification or a publishable independent result."
+    },
+    {
+      "id": "PERIOD-ROOTS-007",
+      "priority": 8,
+      "status": "auxiliary",
+      "objective": "Classify Clifford-point one-period structures if required for global strata or graded-vs-indexed comparison; not a prerequisite for full indexed classification."
+    },
+    {
+      "id": "MODULI-HIGHER-006",
+      "priority": 9,
+      "status": "auxiliary",
+      "objective": "Compute higher Clifford obstruction equations only where they support the global atlas or concrete new algebraic family constructions."
+    },
+    {
+      "id": "Z4-FORGET-002",
+      "priority": 10,
+      "status": "open",
+      "objective": "Global relative descent and stack comparison beyond the established local Artin result."
     }
   ],
   "mathematical_results": [
@@ -293,7 +311,8 @@
     "ore_boundary_section": "sections/ore_boundary.tex",
     "ore_boundary_certificate": "research/ore_boundary_certificate.json",
     "nine_closure_section": "sections/nine_closure.tex",
-    "nine_closure_certificate": "research/nine_closure_certificate.json"
+    "nine_closure_certificate": "research/nine_closure_certificate.json",
+    "classification_architecture": "research/classification_architecture.md"
   },
   "unresolved_cautions": [
     "No proof of dimension 14 for the Clifford component.",
@@ -310,8 +329,9 @@
     "Equality of U(th) is only a necessary indexed-isomorphism condition, not sufficient.",
     "The boundary two-dimensional image is in the seven-dimensional Ore image closure. This does not establish a separate component, a global moduli singularity, or generic fiber isomorphism.",
     "Even seven plus odd four algebraic curve tangents do not imply an eleven-dimensional smooth simultaneous family: Q restricted is lambda*c.",
-    "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type."
+    "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
+    "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "3a6e8410c4925f5d9cb53b0617aaf98db30ec3bf",
+  "reviewed_source_commit": "163de8bdbe2c4c1abfc2ce3c63466b9843f0d64b",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json."
 }

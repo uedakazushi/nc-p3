@@ -1,29 +1,15 @@
 {
   "schema_version": 2,
-  "date": "2026-11-15",
-  "version": 17,
+  "date": "2026-11-16",
+  "version": 18,
   "reviewed_input": {
-    "source_commit": "3a6e8410c4925f5d9cb53b0617aaf98db30ec3bf",
-    "source_tree": "e93ef12e8644e827e8d6e1dc318ededdf1155f46",
-    "all_46_source_blobs_matched_before_editing": true
+    "source_commit": "163de8bdbe2c4c1abfc2ce3c63466b9843f0d64b",
+    "source_tree": "d973cfd8621e0c223f7ad02879541c82392cfc65"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Current paper, plan, notes and claim index clarify period-one specialization and deformation-connectedness; no existing mathematical result or proof removed.",
-    "preservation": {
-      "all_previous_101_tex_labels_retained": true,
-      "all_previous_34_result_ids_retained": true,
-      "new_result": "cor:nine-to-period-one",
-      "current_result_count": 35,
-      "statement_environment_counts": {
-        "theorem": 18,
-        "lemma": 8,
-        "proposition": 10,
-        "corollary": 7,
-        "conjecture": 1
-      },
-      "proof_changes": "Existing proof bodies are unchanged from the reviewed input. One specialization corollary and a source-dependent nonstandard helix example have been added."
-    }
+    "scope": "Documentation-only research strategy change: a classification-atlas architecture, reordered task priorities and Codex guidance. All prior mathematics results/labels and computation code unchanged.",
+    "new_mathematical_theorem": false
   },
   "environment": {
     "python": "3.12.14",
@@ -31,104 +17,14 @@
     "tex_engine": "LuaHBTeX 1.18.0 (TeX Live 2025/dev/Debian)",
     "tex_format": "LaTeX2e 2024-11-01 patch level 2"
   },
-  "checks": [
-    {
-      "command": "python3 computations/verify_algebraic_family.py --output research/algebraic_family_certificate.json",
-      "result": "PASS",
-      "scope": "Polynomial PBW overlaps, weights, exact orbit ranks and selected point-configuration identities; AS regularity and generic period two also require the written proofs.",
-      "source_git_blob": "b7c12da993335d25353efc720b015626f1a7a74d"
-    },
-    {
-      "command": "python3 computations/verify_elliptic_family.py --output research/elliptic_family_certificate.json",
-      "result": "PASS",
-      "scope": "Clifford multiplication, derivation identities, exact orbit ranks, quadratic dual conditions and sample elliptic identities; not a general-period-two proof by samples.",
-      "source_git_blob": "a52d18e83a662053b939c2e4789923d9a2e30782"
-    },
-    {
-      "command": "python3 computations/verify_exterior_trace.py",
-      "result": "PASS",
-      "scope": "Exterior-algebra trace sign example and rescalings; not the general four-periodicity theorem.",
-      "source_git_blob": "1d7e6e76460b839442597e46ccbaa7d06f70da69"
-    },
-    {
-      "command": "python3 computations/verify_isogeny_invariant.py --output research/isogeny_certificate.json",
-      "result": "PASS",
-      "scope": "Polynomial quotient cubic, two rational j formulas, degree-four U and ramification; intrinsic recovery uses the written geometric proof.",
-      "source_git_blob": "52a446109673b5269cfef576894b7341fce012aa"
-    },
-    {
-      "command": "python3 computations/verify_moduli_jets.py --output research/moduli_certificate.json",
-      "result": "PASS",
-      "scope": "Exact Fourier ranks and all 120 polarizations of the complete fifteen-variable quadratic obstruction, projected to full left kernels; not all higher obstructions.",
-      "source_git_blob": "fd0c578b5b1ba69d80256df8db949bfbdf6f3a8b"
-    },
-    {
-      "command": "python3 computations/verify_nine_closure_tangent.py --output research/nine_closure_certificate.json",
-      "result": "PASS",
-      "scope": "Exact tangent ranks 30/37/39/40/40/41, parity ranks and Q=lambda*c; actual closure membership uses the written boundary family.",
-      "source_git_blob": "3a836dc78059abdef4baaead596157bcb0d8bb7e"
-    },
-    {
-      "command": "python3 computations/verify_nonore_family.py --output research/nonore_certificate.json",
-      "result": "PASS",
-      "scope": "All eight polynomial overlaps, positive weights, ranks 30/32 and effective diagonal-torus rank three.",
-      "source_git_blob": "a6c3fde381e0b0868889d216a398497de17c254b"
-    },
-    {
-      "command": "python3 computations/verify_nonore_point_geometry.py --output research/nonore_point_certificate.json",
-      "result": "PASS",
-      "scope": "All fifteen minors for both parities, quintic reductions and finite-field factorization types; Galois/PGL2 argument is in the proof.",
-      "source_git_blob": "c07311501d74860a016aae8da346ce1f8d8ed200"
-    },
-    {
-      "command": "python3 computations/verify_ore_boundary.py --output research/ore_boundary_certificate.json",
-      "result": "PASS",
-      "scope": "Polynomial PBW overlaps, generator transformations for both parities and exact ranks 30/37/38/38/39.",
-      "source_git_blob": "bb05fb09d948d47a1ddc0ca264c11e2a604affdf"
-    },
-    {
-      "command": "python3 computations/verify_ore_derivations.py --output research/ore_derivation_certificate.json",
-      "result": "PASS",
-      "scope": "Symbolic derivation constraint matrices, all-parameter rank witnesses and rational J formula.",
-      "source_git_blob": "04331baadb68c2e1e5eedd0ff2e7ebe146bfa7a6"
-    },
-    {
-      "command": "python3 computations/verify_period_witness.py",
-      "result": "PASS",
-      "scope": "Specified identity-matrix period witnesses and sign shift only; does not exclude all period-one witnesses.",
-      "source_git_blob": "c4a4cd6cebb0f4dd94f73e7550ad8e61c1053d13"
-    },
-    {
-      "command": "python3 computations/verify_third_order_samples.py",
-      "result": "PASS",
-      "scope": "Three specified Q-isotropic directions through order three only; an observation, not a universal theorem.",
-      "source_git_blob": "59f0f789b5f124a057a83dcc54391f16a2d5b26a"
-    },
-    {
-      "command": "python3 scripts/check_project.py",
-      "result": "PASS",
-      "scope": "Current file paths, JSON, task IDs, expanded TeX labels and citation keys; not mathematical verification.",
-      "source_git_blob": "86596fc6ac2866348c57f2eb8e8cbe75cbc12bd2"
-    }
-  ],
+  "checks": [],
   "certificate_comparison": {
-    "result": "PASS",
-    "count": 9,
-    "scope": "All regenerated mathematical contents agree. The moduli certificate Python metadata was refreshed to this execution environment.",
-    "output_argument_fix": "verify_nonore_point_geometry.py now accepts --output and creates parent directories; generated JSON equals the previous certificate and stdout remains unchanged."
+    "result": "NOT_RUN",
+    "scope": "Mathematical verifier source and certificates unchanged; prior PASS not represented as rerun in v18."
   },
   "proof_review": {
-    "result": "targeted_review_completed",
-    "scope": [
-      "Standard four-periodicity, finite isomorphism/period criteria and relative Artin normalization.",
-      "Quantum local comparison, Clifford tangent and quadratic-obstruction interpretation.",
-      "Seven/nine-parameter regularity, image dimensions and generic period two.",
-      "Marked Ore derivations, intrinsic 2-isogeny, boundary inclusion and orbit-closure singularity.",
-      "One-periodic specialization of the nine-family by uniform scaling of the alternating coefficients, with the regularity exclusion preserved.",
-      "Application of the Mori-Nyman ample geometric-helix theorem to P1 x P2 and the flat-invariance obstruction from adjacent ranks 6 and 3; outside standard 14641."
-    ],
-    "repair": "The passage from the normalized quantum point to a nonempty open set now explicitly normalizes row products by a diagonal Zhang twist after an etale cover; theorem statements are unchanged.",
-    "limitations": "No claim of exhaustive independent proof verification, formal verification, external as4 reexecution, peer review or established novelty."
+    "result": "NOT_RUN",
+    "scope": "No new mathematical proof; existing results preserved and classification-coverage status explicitly remains open."
   },
   "literature_review": {
     "primary_text": [
@@ -143,74 +39,17 @@
     "limits": "These checks identify relevant prior work; they do not establish novelty or a full equivalence with all earlier families."
   },
   "tex": {
-    "result": "PASS",
-    "commands": [
-      "latexmk nc-p3.tex",
-      "latexmk research/plan_ja.tex",
-      "latexmk research/notes_ja.tex"
-    ],
-    "execution_environment_note": "A temporary wrapper loads an existing TeX runtime and sets TEXFORMATS to its luahbtex directory, using the existing font cache, because the default container could not locate lualatex.fmt. Standard LuaLaTeX, luatexja, latexmk and Harano Aji dependencies are required.",
-    "documents": [
-      {
-        "source": "nc-p3.tex",
-        "pages": 35,
-        "generated_pdf_sha256": "370489a1f1329e2ef13fb2d66ea05b673c7993d241b8582cfff3b04bdd81621d",
-        "overfull_count": 0,
-        "underfull_count": 0,
-        "undefined_reference_warning": false,
-        "missing_character_warning": false
-      },
-      {
-        "source": "research/plan_ja.tex",
-        "pages": 4,
-        "generated_pdf_sha256": "7858785db14433e8aed2351965615245efad628880042ea5a1e6bea1289c789b",
-        "overfull_count": 0,
-        "underfull_count": 0,
-        "undefined_reference_warning": false,
-        "missing_character_warning": false
-      },
-      {
-        "source": "research/notes_ja.tex",
-        "pages": 8,
-        "generated_pdf_sha256": "fc51fad24602bf2dd00ba5b64e3536dd9b0ad183d0ad4b3a55bda180c4b76349",
-        "overfull_count": 0,
-        "underfull_count": 0,
-        "undefined_reference_warning": false,
-        "missing_character_warning": false
-      }
-    ],
-    "all_final_tex_input_sha256": {
-      "nc-p3.tex": "d8b216b2d3076c12a02589b552cc4ce722ee17d3f488569f1e445b3594cf58f1",
-      "research/notes_ja.tex": "42600c84aa67e337007666b92f054066b6fa9247a21802aca181576760c5141b",
-      "research/plan_ja.tex": "f18ed943b59d8a9243900c79212738be9495748cc9a6c613db9e9aedf5301411",
-      "sections/isogeny_invariant.tex": "caab2e1640d9a279eb24022ef78eb194aa94b87ac7ad1830f8b10dcfddcf028a",
-      "sections/nonore_period_two.tex": "60bacc2c037e8020c3d4b444288578dc5be286e407c04dc646c4fd550d57a188",
-      "sections/nine_closure.tex": "795d1b16eeab80bd4dcbe5745131efe2852b34673155ebbe1e47cbcd239e2816",
-      "sections/four_window.tex": "c04a639fda9e02822737d2cbb517e5a433b2d4df65c391765b10cc3a83091fa7",
-      "sections/elliptic_ore_family.tex": "15dc0e42ca3a26df70d3ef122b0538b7fd5e9987e03f4808d99d876b796feb5d",
-      "sections/ore_complete.tex": "8e79f26fb063caf32b55311be5878748d468ee60fa5612166b4640e69c607adf",
-      "sections/local_moduli.tex": "211d5817ff91a7d5808be5b2d02c18f63da89eda1cf3e38e83c1b8541f02a725",
-      "sections/ore_boundary.tex": "50b35d6784f41436c04510499c9f7e40f941b80fbd05c2359ace46c85a7673e3",
-      "sections/algebraic_family.tex": "4f68950de606b87f083a8d5f8653fd4ddbaa1e73cb01c87cab2539b27373c353",
-      "sections/nonore_family.tex": "ffbbcadad9c2ffcfb1a5eccff6a54e8c90c1c9fcd248664f23fbb5b9e87aeedf"
-    },
-    "nonfatal_warnings": "Inherited small math-font substitution, legacy math commands and PDF bookmark sanitization warnings; no missing text or overflow.",
-    "pdfs_tracked": false
+    "result": "NOT_RUN",
+    "scope": "The plan source has changed. No v18 LuaLaTeX compilation has yet been performed."
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "All current pages reviewed as contact sheets: paper 35, plan 4, notes 8. New paper page 22 and notes pages 2-3 also inspected at full rendered size.",
-    "findings": "No visible clipping, overlapping text or broken equations/tables. Layout review is distinct from mathematical verification."
+    "result": "NOT_RUN",
+    "scope": "No v18 PDF produced."
   },
   "github_save": {
-    "result": "PASS",
+    "result": "pending",
     "branch": "main",
-    "validated_content_commit": "ce1a50f2230ad9fa04b26a86abec96edbb632d2e",
-    "validated_content_tree": "46168d6d5ae0f025a5910ab5b0b7cd4897ddff6b",
-    "parent_commit": "3a6e8410c4925f5d9cb53b0617aaf98db30ec3bf",
-    "fast_forward": true,
-    "verified_blob_count": 46,
-    "scope": "After the update, main and its recursive tree were read back. All 46 blob SHAs matched the reviewed local files. This confirmation changes only the validation record in a subsequent receipt commit."
+    "expected_parent": "163de8bdbe2c4c1abfc2ce3c63466b9843f0d64b"
   },
   "library_save": {
     "result": "not_saved_project_policy",
@@ -230,5 +69,5 @@
     "The boundary five-parameter family has generic minimal period two and lies in Z7; it is not an independently established component.",
     "Eleven individually integrable tangent directions have the mixed obstruction lambda*c and do not yield a smooth simultaneous eleven-dimensional family."
   ],
-  "checks_execution_note": "The twelve mathematical scripts were executed on 2026-11-15 before this textual clarification; their source blobs and calculation inputs remain unchanged and their exact results are retained. Certificate output paths were redirected to temporary files and compared with tracked certificates; the repaired --output interface was separately executed. The structural check is rerun on the current documents. New specialization and helix arguments are proof reviews, not new computer calculations."
+  "checks_execution_note": "No mathematical calculations or TeX compilation rerun for v18 documentation revision; structural JS checks performed before GitHub write; exact scope and save receipt will be recorded."
 }
