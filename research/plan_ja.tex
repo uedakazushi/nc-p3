@@ -6,7 +6,7 @@
 \usepackage{xurl}
 \title{nc-p3研究方針と再開手順}
 \author{}
-\date{2026年11月15日\quad 第11版}
+\date{2026年11月15日\quad 第12版}
 \begin{document}
 \maketitle
 \section{最初に読む：目標・達成基準・現在の保存状態}
@@ -23,7 +23,7 @@ $qgr$同値、導来同値、添字移動を割る同値、周期構造を選ん
 Clifford点では後者の接空間と二次障害を得たが、実際の成分次元は未決定である。
 
 正本はGitHub \texttt{uedakazushi/nc-p3}の\texttt{main}である。
-参照した先端は\path{98c0401f931123a796ee6df032b4a6430d668785}。
+具体的な保存先と検証済みの先端は\path{research/validation.json}に記載する。
 生成・数学的検算・組版・遠隔保存は\path{research/validation.json}で別状態として記録する。
 再開時は先端を確認し、別の更新があれば有効な内容を統合する。
 GitHubへのpushが成功した場合はLibraryへの保存を行わない。
@@ -89,24 +89,52 @@ $t=h=0$は七変数族そのもの。中心平方上のClifford基底とOre拡�
 $1+th=0$では三生成部分の次数3が跳ぶ例があり、除外条件を外さない。
 二次Gr\"obner基底は一般の$t,h$では主張しない。新規性は未確認である。
 
-\subsection*{Ore導分の完全分類と楕円同型不変量}
-定理\texttt{thm:ore-derivations}と系\texttt{cor:ore-slice}（\path{sections/ore_complete.tex}）は、
-固定された三生成Clifford部分上の次数一Ore型導分を分類する。
-通常導分は自由階数6（内3＋外3）、符号捩れ導分は自由階数9（中心二次式値）。
-位置依存の$X$の基底変更と対角規格化により、九変数正規形は
-指定された二周期Ore構成の一般表示を尽くす。一般四窓の分類・成分最大性ではない。
+\subsection*{Ore型の導分分類と内在的な楕円同型不変量}
+\path{sections/ore_complete.tex}の定理\texttt{thm:ore-derivations}と系\texttt{cor:ore-slice}。
+固定されたClifford部分$B_{t,h}$上で、次数1の通常導分は自由階数6
+（内3＋外3）、符号自己同型の捩れ導分は自由階数9（中心二次式値）。
+$X_i\mapsto X_i+\ell+(-1)^im$と残る二次元対角変換を除くと、
+九変数正規形は\emph{指定された二周期Ore型構成内の}一般表示を尽くす。
+これにより単純にOre導分係数を増やすだけでは新しい同型類の次元を増やせない。
+全四窓のAS分類・成分最大性はなお未解決。
 
-命題\texttt{prop:elliptic-j-obstruction}は、一般のindexed同型の必要条件
-$J(th)=J(t'h')$を与える。$J$は$th$の次数12の有理関数で、
-固定した同型類に現れる一般の$th$の値は高々12個。逆は未証明。
-再現は\path{computations/verify_ore_derivations.py}、
-証明書は\path{research/ore_derivation_certificate.json}。
-Hesse標準公式の一次資料は\path{research/BASELINE.md}に記載した。
+命題\texttt{prop:elliptic-j-obstruction}は、一般ファイバーに固有の滑らかな楕円曲線の
+$j$不変量が$x=th$の次数12の有理関数$J(x)$となることを証明する。
+indexed同型なら$J(th)=J(t'h')$が必要で、同型類一つに現れる一般の$x$の値は高々12個。
+これは同型判定の\emph{必要条件}であり、十分条件ではない。
+厳密多項式検算\path{computations/verify_ore_derivations.py}、
+証明書\path{research/ore_derivation_certificate.json}、Hesse公式の一次資料は\path{research/BASELINE.md}に記録する。
+
+\subsection*{2-isogenyによる強化された同型障害}
+論文\texttt{lem:intrinsic-elliptic-tau}で、一般の九変数族のindexed同型が
+三生成部分の偏極付き楕円曲線と非零2等分点による平行移動を保つことを証明した。
+商曲線の具体方程式は\texttt{eq:isogenous-cubic}。
+$x=th$とすると二曲線の$j$は
+\[
+ j(E)=(U+256)^3/U^2,\quad j(E')=(U+16)^3/U,
+ \quad U=4096(x+1)^3/[x(x-8)^3]
+\]
+であり、一般のindexed同型なら$U(x)=U(x')$が必要。
+$U$の次数は4なので$x$は高々4候補へ減る。逆は未証明。
+$U$の分岐とGalois閉包群$A_4$も確定。
+証明は\path{sections/isogeny_invariant.tex}、再現は
+\path{computations/verify_isogeny_invariant.py}。
+
+\subsection*{指定Ore型の外の代数的族}
+\path{sections/nonore_family.tex}で$YW+WY=(-1)^i a_0 ZX$を含む
+五変数の二周期族を得た。重み$(3,5,2,2)$により全幾何学的ファイバーが
+標準14641型Koszul AS正則である。添字保持同型類の像は2次元。
+Clifford基点での$o_0$方向は九変数Ore族の交代接像に含まれない。
+一般点が最小周期2かどうか、全モジュライでの成分包含は未決定。
+再現は\path{computations/verify_nonore_family.py}。
 
 \section{優先課題と具体的な着手方法}
 \paragraph{最優先：ALGEBRAIC-FAMILY-008。}
 形式的な高次障害計算より明示的な代数的族の拡張を優先する。
-Ore形式内部の次数一導分分類は完了したので、別のClifford部分かOre以外の代数的構成で新しい変形方向を探す。
+九変数族の2-isogenyと12点因子から同型の必要十分条件を決定する。
+非Ore型五変数族について一般の最小周期と九変数族の像との交わりを調べ、
+複数の交代方向を同時に積分する高次元の代数的族を優先する。
+Ore型の内部での一次導分分類は完了したので、独立な代数的拡張は別のClifford部分またはOre以外の構成に求める。
 九変数族の一般点における同型・特殊化・成分としての最大性を調べる。
 まず三生成楕円曲線と次数12の因子のデータから族内同型を必要十分に記述し、
 その記述で残る偶・交代方向を持つ別のOreチャートを探す。
@@ -149,6 +177,10 @@ python3 computations/verify_moduli_jets.py \
   --output research/moduli_certificate.json
 python3 computations/verify_algebraic_family.py \
   --output research/algebraic_family_certificate.json
+python3 computations/verify_isogeny_invariant.py \
+  --output research/isogeny_certificate.json
+python3 computations/verify_nonore_family.py \
+  --output research/nonore_certificate.json
 python3 computations/verify_ore_derivations.py \
   --output research/ore_derivation_certificate.json
 python3 computations/verify_elliptic_family.py \

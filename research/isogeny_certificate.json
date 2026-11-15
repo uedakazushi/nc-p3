@@ -1,0 +1,26 @@
+{
+  "result": "PASS",
+  "method": "exact QQ[t,h,w,y,z,x] polynomial and rational operations",
+  "source_cubic": "h*y**3 + t*z**3 + w**3 + w*y*z*(-h*t + 2)",
+  "quotient_cubic": "t*h*A**3 + t*B**3 + h*C**3 - (t*h+4)*A*B*C",
+  "polynomial_quotient_identity": "G(A,B,C) = F(w,y,z) * A * (h**2*t*y**3 + h*t**2*z**3 - 6*h*t*w*y*z + 8*w**3)",
+  "j_source": "(x - 2)**3*(x**3 - 6*x**2 + 228*x - 8)**3/(x*(x - 8)**3*(x + 1)**6)",
+  "j_quotient": "(x + 4)**3*(x**3 + 228*x**2 + 48*x + 64)**3/(x**2*(x - 8)**6*(x + 1)**3)",
+  "isogeny_modular_parameter": "4096*(x + 1)**3/(x*(x - 8)**3)",
+  "modular_formulas": [
+    "j=(U+256)**3/U**2",
+    "j_quotient=(U+16)**3/U"
+  ],
+  "map_degree": 4,
+  "branch_points": {
+    "U=0": "x=-1 (ramification 3), x=infinity (unramified)",
+    "U=infinity": "x=8 (ramification 3), x=0 (unramified)",
+    "U=-64": "x=-10+6sqrt(3), -10-6sqrt(3) (each ramification 2)"
+  },
+  "ramification_sum": 6,
+  "geometric_meaning": "A4 monodromy for the degree-four x->U cover (manuscript proof)",
+  "limitations": [
+    "Pair of elliptic invariants is only a generic necessary condition for indexed isomorphism.",
+    "Not a classification of the full nine-parameter family or its moduli component."
+  ]
+}

@@ -1,4 +1,4 @@
-# 依存・一次文献・証明位置 — 2026-11-15 / v11
+# 依存・一次文献・証明位置 — 2026-11-15 / v12
 
 ## 現行プロジェクト
 
@@ -60,3 +60,10 @@
 - V. Knibbeler, S. Lombardo, A. P. Veselov, *Automorphic Lie algebras and modular forms*, International Mathematics Research Notices 2023, no. 6, 5209–5262, DOI https://doi.org/10.1093/imrn/rnab376 。出版社HTML §7.3 式(42)にHesseの古典的$j$公式を確認。原稿 `prop:elliptic-j-obstruction` の具体式へ代入する。
 - `computations/verify_ore_derivations.py`: 三生成Clifford部分の30×18制約行列、通常導分階数12・捩れ導分階数9を全パラメータで証明補助する小行列式を生成し、一般のindexed同型に関する楕円$j$必要条件の有理関数を検算する。
 - 導分の完全性は固定Clifford部分と指定された符号Ore形式に限定。全四窓分類、楕円$j$一致による十分同型判定、全モジュライの成分最大性は未証明。
+
+## 楕円2-isogenyと非Ore型代数的チャートの参照
+
+- A. S. I. Anema, J. Top and A. Tuijp, *Hesse Pencils and 3-Torsion Structures*, SIGMA 14 (2018), article 102, DOI https://doi.org/10.3842/SIGMA.2018.102 。Hesse pencilと楕円3-torsionの基本構造に関する一次文献。商曲線と四対一の具体公式は本文の直接計算で証明し、この文献の結果として推測しない。
+- `computations/verify_isogeny_invariant.py` は楕円点対応の外積、2-isogenous cubicの多項式恒等式、二つの$j$公式、次数4の$U(x)$と分岐を厳密に検証する。2-isogenyのindexed不変性は論文内の偏極次数3と2-torsionの議論による。
+- `computations/verify_nonore_family.py` は選んだClifford--Ore構成を離れる五変数族の全8個の三次重なり、正の重みによる停止性、Clifford基点の軌道階数30から32、有効対角トーラス階数3を検証する。全ファイバーのAS正則性は原稿のKoszul--Frobenius構造証明に依存する。
+- P. Belmans, *4d-AS-regular --- the classification of 4-dimensional Artin--Schelter regular algebras*, https://4d-as.ncag.info (2026), DOI https://doi.org/10.5281/zenodo.21296619。graded側の関連族と既知文献を探すための公開データベースであって、indexed Z-algebraの既約成分分類や本結果の新規性を保証するものではない。

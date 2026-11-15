@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の分類
 
-**2026-11-15 / v11。完全分類は未完成。正本は GitHub `main`。**
+**2026-11-15 / v12。完全分類は未完成。正本は GitHub `main`。**
 
 再開は [研究方針](research/plan_ja.tex) → [研究指示](AGENTS.md) → [研究ノート](research/notes_ja.tex) → [主論文](nc-p3.tex) の順。
 
@@ -16,13 +16,21 @@
 
 **他の保持する結果**：Frobenius標準4周期、四窓による幾何学的同型類、有限Frobenius検査、周期と同型の212変数388式。一般量子成分ではgraded同型類の次元6、indexed同型類の次元3。Clifford点では接空間が偶9＋交代6、二次障害は `Q=o0*o5+o1*o2-o2*o3+o3*o4`。
 
-**Ore導分の完全分類と同型不変量**：固定した三生成Clifford部分上では、通常の次数一導分は内3＋外3の階数6、符号捩れ導分は中心二次式値の階数9。位置依存の基底変更を除き、一般Ore表示は九変数正規形へ移る（`sections/ore_complete.tex`）。楕円曲線の内在的な不変量は `J(x)=(x-2)^3*(x^3-6*x^2+228*x-8)^3/(x*(x-8)^3*(x+1)^6)`、`x=th`。一般のindexed同型なら `J(th)=J(t'h')` が必要で、同型類を固定すると `th` は高々12値。逆は未証明。
+**Ore型の完全性と同型不変量**：固定された三生成Clifford代数上の次数1の通常導分は自由階数6（内導分3＋外導分3）、符号捩れ導分は自由階数9（すべて中心二次式値）。位置に依存するXの基底変更を除き、一般Ore表示の係数は9個となり、九変数正規形はこの構成内で一般の表示を尽くす（`thm:ore-derivations`, `cor:ore-slice`（`sections/ore_complete.tex`））。
+
+楕円曲線の内在的な$j$-不変量は$x=th$の次数12の有理関数
+`J(x)=(x-2)^3*(x^3-6*x^2+228*x-8)^3/(x*(x-8)^3*(x+1)^6)`。
+一般点でindexed同型なら`J(th)=J(t'h')`が必要で、固定した同型類に現れる$x$は高々12個（`prop:elliptic-j-obstruction`）。逆は未証明。
+
+**楕円2-isogenyの内在的な同型障害**：一意の非被約点から三生成部分代数を復元し、任意のindexed同型は偏極付き楕円曲線の非零2等分点$\tau$を保存する。商曲線は $th A^3+t B^3+h C^3-(th+4)ABC=0$。$x=th$に対して$U(x)=4096(x+1)^3/(x(x-8)^3)$は次数4の有理関数で、一般の同型なら$U(th)=U(t'h')$が必要。以前の$j(E)$だけによる高々12候補を高々4候補へ改善した。$x\mapsto U$のGalois閉包の群は$A_4$。証明は`sections/isogeny_invariant.tex`。
+
+**非Ore型の別の代数的チャート**：`sections/nonore_family.tex`では$YW+WY=(-1)^i a_0 ZX$を含む五変数の二周期族を構成。全ファイバー標準14641型AS正則、indexed同型類の像は2次元。Clifford点での交代接方向$o_0$は従来の九変数族の接像に含まれない。一般点の最小周期は未確定。
 
 九変数族は基点で偶6・交代3方向を積分する。**9次元の像が全モジュライの既約成分であるとは未主張**。14次元のClifford局所模型、残る方向の代数的積分、全1周期構造、全成分分類は未解決。具体的な九変数族と先行研究との最終的な新規性比較は未了。
 
 ## 次の課題
 
-**ALGEBRAIC-FAMILY-008**：Ore構成内部の次数一導分分類は完了。次は楕円曲線の12点因子と$j$障害を使って同型の必要十分条件を求め、別のClifford部分やOre以外の代数的構成で残る方向を積分する。成分としての最大性は未解決。別の三生成部分代数・Oreチャートで残る偶・交代方向を代数的に積分する。形式的高次障害の計算は候補選別の補助に使う。
+**ALGEBRAIC-FAMILY-008**：九変数族の2-isogenyと12点因子から完全な同型判定を求める。非Ore五変数族の一般最小周期と九変数族との成分関係を解決し、複数の非Ore交代方向を同時に積分する高次元の代数的族を優先する。全モジュライの既約成分と14次元Clifford局所模型は未決定。
 
 ## 再現
 
@@ -35,6 +43,8 @@ python3 computations/verify_moduli_jets.py --output research/moduli_certificate.
 python3 computations/verify_algebraic_family.py --output research/algebraic_family_certificate.json
 python3 computations/verify_elliptic_family.py --output research/elliptic_family_certificate.json
 python3 computations/verify_ore_derivations.py --output research/ore_derivation_certificate.json
+python3 computations/verify_isogeny_invariant.py --output research/isogeny_certificate.json
+python3 computations/verify_nonore_family.py --output research/nonore_certificate.json
 python3 computations/verify_third_order_samples.py
 latexmk nc-p3.tex
 latexmk research/plan_ja.tex

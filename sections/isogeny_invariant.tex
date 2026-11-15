@@ -1,0 +1,164 @@
+\section{楕円2-isogenyの内在性と四対一のモジュライ座標}\label{sec:isogeny}
+九変数族の楕円曲線$E_{t,h}$に現れる非零2等分点による平行移動を
+$\tau:E\to E$と書き、$L=\mathcal O_E(1)$とする。
+本節では定理\ref{thm:algebraic-nine}の開集合をさらに必要に応じて縮め、
+$E$が滑らかで、各位置の左点スキームの非被約支持点が唯一の$e_X$であり、
+$e_X$から射影した残りの支持が$E$上の相異なる12点である場合を考える。
+これらは証明済みの非空な開条件である。
+
+\begin{lemma}[Clifford部分と2等分点の内在的復元]\label{lem:intrinsic-elliptic-tau}
+上の開集合の二つのファイバーが添字保持$\ZZ$-代数として同型なら、
+両者の偏極付き楕円曲線と非零2等分点による平行移動の組
+\[
+ (E,L,\tau),\qquad (E',L',\tau')
+\]
+は同型である。具体的には、各整数位置に誘導される平面の射影同型は
+楕円曲線上では同一の$\alpha:E\xrightarrow\sim E'$となり、
+$\alpha^*L'\simeq L$、$\alpha\tau=\tau'\alpha$を満たす。
+従って$E/\langle\tau\rangle$の同型類もindexed $\ZZ$-代数の不変量である。
+\end{lemma}
+\begin{proof}
+左点スキームの唯一の非被約点$e_X$は、次数一空間の射影空間内で内在的に定まる。
+その消滅超平面$H_i\subset C_{i,i+1}$は、表示では$W,Y,Z$が張る三次元空間であり、
+任意の添字保持同型で保存される。これらの$H_i$から生成される
+部分$\ZZ$-代数は、全位置で同じ三生成Clifford代数$B_{t,h}$に由来する。
+従って任意のindexed同型は、この部分代数のindexed同型を誘導する。
+その次数一写像を双対化すると、各位置で偏極を保つ射影同型
+$\alpha_i:(E,L)\xrightarrow\sim(E',L')$が得られる。
+
+三生成部分の双線型関係の点対応は$\tau$のグラフであるから、
+$\alpha_{i+1}\tau=\tau'\alpha_i$が成立する。
+$\beta_i=\alpha_i\tau\alpha_i^{-1}$は$E'$上の非零2等分点の平行移動である。
+従って$\alpha_{i+1}\alpha_i^{-1}=\tau'\beta_i^{-1}$は、
+高々2位数の点による平行移動である。
+一方この自己同型は$L'$を保つ。
+楕円曲線上の次数3の直線束を保つ平行移動の点は3-torsionに限るので、
+2-torsionでもあるこの点は零である。
+ゆえに$\alpha_{i+1}=\alpha_i$であり、同時に
+$\alpha_i\tau=\tau'\alpha_i$を得る。
+\end{proof}
+
+\begin{theorem}[商曲線の方程式と強化された同型障害]\label{thm:explicit-two-isogeny}
+$x=th$、$x\ne0,-1,8$とする。非零2等分点$\tau$で割った商楕円曲線
+$E'=E/\langle\tau\rangle$には次の平面三次表示がある。
+\begin{equation}\label{eq:isogenous-cubic}
+ th\,A^3+t\,B^3+h\,C^3-(th+4)ABC=0.
+\end{equation}
+$j(E)$と$j(E')$はそれぞれ
+\begin{align}
+ J(x)&=\frac{(x-2)^3(x^3-6x^2+228x-8)^3}
+                    {x(x-8)^3(x+1)^6},\label{eq:source-j}\\
+ J'(x)&=\frac{(x+4)^3(x^3+228x^2+48x+64)^3}
+                    {x^2(x-8)^6(x+1)^3}.\label{eq:isogenous-j}
+\end{align}
+さらに
+\begin{equation}\label{eq:isogeny-modular-u}
+ U(x)=\frac{4096(x+1)^3}{x(x-8)^3}
+\end{equation}
+と置けば
+\begin{equation}\label{eq:2-isogeny-modular-forms}
+ J(x)=\frac{(U(x)+256)^3}{U(x)^2},\qquad
+ J'(x)=\frac{(U(x)+16)^3}{U(x)}.
+\end{equation}
+有理写像$U:\mathbb P^1_x\to\mathbb P^1_U$の次数は4である。
+また$k(J(U),J'(U))=k(U)$なので、一般の二つの九変数族のファイバーが
+indexed同型なら$U(th)=U(t'h')$が必要である。
+従って、同型類を固定すると、一般の$x=th$に可能な値は高々\emph{4個}である。
+これは命題\ref{prop:elliptic-j-obstruction}の12個という上界を改善する。
+$U$の一致は同型の十分条件ではない。
+\end{theorem}
+\begin{proof}
+式\eqref{eq:elliptic-cubic}の$K(p)$について$p=(w,y,z)$と置き、
+第一行と第二行の外積を計算すると
+\[
+ q=(w^2-thyz,-wy-tz^2,-wz-hy^2)
+\]
+となる。直接計算で$K(p)q=(0,0,-F_{t,h}(p))^{\mathsf T}$だから、
+$E$の稠密開集合で$q$は$\tau(p)$を表す。
+このとき$p\times q$の三座標は
+\begin{equation}\label{eq:isogeny-cross-product}
+ \begin{aligned}
+ A&=tz^3-hy^3,\\
+ B&=2zw^2+hy^2w-thyz^2,\\
+ C&=-2yw^2-tz^2w+thy^2z.
+ \end{aligned}
+\end{equation}
+これらは$q$の共通のスカラーを除けば$\omega=p\times\tau(p)$であり、
+$\tau$で符号が変わるため射影的には不変である。
+より直接的には、$\omega$の三座標は
+$L\otimes\tau^*L$（次数6）の切断であり、同時に零となるのは
+$p=\tau(p)$のときに限る。$\tau$は固定点を持たないから基点自由である。
+三座標が線型独立なことは式\eqref{eq:isogeny-cross-product}から分かる：
+線型結合が$E$上零ならその三次多項式は$F_{t,h}$の定数倍だが、
+$w^3$係数を比較すると倍数が零となり、$w^2y,w^2z$および
+$y^3,z^3$の係数比較で三つの係数も零となる。
+従って像は直線ではない。
+この写像は$\tau$で不変だから次数は偶数であり、
+像の次数と写像次数の積は6となる。
+像が直線でないことから写像次数は2、像の次数は3である。
+これは補題\ref{lem:elliptic-sections}の商の次数3線型系の記述とも一致する。
+
+多項式として次の恒等式が成り立つ。
+\[
+\begin{split}
+ &th A^3+t B^3+h C^3-(th+4)ABC\\
+ &\quad=F_{t,h}(w,y,z)\,(tz^3-hy^3)
+       (h^2ty^3+ht^2z^3-6htwyz+8w^3).
+\end{split}
+\]
+従って像は式\eqref{eq:isogenous-cubic}に含まれる。
+この三次曲線は$x\ne0,-1,8$で滑らかであり、先の商の平面三次曲線と一致する。
+
+両曲線はHesse標準形に変形でき、そのパラメータの三乗は
+\[
+ \kappa^3=-\frac{(2-x)^3}{27x},\qquad
+ (\kappa')^3=\frac{(x+4)^3}{27x^2}
+\]
+である。Hesseの古典的な$j$公式\cite[\S7.3, (42)]{KLV}へ代入すると、
+式\eqref{eq:source-j}と\eqref{eq:isogenous-j}が得られる。
+式\eqref{eq:2-isogeny-modular-forms}は有理関数の恒等式であり、
+\path{computations/verify_isogeny_invariant.py}で全分子を多項式として検査する。
+$U(x)$の分子・分母は互いに素で、それぞれ次数3と4なので写像の次数は4である。
+
+次に$J_0(U)=(U+256)^3/U^2$、$J_1(U)=(U+16)^3/U$と置く。
+$[k(U):k(J_0)]=3$である。
+もし$J_1\in k(J_0)$なら、両者の有理写像の次数が3なので
+$J_1$は$J_0$の一次分数変換でなければならない。
+しかし$J_0$の極は$U=0$で2位、$U=\infty$で1位であり、
+$J_1$の極は同じ二点で逆に1位と2位である。
+この極の次数の違いは一次分数変換では実現できない。
+ゆえに$J_1\notin k(J_0)$であり、次数3が素数だから
+$k(J_0,J_1)=k(U)$となる。
+従って一般の$U$は順序付き対$(J_0,J_1)$で一意に決まる。
+補題\ref{lem:intrinsic-elliptic-tau}によりindexed同型はこの順序付き対を保つから、
+一般点では$U(th)$も保存される。
+次数4の有理写像$U(x)$のファイバーには高々4点しかない。
+\end{proof}
+
+\begin{corollary}[四対一被覆の分岐と四面体群]\label{cor:isogeny-a4}
+有理関数\eqref{eq:isogeny-modular-u}の分岐値は$0,-64,\infty$であり、
+分岐指数はそれぞれ$(3,1),(2,2),(3,1)$である。
+特に$k(x)/k(U)$のGalois閉包の群は四面体群$A_4$であり、
+この次数4の被覆はGalois被覆ではない。
+これはパラメータの代数的被覆についての主張であって、
+一般ファイバーの自己同型群を$A_4$と同定するものではない。
+\end{corollary}
+\begin{proof}
+微分は
+\[
+ \frac{dU}{dx}=-\frac{4096(x+1)^2(x^2+20x-8)}{x^2(x-8)^4}.
+\]
+$U^{-1}(0)=3[-1]+[\infty]$、$U^{-1}(\infty)=3[8]+[0]$であり、
+$x=-10\pm6\sqrt3$の各点は分岐指数2で$U=-64$へ写る。
+分岐寄与は$2+2+1+1=6=2\cdot4-2$なので、他の分岐はない。
+分岐置換は3-cycleとdouble transpositionで、すべて偶置換である。
+被覆は連結なのでmonodromy群は$A_4$の推移的部分群であり、
+3-cycleを含むから$V_4$ではなく$A_4$そのものである。
+\end{proof}
+
+\begin{remark}
+$U(x)$が4対1であることを、異なる四つの$x$が
+必ず同型な九変数族の代数を与えるという結論に読み替えてはならない。
+ここで得たのは楕円曲線と指定2-isogenyから来る\emph{必要な}代数的不変量である。
+十二点の因子と第四生成元の持上げのデータはまだ比較する必要がある。
+\end{remark}

@@ -1,18 +1,17 @@
 {
   "date": "2026-11-15",
-  "version": 11,
+  "version": 12,
   "generated": "current Japanese LuaLaTeX sources and exact certificates",
   "verification_status": "PASS_with_explicit_scope_limits",
   "github_save": {
-    "status": "PASS",
+    "status": "pending_remote_write",
     "repository": "uedakazushi/nc-p3",
     "branch": "main",
-    "source_commit": "c164f415fda70b0066b5bc533cedd5cb5c11ae4e",
-    "verification": "GitHub main remote tree read back, 31 source/config/certificate blobs; all current file paths, 73 TeX labels, citations and main-paper proof references resolved. Final validation saved in a subsequent commit."
+    "base_commit": "449a408bc8ccdabde4c9975fa3cdfddee6316cb3"
   },
   "library_save": {
     "status": "not_performed",
-    "reason": "Do not save to Library after successful GitHub push."
+    "reason": "After a successful GitHub push, no Library save is performed."
   },
   "checks": [
     {
@@ -54,22 +53,32 @@
       "command": "python3 computations/verify_ore_derivations.py --output research/ore_derivation_certificate.json",
       "result": "PASS",
       "scope": "exact symbolic 30x18 derivation matrices, polynomial minors, J(x) and its degree"
+    },
+    {
+      "command": "python3 computations/verify_isogeny_invariant.py --output research/isogeny_certificate.json",
+      "result": "PASS",
+      "scope": "exact cubic quotient identity, two Hesse j-invariants, degree-four U and ramification"
+    },
+    {
+      "command": "python3 computations/verify_nonore_family.py --output research/nonore_certificate.json",
+      "result": "PASS",
+      "scope": "eight polynomial overlaps, positive weights, orbit rank 30/32 and effective three-torus"
     }
   ],
   "certificate_comparison": "All 8 local v11 commands were executed and passed, including existing numerical checks and new Ore derivation verifier. No unrun mathematical check is claimed.",
   "tex": {
-    "engine": "LuaLaTeX via latexmk",
     "result": "PASS",
+    "engine": "LuaLaTeX via latexmk",
     "documents": {
-      "paper": 24,
+      "paper": 28,
       "plan": 5,
       "notes": 6
     },
-    "scope": "Compiled all three updated v11 documents locally; no overfull boxes or unresolved references detected."
+    "scope": "Local v12 sources compiled; remote sources will be separately checked for structural reference consistency."
   },
   "visual_inspection": {
     "result": "PASS",
-    "scope": "Current v11 paper pages 18 and 22 rendered and visually inspected; no clipping or overflow"
+    "scope": "Locally rendered main-paper pages 24 and 27 inspected, no clipping."
   },
   "not_claimed": [
     "formal verification",
@@ -80,13 +89,15 @@
     "all one-period structures",
     "all original as4 computations rerun",
     "Global completeness beyond the marked Clifford-Ore construction",
-    "Sufficiency of equality of elliptic J(th) for indexed isomorphism"
+    "Sufficiency of equality of elliptic J(th) for indexed isomorphism",
+    "Full indexed isomorphism classification from U(th) alone",
+    "Generic period two or component membership for new non-Ore chart"
   ],
   "new_results": {
-    "ordinary_derivations": "free rank six, symbolic constant minors",
-    "sigma_derivations": "free rank nine, globally covering symbolic minors",
-    "ore_slice": "generic within specified marked Clifford-Ore presentations only",
-    "elliptic_j": "degree-12 rational invariant, necessary for indexed isomorphism"
+    "intrinsic_2isogeny": "Proof written; polarized elliptic correspondence recovered at generic nine-family points",
+    "explicit_quotient": "Polynomial quotient cubic and both j-invariants verified exactly",
+    "modular_U": "Degree-four necessary indexed-isomorphism invariant and A4 Galois closure",
+    "nonore_five": "All-parameter quadratic PBW standard AS4 chart, two-dimensional indexed image, o0 outside earlier Ore tangent span"
   },
   "verified_remote_blobs": {
     "nc-p3.tex": "ac6a0f30d89c1a1793c3eb873657898f168fd427",
@@ -99,5 +110,6 @@
     "README.md": "d5303326838ae2eaf6f909aa0053c02b5bc2b6ce",
     "AGENTS.md": "8783188008cf13a671515a4e7a1efb757e9d969c",
     "scripts/check_project.py": "0a65c2cc4f63feb39547b4d914f9561837984a39"
-  }
+  },
+  "reproduction_note": "Published scripts and exact certificates for new v12 results. Compare remote file content SHAs to generated local files before asserting complete source equivalence."
 }

@@ -1,4 +1,4 @@
-# nc-p3研究指示 — 2026-11-15 / v11
+# nc-p3研究指示 — 2026-11-15 / v12
 
 最初に `research/plan_ja.tex` を読む。次に `research/notes_ja.tex`, `research/BASELINE.md`, `research/STATE.json`, `nc-p3.tex` を確認する。目的は標準14641型の四次元 quadratic Koszul AS-regular indexed Z-algebra の添字保持同型による完全分類。明示的な代数的変形を優先し、形式計算だけを進めることを主目標にしない。
 
@@ -6,7 +6,9 @@
 
 **ALGEBRAIC-FAMILY-008**：九変数の楕円Clifford–Ore族は、全ファイバーAS正則、同型類の像の次元9、一般の最小周期2を証明した。`sections/elliptic_ore_family.tex` を主論文の一部として読む。次は楕円曲線・次数12因子による族内同型の必要十分条件、像の閉包と最大性、別のOreチャートによる残る偶・交代方向の積分を調べる。七変数族は `t=h=0` の特殊化として保持する。
 
-固定Clifford部分上のOre型一次導分は分類済み（通常6＝内3＋外3、捩れ9＝中心二次式値）。`sections/ore_complete.tex` の定理を再発明しない。`J(th)=J(t'h')`は同型の必要条件に留まり、十分条件ではない。別のClifford部分とOre以外の代数的族を優先する。
+**v12の追加結果**：`sections/isogeny_invariant.tex`は内在的2-isogenyと次数4の必要不変量$U(th)$および$A_4$被覆を与える。`sections/nonore_family.tex`は五変数の代数的二周期族を与え、全ファイバーAS正則でindexed同型類の像は2次元、交代$o_0$方向は九変数Ore族の接像にない。ただし一般点が最小周期2かは未解決。次は非Oreチャートを拡大し、他の交代方向と同時に代数的に積分すること、2-isogeny不変量と12点配置の十分な同型判定を優先する。
+
+固定した三生成Clifford部分上の次数一Ore導分は分類済み：通常導分6（内3＋外3）、符号捩れ導分9（中心二次値）。`sections/ore_complete.tex` の `thm:ore-derivations` と `cor:ore-slice` により九変数族は一般の印付きOre表示を尽くす。`prop:elliptic-j-obstruction` は同型の必要条件 `J(th)=J(t'h')` を与える。$J$の一致だけで同型とはしない。実質的に新しい方向は別のClifford部分・Ore以外の代数的構成に求める。
 
 九変数族は基点で偶6・交代3方向を積分する。一般の `t,h` で固定順序の二次Gröbner基底を仮定しない。中心平方上のClifford基底、二次完全交叉双対、フィルター付きOre拡大を使う。除外条件 `1+t*h != 0` を消さない。全パラメータの正則性と一般の非1周期性は別証明である。
 
@@ -32,6 +34,6 @@
 
 日本語LuaLaTeX。原稿は現在有効な結果を論理的に構成し、版ごとの補遺を積み重ねない。一次文献の仮定・適用範囲と本研究の差をIntroductionに明記する。主要な新規性は未確定。数学的に有用な旧結果・証明は削らない。
 
-再現はREADMEのコマンド。`scripts/check_project.py` は入力節まで展開した構造検査であり数学的証明ではない。Cliffordの二次検証は左核全体を使う必要十分判定を保つ。九変数族の非1周期性は楕円因子の証明であり、単一の数値サンプルによる認定ではない。
+再現はREADMEのコマンド（新しい `verify_ore_derivations.py` を含む）。`scripts/check_project.py` は入力節まで展開した構造検査であり数学的証明ではない。Cliffordの二次検証は左核全体を使う必要十分判定を保つ。九変数族の非1周期性は楕円因子の証明であり、単一の数値サンプルによる認定ではない。
 
 研究原則と承認不要の保存許可は `research/plan_ja.tex` 最終節に記載。正本はGitHub main。通常fast-forward、PR/force/Actionsなし、PDFは追跡しない。他の更新があれば先端を再確認・統合する。as4には明示指示なく書き込まない。GitHubへのpushが成功した場合はLibraryに保存しない。失敗時のみ常設許可による緊急退避を扱う。生成・検証・遠隔保存を別々に確認し、未実施をPASSにしない。既存Library資産の削除はしない。

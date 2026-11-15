@@ -1,0 +1,30 @@
+{
+  "result": "PASS",
+  "base": "A5_k,v,b,s,a (all geometric fibers)",
+  "arithmetic": "exact QQ[k,v,b,s,a] and rational matrices",
+  "weights_W_Y_Z_X": [
+    3,
+    5,
+    2,
+    2
+  ],
+  "polynomial_overlaps": 8,
+  "moduli": {
+    "single_relation_orbit_rank": 30,
+    "orbit_plus_family_rank": 32,
+    "even_tangent_class_dimension": 1,
+    "odd_tangent_class_dimension": 1,
+    "torus_effective_rank": 3,
+    "rational_scaling_invariants": [
+      "b*s/(k**2*v**2)",
+      "a*b**4/(k**5*v**3)"
+    ],
+    "indexed_moduli_image_dimension": 2
+  },
+  "not_claimed": [
+    "generic minimal period two",
+    "full AS regular Z-algebra component",
+    "that all fibers are outside the existing nine-parameter image",
+    "formal or peer review"
+  ]
+}
