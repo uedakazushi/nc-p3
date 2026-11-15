@@ -1,14 +1,14 @@
 {
   "schema_version": 2,
   "date": "2026-11-16",
-  "version": 21,
+  "version": 22,
   "reviewed_input": {
-    "source_commit": "1146023ebd9925ba103444464d23039f62279d2d",
-    "source_tree": "10d6412bc89fb2ad59f374b27bf022d0b0648caf"
+    "source_commit": "62180435ab0547abdc48fe26a51d0c3681805119",
+    "source_tree": "b5aa24abcbbedc82a3cc006edf2b4e08339602ea"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Added Cloud Codex environment guide and lightweight preflight shell script; AGENTS, startup prompt, README, plan and state updated. No mathematical result or proof changed.",
+    "scope": "Only Cloud Codex research-continuity instructions and current resume point updated, plus three missing TeX path-command backslashes repaired in plan source. All existing 35 mathematical result entries and math proofs unchanged.",
     "new_mathematical_theorem": false
   },
   "environment": {
@@ -17,25 +17,14 @@
     "tex_engine": "LuaHBTeX 1.18.0 (TeX Live 2025/dev/Debian)",
     "tex_format": "LaTeX2e 2024-11-01 patch level 2"
   },
-  "checks": [
-    {
-      "command": "Static repo cross-reference and JSON checks",
-      "result": "PASS",
-      "scope": "All changed docs link to the Cloud guide and preflight; mathematical result records remain 35."
-    },
-    {
-      "command": "bash -n scripts/cloud_preflight.sh (syntax duplicate)",
-      "result": "PASS",
-      "scope": "Script text validated with bash -n in local container; script not executed in Codex Cloud."
-    }
-  ],
+  "checks": [],
   "certificate_comparison": {
     "result": "NOT_RUN",
-    "scope": "No mathematical computations rerun."
+    "scope": "Math verifier scripts and inputs unchanged; no mathematics was recomputed."
   },
   "proof_review": {
     "result": "NOT_RUN",
-    "scope": "No new mathematical proof; prior 35 mathematical results preserved."
+    "scope": "No new mathematical proof; existing claims were not independently reaudited."
   },
   "literature_review": {
     "primary_text": [
@@ -51,20 +40,16 @@
   },
   "tex": {
     "result": "NOT_RUN",
-    "scope": "LuaLaTeX not rerun for these Cloud setup instructions."
+    "scope": "No v22 LuaLaTeX compile performed. Fixed three malformed \\path commands in the plan."
   },
   "visual_inspection": {
     "result": "NOT_RUN",
-    "scope": "No PDF produced."
+    "scope": "No PDF built or viewed."
   },
   "github_save": {
-    "result": "PASS",
+    "result": "pending",
     "branch": "main",
-    "validated_content_commit": "5eddbf218f85dd788f658bc5b97616699d5e532f",
-    "validated_content_tree": "0daad9814d77f4d3ea6ca8d45d1ab4712154d90b",
-    "fast_forward": true,
-    "verified_blob_count": 49,
-    "scope": "Remote main and full recursive tree confirmed; all eight changed blobs reread and matched. Receipt stored in a follow-up commit."
+    "expected_parent": "62180435ab0547abdc48fe26a51d0c3681805119"
   },
   "library_save": {
     "result": "not_saved_project_policy",
@@ -84,9 +69,9 @@
     "The boundary five-parameter family has generic minimal period two and lies in Z7; it is not an independently established component.",
     "Eleven individually integrable tangent directions have the mixed obstruction lambda*c and do not yield a smooth simultaneous eleven-dimensional family."
   ],
-  "checks_execution_note": "Cloud environment setup was not performed. Cloud tool installation and GitHub task push permissions remain unverified. No mathematical verifier nor LuaLaTeX compilation rerun for v21.",
+  "checks_execution_note": "Static cross-file checks before GitHub push; Cloud runtime, math calculations and LuaLaTeX compile not executed.",
   "cloud_environment": {
     "result": "NOT_CONFIGURED_BY_THIS_CHANGE",
-    "scope": "Published Codex Cloud environment, tool installation and Git credentials are external to the GitHub repository; require user-side environment setup and tests."
+    "scope": "No Cloud task created, resumed, published or tested. Runtime and push permissions must be checked in Codex Cloud."
   }
 }

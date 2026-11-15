@@ -8,7 +8,7 @@
 \newcommand{\PGL}{\operatorname{PGL}}
 \title{nc-p3研究方針と再開手順}
 \author{}
-\date{2026年11月16日\quad 第21版}
+\date{2026年11月16日\quad 第22版}
 \begin{document}
 \maketitle
 
@@ -180,11 +180,19 @@ Bhatoy--Ingallsのsuperpotential不変量である。
 全コマンドの正本は\path{README.md}の「再現」節。
 Python/SymPyによる構造検査と厳密検算、LuaLaTeXによる主論文・方針・ノートの組版を行う。
 証明書は現行コードと入力から再生成し、数学的内容と環境表示の差を分けて比較する。
-Cloud Codexでの軽量な環境確認はpath{docs/cloud_codex_ja.md}と
-path{scripts/cloud_preflight.sh}に分離する。
+Cloud Codexでの軽量な環境確認は\path{docs/cloud_codex_ja.md}と
+\path{scripts/cloud_preflight.sh}に分離する。
 Cloudのセットアップ・認証・公開状態は実際の環境テストで確認する必要がある。
-path{scripts/check_project.py}の成功は数学的証明を意味しない。
+\path{scripts/check_project.py}の成功は数学的証明を意味しない。
 未実行の検証を過去版のPASSで置き換えない。
+
+Cloud Codexでは実際の数学的作業を反復し、困難な課題に固執せず
+別の分類枝・補題・計算に自律的に切り替える。
+意味のある変更があれば約15分ごとを目安にmainへ保存を試みる。
+実行枠で終了する場合には \path{research/STATE.json} の \texttt{resume\_point}を
+現在の具体的な次の一手・参照元・未証明箇所へ上書きし、
+完了と未完を区別する。タスク終了後の自動的な新規起動は保証しない。
+詳細な運用規則は \path{AGENTS.md} に置く。
 
 研究の区切りでは本文・要約・方針・索引の不整合を直し、再開可能な現行一式をmainへ保存する。
 不要な作業履歴・二重の先端表・旧版の未解決項目は蓄積しない。
