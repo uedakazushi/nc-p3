@@ -50,13 +50,17 @@
     "scope": "No new source or novelty claim; existing dependencies in BASELINE.md."
   },
   "github_save": {
-    "result": "PENDING",
+    "result": "PASS",
     "branch": "main",
-    "scope": "Commit/push and remote content readback still required."
+    "validated_content_commit": "7ff7fb96254fe6e7fbcd221e4fe0e7b72d2d05f0",
+    "validated_content_tree": "ef0eceb08c199b26e2d7c8619696c8bd141f8ed1",
+    "fast_forward": true,
+    "verified_edited_files": 6,
+    "scope": "Push succeeded; ls-remote confirmed main SHA. Fetch/readback of all six changed files matches local bytes. This receipt is saved in a subsequent commit."
   },
   "library_save": {
-    "result": "not_attempted",
-    "scope": "Reserved for GitHub save failure."
+    "result": "not_saved_project_policy",
+    "scope": "GitHub main save succeeded."
   },
   "open_mathematics": [
     "Quartic filter is necessary only; higher Koszul obstructions and exhaustive AS charts unresolved.",
