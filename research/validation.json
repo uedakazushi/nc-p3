@@ -70,13 +70,17 @@
     "scope": "Belitskii--Sergeichuk, Congruence of multilinear forms, arXiv:0710.0834, Definition 1, Theorem 2(a), Lemma 4(a) and polynomial-root proof read in primary PDF pp.2-4. Original statement is over C; manuscript supplies its own needed full-rank symmetric four-tensor proof over algebraically closed char 0. General congruence principle and Clifford/CI methods not claimed novel. No finite-Frobenius non-Koszul example certified by literature search. De Terán--Dopico--Landsberg author PDF (2017-01-27), Theorem 1 and zero-minimal-index discussion pp.5-6 also read. Only the algebraic KCF is used; no transfer of complex-topological results."
   },
   "github_save": {
-    "result": "PENDING",
+    "result": "PASS",
     "branch": "main",
-    "scope": "Mathematical checkpoints cf5a3f2, e3a67ea, f42db26 and 97a0906 pushed; latest alternating-recognition refinement and final current receipt await save/readback."
+    "validated_content_commit": "e27d9098feee3e0baa705ba5fa6db58bceb43a68",
+    "validated_content_tree": "03bdd91ecb3e81a287b70dd64c9e7fc19ac3ea8e",
+    "fast_forward": true,
+    "verified_edited_files": 21,
+    "scope": "Five mathematical checkpoints pushed to main in this task. Fetched current main and read back every changed file since the task input 695e96a; all bytes match local tracked content. This current receipt is saved in a subsequent commit."
   },
   "library_save": {
     "result": "not_saved_project_policy",
-    "scope": "GitHub main checkpoint succeeded."
+    "scope": "GitHub main saves succeeded; no duplicate Library save."
   },
   "open_mathematics": [
     "General tensor conditions are finite Frobenius conditions, not a full Koszul/AS criterion.",
