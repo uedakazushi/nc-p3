@@ -4,12 +4,16 @@
   "generated": "local_sources_and_calculation_certificate",
   "verification_status": "PASS_with_explicit_scope_limits",
   "github_save": {
-    "status": "pending",
-    "base_commit": "c387e8ceb8f1a3ca48e05d28d01c00aad69d4038"
+    "status": "PASS",
+    "repository": "uedakazushi/nc-p3",
+    "branch": "main",
+    "content_commit": "940d9a401c45bd9cd094b3cf0194ca49caa4976b",
+    "source_tree": "c39170f27a2c2f0d0719dba794d6601aa20b356a",
+    "verification": "Remote main head confirmed; all 22 source/configuration/certificate blob SHAs match locally verified files. The validation record is saved in a subsequent commit."
   },
   "library_save": {
     "status": "not_performed",
-    "reason": "GitHub main is the target; no Library save after successful push"
+    "reason": "User instruction: do not save to Library after successful GitHub push."
   },
   "not_claimed": [
     "formal verification",
@@ -72,7 +76,12 @@
     "result": "PASS",
     "scope": "main paper pages 13 and 15 rendered and inspected; no clipping or overflow"
   },
-  "zip_integrity": "pending",
+  "zip_integrity": {
+    "status": "PASS",
+    "artifact": "nc-p3_v9_20261115.zip",
+    "file_count": 25,
+    "scope": "All CRCs and decompressed bytes checked; only current 22 source/configuration/certificate files and three current PDFs."
+  },
   "source_hashes": {
     "computations/pbw_complex.py": "d2d3ccb71192a4ecfa549ed6ec6af49715db88821d8e48372275529346accf89",
     "computations/verify_algebraic_family.py": "dff74dd1d0756dc4bf6d868f597c0d7bb5d242a6e2fa32525c80db035d3b8376",
