@@ -4,10 +4,13 @@
   "generated": "current Japanese LuaLaTeX sources and exact certificates",
   "verification_status": "PASS_with_explicit_scope_limits",
   "github_save": {
-    "status": "pending_remote_write_and_readback",
+    "status": "PASS",
     "repository": "uedakazushi/nc-p3",
     "branch": "main",
-    "base_commit": "98c0401f931123a796ee6df032b4a6430d668785"
+    "base_commit": "98c0401f931123a796ee6df032b4a6430d668785",
+    "content_commit": "294030e3260d98401f4023e326c189514763205b",
+    "source_tree": "a63e81ca8413b2dd50f2dca4d942f2734b90437c",
+    "verification": "Fast-forward main update succeeded. Remote main tree read back; all 28 source/configuration/certificate blob SHAs equal locally verified files. This validation status is saved in a subsequent commit."
   },
   "library_save": {
     "status": "not_performed",
