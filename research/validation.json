@@ -4,14 +4,17 @@
   "generated": "current Japanese LuaLaTeX sources and exact certificates",
   "verification_status": "PASS_with_explicit_scope_limits",
   "github_save": {
-    "status": "pending_remote_save",
-    "base_commit": "85108b4327d7c2edf049fb57cc52c9cfb64bbd86",
+    "status": "PASS",
     "repository": "uedakazushi/nc-p3",
-    "branch": "main"
+    "branch": "main",
+    "content_commit": "326eeca36071c42d445ea56e7e1447d97d768aa4",
+    "verification_commit": "69b3d13ae30e96ae7aa2f8a99fcffac9857cdf16",
+    "source_tree": "69b3d13ae30e96ae7aa2f8a99fcffac9857cdf16",
+    "verification": "Both fast-forward main updates succeeded; remote tree read back and exact locally executed checker source blob matched. Validation is stored in a later commit."
   },
   "library_save": {
     "status": "not_performed",
-    "reason": "Do not save to Library if GitHub main push succeeds."
+    "reason": "GitHub main push succeeded; explicit instruction prohibits duplicate Library save."
   },
   "checks": [
     {
@@ -82,13 +85,13 @@
   ],
   "certificate_comparison": "All 8 local v11 commands were executed and passed, including existing numerical checks and new Ore derivation verifier. No unrun mathematical check is claimed.",
   "tex": {
-    "result": "partial_standalone_PASS_full_v15_not_run",
+    "result": "standalone_new_section_PASS_full_v15_not_run",
     "engine": "LuaLaTeX",
-    "scope": "New Japanese TeX theorem section compiled in standalone ltjsarticle wrapper; full v15 manuscript build not rerun in this turn. v14 full source compiled in previous turn."
+    "scope": "The exact new sections/nine_closure.tex source matched the locally compiled Git blob 5f6e019cb9eb7665c1da0d1d9ed41275f0fd7154. It compiled in a standalone Japanese ltjsarticle wrapper (2 pages). Previous v14 full manuscript compiled, but full v15 compilation not rerun."
   },
   "visual_inspection": {
     "result": "not_performed_for_full_v15",
-    "scope": "Standalone TeX syntax compiled; no full v15 visual inspection"
+    "scope": "Standalone TeX compiled; full v15 visually not inspected."
   },
   "not_claimed": [
     "formal verification",
@@ -109,7 +112,9 @@
     "Global moduli singularity or component dimension 14",
     "Generic pointwise isomorphism between nonOre five-family and seven-family",
     "Full v15 LuaLaTeX build or exhaustive proof audit this turn",
-    "A new irreducible component of dimension eleven"
+    "A new irreducible component of dimension eleven",
+    "Full v15 manuscript LuaLaTeX build or visual inspection this turn",
+    "Proof of global AS-regular moduli stack or coarse moduli singularity"
   ],
   "new_results": {
     "intrinsic_2isogeny": "Proof written; polarized elliptic correspondence recovered at generic nine-family points",
@@ -121,15 +126,15 @@
     "nine_closure_singular": "dim Z9=39; at Clifford tangent >=41; codim Z7 in Z9=2; eleven separate algebraic curve tangents with obstruction lambda*c."
   },
   "verified_remote_blobs": {
-    "nc-p3.tex": "16dabb0207261e8adc2ef2a2be4f38431bd699e3",
-    "sections/ore_boundary.tex": "ce9698e2627d0244807085c7bd8122e7c26fe64f",
-    "sections/nonore_period_two.tex": "d42028460d72d17c1f7c5f40c75b1a8ff53d351c",
-    "research/STATE.json": "f77747da77a60a240cb811a10470a2ae71e3b6cb",
-    "computations/verify_ore_boundary.py": "bb05fb09d948d47a1ddc0ca264c11e2a604affdf",
-    "research/ore_boundary_certificate.json": "437b04b4c62efc977f39173d73722eb536ad0578",
-    "README.md": "70fb0f12153d371acdf7de7696802a908d113447",
-    "research/plan_ja.tex": "46270e7f723a70d77329bef26ac6ab9b97b58fdf",
-    "research/notes_ja.tex": "8caa1eb7a3b4cc00e50d233f4f76332e7b5cbd04"
+    "nc-p3.tex": "088b503a90f94c90fa879d945f88d5baf844d834",
+    "sections/nine_closure.tex": "5f6e019cb9eb7665c1da0d1d9ed41275f0fd7154",
+    "computations/verify_nine_closure_tangent.py": "3a836dc78059abdef4baaead596157bcb0d8bb7e",
+    "research/nine_closure_certificate.json": "e996282ba013dde98dbf55dd34da02c751f49547",
+    "research/plan_ja.tex": "9b5a74da5eeec32ebf6e528db0114c603e9907cc",
+    "research/notes_ja.tex": "51025914d8e204b8b2189d79367d68323fe186e3",
+    "research/STATE.json": "56fe35adc1f1cd5b4a4cb1515fa902250bcaa476",
+    "scripts/check_project.py": "86596fc6ac2866348c57f2eb8e8cbe75cbc12bd2",
+    "README.md": "ecf6e06995f070e3fd2e779d1b4c640877f0ddac"
   },
   "reproduction_note": "Published scripts and exact certificates for new v12 results. Compare remote file content SHAs to generated local files before asserting complete source equivalence.",
   "remote_verified_blobs": {
@@ -145,6 +150,16 @@
   },
   "static_readback": {
     "result": "PASS",
-    "scope": "97 unique main manuscript labels; all TeX refs and bibliography keys resolve; all research/STATE document paths and proof labels resolve."
+    "scope": "46 tracked blobs, 101 unique TeX labels, no missing paper refs/bibliography keys, no missing STATE paths, no missing proof references, and all 11 section input paths present. Verified against remote content in this turn."
+  },
+  "math_reexecution": {
+    "result": "PASS",
+    "scope": "Executed exact rational code for ranks 30/37/39/40/40/41, even ranks 15/21/22, odd ranks 15/18/19, and Q=c*lambda; the locally executed file's Git blob matched the remote blob after replacement.",
+    "module_blobs": {
+      "computations/pbw_complex.py": "9ce3a50ba3802cfa213ee648892ca0181f2c915f",
+      "computations/verify_elliptic_family.py": "a52d18e83a662053b939c2e4789923d9a2e30782",
+      "computations/verify_algebraic_family.py": "b7c12da993335d25353efc720b015626f1a7a74d",
+      "computations/verify_nine_closure_tangent.py": "3a836dc78059abdef4baaead596157bcb0d8bb7e"
+    }
   }
 }
