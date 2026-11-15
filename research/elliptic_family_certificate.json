@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-15",
+  "version": 10,
+  "result": "PASS",
+  "arithmetic": "exact QQ and polynomial identities",
+  "parameter_base": "Spec k[u,v,r,s,a,b,c,t,h,(1+t*h)^(-1)]",
+  "clifford_and_derivations": {
+    "clifford_cubic_overlaps": 10,
+    "ordinary_derivation_relations": 3,
+    "arbitrary_central_sign_derivation_relations": 3,
+    "center_derivatives": [
+      "2*a*Omega",
+      "-2*b*Omega",
+      "2*c*Omega"
+    ]
+  },
+  "parameter_ranks": {
+    "single_relation_space_orbit_rank": 30,
+    "orbit_and_nine_parameter_rank": 39,
+    "even_parameter_classes": 6,
+    "alternating_parameter_classes": 3,
+    "seven_family_recovered_at": "t=h=0"
+  },
+  "elliptic_geometry": {
+    "point_cubic": "h*y**3 + t*z**3 + w**3 + w*y*z*(-h*t + 2)",
+    "smooth_elliptic_open": "t*h*(1+t*h)*(t*h-8) != 0",
+    "fixed_point_free_involution": "proved in manuscript from K(p)*p=0",
+    "invariant_derivation_section_verified": true
+  },
+  "excluded_boundary": {
+    "regular_sample_t_h": [
+      1,
+      1
+    ],
+    "regular_relation_rank": 17,
+    "excluded_sample_t_h": [
+      1,
+      -1
+    ],
+    "excluded_relation_rank": 15,
+    "degree_three_dimensions": [
+      10,
+      12
+    ]
+  },
+  "scope_limits": [
+    "No claim of a full moduli irreducible component or dimension 14.",
+    "Generic period two uses the manuscript elliptic-divisor proof, not a sampled numerical test.",
+    "No claim of a quadratic Groebner basis when t and h are both nonzero.",
+    "No independent peer review, formalization, or confirmed novelty."
+  ]
+}

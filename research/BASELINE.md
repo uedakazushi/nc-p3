@@ -1,8 +1,8 @@
-# 依存・一次文献・証明位置 — 2026-11-15 / v9
+# 依存・一次文献・証明位置 — 2026-11-15 / v10
 
 ## 現行プロジェクト
 
-参照した `uedakazushi/nc-p3` のmainは commit `c387e8ceb8f1a3ca48e05d28d01c00aad69d4038`、tree `1e47763961d40eafbb0751f2bcfc431933a617bc`。主論文の確認blobは `1c8bc4047e3bda3813b88304ef3bc3e5539153e5`。これは統合元の固定参照であり、現行版の遠隔保存状態は `validation.json` に記録する。
+今回の出発点は `uedakazushi/nc-p3` のmain commit `98c0401f931123a796ee6df032b4a6430d668785`、tree `03ee44eec79aab9c77cbfbfc1ecbaa6bc77e7261`。主論文blob `d171321028573f757a0101d961e43762eaa841ac` を完全照合した上で、既存本文を保持して九変数族を統合した。遠隔保存状態は `validation.json` に記録する。
 
 ## as4から再利用する結果
 
@@ -36,11 +36,21 @@
 
 量子6→3は既知の量子族・twist理論を結ぶ具体的比較で、新規性を主張しない。4周期変形複体、Clifford点の全15変数の二次障害、相対標準化の局所適用は現行原稿に証明・計算を置いた。先行研究との最終的な優先権比較は未完。外部PDFや検索ログをbundleへ大量収録しない。
 
+
 ## 代数的七変数族の依存と位置づけ
 
-- G. M. Bergman, *The diamond lemma for ring theory*, Advances in Mathematics 29 (1978), 178–218, Theorem 1.2。著者の訂正・更新ページ https://math.berkeley.edu/~gbergman/papers/updates/diamond.html を確認。停止するモニック書換えと全重なり解消から自由基底を得る一般論。
-- S. B. Priddy, *Koszul resolutions*, Transactions of the AMS 152 (1970), 39–60, Theorem 5.3 (p.51)。一次資料 https://math.mit.edu/~hrm/palestine/priddy-koszul-resolutions.pdf の該当ページを画像でも確認。PBWからKoszulへの含意を使い、始点・終点を固定したbarフィルトレーションでZ版に適用する。
-- 全ファイバーのAS正則性は、正の補助重みと双対の随伴次数Frobenius代数によって本文で証明する。有限次数のHilbert一致だけからは結論しない。
-- 一般点の非1周期性は二つの点射影の配置から直接証明するため、既存as4の非1周期性定理や全1周期構造の分類には依存しない。
-- 七変数族の一般同型類の次元は、一つの関係空間へのPGL4×PGL4作用の階数30とパラメータを含めた階数37から示す。全域のモジュライstackの存在を仮定しない。
-- この具体的族の文献上の新規性、既存のOre型・非可換P3の族との完全比較は未確認。既存の一般手法を新しい一般理論として扱わない。
+- G. M. Bergman, *The diamond lemma for ring theory*, Advances in Mathematics 29 (1978), 178–218, Theorem 1.2。著者の訂正・更新ページ https://math.berkeley.edu/~gbergman/papers/updates/diamond.html 。停止するモニック書換えと全重なり解消から自由基底を得る一般論。参照確認は七変数族作成時に実施。
+- S. B. Priddy, *Koszul resolutions*, Transactions of the AMS 152 (1970), 39–60, Theorem 5.3 (p.51)。一次資料 https://math.mit.edu/~hrm/palestine/priddy-koszul-resolutions.pdf 。七変数族の作成時に該当ページを画像でも確認。PBWからKoszulへの含意を使い、始点・終点を固定したbarフィルトレーションでZ版に適用する。
+- 七変数族の全AS正則性は補助重みと双対の随伴次数Frobenius性で証明し、有限次数のHilbert一致だけからは結論しない。一般の非1周期性は二つの点射影の配置から直接証明する。
+- 像の次元7は一つの関係空間へのPGL4×PGL4の階数30と全階数37による。全域モジュライstackの存在を仮定しない。具体的族の新規性は未確認。
+
+## 九変数の楕円Clifford–Ore族
+
+主論文 `thm:algebraic-nine`、証明ソース `sections/elliptic_ore_family.tex`、厳密検査 `computations/verify_elliptic_family.py`、証明書 `research/elliptic_family_certificate.json`。
+
+- 三生成Clifford代数・Ore拡大・二次完全交叉のKoszul性は既存の一般手法。新しい一般定理として主張しない。本稿では特殊な三二次式の正則列条件、Clifford基底、導分の具体式、フィルター付きAS証明を記述する。
+- Tate, *Homology of Noetherian rings and local rings*, Illinois J. Math. 1 (1957), 14–27, DOI https://doi.org/10.1215/ijm/1255378502 は二次完全交叉の線型Tate解消の背景。書誌は確認したが今回一次本文全体は取得していない。未確認の定理番号を補わず、本稿の特殊な場合の複体と完全性の説明を本文に置く。
+- Christopher Phan, *The Yoneda algebra of a graded Ore extension*, https://arxiv.org/abs/1002.2318 は関連文献候補。著者公開書誌は確認したが本文の仮定・適用範囲の監査は未了で、本稿のAS証明の未確認依存にはしない。
+- 楕円曲線上の次数12の因子、反不変6＋不変3の切断空間、有限射影自己同型の回避による非1周期性は本文で証明する。単一の数値点や七変数族の特殊化だけから一般点へ外挿しない。
+- Bhatoyほかのgraded Cliffordモジュライとの比較は、通常gradedの変形と添字依存の交代変形を区別する。文献照合だけで九変数族が新しい既約成分だと結論しない。
+- 九変数族の既存のOre型・Clifford型・非可換P3の族との完全な同定、新規性・優先権の最終確認は未了。新規性の不存在・存在を検索結果の有無だけで主張しない。

@@ -2,11 +2,11 @@
   "schema_version": 2,
   "project_id": "nc-p3",
   "date": "2026-11-15",
-  "version": 9,
+  "version": 10,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
-  "remote_base_commit": "c387e8ceb8f1a3ca48e05d28d01c00aad69d4038",
-  "delivery_status": "generation_and_validation_complete; remote_save_status_in_research/validation.json",
+  "remote_base_commit": "98c0401f931123a796ee6df032b4a6430d668785",
+  "delivery_status": "see research/validation.json for separately verified generation, execution and remote save",
   "scope": {
     "target": "standard 14641 quadratic Koszul left/right AS-regular indexed Z-algebras over algebraically closed char 0",
     "equivalence": "index-preserving Z-algebra isomorphism; graded and selected-period isomorphism are separate comparison problems",
@@ -19,13 +19,13 @@
       "id": "ALGEBRAIC-FAMILY-008",
       "priority": 1,
       "status": "active",
-      "objective": "Extend the actual seven-parameter algebraic AS-regular family using varying three-generator subalgebras or new PBW charts; determine isomorphisms and component closures."
+      "objective": "Determine isomorphisms, closure and maximality of the nine-parameter elliptic Clifford--Ore family; find other algebraic charts integrating the remaining even/alternating directions."
     },
     {
       "id": "MODULI-HIGHER-006",
       "priority": 2,
       "status": "open",
-      "objective": "Use quadratic/higher obstructions to select algebraic-family candidates; higher formal equations remain open."
+      "objective": "Use higher obstructions only to test candidates for actual algebraic families; full higher-order Clifford equations remain open."
     },
     {
       "id": "PERIOD-ROOTS-007",
@@ -175,9 +175,21 @@
     },
     {
       "id": "SEVEN-PERIOD-TWO",
-      "claim": "On an explicitly specified nonempty Zariski-open set the family has minimal period two; no graded presentation exists.",
+      "claim": "An explicitly specified nonempty open set has minimal period two.",
       "proof": "nc-p3.tex:thm:seven-period-two",
       "status": "proof_written_with_exact_point_configuration_certificate"
+    },
+    {
+      "id": "ALGEBRAIC-NINE",
+      "claim": "Over Spec k[u,v,r,s,a,b,c,t,h,(1+th)^(-1)] all fibers are standard AS-regular; t=h=0 is the seven-family; indexed image dimension nine; a nonempty open set has minimal period two.",
+      "proof": "nc-p3.tex:thm:algebraic-nine",
+      "status": "proof_written_audited_with_exact_Clifford_derivation_and_rank_checks_not_formalized"
+    },
+    {
+      "id": "ELLIPTIC-DIVISOR",
+      "claim": "The nine-family nonperiodicity follows from twelve-point elliptic divisors in an anti-invariant six plus invariant three section space; the unique nonreduced point has length eight.",
+      "proof": "nc-p3.tex:lem:elliptic-nonperiod",
+      "status": "geometric_proof_written_not_a_numerical_sample"
     }
   ],
   "document_paths": {
@@ -187,7 +199,12 @@
     "baseline": "research/BASELINE.md",
     "instructions": "AGENTS.md",
     "certificate": "research/moduli_certificate.json",
-    "algebraic_certificate": "research/algebraic_family_certificate.json"
+    "algebraic_certificate": "research/algebraic_family_certificate.json",
+    "elliptic_certificate": "research/elliptic_family_certificate.json",
+    "elliptic_section": "sections/elliptic_ore_family.tex",
+    "four_window_section": "sections/four_window.tex",
+    "local_moduli_section": "sections/local_moduli.tex",
+    "algebraic_section": "sections/algebraic_family.tex"
   },
   "unresolved_cautions": [
     "No proof of dimension 14 for the Clifford component.",
@@ -196,6 +213,8 @@
     "Novelty and independent refereeing are unconfirmed."
   ],
   "limits": [
-    "The seven-dimensional family is not asserted to be a full moduli component."
+    "Neither the seven-dimensional nor the nine-dimensional image is asserted to be a full moduli component.",
+    "The nine-family integrates six even and three alternating tangent directions; not all fifteen and not a fourteen-dimensional component.",
+    "The exclusion 1+th != 0 is essential for the stated all-fiber theorem."
   ]
 }

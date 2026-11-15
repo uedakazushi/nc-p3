@@ -6,7 +6,7 @@
 \usepackage{xurl}
 \title{nc-p3研究方針と再開手順}
 \author{}
-\date{2026年11月15日\quad 第9版}
+\date{2026年11月15日\quad 第10版}
 \begin{document}
 \maketitle
 \section{最初に読む：目標・達成基準・現在の保存状態}
@@ -23,9 +23,10 @@ $qgr$同値、導来同値、添字移動を割る同値、周期構造を選ん
 Clifford点では後者の接空間と二次障害を得たが、実際の成分次元は未決定である。
 
 正本はGitHub \texttt{uedakazushi/nc-p3}の\texttt{main}である。
-生成・計算・組版と遠隔保存の状態は\path{research/validation.json}で区別する。
-再開時は遠隔先端を確認し、競合があれば有効な内容を統合する。
-GitHubへの保存が成功した場合、Libraryへの保存は行わない。
+参照した先端は\path{98c0401f931123a796ee6df032b4a6430d668785}。
+生成・数学的検算・組版・遠隔保存は\path{research/validation.json}で別状態として記録する。
+再開時は先端を確認し、別の更新があれば有効な内容を統合する。
+GitHubへのpushが成功した場合はLibraryへの保存を行わない。
 
 \section{主要な到達点と根拠}
 \subsection*{継続して保持する構造結果}
@@ -60,31 +61,50 @@ $Q$は階数6で、Pl\"ucker二次式へ変換できる。
 これらは計算補助証明であり、全証明の形式化・第三者査読ではない。
 \textbf{15次元の接空間から14次元成分を断定していない。}
 
-\subsection*{代数的な七変数族}
-\path{nc-p3.tex}の定理\texttt{thm:algebraic-seven}, \texttt{thm:seven-image},
-\texttt{thm:seven-period-two}に完全な証明を置く。
-$S=\mathbb A^7_{u,v,r,s,a,b,c}$上の多項式関係で標準14641型の族を構成した。
-全パラメータでPBW自由基底を持ち、補助重み$(1,2,2,4)$と双対のFrobenius性から全ファイバーがAS正則である。
-一般点の最小周期は2。唯一の非被約点から射影して得る二次曲線上六点・直線上二点の配置で非1周期性を証明する。
-一つの二次関係空間の基底変更微分とパラメータ微分の階数は30と37なので、同型類の像の次元は7である。
-交代部分は$(o_0,o_1,o_2,o_3,o_4,o_5)=(0,-b,-a,-b,0,c)$という最大等方3平面を全次数で代数的に積分する。
-これは7次元の\emph{族の像}であり、全モジュライの既約成分や14次元の局所模型の完成ではない。
+\subsection*{明示的な七変数族と九変数族}
+七変数族は\path{nc-p3.tex}の\texttt{thm:algebraic-seven}, \texttt{thm:seven-image},
+\texttt{thm:seven-period-two}に完全な証明がある。全$\mathbb A^7$上PBW自由、
+全ファイバーAS正則、同型類の像は7次元、一般点は最小周期2である。
+三つの交代方向は$(0,-b,-a,-b,0,c)$という$Q=0$の最大等方3平面を積分する。
+
+九変数族は\texttt{thm:algebraic-nine}、ソースは\path{sections/elliptic_ore_family.tex}。
+三生成部分を
+\[
+ YW+WY=tZ^2,\quad ZW+WZ=hY^2,\quad ZY+YZ=W^2
+\]
+へ動かし、$S_9=\operatorname{Spec}k[u,v,r,s,a,b,c,t,h,(1+th)^{-1}]$上に構成する。
+$t=h=0$は七変数族そのもの。中心平方上のClifford基底とOre拡大により自由性、
+二次完全交叉双対とフィルター付きbar複体により全ファイバーのAS正則性を証明した。
+関係空間の群作用微分の階数30に対し、九パラメータを加えると39となる。
+従って同型類の像は9次元。基点で偶6方向と交代3方向を積分している。
+
+一般の三生成部分の点曲線は滑らかな平面三次曲線である。
+その固定点のない対合$\tau$は非零2等分点による平行移動で、平面の射影変換から来ない。
+隣接する点スキームは長さ8の唯一の非被約点と12個の単純点を持つ。
+その12点の因子$D$と$\tau D$の非射影同型性から、九変数族の一般点の最小周期2を証明した。
+切断空間は反不変6次元と不変3次元であり、射影自己同型の有限個の固有空間を除く。
+これは特殊点の非1周期性を一般点へ無断で移した議論ではない。
+
+\textbf{九次元は族の同型類の像の次元であり、全モジュライの成分次元ではない。}
+$1+th=0$では三生成部分の次数3が跳ぶ例があり、除外条件を外さない。
+二次Gr\"obner基底は一般の$t,h$では主張しない。新規性は未確認である。
 
 \section{優先課題と具体的な着手方法}
 \paragraph{最優先：ALGEBRAIC-FAMILY-008。}
-形式級数の高次消去より、明示的な代数的AS正則族を優先する。
-現行の七変数族は、三生成部分代数$B$の中心二次式と次数1の導分の組合せによる。
-まず$B$自体を動かす族、異なる三生成部分代数・補助重みを使うチャート、
-七変数族の一般点での族内同型を調べる。
-目標は、残る偶・交代方向を積分し、既存族との包含・閉包・既約成分としての最大性を決めること。
-全ファイバーのAS正則性と一般の非1周期性を別々に証明する。
-開始点は\path{computations/verify_algebraic_family.py}と原稿式\texttt{eq:seven-family}。
+形式的な高次障害計算より明示的な代数的族の拡張を優先する。
+九変数族の一般点における同型・特殊化・成分としての最大性を調べる。
+まず三生成楕円曲線と次数12の因子のデータから族内同型を必要十分に記述し、
+その記述で残る偶・交代方向を持つ別のOreチャートを探す。
+現行族は偶6方向しか動かさず、Clifford点の偶9方向の全てを含まない。
+$X^2$を三生成関係へ加えると現在のOre構成は使えなくなるため、別の構造証明を要する。
+証明・計算の開始点は\path{sections/elliptic_ore_family.tex}、
+\path{computations/verify_elliptic_family.py}である。
 
 \paragraph{補助課題：MODULI-HIGHER-006。}
-Clifford点の全15変数の二次障害$Q$は確定しているが、高次関係は未確定である。
-形式計算は新しい代数的族の候補や障害の検出に用いる。
-七変数族で三つの交代方向を積分できたことを、六方向全体や14次元模型の証明に拡張しない。
-必要なら$rref$右逆による三次残差と二次補正の自由度を調べるが、それだけを主目標にしない。
+二次障害$Q$を代数的族の候補選別に使う。
+九変数族でも交代部分は三方向であり、六方向全体や14次元局所模型は証明していない。
+必要な場合のみ高次補正を計算し、一つの補正の失敗を非持上げの証明としない。
+全次数の主張には構造証明か実際の族を要求する。
 
 \paragraph{並行課題：PERIOD-ROOTS-007。}
 Clifford点の有限射影自己同型群を計算し、全1周期構造を分類する。
@@ -97,8 +117,8 @@ Clifford点の有限射影自己同型群を計算し、全1周期構造を分�
 局所変形問題の成果を全域の必要十分条件へ誤って一般化しない。
 非PBW点、閉特殊値、最小周期4の例、族間同型・既約成分の比較を残す。
 
-この優先順位は、同型類の次元を実際の代数的族で比較するためであり、
-接空間の数え上げだけで成分を推測することを避ける。
+この優先順位は、同型類の次元と周期を実際の代数的族で比較し、
+接空間の数え上げだけから成分を推測することを避けるためである。
 元の完全分類目標は維持する。有限表示と周期判定は解決済み、全AS locusと全成分分類は未解決である。
 方針変更の時系列履歴は蓄積しない。
 
@@ -114,6 +134,8 @@ python3 computations/verify_moduli_jets.py \
   --output research/moduli_certificate.json
 python3 computations/verify_algebraic_family.py \
   --output research/algebraic_family_certificate.json
+python3 computations/verify_elliptic_family.py \
+  --output research/elliptic_family_certificate.json
 latexmk nc-p3.tex
 latexmk research/plan_ja.tex
 latexmk research/notes_ja.tex

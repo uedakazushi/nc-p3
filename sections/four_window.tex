@@ -1,0 +1,267 @@
+\section{周期群と4周期の有限表示}
+\begin{lemma}\label{lem:period-subgroup}
+$\Per(C)$は$\ZZ$の部分群である。$C$が4周期的なら最小正周期は$1,2,4$のいずれかである。
+\end{lemma}
+\begin{proof}
+$s$周期同型と$t$周期同型は、後者を$s$だけ平行移動して合成できる。
+逆同型を$-s$だけ移動すれば$-s$も周期となる。$0$は自明に周期である。
+従って$\Per(C)=p\ZZ$であり、$4\in p\ZZ$なら$p\mid4$である。
+\end{proof}
+
+4周期同型付き対象$(C,\tau)$とは、積を保つ同型
+$\tau_{ij}:C_{ij}\to C_{i+4,j+4}$を選んだ組をいう。
+対象の同型は$\tau$と可換する添字保持同型とする。
+四つの4次元空間$V_i$を固定し、添字を法4で読むと、
+\[
+ \mathfrak P=\prod_{i=0}^3\Gr(6,V_i\otimes V_{i+1}),\qquad
+ G=\prod_{i=0}^3\GL(V_i)
+\]
+が有限表示の空間と基底変更群になる。
+
+\begin{theorem}[4周期表示の有限四窓atlas]\label{thm:four-window}
+各一次空間が4次元、各二次関係空間が6次元の次数一生成・二次正連結
+$\ZZ$-代数$(C,\tau)$の同型群oidは、$\mathfrak P(k)$に対する$G$の作用群oidと同値である。
+Koszul性やAS正則性を仮定しなくても成立し、それらを満たす全部分群oidへ制限できる。
+\end{theorem}
+\begin{proof}
+$i=0,1,2,3$で$C_{i,i+1}$の基底を選び、$\tau$の反復で全整数へ延長する。
+\[
+ R_i=\ker(C_{i,i+1}\otimes C_{i+1,i+2}\longrightarrow C_{i,i+2})
+\]
+は$R_{i+4}=R_i$を満たすので$\mathfrak P$の点になる。
+逆に四窓$(R_i)$から、整数頂点列上の自由経路$\ZZ$-代数を、各位置の$R_i$が生成する
+二次両側イデアルで割る。二次成分の核は指定した$R_i$に等しく、厳密4移動が周期同型を与える。
+基底変更は$G$の作用である。
+$\tau$と可換する同型は四つの可逆写像$g_i:V_i\to V'_i$で決まり、
+二次関係の保存は$(g_i\otimes g_{i+1})R_i=R'_i$と同値である。
+次数一生成・二次性により、この条件は商代数の同型の十分条件でもある。
+合成も一致するので群oid同値を得る。
+\end{proof}
+
+\begin{remark}\label{rem:forget4}
+一般の4周期同型を選んだ$(C,\tau)$と、裸の$C$は異なる分類問題である。
+$\mathfrak P$全体がAS正則とも、$[\mathfrak P/G]$が裸のAS正則代数のモジュライとも主張しない。
+$\dim\mathfrak P=240$、$\dim G=64$という数だけからモジュライ次元を計算してはならない。
+\end{remark}
+
+\begin{proposition}\label{prop:period-relations}
+二次$\ZZ$-代数$C$について$s\in\Per(C)$となることは、全$i\in\ZZ$に可逆写像
+$g_i:V_i\to V_{i+s}$があり、$(g_i\otimes g_{i+1})R_i=R_{i+s}$を満たすことと同値である。
+\end{proposition}
+\begin{proof}
+同型の次数一への制限から必要性を得る。逆に指定した可逆写像は自由経路代数の同型を定め、
+二次イデアルの生成空間を対応する生成空間へ送るため商代数へ降りる。
+\end{proof}
+\begin{remark}
+この$g_i$は、任意に選んだ4周期同型と可換する必要がない。
+初めから$g_{i+4}=g_i$だけを調べると周期同型を見落とし得る。
+次節のFrobenius標準化がこの問題を解決する。
+\end{remark}
+
+\section{Koszul--Frobenius標準4周期構造と忘却}\label{sec:canonical-four}
+前向き二次双対を$E=C^!$とし、$E_{i,i+1}=C_{i,i+1}^*$の規約を使う。
+標準14641型の左右AS双対性とKoszul性から、
+\[
+ \dim E_{i,i+p}={4\choose p}\ (0\le p\le4),\quad E_{i,i+p}=0\ (p>4)
+\]
+であり、相補次数の積$E_{i,i+p}\otimes E_{i+p,i+4}\to E_{i,i+4}$は完全対合である。
+これは有限Koszul解消のAS双対性をYoneda積に移したものである\cite{BP,as4period}。
+
+非零trace $\lambda_i:E_{i,i+4}\to k$を選ぶと、一意の線型同型
+$\nu^\lambda_{ij}:E_{ij}\to E_{i+4,j+4}$が
+\begin{equation}\label{eq:nakayama-pair}
+ \lambda_i(ab)=\lambda_j(b\nu^\lambda_{ij}(a)),\qquad b\in E_{j,i+4}
+\end{equation}
+で定まる。$a\in E_{ij},c\in E_{j\ell},b\in E_{\ell,i+4}$に対して
+\[
+ \lambda_i((ac)b)=\lambda_j((cb)\nu(a))
+ =\lambda_\ell(b\nu(a)\nu(c))
+\]
+だから$\nu(ac)=\nu(a)\nu(c)$である。
+次数一部分の逆双対$(\nu^{-1}_{i,i+1})^*$は元の二次関係を保存し、
+$\tau^\lambda:C\simeq C(4)$を与える。これをFrobenius標準4周期同型と呼ぶ。
+特に標準14641型は4周期的である。
+
+\begin{theorem}[標準4周期同型の選択独立性]\label{thm:canonical-four}
+任意の二つのtrace族から得る$\tau^\lambda,\tau^{\lambda'}$は、添字保持自己同型$h$により
+$\tau^{\lambda'}=h(4)\tau^\lambda h^{-1}$と書ける。
+裸の$C,C'$が同型なら、それぞれのFrobenius標準4周期同型付きの組も同型である。
+従って幾何学的点の同型類では、標準4周期構造を選ぶことは余分な分類情報を持たない。
+\end{theorem}
+\begin{proof}
+$\lambda'_i=t_i\lambda_i$と置くと
+\begin{equation}\label{eq:trace-change}
+ \nu^{\lambda'}_{ij}=(t_i/t_j)\nu^\lambda_{ij}.
+\end{equation}
+四つの整数剰余類ごとに初期値を選び、$s_{i+4}/s_i=t_i$を正負両方向へ解く。
+頂点スカラー自己同型$h^E_{ij}(a)=(s_i/s_j)a$に対して
+\[
+ h^E(4)\nu^\lambda(h^E)^{-1}(a)
+ =\frac{s_{i+4}s_j}{s_{j+4}s_i}\nu^\lambda(a)
+ =\frac{t_i}{t_j}\nu^\lambda(a)=\nu^{\lambda'}(a).
+\]
+逆双対で$C$上の共役性を得る。
+次に$f:C\simeq C'$があればtraceを双対同型で移送する。
+式\eqref{eq:nakayama-pair}の特徴付けにより、移送したtraceの周期構造は$f$と両立する。
+別のtraceが指定されても上のスカラー共役で補正できる。
+これは同型類の集合上の全単射であり、群oidの完全忠実性を主張するものではない。
+\end{proof}
+
+\begin{proposition}[有限四窓での標準化]\label{prop:canonical-matrix}
+厳密4周期表示で局所Frobeniusな双対$E$を考える。
+四つのtraceを厳密4移動で延長し、$E_{i,i+1}$の基底$u_a$、
+$E_{i+1,i+4}$の基底$v_b$と、移動した基底$u'_c$に対して
+\[
+ P_i=(\lambda_i(u_a v_b))_{ab},\quad
+ Q_i=(\lambda_{i+1}(v_bu'_c))_{bc},\quad N_i=Q_i^{-1}P_i^{\mathsf T}
+\]
+と置く。$N_i$は局所Nakayama同型の行列である。
+選んだ厳密4移動がFrobenius標準であることは、traceを選んで
+\begin{equation}\label{eq:canonical-matrix-test}
+ P_i^{\mathsf T}=Q_i\qquad(i\bmod4)
+\end{equation}
+を満たせることと同値である。
+\end{proposition}
+\begin{proof}
+$N_i$の列を$\nu(u_a)$の係数とすると、特徴付けの式は
+$P_{i,ab}=\sum_cQ_{i,bc}(N_i)_{ca}$、すなわち$P_i^{\mathsf T}=Q_iN_i$である。
+対合の完全性から$Q_i$は可逆である。$E$は次数一生成なので、
+次数一での$N_i=I$は全積での厳密4移動との一致を意味する。
+\end{proof}
+
+\begin{proposition}[有限次数のFrobenius検査]\label{prop:finite-frobenius}
+任意の四窓の二次双対$E$について、各始点で次数$0,\ldots,5$の次元が
+$(1,4,6,4,1,0)$であり、相補次数の積対合が完全なら、全次数の局所Frobenius性が成立する。
+これらは有限回の線型代数で検査できる。ただしこれだけから元代数のKoszul性は従わない。
+\end{proposition}
+\begin{proof}
+次数一生成性により長さ5の全語が零なら全高次も零である。
+相補次数の対合の完全性は積行列の行列式の非消滅に等しい。
+必要な商空間と積行列は長さ5以下のテンソル空間と二次関係から構成でき、始点も4通りで足りる。
+Koszul複体の正確性は、この有限検査とは別の条件である。
+\end{proof}
+
+\begin{corollary}\label{cor:canonical-slice}
+裸の標準14641型$\ZZ$-代数の幾何学的同型類は、
+$\mathfrak P$のうちKoszul AS正則で式\eqref{eq:canonical-matrix-test}を満たすtraceを持つ点の
+$G$-軌道と全単射になる。
+\end{corollary}
+\begin{proof}
+任意の$C$には標準4周期構造があり、定理\ref{thm:four-window}で厳密表示に直せる。
+命題\ref{prop:canonical-matrix}が標準化条件を与え、
+定理\ref{thm:canonical-four}が裸の同型から標準構造を保つ同型への補正を与える。
+最後に四窓群oidの同型判定を使う。
+\end{proof}
+
+\begin{theorem}[裸の周期性の有限判定]\label{thm:finite-period-test}
+Frobenius標準四窓$(R_0,R_1,R_2,R_3)$に対して$C\simeq C(p)$であることは、
+四つの可逆写像$g_i:V_i\to V_{i+p}$が
+\begin{equation}\label{eq:finite-period-test}
+ (g_i\otimes g_{i+1})R_i=R_{i+p}\quad(i\bmod4)
+\end{equation}
+を満たすことと同値である。
+\end{theorem}
+\begin{proof}
+式があれば$g_{i+4}=g_i$と延長し、命題\ref{prop:period-relations}を適用する。
+逆に$f:C\simeq C(p)$と標準$\tau$を取る。
+$\tau(p)$と$f(4)\tau f^{-1}$は$C(p)$の二つの標準4周期構造である。
+定理\ref{thm:canonical-four}によって頂点スカラー自己同型$h$を選び
+$\tau(p)=h(4)[f(4)\tau f^{-1}]h^{-1}$とできる。
+$f'=hf$は$\tau(p)f'=f'(4)\tau$を満たすので、その次数一行列は4周期的である。
+二次関係の保存が所要の式を与える。
+\end{proof}
+
+\begin{proposition}[多項式系]\label{prop:period-polynomial-system}
+$R_i$の列基底を階数6の$16\times6$行列$M_i$で表す。
+$p=1,2$の周期の存在は
+\begin{equation}\label{eq:period-polynomial-system}
+ (G_i\otimes G_{i+1})M_i=M_{i+p}H_i,\qquad u_i\det G_i=1
+\end{equation}
+の可解性に等しい。未知数は$G_i$の64成分、$H_i$の144成分、$u_i$の4個、合計212個、
+方程式は384成分等式と4可逆性等式、合計388個である。
+\end{proposition}
+\begin{proof}
+$G_i$が可逆で$M_i$の階数が6なら、等式を満たす$H_i$も自動的に可逆である。
+従ってこれは関係空間の一致を行列で書いたものであり、前定理を適用できる。
+\end{proof}
+
+\begin{corollary}\label{cor:finite-isom-test}
+既にAS正則性が保証された標準型の$C,C'$のFrobenius標準関係行列を$M_i,M'_i$とする。
+添字保持同型の存在は
+$(G_i\otimes G_{i+1})M_i=M'_iH_i$, $u_i\det G_i=1$の可解性に等しい。
+\end{corollary}
+\begin{proof}
+系\ref{cor:canonical-slice}の同一$G$-軌道という条件を行列表示する。
+$H_i$の可逆性は前命題と同様に自動である。
+\end{proof}
+
+\begin{corollary}\label{cor:period-orbits}
+四窓の添字を一つ回転する操作を$r$とする。
+最小周期1は$r(R)\in G\cdot R$、最小周期2は$r^2(R)\in G\cdot R$かつ$r(R)\notin G\cdot R$、
+最小周期4は$r^2(R)\notin G\cdot R$で判定できる。
+\end{corollary}
+\begin{proof}
+定理\ref{thm:finite-period-test}と補題\ref{lem:period-subgroup}による。
+\end{proof}
+\begin{remark}
+$G$の頂点ごとのスカラー$(k^\times)^4$は全ての関係空間を固定し、有効作用は$\PGL_4^4$を通る。
+しかしstackの自己同型としては残る。$240-60=180$をAS正則モジュライの次元と呼ぶのも誤りである。
+有限判定式の解を一つ検証することと、解の非存在を示すことも異なる。
+\path{computations/verify_period_witness.py}は正の証明書だけを検査する。
+\end{remark}
+
+\section{1周期構造、graded表示、既存の2周期族}
+\begin{proposition}\label{prop:graded-period}
+二次正連結$C$が1周期的であることと、ある次数一生成二次graded algebra $A$について
+$C\simeq\check A$となることは同値である。1周期同型を選んだ組の分類はgraded同型分類に等しい。
+\end{proposition}
+\begin{proof}
+$\check A$には厳密1移動がある。
+逆に$\sigma:C\to C(1)$を選び、$A_n=C_{0n}$、
+$a*b=a\,\sigma^m_{0n}(b)$（$a\in A_m,b\in A_n$）と定義する。
+$\sigma$が積を保つので結合律が成立する。次数一生成・二次性も引き継がれる。
+$\sigma$による各成分の同定から$\check A\simeq C$を得る。同型もこの対応を保つ。
+\end{proof}
+
+\begin{proposition}\label{prop:compatible-periodic-windows}
+$(C,\tau_4)$に対し$p=1,2$とする。
+$p$周期同型$\sigma_p$の$(4/p)$乗が$\tau_4$であるなら、四窓の基底を選んで$R_i=R_{i+p}$とできる。
+逆にこの等式は、指定した$\tau_4$を$(4/p)$乗として与える$p$周期同型を定める。
+\end{proposition}
+\begin{proof}
+$p$個の剰余類代表の基底を$\sigma_p$で全整数へ運ぶ。
+その$(4/p)$乗が$\tau_4$なので、この基底は指定された4周期座標とも両立し、関係が$p$周期になる。
+逆に関係が$p$周期なら同一座標の移動が代数同型へ降り、その$(4/p)$乗は厳密4移動である。
+\end{proof}
+\begin{remark}
+これは整合する周期構造を選んだ結果である。
+裸の1周期性から、任意の4周期構造が1周期構造の4乗になるとは従わない。
+Nakayama自己同型やgraded CY性も、裸の$\ZZ$-代数不変量として無条件に採用しない。
+\end{remark}
+
+既存のPBW族\cite{as4period}は、$\varepsilon_i=(-1)^i$として
+\begin{equation}\label{eq:period-two-family}
+\begin{aligned}
+ XY+YX&=Z^2+W^2,& XZ+ZX&=\varepsilon_i\lambda WY,\\
+ XW+WX&=Z^2,&YZ+ZY&=W^2,\\
+ YW+WY&=0,&ZW+WZ&=0
+\end{aligned}
+\end{equation}
+で与えられる。同原稿では全閉値でのKoszul性・左右AS正則性、14641型、
+$\lambda=0$での1周期性と、非空開集合での最小周期2が証明されている。
+最小周期4の別の例もある。本稿はその全コードを再実行したとの主張はしない。
+
+\begin{proposition}\label{prop:period-two-sign}
+表示上$A(\lambda)(1)=A(-\lambda)$である。
+$A(\lambda)$が最小周期2なら、$A(\lambda)$と$A(-\lambda)$は添字保持同型では非同型である。
+特に既存の非1周期性の証明を使えば$\lambda=1$に適用できる。
+\end{proposition}
+\begin{proof}
+唯一の添字依存係数$(-1)^i\lambda$は、一つ移動すると$(-1)^i(-\lambda)$になる。
+もし両者が添字保持同型なら$A(\lambda)\simeq A(\lambda)(1)$となり、最小周期2に矛盾する。
+\end{proof}
+\begin{remark}
+添字移動をさらに同一視する別のモジュライと混同しない。
+また、非1周期的な点を含む族があることだけから、その族の成分次元や1周期的部分の余次元は決まらない。
+\end{remark}
+

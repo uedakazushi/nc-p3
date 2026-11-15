@@ -1,0 +1,302 @@
+\section{楕円Clifford部分代数を動かす九変数族}\label{sec:elliptic-ore}
+七変数族の三生成部分代数を二方向へ動かす。新しいパラメータを$t,h$とし、
+\[
+ S_9=\Spec k[u,v,r,s,a,b,c,t,h,(1+th)^{-1}]
+\]
+を基底とする。以下の$A,B,C$は二次式の略記であり、代数の名前ではない。
+\begin{equation}\label{eq:nine-quadratics}
+ A=YZ-\tfrac12W^2,\qquad B=WY-\tfrac t2Z^2,\qquad C=WZ-\tfrac h2Y^2.
+\end{equation}
+位置$i$で$\varepsilon=(-1)^i$とし、隣接する生成空間の積に
+\begin{equation}\label{eq:nine-family}
+\begin{aligned}
+ YW+WY&=tZ^2,& ZW+WZ&=hY^2,& ZY+YZ&=W^2,\\
+ XW+WX&=uY^2+vZ^2+\varepsilon(aA-bhB-ctC),\\
+ XY+YX&=W^2+Z^2+rY^2+\varepsilon(aB+bC),\\
+ XZ+ZX&=sY^2+\varepsilon cB
+\end{aligned}
+\end{equation}
+を課す。これを$\mathcal C^{(9)}$と書く。$t=h=0$への制限は
+式\eqref{eq:seven-family}と\emph{表示そのものが一致}する。
+
+\begin{theorem}[九変数の代数的拡張]\label{thm:algebraic-nine}
+$\mathcal C^{(9)}$は$S_9$上成分ごとに自由で、各次数$n$の基底は
+$W^{i_0}Y^{i_1}Z^{i_2}X^{i_3}$（$i_0+i_1+i_2+i_3=n$）である。
+全幾何学的ファイバーは標準14641型quadratic Koszul AS正則$\ZZ$-代数である。
+同型類の像は9次元であり、稠密開集合上の最小周期は2である。
+従って、どのgraded代数にも由来しない対象の9次元の代数的族を得る。
+この像の全モジュライ内での既約成分性は主張しない。
+\end{theorem}
+証明を正則性、次元、非1周期性に分ける。
+後二者を接空間の次元だけから結論することはしない。
+
+\subsection{Clifford基底と全ファイバーのAS正則性}
+\begin{lemma}\label{lem:ternary-clifford}
+$R=k[t,h,(1+th)^{-1}]$上の
+\[
+ B_{t,h}=R\langle W,Y,Z\rangle/(YW+WY-tZ^2,ZW+WZ-hY^2,ZY+YZ-W^2)
+\]
+では三つの平方が中心的である。
+$B_{t,h}$は$R[W^2,Y^2,Z^2]$上、
+$W^{e_0}Y^{e_1}Z^{e_2}$（$e_j\in\{0,1\}$）を基底とする自由加群である。
+全ファイバーは三次元Koszul AS正則代数である。
+\end{lemma}
+\begin{proof}
+例えば$[W,Y^2]=-t[Y,Z^2]$、$[Y,Z^2]=-[Z,W^2]$、
+$[Z,W^2]=-h[W,Y^2]$なので$(1+th)[W,Y^2]=0$である。
+巡回して全ての平方の中心性を得る。
+独立な中心変数$U,V,T$を導入し、$W^2=U,Y^2=V,Z^2=T$と
+$YW+WY=tT,ZW+WZ=hV,ZY+YZ=U$を課した通常のClifford代数を考える。
+平方を消し、逆順対を交換すると長さが減るか反転数が減り、
+Clifford関係の全重なりは解消する。従って平方自由単項式が基底である。
+平方の中心性により、$U,V,T$をそれぞれ$W^2,Y^2,Z^2$に送る逆写像があり、
+このClifford代数と$B_{t,h}$は同型である。
+従って$R$上でも全順序付き単項式を基底に持つ。
+
+各ファイバーの二次双対は可換な
+\begin{equation}\label{eq:ternary-dual}
+ E=k[\xi,\eta,\zeta]/
+ (\xi^2+\eta\zeta,\ \eta^2+h\xi\zeta,\ \zeta^2+t\xi\eta)
+\end{equation}
+である。三二次式の共通零点が非零なら、ある座標が零の場合は三座標全てが零となって矛盾し、
+三座標が非零の場合は三式を掛けて$1+th=0$を得る。
+従って三二次式は正則列で、$E$はHilbert級数$(1+q)^3$のFrobenius代数である。
+
+この二次完全交叉のKoszul性は、次のTate複体でも確認できる。
+$S=k[\xi,\eta,\zeta]$、$f_j=\sum_i x_i\ell_{ji}$（$\ell_{ji}$は一次式）と書き、
+$E\otimes\Lambda(e_1,e_2,e_3)\otimes\Gamma(z_1,z_2,z_3)$に
+$d(e_i)=x_i$、$d(z_j)=\sum_i\ell_{ji}e_i$を入れる。
+$e_i,z_j$の（ホモロジー次数、内部次数）は$(1,1),(2,2)$である。
+$E\otimes_S K_S$のホモロジーは正則列のKoszul解消との比較により
+三つの$f_j$の類が生成する外積代数であり、$z_j$を加えた複体はそれらを殺して$k$を解消する。
+全微分の係数は一次なので解消は線型である。
+従って$E$とその二次双対$B_{t,h}$はKoszulであり、$E$の完全対合から
+$B_{t,h}$の左右AS条件と長さ3の線型解消が従う。
+これはTateの標準的な構成であり、新しいKoszul性定理を主張するものではない。
+\end{proof}
+
+\begin{lemma}[導分の三つの独立な係数]\label{lem:elliptic-derivation}
+式\eqref{eq:nine-quadratics}を$B_{t,h}$の元とすると、
+\begin{equation}\label{eq:elliptic-derivation}
+ d(W)=aA-bhB-ctC,\qquad d(Y)=aB+bC,\qquad d(Z)=cB
+\end{equation}
+は通常の次数1の導分を定める。
+また各生成元を任意の中心二次式に送る写像は、
+$\sigma_B(W,Y,Z)=(-W,-Y,-Z)$に関する次数1の$\sigma_B$-導分を定める。
+\end{lemma}
+\begin{proof}
+三つの定義関係にLeibniz則を適用し、Clifford基底へ還元すれば全て零になる。
+この計算は$k[t,h,a,b,c,U,V,T]$上の多項式恒等式であり、特殊化を要しない。
+さらに
+\[
+ \Omega=WYZ-\tfrac t2Z^3+\tfrac h2Y^3-\tfrac12W^3
+\]
+と置くと$d(W^2)=2a\Omega,d(Y^2)=-2b\Omega,d(Z^2)=2c\Omega$である。
+これらの恒等式と三関係の検査を
+\path{computations/verify_elliptic_family.py}で独立に再現する。
+中心二次式の場合は、例えば$\delta_p(YW+WY-tZ^2)$が
+中心元との交換子の和となるため零である。他の二関係も同様である。
+\end{proof}
+
+\begin{proof}[定理\ref{thm:algebraic-nine}の自由性・AS正則性]
+$B_{t,h}$に$g^2=1,\ gj=-jg$（$j=W,Y,Z$）を追加した環で
+\[
+ \sigma(g)=-g,\quad \sigma(j)=-j,\qquad
+ \delta(g)=0,\quad \delta(j)=p_j+g d(j)
+\]
+と置く。$p_W=uY^2+vZ^2,p_Y=W^2+Z^2+rY^2,p_Z=sY^2$である。
+補題\ref{lem:elliptic-derivation}により$\delta$は$\sigma$-導分である。
+実際、$B_{t,h}$の二次関係には中心二次式の$\sigma_B$-導分と$g d$が作用し、
+$gj+jg$の像も$-gp_j-d(j)+p_jg+d(j)=0$となる。
+Ore拡大$Xb=\sigma(b)X+\delta(b)$は左係数環上自由である。
+$Xg=-gX$なので二冪等元$(1\pm g)/2$に沿って展開すると
+式\eqref{eq:nine-family}を得る。補題\ref{lem:ternary-clifford}から所望の自由基底を得る。
+
+補助重みを$W,Y,Z$に1、$X$に2とする。
+随伴次数$\ZZ$-代数は$B_{t,h}[X;\sigma_B]$に付随する1周期的代数であり、
+$B_{t,h}$のKoszul解消と一変数多項式環の解消の捩れたテンソル積から、
+Koszul性と標準14641型の左右AS双対性を持つ。
+各内部次数で有限な重みフィルトレーションをbar複体に入れると、
+随伴次数のTorが対角上にしかないため元の代数のTorも対角上に集中する。
+従って元の代数はKoszulである。
+二次双対には逆フィルトレーションを入れる。
+随伴次数の双対からの全射は、Hilbert級数の逆数公式で両辺の次数別次元が
+$(1,4,6,4,1)$と一致するため同型である。
+随伴次数のFrobenius完全対合は元の双対へ持ち上がる。
+左右Koszul複体の双対性から左右AS条件を得て、Koszul双加群解消から大域次元4を得る。
+全ての議論は$1+th\ne0$の各ファイバーで成立する。
+\end{proof}
+
+\begin{remark}
+$t,h$が共に非零の場合、上の自由基底の存在を
+六つの関係式が固定単項式順序に関する二次Gr\"obner基底であるという主張に読み替えない。
+ここでは中心平方上のClifford基底とOre基底を使った。
+$1+th=0$を無断で含めることもできない。
+例えば$(t,h)=(1,-1)$では三生成代数の次数3の関係行列の階数が17から15へ下がる。
+\end{remark}
+
+\subsection{同型類の九次元性}
+\begin{proof}[定理\ref{thm:algebraic-nine}の次元主張]
+基点$(u,v,r,s,a,b,c,t,h)=(0,1,0,0,0,0,0,0,0)$での代数は$C_0$である。
+一つの関係空間に対する$\PGL_4\times\PGL_4$の微分を$[N_0\ N_1]$、
+九パラメータの微分を$J_9$とすると、厳密な有理数計算で
+\[
+ \rk[N_0\ N_1]=30,\qquad \rk[N_0\ N_1\ J_9]=39
+\]
+を得る。また偶六方向では階数$21=15+6$、交代三方向では$18=15+3$となる。
+従って39次元の滑らかな源$(\PGL_4\times\PGL_4)\times S_9$からの
+軌道飽和写像の像は39次元で、一般軌道は30次元である。
+定理\ref{thm:seven-image}と同じ有理商の議論から、関係空間の同型類は9次元である。
+indexed同型は必ずこの関係空間の同型を誘導するので、
+九パラメータの一般ファイバーで正次元の同一視は生じない。
+これは実際の九変数族の像の次元であり、全変形接空間の次元からの推測ではない。
+\end{proof}
+
+\subsection{滑らかな楕円曲線上の12点による非1周期性}
+以下の議論は、七変数族の非1周期点があることから九変数族の一般点を推測するものではない。
+九変数族の楕円領域で独立に非1周期性を証明する。
+三生成部分の双線型関係の行列は
+\[
+ K(p)=\begin{pmatrix}y&w&-tz\\z&-hy&w\\-w&z&y\end{pmatrix},\qquad p=[w:y:z].
+\]
+その行列式は
+\begin{equation}\label{eq:elliptic-cubic}
+ -F_{t,h}(w,y,z),\qquad
+ F_{t,h}=w^3+hy^3+tz^3+(2-th)wyz
+\end{equation}
+である。$th(1+th)(th-8)\ne0$なら$E=(F_{t,h}=0)$は滑らかな平面三次曲線である。
+実際、Hesse型三次式の特異点条件を直接計算すると
+\[
+ (2-th)^3+27th=-(1+th)^2(th-8)
+\]
+となる。$K(p)$は$E$上階数2であり、その核を$q=\tau(p)$と書く。
+双線型関係が対称なので$\tau$は正則な対合である。
+固定点は$2wy=tz^2,2wz=hy^2,2yz=w^2$を満たすが、
+滑らかな領域では非零解がない。従って$\tau$は非零2等分点による平行移動である。
+$L=\mathcal O_E(1)$は次数3なので$\tau^*L\not\simeq L$であり、
+$\tau$自体は平面の射影変換から来ない。
+
+まず$p_W,p_Y,p_Z$を三つの平方の\emph{任意の}線型結合に広げ、
+その九係数を$P=(P_{ij})$とする。導分は式\eqref{eq:elliptic-derivation}のままとする。
+この拡大族も前と同じ証明でAS正則である。
+$q=\tau(p)$に対し
+\[
+ U=(p_0q_0,p_1q_1,p_2q_2)^{\mathsf T},\qquad \omega=p\times q
+\]
+と置く。第四座標$x,x'$が存在するための条件は
+\begin{equation}\label{eq:elliptic-divisor}
+ S_\varepsilon(p)=\omega^{\mathsf T}\bigl(PU+\varepsilon d(p,q)\bigr)=0.
+\end{equation}
+$p,q$は常に一次独立なので、条件が成立すれば$x,x'$は一意に決まる。
+ここで$S_\varepsilon$は$M=(L\otimes\tau^*L)^2$、次数12の直線束の切断である。
+三二次式$A,B,C$は双線型化後、それぞれ$\omega_0/2,\omega_2/2,-\omega_1/2$となるので
+\begin{equation}\label{eq:even-divisor-section}
+ \omega^{\mathsf T}d(p,q)=\tfrac12\bigl(
+ a(\omega_0^2+\omega_1\omega_2)
+ -b(h\omega_0\omega_2+\omega_1^2)
+ +c(t\omega_0\omega_1+\omega_2^2)\bigr).
+\end{equation}
+$\tau$によって$U$は不変、$\omega$は符号を変える。
+従って$D_\varepsilon=(S_\varepsilon=0)$は$D_-=\tau(D_+)$を満たす。
+
+\begin{lemma}[使える切断は反不変六次元と不変三次元]\label{lem:elliptic-sections}
+$P,a,b,c$を動かした$S_+$の空間$\mathcal W\subset H^0(E,M)$は9次元である。
+その反不変部分は$H^0(E,M)^-$全体の6次元、不変部分は3次元である。
+$\mathcal W$は基点自由で、一般の切断の零因子は相異なる12点である。
+\end{lemma}
+\begin{proof}
+$\pi:E\to E'=E/\langle\tau\rangle$とし、
+$\pi_*\mathcal O_E=\mathcal O_{E'}\oplus\eta$と書く。$\eta$は非自明な2-torsionである。
+$L\otimes\tau^*L$の因子交換による線型化を降下させた次数3の直線束を$N$とすると、
+$U_i$は$H^0(N)$、$\omega_i$は$H^0(N\otimes\eta)$の基底になる。
+この独立性を確認するには、$L$と$\tau^*L$が非同型な次数3の直線束であることを使う。
+基点自由pencilの完全列と$H^0(\tau^*L\otimes L^{-1})=H^1(\tau^*L\otimes L^{-1})=0$より、
+$H^0(L)\otimes H^0(\tau^*L)\to H^0(L\otimes\tau^*L)$は全射で、核は3次元である。
+核は既存の三つの対称な双線型関係に一致する。その関係空間に非零の対角式も
+反対称式もないので、$U_i$と$\omega_i$はそれぞれ独立である。
+
+次数3の$N$に基点自由pencilを取り、その完全列を$N\otimes\eta$で捩ると
+$H^0(\eta)=H^1(\eta)=0$より
+\[
+ H^0(N)\otimes H^0(N\otimes\eta)\longrightarrow H^0(N^2\otimes\eta)
+\]
+は全射である。従って$\omega_iU_j$は反不変部分の6次元全体を張る。
+一方$\omega_i$による$E'$の写像は次数3の埋込みである。
+その像は平面三次曲線で、非零二次式は恒等的に零にならない。
+式\eqref{eq:even-divisor-section}の三二次式は平方係数を見れば独立なので、不変部分は3次元となる。
+反不変部分だけで、$E'$上の次数6の完全線型系の引戻しになっている。
+従って基点自由で、$\pi$が\'etaleであることから相異なる12点を切る切断が存在する。
+単根性は開条件なので一般の$\mathcal W$の切断も同じ性質を持つ。
+\end{proof}
+
+\begin{lemma}[一般の12点配置は対合後の配置と射影同型でない]\label{lem:elliptic-nonperiod}
+$\mathcal W$の一般の切断について、$D_+$を$\tau(D_+)$へ送る平面の射影変換は存在しない。
+\end{lemma}
+\begin{proof}
+12点は相異なるので、B\'ezoutの定理によりそれらを含む三次曲線は$E$だけである。
+従って候補は有限群$\Aut(E,L)$に限られる。
+任意の$\gamma$に対して$f=\tau^{-1}\gamma$と置く。
+$\tau$は$L$を保たないため$f\ne\mathrm{id}$である。
+また$M\simeq L^4$であり、$\gamma,\tau$はともに$M$を保つ。
+$\mathcal W$全体で$f(D)=D$となるためには、$f^*$が$\mathcal W$上スカラーでなければならない。
+
+反不変六次元の完全線型系が与える写像は、$\pi$と$E'$の次数6の埋込みの合成である。
+従って$f^*$がこの空間上スカラーなら$\pi f=\pi$であり、$f=\mathrm{id}$または$\tau$である。
+前者は除外済みで、後者は$\gamma=\mathrm{id}$のときだけである。
+しかし$\tau$は反不変部分に$-1$、非零な不変三次元部分に$+1$として作用するため、
+$\mathcal W$全体ではスカラーでない。
+従って各$\gamma$について、$f(D)=D$を満たす切断は固有空間の有限和集合という真の閉部分集合に入る。
+有限個の$\gamma$を全て除けば所望の非空開集合を得る。
+\end{proof}
+
+\begin{proof}[定理\ref{thm:algebraic-nine}の一般の最小周期2]
+拡大族の一般点で、$e_X=[0:0:0:1]$以外の左点スキームは$D_\varepsilon$の12点の
+一意な持上げであり、全て被約である。
+$e_X$の近傍では最後の三関係を使って標点座標を消去でき、残る三式の先頭二次項は
+$YW+WY-tZ^2,ZW+WZ-hY^2,ZY+YZ-W^2$を同一点で評価したものである。
+それらが射影共通零点を持てば$\tau$の固定点を与えるため、三式は正則列である。
+従って$e_X$は長さ8、接空間次元3の局所完全交叉であり、唯一の非被約支持点となる。
+左点スキームの射影同型は$e_X$を固定し、商平面で$D_+$と$D_-$を対応させる。
+補題\ref{lem:elliptic-nonperiod}はこれを一般点で排除する。
+よって拡大族は一般に1周期的ではない。
+
+拡大族から式\eqref{eq:nine-family}の正規形へ戻る。
+$X$に$\ell_WW+\ell_YY+\ell_ZZ$を足すと中心係数は
+\[
+\begin{array}{c|ccc}
+ &W^2&Y^2&Z^2\\\hline
+ p_W&2\ell_W&h\ell_Z&t\ell_Y\\
+ p_Y&\ell_Z&2\ell_Y&t\ell_W\\
+ p_Z&\ell_Y&h\ell_W&2\ell_Z
+\end{array}
+\]
+だけ変化し、交代項は変わらない。
+従って$p_W$の$W^2$係数と$p_Z$の$W^2,Z^2$係数を一意に零にできる。
+残る$p_Y$の$W^2,Z^2$係数を$A_0,B_0$とし、$A_0B_0\ne0$の開集合を取る。
+$W'=\lambda W,Y'=\mu Y,Z'=\nu Z,X'=\rho X$、$\mu\nu=\lambda^2$とすると
+それらは$\rho A_0/\nu$、$\rho\mu B_0/\nu^2$へ移る。
+$\nu=1,\mu=A_0/B_0,\lambda^2=A_0/B_0,\rho=1/A_0$で両方を1にできる。
+この変換は三生成関係の形と導分の三次元空間を保つ。
+すなわち
+\[
+ t'=\frac{\mu\lambda}{\nu^2}t,\quad h'=\frac{\nu\lambda}{\mu^2}h,
+ \quad a'=\frac\rho\lambda a,\quad b'=\frac{\rho\mu}{\lambda\nu}b,
+ \quad c'=\frac{\rho\nu}{\lambda\mu}c
+\]
+であり、$t'h'=th$である。
+従って拡大族の一般点は九変数の正規形と同型であり、非1周期性も保たれる。
+
+開性については、滑らかな楕円領域を必要に応じて縮め、有限\'etale被覆で
+$\Aut(E,L)$を一定化する。上の単根条件と各有限自己同型に関する非固有ベクトル条件は開であり、
+被覆から降下する。これを正規形へ制限すれば$S_9$の非空開集合を得る。
+全ファイバーが厳密2周期的であることと合わせて、そこでの最小周期は2である。
+\end{proof}
+
+\begin{remark}[確定範囲]
+九変数族は同型類の次元9を持ち、七変数族を特殊化として含む。
+三生成部分の点曲線は、$t=h=0$の直線と二次曲線の和から、一般の$t,h$で滑らかな楕円曲線へ変わる。
+従って追加の二変数は、同じ七変数族の冗長な表示ではない。
+ただし全モジュライの既約成分性、Clifford点の14次元局所模型、残る三つの交代方向の同時積分、
+全1周期構造および全族内外同型の分類はなお未解決である。
+本節の代数的構成と点配置の証明の先行研究上の新規性は未確認である。
+\end{remark}

@@ -1,9 +1,9 @@
-# nc-p3 再開指示 — 2026-11-15 / v9
+# Codex起動指示 — nc-p3 / 2026-11-15 / v10
 
-まず research/plan_ja.tex、AGENTS.md、research/notes_ja.tex、nc-p3.tex、research/STATE.json を読む。
+`uedakazushi/nc-p3` の `main` を確認し、研究方針 → AGENTS → STATE → 主論文 → 研究ノート → BASELINE の順に読む。主論文は `nc-p3.tex`、九変数族の節は `sections/elliptic_ore_family.tex`。
 
-最優先は **ALGEBRAIC-FAMILY-008**。形式的変形だけでなく、係数を代数的パラメータで書ける実際の族を求める。既に七変数族が全ファイバーでAS正則、一般点で最小周期2、同型類の像で7次元と証明された。computations/verify_algebraic_family.py を再現し、三生成部分代数Bの変形や別チャートから追加の偶・交代方向を構成する。
+最優先は **ALGEBRAIC-FAMILY-008**。実際の代数的変形を求める。九変数の楕円Clifford–Ore族は全ファイバーAS正則、一般の最小周期2、同型類の像の次元9。七変数族は `t=h=0` に保持される。この成果の再実装を繰り返さず、楕円曲線と次数12の因子による同型の必要十分条件、像の閉包と最大性、別の三生成部分による追加方向を追う。
 
-同型類の族の次元7と既約成分の次元を区別する。Clifford点の接次元15、二次障害Q、14次元の局所模型予想はそのまま保持するが、高次の証明済み結果と扱わない。原稿にある有限四窓・周期・同型判定・量子成分比較の証明を削らない。
+偶6＋交代3方向の積分から全15方向や14次元成分を宣言しない。`1+t*h != 0` の条件を保ち、一般のt,hで元の関係が二次Gröbner基底だと仮定しない。形式的障害計算は候補選別の補助手段とする。
 
-成果は現行の原稿・方針・ノート・再現コードへ統合して main に通常のfast-forwardで直接保存する。PR、force push、GitHub Actionsは使わない。PDFは追跡しない。GitHub push成功時にはLibraryへ保存しない。遠隔保存に失敗した場合だけ緊急退避を検討する。
+READMEの検証を実行し、成功したものだけをPASSにする。証明・ノート・方針・STATEを現行内容へ統合してmainへ通常fast-forwardでpushし、遠隔を読み戻す。PR・force push・GitHub Actions・無断のas4書込みをしない。PDFとキャッシュはGitで追跡しない。GitHubへのpushが成功した場合はLibraryに保存しない。
