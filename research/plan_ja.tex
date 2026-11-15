@@ -8,7 +8,7 @@
 \newcommand{\PGL}{\operatorname{PGL}}
 \title{nc-p3研究方針と再開手順}
 \author{}
-\date{2026年11月16日\quad 第20版}
+\date{2026年11月16日\quad 第21版}
 \begin{document}
 \maketitle
 
@@ -180,7 +180,10 @@ Bhatoy--Ingallsのsuperpotential不変量である。
 全コマンドの正本は\path{README.md}の「再現」節。
 Python/SymPyによる構造検査と厳密検算、LuaLaTeXによる主論文・方針・ノートの組版を行う。
 証明書は現行コードと入力から再生成し、数学的内容と環境表示の差を分けて比較する。
-\path{scripts/check_project.py}の成功は数学的証明を意味しない。
+Cloud Codexでの軽量な環境確認はpath{docs/cloud_codex_ja.md}と
+path{scripts/cloud_preflight.sh}に分離する。
+Cloudのセットアップ・認証・公開状態は実際の環境テストで確認する必要がある。
+path{scripts/check_project.py}の成功は数学的証明を意味しない。
 未実行の検証を過去版のPASSで置き換えない。
 
 研究の区切りでは本文・要約・方針・索引の不整合を直し、再開可能な現行一式をmainへ保存する。

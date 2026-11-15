@@ -1,14 +1,14 @@
 {
   "schema_version": 2,
   "date": "2026-11-16",
-  "version": 20,
+  "version": 21,
   "reviewed_input": {
-    "source_commit": "9541eaa9f7a61de0b58b99bc64bb392c1ee5e30c",
-    "source_tree": "2a836855ec05c73df6bd56915adf3b7fe2b91b83"
+    "source_commit": "1146023ebd9925ba103444464d23039f62279d2d",
+    "source_tree": "10d6412bc89fb2ad59f374b27bf022d0b0648caf"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Only scalable research architecture and Codex instructions updated: compact entrypoint, lazy module access, two dependency graphs, split-on-demand, incremental tests, preserve full mathematical content.",
+    "scope": "Added Cloud Codex environment guide and lightweight preflight shell script; AGENTS, startup prompt, README, plan and state updated. No mathematical result or proof changed.",
     "new_mathematical_theorem": false
   },
   "environment": {
@@ -17,20 +17,14 @@
     "tex_engine": "LuaHBTeX 1.18.0 (TeX Live 2025/dev/Debian)",
     "tex_format": "LaTeX2e 2024-11-01 patch level 2"
   },
-  "checks": [
-    {
-      "command": "Static source consistency: versions, 35 mathematical result IDs, retained priorities, cross-reference and LaTeX delimiter checks",
-      "result": "PASS",
-      "scope": "Doc-only structural inspection, not independent proof verification or typesetting."
-    }
-  ],
+  "checks": [],
   "certificate_comparison": {
     "result": "NOT_RUN",
-    "scope": "No new mathematical verifier run; all computation code and certificates unchanged."
+    "scope": "No mathematical computations rerun."
   },
   "proof_review": {
     "result": "NOT_RUN",
-    "scope": "No new mathematical statements proved or existing proofs modified; retained 35 result records."
+    "scope": "No new mathematical proof; prior 35 mathematical results preserved."
   },
   "literature_review": {
     "primary_text": [
@@ -46,20 +40,16 @@
   },
   "tex": {
     "result": "NOT_RUN",
-    "scope": "The research-plan TeX text was modified, but compilation has not been run in this documentation-only step."
+    "scope": "LuaLaTeX not rerun for these Cloud setup instructions."
   },
   "visual_inspection": {
     "result": "NOT_RUN",
-    "scope": "No PDF generated."
+    "scope": "No PDF produced."
   },
   "github_save": {
-    "result": "PASS",
+    "result": "pending",
     "branch": "main",
-    "validated_content_commit": "bc44a9403a0aefcde733a62c317560687b9dea72",
-    "validated_content_tree": "dac7e77ad5a56958016fa79b55fbab7f95359f28",
-    "fast_forward": true,
-    "verified_blob_count": 47,
-    "scope": "Read back branch main, complete tree and all seven edited file blobs; 35 mathematical result IDs preserved. Receipt committed separately."
+    "expected_parent": "1146023ebd9925ba103444464d23039f62279d2d"
   },
   "library_save": {
     "result": "not_saved_project_policy",
@@ -79,5 +69,9 @@
     "The boundary five-parameter family has generic minimal period two and lies in Z7; it is not an independently established component.",
     "Eleven individually integrable tangent directions have the mixed obstruction lambda*c and do not yield a smooth simultaneous eleven-dimensional family."
   ],
-  "checks_execution_note": "Instruction/documentation-only update. Static cross-checks and remote GitHub reread passed. No mathematical verifier or LuaLaTeX compilation run; no claims made about those tests."
+  "checks_execution_note": "Repo-side static checks performed; shell script is not tested inside a published Codex Cloud environment.",
+  "cloud_environment": {
+    "result": "NOT_CONFIGURED_BY_THIS_CHANGE",
+    "scope": "Published Codex Cloud environment, tool installation and Git credentials are external to the GitHub repository; require user-side environment setup and tests."
+  }
 }

@@ -1,4 +1,8 @@
-# Codex起動指示 — nc-p3 / 2026-11-16 / v20
+# Codex起動指示 — nc-p3 / 2026-11-16 / v21
+
+Cloud Codexではまず `docs/cloud_codex_ja.md` の環境・GitHub権限を確認し、
+`bash scripts/cloud_preflight.sh` で軽量な動作確認を行う。
+Cloud側の環境公開・TeX導入・Git push権限は、リポジトリの文面だけで保証されない。
 
 GitHub uedakazushi/nc-p3 のmain先端を確認し、
 research/plan_ja.tex → research/classification_architecture.md → AGENTS.md →

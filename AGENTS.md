@@ -1,4 +1,4 @@
-# nc-p3 研究指示 — 2026-11-16 / v20
+# nc-p3 研究指示 — 2026-11-16 / v21
 
 最初に research/plan_ja.tex を読む。主論文は nc-p3.tex。
 このファイルは実行規則、研究方針は目標と着手方法、研究ノートは本文外の有効な知識を担う。
@@ -91,6 +91,16 @@ READMEの現行コマンドで必要な検証を実行する。
 Clifford二次障害の検算は左核全体による必要十分判定を保つ。
 check_project.pyは構造検査に限る。数値一標本や有限次数の計算で一般非1周期性・全AS性・成分性を認定しない。
 validation.jsonは今回の状態一つへ更新し、過去のPASSや旧版のblob表を蓄積しない。
+
+## Codex Cloudでの実行（環境設定と権限を混同しない）
+
+Cloud環境のセットアップ手順は `docs/cloud_codex_ja.md`。
+本ファイルと`START_CODEX_ja.md`は研究指示であり、Cloudのインストール設定や認証を自動的に作成しない。
+Cloudタスクの開始時は `bash scripts/cloud_preflight.sh` でPython/SymPyと構造を軽量に確認し、
+日本語組版が必要なら`--tex`でLuaLaTeXも確認する。数学的検証は変更内容に関係するものだけ実行する。
+作業開始・push前にGitHub mainの先端を確認し、Cloudの独立したワークスペース間の未保存内容を仮定しない。
+権限があれば直接fast-forwardでmainへ保存し、拒否されたら未保存を明示する。
+Cloudの実行時間やpush権限、環境の公開状態を本指示だけで保証したと報告しない。
 
 ## 保存
 
