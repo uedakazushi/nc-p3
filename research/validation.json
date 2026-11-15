@@ -1,14 +1,14 @@
 {
   "schema_version": 2,
   "date": "2026-11-16",
-  "version": 19,
+  "version": 20,
   "reviewed_input": {
-    "source_commit": "21fac7fee3ec485afa108df4a33c40792b41a934",
-    "source_tree": "291d2d1bbc3e25d2d86981652ad01ae8fb2c634a"
+    "source_commit": "9541eaa9f7a61de0b58b99bc64bb392c1ee5e30c",
+    "source_tree": "2a836855ec05c73df6bd56915adf3b7fe2b91b83"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Codex instructions updated to reuse external as4 only through a small pinned dependency index and on-demand theorem/code fetches, with no default repository-wide read or periodic full sync. No mathematical content edited.",
+    "scope": "Only scalable research architecture and Codex instructions updated: compact entrypoint, lazy module access, two dependency graphs, split-on-demand, incremental tests, preserve full mathematical content.",
     "new_mathematical_theorem": false
   },
   "environment": {
@@ -19,18 +19,18 @@
   },
   "checks": [
     {
-      "command": "Remote branch/tree readback and static instruction cross-check",
+      "command": "Static source consistency: versions, 35 mathematical result IDs, retained priorities, cross-reference and LaTeX delimiter checks",
       "result": "PASS",
-      "scope": "All 8 changed files matched the main tree; 35 existing mathematical claims intact, fixed as4 blob reference retained. No TeX/math code changed."
+      "scope": "Doc-only structural inspection, not independent proof verification or typesetting."
     }
   ],
   "certificate_comparison": {
     "result": "NOT_RUN",
-    "scope": "No mathematical computations or certificate regeneration performed for instruction-only update."
+    "scope": "No new mathematical verifier run; all computation code and certificates unchanged."
   },
   "proof_review": {
     "result": "NOT_RUN",
-    "scope": "No new mathematical proof added; all 35 result records retained."
+    "scope": "No new mathematical statements proved or existing proofs modified; retained 35 result records."
   },
   "literature_review": {
     "primary_text": [
@@ -46,30 +46,16 @@
   },
   "tex": {
     "result": "NOT_RUN",
-    "scope": "No LuaLaTeX recompilation performed for v19 instruction update."
+    "scope": "The research-plan TeX text was modified, but compilation has not been run in this documentation-only step."
   },
   "visual_inspection": {
     "result": "NOT_RUN",
-    "scope": "No new PDF produced."
+    "scope": "No PDF generated."
   },
   "github_save": {
-    "result": "PASS",
+    "result": "pending",
     "branch": "main",
-    "validated_content_commit": "c334bea79ac8f516ff3d63decd66a2d22a4d204d",
-    "validated_content_tree": "da66ae5001cc4a6e82990da90b5be6fde66d4359",
-    "fast_forward": true,
-    "remote_blob_count": 47,
-    "checked_files": [
-      "AGENTS.md",
-      "START_CODEX_ja.md",
-      "research/BASELINE.md",
-      "research/classification_architecture.md",
-      "research/plan_ja.tex",
-      "README.md",
-      "research/STATE.json",
-      "research/validation.json"
-    ],
-    "scope": "Remote main and full 47-blob tree read back; edited file contents and result count verified. Receipt is recorded in a follow-up commit."
+    "expected_parent": "9541eaa9f7a61de0b58b99bc64bb392c1ee5e30c"
   },
   "library_save": {
     "result": "not_saved_project_policy",
@@ -89,5 +75,5 @@
     "The boundary five-parameter family has generic minimal period two and lies in Z7; it is not an independently established component.",
     "Eleven individually integrable tangent directions have the mixed obstruction lambda*c and do not yield a smooth simultaneous eleven-dimensional family."
   ],
-  "checks_execution_note": "Instruction-only v19 revision. Remote GitHub saved and read back; no LuaLaTeX rebuild, mathematical verifier or independent proof audit executed."
+  "checks_execution_note": "Final GitHub saving and reread will be recorded after initial push. Math/TeX verifiers not rerun; no math files changed."
 }
