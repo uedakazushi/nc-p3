@@ -91,6 +91,33 @@ def square_relation_cycles(windows):
     assert d2*cycles==s.zeros(140,6) and d2*d3==s.zeros(140,40)
     assert d2.rank()==77 and d3.rank()==36
     assert d3.row_join(cycles).rank()==42
+    # A mixed cycle completes the seven-dimensional quintic H2.  Relation
+    # tensors here are specified in monomial coordinates, independently of
+    # which six relation vectors reconstructed_windows chooses.
+    relation_basis = relation_matrix(windows[0])
+    def relation_coordinates(pairs):
+        v = s.Matrix(16, 1, lambda i, _: pairs.get(divmod(i, 4), 0))
+        solution, params = relation_basis.gauss_jordan_solve(v)
+        assert params.rows == 0
+        return solution
+    def tensor_cycle(pairs, tail):
+        j = 16 * tail[0] + 4 * tail[1] + tail[2]
+        return s.kronecker_product(relation_coordinates(pairs), q3[:, j])
+    r01 = {(0, 1): 1, (1, 0): 1}
+    r13 = {(1, 1): 1, (1, 3): 1, (2, 2): -1, (2, 3): -1,
+           (3, 1): 1, (3, 2): -1}
+    mixed = (2 * tensor_cycle(square, (3, 3, 2))
+             + 4 * tensor_cycle(square, (1, 3, 2))
+             + 12 * tensor_cycle(square, (2, 2, 1))
+             + 8 * tensor_cycle(square, (2, 3, 1))
+             + 4 * tensor_cycle(square, (3, 3, 1))
+             - 3 * tensor_cycle(r01, (2, 1, 3))
+             - 6 * tensor_cycle(r13, (1, 2, 3)))
+    assert d2 * mixed == s.zeros(140, 1)
+    full = d3.row_join(cycles).row_join(mixed)
+    assert exact_rank(({i: F(full[i, j]) for i in range(120) if full[i, j]}
+                       for j in range(full.cols))) == 43
+    # Since dim H2=7, the six square classes and this mixed class form a basis.
     # One especially small nonzero class is square relation tensor word 303.
     word=s.zeros(64,1);word[51]=1
     assert multiplication*q3*word==s.zeros(35,1)
@@ -99,7 +126,10 @@ def square_relation_cycles(windows):
     return {'left_x3_multiplication_rank':14,'annihilator_dimension':6,
             'd2_rank':77,'d3_rank':36,'d3_plus_square_cycles_rank':42,
             'simple_nonboundary_cycle':'(x3 tensor x3) tensor [303]',
-            'remaining_H2_dimension_after_square_cycles':1}
+            'remaining_H2_dimension_after_square_cycles':1,
+            'mixed_cycle': '2*[33]x[332]+4*[33]x[132]+12*[33]x[221]+8*[33]x[231]+4*[33]x[331]-3*r01x[213]-6*r13x[123]',
+            'd2_mixed_zero':True,'d3_plus_square_plus_mixed_rank':43,
+            'remaining_H2_after_all_seven_cycles':0}
 
 
 def main():
