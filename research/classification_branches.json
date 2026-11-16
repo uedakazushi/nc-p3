@@ -195,8 +195,14 @@
           "coefficient_domain": "u*v*a*b*c*(a+b+c-1-u-v)!=0",
           "coverage": "all final quadrics with exactly the fixed Boolean basepoint, modulo first three fixed quadrics and scale",
           "finite_Frobenius_points": "outside symmetric image S",
-          "generic_AS_status": "five-variable homology pending",
+          "generic_AS_status": "uniformly excluded at every parameter by exact five-variable d2 rank77 and specialization",
           "source": "sections/boolean_quadric_boundary.tex"
+        },
+        "reduced_octad_extension": {
+          "coverage": "all reduced (2,2,2) octads and a fourth quadric vanishing at exactly one point",
+          "frame": "quadratic-evaluation kernel weighted by inverse fourth-quadric values",
+          "general_AS_status": "unresolved; a general-position rational fixture is non-Koszul",
+          "source": "sections/reduced_quadric_boundary.tex"
         }
       },
       {

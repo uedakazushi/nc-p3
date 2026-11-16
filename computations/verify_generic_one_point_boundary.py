@@ -21,15 +21,16 @@ def backend_crosscheck():
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output',type=Path)
+    parser.add_argument('--pivot',choices=('columns','full'),default='columns')
     args=parser.parse_args()
     backend_crosscheck()
     field.K,field.zero,field.one=K,zero,one
     w=field.tensor();relations=field.windows(w)
     print('PASS exact cubic frame and four generic pair ranks',flush=True)
-    report=analyze_quintic(relations,K)
+    report=analyze_quintic(relations,K,rank_strategy=args.pivot)
     assert (report['d2_rank'],report['d3_rank'],report['multiplication_rank'],report['combined_rank'])==(77,36,14,42)
     certificate={'result':'PASS','arithmetic':'exact rational functions QQ(u,v), FLINT rational multivariate polynomial gcd',
-        'backend_crosscheck':'32 exact operations compared with SymPy',
+        'backend_crosscheck':'32 exact operations compared with SymPy','rank_strategy':args.pivot,
         'quadric_coefficients':['1','u','v'],'cubic_normalization_determinant':'-2*u*v',
         'pair_ranks':[6]*4,'C_2_5_dimension':20,'C_1_5_dimension':35,
         'quintic_d2_rank':77,'quintic_d3_rank':36,'d2_d3_zero':True,

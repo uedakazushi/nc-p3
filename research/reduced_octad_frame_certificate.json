@@ -1,0 +1,104 @@
+{
+  "result": "PASS",
+  "arithmetic": "exact rational geometry and QQ embedded in QQ(z)",
+  "skew_parameters": [
+    1,
+    2,
+    3,
+    5,
+    7,
+    11
+  ],
+  "orthogonal_matrix": [
+    [
+      "19/177",
+      "-164/177",
+      "18/59",
+      "-34/177"
+    ],
+    [
+      "34/59",
+      "-14/59",
+      "-40/59",
+      "23/59"
+    ],
+    [
+      "-110/177",
+      "-38/177",
+      "-39/59",
+      "-64/177"
+    ],
+    [
+      "92/177",
+      "35/177",
+      "-6/59",
+      "-146/177"
+    ]
+  ],
+  "nonzero_four_point_minors": 70,
+  "quadratic_evaluation_rank": 7,
+  "affine_and_hyperplane_section_quotient_dimensions": [
+    8,
+    8
+  ],
+  "cubic_evaluation_rank": 8,
+  "seven_point_quadratic_rank": 7,
+  "nonzero_Cayley_Bacharach_weights": true,
+  "fourth_quadric": "x1^2+2*x2^2+3*x3^2",
+  "symmetrizer_dimensions": [
+    1,
+    1,
+    1
+  ],
+  "middle_symmetrizer_rank": 1,
+  "singleton_ranks": [
+    4,
+    4,
+    4,
+    4
+  ],
+  "pair_ranks": [
+    6,
+    6,
+    6
+  ],
+  "intersection_dimensions": [
+    [
+      4,
+      1
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      4,
+      1
+    ]
+  ],
+  "quartic_dimensions": [
+    35,
+    35,
+    35,
+    35
+  ],
+  "quintic": {
+    "d2_rank": 77,
+    "d3_rank": 36,
+    "H2_dimension": 7,
+    "multiplication_rank": 14,
+    "square_kernel_dimension": 6,
+    "combined_rank": 42,
+    "square_H2_dimension": 6,
+    "remaining_H2_quotient_dimension": 1,
+    "elapsed_seconds": 3.088
+  },
+  "limits": [
+    "A single general-position reduced octad fixture, not a generic homology rank theorem for all reduced octads.",
+    "The orthogonal normal form does not classify indexed AS isomorphisms."
+  ]
+}

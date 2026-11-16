@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-17",
-  "version": 30,
+  "version": 31,
   "reviewed_input": {
-    "source_commit": "1c63522f27d23dd7c621e06ec4818149e904b5b8"
+    "source_commit": "d84d44e6063762a5b9126f7e6082c90f3ea634e4"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Proved a global five-parameter one-point Boolean cubic frame and Hilbert function, closure in Z_sym and nonsymmetrizability of finite-Frobenius fibers. Refactored exact field analysis for reuse and regressed the solved two-variable case.",
+    "scope": "Completed uniform AS exclusion on the full fixed-Boolean one-point open; proved reduced-octad evaluation frames, orthogonal coordinates and a restricted complete orbit criterion; certified a non-Boolean general-position non-Koszul fixture.",
     "new_mathematical_theorem": true
   },
   "checks": [
@@ -47,14 +47,19 @@
       "scope": "Full solved two-variable regression after introducing independent FLINT field contexts and the shared quintic-analysis engine: ranks77/36/14/42 and zero compositions."
     },
     {
-      "command": "PYTHONPATH=/workspace/.cache/nc-p3-python python3 computations/verify_boolean_quadric_homology.py --output research/boolean_quadric_homology_certificate.json",
-      "result": "RUNNING",
-      "scope": "Canonical five-variable exact computation launched; no general homology or uniform AS conclusion for this larger family yet."
+      "command": "PYTHONPATH=/workspace/.cache/nc-p3-python python3 computations/verify_boolean_quadric_homology.py --pivot full --output research/boolean_quadric_homology_certificate.json",
+      "result": "PASS",
+      "scope": "Exact QQ(u,v,a,b,c) polynomial cubic frame, generic relation basis, quotient dimensions20/35 and d2 rank77. d3 generic36 is deduced using the established bound and checked point, not represented as a completed direct five-variable computation."
+    },
+    {
+      "command": "PYTHONPATH=/workspace/.cache/nc-p3-python python3 computations/verify_reduced_octad_frame.py --output research/reduced_octad_frame_certificate.json",
+      "result": "PASS",
+      "scope": "Rational orthogonal4x4 matrix, all70 nonzero four-point minors, quadric evaluation rank7, affine/hyperplane-section Groebner dimensions8/8, cubic evaluation rank8, nonzero weights, symmetrizer dimensions1/1/1 with rank1 middle map, full Frobenius ranks, quartic dimensions35 and exact quintic ranks77/36 with six square classes."
     }
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed short-path proof of four-layer Koszulity, trace/evaluation identification and generation of the 64-dimensional trivial extension, inner parity twist, and constant-rank vector-bundle specialization argument with adjacent cut upper bounds. No formalization or independent peer review. Reviewed normalization c0!=0, adjacent-cut upper bounds from three-factor symmetry, nonempty Frobenius/quartic-exact open from the checked old point, exact generic obstruction, and extension of rank upper bounds across the entire open. This excludes AS even at coefficient values whose Frobenius status was not classified separately. Reviewed global coverage of the final-quadric one-point open, cube evaluation basis, face-circuit independence with unit minor, all-degree Hilbert calculation, t-deformation at the basepoint, and incompatibility of finite-Frobenius symmetrization with the surviving common basepoint."
+    "scope": "Reviewed short-path proof of four-layer Koszulity, trace/evaluation identification and generation of the 64-dimensional trivial extension, inner parity twist, and constant-rank vector-bundle specialization argument with adjacent cut upper bounds. No formalization or independent peer review. Reviewed normalization c0!=0, adjacent-cut upper bounds from three-factor symmetry, nonempty Frobenius/quartic-exact open from the checked old point, exact generic obstruction, and extension of rank upper bounds across the entire open. This excludes AS even at coefficient values whose Frobenius status was not classified separately. Reviewed global coverage of the final-quadric one-point open, cube evaluation basis, face-circuit independence with unit minor, all-degree Hilbert calculation, t-deformation at the basepoint, and incompatibility of finite-Frobenius symmetrization with the surviving common basepoint. Reviewed global fixed-Boolean rank-specialization argument including all extra-denominator zeros; reduced-octad seven-point evaluation via associated graded Artin CI socle3; weighted cubic kernel basis, one-point Hilbert tail, controlled closure deformation, orthogonal column scaling, and symmetrizer-covariance proof of the restricted orbit criterion."
   },
   "tex": {
     "result": "NOT_RUN",
@@ -66,25 +71,25 @@
   },
   "literature_review": {
     "result": "TARGETED",
-    "scope": "Grant, Higher zigzag algebras (2019), Definitions 2.3 and 2.5 and the parity twist. Used only for construction context; no unverified representation-infinite criterion."
+    "scope": "Grant Definitions2.3/2.5 and parity twist; Plaumann--Sturmfels--Vinzant (2011) Theorem3.10 with its linear-general-position hypothesis. Construction and self-association are classical context; no unverified converse for degenerate orthogonal matrices or representation-infinite criterion used."
   },
   "github_save": {
     "result": "PENDING",
     "branch": "main",
-    "scope": "Uniform two-variable exclusion checkpoint1c63522 pushed; current global-frame checkpoint awaiting save/readback."
+    "scope": "Previous global Boolean frame checkpoint d84d44e pushed; current uniform-exclusion and general-octad checkpoint awaiting save/readback."
   },
   "library_save": {
     "result": "not_attempted",
     "scope": "Project-specific GitHub-first policy; no emergency Library fallback needed while main saves succeed."
   },
   "open_mathematics": [
-    "General one-basepoint quadric systems and singular-symmetrizer boundaries outside the excluded two-dimensional coefficient slice may still contain Koszul AS points.",
+    "The full fixed-Boolean one-point coefficient open is excluded, but arbitrary reduced octads and more general singular-symmetrizer boundaries may still contain unclassified Koszul AS points.",
     "All seven quintic H2 classes are now explicit for this single t=0 example; no universal formula or rank theorem for arbitrary basepoint boundaries.",
     "General 4-window necessary-and-sufficient Koszul/AS criterion, LOW-UNCLASSIFIED, rho=3,4,5, other X6 components and full moduli remain unresolved."
   ],
   "symbolic_backend": {
     "result": "PASS",
     "dependency": "requirements-symbolic.txt, python-flint==0.9.0",
-    "scope": "Reduced rational functions using exact multivariate polynomial gcd; the pure-Python rational-function and fraction-free exploratory attempts were superseded and terminated, not recorded as successful rank verifications."
+    "scope": "Reduced rational functions using exact multivariate polynomial gcd; the pure-Python rational-function and fraction-free exploratory attempts were superseded and terminated, not recorded as successful rank verifications. Added exact low-complexity full pivot ordering; old two-variable case regressed with rank77/36/14/42. Long fixed-column and optional full five-variable post-d2 checks were superseded, not marked complete."
   }
 }

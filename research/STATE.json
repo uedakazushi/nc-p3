@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-17",
-  "version": 30,
+  "version": 31,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -543,6 +543,30 @@
       "claim": "Every tensor from the global one-point Boolean frame lies in Z_sym via a controlled t*e3^2 deformation; every finite-Frobenius point in this family lies outside the symmetric CI image S. No existence of a Koszul AS point is asserted.",
       "proof": "sections/boolean_quadric_boundary.tex:cor:boolean-family-in-symmetric-closure;cor:boolean-frobenius-not-symmetric",
       "status": "proof_written"
+    },
+    {
+      "id": "BOOLEAN-ALL-ONE-POINT-AS-EXCLUSION",
+      "claim": "Every last quadric with exactly one basepoint on the fixed Boolean three-quadric complete intersection is excluded from standard Koszul AS. Exact QQ(u,v,a,b,c) d2 rank77 and the d3 bound36 give H2>=7 at every Frobenius quartic-exact specialization, including coordinate-normalization degeneracies.",
+      "proof": "sections/boolean_quadric_boundary.tex:thm:boolean-one-point-uniform-exclusion",
+      "status": "proof_written_exact_function_field_verified"
+    },
+    {
+      "id": "REDUCED-OCTAD-ONE-POINT-FRAME",
+      "claim": "For any reduced eight-point (2,2,2) complete intersection, every seven-point quadratic evaluation is an isomorphism, with all Cayley-Bacharach weights nonzero. This gives a cubic evaluation frame and Hilbert function (1,4,6,4,1,1,...) for any single-basepoint fourth quadric, closure in Z_sym and nonsymmetry at Frobenius fibers.",
+      "proof": "sections/reduced_quadric_boundary.tex:lem:reduced-octad-seven-evaluation;prop:reduced-octad-one-point-frame",
+      "status": "proof_written"
+    },
+    {
+      "id": "REDUCED-OCTAD-ORTHOGONAL-COORDINATES",
+      "claim": "Every reduced quadric complete-intersection octad has a projective column representation [I4|M] with MM^T=I4 after choices. This is the classical self-association direction, not an indexed classification or a claim about every orthogonal matrix.",
+      "proof": "sections/reduced_quadric_boundary.tex:prop:reduced-octad-orthogonal-form",
+      "status": "proof_written_classical_context_scoped"
+    },
+    {
+      "id": "PARTIAL-SYMMETRIC-ORBIT-CONGRUENCE",
+      "claim": "For cubic-frame tensors with pair rank6 and S1=S3=kI, independent four-factor equivalence is equivalent to ordinary GL4 equivalence of the four-quadric spaces. On AS objects this is an indexed-isomorphism criterion; on nonregular candidates it is only presentation equivalence.",
+      "proof": "sections/reduced_quadric_boundary.tex:prop:partial-symmetric-orbit-congruence",
+      "status": "proof_written"
     }
   ],
   "document_paths": {
@@ -606,26 +630,26 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "1c63522f27d23dd7c621e06ec4818149e904b5b8",
+  "reviewed_source_commit": "d84d44e6063762a5b9126f7e6082c90f3ea634e4",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
   "cloud_codex_status": "Repository-side Cloud guidance and preflight added; actual Cloud environment publishing, TeX tools and Git push permissions are not verifiable from repository alone.",
   "resume_point": {
     "task_id": "Z4-AS-004",
-    "status": "global_boolean_one_point_frame_proved_five_variable_homology_pending",
+    "status": "boolean_one_point_AS_excluded_general_reduced_octad_rank_open",
     "objective": "Determine whether the full finite-Frobenius rank-six boundary of the symmetric CI orbit contains Koszul AS points not symmetrizable; then expand structural classification to remaining rho=3,4,5 and higher-rank branches.",
-    "immediate_next_action": "Run/complete computations/verify_boolean_quadric_homology.py with requirements-symbolic.txt. It uses the global five-parameter Boolean evaluation frame scaled by face products to polynomial tensors, a common quintic-analysis engine, and exact QQ(u,v,a,b,c). Determine generic d2,d3 and square-class ranks. If generic H2 is positive, lem:generic-quintic-exclusion applies on the entire global one-point open, even where the local 012/133/233/333 normalization degenerates. If computation stalls, derive the obstruction from the truncated-algebra trivial extension or broaden the first three quadrics structurally; do not infer a generic result from the checked rational cross-term sample.",
+    "immediate_next_action": "Prove a basis-independent quintic obstruction for arbitrary reduced octad one-basepoint frames, using the nonzero quadratic evaluation weights P*diag(lambda)*P^T=0 and the truncated-algebra trivial extension. The full Boolean five-parameter open is now uniformly excluded: d2 rank77, d3<=36. General-position rational octad fixture has H2=7 and six square classes, but this does not establish the general rank. A possible parameter reduction is to use three rank-two quadrics through the basepoint as a marked net and certify a dominating family by a Grassmannian tangent-rank test, rather than attempt an unscoped large elimination. Alternative: rho=3,4,5 matrix-space structure.",
     "read_first": [
       "research/plan_ja.tex",
       "AGENTS.md",
+      "sections/reduced_quadric_boundary.tex",
       "sections/boolean_quadric_boundary.tex",
-      "computations/boolean_quadric_frame.py",
-      "computations/verify_boolean_quadric_homology.py",
+      "computations/verify_reduced_octad_frame.py",
       "computations/quintic_field_analysis.py"
     ],
-    "known_obstruction": "Only the d_ij=0 coefficient subfamily is uniformly excluded from AS. The full five-parameter one-point Boolean open has a global frame and is a symmetric-component boundary, but its generic quintic rank is still pending. First-three-quadric variations, general one-basepoint systems and rho=3,4,5 remain open.",
-    "state_of_claim": "Global evaluation frame, Hilbert function and closure/nonsymmetry proofs are written; exact field identities and integer evaluation determinants verified. A cross-term rational fixture is finite Frobenius, quartic exact and quintic non-Koszul with defect7. The shared exact analysis engine was regressed on the two-variable case (77,36; square6). Five-variable canonical computation is running and has no completed rank certificate yet.",
+    "known_obstruction": "Uniform exclusion is proved only for the fixed Boolean-net one-point coefficient family. Arbitrary reduced octads now have a frame and classical orthogonal coordinates, but their general quintic rank and all remaining boundary AS points remain open. No global low-rank AS coverage.",
+    "state_of_claim": "Five-variable exact full-pivot d2 computation completed with rank77 and a persisted certificate. Generic d3 rank36 is deduced from the universal upper bound and the already checked point; optional direct five-variable full homology was not completed or needed for exclusion. General-position rational octad passed finite Frobenius, all quartic dimensions35, d2/d3 ranks77/36, square-kernel6 and combined rank42. General geometric frame and restricted orbit-congruence proofs are written.",
     "handoff_rule": "Overwrite with the current next concrete research action before task termination; no chronological status log."
   },
   "execution_policy": {

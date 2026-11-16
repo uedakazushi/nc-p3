@@ -25,6 +25,8 @@ REQUIRED = [
     'computations/verify_symmetric_specialization.py', 'research/symmetric_specialization_certificate.json',
     'computations/verify_singular_symmetrizer_boundary.py', 'research/singular_symmetrizer_boundary_certificate.json',
     'computations/verify_permutation_support_limits.py', 'research/permutation_support_limits_certificate.json',
+    'sections/reduced_quadric_boundary.tex', 'computations/verify_reduced_octad_frame.py',
+    'research/reduced_octad_frame_certificate.json', 'research/boolean_quadric_homology_certificate.json',
     'sections/boolean_quadric_boundary.tex', 'computations/boolean_quadric_frame.py',
     'computations/quintic_field_analysis.py', 'computations/verify_boolean_quadric_frame.py',
     'computations/verify_boolean_quadric_homology.py', 'research/boolean_quadric_frame_certificate.json',

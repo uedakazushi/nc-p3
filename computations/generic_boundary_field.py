@@ -112,3 +112,41 @@ def quotient(relations,start,degree):
     assert all(row.get(j,zero)==int(i==k)
                for i,row in enumerate(basis) for k,j in enumerate(free))
     return basis,free
+
+
+def sparse_full_pivot_rank(columns,progress=None):
+    """Exact column elimination, choosing low-complexity FLINT field pivots.
+
+    Only the pivot order differs from echelon(); this routine returns a rank,
+    not a nullspace or a monomial quotient frame.
+    """
+    remaining=[{i:x for i,x in column.items() if x} for column in columns]
+    remaining=[column for column in remaining if column]
+    rank=0
+    while remaining:
+        row_count={}
+        for column in remaining:
+            for row in column:row_count[row]=row_count.get(row,0)+1
+        best=None;chosen=None
+        for j,column in enumerate(remaining):
+            for i,value in column.items():
+                score=(len(value.n)+len(value.d),value.n.total_degree()+value.d.total_degree(),
+                       (len(column)-1)*(row_count[i]-1),len(column))
+                if best is None or score<best:
+                    best,chosen=score,(j,i)
+        j,i=chosen
+        pivot_column=remaining.pop(j)
+        pivot=pivot_column[i]
+        normalized={row:x/pivot for row,x in pivot_column.items() if row!=i}
+        updated=[]
+        for column in remaining:
+            scale=column.pop(i,zero)
+            if scale:
+                for row,value in normalized.items():
+                    total=column.get(row,zero)-scale*value
+                    if total:column[row]=total
+                    else:column.pop(row,None)
+            if column:updated.append(column)
+        remaining=updated;rank+=1
+        if progress is not None and rank%16==0:progress(rank)
+    return rank

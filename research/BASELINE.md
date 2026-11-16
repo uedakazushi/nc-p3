@@ -165,3 +165,6 @@ https://arxiv.org/pdf/1703.00438v5 、本文Theorem 1.1（p.2）と導入の定�
 
 ### 有限切断とtrivial extensionの比較
 Joseph Grant, *Higher zigzag algebras*, Documenta Mathematica 24 (2019), 749–814, doi:10.4171/DM/693. 出版社PDF https://ems.press/content/serial-article-files/26472 の Definitions 2.3, 2.5 とその直前の符号自己同型を確認した。定義は有限大域次元のKoszul入力を要求する。本稿の四層切断ではその仮定を自前で証明し、長さ符号が内部自己同型なので通常のtrivial extensionへ移す。構成自体や自動的なKoszul性の新規性は主張しない。一般のrepresentation-infinite条件との同値はここでは使用・確認していない。
+
+### 相異なる八点完全交叉の自己付随性
+D. Plaumann, B. Sturmfels, C. Vinzant, *Quartic curves and their bitangents*, Journal of Symbolic Computation 46 (2011), 712–733, doi:10.1016/j.jsc.2011.01.007. 著者公開の出版社PDF https://math.berkeley.edu/~bernd/JSCquartics.pdf の表題・書誌と Theorem 3.10 を確認した。同定理は一般位置の八点を仮定し、Cayley octadとGale自己付随性の同値を述べる。本稿では完全交叉から直交表示へ向かう方向を、評価フィルトレーションと非零重みから自前で証明する。任意の直交行列が正則八点配置を与えること、点配置同値がindexed代数の完全同型判定であることは主張しない。

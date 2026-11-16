@@ -8,7 +8,7 @@ import sympy as s
 from flint_rational_function import rational_function_field
 from boolean_quadric_frame import data,evaluation_tensor
 from verify_nonkoszul_boundary import tensor_at
-from frobenius_tensor import (digits,reconstructed_windows,orthogonal_windows,
+from frobenius_tensor import (digits,flatten,reconstructed_windows,orthogonal_windows,
     nullspace_sparse,insertion_columns,exact_rank)
 from verify_quartic_obstruction import quintic_d3_rank
 
@@ -61,6 +61,7 @@ def main():
     cross_sub=dict(zip(s.symbols('u v a b c'),(2,3,5,7,11)))
     cross={i:F(x.as_expr().subs(cross_sub)) for i,x in w.items()
            if x.as_expr().subs(cross_sub)!=0}
+    assert [flatten(cross,(i,)) for i in range(4)]==[4]*4
     relations=reconstructed_windows(cross);dual=orthogonal_windows(relations)
     intersections=[[len(nullspace_sparse(insertion_columns(dual,i,n),4**n))
                     for n in (3,4)] for i in range(4)]

@@ -13,7 +13,7 @@ def combine(columns,vector,zero):
     return result
 
 
-def analyze_quintic(relations,K):
+def analyze_quintic(relations,K,square_index=3,rank_strategy="columns",d2_only=False):
     field.K,field.zero,field.one=K,K.zero,K.one
     zero,one=K.zero,K.one
     start=time.monotonic()
@@ -30,8 +30,13 @@ def analyze_quintic(relations,K):
                     value=coefficient*row.get(64*b+word,zero)
                     if value:column[35*a+j]=column.get(35*a+j,zero)+value
             d2.append({i:x for i,x in column.items() if x})
-    rank2=len(field.echelon(d2))
+    rank2=(field.sparse_full_pivot_rank(d2,lambda r:print("d2 pivot progress",r,flush=True))
+           if rank_strategy=="full" else len(field.echelon(d2)))
     print('Exact quintic d2 rank:',rank2,flush=True)
+    if d2_only:
+        return {'d2_rank':rank2,'domain_dimension':120,'codomain_dimension':140,
+                'C3_dimension':20,'C4_dimension':35,
+                'elapsed_seconds':round(time.monotonic()-start,3)}
     dual=field.dual_windows(relations)
     w3=field.nullspace(field.inserted(dual,0,3),64)
     assert len(w3)==4
@@ -71,13 +76,13 @@ def analyze_quintic(relations,K):
             d3.append({i:x for i,x in column.items() if x})
     rank3=len(field.echelon(d3))
     assert all(not combine(d2,col,zero) for col in d3)
-    multiplication=[{j:row[192+word] for j,row in enumerate(q4) if row.get(192+word,zero)}
+    multiplication=[{j:row[64*square_index+word] for j,row in enumerate(q4) if row.get(64*square_index+word,zero)}
                     for word in free3]
     multiplication_rank=len(field.echelon(multiplication))
     multiplication_rows=[{j:col[i] for j,col in enumerate(multiplication) if i in col} for i in range(35)]
     annihilator=field.nullspace(multiplication_rows,20)
     assert len(annihilator)==20-multiplication_rank
-    square=coordinates({15:one})
+    square=coordinates({5*square_index:one})
     cycles=[{20*i+j:x*y for i,x in square.items() for j,y in col.items()} for col in annihilator]
     assert all(not combine(d2,col,zero) for col in cycles)
     combined_rank=len(field.echelon(d3+cycles))

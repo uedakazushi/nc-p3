@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の周期構造と代数的変形
 
-**2026-11-17 / v30。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-17 / v31。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 最初に読む
 
@@ -155,7 +155,7 @@ python3 computations/verify_generic_one_point_boundary.py --output research/gene
 
 交差項を含む、固定Boolean完全交叉上の全一基点二次式には、五係数域の全体で正則な評価フレームを構成した。
 可換商のHilbert列は全域で `(1,4,6,4,1,1,...)`。Frobenius条件を通る点は対称チャート外にある。
-この広い族の一般五次階数は計算中であり、AS排除はまだ結論していない。
+この五係数域の一般五次$d_2$階数も77と厳密計算し、全域で標準型Koszul AS点を排除した。
 
 ```bash
 python3 computations/verify_boolean_quadric_frame.py --output research/boolean_quadric_frame_certificate.json
@@ -163,3 +163,12 @@ python3 computations/verify_boolean_quadric_homology.py --output research/boolea
 ```
 
 後者は五変数の厳密消去で、上の二変数検算より重い。
+
+相異なる八点の任意の三二次式完全交叉にも、一基点境界の評価フレームを拡張した。
+点配置は列スカラーと射影変換の後に `[I | M]`, `M M^T = I` と表示できる（古典的な自己付随性に対応）。
+一般位置の有理数標本でも、有限Frobenius・四次正確・五次障害7を検算した。
+一般の八点配置全体のAS排除は未解決である。
+
+```bash
+python3 computations/verify_reduced_octad_frame.py --output research/reduced_octad_frame_certificate.json
+```

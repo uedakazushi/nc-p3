@@ -2,6 +2,7 @@
   "result": "PASS",
   "arithmetic": "exact rational functions QQ(u,v), FLINT rational multivariate polynomial gcd",
   "backend_crosscheck": "32 exact operations compared with SymPy",
+  "rank_strategy": "full",
   "quadric_coefficients": [
     "1",
     "u",
@@ -30,5 +31,5 @@
     "Finite-Frobenius and quartic-exact exceptional strata are not completely classified.",
     "The generic mixed seventh class has not been put into a compact closed formula."
   ],
-  "elapsed_seconds": 20.542
+  "elapsed_seconds": 11.999
 }

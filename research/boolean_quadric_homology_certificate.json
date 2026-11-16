@@ -1,0 +1,36 @@
+{
+  "result": "PASS",
+  "arithmetic": "exact QQ(u,v,a,b,c), no sampling or interpolation",
+  "point_values": [
+    "1",
+    "u",
+    "v",
+    "a",
+    "b",
+    "c",
+    "a+b+c-1-u-v"
+  ],
+  "domain": "all seven listed values nonzero",
+  "frame": "global evaluation frame rescaled by face products, which are units on the domain",
+  "generic_frobenius_quartic_exact": "nonempty open established by the checked old point (1,1,2,2,2)",
+  "rank_strategy": "full",
+  "quintic": {
+    "d2_rank": 77,
+    "domain_dimension": 120,
+    "codomain_dimension": 140,
+    "C3_dimension": 20,
+    "C4_dimension": 35,
+    "elapsed_seconds": 6.593
+  },
+  "full_homology_computed": false,
+  "d3_upper_bound_on_quartic_exact_Frobenius_open": 36,
+  "generic_d3_rank": 36,
+  "generic_d3_rank_reason": "universal upper bound36 and the checked old point attaining36; rank semicontinuity",
+  "H2_lower_bound_everywhere_on_that_open": 7,
+  "uniform_AS_exclusion": true,
+  "specialization_argument": "On the Frobenius/quartic-exact open generic ranks bound every specialization; outside it necessary AS conditions already fail.",
+  "limits": [
+    "The first three quadrics remain the fixed Boolean complete intersection.",
+    "All special finite-Frobenius strata and full indexed isomorphisms are not classified."
+  ]
+}
