@@ -585,6 +585,12 @@
       "status": "proved",
       "statement": "For a cubic-frame tensor with dim B3=4, S2 is canonically B4 dual, with matrix rank equal to first catalecticant rank. A one-basepoint B4-dual line yields rank-one symmetrizers. Any two invertible negative symmetrizers already imply full alternation. Projective rank-one elements of S2 correspond exactly to basepoints as closed points. In the finite-Frobenius partial-symmetric chart, absence of rank-one elements is equivalent to membership in the symmetric CI branch; the complementary basepoint branch is exhaustive but its AS status remains open. Globally, two invertible positive witnesses force either the symmetric CI branch or a remaining symmetrizer space consisting of singular matrices and containing a rank-one matrix. Mixed positive/negative invertible witnesses at different positions are impossible by the braid relation.",
       "proof": "sections/reduced_quadric_boundary.tex: prop:partial-symmetrizer-quartics and cor:one-basepoint-symmetrizer; sections/frobenius_tensor.tex: cor:two-alternating-witnesses; cor:basepoint-rank-one-symmetrizer and cor:partial-symmetric-exhaustive-split; prop:two-positive-global-split and cor:mixed-symmetry-witness-exclusion"
+    },
+    {
+      "id": "REDUCED-ONEPOINT-COMMUTATIVE-BETTI",
+      "status": "proved",
+      "statement": "For every reduced eight-point quadric CI net and fourth quadric vanishing only at one point, ann_S(q)=(R/I_p)(-3) and the minimal R-resolution of B has free ranks/degrees 1,4(-2),6(-4)+1(-5),7(-6),3(-7). This does not yet identify the seven commutative syzygies with quintic four-window homology.",
+      "proof": "sections/reduced_quadric_boundary.tex: prop:reduced-onepoint-commutative-betti; lem:one-basepoint-cubic-socle"
     }
   ],
   "document_paths": {
@@ -657,7 +663,7 @@
     "task_id": "Z4-AS-004",
     "status": "dominant_product_net_chart_proved_eight_variable_rank_pending",
     "objective": "Determine whether the full finite-Frobenius rank-six boundary of the symmetric CI orbit contains Koszul AS points not symmetrizable; then expand structural classification to remaining rho=3,4,5 and higher-rank branches.",
-    "immediate_next_action": "Seek a structural quintic obstruction for the rank-one residual branch in prop:two-positive-global-split, using the four-layer trivial extension, S2=B4 dual, and the three-dimensional degree-three socle in the generic one-basepoint quotient. The eight-variable guided run stalled after 64/221 relation pivots for more than ten minutes and was terminated without a rank certificate; avoid repeating the same run unboundedly. The exact reproducer computations/verify_product_net_homology.py --projection guided --reference generic remains available. A rank r<84 would activate prop:product-net-universal-obstruction-transfer, but it is not yet proved. If a structural argument stalls, move to candidates with at most one positive and at most one negative invertible witness; two negative witnesses already give the polynomial class.",
+    "immediate_next_action": "Use prop:reduced-onepoint-commutative-betti and the four-layer trivial extension to construct a chain comparison from the universal seven commutative degree-six third syzygies to the quintic four-window Koszul H2. Prove injectivity or produce at least one nonzero class on a dense reduced-onepoint chart; then use prop:product-net-universal-obstruction-transfer for all basepoint partial-symmetric fibers. The eight-variable guided rank run stalled after 64/221 relation pivots and was terminated; do not repeat it indefinitely. It remains reproducible via computations/verify_product_net_homology.py --projection guided --reference generic. The universal seven-dimensional four-window obstruction is still unproved. If this comparison stalls, move to candidates with at most one positive and at most one negative invertible witness.",
     "read_first": [
       "research/plan_ja.tex",
       "AGENTS.md",

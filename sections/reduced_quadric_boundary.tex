@@ -216,6 +216,47 @@ $\ell(p)b(p)$に対応する。$\ell(p)\ne0$となる一次式があるので、
 三次評価は非零であり、$B$は次数1で生成されるから、これがsocleそのものである。
 \end{proof}
 
+\begin{proposition}[縮約一点境界の可換最小自由分解]
+\label{prop:reduced-onepoint-commutative-betti}
+相異なる八点完全交叉の三二次式を$Q$、その一点$p$だけで消える第四二次式を$q$とし、
+$R=\operatorname{Sym}(V^*)$、$B=R/(Q,q)$とする。
+$B$の$R$上の次数付き最小自由分解は次の形を持つ：
+\[
+0\longrightarrow R(-7)^3\longrightarrow R(-6)^7
+\longrightarrow R(-4)^6\oplus R(-5)
+\longrightarrow R(-2)^4\longrightarrow R\longrightarrow B\longrightarrow0.
+\]
+従って可換側の三次syzygyの次数6部分のBetti数は7である。
+これを四窓Koszul複体の五次ホモロジーと同定する主張は含めない。
+\end{proposition}
+\begin{proof}
+$S=R/Q$とする。三次以上の評価は八点の全関数を与え、二次以下には一点だけに支持される
+非零評価はない。従って$q$の零化イデアルは
+\[
+ (0:_S q)\simeq (R/I_p)(-3)
+\]
+である。ここで$I_p$は$p$の三つの一次式で生成されるイデアルである。
+実際、三次の一点指示関数を一つ選べば、$p$で消えない一次式の乗法で
+各高次の一点支持部分を生成し、$I_p$はその全てを殺す。
+
+四二次式のKoszul複体$K(Q,q)$は、$Q$のKoszul分解に$q$を作用させた写像錐なので、
+そのホモロジーは$H_0=B$、$H_1=(R/I_p)(-5)$だけである。
+$R/I_p$の三一次式Koszul分解を、この$H_1$を持ち上げる比較写像で付加して殺すと、
+$B$の自由分解の各項は
+\[
+\begin{aligned}
+ F_0&=R,&F_1&=R(-2)^4,\\
+ F_2&=R(-4)^6\oplus R(-5),&F_3&=R(-6)^4\oplus R(-6)^3,\\
+ F_4&=R(-8)\oplus R(-7)^3,&F_5&=R(-8)
+\end{aligned}
+\]
+となる。比較写像は自由性と$K$の高次ホモロジーの消滅から順に持ち上がる。
+四変数多項式環の大域次元は4なので、この長さ5の分解は最小ではない。
+次数が等しい隣接直和因子は$F_5$と$F_4$の$R(-8)$だけであるから、
+その微分は非零スカラーを持ち、この一対が可縮直和因子となる。
+これを除けば残る全ての微分成分は正次数であり、表示した分解が最小となる。
+\end{proof}
+
 \begin{proposition}[三因子対称チャートでの四因子同値判定]
 \label{prop:partial-symmetric-orbit-congruence}
 四次元の二次式空間$L,L'$から三次双対基底で作る二つの三因子対称テンソル$w,w'$について、
