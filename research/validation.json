@@ -25,6 +25,11 @@
       "command": "python3 scripts/check_project.py",
       "result": "NOT_RUN_AFTER_EDIT",
       "scope": "Repository structural validator not run during this checkpoint; do not infer a PASS from prior runs."
+    },
+    {
+      "command": "SymPy exact symbolic determinant of the 20x20 cubic frame for L_{c,t} in the working container",
+      "result": "PASS",
+      "scope": "For L=<e_i^2-e_i e3 (i=0..2), e3*(c0 e0+c1 e1+c2 e2+t e3)>, 16 cubic annihilation equations plus 4 normalization coordinates (012,133,233,333) have determinant -2*c0^2*c1*c2, identically independent of t. This guarantees the cubic frame on the open c0*c1*c2!=0, not finite-Frobenius or AS regularity of the generalized family."
     }
   ],
   "proof_review": {
@@ -44,9 +49,10 @@
     "scope": "New claim is an explicit exact calculation in the present family, with no asserted novelty relative to general Koszul-homology literature."
   },
   "github_save": {
-    "result": "PENDING_FINAL_READBACK",
+    "result": "PASS_READBACK_OF_CONTENT",
     "branch": "main",
-    "scope": "Mathematical source edits committed to main; remote final readback to follow."
+    "validated_content_commit": "373fe48910c8926894fad83d71a113227f08c30a",
+    "scope": "Read back seven content/source/state files from main and verified manuscript v27, input of new section, exact-cycle theorem and functional, verifier checks, updated research notes and next-task state. This receipt will be committed separately."
   },
   "library_save": {
     "result": "not_attempted",
