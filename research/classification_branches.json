@@ -23,7 +23,8 @@
         "OPPOSITE-HIGH"
       ],
       "coverage": "disjoint exhaustive split proved in prop:opposite-rank-split",
-      "normal_forms": "unresolved"
+      "normal_forms": "unresolved",
+      "witness_partition": "Any negative witness: polynomial indexed class. At least two positive witnesses: symmetric CI chart. Residual: no negative and at most one positive. These predicates exhaust AS objects but do not give a complete residual classification."
     },
     {
       "id": "OPPOSITE-LOW",
@@ -50,8 +51,8 @@
       "normal_forms": "unresolved",
       "regularity_of_all_tensor_candidates": "unresolved",
       "complete_isomorphism": "unresolved",
-      "necessary_witness_restrictions": "At most one positive and at most one negative invertible symmetrizer witness; if both signs occur they have the same position. Every three-factor-symmetrizable AS object is already in the symmetric CI chart; cor:two-positive-as-recognition.",
-      "adjacent_witness_restriction": "No adjacent invertible witness of either sign at any cyclic start; lem:adjacent-witness-rank-six."
+      "necessary_witness_restrictions": "No invertible negative witness at any position; at most one positive witness. One negative witness already recognizes the polynomial indexed class; cor:one-negative-frobenius-recognition.",
+      "adjacent_witness_restriction": "No adjacent witness of either sign. A positive opposite witness requires rho<=10; rho>=11 has no invertible witnesses at all."
     },
     {
       "id": "SYMMETRIC-CHART",
@@ -87,7 +88,7 @@
       "id": "POLYNOMIAL-ORBIT",
       "parent": "LOW-RESIDUAL",
       "predicate": "canonical tensor orbit meets Lambda^4 V",
-      "membership": "Any two negative-swap linear spaces contain invertible matrices; cor:two-alternating-witnesses.",
+      "membership": "A single negative-swap symmetrizer space containing an invertible matrix suffices for every finite-Frobenius candidate, cor:one-negative-frobenius-recognition.",
       "normal_forms": "one indexed class: commutative polynomial ring",
       "regularity_of_all_chart_fibers": "proved",
       "complete_isomorphism": "one class",
@@ -104,8 +105,8 @@
       "regularity_of_all_tensor_candidates": "unresolved",
       "complete_isomorphism": "unresolved",
       "excluded_subfamilies": "contains no quantum polynomial indexed class, by quantum rank formula and its two rank-six normal forms; also no member of the full polynomial-derivation Ore chart; neither uniform indexed commuting nor anticommuting Ore subclass contributes a point; entire diagonal quantum-three-generator Ore chart excluded, even up to indexed isomorphism; also avoids the proven G-invariant low-rank open neighborhood of the specified Clifford point C0; every three-factor-symmetrizable candidate with a basepoint is non-Koszul by the signed-reversal Euler obstruction, thm:partial-symmetric-basepoint-exclusion",
-      "necessary_witness_restrictions": "At most one positive and at most one negative invertible symmetrizer witness; if both signs occur they have the same position. Every three-factor-symmetrizable AS object is already in the symmetric CI chart; cor:two-positive-as-recognition.",
-      "adjacent_witness_restriction": "Any adjacent witness forces rho=6. Thus rho3/4/5 has none. A single adjacent negative witness at rho6 gives a generically middle-exact linear matrix complex with ranks(3,3), cor:single-negative-ranks-three; global exactness and polynomial uniqueness remain open."
+      "necessary_witness_restrictions": "No invertible negative witness at any position; at most one positive witness. One negative witness already recognizes the polynomial indexed class; cor:one-negative-frobenius-recognition.",
+      "adjacent_witness_restriction": "Any adjacent positive witness forces rho6. Thus rho3/4/5 has no adjacent witnesses of either sign. Negative witnesses are entirely excluded from this residual by the three-form rigidity theorem."
     }
   ],
   "limits": [

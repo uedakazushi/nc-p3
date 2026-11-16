@@ -114,6 +114,9 @@ $\rk\partial_4\leq480-136-5=339$となる。
 他の含意は既存の線型対称化判定による。
 負符号二証明書の場合は系\ref{cor:two-alternating-witnesses}を適用する。
 \end{proof}
+この段階の負符号の必要条件は、次節の系\ref{cor:one-negative-frobenius-recognition}で
+一証明書による完全な認識へ強められる。
+
 
 \begin{remark}[検算と未確定の精密値]
 \path{computations/verify_one_return_involution.py}は有理数境界点で
@@ -200,7 +203,8 @@ $D=0$でもあるから、$(0,v)$は全ての$P(x)$の共通核となり、矛�
  \xrightarrow{P(x)}\mathcal O^4
 \]
 が一般点で中央完全な線型複体を与える。
-この一般点完全性だけから全点完全性や可換多項式のindexed類への帰着は結論しない。
+この一般点完全性だけから全点完全性は結論しないが、
+次節の定理\ref{thm:partially-alternating-three-forms}はKlein二次曲面を使って残余も決定する。
 \end{corollary}
 \begin{proof}
 $F$の列階数6と$V_2$の一因子階数4から、$P$は前補題の二つの非退化条件を満たす。

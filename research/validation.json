@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-17",
-  "version": 37,
+  "version": 38,
   "reviewed_input": {
-    "source_commit": "5640f37710ccaf040b59a3cfb979f275e50c13e3"
+    "source_commit": "6d7791c32f6722227badf49cdb0114e69bbf51db"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Proved universal basepoint three-factor-symmetric non-Koszulity by signed reversal and negative Euler characteristic. The complete AS criterion within that branch and two-positive-witness recognition follow; the generic d4 upper bound<=339 is proved without computing its exact rank. Full classification remains open. Proved adjacent-witness rho=6 and a linear matrix reduction for one adjacent negative witness; the nondegenerate four-variable4x6 block argument forces generic ranks(3,3). No global exactness, polynomial-uniqueness or propagation claim for that slice.",
+    "scope": "Proved the three normal forms for partially alternating tensors with the other pair ranks6, and excluded both compression forms from finite Frobenius using nine explicit cubic monomials. A single negative invertible witness now recognizes the polynomial class. Also established opposite positive witnesses on the known signed-Ore chart, so the residual single-positive AS branch is nonempty. Full classification remains open.",
     "new_mathematical_theorem": true
   },
   "checks": [
@@ -60,15 +60,30 @@
       "command": "python3 computations/verify_single_negative_slice.py --output research/single_negative_slice_certificate.json",
       "result": "PASS",
       "scope": "Exact opposite rank-six factorization, all polarized zero-composition identities, all maximal minors zero and rank-three witness for the alternating determinant control. Not a proof that every matrix slice is polynomial."
+    },
+    {
+      "command": "PYTHONPATH=/workspace/.cache/nc-p3-python python3 computations/verify_negative_witness_rigidity.py --output research/negative_witness_rigidity_certificate.json",
+      "result": "PASS",
+      "scope": "Pfaffian matrix identities, generated Clifford algebra dimension64, identity-wedge opposite rank16, singleton/cut ranks of all three normal forms, exact W3/W4 and complete cubic kernel bases; compression forms fail Frobenius."
+    },
+    {
+      "command": "python3 computations/verify_opposite_witness_ore.py --output research/opposite_witness_ore_certificate.json",
+      "result": "PASS",
+      "scope": "All12-parameter swap02/swap13 polynomial identities; independent top-tensor reconstruction at two fixtures, rho8 and positive/negative witness tests. Existing all-fiber AS theorem supplies regularity."
+    },
+    {
+      "command": "bash scripts/cloud_preflight.sh --tex",
+      "result": "BLOCKED_TEX_DEPENDENCY",
+      "scope": "Current Python/SymPy/source checks pass; ltjsarticle.cls is still missing. No PDF compilation or visual check."
     }
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed bar count direct-summand preservation, homological shift by one, two-sided projective resolution, internal-degree-five position constraints, both contraction signs, d2 surjectivity, Euler characteristic, and rank-specialization on the universal cubic-frame bundle. No identification of the seven commutative syzygies with this Tor is claimed. Reviewed point side-complex homology7 and3, independent cube kernels for two points, the jet filtration with truncated quotient and length-two bound42, absence of incoming top differential, conversion to the quartic35 obstruction, and the generic regular-sequence/smooth incidence proof of reduced-net coverage. Reviewed the seven ternary elimination conditions and point-quotient rank identities. Reviewed signed word reversal with tau interchanging first/last deconcatenations, the Koszul sign (-1)^(ab), point-subcomplex preservation, eigenspace dimensions60/200/135 including twisted flip on Q2, and Euler boundH3>=5. Reviewed conversion to nonlinear Tor4,5 and two-positive AS recognition. No full tensor-classification or exact generic rank claim. Reviewed adjacent-transposition action on pair-cut ranks, polarized skew identity from the rank factorization, and the rank-one matrix-space dichotomy excluding generic rank1; this leaves exactly six necessary rank pairs. Reviewed the rank2 normal form, D=0 and CB=0 from Schur-complement coefficients, rank1-space dichotomy for C, and the three-variable row b(x) producing a forbidden common kernel; applied also to Q transpose. Retained the independent Pluecker-gcd rank4 exclusion as an auxiliary note."
+    "scope": "Reviewed bar count direct-summand preservation, homological shift by one, two-sided projective resolution, internal-degree-five position constraints, both contraction signs, d2 surjectivity, Euler characteristic, and rank-specialization on the universal cubic-frame bundle. No identification of the seven commutative syzygies with this Tor is claimed. Reviewed point side-complex homology7 and3, independent cube kernels for two points, the jet filtration with truncated quotient and length-two bound42, absence of incoming top differential, conversion to the quartic35 obstruction, and the generic regular-sequence/smooth incidence proof of reduced-net coverage. Reviewed the seven ternary elimination conditions and point-quotient rank identities. Reviewed signed word reversal with tau interchanging first/last deconcatenations, the Koszul sign (-1)^(ab), point-subcomplex preservation, eigenspace dimensions60/200/135 including twisted flip on Q2, and Euler boundH3>=5. Reviewed conversion to nonlinear Tor4,5 and two-positive AS recognition. No full tensor-classification or exact generic rank claim. Reviewed adjacent-transposition action on pair-cut ranks, polarized skew identity from the rank factorization, and the rank-one matrix-space dichotomy excluding generic rank1; this leaves exactly six necessary rank pairs. Reviewed the rank2 normal form, D=0 and CB=0 from Schur-complement coefficients, rank1-space dichotomy for C, and the three-variable row b(x) producing a forbidden common kernel; applied also to Q transpose. Retained the independent Pluecker-gcd rank4 exclusion as an auxiliary note. Reviewed nonconstant outer kernel maps and Klein rank2 condition; rank3 adjugate exclusion; rank2 square compression via CAB=0; the two three-space normalizations and shear elimination; the split Clifford algebra Mat8 and parity-preserving-or-swapping conjugacy of matrix factorizations; exclusion of identity wedge by opposite rank16; and the explicit nine-monomial cubic intersection obstruction after canonical cyclic reordering. No formalization or independent referee review."
   },
   "tex": {
-    "result": "NOT_RUN",
-    "scope": "Last preflight found ltjsarticle.cls missing; no current PDF generated."
+    "result": "BLOCKED_TEX_DEPENDENCY",
+    "scope": "Current --tex preflight confirms ltjsarticle.cls missing; no PDF generated."
   },
   "visual_inspection": {
     "result": "NOT_RUN"
@@ -80,15 +95,15 @@
   "github_save": {
     "result": "PENDING",
     "branch": "main",
-    "scope": "Universal-exclusion checkpoint5640f37710ccaf040b59a3cfb979f275e50c13e3 fetched with HEAD equality. New single-witness reduction awaiting checkpoint."
+    "scope": "Previous checkpoint6d7791c32f6722227badf49cdb0114e69bbf51db fetched with HEAD equality. Current negative-rigidity proof and residual-Ore anchor awaiting checkpoint."
   },
   "library_save": {
     "result": "not_attempted",
     "scope": "GitHub-first policy."
   },
   "open_mathematics": [
-    "Remaining AS tensors outside symmetric CI/polynomial branches have at most one witness of each sign; their low-rank coverage and classification remain unresolved.",
-    "Exact generic one-return H3=7 is not proved, but is no longer required to exclude the basepoint branch.",
-    "Full moduli components, residual indexed isomorphism and complete classification remain unresolved."
+    "Adjacent single-positive witness propagation or counterexamples at rho6.",
+    "Exhaustive classification of opposite-positive and fully witness-free AS tensors, especially rho3/4/5.",
+    "Full indexed moduli, components and complete classification remain unresolved."
   ]
 }

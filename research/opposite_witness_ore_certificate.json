@@ -1,0 +1,80 @@
+{
+  "result": "PASS",
+  "arithmetic": "exact polynomial identities in all12 parameters, plus rational fixtures",
+  "swap02_identity_all_parameters": true,
+  "swap13_identity_all_parameters": true,
+  "fixtures": [
+    {
+      "H": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "G": [
+        1,
+        0,
+        0
+      ],
+      "rho": 8,
+      "positive_dimensions": [
+        0,
+        1,
+        0
+      ],
+      "negative_dimensions": [
+        0,
+        0,
+        0
+      ],
+      "positive_invertible": [
+        false,
+        true,
+        false
+      ]
+    },
+    {
+      "H": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "G": [
+        1,
+        2,
+        3
+      ],
+      "rho": 8,
+      "positive_dimensions": [
+        0,
+        1,
+        0
+      ],
+      "negative_dimensions": [
+        0,
+        0,
+        0
+      ],
+      "positive_invertible": [
+        false,
+        true,
+        false
+      ]
+    }
+  ],
+  "limits": [
+    "AS regularity and the rank formula use the existing signed-Ore theorem.",
+    "This does not cover every single-positive-witness AS tensor."
+  ]
+}

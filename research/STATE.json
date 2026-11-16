@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-17",
-  "version": 37,
+  "version": 38,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -621,7 +621,7 @@
     {
       "id": "PARTIAL-SYMMETRIC-AS-CLASSIFIED",
       "status": "proved_and_targeted_exact_regressions_passed",
-      "statement": "For every basepoint quadric space with hB=(1,4,6,4) through degree3, the point-quotient one-return Koszul complex has a signed word-reversal involution. Its negative block dimensions60,200,135 force H3>=5, hence Tor^(T_L)_(4,5)>=5 and non-Koszulity. Thus every finite-Frobenius three-factor-symmetrizable AS object is in the symmetric CI chart. Any two positive invertible witnesses suffice for symmetric AS recognition. All remaining AS objects outside symmetric and polynomial branches have at most one positive and at most one negative witness, at the same position if both exist. The generic one-return d4 bound<=339 follows without a full symbolic rank computation.",
+      "statement": "For every basepoint quadric space with hB=(1,4,6,4) through degree3, the point-quotient one-return Koszul complex has a signed word-reversal involution. Its negative block dimensions60,200,135 force H3>=5, hence Tor^(T_L)_(4,5)>=5 and non-Koszulity. Thus every finite-Frobenius three-factor-symmetrizable AS object is in the symmetric CI chart. Any two positive invertible witnesses suffice for symmetric AS recognition. All remaining AS objects outside symmetric and polynomial branches have at most one positive witness; the subsequent single-negative rigidity theorem excludes every negative witness. The generic one-return d4 bound<=339 follows without a full symbolic rank computation.",
       "proof": "sections/partial_symmetric_as.tex: thm:partial-symmetric-basepoint-exclusion, cor:partial-symmetric-as-complete, cor:two-positive-as-recognition, cor:product-net-rank-bound",
       "verification": [
         "computations/verify_one_return_involution.py",
@@ -632,13 +632,31 @@
     {
       "id": "ADJACENT-WITNESS-RANK-SLICE",
       "status": "proved_with_polynomial_control",
-      "statement": "Any adjacent positive or negative invertible witness forces rho=6. A single adjacent negative witness gives R0=Lambda^2 V and linear P(4x6),Q(6x4) with P(x)Q(y)+P(y)Q(x)=0. Nondegeneracy and a block argument rule out generic rank<=2 for P or Q transpose; r+s<=6 therefore forces r=s=3. This gives a generically middle-exact linear sheaf complex, not a proof of global exactness or polynomial uniqueness.",
+      "statement": "Any adjacent positive or negative invertible witness forces rho=6. A single adjacent negative witness gives R0=Lambda^2 V and linear P(4x6),Q(6x4) with P(x)Q(y)+P(y)Q(x)=0. Nondegeneracy and a block argument rule out generic rank<=2 for P or Q transpose; r+s<=6 therefore forces r=s=3. This gives a generically middle-exact linear sheaf complex, not a proof of global exactness or polynomial uniqueness. The remaining negative slice is now fully settled by the subsequent Klein/Clifford normal-form theorem and Frobenius exclusion.",
       "proof": "sections/frobenius_tensor.tex:lem:adjacent-witness-rank-six; sections/partial_symmetric_as.tex:prop:single-negative-linear-complex; lem:no-rank-two-four-by-six and cor:single-negative-ranks-three",
       "verification": [
         "computations/single_negative_slice.py",
         "computations/verify_single_negative_slice.py",
         "research/single_negative_slice_certificate.json"
       ]
+    },
+    {
+      "id": "SINGLE-NEGATIVE-WITNESS-RIGIDITY",
+      "status": "proved_with_exact_normal_form_and_Clifford_checks",
+      "statement": "A partially alternating four-tensor with singleton ranks4 and the other two pair-cut ranks6 has exactly three normal forms: alternating volume, compressionT4, compressionT5, with first-pair ranks6,4,5. The proof uses a rank-(3,3) linear complex, rank<=2 on the Klein quadric, square-rank2 compression, and the split six-dimensional Clifford algebra Mat8 for the full-rank matrix factorization. Compression forms have nine explicit independent cubic intersection monomials in canonical opposite-pair order, hence fail finite Frobenius. Thus ANY one invertible negative symmetrizer witness in a finite-Frobenius candidate recognizes the polynomial indexed class, without assuming Koszulity. All other AS objects have no negative witness.",
+      "proof": "sections/single_negative_rigidity.tex: thm:partially-alternating-three-forms and cor:one-negative-frobenius-recognition",
+      "verification": [
+        "computations/negative_witness_normal_forms.py",
+        "computations/verify_negative_witness_rigidity.py",
+        "research/negative_witness_rigidity_certificate.json"
+      ]
+    },
+    {
+      "id": "OPPOSITE-POSITIVE-ORE-ANCHOR",
+      "status": "proved_symbolic_identity_and_exact_fixtures",
+      "statement": "All parameters of the known signed anticommutative Ore chart have top tensors invariant under02 and13 swaps. For nonzero outerG, rho8 and exactly the opposite positive position can contain invertibles; no negative witness exists. This shows the single-positive AS branch is genuinely nonempty and must not be universally excluded.",
+      "proof": "sections/anticommutative_ore.tex:prop:ore-opposite-positive-witness",
+      "verification": "computations/verify_opposite_witness_ore.py; research/opposite_witness_ore_certificate.json"
     }
   ],
   "document_paths": {
@@ -702,27 +720,27 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "5640f37710ccaf040b59a3cfb979f275e50c13e3",
+  "reviewed_source_commit": "6d7791c32f6722227badf49cdb0114e69bbf51db",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
   "cloud_codex_status": "Repository-side Cloud guidance and preflight added; actual Cloud environment publishing, TeX tools and Git push permissions are not verifiable from repository alone.",
   "resume_point": {
     "task_id": "Z4-AS-004",
-    "status": "partial_three_factor_symmetric_AS_branch_classified",
-    "objective": "Classify the remaining AS tensors outside symmetric CI and alternating polynomial branches, now known to have at most one positive and at most one negative invertible symmetrizer witness.",
-    "immediate_next_action": "Analyze the single-adjacent-negative slice now known to have generic ranks(3,3). The complex O(-2)^4 -> O(-1)^6 -> O^4 is generically middle exact. Determine whether the cubic/quartic Frobenius and full Koszul conditions force global exactness with outer line bundles O(-3) and O(1), hence the standard polynomial Koszul complex, or produce a certified alternative. Use maximal minors and the supports of middle homology/cokernel without adding domain or noetherian assumptions. All generic rank2/4 alternatives are already excluded by lem:no-rank-two-four-by-six and r+s<=6. The rho3/4/5 branch has no adjacent witnesses at any cyclic start and needs a separate structure argument. Basepoint three-factor-symmetric candidates are already uniformly excluded.",
+    "status": "two_positive_and_any_negative_AS_branches_settled",
+    "objective": "Classify the remaining AS tensors with no negative invertible symmetrizer and at most one positive invertible symmetrizer; the low-rank witness-free region remains the principal coverage hole.",
+    "immediate_next_action": "Investigate a single ADJACENT positive witness at rho6: after identifying the adjacent factors, w is in Sym^2 V tensor V2 tensor V3, and an opposite-cut rank factorization gives P(x)Q(y)=P(y)Q(x). The four-variable4x6 nondegeneracy lemma forces both generic ranks>=3; determine whether AS/Koszul conditions force a second positive witness (hence symmetric CI) or find an exact counterexample. Do NOT try to exclude all single-positive witnesses: the already regular signed Ore chart with nonzeroG has rho8, opposite02/13 symmetry, and precisely one positive anchor position. Also study the no-adjacent-witness rho3/4/5 region separately. The entire negative-witness branch and all basepoint three-factor-symmetric candidates are already settled.",
     "read_first": [
       "research/plan_ja.tex",
       "AGENTS.md",
+      "sections/single_negative_rigidity.tex",
       "sections/partial_symmetric_as.tex",
-      "sections/frobenius_tensor.tex",
-      "computations/single_negative_slice.py",
+      "sections/anticommutative_ore.tex",
       "research/classification_branches.json"
     ],
-    "known_obstruction": "Generic exactness of the single-negative linear sheaf complex does not imply global exactness. Exceptional degeneracy loci and any additional AS families at rank(3,3) are unclassified. The entirely witness-free low-rank branch is also unresolved.",
-    "state_of_claim": "Three-factor symmetrizable AS branch is completely covered by the symmetric CI chart; all its basepoint candidates are excluded by a universal nonnumerical Euler argument. Exact Boolean and non-Boolean fixtures verify the reversal signs and dimensions. No claim that all low-rank AS tensors lie in the two known branches.",
-    "handoff_rule": "Overwrite with the current next concrete research action before task termination; no chronological status log."
+    "known_obstruction": "No proof that an adjacent positive witness propagates. Opposite-positive and witness-free AS objects exist in known higher-rank charts, but no exhaustive low-rank residual atlas is proved. Full classification and component geometry remain open.",
+    "state_of_claim": "Basepoint partial-symmetric exclusion and single-negative rigidity are proved without domain/noetherian/PBW assumptions on the target class. Normal-form exhaustiveness is analytical; exact fixtures verify Pfaffian identities, Clifford matrix-algebra dimension64 and compression intersection failure. Existing signed Ore examples anchor a nonempty single-positive branch. No claim that every low-rank AS object lies in symmetric or polynomial branches.",
+    "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
     "goal": "Continue useful mathematical work across subproblems until classification completes or actual Cloud/runtime/access constraints stop the current task.",

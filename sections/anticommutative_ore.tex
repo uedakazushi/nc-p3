@@ -120,3 +120,22 @@ $x_a$を固定し$X\mapsto-X$とする一次行列は、位置$n$の関係を位
 あるいは位置$n$で新生成元を$Y=(-1)^nX$と置けば、
 $Yx_a-x_aY=\gamma_a x_bx_c$という一定のgraded Ore表示になる。
 \end{proof}
+
+\begin{proposition}[単一正証明書の残余は空ではない]\label{prop:ore-opposite-positive-witness}
+正規形\eqref{eq:anti-ore-normal}の標準最上テンソルは、全ての$H,G$について
+$02$交換と$13$交換でそれぞれ不変である。
+$G\ne0$なら第三階数は8であり、$S_2(w)$は可逆元$I$を含むが、
+$S_1(w),S_3(w)$には可逆元がない。負符号の可逆証明書は全位置で存在しない。
+従って単一の正符号証明書だけを持つAS枝は既知の正則族を実際に含み、
+その枝全体の排除を目標としてはならない。
+\end{proposition}
+\begin{proof}
+二次双対のPBW正規化で、任意の四文字語の最上係数を取る。
+双対関係を用いると、位置$0,2$、および位置$1,3$の交換はこの係数を保つ。
+これは全ての$H,G$に関する一次多項式恒等式であり、256語での再現を
+\path{computations/verify_opposite_witness_ore.py}に置く。
+$G\ne0$では命題\ref{prop:anticommutative-ore-rank}から$\rho=8$である。
+隣接正証明書は補題\ref{lem:adjacent-witness-rank-six}で除かれ、
+負証明書は系\ref{cor:one-negative-frobenius-recognition}で除かれる。
+全ファイバーAS性は定理\ref{thm:indexed-anticommutative-ore}による。
+\end{proof}

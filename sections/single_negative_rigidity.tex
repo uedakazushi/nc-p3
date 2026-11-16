@@ -1,0 +1,141 @@
+\section{一つの交代証明書の剛性}
+\label{sec:single-negative-rigidity}
+ここでは単一の交代証明書を持つ残余も決定する。
+行列因子化に用いるClifford代数の議論は線型代数として証明し、AS対象にClifford表示を仮定しない。
+
+\begin{lemma}[非退化階数2行列空間の圧縮形]\label{lem:rank-two-square-compression}
+一次式$4\times4$行列$M(z)$の一般階数が2で、全ての像の和が$k^4$、全ての核の交叉が零なら、
+定数の行列基底変更によって、その非零成分は一行または一列にしか存在しない形になる。
+\end{lemma}
+\begin{proof}
+補題\ref{lem:no-rank-two-four-by-six}と同じ階数2基点のブロック分解で、
+$D=0$, $CB=0$を得る。ここでは$B,C$はともに$2\times2$である。
+$C$の一般階数0または2、共通像直線の場合は、それぞれ共通像または共通核の仮定に反する。
+従って$C=c(z)\lambda$、$B=u b(z)$、$ku=\ker\lambda$となる。
+Schur補空間の次の係数から$CAB=0$となり、$c,b$が非零なので$\lambda A u=0$である。
+$u=e_1$, $\lambda=e_2^*$とすれば、行列の可能な成分は第一行と第二列に限られる。
+\end{proof}
+
+\begin{lemma}[Klein二次式の$4\times4$行列因子化]\label{lem:klein-four-matrix-factorization}
+$z=(z_{01},z_{02},z_{03},z_{12},z_{13},z_{23})$、
+$q=z_{01}z_{23}-z_{02}z_{13}+z_{03}z_{12}$とする。
+一次式$4\times4$行列$M(z)$が一般階数4で、$q=0$上の一般階数が2以下なら、
+定数の可逆な左右変換によって標準交代行列$X(z)$またはそのPfaff随伴$X^\#(z)$になる。
+ここで$X_{ij}=z_{ij}$ ($i<j$)、$X_{ji}=-z_{ij}$であり、
+$XX^\#=X^\#X=qI_4$と符号を定める。
+\end{lemma}
+\begin{proof}
+三次小行列式は全て既約二次式$q$で割れる。
+従って$\operatorname{adj}M$は$q$の倍であり、$\det M$とその全偏微分も$q$で割れる。
+標数零で$q$は非退化なので、$\det M=cq^2$、$c\ne0$となる。
+$N=\operatorname{adj}M/(cq)$は一次式行列で、$MN=NM=qI_4$である。
+従って
+\[
+ \Gamma(z)=\begin{pmatrix}0&M(z)\\N(z)&0\end{pmatrix},\qquad \Gamma(z)^2=q(z)I_8
+\]
+は六次元非退化二次空間のClifford代数の八次元表現を与える。
+このClifford代数は$\operatorname{Mat}_8(k)$である。
+実際、双曲基底の生成元を三変数外積空間$\bigwedge^*k^3$上の外積・縮約として作用させると、
+それらは全ての行列単位を生成する。具体的には各変数の数作用素とその補を掛けて各外積基底への射影を作り、
+外積・縮約で任意の二基底間の行列単位を得る。一方、Clifford関係で整列した単項式は高々$2^6=64$個なので、
+この全射は64次元行列代数への同型である。
+
+従ってこの八次元表現と$(X,X^\#)$から作る標準八次元表現は同型である。
+次数符号行列$J=\operatorname{diag}(I_4,-I_4)$は全生成元と反可換である。
+表現同型で移した$J$と標準$J$の積は全行列と可換なのでスカラーであり、
+両者の平方が1であることからそのスカラーは$\pm1$となる。
+従って表現同型は二つの四次元次数部分を保つか交換し、
+$M$は左右変換で$X$または$X^\#$となる。
+\end{proof}
+
+$E_{cd}$を後二因子の行列単位とし、$ij=e_i\wedge e_j$と略記する。
+二つの圧縮テンソルを
+\[
+ \begin{aligned}
+ T_4&=\sum_{j=1}^3 A_j\otimes(E_{0j}+E_{j0})+03\otimes E_{00},
+       &&(A_1,A_2,A_3)=(01,02,12),\\
+ T_5&=\sum_{j=1}^3 A_j\otimes E_{0j}+\sum_{j=1}^3 B_j\otimes E_{j0},
+       &&(B_1,B_2,B_3)=(01,03,13)
+ \end{aligned}
+\]
+と置く。最初の二因子は既に同一視されている。
+
+\begin{theorem}[部分交代四テンソルの三正規形]\label{thm:partially-alternating-three-forms}
+$w\in\bigwedge^2V\otimes W\otimes U$の全一因子階数を4とし、
+$02|13$と$12|03$の切断階数を6とする。
+共通の$\operatorname{GL}(V)$と後二因子の独立基底変更により、$w$は
+交代体積テンソル、$T_4$、$T_5$のいずれかに移る。
+$01|23$階数はそれぞれ6,4,5である。
+\end{theorem}
+\begin{proof}
+$02|13$の階数分解で作る$P(x),Q(x)$は
+$P(x)Q(y)+P(y)Q(x)=0$を満たす。
+補題\ref{lem:no-rank-two-four-by-six}を$P,Q^{\mathsf T}$へ適用すると、
+系\ref{cor:single-negative-ranks-three}と同じ理由で一般階数は両方3となる。
+
+$P(x)$の左核と$Q(x)$の右核の射影点を$c(x),d(x)$とする。
+どちらも定数なら対応する一因子階数が4未満となるので、非定数である。
+$P(x)Q(y)=-P(y)Q(x)$は$c(x),c(y)$を左核、$d(x),d(y)$を右核に持つ。
+一般の$x,y$で各対は独立なので、その階数は2以下である。
+従って$w$の最初の二因子を二ベクトル$z=x\wedge y$で縮約した行列$M(z)$は、
+Klein二次曲面$q(z)=0$上で階数2以下となる。
+
+$M$の一般階数3は不可能である。
+その場合$\operatorname{adj}M=q L(z)$で、$L$は非零の一般階数1の一次式行列となる。
+階数1行列空間の共通像・共通核の二分と$ML=LM=0$から、
+$M$に共通右核または共通左核が生じ、一因子階数4に反する。
+一般階数1以下も同じ二分から不可能である。
+
+一般階数4なら前補題を適用する。
+$X(z)$が与えるテンソルは$w_{abcd}=\delta_{ac}\delta_{bd}-\delta_{ad}\delta_{bc}$で、
+$02|13$作用は行列$H$を$\operatorname{tr}(H)I-H^{\mathsf T}$へ送る。
+その核は零なので階数16となり、仮定に反する。
+$X^\#$が与えるものは交代体積テンソルの非零スカラー倍である。
+
+残る一般階数2では、圧縮形の補題により
+\[
+ w=\sum_{j=1}^3 A_j\otimes E_{0j}+\sum_{j=1}^3 B_j\otimes E_{j0}+C\otimes E_{00}
+\]
+と書ける。$A_j,B_j,C$は四次元$V$の交代行列である。
+後二因子の一因子階数4から、$A_1,A_2,A_3$と$B_1,B_2,B_3$はそれぞれ独立である。
+$02|13$行列はブロック$\left(\begin{smallmatrix}C&A\\B&0\end{smallmatrix}\right)$を持つ。
+独立な三交代行列の像の和は三次元以上なので、$\rk A,\rk B\geq3$である。
+全階数6から両方3となり、ある三空間$H_A,H_B\subset V$について
+\[
+ \langle A_j\rangle=\bigwedge^2H_A,\qquad
+ \langle B_j\rangle=\bigwedge^2H_B
+\]
+となる。また階数6の等号から$C(\ker B)\subset\operatorname{im}A=H_A$となる。
+
+$H_A\ne H_B$なら、その零化共変量を$\alpha,\beta$とした条件は$\alpha C\beta=0$であり、
+これは$C\in\bigwedge^2H_A+\bigwedge^2H_B$と同値である。
+後二因子のshearで$C$を消し、二三空間と各基底を標準化すれば$T_5$となる。
+$H_A=H_B=H$なら、$C\in\bigwedge^2H$は最初の一因子階数4に反する。
+$C$の$\bigwedge^2H$成分をshearで消せば、残りは$e_3\wedge v$、$0\ne v\in H$である。
+$H$内の基底と残るスカラーを変えて$T_4$を得る。
+両正規形の第一切断階数は、それぞれ張る二形式の次元4と5である。
+\end{proof}
+
+\begin{corollary}[単一負符号証明書の認識]\label{cor:one-negative-frobenius-recognition}
+有限Frobenius候補の三つの$S_j^-(w)$のうち一つにでも可逆元があれば、
+その四窓は可換多項式のindexed類である。
+この認識には元代数のKoszul性を前提としない。
+従って既知の完全対称枝と可換多項式枝の外の未分類AS残余では、
+可逆な正符号証明書は高々一つであり、可逆な負符号証明書は一つも存在しない。
+\end{corollary}
+\begin{proof}
+隣接証明書の場合は補題\ref{lem:adjacent-witness-rank-six}により三切断とも階数6である。
+対角証明書の場合はそれ以外の二切断が元の隣接切断なので階数6である。
+従って証明書の二因子を最初の二因子へ置いて前定理を適用できる。
+隣接二因子を交換した場合、$T_4,T_5$はその切断階数4,5から既に除かれる。
+対角の二因子の場合は巡回始点を選んで元の順序へ戻す。
+このとき両圧縮形で$R_0\supset H_A\otimes ke_0$、$R_1\supset ke_0\otimes H_A$である。
+実際、$d\ne0$の$A_j\otimes E_{0j}$部分だけを縮約すると、各々この三次元空間を得る。
+従って$W_{0,3}$は$H_A\otimes ke_0\otimes H_A$の独立な九つの単項式を含み、
+有限Frobenius条件の次元4に反する。
+従って残るのは交代体積テンソルだけであり、可換多項式のindexed類である。
+正確な交叉次元は両圧縮形で$(10,16),(8,16),(10,16),(8,16)$となる。
+有理数の関係・全核基底と四次までの検算は
+\path{computations/verify_negative_witness_rigidity.py}に置く。
+同じコードは$XX^\#=qI$、標準Clifford像の次元64、恒等二形式型の第三階数16も検算する。
+\end{proof}
