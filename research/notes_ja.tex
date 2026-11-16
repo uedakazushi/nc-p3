@@ -8,7 +8,7 @@
 \newcommand{\PGL}{\operatorname{PGL}}
 \title{nc-p3研究ノート：周期構造・局所変形・未解決の障害}
 \author{}
-\date{2026年11月17日\quad 第29版}
+\date{2026年11月17日\quad 第30版}
 \begin{document}
 \maketitle
 \section{記法と確実性}
@@ -480,6 +480,16 @@ trivial extension側のKoszul性は自動ではなく、既知の標本がその
 ただし一般の一基点四二次式系へはまだ普遍化していない。
 有理関数の純Python消去はGCDが律速となったため、正確な多変数多項式GCDを持つ
 python-flintへ演算を移した。標本の数値化や補間によって結論を置換していない。
+
+\paragraph{交差項を含む全一基点Boolean係数域。}
+主論文\texttt{prop:boolean-global-cubic-frame}で、七非零Boolean点での二次式の値を
+$1,u,v,a,b,c,a+b+c-1-u-v$とした全一基点開集合の三次双対基底を構成した。
+各座標面の四評価を二次式の値で割った符号付き和と、基点のcubeを使う。
+このフレームは全域で正則であり、局所座標正規化の分母零を避けている。
+可換商のHilbert関数も全域で決定したが、五次ホモロジーの一般階数はまだ計算中である。
+交差項を持つ標本$(u,v,a,b,c)=(2,3,5,7,11)$では、
+Frobenius条件と四次検査を通り、五次元数は$(63,56,56,56)$、$d_3$階数は全て36である。
+この標本から五係数全域の非Koszul性を推論しない。
 
 \section{再開時の使い方}
 次の課題と優先順位は\path{research/plan_ja.tex}に集約する。

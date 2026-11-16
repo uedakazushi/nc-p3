@@ -190,6 +190,13 @@
           "claim": "No standard Koszul AS point at any parameter; on the finite-Frobenius quartic-exact open H2 in degree5 at start0 is at least7",
           "proof": "sections/truncated_quadric_boundary.tex:thm:generic-one-point-uniform-exclusion",
           "scope_limit": "Not all one-basepoint four-quadric systems"
+        },
+        "global_boolean_one_point_frame": {
+          "coefficient_domain": "u*v*a*b*c*(a+b+c-1-u-v)!=0",
+          "coverage": "all final quadrics with exactly the fixed Boolean basepoint, modulo first three fixed quadrics and scale",
+          "finite_Frobenius_points": "outside symmetric image S",
+          "generic_AS_status": "five-variable homology pending",
+          "source": "sections/boolean_quadric_boundary.tex"
         }
       },
       {

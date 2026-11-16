@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-17",
-  "version": 29,
+  "version": 30,
   "reviewed_input": {
-    "source_commit": "5323e4601ae335514304ef2c46ced3b2b7e3b91e"
+    "source_commit": "1c63522f27d23dd7c621e06ec4818149e904b5b8"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Proved uniform AS exclusion of the nonzero-coefficient Boolean quadric boundary slice via exact QQ(u,v) quintic ranks and rank specialization; verified generic six-dimensional square-class injection.",
+    "scope": "Proved a global five-parameter one-point Boolean cubic frame and Hilbert function, closure in Z_sym and nonsymmetrizability of finite-Frobenius fibers. Refactored exact field analysis for reuse and regressed the solved two-variable case.",
     "new_mathematical_theorem": true
   },
   "checks": [
@@ -35,11 +35,26 @@
       "command": "PYTHONPATH=/workspace/.cache/nc-p3-python python3 computations/verify_generic_one_point_boundary.py --output research/generic_one_point_boundary_certificate.json",
       "result": "PASS",
       "scope": "python-flint 0.9.0 exact QQ(u,v) arithmetic; 32 operations crosschecked with SymPy, normalized cubic frame, quotient dimensions20/35, d2 rank77, d3 rank36, zero composition, square multiplication rank14, kernel6 and combined rank42. No sampling or interpolation certifies generic ranks."
+    },
+    {
+      "command": "PYTHONPATH=/workspace/.cache/nc-p3-python python3 computations/verify_boolean_quadric_frame.py --output research/boolean_quadric_frame_certificate.json",
+      "result": "PASS",
+      "scope": "Exact five-variable annihilation identities, global frame minor1/(uv), Boolean evaluation determinants, old-point frame determinant1/12, and a cross-term rational fixture: W3/W4=(4,1), C4=35, C5=(63,56,56,56), d3 ranks36."
+    },
+    {
+      "command": "PYTHONPATH=/workspace/.cache/nc-p3-python python3 computations/verify_generic_one_point_boundary.py --output research/generic_one_point_boundary_certificate.json",
+      "result": "PASS",
+      "scope": "Full solved two-variable regression after introducing independent FLINT field contexts and the shared quintic-analysis engine: ranks77/36/14/42 and zero compositions."
+    },
+    {
+      "command": "PYTHONPATH=/workspace/.cache/nc-p3-python python3 computations/verify_boolean_quadric_homology.py --output research/boolean_quadric_homology_certificate.json",
+      "result": "RUNNING",
+      "scope": "Canonical five-variable exact computation launched; no general homology or uniform AS conclusion for this larger family yet."
     }
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed short-path proof of four-layer Koszulity, trace/evaluation identification and generation of the 64-dimensional trivial extension, inner parity twist, and constant-rank vector-bundle specialization argument with adjacent cut upper bounds. No formalization or independent peer review. Reviewed normalization c0!=0, adjacent-cut upper bounds from three-factor symmetry, nonempty Frobenius/quartic-exact open from the checked old point, exact generic obstruction, and extension of rank upper bounds across the entire open. This excludes AS even at coefficient values whose Frobenius status was not classified separately."
+    "scope": "Reviewed short-path proof of four-layer Koszulity, trace/evaluation identification and generation of the 64-dimensional trivial extension, inner parity twist, and constant-rank vector-bundle specialization argument with adjacent cut upper bounds. No formalization or independent peer review. Reviewed normalization c0!=0, adjacent-cut upper bounds from three-factor symmetry, nonempty Frobenius/quartic-exact open from the checked old point, exact generic obstruction, and extension of rank upper bounds across the entire open. This excludes AS even at coefficient values whose Frobenius status was not classified separately. Reviewed global coverage of the final-quadric one-point open, cube evaluation basis, face-circuit independence with unit minor, all-degree Hilbert calculation, t-deformation at the basepoint, and incompatibility of finite-Frobenius symmetrization with the surviving common basepoint."
   },
   "tex": {
     "result": "NOT_RUN",
@@ -56,7 +71,7 @@
   "github_save": {
     "result": "PENDING",
     "branch": "main",
-    "scope": "Structural checkpoint 5323e46 pushed; current uniform-exclusion checkpoint awaiting push/readback."
+    "scope": "Uniform two-variable exclusion checkpoint1c63522 pushed; current global-frame checkpoint awaiting save/readback."
   },
   "library_save": {
     "result": "not_attempted",

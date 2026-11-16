@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の周期構造と代数的変形
 
-**2026-11-17 / v29。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-17 / v30。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 最初に読む
 
@@ -152,3 +152,14 @@ python3 computations/verify_generic_one_point_boundary.py --output research/gene
 ```
 
 係数は有理関数体 `QQ(u,v)` の元として扱い、数値標本や補間で一般点を認定しない。
+
+交差項を含む、固定Boolean完全交叉上の全一基点二次式には、五係数域の全体で正則な評価フレームを構成した。
+可換商のHilbert列は全域で `(1,4,6,4,1,1,...)`。Frobenius条件を通る点は対称チャート外にある。
+この広い族の一般五次階数は計算中であり、AS排除はまだ結論していない。
+
+```bash
+python3 computations/verify_boolean_quadric_frame.py --output research/boolean_quadric_frame_certificate.json
+python3 computations/verify_boolean_quadric_homology.py --output research/boolean_quadric_homology_certificate.json
+```
+
+後者は五変数の厳密消去で、上の二変数検算より重い。

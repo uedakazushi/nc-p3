@@ -1,0 +1,78 @@
+{
+  "result": "PASS",
+  "arithmetic": "exact QQ(u,v,a,b,c), integer Boolean evaluation determinants",
+  "point_values": [
+    "1",
+    "u",
+    "v",
+    "a",
+    "b",
+    "c",
+    "a+b+c-1-u-v"
+  ],
+  "domain": "all seven listed values nonzero",
+  "cubic_evaluation_determinant_abs": 1,
+  "degree_two_seven_point_determinant_abs": 1,
+  "degree_one_seven_point_rank": 4,
+  "global_weight_frame_minor": "1/(u*v)",
+  "annihilation_of_all_four_quadrics": true,
+  "quotient_Hilbert_dimensions_degrees_0_to_5": [
+    1,
+    4,
+    6,
+    4,
+    1,
+    1
+  ],
+  "quotient_Hilbert_tail": "1 in every degree >=4",
+  "old_boundary_point_frame_det": "1/12",
+  "cross_term_rational_fixture": {
+    "u_v_a_b_c": [
+      2,
+      3,
+      5,
+      7,
+      11
+    ],
+    "intersection_dimensions": [
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        1
+      ]
+    ],
+    "C4": [
+      35,
+      35,
+      35,
+      35
+    ],
+    "C5": [
+      63,
+      56,
+      56,
+      56
+    ],
+    "d3_ranks": [
+      36,
+      36,
+      36,
+      36
+    ]
+  },
+  "limits": [
+    "Global frame and commutative quotient Hilbert function only; no generic quintic homology rank is inferred from samples.",
+    "The first three quadrics remain the fixed Boolean complete intersection."
+  ]
+}
