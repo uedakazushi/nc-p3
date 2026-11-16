@@ -99,9 +99,10 @@
     "scope": "Grant Definitions2.3/2.5 and parity twist; Plaumann--Sturmfels--Vinzant (2011) Theorem3.10 with its linear-general-position hypothesis. Construction and self-association are classical context; no unverified converse for degenerate orthogonal matrices or representation-infinite criterion used."
   },
   "github_save": {
-    "result": "PENDING",
+    "result": "PASS",
     "branch": "main",
-    "scope": "Previous cf625b0 push awaiting final readback; new commutative-resolution proof awaiting checkpoint."
+    "verified_commit": "516a0ea280373d937dea3cd799acf16d84f8c200",
+    "scope": "Fetched origin/main and matched HEAD; read back the two proof modules and STATE byte-for-byte. No eight-variable rank certificate exists."
   },
   "library_save": {
     "result": "not_attempted",
