@@ -98,7 +98,7 @@
       "normal_forms": "unresolved",
       "regularity_of_all_tensor_candidates": "unresolved",
       "complete_isomorphism": "unresolved",
-      "excluded_subfamilies": "contains no quantum polynomial indexed class, by quantum rank formula and its two rank-six normal forms"
+      "excluded_subfamilies": "contains no quantum polynomial indexed class, by quantum rank formula and its two rank-six normal forms; also no member of the full polynomial-derivation Ore chart"
     }
   ],
   "limits": [
@@ -119,6 +119,17 @@
         "(q,p,1/r)"
       ],
       "source": "sections/quantum_indexed.tex",
+      "global_coverage": false
+    },
+    {
+      "id": "POLYNOMIAL-DERIVATION-ORE",
+      "scope": "k[x0,x1,x2][X;delta] with arbitrary quadratic delta",
+      "parameters": "A18 quadratic coefficient space; not indexed image dimension",
+      "regularity": "all fibers quadratic PBW/Koszul/AS by thm:polynomial-ore-regular",
+      "opposite_rank": "6+rank of the explicit skew 6x6 Q; ranks 6,8,10,12",
+      "low_rank_intersection": "radial fi=xi*ell only; one polynomial indexed class",
+      "complete_indexed_isomorphism": "not supplied outside the radial subcase",
+      "source": "sections/polynomial_ore.tex",
       "global_coverage": false
     }
   ]

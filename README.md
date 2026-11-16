@@ -59,6 +59,10 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 このチャートへの所属は三つの線型解空間内の可逆行列の存在で必要十分に判定できる。
 符号を変えた線型判定は可換多項式のindexed類を認識する。残る低階数領域の非空性・排除は未解決。
 
+可換三生成部分上の [18係数Oreチャート](sections/polynomial_ore.tex) では、
+全ファイバーの正則性と `rho = 6 + rank Q` を証明した。`Q` は6×6交代行列で、
+低階数部分は可換多項式のindexed類だけとなる。18は係数空間の次元である。
+
 ### 次の研究
 
 **最優先は全四窓のAS正則条件・構造的不変量から網羅的な分類木を構築すること。**
@@ -84,6 +88,7 @@ python3 computations/verify_quantum_tensor_rank.py
 python3 computations/verify_symmetric_congruence.py
 python3 computations/verify_rank_two_exclusion.py
 python3 computations/verify_quantum_indexed.py
+python3 computations/verify_polynomial_ore.py --output research/polynomial_ore_certificate.json
 python3 computations/verify_moduli_jets.py --output research/moduli_certificate.json
 python3 computations/verify_algebraic_family.py --output research/algebraic_family_certificate.json
 python3 computations/verify_elliptic_family.py --output research/elliptic_family_certificate.json

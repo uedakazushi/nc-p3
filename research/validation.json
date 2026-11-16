@@ -3,92 +3,59 @@
   "date": "2026-11-16",
   "version": 22,
   "reviewed_input": {
-    "source_commit": "97a09066ee4e78175cd7693c1805fc89fa2e44df"
+    "source_commit": "daedce7254c5becaf68dfa7fb99fcd644ba8db82"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Frobenius tensor reconstruction and exhaustive split, all quantum rank strata, symmetric-chart all-fiber regularity, complete indexed equivalence (33 unknowns/41 equations) and constructive linear symmetrization membership. First checkpoint saved; this update adds symmetric-chart proofs, code and targeted literature comparison. Existing results retained. Further proved complete exclusion of opposite rank two and retained the useful diagonal-ansatz obstruction; current bound is 3<=rho<=16. Completed the nonzero quantum indexed locus via all exceptional point-support cases and an explicit (Gm)^3/S4 normal-form criterion; proof isolated in sections/quantum_indexed.tex. Extended the constructive linear test to the alternating polynomial orbit and isolated the residual low-rank locus, which contains no quantum class.",
+    "scope": "Added the all-parameter polynomial derivation Ore chart, dual trace computation and skew-matrix rank criterion; integrated current branch exclusion and next proof obligation. Existing results retained.",
     "new_mathematical_theorem": true
   },
   "checks": [
     {
       "command": "bash scripts/cloud_preflight.sh",
       "result": "PASS",
-      "scope": "Python/SymPy and structural checks."
+      "scope": "Python/SymPy and project structure only."
     },
     {
-      "command": "python3 computations/verify_frobenius_tensor.py --output work/frobenius_tensor_check.json",
+      "command": "python3 computations/verify_polynomial_ore.py --output research/polynomial_ore_certificate.json",
       "result": "PASS",
-      "scope": "Exact rational reconstruction, W3/W4 dimensions at all four starts, canonical rotations, singleton/adjacent/opposite ranks, shear invariance on six samples: polynomial, anti-commutative, non-diagonal symmetric CI, quantum, signed seven and signed nine. Opposite ranks 6,6,6,12,8,8. Exact linear symmetrizer membership and independent-shear invariance also checked. Certificate matches tracked JSON. Negative-swap linear spaces also exactly recognize the polynomial fixture and reject all five other fixtures, including after independent shears."
-    },
-    {
-      "command": "python3 computations/verify_quantum_tensor_rank.py",
-      "result": "PASS",
-      "scope": "All 24 permutation coefficients and adjacent-relation membership, six symbolic 2x2 determinant factorizations, samples of ranks 6/8/10/12 and both symbolic diagonal indexed normal forms."
-    },
-    {
-      "command": "python3 computations/verify_quartic_obstruction.py",
-      "result": "PASS",
-      "scope": "Existing exact quartic/quintic rank regression, all four starts, dual dimensions and negative control."
+      "scope": "All 18 variables: primal/dual orthogonality, four primal and twenty dual overlap identities, all 256 dual top-trace words, linearity, explicit skew map rank 15/kernel radial dimension 3, all four rank strata by independently reconstructed tensors, nonzero radial indexed witness."
     },
     {
       "command": "python3 scripts/check_project.py; git diff --check",
       "result": "PASS",
-      "scope": "Required paths, JSON, expanded TeX labels/citations, whitespace only."
-    },
-    {
-      "command": "python3 computations/verify_symmetric_congruence.py",
-      "result": "PASS",
-      "scope": "Semisimple and nilpotent centroids, polynomial fourth roots and common congruence; determinant-span construction when each basis matrix is singular, rejection of an all-singular space, zero-coefficient sparse regression."
-    },
-    {
-      "command": "python3 computations/verify_rank_two_exclusion.py",
-      "result": "PASS",
-      "scope": "All 16 pairs of non-scalar single-eigenvalue Jordan partitions: kernel table [[10,8,7,4],[8,8,6,4],[7,6,6,4],[4,4,4,4]]. Both canonical rank-two tensors have singleton ranks 4, pair ranks (6,6,2), and W3 dimensions 12 at every start. Full coverage uses the written pencil proof, not sampled matrices alone."
-    },
-    {
-      "command": "python3 computations/verify_quantum_indexed.py",
-      "result": "PASS",
-      "scope": "All 24 permutations and rational vertex-gauge certificates for each of the four support types, relation ratios at negative/positive indexed positions, two negative isomorphism controls, three-torus normalization and symbolic S4 Coxeter relations."
+      "scope": "Paths, JSON, expanded TeX references and whitespace; not a math proof."
     }
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed W5 intersection/rank-one contradiction; tensor contractions and complementary perfect pairings; canonical trace rotation; opposite rank invariance, lower bound and disjoint covering; quantum block rank formula and indexed diagonal normalization; distinct point-projection supports separate the two normal forms. No formalization, independent review or novelty verification. Also reviewed the four-quadric height/regular-sequence criterion, the symmetric-chart Tate argument, independent equivalence to common congruence via a commutative centroid and polynomial roots, complete indexed-to-graded chart equivalence, disjointness of alternating/symmetric orbits, and the three independent linear symmetrizer conditions. Audited the rank-two exclusion: full singleton ranks remove zero minimal indices; singular left/right Kronecker blocks force rank>=8; generic dual pencil basis normalizes both leading matrices; Jordan nullity 10 yields only two canonical types, both with explicit W3 dimension 12. Quantum all-parameter necessity audited from the complete support classification: six lines, plane plus three lines, two planes plus a line, full P3. The two-plane GL2 freedom is removed only after vertex-gauge normalization makes the shared generators commute and have identical outside parameters. Remaining maps are monomial with a common permutation. Triple cocycles and all S4 normal-form formulas reviewed. Alternating recognition reviewed by the signed transposition argument and uniqueness of the four-dimensional volume tensor."
+    "scope": "PBW termination/overlaps, dual exterior filtration and all-fiber perfect pairings; top trace linearity, opposite flattening block quotient and rho=6+rank Q; all kernel equations and global radial indexed shifts reviewed. No formalization or independent peer review."
   },
   "tex": {
-    "result": "BLOCKED_MISSING_DEPENDENCIES",
-    "command": "latexmk nc-p3.tex",
-    "scope": "Missing ltjsarticle.cls and luaotfload-main. System package helper is unavailable; no PDF built. Other two TeX builds not run because they require the same missing class."
+    "result": "NOT_RUN",
+    "scope": "No compile in this checkpoint. Earlier environment lacked Japanese TeX class/luaotfload; current structure checks do not replace compilation."
   },
   "visual_inspection": {
     "result": "NOT_RUN",
     "scope": "No PDF built."
   },
   "literature_review": {
-    "result": "TARGETED_PRIMARY_TEXT",
-    "scope": "Belitskii--Sergeichuk, Congruence of multilinear forms, arXiv:0710.0834, Definition 1, Theorem 2(a), Lemma 4(a) and polynomial-root proof read in primary PDF pp.2-4. Original statement is over C; manuscript supplies its own needed full-rank symmetric four-tensor proof over algebraically closed char 0. General congruence principle and Clifford/CI methods not claimed novel. No finite-Frobenius non-Koszul example certified by literature search. De Terán--Dopico--Landsberg author PDF (2017-01-27), Theorem 1 and zero-minimal-index discussion pp.5-6 also read. Only the algebraic KCF is used; no transfer of complex-topological results."
+    "result": "NOT_RUN",
+    "scope": "Ore/PBW/Frobenius methods are existing tools; self-contained overlap/rank proof supplied. Novelty unconfirmed."
   },
   "github_save": {
-    "result": "PASS",
+    "result": "PENDING",
     "branch": "main",
-    "validated_content_commit": "e27d9098feee3e0baa705ba5fa6db58bceb43a68",
-    "validated_content_tree": "03bdd91ecb3e81a287b70dd64c9e7fc19ac3ea8e",
-    "fast_forward": true,
-    "verified_edited_files": 21,
-    "scope": "Five mathematical checkpoints pushed to main in this task. Fetched current main and read back every changed file since the task input 695e96a; all bytes match local tracked content. This current receipt is saved in a subsequent commit."
+    "scope": "Checkpoint push/readback required."
   },
   "library_save": {
-    "result": "not_saved_project_policy",
-    "scope": "GitHub main saves succeeded; no duplicate Library save."
+    "result": "not_attempted",
+    "scope": "Reserved for failed GitHub save."
   },
   "open_mathematics": [
-    "General tensor conditions are finite Frobenius conditions, not a full Koszul/AS criterion.",
-    "Both global rank branches retain unclassified residuals. Symmetric U-chart regularity and a complete indexed equivalence criterion are proved, but explicit normal forms of all four-quadric systems remain unresolved. Quantum locus complete indexed normal forms are proved, but neither known chart exhausts the AS locus.",
-    "Quintic d3 automatic rank and certified finite-Frobenius non-Koszul counterexamples remain unresolved.",
-    "Quantum rank-six has two indexed classes only within the quantum polynomial locus.",
-    "Full components, period strata, degenerations and novelty remain unresolved.",
-    "Opposite ranks 3,4,5: existence of finite-Frobenius/regular objects unresolved; rank two is now excluded.",
-    "LOW-UNCLASSIFIED (low opposite rank, neither symmetric nor alternating) has no established nonempty witness or emptiness theorem; it contains no quantum indexed object."
+    "LOW-UNCLASSIFIED nonemptiness or emptiness remains unresolved.",
+    "General Koszul/AS criterion and exhaustive normal forms are incomplete.",
+    "Position-dependent quantum Ore normalization is not yet proved.",
+    "No complete indexed equivalence criterion for the nonradial polynomial Ore chart."
   ]
 }

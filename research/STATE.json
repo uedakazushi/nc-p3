@@ -375,6 +375,18 @@
       "claim": "Replacing the three linear symmetrizer equations by their negative-swap versions exactly recognizes the alternating tensor orbit. For finite Frobenius candidates this is precisely the commutative polynomial indexed class, with constructive rational certificates on rational input.",
       "proof": "nc-p3.tex:cor:linear-alternating-test",
       "status": "proof_written"
+    },
+    {
+      "id": "POLYNOMIAL-ORE-REGULAR",
+      "claim": "For arbitrary 18 quadratic coefficients, the derivation Ore extension of k[x0,x1,x2] is quadratic PBW, Koszul and standard AS-regular. Dual squarefree PBW/Frobenius holds by 20 symbolic overlap identities; one-periodic. No 18-dimensional indexed-image or component claim.",
+      "proof": "nc-p3.tex:thm:polynomial-ore-regular",
+      "status": "proof_written"
+    },
+    {
+      "id": "POLYNOMIAL-ORE-RANK",
+      "claim": "On this chart rho=6+rank Q for an explicit surjective linear map to alternating 6x6 matrices. Kernel consists exactly of radial fields fi=xi*ell. Thus all ranks 6,8,10,12 occur, and every low-rank member is the polynomial indexed class; no LOW-UNCLASSIFIED witness arises in the full chart.",
+      "proof": "nc-p3.tex:thm:polynomial-ore-rank",
+      "status": "proof_written"
     }
   ],
   "document_paths": {
@@ -408,7 +420,9 @@
     "frobenius_tensor_certificate": "research/frobenius_tensor_certificate.json",
     "classification_branches": "research/classification_branches.json",
     "tensor_symmetrization_code": "computations/tensor_symmetrization.py",
-    "quantum_indexed_section": "sections/quantum_indexed.tex"
+    "quantum_indexed_section": "sections/quantum_indexed.tex",
+    "polynomial_ore_section": "sections/polynomial_ore.tex",
+    "polynomial_ore_certificate": "research/polynomial_ore_certificate.json"
   },
   "unresolved_cautions": [
     "No proof of dimension 14 for the Clifford component.",
@@ -428,7 +442,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "97a09066ee4e78175cd7693c1805fc89fa2e44df",
+  "reviewed_source_commit": "daedce7254c5becaf68dfa7fb99fcd644ba8db82",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -437,20 +451,17 @@
     "task_id": "Z4-AS-004",
     "status": "open_with_tensor_reconstruction_and_rank_split",
     "objective": "Find structurally meaningful necessary and sufficient Koszul/AS regularity criteria across the canonical 4-window representation; classify all exceptional loci.",
-    "immediate_next_action": "Decide whether LOW-UNCLASSIFIED (rho<=6, neither symmetrizable nor alternatizable) has a finite-Frobenius/AS point. It contains no quantum polynomial class by the proved full quantum classification. Start with rho=3,4,5 matrix spaces after the rank-two exclusion; avoid simultaneous-diagonal ansatz (W3>=10). On any genuine residual candidate apply quartic/quintic Koszul filters; if this stalls, examine the high-rank residual. Do not redo the certified symmetric/polynomial chart membership or the complete (Gm)^3/S4 quantum classification.",
+    "immediate_next_action": "Extend the low-rank exclusion to quantum-three-generator Ore extensions with diagonal signs. Normalize a rank-six quantum background to uniform commuting or anticommuting relations via indexed vertex gauges; analyze the resulting position-dependent quadratic Ore corrections. On the commuting branch, cubic overlaps should force adjacent correction differences to be radial, hence removable by position-dependent X shifts. Prove this before attempting the anticommuting branch. If this stalls, return to genuinely non-Ore rho=3,4,5 tensors.",
     "read_first": [
       "research/plan_ja.tex",
       "AGENTS.md",
+      "sections/polynomial_ore.tex",
+      "computations/verify_polynomial_ore.py",
       "sections/frobenius_tensor.tex",
-      "research/classification_branches.json",
-      "computations/frobenius_tensor.py",
-      "computations/verify_quartic_obstruction.py",
-      "computations/verify_symmetric_congruence.py",
-      "computations/tensor_symmetrization.py",
-      "sections/quantum_indexed.tex"
+      "research/classification_branches.json"
     ],
-    "known_obstruction": "No nonempty witness or emptiness theorem for LOW-UNCLASSIFIED has been established. General higher Koszul homology outside certified charts remains unresolved, and no finite-Frobenius non-Koszul example is certified. Seven/nine rho=8 is sampled only; general symbolic seven-parameter elimination has rational-function GCD growth.",
-    "state_of_claim": "Frobenius degree-four reduction, tensor reconstruction, exhaustive rank split, quantum rank strata/minimal-rank normal forms, symmetric-chart all-fiber regularity, complete indexed criterion and constructive linear membership test have written proofs and targeted exact checks. Full global classification remains incomplete. Opposite rank two is now excluded for all finite Frobenius candidates via a complete pencil split; ranks 3,4,5 are unresolved. All nonzero quantum parameters now have an explicit three-torus normal form and complete S4 indexed-equivalence criterion, including every special parameter. Linear tests also recognize the polynomial orbit; the remaining low-rank residual excludes every quantum polynomial object, but its nonemptiness is unresolved.",
+    "known_obstruction": "The full polynomial-derivation Ore chart contributes no LOW-UNCLASSIFIED point; its opposite rank is exactly 6+rank of the skew map. LOW-UNCLASSIFIED remains without a witness or an emptiness theorem. A universal non-Ore tensor/Koszul classification is unresolved.",
+    "state_of_claim": "All-parameter polynomial Ore regularity and skew-matrix rank formula proved and checked symbolically. General position-dependent/quantum Ore normalization is the next unproved step; full classification incomplete.",
     "handoff_rule": "Overwrite with the current next concrete research action before task termination; no chronological status log."
   },
   "execution_policy": {

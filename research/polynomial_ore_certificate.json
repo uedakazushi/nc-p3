@@ -1,0 +1,132 @@
+{
+  "result": "PASS",
+  "arithmetic": "exact rational polynomial identities",
+  "primal_cubic_overlaps": 4,
+  "dual_cubic_overlaps": 20,
+  "top_tensor": "linear in all 18 coefficients, verified by dual normal forms",
+  "skew_map_rank": 15,
+  "kernel_dimension": 3,
+  "kernel": "delta_i=x_i*ell",
+  "nonzero_minor_columns": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    15
+  ],
+  "nonzero_minor_determinant": "512",
+  "rank_strata": [
+    {
+      "skew_rank": 0,
+      "opposite_rank": 6,
+      "coefficients": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "skew_rank": 2,
+      "opposite_rank": 8,
+      "coefficients": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1/2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "skew_rank": 4,
+      "opposite_rank": 10,
+      "coefficients": [
+        "0",
+        "-1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-1/2",
+        "0",
+        "0",
+        "1/2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "skew_rank": 6,
+      "opposite_rank": 12,
+      "coefficients": [
+        "0",
+        "-1",
+        "0",
+        "0",
+        "0",
+        "1/2",
+        "0",
+        "0",
+        "0",
+        "-1/2",
+        "0",
+        "0",
+        "1/2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    }
+  ],
+  "nonzero_radial_indexed_witness": "PASS",
+  "limits": [
+    "No claim of 18-dimensional indexed image or a full moduli component.",
+    "This Ore chart does not cover all standard AS four windows.",
+    "No finite-Frobenius non-Koszul example is produced."
+  ]
+}
