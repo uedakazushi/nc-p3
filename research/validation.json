@@ -93,9 +93,10 @@
     "scope": "A Bertini source lookup did not yield a verified primary text; the reduced-net statement instead has a self-contained smooth incidence/generic-fiber argument. Signed-reversal and matrix-slice proofs are written directly. Novelty remains unconfirmed."
   },
   "github_save": {
-    "result": "PENDING",
+    "result": "PASS",
     "branch": "main",
-    "scope": "Previous checkpoint6d7791c32f6722227badf49cdb0114e69bbf51db fetched with HEAD equality. Current negative-rigidity proof and residual-Ore anchor awaiting checkpoint."
+    "verified_commit": "a1756f7aa4541f31232a730c83c8c6a95807f43a",
+    "scope": "Fetched origin/main with exact HEAD equality; universal partial-symmetry proof, single-negative rigidity proof, STATE and normal-form certificate read back byte-for-byte. Full classification remains open."
   },
   "library_save": {
     "result": "not_attempted",
