@@ -3,13 +3,13 @@
 import argparse
 import json
 from pathlib import Path
-from itertools import combinations_with_replacement
+from itertools import combinations_with_replacement,product
 from fractions import Fraction as F
 import sympy as s
 from frobenius_tensor import (digits,flatten,reconstructed_windows,orthogonal_windows,
                              insertion_columns,nullspace_sparse,exact_rank)
 from tensor_symmetrization import symmetrizer_space,symmetrize
-from verify_quartic_obstruction import quintic_d3_rank
+from verify_quartic_obstruction import quintic_d3_rank,relation_matrix
 
 
 def cubic_frame():
@@ -36,6 +36,22 @@ def cubic_frame():
     return t,monomials,basis
 
 
+def verify_involution():
+    t,monomials,basis=cubic_frame();lookup={m:i for i,m in enumerate(monomials)}
+    g=s.Matrix([[-1,0,0,1],[0,-1,0,1],[0,0,-1,1],[0,0,0,1]])
+    changed=s.zeros(20,4)
+    for row,(a,b,c) in enumerate(monomials):
+        for u,v,w in product(range(4),repeat=3):
+            coefficient=g[a,u]*g[b,v]*g[c,w]
+            if coefficient:
+                for j in range(4):changed[row,j]+=coefficient*basis[lookup[tuple(sorted((u,v,w)))],j]
+    free=[(0,1,2),(1,3,3),(2,3,3),(3,3,3)]
+    frame=changed[[lookup[m] for m in free],:]
+    assert frame==s.Matrix([[-1,0,0,(t*t+3*t+2)/2],[0,-1,0,1],[0,0,-1,1],[0,0,0,1]])
+    assert frame.det()==-1
+    assert (changed-basis.subs(t,-3-t)*frame).applyfunc(s.expand)==s.zeros(20,4)
+
+
 def tensor_at(parameter):
     t,monomials,basis=cubic_frame();lookup={m:i for i,m in enumerate(monomials)}
     w={}
@@ -46,10 +62,51 @@ def tensor_at(parameter):
     return w
 
 
+def square_relation_cycles(windows):
+    def quotient(start,degree):
+        basis=nullspace_sparse(insertion_columns(windows,start,degree),4**degree)
+        return s.Matrix(len(basis),4**degree,lambda i,j:basis[i].get(j,0))
+    def section(quotient):
+        pivots=quotient.rref()[1]
+        result=s.zeros(quotient.cols,quotient.rows)
+        inverse=quotient[:,list(pivots)].inv()
+        for row,pivot in enumerate(pivots):result[pivot,:]=inverse[row,:]
+        assert quotient*result==s.eye(quotient.rows)
+        return result
+    q3=quotient(2,3);s3=section(q3);q4=quotient(1,4)
+    multiplication=q4[:,192:256]*s3
+    annihilator=multiplication.nullspace()
+    assert multiplication.rank()==14 and len(annihilator)==6
+    square={ (3,3):F(1) }
+    assert windows[0][5]==square
+    d2=s.kronecker_product(s.eye(4),q4)*s.kronecker_product(relation_matrix(windows[0]),s3)
+    first=s.kronecker_product(relation_matrix(windows[0]),s.eye(4))
+    second=s.kronecker_product(s.eye(4),relation_matrix(windows[1]))
+    syzygies=first.row_join(-second).nullspace()
+    coordinates=s.Matrix.hstack(*(v[:24,:] for v in syzygies))
+    q2=quotient(3,2);s2=section(q2)
+    d3=s.kronecker_product(s.eye(6),q3)*s.kronecker_product(coordinates,s2)
+    cycles=s.zeros(120,6)
+    for j,col in enumerate(annihilator):cycles[100:120,j]=col
+    assert d2*cycles==s.zeros(140,6) and d2*d3==s.zeros(140,40)
+    assert d2.rank()==77 and d3.rank()==36
+    assert d3.row_join(cycles).rank()==42
+    # One especially small nonzero class is square relation tensor word 303.
+    word=s.zeros(64,1);word[51]=1
+    assert multiplication*q3*word==s.zeros(35,1)
+    simple=s.zeros(120,1);simple[100:120,0]=q3*word
+    assert d3.row_join(simple).rank()==37
+    return {'left_x3_multiplication_rank':14,'annihilator_dimension':6,
+            'd2_rank':77,'d3_rank':36,'d3_plus_square_cycles_rank':42,
+            'simple_nonboundary_cycle':'(x3 tensor x3) tensor [303]',
+            'remaining_H2_dimension_after_square_cycles':1}
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output',type=Path)
     args=parser.parse_args()
+    verify_involution()
     w=tensor_at(0)
     assert len(w)==83
     assert [flatten(w,(i,)) for i in range(4)]==[4]*4
@@ -68,19 +125,29 @@ def main():
     assert quartic==[35]*4 and quintic==[63,56,56,56]
     d3_ranks=[quintic_d3_rank(windows,i) for i in range(4)]
     assert d3_ranks==[36]*4
+    square_cycles=square_relation_cycles(windows)
     generic=tensor_at(1)
     assert symmetrize(generic)[0] is not None
+    bad=tensor_at(-1);bad_windows=reconstructed_windows(bad)
+    bad_dual=orthogonal_windows(bad_windows)
+    bad_intersections=[[len(nullspace_sparse(insertion_columns(bad_dual,i,n),4**n)) for n in (3,4)] for i in range(4)]
+    assert bad_intersections==[[6,12],[12,12],[6,4],[4,4]]
     certificate={'result':'PASS','arithmetic':'exact rational polynomial and linear algebra',
         'quadrics':['e0^2-e0*e3','e1^2-e1*e3','e2^2-e2*e3','e3*(e0+e1+e2+t*e3)'],
         'cubic_normalization_coordinates':['012','133','233','333'],
         'cubic_normalization_determinant':-2,
         'symmetric_CI_parameters':'t not in {0,-1,-2,-3}',
+        'whole_family_AS_parameters':'exactly t not in {0,-1,-2,-3}',
+        'whole_family_finite_Frobenius_parameters':'exactly t not in {-1,-2}',
+        'indexed_involution':'t -> -3-t; polynomial frame determinant -1',
+        'intersection_dimensions_at_t_minus_one':bad_intersections,
         'special_tensor_terms':83,'singleton_ranks':[4]*4,'pair_cut_ranks':[6]*3,
         'intersection_dimensions_W3_W4':intersections,'dual_degree_five_dimensions':[0]*4,
         'symmetrizers':['k I','k E33','k I'],'alternating_membership':False,
         'primal_degree_four_dimensions':quartic,'primal_degree_five_dimensions':quintic,
         'quintic_d3_ranks':d3_ranks,'quintic_H2_dimensions':[7,0,0,0],
         'quintic_H3_dimensions':[0]*4,
+        'square_relation_cycles':square_cycles,
         'primal_relation_insertion_rank_degree_five':[1024-d for d in quintic],
         'conclusions':['The symmetric chart is not relatively closed inside the finite-Frobenius low-rank candidate locus.',
                        'Finite Frobenius plus all four quartic Koszul filters does not imply Koszulity.',

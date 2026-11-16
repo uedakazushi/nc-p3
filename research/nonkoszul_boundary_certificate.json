@@ -15,6 +15,27 @@
   ],
   "cubic_normalization_determinant": -2,
   "symmetric_CI_parameters": "t not in {0,-1,-2,-3}",
+  "whole_family_AS_parameters": "exactly t not in {0,-1,-2,-3}",
+  "whole_family_finite_Frobenius_parameters": "exactly t not in {-1,-2}",
+  "indexed_involution": "t -> -3-t; polynomial frame determinant -1",
+  "intersection_dimensions_at_t_minus_one": [
+    [
+      6,
+      12
+    ],
+    [
+      12,
+      12
+    ],
+    [
+      6,
+      4
+    ],
+    [
+      4,
+      4
+    ]
+  ],
   "special_tensor_terms": 83,
   "singleton_ranks": [
     4,
@@ -87,6 +108,15 @@
     0,
     0
   ],
+  "square_relation_cycles": {
+    "left_x3_multiplication_rank": 14,
+    "annihilator_dimension": 6,
+    "d2_rank": 77,
+    "d3_rank": 36,
+    "d3_plus_square_cycles_rank": 42,
+    "simple_nonboundary_cycle": "(x3 tensor x3) tensor [303]",
+    "remaining_H2_dimension_after_square_cycles": 1
+  },
   "primal_relation_insertion_rank_degree_five": [
     961,
     968,

@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-16",
-  "version": 25,
+  "version": 26,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -489,6 +489,18 @@
       "claim": "A polynomial family from four quadrics gives a nonsymmetrizable finite-Frobenius point in Z_sym, passing every quartic Koszul test; quintic dimensions (63,56,56,56), d3 ranks 36, H2=(7,0,0,0), H3=0 prove non-Koszulity. The symmetric image is not relatively closed in the finite-Frobenius locus.",
       "proof": "sections/nonkoszul_boundary.tex:thm:nonkoszul-symmetric-boundary",
       "status": "proof_written"
+    },
+    {
+      "id": "NONKOSZUL-BOUNDARY-EXCEPTIONAL-PARAMETERS",
+      "claim": "For the entire polynomial tensor family, finite Frobenius iff t not in {-1,-2}; standard Koszul AS iff t not in {0,-1,-2,-3}. An explicit invertible polynomial frame identifies t with -3-t at every value; full indexed isomorphism is not claimed.",
+      "proof": "sections/nonkoszul_boundary.tex:cor:nonkoszul-boundary-all-parameters",
+      "status": "proof_written"
+    },
+    {
+      "id": "NONKOSZUL-BOUNDARY-SQUARE-CYCLES",
+      "claim": "Six of the seven quintic H2 classes arise injectively from the six-dimensional annihilator of left multiplication by x_(1,3), using the relation x_(0,3)*x_(1,3); a one-word tail 303 gives an explicit surviving class.",
+      "proof": "sections/nonkoszul_boundary.tex:prop:boundary-square-cycles",
+      "status": "proof_written"
     }
   ],
   "document_paths": {
@@ -552,7 +564,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "1cfd581205a5301fde9eef0c2ca1c3b3dbeaed88",
+  "reviewed_source_commit": "e9d7309d1a8e1e1a5ce38d3a616e7c31bfd7e15f",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -561,7 +573,7 @@
     "task_id": "Z4-AS-004",
     "status": "open_with_tensor_reconstruction_and_rank_split",
     "objective": "Find structurally meaningful necessary and sufficient Koszul/AS regularity criteria across the canonical 4-window representation; classify all exceptional loci.",
-    "immediate_next_action": "Explain the seven-dimensional quintic obstruction on the new partially symmetric boundary structurally. Use L_t=<e_i^2-e_i e3 (i=0,1,2), e3(e0+e1+e2+t e3)> and its cubic dual basis; at t=0 the tensor is finite Frobenius, rho=6, S2=k E33, quartic filters all pass but quintic H2 at start0 has dimension seven. Determine whether the generic one-basepoint resultant boundary has the same obstruction, or whether any singular-symmetrizer boundary can be Koszul AS. Do not re-investigate finite-Frobenius relative closedness: the new theorem disproves it. Alternatively investigate whether quintic-exact candidates can still fail later or switch to rho=3,4,5 matrix spaces.",
+    "immediate_next_action": "Explain the remaining one-dimensional quotient of the seven-dimensional quintic H2 beyond the six square-relation cycles, then seek a basis-independent formula for the generic one-basepoint resultant boundary. In the explicit example m_x_(1,3):C_(2,5)->C_(1,5) has rank14, kernel6; square relation tensor kernel embeds into H2 (rank(d3|Z)=42). The one-word tail 303 survives. Determine whether this mechanism excludes every singular-symmetrizer boundary from Koszul AS or whether a regular boundary exists. The one-parameter family and all four exceptional t values are completely handled; do not rerun their classification. Alternative: investigate candidates exact through degree five that fail later, or rho=3,4,5 matrix spaces.",
     "read_first": [
       "research/plan_ja.tex",
       "AGENTS.md",
@@ -571,7 +583,7 @@
       "research/classification_branches.json"
     ],
     "known_obstruction": "The explicit nonclosed symmetric boundary inside finite Frobenius is non-Koszul and therefore not a LOW-UNCLASSIFIED AS witness. General boundary Koszulity, all exceptional fibers, rho=3,4,5 and full AS coverage remain unresolved.",
-    "state_of_claim": "Two auxiliary presentation components are known; the symmetric saturated image is PGL4^3 x U. Its relative closedness in finite Frobenius is false, by a certified explicit 83-term tensor family whose special point has the first Koszul defect in degree five. This gives a strict counterexample to sufficiency of finite Frobenius plus the quartic rank filter, not a new AS branch.",
+    "state_of_claim": "Two auxiliary presentation components are known; the symmetric saturated image is PGL4^3 x U. Its relative closedness in finite Frobenius is false, by a certified explicit 83-term tensor family whose special point has the first Koszul defect in degree five. This gives a strict counterexample to sufficiency of finite Frobenius plus the quartic rank filter, not a new AS branch. All four exceptional parameters of the constructed family are classified, with the global indexed involution t -> -3-t. Six of seven obstruction classes now have a square-relation/annihilator explanation; the remaining quotient and a universal formula are open.",
     "handoff_rule": "Overwrite with the current next concrete research action before task termination; no chronological status log."
   },
   "execution_policy": {
