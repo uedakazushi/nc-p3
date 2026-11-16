@@ -1,0 +1,96 @@
+\section{三因子対称境界と有限切断代数}
+\label{sec:truncated-quadric-boundary}
+三次商の双対基底から作る前節のテンソルは、有限切断代数のtrivial extensionとして理解できる。
+この記述は新しいAS正則性の十分条件ではないが、個々の大行列に依存せず境界問題を整理する。
+
+\begin{lemma}[四層二次代数のKoszul性]\label{lem:four-layer-koszul}
+頂点$0,1,2,3$を持ち、矢が$i$から$i+1$へだけ向かう箙の二次商代数はKoszulであり、
+大域次元は3以下である。
+\end{lemma}
+\begin{proof}
+経路の長さは始点と終点の差に等しく、最大3である。
+単純加群の極小射影分解では、$p$番目の項の内部次数は$p$以上であり、
+始点から終点へ向かう正次数成分の積として長さ3以下でなければならない。
+従って$p>3$の項は零である。
+第1項は次数1生成、第2項は二次関係による次数2生成である。
+第3項は内部次数3以外を持ち得ないので、分解は線型である。
+\end{proof}
+
+$L\subset\operatorname{Sym}^2(V^*)$を四次元とし、
+$B=\operatorname{Sym}(V^*)/(L)$が$\dim B_1=4$, $\dim B_2=6$, $\dim B_3=4$を満たすとする。
+三次双対基底$b_0,\ldots,b_3$から、因子$0,1,3$が対称なテンソル
+$w_{abjc}=(b_j)_{abc}$を作る。
+有限有向代数$A_L$を、順序づけた頂点$3,0,1,2$に対して
+\[
+ e_iA_Le_j=B_{\operatorname{pos}(j)-\operatorname{pos}(i)}
+ \quad(\operatorname{pos}(i)\leq\operatorname{pos}(j))
+\]
+とし、逆向き成分は零、積は$B$の積で定める。
+ここで$\operatorname{pos}(3)=0$, $\operatorname{pos}(0)=1$,
+$\operatorname{pos}(1)=2$, $\operatorname{pos}(2)=3$である。
+$A_L$は四層二次代数なのでKoszulであり、$\dim A_L=32$である。
+$D A_L=\operatorname{Hom}_k(A_L,k)$の$B_r$双対成分に次数$4-r$を与え、
+通常のtrivial extension
+\[
+ T_L=A_L\ltimes D A_L,
+ \qquad (a,f)(b,g)=(ab,a\cdot g+f\cdot b)
+\]
+にこの次数を入れる。
+
+\begin{proposition}[三因子対称Frobenius候補のtrivial extension表示]
+\label{prop:partial-symmetric-trivial-extension}
+上記$w$がテンソル復元定理の有限Frobenius条件を満たすなら、
+復元した二次双対を四頂点で折り畳んだ代数$E(w)$は、次数付き代数として$T_L$と同型である。
+従ってこの部分のKoszul判定は、$T_L$のKoszul判定と一致する。
+この主張に$B$の完全交叉性は仮定しない。
+\end{proposition}
+\begin{proof}
+$T_L$の次数一成分は、三本の前向き辺上の$B_1$と戻り辺$2\to3$上の$B_3^*$である。
+trivial extensionのtraceは、$D A_L$成分を$1\in A_L$で評価する写像であり、
+相補次数の積を完全に対合させる。
+三つの$B_1$と一つの$B_3^*$の積のtraceは
+\[
+ (f,a,b,c)\longmapsto f(abc)
+\]
+である。選んだ基底でのこの四階テンソルが、まさに$w$とその巡回回転である。
+各始点の$T_L$の次数別次元は$(1,4,6,4,1)$となる。
+
+$w$の一因子階数4と隣接二対二階数6により、次数一成分の積は
+$T_L$の次数2,3,4を全て生成する。実際、その積写像の階数は、完全trace対合を使うと
+対応する一因子・二因子縮約の階数に等しい。
+従って$T_L$は次数一生成であり、その二次関係は$R_i(w)^\perp$そのものである。
+よって二次表示から全射$E(w)\twoheadrightarrow T_L$を得る。
+有限Frobenius仮定から両者の全次元は64で等しいので、これは同型である。
+\end{proof}
+
+\begin{remark}[既存のhigher zigzag構成との関係]
+Grant\cite[Definitions 2.3, 2.5]{GrantZigzag}は、有限大域次元のKoszul代数$\Lambda$に対し、
+その二次双対の符号捩れtrivial extensionをhigher zigzag algebraとして定義している。
+ここでは$\Lambda=A_L^!$と取れる。
+四層の長さ符号は頂点上の$\operatorname{diag}(1,-1,1,-1)$による内部自己同型なので、
+その符号捩れは次数零の可逆元で除ける。
+従って上の$T_L$は、この既知構成の四層の場合としても記述できる。
+trivial extensionという構成自体の新規性や、それだけからのKoszul性は主張しない。
+本研究で必要なのは、基点境界で二次表示とKoszul性がどの段階で破れるかの判定である。
+\end{remark}
+
+\begin{lemma}[一般点の有限次数障害による族全体の排除]
+\label{lem:generic-quintic-exclusion}
+既約なパラメータ空間$X$上の正則な射影テンソル族で、
+全ての隣接二対二階数が6以下であるものを取り、
+有限Frobenius条件と全四次Koszul検査を通る部分$U\subset X$が空でないとする。
+$U$は開部分である。
+一般点で五次Koszul微分の階数が
+$\operatorname{rk}d_2=a$, $\operatorname{rk}d_3=b$なら、
+全ての$U$上の点で$\dim H_2\geq120-a-b$である。
+特に$a+b<120$なら、この族は標準型Koszul AS対象を一つも含まない。
+\end{lemma}
+\begin{proof}
+隣接階数の上界により、有限Frobenius条件は$X$内で開であり、四次検査の開性と合わせて$U$は開である。
+$U$上では必要な次数2,3,4の商空間は一定階数であり、
+$K_2,K_3,K_1$はそれぞれ階数120,40,140のベクトル束になる。
+二つの微分はベクトル束の射なので、その階数は一般点の値を超えない。
+従って
+$\dim H_2=120-\operatorname{rk}d_2-\operatorname{rk}d_3\geq120-a-b$である。
+標準型Koszul AS点は必ず$U$に入るので、最後の主張も従う。
+\end{proof}

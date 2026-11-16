@@ -8,7 +8,7 @@
 \newcommand{\PGL}{\operatorname{PGL}}
 \title{nc-p3研究ノート：周期構造・局所変形・未解決の障害}
 \author{}
-\date{2026年11月16日\quad 第27版}
+\date{2026年11月17日\quad 第28版}
 \begin{document}
 \maketitle
 \section{記法と確実性}
@@ -467,6 +467,15 @@ $\sum_{i\in I}c_i\ne0$に等しい。
 この一基点開集合で，境界の七次元障害が普遍化するかを調べる。
 同じ例に対する変数順序だけのPBW探索は各三窓で不適合だったが、
 これは非Koszul性の証明に使わず、正確な五次Hilbert欠損を使う。
+
+\paragraph{有限切断としての一般境界の整理。}
+主論文\texttt{prop:partial-symmetric-trivial-extension}は、三因子対称な有限Frobenius候補を
+四層の可換二次商の切断代数のtrivial extensionへ同定する。
+四層二次代数のKoszul性は、経路の長さが3以下であることから証明できる。
+trivial extension側のKoszul性は自動ではなく、既知の標本がその反例になる。
+二変数係数族では現在、$\mathbb Q(u,v)$上の五次$d_2$階数を厳密計算中である。
+一般点で非零障害が出れば、有限Frobenius・四次検査の開部分での半連続性により
+特殊値にもAS点が隠れていないと結論できるが、階数計算が完了するまではその排除を主張しない。
 
 \section{再開時の使い方}
 次の課題と優先順位は\path{research/plan_ja.tex}に集約する。

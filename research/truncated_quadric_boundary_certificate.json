@@ -1,0 +1,34 @@
+{
+  "result": "PASS",
+  "arithmetic": "exact QQ(u,v) cubic frame and integer dimension identities",
+  "normalized_quadric_coefficients": [
+    "1",
+    "u",
+    "v"
+  ],
+  "cubic_frame_determinant": "-2*u*v",
+  "four_window_pair_ranks": [
+    6,
+    6,
+    6,
+    6
+  ],
+  "return_basis_cube": "333 at return coordinate 3",
+  "truncated_algebra_dimensions": [
+    4,
+    12,
+    12,
+    4
+  ],
+  "trivial_extension_dimensions": [
+    4,
+    16,
+    24,
+    16,
+    4
+  ],
+  "limits": [
+    "The structural isomorphism is proved in the manuscript under finite-Frobenius hypotheses.",
+    "This check does not establish uniform finite-Frobenius or Koszul properties of the coefficient family."
+  ]
+}

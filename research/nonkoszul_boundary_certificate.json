@@ -115,7 +115,12 @@
     "d3_rank": 36,
     "d3_plus_square_cycles_rank": 42,
     "simple_nonboundary_cycle": "(x3 tensor x3) tensor [303]",
-    "remaining_H2_dimension_after_square_cycles": 1
+    "remaining_H2_dimension_after_square_cycles": 1,
+    "mixed_cycle": "2*[33]x[332]+4*[33]x[132]+12*[33]x[221]+8*[33]x[231]+4*[33]x[331]-3*r01x[213]-6*r13x[123]",
+    "d2_mixed_zero": true,
+    "d3_plus_square_plus_mixed_rank": 43,
+    "mixed_cycle_three_coordinate_functional": "r5[132]-r0[132]-r3[132]; kills d3 and square classes, evaluates to 4",
+    "remaining_H2_after_all_seven_cycles": 0
   },
   "primal_relation_insertion_rank_degree_five": [
     961,

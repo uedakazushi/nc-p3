@@ -1,40 +1,45 @@
 {
   "schema_version": 2,
-  "date": "2026-11-16",
-  "version": 27,
+  "date": "2026-11-17",
+  "version": 28,
   "reviewed_input": {
-    "source_commit": "7973cb9b42b4ff3e3c4ca2b8895c99423df1b4c8"
+    "source_commit": "5778d0de3fa5ef2a520f106d6d20179b553411dc"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Derived an explicit seven-term mixed cycle completing the seven-dimensional quintic H2 at the known non-Koszul boundary. Added a sparse three-coordinate functional annihilating d3 and all six square classes and evaluating 4 on the new cycle. Updated manuscript, verifier, plan, notes, and STATE. General boundary coverage not asserted.",
+    "scope": "Added four-layer Koszul and trivial-extension identification for partially symmetric Frobenius candidates, plus a generic finite-obstruction exclusion lemma; integrated the externally added seventh-cycle verifier and reran it successfully.",
     "new_mathematical_theorem": true
   },
   "checks": [
     {
-      "command": "Independent self-contained exact-Q reconstruction executed in the working container (check_cycle_exact.py, not a tracked repository script)",
+      "command": "bash scripts/cloud_preflight.sh",
       "result": "PASS",
-      "scope": "Built the t=0 83-term top tensor and four six-relation windows; exact rational row reductions gave 288 length-4 relation generators of rank 221, d2(mixed)=0, d3 rank36, d3 plus six square classes rank42, d3 plus seventh mixed class rank43. A three-coordinate functional (-coord(r0,[132])-coord(r3,[132])+coord(r5,[132])) vanishes on d3 and all square classes and evaluates 4 on the mixed cycle."
+      "scope": "Python 3.12.14, SymPy 1.14.0 and project structure."
     },
     {
-      "command": "python3 computations/verify_nonkoszul_boundary.py --output research/nonkoszul_boundary_certificate.json",
-      "result": "NOT_RUN_AFTER_EDIT",
-      "scope": "Integrated independent exact-check identities into the repository verifier, but this updated repository script has not been executed in its original environment. Regenerate its tracked certificate before claiming the integrated verifier passes."
-    },
-    {
-      "command": "python3 scripts/check_project.py",
-      "result": "NOT_RUN_AFTER_EDIT",
-      "scope": "Repository structural validator not run during this checkpoint; do not infer a PASS from prior runs."
-    },
-    {
-      "command": "SymPy exact symbolic determinant of the 20x20 cubic frame for L_{c,t} in the working container",
+      "command": "python3 computations/verify_nonkoszul_boundary.py --output /workspace/work/nc-p3-generic-20261117/current_boundary.json",
       "result": "PASS",
-      "scope": "For L=<e_i^2-e_i e3 (i=0..2), e3*(c0 e0+c1 e1+c2 e2+t e3)>, 16 cubic annihilation equations plus 4 normalization coordinates (012,133,233,333) have determinant -2*c0^2*c1*c2, identically independent of t. This guarantees the cubic frame on the open c0*c1*c2!=0, not finite-Frobenius or AS regularity of the generalized family."
+      "scope": "Full updated integrated verifier, including all seven classes, three-coordinate functional, exceptional parameters, all finite-Frobenius checks and degree-five obstruction."
+    },
+    {
+      "command": "python3 computations/verify_truncated_quadric_boundary.py --output research/truncated_quadric_boundary_certificate.json",
+      "result": "PASS",
+      "scope": "Exact QQ(u,v) cubic determinant -2uv, normalization equations, four adjacent cut ranks6, return cube and dimension identities 32/64."
+    },
+    {
+      "command": "python3 scripts/check_project.py; git diff --check",
+      "result": "PASS",
+      "scope": "Current source paths, JSON and expanded TeX references; not compilation."
+    },
+    {
+      "command": "Exploratory QQ(u,v) sparse elimination of quintic d2",
+      "result": "RUNNING",
+      "scope": "Cubic quotient dimension20 and quartic quotient dimension35 computed; generic quintic rank not yet established."
     }
   ],
   "proof_review": {
-    "result": "TARGETED_INDEPENDENT_EXACT_RATIONAL",
-    "scope": "Independently reconstructed exact rational relation and quotient bases, verified the explicit mixed cycle and exact ranks (36,42,43), and computed the three-coordinate functional on all d3 and six square columns. New theorem concerns only the explicit t=0 boundary, not generic one-basepoint families or the full AS moduli. No formalization or independent peer review."
+    "result": "TARGETED",
+    "scope": "Reviewed short-path proof of four-layer Koszulity, trace/evaluation identification and generation of the 64-dimensional trivial extension, inner parity twist, and constant-rank vector-bundle specialization argument with adjacent cut upper bounds. No formalization or independent peer review."
   },
   "tex": {
     "result": "NOT_RUN",
@@ -45,14 +50,13 @@
     "scope": "No PDF regenerated in this checkpoint."
   },
   "literature_review": {
-    "result": "NOT_RUN_FOR_NEW_CYCLE",
-    "scope": "New claim is an explicit exact calculation in the present family, with no asserted novelty relative to general Koszul-homology literature."
+    "result": "TARGETED",
+    "scope": "Grant, Higher zigzag algebras (2019), Definitions 2.3 and 2.5 and the parity twist. Used only for construction context; no unverified representation-infinite criterion."
   },
   "github_save": {
-    "result": "PASS_READBACK_OF_CONTENT",
+    "result": "PENDING",
     "branch": "main",
-    "validated_content_commit": "373fe48910c8926894fad83d71a113227f08c30a",
-    "scope": "Read back seven content/source/state files from main and verified manuscript v27, input of new section, exact-cycle theorem and functional, verifier checks, updated research notes and next-task state. This receipt will be committed separately."
+    "scope": "Fetched and fast-forwarded remote changes through 5778d0d; current structural checkpoint awaiting push/readback."
   },
   "library_save": {
     "result": "not_attempted",
