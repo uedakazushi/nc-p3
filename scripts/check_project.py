@@ -25,6 +25,8 @@ REQUIRED = [
     'computations/verify_symmetric_specialization.py', 'research/symmetric_specialization_certificate.json',
     'computations/verify_singular_symmetrizer_boundary.py', 'research/singular_symmetrizer_boundary_certificate.json',
     'computations/verify_permutation_support_limits.py', 'research/permutation_support_limits_certificate.json',
+    'sections/nonkoszul_boundary.tex', 'computations/verify_nonkoszul_boundary.py',
+    'research/nonkoszul_boundary_certificate.json',
     'computations/verify_ci_centroid.py', 'research/ci_centroid_certificate.json',
     'computations/verify_pure_anticommutative_slice.py',
     'research/pure_anticommutative_slice_certificate.json', 'research/frobenius_tensor_certificate.json',

@@ -1,0 +1,105 @@
+{
+  "result": "PASS",
+  "arithmetic": "exact rational polynomial and linear algebra",
+  "quadrics": [
+    "e0^2-e0*e3",
+    "e1^2-e1*e3",
+    "e2^2-e2*e3",
+    "e3*(e0+e1+e2+t*e3)"
+  ],
+  "cubic_normalization_coordinates": [
+    "012",
+    "133",
+    "233",
+    "333"
+  ],
+  "cubic_normalization_determinant": -2,
+  "symmetric_CI_parameters": "t not in {0,-1,-2,-3}",
+  "special_tensor_terms": 83,
+  "singleton_ranks": [
+    4,
+    4,
+    4,
+    4
+  ],
+  "pair_cut_ranks": [
+    6,
+    6,
+    6
+  ],
+  "intersection_dimensions_W3_W4": [
+    [
+      4,
+      1
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      4,
+      1
+    ]
+  ],
+  "dual_degree_five_dimensions": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "symmetrizers": [
+    "k I",
+    "k E33",
+    "k I"
+  ],
+  "alternating_membership": false,
+  "primal_degree_four_dimensions": [
+    35,
+    35,
+    35,
+    35
+  ],
+  "primal_degree_five_dimensions": [
+    63,
+    56,
+    56,
+    56
+  ],
+  "quintic_d3_ranks": [
+    36,
+    36,
+    36,
+    36
+  ],
+  "quintic_H2_dimensions": [
+    7,
+    0,
+    0,
+    0
+  ],
+  "quintic_H3_dimensions": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "primal_relation_insertion_rank_degree_five": [
+    961,
+    968,
+    968,
+    968
+  ],
+  "conclusions": [
+    "The symmetric chart is not relatively closed inside the finite-Frobenius low-rank candidate locus.",
+    "Finite Frobenius plus all four quartic Koszul filters does not imply Koszulity.",
+    "The special point is not a standard AS object and is not a LOW-UNCLASSIFIED AS witness."
+  ],
+  "limits": [
+    "No full AS classification or exhaustive analysis of the symmetric boundary.",
+    "Generic CI fibers are regular by the existing theorem; special-fiber non-Koszulity is certified by a degree-five Hilbert defect."
+  ]
+}

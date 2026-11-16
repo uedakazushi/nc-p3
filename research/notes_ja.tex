@@ -8,7 +8,7 @@
 \newcommand{\PGL}{\operatorname{PGL}}
 \title{nc-p3研究ノート：周期構造・局所変形・未解決の障害}
 \author{}
-\date{2026年11月16日\quad 第24版}
+\date{2026年11月16日\quad 第25版}
 \begin{document}
 \maketitle
 \section{記法と確実性}
@@ -429,6 +429,16 @@ $\dim W_{0,3}=\sum_b d_b^2\geq10$であり、必要な4次元にはならない�
 主論文\texttt{prop:singular-symmetrizer-boundary}は、三つの二対二階数が6である非対称化境界を与える。
 ただし三次交叉が4次元を越すためFrobenius候補から外れる。
 従って次の探索は、二対二階数に加えて三次交叉次元も必ず保つ必要がある。
+
+\paragraph{三因子対称構成による非Koszul境界。}
+四二次式を共通基点を持つものへ動かし、その三次商の双対基底を第四因子に置くと、
+完全対称でない有限Frobenius候補が得られる。
+主論文\texttt{thm:nonkoszul-symmetric-boundary}の明示例では全四次検査が通るが、
+始点0の五次元数が63となり、Koszul性が破れる。
+これで有限Frobenius領域内の相対閉性問題は否定的に解決した。
+残るのは、特異symmetrizerを持つ境界が全て非Koszulなのか、正則な境界も存在するのかである。
+同じ例に対する変数順序だけのPBW探索は各三窓で不適合だったが、
+これは非Koszul性の証明に使わず、正確な五次Hilbert欠損を使う。
 
 \section{再開時の使い方}
 次の課題と優先順位は\path{research/plan_ja.tex}に集約する。

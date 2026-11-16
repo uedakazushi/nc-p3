@@ -180,10 +180,11 @@
         "definition": "closure of G-saturated symmetric complete-intersection tensor chart",
         "dimension": 69,
         "generic_regular_chart": "symmetric CI chart",
-        "boundary_coverage": "unresolved",
+        "boundary_coverage": "not exhaustive; finite-Frobenius nonsymmetrizable boundary exists but the certified example is non-Koszul",
         "disjoint_from": "polynomial indexed orbit",
         "entire_regular_chart_presentation": "PGL4^3 x U, smooth locally closed dimension 69",
-        "known_nonregular_boundary": "Explicit w_* with ranks (4,4,4,4), (6,6,6), singular S2; W3=(6,10,6,6), hence not finite Frobenius"
+        "known_nonregular_boundary": "Explicit w_* with ranks (4,4,4,4), (6,6,6), singular S2; W3=(6,10,6,6), hence not finite Frobenius",
+        "finite_Frobenius_boundary": "thm:nonkoszul-symmetric-boundary; rho=6, quartic dimensions 35, quintic dimensions (63,56,56,56)"
       },
       {
         "id": "Z-ALT",

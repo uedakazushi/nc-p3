@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-16",
-  "version": 24,
+  "version": 25,
   "reviewed_input": {
-    "source_commit": "7f0640cf1ac39ea1f2aee4776835bc3b71d13a6d"
+    "source_commit": "1cfd581205a5301fde9eef0c2ca1c3b3dbeaed88"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Added explicit nonsymmetrizable Z_sym boundary preserving every flattening rank but failing cubic Frobenius dimensions; proved fixed-coordinate diagonal permutation-support limits cannot remain concise except trivially.",
+    "scope": "Constructed a polynomial boundary family with generic symmetric AS fibers and a finite-Frobenius nonsymmetrizable special point; the first Koszul defect occurs in degree five despite passing all quartic filters.",
     "new_mathematical_theorem": true
   },
   "checks": [
@@ -75,11 +75,16 @@
       "command": "python3 computations/verify_permutation_support_limits.py --output research/permutation_support_limits_certificate.json",
       "result": "PASS",
       "scope": "Exhaustive 65536 bipartite graphs representing 7443 nonempty Birkhoff B4 faces; only the full face retains every singleton rank four."
+    },
+    {
+      "command": "python3 computations/verify_nonkoszul_boundary.py --output research/nonkoszul_boundary_certificate.json",
+      "result": "PASS",
+      "scope": "Symbolic cubic-frame determinant -2, polynomial family and normalized kernel equations; exact special singleton/pair ranks, W3/W4/W5 dimensions, singular one-dimensional symmetrizer, positive/negative membership failure, quartic dimensions 35, quintic dimensions (63,56,56,56), all d3 ranks 36 and H2/H3 values; generic t=1 symmetric fixture."
     }
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "PBW termination/overlaps, dual exterior filtration and all-fiber perfect pairings; top trace linearity, opposite flattening block quotient and rho=6+rank Q; all kernel equations and global radial indexed shifts reviewed. No formalization or independent peer review. Necessity without PBW/domain assumptions checked from cubic normal spanning dimension 20; commuting radial differences and periodic shifts; anticommuting coefficient compatibility, alternating outer terms and periodic shifts; dual squarefree filtrations and full rank block quotient reviewed. Reviewed arbitrary-q cubic necessity/sufficiency, filtered quantum-exterior AS proof, flat t*f PBW specialization and algebraic top trace, nonperiodic indexed diagonal gauges to uniform +/- backgrounds and the two low-rank reductions. Explicit X sign period witness prevents a false nonzero-G minimal-period claim. Reviewed constant-rank dual flatness over Artin rings and bar Gaussian elimination on the dual; injection into the periodic flat PBW tangent; rank bound 69 and a smooth symmetric nine-parameter source plus 60 orbit directions; finite-type smooth-source argument and open image. No claim of global low-rank coverage, stack/coarse smoothness or the unrestricted Clifford hull. Reviewed the actual 24 CI deformations, stabilizer-aware source ranks, smooth-source open images in X6, the universal 19-dimensional source-fiber action giving symmetric closure dimension 69, the alternating open orbit closure dimension 45, and openness of finite-Frobenius candidate conditions inside X6. All component claims are restricted to presentation schemes, with boundaries and exhaustiveness unresolved. Reviewed centroid reduction to six quadratic minors, all nonscalar Jordan rank cases and basepoint obstruction; unique anchored PGL frames, regular inverse via constant-rank kernel lines and CI recovery. Reviewed nonclosed-orbit example and distinguished it from union closure. No assertion of ambient smoothness at all symmetric points or global boundary exhaustion. Reviewed explicit boundary weight minimum four, reconstructed first two windows, six independent cubic vectors with both-side decompositions, and singular two-dimensional symmetrizer space. Reviewed Birkhoff minimum-face argument and finite exact face enumeration. Floating-point facet discovery was used only for exploration; no exhaustive mathematical claim relies on it."
+    "scope": "PBW termination/overlaps, dual exterior filtration and all-fiber perfect pairings; top trace linearity, opposite flattening block quotient and rho=6+rank Q; all kernel equations and global radial indexed shifts reviewed. No formalization or independent peer review. Necessity without PBW/domain assumptions checked from cubic normal spanning dimension 20; commuting radial differences and periodic shifts; anticommuting coefficient compatibility, alternating outer terms and periodic shifts; dual squarefree filtrations and full rank block quotient reviewed. Reviewed arbitrary-q cubic necessity/sufficiency, filtered quantum-exterior AS proof, flat t*f PBW specialization and algebraic top trace, nonperiodic indexed diagonal gauges to uniform +/- backgrounds and the two low-rank reductions. Explicit X sign period witness prevents a false nonzero-G minimal-period claim. Reviewed constant-rank dual flatness over Artin rings and bar Gaussian elimination on the dual; injection into the periodic flat PBW tangent; rank bound 69 and a smooth symmetric nine-parameter source plus 60 orbit directions; finite-type smooth-source argument and open image. No claim of global low-rank coverage, stack/coarse smoothness or the unrestricted Clifford hull. Reviewed the actual 24 CI deformations, stabilizer-aware source ranks, smooth-source open images in X6, the universal 19-dimensional source-fiber action giving symmetric closure dimension 69, the alternating open orbit closure dimension 45, and openness of finite-Frobenius candidate conditions inside X6. All component claims are restricted to presentation schemes, with boundaries and exhaustiveness unresolved. Reviewed centroid reduction to six quadratic minors, all nonscalar Jordan rank cases and basepoint obstruction; unique anchored PGL frames, regular inverse via constant-rank kernel lines and CI recovery. Reviewed nonclosed-orbit example and distinguished it from union closure. No assertion of ambient smoothness at all symmetric points or global boundary exhaustion. Reviewed explicit boundary weight minimum four, reconstructed first two windows, six independent cubic vectors with both-side decompositions, and singular two-dimensional symmetrizer space. Reviewed Birkhoff minimum-face argument and finite exact face enumeration. Floating-point facet discovery was used only for exploration; no exhaustive mathematical claim relies on it. Reviewed the eight Boolean base points of the first three quadrics and the exact excluded CI parameters; polynomial cubic frames and identification of generic tensors with CI top traces by an invertible factor map; special finite-Frobenius reconstruction and non-Koszul Hilbert identity. Relative closedness in finite Frobenius is disproved, while AS boundary coverage remains open."
   },
   "tex": {
     "result": "NOT_RUN",
@@ -96,14 +101,14 @@
   "github_save": {
     "result": "PENDING",
     "branch": "main",
-    "scope": "7f0640c was pushed and fetched back with matching HEAD; current explicit boundary checkpoint awaiting push/readback."
+    "scope": "1cfd581 was pushed and fetched back with matching HEAD; current non-Koszul Frobenius boundary checkpoint awaiting push/readback."
   },
   "library_save": {
     "result": "not_attempted",
     "scope": "Reserved for failed GitHub save."
   },
   "open_mathematics": [
-    "Finite-Frobenius boundary coverage of Z_sym and Z_alt is unresolved.",
+    "Koszul AS coverage of the symmetric component boundary is unresolved; relative closedness of the symmetric chart in finite Frobenius is disproved.",
     "Other X6 components and rho=3,4,5 candidates are not classified.",
     "No global LOW-UNCLASSIFIED witness or emptiness theorem.",
     "Full AS-moduli components and unrestricted higher Clifford obstructions remain unresolved."
