@@ -1,0 +1,19 @@
+{
+  "result": "PASS",
+  "arithmetic": "exact rational",
+  "three_cut_equations": 300,
+  "affine_tangent_dimension": 70,
+  "projective_tangent_dimension": 69,
+  "projective_orbit_tangent_rank": 57,
+  "symmetric_CI_chart_tangent_rank": 24,
+  "combined_smooth_source_rank": 69,
+  "quotient_first_order_dimension": 12,
+  "Clifford_C0_direct_tangent_crosscheck": 69,
+  "alternating_projective_tangent_dimension": 45,
+  "alternating_projective_orbit_rank": 45,
+  "limits": [
+    "69 is a presentation dimension, 12 is a first-order quotient at a stabilizer-jumping point.",
+    "No 12-dimensional component or global low-rank coverage is asserted.",
+    "Open-neighborhood coverage uses the smooth-source proof in the manuscript."
+  ]
+}

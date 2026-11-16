@@ -63,7 +63,8 @@
       "complete_isomorphism": "proved for all U: GL4 equivalence of quadric spaces; 33-variable 41-equation criterion, cor:symmetric-chart-isomorphism",
       "normal_forms": "complete-intersection chart; no complete residual orbit normalization",
       "membership": "three linear symmetrizer spaces contain invertible matrices; degree-four determinant nonidentity test, prop:linear-symmetrization-test",
-      "local_coverage_at_C0": "contains a G-invariant Zariski-open neighborhood of C0 in the rank<=6 finite-Frobenius tensor scheme; smooth presentation dimension 69, thm:clifford-low-rank-local"
+      "local_coverage_at_C0": "contains a G-invariant Zariski-open neighborhood of C0 in the rank<=6 finite-Frobenius tensor scheme; smooth presentation dimension 69, thm:clifford-low-rank-local",
+      "local_coverage_at_pure_anti": "G-invariant open in X6, smooth presentation dimension 69; first-order quotient 12, not a 12-dimensional component"
     },
     {
       "id": "LOW-RESIDUAL",
@@ -88,7 +89,8 @@
       "normal_forms": "one indexed class: commutative polynomial ring",
       "regularity_of_all_chart_fibers": "proved",
       "complete_isomorphism": "one class",
-      "period": "one-periodic"
+      "period": "one-periodic",
+      "relative_geometry": "open orbit in X6, presentation dimension 45"
     },
     {
       "id": "LOW-UNCLASSIFIED",
@@ -166,5 +168,28 @@
       "source": "sections/quantum_ore.tex",
       "global_coverage": false
     }
-  ]
+  ],
+  "presentation_components": {
+    "ambient": "X6 in P(V^tensor4): all three 2|2 flattenings have rank<=6",
+    "source": "sections/clifford_rank_slice.tex:cor:two-low-rank-presentation-components",
+    "exhaustive": false,
+    "full_AS_moduli_components": false,
+    "components": [
+      {
+        "id": "Z-SYM",
+        "definition": "closure of G-saturated symmetric complete-intersection tensor chart",
+        "dimension": 69,
+        "generic_regular_chart": "symmetric CI chart",
+        "boundary_coverage": "unresolved",
+        "disjoint_from": "polynomial indexed orbit"
+      },
+      {
+        "id": "Z-ALT",
+        "definition": "closure of alternating determinant orbit",
+        "dimension": 45,
+        "generic_regular_chart": "polynomial indexed orbit, open in X6",
+        "boundary_coverage": "unresolved"
+      }
+    ]
+  }
 }

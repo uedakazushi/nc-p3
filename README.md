@@ -76,6 +76,10 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 既知の二次障害Qは交代一次変形の4×4行列のPfaffianとして現れる。
 69は表示空間の次元で、全Clifford成分や粗モジュライの次元ではない。
 
+全反可換点でも対称チャートの局所被覆を証明し、可換多項式の軌道は低階数表示空間で開となる。
+三つの行列階数で切った**基底付きテンソル表示空間**には、69次元と45次元の二つの既約成分を同定した。
+他の成分や境界は未分類であり、全ASモジュライの成分とは主張しない。
+
 ### 次の研究
 
 **最優先は全四窓のAS正則条件・構造的不変量から網羅的な分類木を構築すること。**
@@ -106,6 +110,7 @@ python3 computations/verify_indexed_polynomial_ore.py --output research/indexed_
 python3 computations/verify_indexed_anticommutative_ore.py --output research/indexed_anticommutative_ore_certificate.json
 python3 computations/verify_quantum_ore.py --output research/quantum_ore_certificate.json
 python3 computations/verify_clifford_rank_slice.py --output research/clifford_rank_slice_certificate.json
+python3 computations/verify_pure_anticommutative_slice.py --output research/pure_anticommutative_slice_certificate.json
 python3 computations/verify_moduli_jets.py --output research/moduli_certificate.json
 python3 computations/verify_algebraic_family.py --output research/algebraic_family_certificate.json
 python3 computations/verify_elliptic_family.py --output research/elliptic_family_certificate.json

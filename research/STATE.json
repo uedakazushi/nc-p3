@@ -453,6 +453,18 @@
       "claim": "The finite Frobenius tensor candidate scheme with opposite rank<=6 is smooth of presentation dimension 69 at C0. A G-invariant Zariski-open neighborhood is covered by the symmetric CI chart; its candidates are all Koszul/AS. Nine even parameters cover the based low-rank Artin deformations up to indexed isomorphism. No global low-locus or unrestricted Clifford-hull conclusion.",
       "proof": "nc-p3.tex:thm:clifford-low-rank-local",
       "status": "proof_written"
+    },
+    {
+      "id": "PURE-ANTI-AND-ALTERNATING-LOCAL",
+      "claim": "In the projective three-flattening rank<=6 scheme X6, the pure anticommutative point is smooth dimension 69 and locally covered by the symmetric CI chart; orbit tangent 57 and first-order quotient 12. The alternating determinant point is smooth dimension 45 and its polynomial indexed orbit is open in X6. The C0 dimension-69 result also holds directly in X6.",
+      "proof": "nc-p3.tex:thm:pure-anti-and-alternating-local",
+      "status": "proof_written"
+    },
+    {
+      "id": "TWO-LOW-RANK-PRESENTATION-COMPONENTS",
+      "claim": "The closures of the saturated symmetric CI image and alternating determinant orbit are distinct irreducible components of X6, of presentation dimensions 69 and 45. The finite-Frobenius low candidate locus is open in X6 and meets both. The symmetric closure does not meet the polynomial orbit. Neither exhaustiveness nor full AS-moduli component statements follow.",
+      "proof": "nc-p3.tex:cor:two-low-rank-presentation-components",
+      "status": "proof_written"
     }
   ],
   "document_paths": {
@@ -495,7 +507,8 @@
     "quantum_ore_section": "sections/quantum_ore.tex",
     "quantum_ore_certificate": "research/quantum_ore_certificate.json",
     "clifford_rank_slice_section": "sections/clifford_rank_slice.tex",
-    "clifford_rank_slice_certificate": "research/clifford_rank_slice_certificate.json"
+    "clifford_rank_slice_certificate": "research/clifford_rank_slice_certificate.json",
+    "pure_anticommutative_slice_certificate": "research/pure_anticommutative_slice_certificate.json"
   },
   "unresolved_cautions": [
     "No proof of dimension 14 for the Clifford component.",
@@ -515,7 +528,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "7e1eda95ad886ed0ab0c933acf13dfc17a2c998f",
+  "reviewed_source_commit": "54ca6c1dc97ea593ac12b5542c81bbfe9dd5872b",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -524,17 +537,17 @@
     "task_id": "Z4-AS-004",
     "status": "open_with_tensor_reconstruction_and_rank_split",
     "objective": "Find structurally meaningful necessary and sufficient Koszul/AS regularity criteria across the canonical 4-window representation; classify all exceptional loci.",
-    "immediate_next_action": "The rank<=6 finite-Frobenius candidate scheme is now locally covered by the symmetric chart at C0. Test the other natural symmetric point (all quantum q_ab=-1, dual four square-zero commuting generators), where projective automorphisms jump: compute the canonical tensor tangent constraints, not just unmarked periodic PBW classes, and decide whether the same low-rank local coverage persists or new residual directions appear. If stabilizer/canonical complications stall, return to genuinely non-Ore rho=3,4,5 matrix spaces. Do not recompute the old Clifford quadratic obstruction.",
+    "immediate_next_action": "Study the boundary of Z_sym inside the finite-Frobenius low candidate locus: is every such boundary point still symmetrizable, or can the three linear symmetrizer spaces lose all invertible witnesses while Frobenius ranks remain constant? Use the existing determinant membership test and look for a controlled degeneration or a proof of relative closedness. Consult primary orbit-closure/symmetric-tensor results only if they address this exact question. If this stalls, analyze other X6 components with rho=3,4,5 and W3=4 rather than redoing the now-covered C0/pure-anti/polynomial neighborhoods.",
     "read_first": [
       "research/plan_ja.tex",
       "AGENTS.md",
       "sections/clifford_rank_slice.tex",
-      "computations/verify_clifford_rank_slice.py",
-      "computations/pbw_complex.py",
-      "sections/frobenius_tensor.tex"
+      "computations/verify_pure_anticommutative_slice.py",
+      "computations/tensor_symmetrization.py",
+      "research/classification_branches.json"
     ],
-    "known_obstruction": "LOW-UNCLASSIFIED still has no global witness or emptiness theorem, but it excludes the full diagonal quantum Ore chart and a G-invariant open neighborhood of C0 in the low-rank finite-Frobenius scheme. Pure anticommutative points have extra stabilizers, so their canonical tensor tangent cannot automatically be identified with all periodic PBW tangent classes.",
-    "state_of_claim": "Exact first-order rank cut, Pfaffian=-Q, dual Artin flatness and smooth-source local coverage at C0 have written proofs and targeted checks. Other symmetric points, the global residual and unrestricted higher Clifford obstructions remain open.",
+    "known_obstruction": "Two presentation components of X6 are identified but their full finite-Frobenius boundaries and all other components remain unclassified. LOW-UNCLASSIFIED avoids the proved symmetric open neighborhoods, polynomial orbit and diagonal quantum Ore chart; no global witness or emptiness theorem is established.",
+    "state_of_claim": "Direct 300-equation tensor tangent calculations prove local coverage at pure anti and alternating points; smooth-source/fiber arguments identify ambient presentation components 69 and 45. These are not full AS-moduli components. Boundary coverage is the next unproved step.",
     "handoff_rule": "Overwrite with the current next concrete research action before task termination; no chronological status log."
   },
   "execution_policy": {
