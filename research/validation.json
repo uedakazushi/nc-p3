@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-17",
-  "version": 28,
+  "version": 29,
   "reviewed_input": {
-    "source_commit": "5778d0de3fa5ef2a520f106d6d20179b553411dc"
+    "source_commit": "5323e4601ae335514304ef2c46ced3b2b7e3b91e"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Added four-layer Koszul and trivial-extension identification for partially symmetric Frobenius candidates, plus a generic finite-obstruction exclusion lemma; integrated the externally added seventh-cycle verifier and reran it successfully.",
+    "scope": "Proved uniform AS exclusion of the nonzero-coefficient Boolean quadric boundary slice via exact QQ(u,v) quintic ranks and rank specialization; verified generic six-dimensional square-class injection.",
     "new_mathematical_theorem": true
   },
   "checks": [
@@ -24,7 +24,7 @@
     {
       "command": "python3 computations/verify_truncated_quadric_boundary.py --output research/truncated_quadric_boundary_certificate.json",
       "result": "PASS",
-      "scope": "Exact QQ(u,v) cubic determinant -2uv, normalization equations, four adjacent cut ranks6, return cube and dimension identities 32/64."
+      "scope": "Exact QQ(u,v) cubic determinant -2uv, normalization equations, four adjacent cut ranks6, return cube and dimension identities 32/64. Reran with full four-variable cubic-frame determinant -2*c0^2*c1*c2, independent of t."
     },
     {
       "command": "python3 scripts/check_project.py; git diff --check",
@@ -32,14 +32,14 @@
       "scope": "Current source paths, JSON and expanded TeX references; not compilation."
     },
     {
-      "command": "Exploratory QQ(u,v) sparse elimination of quintic d2",
-      "result": "RUNNING",
-      "scope": "Cubic quotient dimension20 and quartic quotient dimension35 computed; generic quintic rank not yet established."
+      "command": "PYTHONPATH=/workspace/.cache/nc-p3-python python3 computations/verify_generic_one_point_boundary.py --output research/generic_one_point_boundary_certificate.json",
+      "result": "PASS",
+      "scope": "python-flint 0.9.0 exact QQ(u,v) arithmetic; 32 operations crosschecked with SymPy, normalized cubic frame, quotient dimensions20/35, d2 rank77, d3 rank36, zero composition, square multiplication rank14, kernel6 and combined rank42. No sampling or interpolation certifies generic ranks."
     }
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed short-path proof of four-layer Koszulity, trace/evaluation identification and generation of the 64-dimensional trivial extension, inner parity twist, and constant-rank vector-bundle specialization argument with adjacent cut upper bounds. No formalization or independent peer review."
+    "scope": "Reviewed short-path proof of four-layer Koszulity, trace/evaluation identification and generation of the 64-dimensional trivial extension, inner parity twist, and constant-rank vector-bundle specialization argument with adjacent cut upper bounds. No formalization or independent peer review. Reviewed normalization c0!=0, adjacent-cut upper bounds from three-factor symmetry, nonempty Frobenius/quartic-exact open from the checked old point, exact generic obstruction, and extension of rank upper bounds across the entire open. This excludes AS even at coefficient values whose Frobenius status was not classified separately."
   },
   "tex": {
     "result": "NOT_RUN",
@@ -56,15 +56,20 @@
   "github_save": {
     "result": "PENDING",
     "branch": "main",
-    "scope": "Fetched and fast-forwarded remote changes through 5778d0d; current structural checkpoint awaiting push/readback."
+    "scope": "Structural checkpoint 5323e46 pushed; current uniform-exclusion checkpoint awaiting push/readback."
   },
   "library_save": {
     "result": "not_attempted",
     "scope": "Project-specific GitHub-first policy; no emergency Library fallback needed while main saves succeed."
   },
   "open_mathematics": [
-    "General one-basepoint and singular-symmetrizer finite-Frobenius boundaries may or may not have Koszul AS points outside the symmetric chart.",
+    "General one-basepoint quadric systems and singular-symmetrizer boundaries outside the excluded two-dimensional coefficient slice may still contain Koszul AS points.",
     "All seven quintic H2 classes are now explicit for this single t=0 example; no universal formula or rank theorem for arbitrary basepoint boundaries.",
     "General 4-window necessary-and-sufficient Koszul/AS criterion, LOW-UNCLASSIFIED, rho=3,4,5, other X6 components and full moduli remain unresolved."
-  ]
+  ],
+  "symbolic_backend": {
+    "result": "PASS",
+    "dependency": "requirements-symbolic.txt, python-flint==0.9.0",
+    "scope": "Reduced rational functions using exact multivariate polynomial gcd; the pure-Python rational-function and fraction-free exploratory attempts were superseded and terminated, not recorded as successful rank verifications."
+  }
 }

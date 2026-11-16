@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-17",
-  "version": 28,
+  "version": 29,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -525,6 +525,12 @@
       "claim": "For an irreducible tensor family with adjacent cut ranks <=6, a nonzero generic quintic homology on the finite-Frobenius quartic-exact open excludes all standard Koszul AS points of the family.",
       "proof": "sections/truncated_quadric_boundary.tex:lem:generic-quintic-exclusion",
       "status": "proof_written"
+    },
+    {
+      "id": "COEFFICIENT-BOUNDARY-UNIFORM-AS-EXCLUSION",
+      "claim": "For every c0*c1*c2!=0 in the cubic-frame family with L=<e_i^2-e_i e3,e3(c0 e0+c1 e1+c2 e2)> there is no standard Koszul AS point. Over QQ(c1/c0,c2/c0), quintic d2/d3 ranks are 77/36 and six square classes inject into H2=7; on the Frobenius quartic-exact open all specializations have H2>=7. This is not every one-basepoint quadric system.",
+      "proof": "sections/truncated_quadric_boundary.tex:thm:generic-one-point-uniform-exclusion",
+      "status": "proof_written_exact_function_field_verified"
     }
   ],
   "document_paths": {
@@ -588,26 +594,26 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "5778d0de3fa5ef2a520f106d6d20179b553411dc",
+  "reviewed_source_commit": "5323e4601ae335514304ef2c46ced3b2b7e3b91e",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
   "cloud_codex_status": "Repository-side Cloud guidance and preflight added; actual Cloud environment publishing, TeX tools and Git push permissions are not verifiable from repository alone.",
   "resume_point": {
     "task_id": "Z4-AS-004",
-    "status": "boundary_sample_H2_complete_general_regular_boundary_open",
+    "status": "coefficient_boundary_uniformly_excluded_general_quadric_basepoint_open",
     "objective": "Determine whether the full finite-Frobenius rank-six boundary of the symmetric CI orbit contains Koszul AS points not symmetrizable; then expand structural classification to remaining rho=3,4,5 and higher-rank branches.",
-    "immediate_next_action": "Complete exact QQ(u,v) rank of quintic d2 for the normalized boundary L=<e_i^2-e_i e3, e3(e0+u e1+v e2)> at t=0. Generic cubic frame and pair ranks are checked; the function-field quotient C_(1,5) was computed dimension35 in an exploratory process, but d2 rank is still pending. If rank(d2)+rank(d3)<120, apply lem:generic-quintic-exclusion to exclude every coefficient value that could be AS, without claiming all points finite Frobenius. Use the new trivial-extension identification to seek a structural explanation or broader basepoint theorem. Do not redo the completed single-sample seven-class basis.",
+    "immediate_next_action": "Extend the last quadric to q=e3(c0 e0+c1 e1+c2 e2)+d01 e0e1+d02 e0e2+d12 e1e2, keeping the first three e_i^2-e_i e3. On the open where q is nonzero at the seven nonzero Boolean points, use point evaluations to build a cubic dual frame: for i=0,1,2, combine the four vertices on the face epsilon_i=1 with signs (+,-,-,+) divided by their q values, and add the cube at epsilon=0. Prove this frame and then compute generic quintic ranks over the five projective coefficient variables, or derive the obstruction from the trivial-extension structure if symbolic size grows. The previous d_ij=0 nonzero-c_i family is completely excluded from Koszul AS, including its specializations; do not repeat it.",
     "read_first": [
       "research/plan_ja.tex",
       "AGENTS.md",
       "sections/truncated_quadric_boundary.tex",
-      "computations/generic_boundary_field.py",
-      "sections/nonkoszul_boundary.tex",
-      "research/classification_branches.json"
+      "computations/verify_generic_one_point_boundary.py",
+      "computations/flint_rational_function.py",
+      "sections/nonkoszul_boundary.tex"
     ],
-    "known_obstruction": "The explicit boundary is non-Koszul (quintic H2=7) and is not a LOW-UNCLASSIFIED AS witness. Its H2 is now completely generated by six square cycles plus one explicit mixed cycle; this does not exclude other AS-regular singular-symmetrizer boundary points. No global low-rank AS coverage.",
-    "state_of_claim": "Integrated single-sample seven-class verifier has now actually passed in this workspace. Universal cubic frame over QQ(u,v), pair ranks6 and truncation dimensions are checked. Four-layer Koszul, finite-Frobenius trivial-extension identification, and generic-obstruction specialization lemma have proofs. Generic d2 computation is pending; no uniform AS exclusion claimed yet.",
+    "known_obstruction": "The uniformly excluded nonzero-linear-coefficient slice is a two-dimensional coefficient family, not the full one-basepoint resultant boundary. Cross terms, general first three quadrics, other X6 components and rho=3,4,5 may still contain unclassified AS points.",
+    "state_of_claim": "Exact QQ(u,v) computation with FLINT polynomial gcd passed: d2 rank77, d3 rank36, d2*d3=0, square multiplication rank14/kernel6, combined rank42. Rank specialization excludes every coefficient value c_i!=0 from standard Koszul AS, without asserting every point finite Frobenius. Four-layer trivial-extension and generic-exclusion lemmas are proved. General five-parameter Boolean-quadric extension has not yet been computed.",
     "handoff_rule": "Overwrite with the current next concrete research action before task termination; no chronological status log."
   },
   "execution_policy": {

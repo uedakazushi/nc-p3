@@ -1,0 +1,34 @@
+{
+  "result": "PASS",
+  "arithmetic": "exact rational functions QQ(u,v), FLINT rational multivariate polynomial gcd",
+  "backend_crosscheck": "32 exact operations compared with SymPy",
+  "quadric_coefficients": [
+    "1",
+    "u",
+    "v"
+  ],
+  "cubic_normalization_determinant": "-2*u*v",
+  "pair_ranks": [
+    6,
+    6,
+    6,
+    6
+  ],
+  "C_2_5_dimension": 20,
+  "C_1_5_dimension": 35,
+  "quintic_d2_rank": 77,
+  "quintic_d3_rank": 36,
+  "d2_d3_zero": true,
+  "generic_quintic_H2_dimension": 7,
+  "square_multiplication_rank": 14,
+  "square_annihilator_dimension": 6,
+  "d3_plus_square_rank": 42,
+  "remaining_generic_H2_quotient_dimension": 1,
+  "uniform_conclusion": "Every parameter u*v!=0 in this cubic-frame family fails the standard Koszul AS conditions: outside the Frobenius/quartic-exact open it already fails necessary filters; on that open H2>=7 by rank specialization.",
+  "limits": [
+    "This is a two-dimensional coefficient subfamily, not every four-quadric system with a basepoint.",
+    "Finite-Frobenius and quartic-exact exceptional strata are not completely classified.",
+    "The generic mixed seventh class has not been put into a compact closed formula."
+  ],
+  "elapsed_seconds": 18.058
+}

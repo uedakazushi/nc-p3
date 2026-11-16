@@ -25,6 +25,8 @@ REQUIRED = [
     'computations/verify_symmetric_specialization.py', 'research/symmetric_specialization_certificate.json',
     'computations/verify_singular_symmetrizer_boundary.py', 'research/singular_symmetrizer_boundary_certificate.json',
     'computations/verify_permutation_support_limits.py', 'research/permutation_support_limits_certificate.json',
+    'computations/flint_rational_function.py', 'computations/verify_generic_one_point_boundary.py',
+    'research/generic_one_point_boundary_certificate.json', 'requirements-symbolic.txt',
     'sections/truncated_quadric_boundary.tex', 'computations/generic_boundary_field.py',
     'computations/verify_truncated_quadric_boundary.py', 'research/truncated_quadric_boundary_certificate.json',
     'sections/nonkoszul_boundary.tex', 'computations/verify_nonkoszul_boundary.py',

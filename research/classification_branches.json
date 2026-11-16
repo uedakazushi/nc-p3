@@ -184,7 +184,13 @@
         "disjoint_from": "polynomial indexed orbit",
         "entire_regular_chart_presentation": "PGL4^3 x U, smooth locally closed dimension 69",
         "known_nonregular_boundary": "Explicit w_* with ranks (4,4,4,4), (6,6,6), singular S2; W3=(6,10,6,6), hence not finite Frobenius",
-        "finite_Frobenius_boundary": "thm:nonkoszul-symmetric-boundary; rho=6, quartic dimensions 35, quintic dimensions (63,56,56,56)"
+        "finite_Frobenius_boundary": "thm:nonkoszul-symmetric-boundary; rho=6, quartic dimensions 35, quintic dimensions (63,56,56,56)",
+        "uniformly_excluded_boundary_slice": {
+          "parameters": "L=<e_i^2-e_i e3,e3(c0 e0+c1 e1+c2 e2)>, all c_i nonzero",
+          "claim": "No standard Koszul AS point at any parameter; on the finite-Frobenius quartic-exact open H2 in degree5 at start0 is at least7",
+          "proof": "sections/truncated_quadric_boundary.tex:thm:generic-one-point-uniform-exclusion",
+          "scope_limit": "Not all one-basepoint four-quadric systems"
+        }
       },
       {
         "id": "Z-ALT",

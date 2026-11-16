@@ -8,7 +8,7 @@
 \newcommand{\PGL}{\operatorname{PGL}}
 \title{nc-p3研究ノート：周期構造・局所変形・未解決の障害}
 \author{}
-\date{2026年11月17日\quad 第28版}
+\date{2026年11月17日\quad 第29版}
 \begin{document}
 \maketitle
 \section{記法と確実性}
@@ -473,9 +473,13 @@ $\sum_{i\in I}c_i\ne0$に等しい。
 四層の可換二次商の切断代数のtrivial extensionへ同定する。
 四層二次代数のKoszul性は、経路の長さが3以下であることから証明できる。
 trivial extension側のKoszul性は自動ではなく、既知の標本がその反例になる。
-二変数係数族では現在、$\mathbb Q(u,v)$上の五次$d_2$階数を厳密計算中である。
-一般点で非零障害が出れば、有限Frobenius・四次検査の開部分での半連続性により
-特殊値にもAS点が隠れていないと結論できるが、階数計算が完了するまではその排除を主張しない。
+二変数係数族の$\mathbb Q(u,v)$上の五次階数は77・36であり、一般点でも七次元の障害が残る。
+主論文\texttt{thm:generic-one-point-uniform-exclusion}の半連続性によって、
+この係数族では特殊値も含めて標準型Koszul AS点を排除した。
+一般点では平方型関係から来る六次元部分も単射であり、その商は一次元である。
+ただし一般の一基点四二次式系へはまだ普遍化していない。
+有理関数の純Python消去はGCDが律速となったため、正確な多変数多項式GCDを持つ
+python-flintへ演算を移した。標本の数値化や補間によって結論を置換していない。
 
 \section{再開時の使い方}
 次の課題と優先順位は\path{research/plan_ja.tex}に集約する。

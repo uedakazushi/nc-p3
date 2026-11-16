@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の周期構造と代数的変形
 
-**2026-11-17 / v28。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-17 / v29。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 最初に読む
 
@@ -140,4 +140,15 @@ GitHub保存成功時はLibraryへ重複保存しない。
 
 三因子対称な有限Frobenius候補を、四層の切断代数のtrivial extensionとして記述した。
 また一般点の有限次数障害を族全体の排除へ拡張する階数補題を得た。
-二変数係数族の一般点の五次階数は計算中であり、一様非Koszul性はまだ主張しない。
+二変数係数族では一般点の五次階数が77・36であることを有理関数体上で厳密計算した。
+半連続性により、非零係数の特殊値も含めて標準型Koszul AS点を一様に排除した。
+これは全ての一基点四二次式系の排除ではない。
+
+二変数境界の厳密計算には追加の多項式演算バックエンドを使う：
+
+```bash
+python3 -m pip install -r requirements-symbolic.txt
+python3 computations/verify_generic_one_point_boundary.py --output research/generic_one_point_boundary_certificate.json
+```
+
+係数は有理関数体 `QQ(u,v)` の元として扱い、数値標本や補間で一般点を認定しない。

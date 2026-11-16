@@ -6,6 +6,7 @@
     "u",
     "v"
   ],
+  "general_cubic_frame_determinant": "-2*c0^2*c1*c2, independent of t",
   "cubic_frame_determinant": "-2*u*v",
   "four_window_pair_ranks": [
     6,
