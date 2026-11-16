@@ -1,0 +1,29 @@
+{
+  "result": "PASS",
+  "field": "ci",
+  "complex_dimensions": [
+    8,
+    144,
+    480,
+    400
+  ],
+  "differential_ranks": {
+    "2": 8,
+    "3": 136,
+    "4": 344
+  },
+  "homology_dimensions": [
+    0,
+    0,
+    0,
+    56
+  ],
+  "composition_check": "direct",
+  "direct_zero_compositions_checked": true,
+  "nonlinear_one_return_Tor_dimension": 0,
+  "limits": [
+    "Only the indicated internal-degree-five vertex summand is calculated.",
+    "No eight-variable result is inferred from a rational point or two-variable slice."
+  ],
+  "elapsed_seconds": 1.09
+}

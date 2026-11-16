@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-17",
-  "version": 33,
+  "version": 34,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -591,6 +591,18 @@
       "status": "proved",
       "statement": "For every reduced eight-point quadric CI net and fourth quadric vanishing only at one point, ann_S(q)=(R/I_p)(-3) and the minimal R-resolution of B has free ranks/degrees 1,4(-2),6(-4)+1(-5),7(-6),3(-7). This does not yet identify the seven commutative syzygies with quintic four-window homology.",
       "proof": "sections/reduced_quadric_boundary.tex: prop:reduced-onepoint-commutative-betti; lem:one-basepoint-cubic-socle"
+    },
+    {
+      "id": "ONE-RETURN-BIMODULE-TOR",
+      "status": "proved_with_exact_two_variable_regression",
+      "statement": "For a split square-zero extension A semidirect M, the one-M bar summand Tor^T_(n,d) is Tor^(A^e)_(n-1,d)(S^e,M). In the quadric truncation this yields an internal5 complex of dimensions8,144,480,400, with surjective d2. Koszulity requires H1=H2=H3=0,H4=56. Exact QQ(u,v) gives ranks8,136,337 and H3=7,H4=63; a CI positive control gives ranks8,136,344. Generic eight-variable d4 rank below344 would exclude every basepoint partial-symmetric candidate without requiring quartic exactness, but is not yet certified.",
+      "proof": "sections/trivial_extension_bitor.tex",
+      "verification": [
+        "computations/trivial_extension_bitor.py",
+        "computations/verify_trivial_extension_bitor.py",
+        "research/trivial_extension_bitor_ci_certificate.json",
+        "research/trivial_extension_bitor_two_certificate.json"
+      ]
     }
   ],
   "document_paths": {
@@ -654,25 +666,25 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "a9c442e0190cb71416d7ecf15844f741e8b19524",
+  "reviewed_source_commit": "4b8c9faa572a425dd8f77dacfc2bcb4978bdbd69",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
   "cloud_codex_status": "Repository-side Cloud guidance and preflight added; actual Cloud environment publishing, TeX tools and Git push permissions are not verifiable from repository alone.",
   "resume_point": {
     "task_id": "Z4-AS-004",
-    "status": "dominant_product_net_chart_proved_eight_variable_rank_pending",
+    "status": "one_return_bimodule_tor_criterion_proved_generic_rank_pending",
     "objective": "Determine whether the full finite-Frobenius rank-six boundary of the symmetric CI orbit contains Koszul AS points not symmetrizable; then expand structural classification to remaining rho=3,4,5 and higher-rank branches.",
-    "immediate_next_action": "Use prop:reduced-onepoint-commutative-betti and the four-layer trivial extension to construct a chain comparison from the universal seven commutative degree-six third syzygies to the quintic four-window Koszul H2. Prove injectivity or produce at least one nonzero class on a dense reduced-onepoint chart; then use prop:product-net-universal-obstruction-transfer for all basepoint partial-symmetric fibers. The eight-variable guided rank run stalled after 64/221 relation pivots and was terminated; do not repeat it indefinitely. It remains reproducible via computations/verify_product_net_homology.py --projection guided --reference generic. The universal seven-dimensional four-window obstruction is still unproved. If this comparison stalls, move to candidates with at most one positive and at most one negative invertible witness.",
+    "immediate_next_action": "Continue the new one-return two-sided Koszul Tor complex (sections/trivial_extension_bitor.tex), not the stalled C4-quotient method. Exact two-variable ranks8,136,337 and a CI control8,136,344 passed. The eight-variable run with --composition-check structural reached d3 rank136 and d4 pivot64; no final certificate. A generic d4 rank below344 activates prop:one-return-universal-transfer and excludes the entire basepoint partial-symmetric AS branch. If this symbolic route stalls, use the point-evaluation subbimodule of DA and the commutative minimal resolution to seek a structural rank bound.",
     "read_first": [
       "research/plan_ja.tex",
       "AGENTS.md",
-      "sections/product_net_boundary.tex",
-      "computations/product_net_boundary.py",
-      "computations/verify_product_net_homology.py",
-      "computations/quintic_field_analysis.py"
+      "sections/trivial_extension_bitor.tex",
+      "sections/reduced_quadric_boundary.tex",
+      "computations/trivial_extension_bitor.py",
+      "computations/verify_trivial_extension_bitor.py"
     ],
-    "known_obstruction": "No eight-variable quintic rank certificate. Exact generic frame and pair rank6 passed; a dense relation elimination stalled. No universal AS exclusion of the rank-one basepoint branch. The full classification remains open.",
+    "known_obstruction": "The full eight-variable d4 rank is not certified. The small one-return complex avoids the old dense C4 quotient, but may still require a structural bound. No universal exclusion or full classification yet.",
     "state_of_claim": "Dominance and universal transfer implication are proved. Eight-variable rank remains unproved. New exact normal-form and guided elimination regressions pass for the original two-variable slice; a fixed non-Boolean net with variable u,v also gave exact rank77 and zero residual. New symmetrizer/quartic identification and two-negative-witness criterion are proved. No full classification claim.",
     "handoff_rule": "Overwrite with the current next concrete research action before task termination; no chronological status log."
   },

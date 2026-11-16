@@ -181,4 +181,9 @@ python3 computations/verify_reduced_octad_frame.py --output research/reduced_oct
 ```bash
 python3 computations/verify_product_net_dominance.py --output research/product_net_dominance_certificate.json
 python3 computations/verify_product_net_homology.py --output research/product_net_homology_certificate.json
+# One-return bimodule Tor: checked positive control and exact two-variable case
+python3 computations/verify_trivial_extension_bitor.py --field ci --output research/trivial_extension_bitor_ci_certificate.json
+python3 computations/verify_trivial_extension_bitor.py --field two --output research/trivial_extension_bitor_two_certificate.json
+# Exploratory eight-variable rank; no completed certificate yet
+python3 computations/verify_trivial_extension_bitor.py --field eight --composition-check structural --output research/trivial_extension_bitor_eight_certificate.json
 ```

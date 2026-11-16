@@ -1,0 +1,114 @@
+\section{戻り辺一回のバー複体と双加群Koszul障害}
+\label{sec:trivial-extension-bitor}
+trivial extensionの構造は、四窓の四次商を直接消去しないKoszul必要条件を与える。
+以下のTorは次数付きTorであり、頂点の半単純環上で相対化する。
+
+\begin{proposition}[平方零拡大の一回部分]\label{prop:one-return-bar-tor}
+$A_0=S$が半単純である正次数付き代数$A$と、正次数に置かれた次数付き$A$双加群$M$を取り、
+$T=A\ltimes M$とする。$T$の相対被約バー複体を$M$因子の個数で分けると、
+その一回部分について
+\[
+ \operatorname{Tor}^{T}_n(S,S)_{\text{one }M,d}
+ \simeq\operatorname{Tor}^{A^e}_{n-1}(S\otimes S^{\mathrm{op}},M)_d,
+ \qquad A^e=A\otimes A^{\mathrm{op}}.
+\]
+従って$T$がKoszulなら、右辺は$d=n$以外で零である。
+$A$もKoszulなら、右辺は左右のKoszul分解の全複体で計算できる。
+\end{proposition}
+\begin{proof}
+バー微分で$A_+$因子同士を掛ける場合、または$A_+$因子を$M$へ作用させる場合、
+$M$の個数は変わらない。隣接する二つの$M$の積は零である。
+従って各個数部分は直和因子の複体である。一回部分の次数$n$の項は
+\[
+ \bigoplus_{p+q=n-1} A_+^{\otimes_Sp}\otimes_S M\otimes_S A_+^{\otimes_Sq}.
+\]
+これは$S$の右$A$バー分解と左$A$バー分解で$M$を挟んだ二重複体の全複体であり、
+全ホモロジー次数が1だけずれている。左右のバー分解の外積は$A^e$上の
+$S\otimes S^{\mathrm{op}}$の射影分解なので、主張のTorを計算する。
+符号は一方の複体次数に応じた基底符号変更で通常の全微分と一致する。
+Koszul代数のTorは内部次数とホモロジー次数が一致するため、必要条件を得る。
+$A$がKoszulなら、両側のバー分解を線型Koszul分解に置き換えられる。
+\end{proof}
+
+前節の$A_L$について、頂点を位置$0,1,2,3$で表し、
+$M=D A_L$には既述の次数$4-r$を入れる。
+$Q_0=k$, $Q_1=V^*$,
+$Q_2=\bigwedge^2(V^*)+L\subset(V^*)^{\otimes2}$と置く。
+$\dim Q_2=10$である。位置1から位置2へ向かう内部次数5の一回部分の双加群Tor複体は
+\[
+ 0\longrightarrow C_4\xrightarrow{\partial_4}C_3
+ \xrightarrow{\partial_3}C_2\xrightarrow{\partial_2}C_1\longrightarrow0,
+ \qquad
+ C_h=\bigoplus_{\substack{p+q=h\\0\leq p,q\leq2}}
+ Q_p\otimes B_{h-1}^*\otimes Q_q.
+\]
+その次元は順に
+\[
+ (\dim C_1,\dim C_2,\dim C_3,\dim C_4)=(8,144,480,400).
+\]
+左微分は$Q_p\to Q_{p-1}\otimes V^*$の最後の一次式を$B_{h-1}^*$へ縮約し、
+右微分は$Q_q\to V^*\otimes Q_{q-1}$の最初の一次式を縮約する。
+全微分を$\partial=\partial_{\mathrm L}+(-1)^p\partial_{\mathrm R}$とする。
+これは$B$の可換乗法から作る複体であり、四次商空間の基底を必要としない。
+
+\begin{proposition}[小複体による必要条件]\label{prop:one-return-small-obstruction}
+上の$\partial_2$は全射である。
+$w$が有限Frobenius候補で、その元の四窓がKoszulなら、
+\[
+ H_h(C_\bullet)=0\quad(h=1,2,3),\qquad \dim H_4(C_\bullet)=56.
+\]
+特に$\operatorname{rank}\partial_4<344$ならKoszulではない。
+\end{proposition}
+\begin{proof}
+$Q_2$の交代テンソル$a\otimes b-b\otimes a$を、$b$で1、$a$で0となる一次双対元で縮約すると$a$を得る。
+$(p,q)=(2,0)$と$(0,2)$の部分を使えば$C_1$の二つの四次元直和因子へそれぞれ全射となる。
+従って$\partial_2$の階数は8であり、$\partial_3$の階数は136以下である。
+前命題から$H_h(C_\bullet)$は$T_L$の$\operatorname{Tor}_{h+1,5}$の直和因子である。
+$T_L$は復元双対$E(w)$に等しく、Koszul性は二次双対間で同値なので、
+Koszulなら$h+1=5$の場合以外は零となる。
+Euler標数$400-480+144-8=56$から最後の次元を得る。
+さらに$H_3$の次元は$480-\rk\partial_3-\rk\partial_4$なので、最後の主張が従う。
+\end{proof}
+
+\begin{proposition}[既知の二変数境界における一回Tor]\label{prop:one-return-two-variable}
+定理\ref{thm:generic-one-point-uniform-exclusion}の$\mathbb Q(u,v)$上の一般点では
+\[
+ (\rk\partial_2,\rk\partial_3,\rk\partial_4)=(8,136,337),\qquad
+ (\dim H_1,\dim H_2,\dim H_3,\dim H_4)=(0,0,7,63).
+\]
+特に双対側の非線型$\operatorname{Tor}_{4,5}$に七次元の直和因子がある。
+\end{proposition}
+\begin{proof}
+$Q_2$の基底を六つの交換子と四つの二次式とし、$B_2^*$は六つの自由二次座標、
+$B_3^*$は既存の正規化三次フレームで表示する。
+縮約微分の全構成は\path{computations/trivial_extension_bitor.py}、
+厳密有理関数体上の零合成と三階数の検算は
+\path{computations/verify_trivial_extension_bitor.py --field two}に置く。
+既知の有理数点$u=v=1$でも同じ階数を独立に計算した。
+完全交叉の対照点$t=1$でも同じコードの\texttt{--field ci}により、
+三階数$(8,136,344)$とホモロジー$(0,0,0,56)$を確認した。
+八変数チャート全体の階数はこの検算からは結論しない。
+\end{proof}
+
+\begin{proposition}[一般点の一回Torから基点枝全体への移行]
+\label{prop:one-return-universal-transfer}
+定理\ref{thm:product-net-dominance}の八変数チャートで、一般点の$\partial_4$階数を$r$とする。
+$r<344$が証明されれば、基点を持つ全ての三因子対称有限Frobenius候補で
+$\dim\operatorname{Tor}^{E(w)}_{4,5}\geq344-r>0$となり、Koszul AS候補は存在しない。
+この移行自体は四次Koszul検査の正確性を必要としない。
+八変数の階数$r$は未確定であり、この排除はここでは条件付きである。
+\end{proposition}
+\begin{proof}
+基点を固定した$Y_3$とその三次フレーム束を
+命題\ref{prop:product-net-universal-obstruction-transfer}の通り取る。
+$B_1,B_2,B_3$の次元は一定で、$Q_2=\bigwedge^2(V^*)+L$も階数一定の束である。
+従って$C_h$とその微分は全フレーム束上で定義されたベクトル束複体となる。
+八変数チャートと基底変更による射は支配的なので、その一般階数$r$は
+全フレーム束の一般階数であり、他のどの点の階数も$r$を超えない。
+また$\partial_2$は全射なので、全ての点で$\rk\partial_3\leq136$である。
+従って全点で$\dim H_3\geq480-136-r$となる。
+有限Frobenius部分では$E(w)=T_L$であり、前命題の直和因子としてこの$H_3$を持つ。
+基点の移動は共通基底変更で処理できる。
+三因子対称有限Frobenius候補がこの$Y_3$表示に入ることは、
+命題\ref{prop:two-positive-global-split}の三重交差の議論による。
+\end{proof}

@@ -1,121 +1,68 @@
 {
   "schema_version": 2,
   "date": "2026-11-17",
-  "version": 33,
+  "version": 34,
   "reviewed_input": {
-    "source_commit": "a9c442e0190cb71416d7ecf15844f741e8b19524"
+    "source_commit": "4b8c9faa572a425dd8f77dacfc2bcb4978bdbd69"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Proved the identification of the remaining partial symmetrizer with B4 dual and its rank interpretation, plus the two-negative-witness alternation criterion. Added exact specialization-guided quotient projection. The universal eight-variable obstruction is still unproved. Proved the closed-point basepoint/rank-one correspondence and the exhaustive symmetric-versus-basepoint split within the partial-symmetric Frobenius chart. Proved the global two-positive-witness split and the mixed-sign exclusion by the braid relation. Determined the minimal commutative R-free resolution uniformly for every reduced-octad one-basepoint quotient, including beta_(3,6)=7; no identification with four-window homology is claimed.",
+    "scope": "One-return bar summand identified with bimodule Tor; explicit small-complex necessary criterion and conditional universal transfer proved. Generic eight-variable rank is still open.",
     "new_mathematical_theorem": true
   },
   "checks": [
     {
       "command": "bash scripts/cloud_preflight.sh",
       "result": "PASS",
-      "scope": "Python 3.12.14, SymPy 1.14.0 and project structure."
+      "scope": "Python/SymPy and project source structure only."
     },
     {
-      "command": "python3 computations/verify_nonkoszul_boundary.py --output /workspace/work/nc-p3-generic-20261117/current_boundary.json",
+      "command": "PYTHONPATH=/workspace/.cache/nc-p3-python python3 computations/verify_trivial_extension_bitor.py --field ci --output research/trivial_extension_bitor_ci_certificate.json",
       "result": "PASS",
-      "scope": "Full updated integrated verifier, including all seven classes, three-coordinate functional, exceptional parameters, all finite-Frobenius checks and degree-five obstruction."
+      "scope": "Direct zero compositions, ranks8/136/344, H=(0,0,0,56); positive complete-intersection control."
     },
     {
-      "command": "python3 computations/verify_truncated_quadric_boundary.py --output research/truncated_quadric_boundary_certificate.json",
+      "command": "PYTHONPATH=/workspace/.cache/nc-p3-python python3 computations/verify_trivial_extension_bitor.py --field two --output research/trivial_extension_bitor_two_certificate.json",
       "result": "PASS",
-      "scope": "Exact QQ(u,v) cubic determinant -2uv, normalization equations, four adjacent cut ranks6, return cube and dimension identities 32/64. Reran with full four-variable cubic-frame determinant -2*c0^2*c1*c2, independent of t."
+      "scope": "Exact QQ(u,v), direct zero compositions, ranks8/136/337, H=(0,0,7,63). No sample-based generic inference."
+    },
+    {
+      "command": "PYTHONPATH=/workspace/.cache/nc-p3-python python3 computations/verify_trivial_extension_bitor.py --field eight --composition-check structural",
+      "result": "RUNNING",
+      "scope": "Native cubic frame and complex constructed; d3 rank136 completed, d4 pivot64. Direct full-field composition check omitted using the structural proof, not reported as a numerical PASS."
     },
     {
       "command": "python3 scripts/check_project.py; git diff --check",
       "result": "PASS",
-      "scope": "Current source paths, JSON and expanded TeX references; not compilation."
-    },
-    {
-      "command": "PYTHONPATH=/workspace/.cache/nc-p3-python python3 computations/verify_generic_one_point_boundary.py --output research/generic_one_point_boundary_certificate.json",
-      "result": "PASS",
-      "scope": "python-flint 0.9.0 exact QQ(u,v) arithmetic; 32 operations crosschecked with SymPy, normalized cubic frame, quotient dimensions20/35, d2 rank77, d3 rank36, zero composition, square multiplication rank14, kernel6 and combined rank42. No sampling or interpolation certifies generic ranks."
-    },
-    {
-      "command": "PYTHONPATH=/workspace/.cache/nc-p3-python python3 computations/verify_boolean_quadric_frame.py --output research/boolean_quadric_frame_certificate.json",
-      "result": "PASS",
-      "scope": "Exact five-variable annihilation identities, global frame minor1/(uv), Boolean evaluation determinants, old-point frame determinant1/12, and a cross-term rational fixture: W3/W4=(4,1), C4=35, C5=(63,56,56,56), d3 ranks36."
-    },
-    {
-      "command": "PYTHONPATH=/workspace/.cache/nc-p3-python python3 computations/verify_generic_one_point_boundary.py --output research/generic_one_point_boundary_certificate.json",
-      "result": "PASS",
-      "scope": "Full solved two-variable regression after introducing independent FLINT field contexts and the shared quintic-analysis engine: ranks77/36/14/42 and zero compositions."
-    },
-    {
-      "command": "PYTHONPATH=/workspace/.cache/nc-p3-python python3 computations/verify_boolean_quadric_homology.py --pivot full --output research/boolean_quadric_homology_certificate.json",
-      "result": "PASS",
-      "scope": "Exact QQ(u,v,a,b,c) polynomial cubic frame, generic relation basis, quotient dimensions20/35 and d2 rank77. d3 generic36 is deduced using the established bound and checked point, not represented as a completed direct five-variable computation."
-    },
-    {
-      "command": "PYTHONPATH=/workspace/.cache/nc-p3-python python3 computations/verify_reduced_octad_frame.py --output research/reduced_octad_frame_certificate.json",
-      "result": "PASS",
-      "scope": "Rational orthogonal4x4 matrix, all70 nonzero four-point minors, quadric evaluation rank7, affine/hyperplane-section Groebner dimensions8/8, cubic evaluation rank8, nonzero weights, symmetrizer dimensions1/1/1 with rank1 middle map, full Frobenius ranks, quartic dimensions35 and exact quintic ranks77/36 with six square classes."
-    },
-    {
-      "command": "PYTHONPATH=/workspace/.cache/nc-p3-python python3 computations/verify_product_net_dominance.py --output research/product_net_dominance_certificate.json",
-      "result": "PASS",
-      "scope": "Exact tangent matrix20x21 rank20, minor -696/78125, eight distinct reduced product-net points and seven nonzero fourth-quadric evaluations."
-    },
-    {
-      "command": "PYTHONPATH=/workspace/.cache/nc-p3-python python3 computations/verify_product_net_homology.py --output research/product_net_homology_certificate.json",
-      "result": "INCOMPLETE_TERMINATED",
-      "scope": "Exact old-point compatibility, native eight-variable cubic equations and generic pair rank6 passed. The guided generic-reference run stalled after 64 of 221 relation pivots and was terminated; no rank certificate and no universal AS exclusion."
-    },
-    {
-      "command": "bash scripts/cloud_preflight.sh --tex",
-      "result": "BLOCKED_TEX_DEPENDENCY",
-      "scope": "Python/project structure passed; Japanese TeX class ltjsarticle.cls is absent. No PDF compile or visual check performed."
-    },
-    {
-      "command": "PYTHONPATH=/workspace/.cache/nc-p3-python python3 computations/verify_generic_one_point_boundary.py --pivot full --quotient-pivot full-batched --output /workspace/work/nc-p3-generic-20261117/regression_final.json",
-      "result": "PASS",
-      "scope": "Exact two-variable regression after the elimination changes: ranks77/36/14/42 and zero composition; 3.028 seconds."
-    },
-    {
-      "command": "PYTHONPATH=/workspace/.cache/nc-p3-python python3 computations/verify_boolean_quadric_frame.py --output /workspace/work/nc-p3-generic-20261117/frame_recheck.json",
-      "result": "PASS",
-      "scope": "Rechecked exact global frame and old/cross-term fixtures after the new structural symmetrizer arguments."
+      "scope": "Source structure only; no TeX compilation or formal proof."
     }
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed short-path proof of four-layer Koszulity, trace/evaluation identification and generation of the 64-dimensional trivial extension, inner parity twist, and constant-rank vector-bundle specialization argument with adjacent cut upper bounds. No formalization or independent peer review. Reviewed normalization c0!=0, adjacent-cut upper bounds from three-factor symmetry, nonempty Frobenius/quartic-exact open from the checked old point, exact generic obstruction, and extension of rank upper bounds across the entire open. This excludes AS even at coefficient values whose Frobenius status was not classified separately. Reviewed global coverage of the final-quadric one-point open, cube evaluation basis, face-circuit independence with unit minor, all-degree Hilbert calculation, t-deformation at the basepoint, and incompatibility of finite-Frobenius symmetrization with the surviving common basepoint. Reviewed global fixed-Boolean rank-specialization argument including all extra-denominator zeros; reduced-octad seven-point evaluation via associated graded Artin CI socle3; weighted cubic kernel basis, one-point Hilbert tail, controlled closure deformation, orthogonal column scaling, and symmetrizer-covariance proof of the restricted orbit criterion. Reviewed the product-net Grassmannian tangent construction, the marked parameter with a reduced net and unique basepoint, dominance after restriction to a nonempty open, and the lift to the irreducible universal cubic-frame bundle. The broad AS exclusion remains explicitly conditional on the uncomputed rank. Reviewed S2-to-B4-dual bijection using the cubic contraction basis, equality of first catalecticant ranks, and alternation from two invertible witnesses via Lambda^3 V of dimension4. Reviewed the rank-one symmetric tensor pure-power argument and the basepoint-free regular-sequence implication; no claim about scheme-theoretic correspondence or AS exclusion of the basepoint branch. Reviewed cyclic placement of the unmatched factor, identification of the symmetric threefold intersection with B3 dual, rank-preserving covariance of symmetrizer spaces, and the mixed-sign braid contradiction. Reviewed the annihilator as the degree-three point-indicator module, the two-homology Koszul complex, lifting its H1 resolution, and the unique degree-eight cancellation forced by global dimension4."
+    "scope": "Reviewed bar count direct-summand preservation, homological shift by one, two-sided projective resolution, internal-degree-five position constraints, both contraction signs, d2 surjectivity, Euler characteristic, and rank-specialization on the universal cubic-frame bundle. No identification of the seven commutative syzygies with this Tor is claimed."
   },
   "tex": {
     "result": "NOT_RUN",
-    "scope": "Current --tex preflight confirmed ltjsarticle.cls missing; source structure check is not a Japanese TeX compilation."
+    "scope": "Last preflight found ltjsarticle.cls missing; no current PDF generated."
   },
   "visual_inspection": {
-    "result": "NOT_RUN",
-    "scope": "No PDF regenerated in this checkpoint."
+    "result": "NOT_RUN"
   },
   "literature_review": {
-    "result": "TARGETED",
-    "scope": "Grant Definitions2.3/2.5 and parity twist; Plaumann--Sturmfels--Vinzant (2011) Theorem3.10 with its linear-general-position hypothesis. Construction and self-association are classical context; no unverified converse for degenerate orthogonal matrices or representation-infinite criterion used."
+    "result": "NOT_RUN_THIS_CHECKPOINT",
+    "scope": "New argument is given directly; novelty and independent peer review remain unconfirmed."
   },
   "github_save": {
-    "result": "PASS",
-    "branch": "main",
-    "verified_commit": "516a0ea280373d937dea3cd799acf16d84f8c200",
-    "scope": "Fetched origin/main and matched HEAD; read back the two proof modules and STATE byte-for-byte. No eight-variable rank certificate exists."
+    "result": "PENDING",
+    "branch": "main"
   },
   "library_save": {
     "result": "not_attempted",
-    "scope": "Project-specific GitHub-first policy; no emergency Library fallback needed while main saves succeed."
+    "scope": "GitHub-first policy."
   },
   "open_mathematics": [
-    "Generic eight-variable quintic rank and universal basepoint-partial-symmetry exclusion remain open; the full fixed-Boolean one-point coefficient open is excluded.",
-    "All seven quintic H2 classes are now explicit for this single t=0 example; no universal formula or rank theorem for arbitrary basepoint boundaries.",
-    "General 4-window necessary-and-sufficient Koszul/AS criterion, LOW-UNCLASSIFIED, rho=3,4,5, other X6 components and full moduli remain unresolved."
-  ],
-  "symbolic_backend": {
-    "result": "PASS",
-    "dependency": "requirements-symbolic.txt, python-flint==0.9.0",
-    "scope": "Reduced rational functions using exact multivariate polynomial gcd; the pure-Python rational-function and fraction-free exploratory attempts were superseded and terminated, not recorded as successful rank verifications. Added exact low-complexity full pivot ordering; old two-variable case regressed with rank77/36/14/42. Long fixed-column and optional full five-variable post-d2 checks were superseded, not marked complete."
-  }
+    "Eight-variable d4 rank and universal basepoint AS exclusion remain unproved.",
+    "Comparison of commutative beta_(3,6)=7 with the one-return Tor is not constructed.",
+    "Other low-rank branches and complete classification remain unresolved."
+  ]
 }
