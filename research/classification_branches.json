@@ -181,7 +181,9 @@
         "dimension": 69,
         "generic_regular_chart": "symmetric CI chart",
         "boundary_coverage": "unresolved",
-        "disjoint_from": "polynomial indexed orbit"
+        "disjoint_from": "polynomial indexed orbit",
+        "entire_regular_chart_presentation": "PGL4^3 x U, smooth locally closed dimension 69",
+        "known_nonregular_boundary": "Explicit w_* with ranks (4,4,4,4), (6,6,6), singular S2; W3=(6,10,6,6), hence not finite Frobenius"
       },
       {
         "id": "Z-ALT",

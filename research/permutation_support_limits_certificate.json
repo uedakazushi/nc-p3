@@ -1,0 +1,18 @@
+{
+  "result": "PASS",
+  "arithmetic": "exhaustive finite combinatorics, exact integers",
+  "bipartite_graphs_examined": 65536,
+  "nonempty_Birkhoff_B4_faces": 7443,
+  "faces_by_minimum_singleton_rank": {
+    "1": 640,
+    "2": 6246,
+    "3": 556,
+    "4": 1
+  },
+  "all_singletons_rank_four_faces": 1,
+  "application": "For any tensor supported exactly on all 24 permutations with nonzero coefficients, an independent diagonal one-parameter limit preserving all singleton ranks is the original projective tensor.",
+  "limits": [
+    "Fixed-coordinate diagonal one-parameter limits only; arbitrary basis changes or moving source tensors are not covered.",
+    "No relative closedness theorem for the symmetric CI union."
+  ]
+}

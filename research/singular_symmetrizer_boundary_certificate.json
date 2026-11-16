@@ -1,0 +1,105 @@
+{
+  "result": "PASS",
+  "arithmetic": "exact rational linear algebra and integer weights",
+  "source": "D1 symmetric CI tensor from the regular specialization family",
+  "factor_weights": [
+    [
+      3,
+      3,
+      1,
+      0
+    ],
+    [
+      3,
+      3,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      4,
+      3
+    ],
+    [
+      3,
+      3,
+      1,
+      0
+    ]
+  ],
+  "minimum_weight": 4,
+  "boundary_terms": 16,
+  "singleton_ranks": [
+    4,
+    4,
+    4,
+    4
+  ],
+  "pair_cut_ranks": [
+    6,
+    6,
+    6
+  ],
+  "symmetrizer_dimensions": [
+    1,
+    2,
+    1
+  ],
+  "middle_symmetrizers": "span(E32, E22+E33), determinant identically zero",
+  "intersection_dimensions_W3_W4": [
+    [
+      6,
+      10
+    ],
+    [
+      10,
+      10
+    ],
+    [
+      6,
+      6
+    ],
+    [
+      6,
+      6
+    ]
+  ],
+  "W03_basis": [
+    {
+      "320": 1,
+      "230": 1
+    },
+    {
+      "321": 1,
+      "231": 1
+    },
+    {
+      "330": 1
+    },
+    {
+      "331": 1
+    },
+    {
+      "332": 1,
+      "323": 1,
+      "233": 1,
+      "210": -1,
+      "201": -1,
+      "120": -1,
+      "021": -1
+    },
+    {
+      "333": 1,
+      "310": -1,
+      "301": -1,
+      "130": -1,
+      "031": -1
+    }
+  ],
+  "limits": [
+    "The point lies in Z_sym but fails the finite-Frobenius locus.",
+    "It does not answer whether the symmetric image is relatively closed within the finite-Frobenius locus.",
+    "All flattening ranks and all nonzero symmetrizer spaces alone are insufficient to certify Frobenius or AS regularity."
+  ]
+}

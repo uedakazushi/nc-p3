@@ -298,3 +298,48 @@ $w\in Z_{\mathrm{sym}}$では三つの線型symmetrizer空間は全て非零で�
 $S$上では三空間の次元が1なので、それらを定める行列の16次小行列式は閉包でも零である。
 最後は線型対称化判定と有限Frobenius候補の対称チャート認証による。
 \end{proof}
+
+\begin{proposition}[全ての二対二階数を保つ非Frobenius境界]\label{prop:singular-symmetrizer-boundary}
+$Z_{\mathrm{sym}}$には、一因子階数が全て4、三つの二対二階数が全て6であり、
+三つの線型symmetrizer空間が全て非零であるが、対称化不能な点$w_*$が存在する。
+ただしこの点は有限Frobenius候補ではない。
+従って、上記の階数と三空間の非零性だけで有限Frobenius性を代用できない。
+\end{proposition}
+\begin{proof}
+命題\ref{prop:symmetric-regular-specialization}の$w_1$に、因子$0,1,3$では
+$\operatorname{diag}(t^3,t^3,t,1)$、因子2では
+$\operatorname{diag}(1,1,t^4,t^3)$を作用させ、$t^{-4}$倍して$t=0$とする。
+全ての項の重みは4以上なので、これは正則な射影的極限を与える。
+$[a b c d]=e_a\otimes e_b\otimes e_c\otimes e_d$と書くと、極限は
+\[
+ w_* =\sum_{\substack{(a,b,c,d)\text{ は }(0,1,2,3)\text{ の順列}\\ c\in\{0,1\}}}[a b c d]
+       -\sum_{(a,b,c,d)\text{ は }(2,3,3,3)\text{ の異なる順列}}[a b c d].
+\]
+明示行列の行消去により、一因子階数は$(4,4,4,4)$、二対二階数は$(6,6,6)$となる。
+同じ線型方程式を解くと
+\[
+ S_1(w_*)=S_3(w_*)=kI,\qquad
+ S_2(w_*)=\langle E_{32},\ E_{22}+E_{33}\rangle.
+\]
+最後の空間の全行列は階数2以下なので、線型対称化判定から対称化できない。
+
+有限Frobenius性の失敗は、三次交叉だけでも直接示せる。
+二文字$ab$を$e_a\otimes e_b$と略記すると、復元した最初の二窓は
+\begin{align*}
+ R_0&=\langle33,32+23,31+13,30+03,21+12,20+02\rangle,\\
+ R_1&=\langle10+01-33,32+23,21,20,31,30\rangle.
+\end{align*}
+$(R_0\otimes V)\cap(V\otimes R_1)$には次の六つの独立なベクトルが属する：
+\begin{gather*}
+320+230,\quad321+231,\quad330,\quad331,\\
+332+323+233-210-201-120-021,\\
+333-310-301-130-031.
+\end{gather*}
+各所属は上の二窓を使って両側から展開すれば確認でき、独立性は
+それぞれの$320,321,330,331,332,333$係数で従う。
+よって必要な三次交叉次元4に反する。
+正確な全窓の三次・四次交叉次元は順に
+$(6,10),(10,10),(6,6),(6,6)$である。
+再現コードは\path{computations/verify_singular_symmetrizer_boundary.py}。
+この例は有限Frobenius領域内の相対閉性を否定するものではない。
+\end{proof}
