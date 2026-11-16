@@ -18,7 +18,7 @@ def terms(K=None):
 
 
 def tensor(K,polynomial=False):
-    """Solve the 20-coordinate cubic frame, then clear return-basis denominators."""
+    """Solve the 20-coordinate cubic frame; optionally clear return-basis denominators."""
     monomials=list(combinations_with_replacement(range(4),3));lookup={m:i for i,m in enumerate(monomials)}
     rows=[]
     for last in range(4):

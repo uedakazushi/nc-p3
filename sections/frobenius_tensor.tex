@@ -382,6 +382,20 @@ $W^*\to\bigwedge^3 V$は同型である。
 残る因子の可逆変換で両者を一致させられる。得られる四テンソルは完全交代である。
 \end{proof}
 
+\begin{corollary}[異なる位置での対称・交代証明書の排他性]
+\label{cor:mixed-symmetry-witness-exclusion}
+$w\ne0$かつ$j\ne\ell$とする。
+$\mathcal S_j(w)$と$\mathcal S_\ell^-(w)$がともに可逆元を持つことはない。
+従って一つの位置で可逆な交代化写像があれば、他の二位置には可逆な対称化写像が存在しない。
+この主張にもFrobenius性は不要である。
+\end{corollary}
+\begin{proof}
+二つの可逆写像をそれぞれの因子へ作用させると、得られる非零テンソル$w'$は
+$s=P_{0j}$について$s w'=w'$、$t=P_{0\ell}$について$t w'=-w'$を満たす。
+ところが対称群では$sts=tst$であり、左辺は$-w'$、右辺は$w'$となる。
+標数零なので矛盾する。
+\end{proof}
+
 \subsection{行列束による階数2候補の除外}
 \begin{proposition}[第三階数2はFrobenius候補に現れない]\label{prop:no-opposite-rank-two}
 テンソル復元定理の有限Frobenius候補には$\rho=2$のものはない。

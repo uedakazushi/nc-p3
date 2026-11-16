@@ -583,8 +583,8 @@
     {
       "id": "PARTIAL-SYMMETRIZER-QUARTICS",
       "status": "proved",
-      "statement": "For a cubic-frame tensor with dim B3=4, S2 is canonically B4 dual, with matrix rank equal to first catalecticant rank. A one-basepoint B4-dual line yields rank-one symmetrizers. Any two invertible negative symmetrizers already imply full alternation. Projective rank-one elements of S2 correspond exactly to basepoints as closed points. In the finite-Frobenius partial-symmetric chart, absence of rank-one elements is equivalent to membership in the symmetric CI branch; the complementary basepoint branch is exhaustive but its AS status remains open.",
-      "proof": "sections/reduced_quadric_boundary.tex: prop:partial-symmetrizer-quartics and cor:one-basepoint-symmetrizer; sections/frobenius_tensor.tex: cor:two-alternating-witnesses; cor:basepoint-rank-one-symmetrizer and cor:partial-symmetric-exhaustive-split"
+      "statement": "For a cubic-frame tensor with dim B3=4, S2 is canonically B4 dual, with matrix rank equal to first catalecticant rank. A one-basepoint B4-dual line yields rank-one symmetrizers. Any two invertible negative symmetrizers already imply full alternation. Projective rank-one elements of S2 correspond exactly to basepoints as closed points. In the finite-Frobenius partial-symmetric chart, absence of rank-one elements is equivalent to membership in the symmetric CI branch; the complementary basepoint branch is exhaustive but its AS status remains open. Globally, two invertible positive witnesses force either the symmetric CI branch or a remaining symmetrizer space consisting of singular matrices and containing a rank-one matrix. Mixed positive/negative invertible witnesses at different positions are impossible by the braid relation.",
+      "proof": "sections/reduced_quadric_boundary.tex: prop:partial-symmetrizer-quartics and cor:one-basepoint-symmetrizer; sections/frobenius_tensor.tex: cor:two-alternating-witnesses; cor:basepoint-rank-one-symmetrizer and cor:partial-symmetric-exhaustive-split; prop:two-positive-global-split and cor:mixed-symmetry-witness-exclusion"
     }
   ],
   "document_paths": {
@@ -657,7 +657,7 @@
     "task_id": "Z4-AS-004",
     "status": "dominant_product_net_chart_proved_eight_variable_rank_pending",
     "objective": "Determine whether the full finite-Frobenius rank-six boundary of the symmetric CI orbit contains Koszul AS points not symmetrizable; then expand structural classification to remaining rho=3,4,5 and higher-rank branches.",
-    "immediate_next_action": "Continue exact eight-variable d2 rank verification with computations/verify_product_net_homology.py --projection guided --reference generic. The current method uses exact rational-point pivot traces only to select minors, then reduces every remaining column over QQ(al,be,ga,u,v,a,b,c); no interpolation. Generic dimensions follow from the already proved open Frobenius/quartic-exact locus. A prime-reference run reached 64 of 221 relation pivots; the old Boolean-reference run is slower and superseded. Check actual certificates before claiming completion. If it stalls, seek a structural homology obstruction using S2(w)=B4 dual and the four-layer trivial extension instead of repeating expensive elimination. If r<84 is proved, apply prop:product-net-universal-obstruction-transfer. Otherwise switch to the remaining rank branches; universal exclusion stays conditional.",
+    "immediate_next_action": "Seek a structural quintic obstruction for the rank-one residual branch in prop:two-positive-global-split, using the four-layer trivial extension, S2=B4 dual, and the three-dimensional degree-three socle in the generic one-basepoint quotient. The eight-variable guided run stalled after 64/221 relation pivots for more than ten minutes and was terminated without a rank certificate; avoid repeating the same run unboundedly. The exact reproducer computations/verify_product_net_homology.py --projection guided --reference generic remains available. A rank r<84 would activate prop:product-net-universal-obstruction-transfer, but it is not yet proved. If a structural argument stalls, move to candidates with at most one positive and at most one negative invertible witness; two negative witnesses already give the polynomial class.",
     "read_first": [
       "research/plan_ja.tex",
       "AGENTS.md",
@@ -666,7 +666,7 @@
       "computations/verify_product_net_homology.py",
       "computations/quintic_field_analysis.py"
     ],
-    "known_obstruction": "The generic eight-variable d2 rank is not certified. All geometric dominance and specialization steps are proved, but universal exclusion of basepoint partial-symmetry still depends on this rank (or an independent structural obstruction). General LOW-UNCLASSIFIED remains open.",
+    "known_obstruction": "No eight-variable quintic rank certificate. Exact generic frame and pair rank6 passed; a dense relation elimination stalled. No universal AS exclusion of the rank-one basepoint branch. The full classification remains open.",
     "state_of_claim": "Dominance and universal transfer implication are proved. Eight-variable rank remains unproved. New exact normal-form and guided elimination regressions pass for the original two-variable slice; a fixed non-Boolean net with variable u,v also gave exact rank77 and zero residual. New symmetrizer/quartic identification and two-negative-witness criterion are proved. No full classification claim.",
     "handoff_rule": "Overwrite with the current next concrete research action before task termination; no chronological status log."
   },

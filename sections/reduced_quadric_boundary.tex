@@ -172,12 +172,48 @@ $w$は完全対称化できない。
 $S_2$に可逆元があり、対応する四次テンソルが同じ$L$の完全交叉表示を与える。
 これは基点に反する（定理\ref{thm:symmetric-frobenius-chart}）。
 \end{proof}
+\begin{proposition}[二つの対称化証明書を持つ全候補の分岐]
+\label{prop:two-positive-global-split}
+有限Frobenius候補$w$について、相異なる$j,\ell\in\{1,2,3\}$で
+$S_j(w),S_\ell(w)$に可逆元があるとする。残る位置を$m$とすると、次のいずれか一方が成り立つ。
+\begin{enumerate}
+\item $w$は完全対称化可能であり、$S_m(w)$は可逆行列で生成される一次元空間である。
+\item $S_m(w)$の全行列は特異であり、その中に非零階数1行列が存在する。
+\end{enumerate}
+この分岐は四因子独立の基底変更で不変である。
+第二枝を排除するAS定理はここではまだ得られていない。
+\end{proposition}
+\begin{proof}
+二つの証明書で三因子を対称化し、残る因子が位置2となるよう四窓を巡回移動する。
+三つの対称因子のいずれを共通因子と見ても、未対称因子への交換方程式は同じ完全対称性を表す。
+隣接縮約像の直交空間は$\bigwedge^2(V^*)+L$と書け、
+対称な三因子での三重交差は$B_3^*$である。
+有限Frobenius条件からその次元は4であり、一因子階数4によって$w$はこの空間の基底テンソルとなる。
+従って系\ref{cor:partial-symmetric-exhaustive-split}を適用できる。
+元の表示に戻る際には
+$S_i((g_0\otimes\cdots\otimes g_3)w)=g_0 S_i(w)g_i^{-1}$
+により、次元・行列階数・可逆元の有無は保たれる。
+巡回移動で共通因子が変わるときも、三対称因子間の同一視で可逆な合成を施すだけなので、
+残る対称化空間の階数条件は同じである。
+\end{proof}
+
 \begin{corollary}\label{cor:one-basepoint-symmetrizer}
 一点基点の縮約族で$B_4^*=k p_0^{\otimes4}$となる場合、$S_2(w)$は一次元で、
 その非零元は全て階数1である。従ってこのチャートの対称化失敗は行列式の消滅として直接検出できる。
 \end{corollary}
 \begin{proof}
 前命題を適用する。$p_0^{\otimes4}$の一因子縮約の階数は1である。
+\end{proof}
+
+\begin{lemma}[一点基点の場合の低次socle]\label{lem:one-basepoint-cubic-socle}
+$\dim B_3=4$かつ$B_4^*=k p^{\otimes4}$、$p\ne0$なら、
+$B_3$内のsocleは三次評価$B_3\to k$の核であり、次元3である。
+\end{lemma}
+\begin{proof}
+$B_4\simeq k$を$p^{\otimes4}$で同定すると、$\ell\in B_1$、$b\in B_3$の積は
+$\ell(p)b(p)$に対応する。$\ell(p)\ne0$となる一次式があるので、
+全ての一次式に殺されることと$b(p)=0$は同値である。
+三次評価は非零であり、$B$は次数1で生成されるから、これがsocleそのものである。
 \end{proof}
 
 \begin{proposition}[三因子対称チャートでの四因子同値判定]
