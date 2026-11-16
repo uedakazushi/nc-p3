@@ -103,7 +103,9 @@ def dual_windows(relations):
     return result
 
 
-def quotient(relations,start,degree):
+def quotient(relations,start,degree,method="columns"):
+    if method in ("full","full-batched"):
+        return full_pivot_nullspace(inserted(relations,start,degree),4**degree,batched=method=="full-batched")
     pivots=echelon(inserted(relations,start,degree))
     free=sorted(set(range(4**degree))-set(pivots))
     # Reuse the echelon rows to recover the orthogonal kernel.
@@ -150,3 +152,97 @@ def sparse_full_pivot_rank(columns,progress=None):
         remaining=updated;rank+=1
         if progress is not None and rank%16==0:progress(rank)
     return rank
+
+
+def full_pivot_equations(rows,size,progress=None):
+    """Exact row elimination with arbitrary low-complexity variable pivots.
+
+    Stored equations are triangular in pivot-selection order, not necessarily
+    in monomial order. Reversed selection order therefore gives back substitution.
+    """
+    remaining=[{i:x for i,x in row.items() if x} for row in rows]
+    remaining=[row for row in remaining if row]
+    pivots=[]
+    while remaining:
+        frequency={}
+        for row in remaining:
+            for column in row:frequency[column]=frequency.get(column,0)+1
+        best=None;chosen=None
+        for j,row in enumerate(remaining):
+            for i,value in row.items():
+                score=(len(value.n)+len(value.d),value.n.total_degree()+value.d.total_degree(),
+                       (len(row)-1)*(frequency[i]-1),len(row))
+                if best is None or score<best:best,chosen=score,(j,i)
+        j,i=chosen;row=remaining.pop(j);scale=row[i]
+        normalized={column:x/scale for column,x in row.items()}
+        updated=[]
+        for other in remaining:
+            coefficient=other.pop(i,zero)
+            if coefficient:
+                for column,value in normalized.items():
+                    if column==i:continue
+                    total=other.get(column,zero)-coefficient*value
+                    if total:other[column]=total
+                    else:other.pop(column,None)
+            if other:updated.append(other)
+        remaining=updated;pivots.append((i,normalized))
+        if progress is not None and len(pivots)%64==0:progress(len(pivots))
+    selected={i for i,row in pivots}
+    free=sorted(set(range(size))-selected)
+    return pivots,free
+
+
+def full_pivot_nullspace(rows,size,batched=False):
+    pivots,free=full_pivot_equations(rows,size)
+    if batched:
+        return _batched_kernel(pivots,free,size),free
+    result=[]
+    for column in free:
+        vector={column:one}
+        for i,row in reversed(pivots):
+            value=-sum((x*vector.get(j,zero) for j,x in row.items() if j!=i),zero)
+            if value:vector[i]=value
+        result.append(vector)
+    return result,free
+
+
+def _batched_kernel(pivots,free,size):
+    """Back-substitute whole coefficient vectors with one polynomial denominator."""
+    unit=one.d
+    vectors={column:({j:unit},unit) for j,column in enumerate(free)}
+    for i,row in reversed(pivots):
+        terms=[];denominator=unit
+        for column,value in row.items():
+            if column==i:continue
+            numerator_vector,vector_denominator=vectors[column]
+            if not numerator_vector:continue
+            numerator=-value.n;term_denominator=value.d*vector_denominator
+            common=numerator.gcd(term_denominator)
+            numerator=numerator//common;term_denominator=term_denominator//common
+            terms.append((numerator,numerator_vector,term_denominator))
+            denominator=(denominator*term_denominator)//denominator.gcd(term_denominator)
+        numerator_vector={}
+        for coefficient,other,term_denominator in terms:
+            scale=coefficient*(denominator//term_denominator)
+            for j,value in other.items():
+                total=numerator_vector.get(j,zero.n)+scale*value
+                if total:numerator_vector[j]=total
+                else:numerator_vector.pop(j,None)
+        if not numerator_vector:
+            vectors[i]=({},unit);continue
+        common=denominator
+        for value in numerator_vector.values():
+            common=common.gcd(value)
+            if common==unit:break
+        if common!=unit:
+            denominator=denominator//common
+            numerator_vector={j:x//common for j,x in numerator_vector.items()}
+        leading=denominator.leading_coefficient()
+        if leading!=1:
+            denominator=denominator/leading
+            numerator_vector={j:x/leading for j,x in numerator_vector.items()}
+        vectors[i]=(numerator_vector,denominator)
+    element=type(one);result=[{} for j in free]
+    for column,(numerator_vector,denominator) in vectors.items():
+        for j,value in numerator_vector.items():result[j][column]=element(value,denominator)
+    return result

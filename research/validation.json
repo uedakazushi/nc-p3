@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-17",
-  "version": 32,
+  "version": 33,
   "reviewed_input": {
-    "source_commit": "bc5dff62ed13d1113cd9a66bf85aefba863b182c"
+    "source_commit": "a9c442e0190cb71416d7ecf15844f741e8b19524"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Proved a dominating eight-parameter chart for all basepoint four-quadric spaces and the universal-frame obstruction-transfer implication. The generic eight-variable homology rank remains unproved.",
+    "scope": "Proved the identification of the remaining partial symmetrizer with B4 dual and its rank interpretation, plus the two-negative-witness alternation criterion. Added exact specialization-guided quotient projection. The universal eight-variable obstruction is still unproved.",
     "new_mathematical_theorem": true
   },
   "checks": [
@@ -70,11 +70,16 @@
       "command": "bash scripts/cloud_preflight.sh --tex",
       "result": "BLOCKED_TEX_DEPENDENCY",
       "scope": "Python/project structure passed; Japanese TeX class ltjsarticle.cls is absent. No PDF compile or visual check performed."
+    },
+    {
+      "command": "PYTHONPATH=/workspace/.cache/nc-p3-python python3 computations/verify_generic_one_point_boundary.py --pivot full --quotient-pivot full-batched --output /workspace/work/nc-p3-generic-20261117/regression_final.json",
+      "result": "PASS",
+      "scope": "Exact two-variable regression after the elimination changes: ranks77/36/14/42 and zero composition; 3.028 seconds."
     }
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed short-path proof of four-layer Koszulity, trace/evaluation identification and generation of the 64-dimensional trivial extension, inner parity twist, and constant-rank vector-bundle specialization argument with adjacent cut upper bounds. No formalization or independent peer review. Reviewed normalization c0!=0, adjacent-cut upper bounds from three-factor symmetry, nonempty Frobenius/quartic-exact open from the checked old point, exact generic obstruction, and extension of rank upper bounds across the entire open. This excludes AS even at coefficient values whose Frobenius status was not classified separately. Reviewed global coverage of the final-quadric one-point open, cube evaluation basis, face-circuit independence with unit minor, all-degree Hilbert calculation, t-deformation at the basepoint, and incompatibility of finite-Frobenius symmetrization with the surviving common basepoint. Reviewed global fixed-Boolean rank-specialization argument including all extra-denominator zeros; reduced-octad seven-point evaluation via associated graded Artin CI socle3; weighted cubic kernel basis, one-point Hilbert tail, controlled closure deformation, orthogonal column scaling, and symmetrizer-covariance proof of the restricted orbit criterion. Reviewed the product-net Grassmannian tangent construction, the marked parameter with a reduced net and unique basepoint, dominance after restriction to a nonempty open, and the lift to the irreducible universal cubic-frame bundle. The broad AS exclusion remains explicitly conditional on the uncomputed rank."
+    "scope": "Reviewed short-path proof of four-layer Koszulity, trace/evaluation identification and generation of the 64-dimensional trivial extension, inner parity twist, and constant-rank vector-bundle specialization argument with adjacent cut upper bounds. No formalization or independent peer review. Reviewed normalization c0!=0, adjacent-cut upper bounds from three-factor symmetry, nonempty Frobenius/quartic-exact open from the checked old point, exact generic obstruction, and extension of rank upper bounds across the entire open. This excludes AS even at coefficient values whose Frobenius status was not classified separately. Reviewed global coverage of the final-quadric one-point open, cube evaluation basis, face-circuit independence with unit minor, all-degree Hilbert calculation, t-deformation at the basepoint, and incompatibility of finite-Frobenius symmetrization with the surviving common basepoint. Reviewed global fixed-Boolean rank-specialization argument including all extra-denominator zeros; reduced-octad seven-point evaluation via associated graded Artin CI socle3; weighted cubic kernel basis, one-point Hilbert tail, controlled closure deformation, orthogonal column scaling, and symmetrizer-covariance proof of the restricted orbit criterion. Reviewed the product-net Grassmannian tangent construction, the marked parameter with a reduced net and unique basepoint, dominance after restriction to a nonempty open, and the lift to the irreducible universal cubic-frame bundle. The broad AS exclusion remains explicitly conditional on the uncomputed rank. Reviewed S2-to-B4-dual bijection using the cubic contraction basis, equality of first catalecticant ranks, and alternation from two invertible witnesses via Lambda^3 V of dimension4."
   },
   "tex": {
     "result": "NOT_RUN",
@@ -91,7 +96,7 @@
   "github_save": {
     "result": "PENDING",
     "branch": "main",
-    "scope": "Checkpoint bc5dff6 pushed; current dominance/conditional-transfer checkpoint awaiting push/readback."
+    "scope": "Previous v32 main a9c442e fetched and matched; new proof and exact elimination sources await checkpoint."
   },
   "library_save": {
     "result": "not_attempted",

@@ -17,7 +17,7 @@ def terms(K=None):
             {(0,3):one,(1,3):u,(2,3):v,(0,1):a,(0,2):b,(1,2):c}]
 
 
-def tensor(K):
+def tensor(K,polynomial=False):
     """Solve the 20-coordinate cubic frame, then clear return-basis denominators."""
     monomials=list(combinations_with_replacement(range(4),3));lookup={m:i for i,m in enumerate(monomials)}
     rows=[]
@@ -64,20 +64,21 @@ def tensor(K):
     denominators=[]
     for j in range(4):
         denominator=K.one.d
-        for vector in basis.values():
-            other=vector[j].d
-            denominator=(denominator*other)//denominator.gcd(other)
+        if polynomial:
+            for vector in basis.values():
+                other=vector[j].d
+                denominator=(denominator*other)//denominator.gcd(other)
         denominators.append(type(K.one)(denominator))
     result={}
     for encoded in range(256):
         a,b,j,c=digits(encoded)
         value=basis[lookup[tuple(sorted((a,b,c)))]] [j]*denominators[j]
         if value:result[encoded]=value
-    assert all(x.d==1 for x in result.values())
+    if polynomial:assert all(x.d==1 for x in result.values())
     return result
 
 
-def relation_windows(w,K):
+def relation_windows(w,K,normalize_r0=False):
     al,be,ga,u,v,a,b,c=[K.from_sympy(x) for x in s.symbols(NAMES)]
     raw=[]
     for free in range(6):
@@ -87,14 +88,18 @@ def relation_windows(w,K):
         for pair,value in [((0,1),t[0]),((0,2),t[1]),((1,2),t[2]),((1,3),t[3]),((2,3),t[4]),((0,3),r03)]:
             row[pair]=value;row[pair[::-1]]=value
         raw.append({4*i+j:x for (i,j),x in row.items() if x})
-    normalized=g.echelon(raw);assert len(normalized)==6
-    r0=[{divmod(i,4):x for i,x in row.items()} for row in normalized.values()]
+    if normalize_r0:
+        normalized=g.echelon(raw);assert len(normalized)==6
+        r0=[{divmod(i,4):x for i,x in row.items()} for row in normalized.values()]
+    else:r0=[{divmod(i,4):x for i,x in row.items()} for row in raw]
     r1=[]
-    for first,last in [(0,1),(0,2),(1,2),(1,3),(2,3),(3,3)]:
+    for index,(first,last) in enumerate([(0,1),(0,2),(1,2),(1,3),(2,3),(3,3)]):
         row={}
         for b,j in product(range(4),repeat=2):
             value=w.get(64*first+16*b+4*j+last,K.zero)
             if value:row[b,j]=value
-        r1.append(row)
+        unit_coordinate=[(2,0),(1,0),(0,0),(3,1),(3,2),(3,3)][index]
+        scale=row[unit_coordinate]
+        r1.append({pair:x/scale for pair,x in row.items()})
     r2=[{(b,a):x for (a,b),x in row.items()} for row in r1]
     return [r0,r1,r2,r0]

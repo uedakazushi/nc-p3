@@ -366,6 +366,22 @@ $\mathcal S_j^-(w)=\{H:H^{(j)}w=-H^{(0)}P_{0j}w\}$に置き換えると、
 非零の$\Lambda^4 V$は一次元なので、系\ref{cor:symmetric-rank-six}の交代テンソルの議論を適用する。
 \end{proof}
 
+
+\begin{corollary}[二つの交代化写像で十分]\label{cor:two-alternating-witnesses}
+四つの一因子階数が4である四階テンソルについて、三つの$\mathcal S_j^-(w)$のうち
+任意の二つが可逆元を持てば、四因子独立の変換で完全交代にできる。
+従って前系では三つ全てでなく二つの可逆証明書を確認すれば十分である。
+この含意にはFrobenius性やKoszul性を必要としない。
+\end{corollary}
+\begin{proof}
+二つの可逆写像を対応する二因子へ作用させると、三つの因子の任意の交換に対して符号が変わる。
+従ってテンソルは$\bigwedge^3 V\otimes W$に属する。
+$\dim V=\dim W=4$なので$\dim\bigwedge^3 V=4$であり、残る一因子階数4の条件から
+$W^*\to\bigwedge^3 V$は同型である。
+非零体積テンソルの一因子縮約も$V^*\to\bigwedge^3 V$の同型であるから、
+残る因子の可逆変換で両者を一致させられる。得られる四テンソルは完全交代である。
+\end{proof}
+
 \subsection{行列束による階数2候補の除外}
 \begin{proposition}[第三階数2はFrobenius候補に現れない]\label{prop:no-opposite-rank-two}
 テンソル復元定理の有限Frobenius候補には$\rho=2$のものはない。

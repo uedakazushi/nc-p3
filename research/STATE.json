@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-17",
-  "version": 32,
+  "version": 33,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -579,6 +579,12 @@
       "claim": "If the generic eight-variable quintic d2 rank r is strictly below84, dominance and the irreducible universal cubic-frame bundle imply H2>=84-r at every finite-Frobenius quartic-exact partially symmetric basepoint candidate. The rank premise is not yet proved.",
       "proof": "sections/product_net_boundary.tex:prop:product-net-universal-obstruction-transfer",
       "status": "conditional_theorem_proof_written_rank_premise_open"
+    },
+    {
+      "id": "PARTIAL-SYMMETRIZER-QUARTICS",
+      "status": "proved",
+      "statement": "For a cubic-frame tensor with dim B3=4, S2 is canonically B4 dual, with matrix rank equal to first catalecticant rank. A one-basepoint B4-dual line yields rank-one symmetrizers. Any two invertible negative symmetrizers already imply full alternation.",
+      "proof": "sections/reduced_quadric_boundary.tex: prop:partial-symmetrizer-quartics and cor:one-basepoint-symmetrizer; sections/frobenius_tensor.tex: cor:two-alternating-witnesses"
     }
   ],
   "document_paths": {
@@ -642,7 +648,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "bc5dff62ed13d1113cd9a66bf85aefba863b182c",
+  "reviewed_source_commit": "a9c442e0190cb71416d7ecf15844f741e8b19524",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -651,7 +657,7 @@
     "task_id": "Z4-AS-004",
     "status": "dominant_product_net_chart_proved_eight_variable_rank_pending",
     "objective": "Determine whether the full finite-Frobenius rank-six boundary of the symmetric CI orbit contains Koszul AS points not symmetrizable; then expand structural classification to remaining rho=3,4,5 and higher-rank branches.",
-    "immediate_next_action": "Complete computations/verify_product_net_homology.py, which builds an exact eight-variable cubic frame with full low-complexity pivots, clears its return-basis denominators, and computes quintic d2. Dominance is already proved by minor -696/78125. The current exploratory run reached exact old-point compatibility, the eight-variable cubic frame and generic pair rank6; C4 quotient/rank calculation is still pending. If symbolic quotient construction stalls, use low-complexity full-pivot nullspace elimination instead of fixed monomial pivots. If r<84, invoke prop:product-net-universal-obstruction-transfer on the universal frame bundle; this would rule out every basepoint partially symmetric AS candidate, not merely reduced octads. Do not assert that conclusion before the rank is certified.",
+    "immediate_next_action": "Continue exact eight-variable d2 rank verification with computations/verify_product_net_homology.py --projection guided --reference generic. The current method uses exact rational-point pivot traces only to select minors, then reduces every remaining column over QQ(al,be,ga,u,v,a,b,c); no interpolation. Generic dimensions follow from the already proved open Frobenius/quartic-exact locus. A prime-reference run reached 64 of 221 relation pivots; the old Boolean-reference run is slower and superseded. Check actual certificates before claiming completion. If it stalls, seek a structural homology obstruction using S2(w)=B4 dual and the four-layer trivial extension instead of repeating expensive elimination. If r<84 is proved, apply prop:product-net-universal-obstruction-transfer. Otherwise switch to the remaining rank branches; universal exclusion stays conditional.",
     "read_first": [
       "research/plan_ja.tex",
       "AGENTS.md",
@@ -661,7 +667,7 @@
       "computations/quintic_field_analysis.py"
     ],
     "known_obstruction": "The generic eight-variable d2 rank is not certified. All geometric dominance and specialization steps are proved, but universal exclusion of basepoint partial-symmetry still depends on this rank (or an independent structural obstruction). General LOW-UNCLASSIFIED remains open.",
-    "state_of_claim": "Dominant product-net chart verified over Q at a reduced single-basepoint parameter, with exact tangent rank20 and nonzero minor. Native function-field frame construction passed the old-point match and generic pair-rank checks in the ongoing run. No eight-variable homology certificate exists yet. Five-variable Boolean exclusion and reduced-octad geometric/pointwise results remain proved.",
+    "state_of_claim": "Dominance and universal transfer implication are proved. Eight-variable rank remains unproved. New exact normal-form and guided elimination regressions pass for the original two-variable slice; a fixed non-Boolean net with variable u,v also gave exact rank77 and zero residual. New symmetrizer/quartic identification and two-negative-witness criterion are proved. No full classification claim.",
     "handoff_rule": "Overwrite with the current next concrete research action before task termination; no chronological status log."
   },
   "execution_policy": {
