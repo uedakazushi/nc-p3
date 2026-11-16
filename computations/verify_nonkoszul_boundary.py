@@ -117,6 +117,25 @@ def square_relation_cycles(windows):
     full = d3.row_join(cycles).row_join(mixed)
     assert exact_rank(({i: F(full[i, j]) for i in range(120) if full[i, j]}
                        for j in range(full.cols))) == 43
+    # A three-coordinate cohomological witness, using canonical RREF
+    # relation rows and the indicated lexicographic free monomial basis.
+    normal_tails = ('032', '123', '131', '132', '213', '221', '223',
+                    '230', '231', '232', '303', '310', '313', '320',
+                    '321', '322', '323', '330', '331', '332')
+    normal_indices = [16*int(w[0])+4*int(w[1])+int(w[2])
+                      for w in normal_tails]
+    quotient_frame = q3[:, normal_indices]
+    assert quotient_frame.det() != 0
+    canonical_rows = relation_basis.T.rref()[0]
+    canonical_cols = canonical_rows.T
+    change, params = relation_basis.gauss_jordan_solve(canonical_cols)
+    assert params.rows == 0 and change.det() != 0
+    relation_functional = s.Matrix([[-1, 0, 0, -1, 0, 1]]) * change.inv()
+    tail_functional = s.Matrix([[0, 0, 0, 1] + [0]*16]) * quotient_frame.inv()
+    ell = s.kronecker_product(relation_functional, tail_functional)
+    assert ell * d3 == s.zeros(1, 40)
+    assert ell * cycles == s.zeros(1, 6)
+    assert ell * mixed == s.Matrix([[4]])
     # Since dim H2=7, the six square classes and this mixed class form a basis.
     # One especially small nonzero class is square relation tensor word 303.
     word=s.zeros(64,1);word[51]=1
@@ -129,6 +148,7 @@ def square_relation_cycles(windows):
             'remaining_H2_dimension_after_square_cycles':1,
             'mixed_cycle': '2*[33]x[332]+4*[33]x[132]+12*[33]x[221]+8*[33]x[231]+4*[33]x[331]-3*r01x[213]-6*r13x[123]',
             'd2_mixed_zero':True,'d3_plus_square_plus_mixed_rank':43,
+            'mixed_cycle_three_coordinate_functional':'r5[132]-r0[132]-r3[132]; kills d3 and square classes, evaluates to 4',
             'remaining_H2_after_all_seven_cycles':0}
 
 
