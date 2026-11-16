@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-17",
-  "version": 36,
+  "version": 37,
   "reviewed_input": {
-    "source_commit": "55772f0"
+    "source_commit": "5640f37710ccaf040b59a3cfb979f275e50c13e3"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Proved universal basepoint three-factor-symmetric non-Koszulity by signed reversal and negative Euler characteristic. The complete AS criterion within that branch and two-positive-witness recognition follow; the generic d4 upper bound<=339 is proved without computing its exact rank. Full classification remains open.",
+    "scope": "Proved universal basepoint three-factor-symmetric non-Koszulity by signed reversal and negative Euler characteristic. The complete AS criterion within that branch and two-positive-witness recognition follow; the generic d4 upper bound<=339 is proved without computing its exact rank. Full classification remains open. Proved adjacent-witness rho=6 and a linear matrix reduction for one adjacent negative witness; the nondegenerate four-variable4x6 block argument forces generic ranks(3,3). No global exactness, polynomial-uniqueness or propagation claim for that slice.",
     "new_mathematical_theorem": true
   },
   "checks": [
@@ -55,11 +55,16 @@
       "command": "PYTHONPATH=/workspace/.cache/nc-p3-python python3 computations/verify_one_return_involution.py --fixture generic --output research/one_return_involution_generic_certificate.json",
       "result": "PASS",
       "scope": "Independent non-Boolean product-net parameters2,5,11,3,7,17,23,31: all involution identities, dimensions and ranks; H3 split1+6. The universal lower bound5 is proved, not inferred from the fixtures."
+    },
+    {
+      "command": "python3 computations/verify_single_negative_slice.py --output research/single_negative_slice_certificate.json",
+      "result": "PASS",
+      "scope": "Exact opposite rank-six factorization, all polarized zero-composition identities, all maximal minors zero and rank-three witness for the alternating determinant control. Not a proof that every matrix slice is polynomial."
     }
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed bar count direct-summand preservation, homological shift by one, two-sided projective resolution, internal-degree-five position constraints, both contraction signs, d2 surjectivity, Euler characteristic, and rank-specialization on the universal cubic-frame bundle. No identification of the seven commutative syzygies with this Tor is claimed. Reviewed point side-complex homology7 and3, independent cube kernels for two points, the jet filtration with truncated quotient and length-two bound42, absence of incoming top differential, conversion to the quartic35 obstruction, and the generic regular-sequence/smooth incidence proof of reduced-net coverage. Reviewed the seven ternary elimination conditions and point-quotient rank identities. Reviewed signed word reversal with tau interchanging first/last deconcatenations, the Koszul sign (-1)^(ab), point-subcomplex preservation, eigenspace dimensions60/200/135 including twisted flip on Q2, and Euler boundH3>=5. Reviewed conversion to nonlinear Tor4,5 and two-positive AS recognition. No full tensor-classification or exact generic rank claim."
+    "scope": "Reviewed bar count direct-summand preservation, homological shift by one, two-sided projective resolution, internal-degree-five position constraints, both contraction signs, d2 surjectivity, Euler characteristic, and rank-specialization on the universal cubic-frame bundle. No identification of the seven commutative syzygies with this Tor is claimed. Reviewed point side-complex homology7 and3, independent cube kernels for two points, the jet filtration with truncated quotient and length-two bound42, absence of incoming top differential, conversion to the quartic35 obstruction, and the generic regular-sequence/smooth incidence proof of reduced-net coverage. Reviewed the seven ternary elimination conditions and point-quotient rank identities. Reviewed signed word reversal with tau interchanging first/last deconcatenations, the Koszul sign (-1)^(ab), point-subcomplex preservation, eigenspace dimensions60/200/135 including twisted flip on Q2, and Euler boundH3>=5. Reviewed conversion to nonlinear Tor4,5 and two-positive AS recognition. No full tensor-classification or exact generic rank claim. Reviewed adjacent-transposition action on pair-cut ranks, polarized skew identity from the rank factorization, and the rank-one matrix-space dichotomy excluding generic rank1; this leaves exactly six necessary rank pairs. Reviewed the rank2 normal form, D=0 and CB=0 from Schur-complement coefficients, rank1-space dichotomy for C, and the three-variable row b(x) producing a forbidden common kernel; applied also to Q transpose. Retained the independent Pluecker-gcd rank4 exclusion as an auxiliary note."
   },
   "tex": {
     "result": "NOT_RUN",
@@ -69,13 +74,13 @@
     "result": "NOT_RUN"
   },
   "literature_review": {
-    "result": "NOT_RUN_THIS_CHECKPOINT",
-    "scope": "New argument is given directly; novelty and independent peer review remain unconfirmed."
+    "result": "NOT_USED_FOR_NEW_THEOREMS",
+    "scope": "A Bertini source lookup did not yield a verified primary text; the reduced-net statement instead has a self-contained smooth incidence/generic-fiber argument. Signed-reversal and matrix-slice proofs are written directly. Novelty remains unconfirmed."
   },
   "github_save": {
     "result": "PENDING",
     "branch": "main",
-    "scope": "Length-two checkpoint55772f0 saved; universal signed-reversal exclusion awaiting checkpoint and readback."
+    "scope": "Universal-exclusion checkpoint5640f37710ccaf040b59a3cfb979f275e50c13e3 fetched with HEAD equality. New single-witness reduction awaiting checkpoint."
   },
   "library_save": {
     "result": "not_attempted",

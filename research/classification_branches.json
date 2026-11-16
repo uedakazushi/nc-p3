@@ -50,7 +50,8 @@
       "normal_forms": "unresolved",
       "regularity_of_all_tensor_candidates": "unresolved",
       "complete_isomorphism": "unresolved",
-      "necessary_witness_restrictions": "At most one positive and at most one negative invertible symmetrizer witness; if both signs occur they have the same position. Every three-factor-symmetrizable AS object is already in the symmetric CI chart; cor:two-positive-as-recognition."
+      "necessary_witness_restrictions": "At most one positive and at most one negative invertible symmetrizer witness; if both signs occur they have the same position. Every three-factor-symmetrizable AS object is already in the symmetric CI chart; cor:two-positive-as-recognition.",
+      "adjacent_witness_restriction": "No adjacent invertible witness of either sign at any cyclic start; lem:adjacent-witness-rank-six."
     },
     {
       "id": "SYMMETRIC-CHART",
@@ -103,7 +104,8 @@
       "regularity_of_all_tensor_candidates": "unresolved",
       "complete_isomorphism": "unresolved",
       "excluded_subfamilies": "contains no quantum polynomial indexed class, by quantum rank formula and its two rank-six normal forms; also no member of the full polynomial-derivation Ore chart; neither uniform indexed commuting nor anticommuting Ore subclass contributes a point; entire diagonal quantum-three-generator Ore chart excluded, even up to indexed isomorphism; also avoids the proven G-invariant low-rank open neighborhood of the specified Clifford point C0; every three-factor-symmetrizable candidate with a basepoint is non-Koszul by the signed-reversal Euler obstruction, thm:partial-symmetric-basepoint-exclusion",
-      "necessary_witness_restrictions": "At most one positive and at most one negative invertible symmetrizer witness; if both signs occur they have the same position. Every three-factor-symmetrizable AS object is already in the symmetric CI chart; cor:two-positive-as-recognition."
+      "necessary_witness_restrictions": "At most one positive and at most one negative invertible symmetrizer witness; if both signs occur they have the same position. Every three-factor-symmetrizable AS object is already in the symmetric CI chart; cor:two-positive-as-recognition.",
+      "adjacent_witness_restriction": "Any adjacent witness forces rho=6. Thus rho3/4/5 has none. A single adjacent negative witness at rho6 gives a generically middle-exact linear matrix complex with ranks(3,3), cor:single-negative-ranks-three; global exactness and polynomial uniqueness remain open."
     }
   ],
   "limits": [

@@ -1,0 +1,119 @@
+{
+  "result": "PASS",
+  "arithmetic": "exact QQ polynomial identities",
+  "tensor": "alternating volume in dimension4",
+  "opposite_rank": 6,
+  "factorization": {
+    "pivot_columns": [
+      1,
+      2,
+      3,
+      6,
+      7,
+      11
+    ],
+    "pivot_rows": [
+      1,
+      2,
+      3,
+      6,
+      7,
+      11
+    ]
+  },
+  "P_size": [
+    4,
+    6
+  ],
+  "Q_size": [
+    6,
+    4
+  ],
+  "P_x_Q_y_plus_P_y_Q_x_zero": true,
+  "all_four_minors_zero": true,
+  "generic_ranks": [
+    3,
+    3
+  ],
+  "rank_three_witness": [
+    1,
+    2,
+    3,
+    5
+  ],
+  "P": [
+    [
+      "0",
+      "0",
+      "0",
+      "x3",
+      "-x2",
+      "x1"
+    ],
+    [
+      "0",
+      "-x3",
+      "x2",
+      "0",
+      "0",
+      "-x0"
+    ],
+    [
+      "x3",
+      "0",
+      "-x1",
+      "0",
+      "x0",
+      "0"
+    ],
+    [
+      "-x2",
+      "x1",
+      "0",
+      "-x0",
+      "0",
+      "0"
+    ]
+  ],
+  "Q": [
+    [
+      "-x1",
+      "x0",
+      "0",
+      "0"
+    ],
+    [
+      "-x2",
+      "0",
+      "x0",
+      "0"
+    ],
+    [
+      "-x3",
+      "0",
+      "0",
+      "x0"
+    ],
+    [
+      "0",
+      "-x2",
+      "x1",
+      "0"
+    ],
+    [
+      "0",
+      "-x3",
+      "0",
+      "x1"
+    ],
+    [
+      "0",
+      "0",
+      "-x3",
+      "x2"
+    ]
+  ],
+  "limits": [
+    "This checks the polynomial-class control; it does not prove that every rank-(3,3) slice is polynomial."
+  ]
+}

@@ -396,6 +396,20 @@ $s=P_{0j}$について$s w'=w'$、$t=P_{0\ell}$について$t w'=-w'$を満た�
 標数零なので矛盾する。
 \end{proof}
 
+\begin{lemma}[隣接二因子の可逆証明書と第三階数]
+\label{lem:adjacent-witness-rank-six}
+隣接二対二階数が全て6である四テンソルについて、隣接する任意の二因子を
+独立変換で対称または交代にできれば、$\rho=6$である。
+特に$\rho=3,4,5$または$\rho\geq7$のAS対象では、どの巡回始点でも隣接位置の
+正負symmetrizer空間に可逆元は存在しない。
+\end{lemma}
+\begin{proof}
+四因子基底変更は三つの切断階数を保つ。
+隣接二因子の交換は、第三の切断$02|13$といずれか一つの隣接切断を交換する。
+変換後のテンソルはその交換で符号$\pm1$だけ変わるので、両切断の階数は等しい。
+後者は6である。
+\end{proof}
+
 \subsection{行列束による階数2候補の除外}
 \begin{proposition}[第三階数2はFrobenius候補に現れない]\label{prop:no-opposite-rank-two}
 テンソル復元定理の有限Frobenius候補には$\rho=2$のものはない。

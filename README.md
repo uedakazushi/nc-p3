@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の周期構造と代数的変形
 
-**2026-11-17 / v36。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-17 / v37。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 最初に読む
 
@@ -196,6 +196,8 @@ python3 computations/verify_trivial_extension_bitor.py --field two --frame terna
 # Signed-reversal theorem regression, also at a non-Boolean product-net point
 python3 computations/verify_one_return_involution.py --output research/one_return_involution_certificate.json
 python3 computations/verify_one_return_involution.py --fixture generic --output research/one_return_involution_generic_certificate.json
+# Control for the residual single-adjacent-negative linear matrix slice
+python3 computations/verify_single_negative_slice.py --output research/single_negative_slice_certificate.json
 # Optional exact eight-variable rank; exclusion theorem no longer depends on it
 python3 computations/verify_trivial_extension_bitor.py --field eight --frame ternary --point-quotient --last-only --composition-check structural --output research/trivial_extension_bitor_eight_certificate.json
 ```

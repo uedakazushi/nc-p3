@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-17",
-  "version": 36,
+  "version": 37,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -628,6 +628,17 @@
         "research/one_return_involution_certificate.json",
         "research/one_return_involution_generic_certificate.json"
       ]
+    },
+    {
+      "id": "ADJACENT-WITNESS-RANK-SLICE",
+      "status": "proved_with_polynomial_control",
+      "statement": "Any adjacent positive or negative invertible witness forces rho=6. A single adjacent negative witness gives R0=Lambda^2 V and linear P(4x6),Q(6x4) with P(x)Q(y)+P(y)Q(x)=0. Nondegeneracy and a block argument rule out generic rank<=2 for P or Q transpose; r+s<=6 therefore forces r=s=3. This gives a generically middle-exact linear sheaf complex, not a proof of global exactness or polynomial uniqueness.",
+      "proof": "sections/frobenius_tensor.tex:lem:adjacent-witness-rank-six; sections/partial_symmetric_as.tex:prop:single-negative-linear-complex; lem:no-rank-two-four-by-six and cor:single-negative-ranks-three",
+      "verification": [
+        "computations/single_negative_slice.py",
+        "computations/verify_single_negative_slice.py",
+        "research/single_negative_slice_certificate.json"
+      ]
     }
   ],
   "document_paths": {
@@ -691,7 +702,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "55772f0",
+  "reviewed_source_commit": "5640f37710ccaf040b59a3cfb979f275e50c13e3",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -700,15 +711,16 @@
     "task_id": "Z4-AS-004",
     "status": "partial_three_factor_symmetric_AS_branch_classified",
     "objective": "Classify the remaining AS tensors outside symmetric CI and alternating polynomial branches, now known to have at most one positive and at most one negative invertible symmetrizer witness.",
-    "immediate_next_action": "Move to a single adjacent negative witness: after identifying the two adjacent factors, R0=Lambda^2 V (its full dimension6), so rho=6. Determine whether the remaining rank/Frobenius/Koszul conditions force a second negative witness (hence the polynomial class), or construct an exact counterexample. Use the linear tensor parametrization Lambda^2 V tensor V2 tensor V3, then adjacent cut rank6 and cubic/quartic filters. Also record the easy rank constraint that any adjacent positive or negative witness forces rho=6; thus rho3/4/5 has no adjacent witness. Do not resume large eight-variable basepoint elimination: that entire branch is now excluded analytically. Exact generic H3=7 versus the proved bound>=5 is optional auxiliary work.",
+    "immediate_next_action": "Analyze the single-adjacent-negative slice now known to have generic ranks(3,3). The complex O(-2)^4 -> O(-1)^6 -> O^4 is generically middle exact. Determine whether the cubic/quartic Frobenius and full Koszul conditions force global exactness with outer line bundles O(-3) and O(1), hence the standard polynomial Koszul complex, or produce a certified alternative. Use maximal minors and the supports of middle homology/cokernel without adding domain or noetherian assumptions. All generic rank2/4 alternatives are already excluded by lem:no-rank-two-four-by-six and r+s<=6. The rho3/4/5 branch has no adjacent witnesses at any cyclic start and needs a separate structure argument. Basepoint three-factor-symmetric candidates are already uniformly excluded.",
     "read_first": [
       "research/plan_ja.tex",
       "AGENTS.md",
       "sections/partial_symmetric_as.tex",
       "sections/frobenius_tensor.tex",
+      "computations/single_negative_slice.py",
       "research/classification_branches.json"
     ],
-    "known_obstruction": "The remaining low-rank branches may have no adjacent witnesses; existence and classification are unresolved. A single negative witness has not been proved to propagate. Full X6 coverage and other components are still open.",
+    "known_obstruction": "Generic exactness of the single-negative linear sheaf complex does not imply global exactness. Exceptional degeneracy loci and any additional AS families at rank(3,3) are unclassified. The entirely witness-free low-rank branch is also unresolved.",
     "state_of_claim": "Three-factor symmetrizable AS branch is completely covered by the symmetric CI chart; all its basepoint candidates are excluded by a universal nonnumerical Euler argument. Exact Boolean and non-Boolean fixtures verify the reversal signs and dimensions. No claim that all low-rank AS tensors lie in the two known branches.",
     "handoff_rule": "Overwrite with the current next concrete research action before task termination; no chronological status log."
   },

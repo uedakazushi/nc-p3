@@ -122,3 +122,88 @@ $\sigma^2=1$、$\sigma\partial=\partial\sigma$、両固有複体の次元と階�
 上の普遍的下界5はこの標本から外挿したものではなく、対合とEuler標数のみから従う。
 八変数の一般点で正確な障害次元が7であるかは未確定だが、AS排除にはその精密値を必要としない。
 \end{remark}
+
+\subsection{残る一つの隣接交代証明書の線型複体}
+\begin{proposition}\label{prop:single-negative-linear-complex}
+有限Frobenius候補が隣接二因子の可逆な交代化証明書を一つ持つとする。
+その二因子を位置$0,1$で同一視した表示では
+$w\in\bigwedge^2 V\otimes V_2\otimes V_3$、$\rho=6$であり、
+位置0の関係空間は$\bigwedge^2 V$そのものである。
+第三切断行列の階数分解から、一次式行列
+\[
+ P(x):k^6\longrightarrow V_2,\qquad Q(x):V_3^*\longrightarrow k^6
+\]
+で
+\[
+ P(x)Q(y)+P(y)Q(x)=0
+\]
+を満たすものを得る。従って$P(x)Q(x)=0$であり、一般階数$(r,s)$は
+\[
+ (2,2),(2,3),(2,4),(3,2),(3,3),(4,2)
+\]
+のいずれかである。
+これは粗い必要分岐であり、系\ref{cor:single-negative-ranks-three}で一般階数$(3,3)$へ絞る。
+\end{proposition}
+\begin{proof}
+第三階数6は補題\ref{lem:adjacent-witness-rank-six}による。
+$01|23$縮約像は六次元の$\bigwedge^2V$に含まれ、階数も6なので等しい。
+$02|13$行列を$M=FG$、$F$を$16\times6$列階数6、$G$を$6\times16$行階数6として分解する。
+$F$の$V$因子を$x$で縮約して$P(x)$、$G$の$V$因子を$y$で縮約して$Q(y)$とする。
+その積は$w$の最初の二因子の$(x,y)$縮約なので、交代性から表示の恒等式を得る。
+
+どちらの一般階数も少なくとも2である。
+実際、階数1以下の行列だけからなる線型空間は、共通像の直線か、共通の余次元1核を持つ。
+これは二つの階数1行列の和が階数2にならない条件から直ちに従う。
+$P(x)$が共通像直線を持てば$V_2$の一因子階数4に反し、
+共通余次元1核を持てば$F$の列階数6に反する。
+$Q(x)$についても、共通像直線は$G$の行階数6、共通余次元1核は$V_3$の一因子階数4に反する。
+一方、行列サイズから$r,s\leq4$であり、$P(x)Q(x)=0$から$r+s\leq6$となる。
+これらを合わせると六つの場合だけが残る。
+\end{proof}
+
+\path{computations/single_negative_slice.py}は有理数テンソルからこの階数分解を構成する。
+\path{computations/verify_single_negative_slice.py}は交代体積テンソルで恒等式と一般階数$(3,3)$を検算し、
+六分岐の分類済み対照点を与える。他の分岐の実在やAS性はこの対照点からは結論しない。
+
+\begin{lemma}[四変数の非退化$4\times6$一次行列]\label{lem:no-rank-two-four-by-six}
+$P(x)$を四変数の一次式を成分に持つ$4\times6$行列とし、
+全ての$P(x)$の像が$k^4$を張り、全ての$P(x)$の核の交叉が零であるとする。
+このとき$P$の一般階数は2以下ではない。
+\end{lemma}
+\begin{proof}
+階数1以下の場合は、前命題の階数1行列空間の議論で除かれる。
+一般階数2と仮定し、変数と行列の定数基底を変えて
+\[
+ P(e_0)=\begin{pmatrix}I_2&0\\0&0\end{pmatrix},\qquad
+ P(x)=\begin{pmatrix}A(x)&B(x)\\ C(x)&D(x)\end{pmatrix}
+\]
+とする。$B$は$2\times4$、$C$は$2\times2$である。
+$P(e_0)+tP(x)$の三次小行列式が全て零であることから、$t$の一次係数は$D(x)=0$を与える。
+さらに左上ブロックのSchur補空間の$t^2$係数から$C(x)B(x)=0$を得る。
+
+$C$の一般階数が2なら$B=0$となり、共通核が存在する。
+一般階数0なら像の和は二次元以下である。
+一般階数1の場合、階数1行列空間の分類から、$C(x)$は共通像直線か共通核直線を持つ。
+共通像直線なら$P(x)$の像の和は三次元以下となる。
+従って$C(x)=c(x)\lambda$、$\lambda\ne0$一定の行ベクトルと書ける共通核の場合だけが残る。
+$C(x)B(x)=0$から$\lambda B(x)=0$なので、$B(x)=u b(x)$、$ku=\ker\lambda$と書ける。
+$B(e_0)=0$より$b(x)$は残る三つの変数だけに依存する。
+従って四次元の右側列空間には、全ての$b(x)$に殺される非零ベクトル$v$がある。
+$D=0$でもあるから、$(0,v)$は全ての$P(x)$の共通核となり、矛盾する。
+\end{proof}
+
+\begin{corollary}[単一隣接交代sliceの一般階数]\label{cor:single-negative-ranks-three}
+命題\ref{prop:single-negative-linear-complex}の一般階数は常に$(r,s)=(3,3)$である。
+従ってこの残余では
+\[
+ \mathcal O(-2)^4\xrightarrow{Q(x)}\mathcal O(-1)^6
+ \xrightarrow{P(x)}\mathcal O^4
+\]
+が一般点で中央完全な線型複体を与える。
+この一般点完全性だけから全点完全性や可換多項式のindexed類への帰着は結論しない。
+\end{corollary}
+\begin{proof}
+$F$の列階数6と$V_2$の一因子階数4から、$P$は前補題の二つの非退化条件を満たす。
+$G$の行階数6と$V_3$の一因子階数4から、$Q^{\mathsf T}$も同様である。
+従って$r,s\geq3$であり、$r+s\leq6$と合わせると両者とも3となる。
+\end{proof}
