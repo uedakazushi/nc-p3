@@ -1,0 +1,56 @@
+\section{基点での一次部分を使う三変数三次縮約}
+\label{sec:ternary-cubic-reduction}
+八係数チャートの$f_i$を$x_i h=g_i(x)$と書き、$h=e_3$とする。
+ここで
+\[
+ g_0=x_0^2-\alpha x_0x_1,\qquad
+ g_1=x_1^2-\beta x_1x_2,\qquad
+ g_2=x_2^2-\gamma x_2x_0.
+\]
+第四式を最初の三式で変更すれば、純粋な三変数二次式
+\[
+ Q=q+f_0+u f_1+v f_2
+ =g_0+u g_1+v g_2+a x_0x_1+b x_0x_2+c x_1x_2
+\]
+になる。
+
+\begin{proposition}[七本の三変数三次条件]\label{prop:ternary-cubic-reduction}
+$B_3^*$は、基点$p=(0,0,0,1)$のcube$p^{\otimes3}$の一次元空間と、次の七つの三変数三次式を消す
+対称三テンソルの空間との直和として表示できる：
+\[
+ Qx_i\ (i=0,1,2),\qquad
+ g_i x_j-g_j x_i\ (i<j),\qquad
+ \mu(Q),
+\]
+ここで$\mu(x_a x_b)=g_a x_b$（$a\leq b$）とする。
+純三次座標を$c_{abc}$とすると、残りの座標は
+\[
+ c_{ijh}=c(g_i x_j),\qquad c_{ihh}=c(\mu(g_i)),\qquad c_{hhh}=0
+\]
+で復元される。$i,j$の選択の違いは表示した交差条件で一致する。
+一般点では七条件は独立であり、三つの座標$012,111,222$による正規化で三次元基底を取れる。
+これは二次式係数のチャートの縮約であり、indexed同型類の次元を主張しない。
+\end{proposition}
+\begin{proof}
+元の条件は$f_i$または$q$に任意の一次式を掛けた16本の消滅条件である。
+$f_i x_j$から六つの$x_i x_j h$座標を純三次座標で消去し、
+同じ座標の二通りの消去の整合性が三つの$g_i x_j-g_j x_i$となる。
+$f_i h$は三つの$x_i h^2$座標を消去する。
+残る$Qx_i$と$Qh$の条件は、それぞれ表示の三条件と$\mu(Q)$である。
+$h^3$座標には全ての式が作用しないので、基点cubeが独立に残る。
+従ってこの操作は必要十分であり、九座標の消去と七条件を与える。
+
+七条件と三つの正規化座標からなる$10\times10$行列は、
+$\alpha=\beta=\gamma=a=b=c=0$, $u=v=1$で可逆である。
+この点では$x_i^3=x_i h^2$なので、既知の$012,133,233$正規化フレームに一致する。
+従って一般点でも可逆であり、七条件は独立となる。
+\path{computations/ternary_cubic_frame.py}はこの10座標系のみを解き、
+復元後には元の全16条件も検算する。
+\end{proof}
+
+戻り辺Torの$Q_2$には、六つの$ x_i h-g_i$、$h x_i-g_i$、
+三つの三変数交換子、および$Q$を基底として取れる。
+これは元の六交換子と四二次式の基底変更であり、$h$への縮約の左右を分離する。
+\texttt{verify_trivial_extension_bitor.py --frame ternary --point-quotient}は、
+この表示と補題\ref{lem:one-return-point-quotient}を組み合わせる。
+二変数の全零合成・階数は再検算済みであり、八変数の最終階数はなお未確定である。

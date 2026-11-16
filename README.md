@@ -177,6 +177,8 @@ python3 computations/verify_reduced_octad_frame.py --output research/reduced_oct
 接写像の20次小行列式 `-696/78125` により支配性を証明した。これはAS正則性や同型類次元の判定ではない。
 八変数の五次階数が84未満なら、フレーム束上の半連続性で基点域全体を排除できる移送命題も得た。
 当該八変数階数は計算中で、一般の基点域全体のAS排除は未証明である。
+一方、長さ2の基点部分スキームは構造的に排除した。相異なる二点も二重点も四次元数42以上を強制する。
+四次検査を通る三因子対称な基点候補は一縮約点だけを持ち、縮約八点netによる表示と可換最小分解が適用できる。
 
 ```bash
 python3 computations/verify_product_net_dominance.py --output research/product_net_dominance_certificate.json
@@ -184,6 +186,9 @@ python3 computations/verify_product_net_homology.py --output research/product_ne
 # One-return bimodule Tor: checked positive control and exact two-variable case
 python3 computations/verify_trivial_extension_bitor.py --field ci --output research/trivial_extension_bitor_ci_certificate.json
 python3 computations/verify_trivial_extension_bitor.py --field two --output research/trivial_extension_bitor_two_certificate.json
+# Point/jet quartic obstruction and exact point-quotient regression
+python3 computations/verify_basepoint_length_two.py --output research/basepoint_length_two_certificate.json
+python3 computations/verify_trivial_extension_bitor.py --field two --frame ternary --point-quotient --last-only --output research/trivial_extension_bitor_quotient_certificate.json
 # Exploratory eight-variable rank; no completed certificate yet
-python3 computations/verify_trivial_extension_bitor.py --field eight --composition-check structural --output research/trivial_extension_bitor_eight_certificate.json
+python3 computations/verify_trivial_extension_bitor.py --field eight --frame ternary --point-quotient --last-only --composition-check structural --output research/trivial_extension_bitor_eight_certificate.json
 ```

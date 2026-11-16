@@ -90,6 +90,31 @@ $B_3^*$は既存の正規化三次フレームで表示する。
 八変数チャート全体の階数はこの検算からは結論しない。
 \end{proof}
 
+\begin{lemma}[一点評価部分を除いた小複体]\label{lem:one-return-point-quotient}
+内部次数5の$C_\bullet$において、基点$p$の評価cubeが与える部分複体の次元は
+$(8,36,80,100)$であり、そのホモロジーは$H_1=k$, $H_4=k^{49}$だけである。
+その商$\overline C_\bullet$の次元は$(0,108,400,300)$で、
+\[
+ \rk\partial_3=29+\rk\overline\partial_3,\qquad
+ \rk\partial_4=51+\rk\overline\partial_4,\qquad
+ H_3(C_\bullet)\simeq H_3(\overline C_\bullet).
+\]
+従って一般点の$\overline\partial_4$階数が293未満なら、同じKoszul排除を得る。
+\end{lemma}
+\begin{proof}
+一点の縮約を微分とする$Q_2\to Q_1\to Q_0$は、次数2にだけ七次元のホモロジーを持つ。
+左右の二つをテンソル積にすると、次数4にだけ49次元のホモロジーを持つ。
+一点部分複体はその次数0の一次元の項を除いたものであるから、
+次数1にも一次元が残り、それ以外の主張通りのホモロジーとなる。
+従って一点部分の微分階数は$7,29,51$である。
+部分の$H_2,H_3$が零であることと長完全列から、
+最上核の次元は$49+\dim\ker\overline\partial_4$となり、第二の階数公式を得る。
+また$\operatorname{im}\partial_3$と部分複体の次数2項の交叉は、
+その項の$\partial_2$核、すなわち部分の$\operatorname{im}\partial_3$に等しい。
+これが第一の公式を与える。同じ長完全列から$H_3$の同型を得る。
+最後に$51+293=344$を使う。
+\end{proof}
+
 \begin{proposition}[一般点の一回Torから基点枝全体への移行]
 \label{prop:one-return-universal-transfer}
 定理\ref{thm:product-net-dominance}の八変数チャートで、一般点の$\partial_4$階数を$r$とする。

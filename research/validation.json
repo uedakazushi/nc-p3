@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-17",
-  "version": 34,
+  "version": 35,
   "reviewed_input": {
-    "source_commit": "4b8c9faa572a425dd8f77dacfc2bcb4978bdbd69"
+    "source_commit": "56091ef9220cf8045a0753e032a001b3d982edc6"
   },
   "generation": {
     "result": "PASS",
-    "scope": "One-return bar summand identified with bimodule Tor; explicit small-complex necessary criterion and conditional universal transfer proved. Generic eight-variable rank is still open.",
+    "scope": "Proved the universal length-two basepoint quartic obstruction including tangent jets, reduced-net coverage of the remaining single-reduced-point quartic-exact branch, the ternary cubic-frame reduction, and point-evaluation quotient rank formulas. The generic one-point quintic obstruction is still unproved.",
     "new_mathematical_theorem": true
   },
   "checks": [
@@ -27,19 +27,29 @@
       "scope": "Exact QQ(u,v), direct zero compositions, ranks8/136/337, H=(0,0,7,63). No sample-based generic inference."
     },
     {
-      "command": "PYTHONPATH=/workspace/.cache/nc-p3-python python3 computations/verify_trivial_extension_bitor.py --field eight --composition-check structural",
-      "result": "RUNNING",
-      "scope": "Native cubic frame and complex constructed; d3 rank136 completed, d4 pivot64. Direct full-field composition check omitted using the structural proof, not reported as a numerical PASS."
-    },
-    {
       "command": "python3 scripts/check_project.py; git diff --check",
       "result": "PASS",
       "scope": "Source structure only; no TeX compilation or formal proof."
+    },
+    {
+      "command": "PYTHONPATH=/workspace/.cache/nc-p3-python python3 computations/verify_basepoint_length_two.py --output research/basepoint_length_two_certificate.json",
+      "result": "PASS",
+      "scope": "Exact CI/two-distinct-point/nonreduced fixtures, direct zero compositions; quartic top homology35/46/84 and direct length-two witnesses. Not a sample-based proof of the universal bound42."
+    },
+    {
+      "command": "PYTHONPATH=/workspace/.cache/nc-p3-python python3 computations/verify_trivial_extension_bitor.py --field two --frame ternary --point-quotient --last-only --output research/trivial_extension_bitor_quotient_certificate.json",
+      "result": "PASS",
+      "scope": "Exact ternary frame, original cubic equations, point-subcomplex preservation, direct quotient zero compositions, rational reference d3 rank107, exact QQ(u,v) quotient d4 rank286; reconstructed full ranks8/136/337."
+    },
+    {
+      "command": "PYTHONPATH=/workspace/.cache/nc-p3-python python3 computations/verify_trivial_extension_bitor.py --field eight --frame ternary --point-quotient --last-only --composition-check structural",
+      "result": "RUNNING",
+      "scope": "Exact native ternary frame and all original cubic equations passed; point-subcomplex preservation and rational reference d3 rank107 passed. No d4 certificate. Earlier native/full runs were superseded, not marked successful."
     }
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed bar count direct-summand preservation, homological shift by one, two-sided projective resolution, internal-degree-five position constraints, both contraction signs, d2 surjectivity, Euler characteristic, and rank-specialization on the universal cubic-frame bundle. No identification of the seven commutative syzygies with this Tor is claimed."
+    "scope": "Reviewed bar count direct-summand preservation, homological shift by one, two-sided projective resolution, internal-degree-five position constraints, both contraction signs, d2 surjectivity, Euler characteristic, and rank-specialization on the universal cubic-frame bundle. No identification of the seven commutative syzygies with this Tor is claimed. Reviewed point side-complex homology7 and3, independent cube kernels for two points, the jet filtration with truncated quotient and length-two bound42, absence of incoming top differential, conversion to the quartic35 obstruction, and the generic regular-sequence/smooth incidence proof of reduced-net coverage. Reviewed the seven ternary elimination conditions and point-quotient rank identities."
   },
   "tex": {
     "result": "NOT_RUN",
@@ -54,7 +64,8 @@
   },
   "github_save": {
     "result": "PENDING",
-    "branch": "main"
+    "branch": "main",
+    "scope": "Previous one-return checkpoint56091ef pushed and fetched with exact HEAD match; current length-two theorem and reductions awaiting checkpoint."
   },
   "library_save": {
     "result": "not_attempted",

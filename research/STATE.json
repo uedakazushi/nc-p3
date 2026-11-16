@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-17",
-  "version": 34,
+  "version": 35,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -603,6 +603,20 @@
         "research/trivial_extension_bitor_ci_certificate.json",
         "research/trivial_extension_bitor_two_certificate.json"
       ]
+    },
+    {
+      "id": "LENGTH-TWO-BASEPOINT-EXCLUSION",
+      "status": "proved",
+      "statement": "Any length-two projective basepoint subscheme (distinct points or tangent jet) forces at least42-dimensional quartic one-return top Tor. Every finite-Frobenius partial-symmetric candidate with such a basepoint has C4>=42 and delta>=7. Thus the quartic-exact basepoint residual has a single reduced point; a regular sequence/incidence argument gives a reduced octad net, so the uniform commutative minimal resolution applies throughout this residual.",
+      "proof": "sections/basepoint_length_two.tex: thm:length-two-basepoint-obstruction and cor:simple-basepoint-reduced-net",
+      "verification": "computations/verify_basepoint_length_two.py; research/basepoint_length_two_certificate.json"
+    },
+    {
+      "id": "TERNARY-FRAME-POINT-QUOTIENT",
+      "status": "proved_with_two_variable_regression",
+      "statement": "The product-net cubic annihilator reduces to seven constraints on ten ternary cubic coordinates plus a point cube. Removing the point-evaluation bimodule yields a complex0,108,400,300 with full d3=29+quotient d3 and full d4=51+quotient d4. Exact QQ(u,v) quotient ranks107,286 reconstruct H3=7. Eight-variable rank remains incomplete.",
+      "proof": "sections/ternary_cubic_reduction.tex; sections/trivial_extension_bitor.tex: lem:one-return-point-quotient",
+      "verification": "computations/ternary_cubic_frame.py; computations/verify_trivial_extension_bitor.py; research/trivial_extension_bitor_quotient_certificate.json"
     }
   ],
   "document_paths": {
@@ -666,26 +680,27 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "4b8c9faa572a425dd8f77dacfc2bcb4978bdbd69",
+  "reviewed_source_commit": "56091ef9220cf8045a0753e032a001b3d982edc6",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
   "cloud_codex_status": "Repository-side Cloud guidance and preflight added; actual Cloud environment publishing, TeX tools and Git push permissions are not verifiable from repository alone.",
   "resume_point": {
     "task_id": "Z4-AS-004",
-    "status": "one_return_bimodule_tor_criterion_proved_generic_rank_pending",
+    "status": "length_two_basepoints_excluded_simple_point_quintic_obstruction_pending",
     "objective": "Determine whether the full finite-Frobenius rank-six boundary of the symmetric CI orbit contains Koszul AS points not symmetrizable; then expand structural classification to remaining rho=3,4,5 and higher-rank branches.",
-    "immediate_next_action": "Continue the new one-return two-sided Koszul Tor complex (sections/trivial_extension_bitor.tex), not the stalled C4-quotient method. Exact two-variable ranks8,136,337 and a CI control8,136,344 passed. The eight-variable run with --composition-check structural reached d3 rank136 and d4 pivot64; no final certificate. A generic d4 rank below344 activates prop:one-return-universal-transfer and excludes the entire basepoint partial-symmetric AS branch. If this symbolic route stalls, use the point-evaluation subbimodule of DA and the commutative minimal resolution to seek a structural rank bound.",
+    "immediate_next_action": "For the remaining single-reduced-basepoint partial-symmetric quartic-exact branch, use the now-uniform commutative minimal resolution and the one-return quotient complex to prove generic quotient d4 rank<293 (expected286), or directly construct a nonzero H3. The current eight-variable ternary/point-quotient --last-only run passed the exact cubic annihilation equations, point-subcomplex preservation and exact rational reference d3 rank107, but no d4 rank is certified. Do not repeat the old C4-quotient or native full-matrix elimination indefinitely. Length-two/multiple/nonreduced basepoint schemes are already excluded analytically by thm:length-two-basepoint-obstruction. A generic bound activates prop:one-return-universal-transfer. If this step stalls, switch to candidates with at most one positive and at most one negative invertible witness.",
     "read_first": [
       "research/plan_ja.tex",
       "AGENTS.md",
+      "sections/basepoint_length_two.tex",
       "sections/trivial_extension_bitor.tex",
       "sections/reduced_quadric_boundary.tex",
-      "computations/trivial_extension_bitor.py",
+      "sections/ternary_cubic_reduction.tex",
       "computations/verify_trivial_extension_bitor.py"
     ],
     "known_obstruction": "The full eight-variable d4 rank is not certified. The small one-return complex avoids the old dense C4 quotient, but may still require a structural bound. No universal exclusion or full classification yet.",
-    "state_of_claim": "Dominance and universal transfer implication are proved. Eight-variable rank remains unproved. New exact normal-form and guided elimination regressions pass for the original two-variable slice; a fixed non-Boolean net with variable u,v also gave exact rank77 and zero residual. New symmetrizer/quartic identification and two-negative-witness criterion are proved. No full classification claim.",
+    "state_of_claim": "Longer basepoint schemes are excluded, including nonreduced jets; every remaining quartic-exact partial-symmetric basepoint candidate admits the reduced-octad presentation and commutative Betti pattern. One-return Tor necessary conditions and point-quotient reduction are proved; two-variable exact rank286 is checked. The universal one-point quintic obstruction and complete classification are not proved.",
     "handoff_rule": "Overwrite with the current next concrete research action before task termination; no chronological status log."
   },
   "execution_policy": {

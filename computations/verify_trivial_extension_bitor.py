@@ -15,6 +15,9 @@ def main():
     parser.add_argument('--field',choices=('point','ci','two','eight'),default='point')
     parser.add_argument('--output',type=Path)
     parser.add_argument('--composition-check',choices=('direct','structural'),default='direct')
+    parser.add_argument('--frame',choices=('native','ternary'),default='native')
+    parser.add_argument('--point-quotient',action='store_true')
+    parser.add_argument('--last-only',action='store_true',help='Deduce generic d3 from the universal upper bound and an exactly checked old-point minor.')
     args=parser.parse_args();start=time.monotonic()
     K=rational_function_field(NAMES if args.field=='eight' else ('u','v') if args.field=='two' else ('z',))
     class Coefficients:
@@ -41,19 +44,57 @@ def main():
                 if value:row[pair]=row[pair[::-1]]=K.from_sympy(value)
             r0.append(row)
     else:
-        w=tensor(coefficients);r0=relation_windows(w,coefficients)[0];quadrics=terms(coefficients)
-    differentials,bases=one_return_complex(w,r0,quadrics,K)
+        if args.frame=='ternary':
+            from ternary_cubic_frame import tensor as ternary_tensor
+            w=ternary_tensor(coefficients)
+        else:w=tensor(coefficients)
+        r0=relation_windows(w,coefficients)[0];quadrics=terms(coefficients)
+    relation_basis=None
+    if args.frame=='ternary':
+        assert args.field!='ci'
+        from ternary_cubic_frame import adapted_relations
+        relation_basis=adapted_relations(coefficients)
+    differentials,bases=one_return_complex(w,r0,quadrics,K,relation_basis)
     print('PASS one-return complex dimensions8,144,480,400',flush=True)
+    if args.point_quotient:
+        assert args.field!='ci'
+        from trivial_extension_bitor import point_quotient
+        differentials=point_quotient(differentials,bases)
+        print('PASS point subcomplex preserved; quotient dimensions0,108,400,300',flush=True)
     if args.composition_check=='direct':
         assert all(not combine(differentials[2],v,K.zero) for v in differentials[3])
         assert all(not combine(differentials[3],v,K.zero) for v in differentials[4])
         print('PASS directly checked zero compositions',flush=True)
     else:print('Using proved two-sided Koszul differential; direct composition check omitted',flush=True)
-    ranks={h:field.sparse_full_pivot_rank(differentials[h],lambda r:print('rank progress',h,r,flush=True)) for h in (2,3,4)}
+    if args.last_only:
+        assert args.field in ('two','eight')
+        reference_K=rational_function_field(('reference',))
+        class Reference:
+            zero,one=reference_K.zero,reference_K.one
+            @staticmethod
+            def from_sympy(e):return reference_K.from_sympy(s.sympify(e).subs(dict(zip(s.symbols(NAMES),(0,0,0,1,1,0,0,0)))))
+        reference=Reference()
+        field.K,field.zero,field.one=reference_K,reference_K.zero,reference_K.one
+        reference_w=(ternary_tensor(reference) if args.frame=='ternary' else tensor(reference))
+        reference_relations=adapted_relations(reference) if args.frame=='ternary' else None
+        reference_d,reference_b=one_return_complex(reference_w,relation_windows(reference_w,reference)[0],terms(reference),reference_K,reference_relations)
+        if args.point_quotient:reference_d=point_quotient(reference_d,reference_b)
+        reference_rank=field.sparse_full_pivot_rank(reference_d[3])
+        assert reference_rank==(107 if args.point_quotient else 136)
+        print('PASS generic d3 upper bound attained at exact old reference:',reference_rank,flush=True)
+        field.K,field.zero,field.one=K,K.zero,K.one
+        ranks={2:0 if args.point_quotient else 8,3:reference_rank,
+               4:field.sparse_full_pivot_rank(differentials[4],lambda r:print('rank progress',4,r,flush=True))}
+    else:
+        ranks={h:field.sparse_full_pivot_rank(differentials[h],lambda r:print('rank progress',h,r,flush=True)) for h in (2,3,4)}
+    quotient_ranks=None
+    if args.point_quotient:
+        quotient_ranks=dict(ranks)
+        ranks={2:8,3:29+ranks[3],4:51+ranks[4]}
     homology=[8-ranks[2],144-ranks[2]-ranks[3],480-ranks[3]-ranks[4],400-ranks[4]]
     if args.field in ('point','two'):assert homology==[0,0,7,63]
     if args.field=='ci':assert homology==[0,0,0,56]
-    report={'result':'PASS','field':args.field,'complex_dimensions':[8,144,480,400],
+    report={'result':'PASS','field':args.field,'frame':args.frame,'point_quotient':args.point_quotient,'quotient_ranks':quotient_ranks,'d3_determined_by_reference_and_bound':args.last_only,'complex_dimensions':[8,144,480,400],
             'differential_ranks':ranks,'homology_dimensions':homology,
             'composition_check':args.composition_check,'direct_zero_compositions_checked':args.composition_check=='direct','nonlinear_one_return_Tor_dimension':sum(homology[:3]),
             'limits':['Only the indicated internal-degree-five vertex summand is calculated.',

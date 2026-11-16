@@ -1,0 +1,78 @@
+{
+  "result": "PASS",
+  "arithmetic": "exact QQ",
+  "fixtures": {
+    "complete_intersection": {
+      "complex_dimensions": [
+        1,
+        32,
+        156,
+        160
+      ],
+      "ranks": [
+        1,
+        31,
+        125
+      ],
+      "homology": [
+        0,
+        0,
+        0,
+        35
+      ],
+      "direct_zero_compositions": true
+    },
+    "two_distinct_points": {
+      "complex_dimensions": [
+        1,
+        32,
+        156,
+        160
+      ],
+      "ranks": [
+        1,
+        31,
+        114
+      ],
+      "homology": [
+        0,
+        0,
+        11,
+        46
+      ],
+      "direct_zero_compositions": true
+    },
+    "nonreduced_point": {
+      "complex_dimensions": [
+        1,
+        32,
+        156,
+        160
+      ],
+      "ranks": [
+        1,
+        31,
+        76
+      ],
+      "homology": [
+        0,
+        0,
+        49,
+        84
+      ],
+      "direct_zero_compositions": true
+    }
+  },
+  "two_point_quadric": "x1*h+2*x2*h+x0*x1+x0*x2",
+  "nonreduced_quadrics": [
+    "x0^2",
+    "x1^2",
+    "x2^2",
+    "x0*h+x1*x2"
+  ],
+  "length_two_witnesses_checked": true,
+  "limits": [
+    "The universal result is proved using the point/jet subcomplex, not inferred from these fixtures.",
+    "No finite-Frobenius property is asserted for the two obstructed fixtures."
+  ]
+}
