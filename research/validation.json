@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-17",
-  "version": 35,
+  "version": 36,
   "reviewed_input": {
-    "source_commit": "56091ef9220cf8045a0753e032a001b3d982edc6"
+    "source_commit": "55772f0"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Proved the universal length-two basepoint quartic obstruction including tangent jets, reduced-net coverage of the remaining single-reduced-point quartic-exact branch, the ternary cubic-frame reduction, and point-evaluation quotient rank formulas. The generic one-point quintic obstruction is still unproved.",
+    "scope": "Proved universal basepoint three-factor-symmetric non-Koszulity by signed reversal and negative Euler characteristic. The complete AS criterion within that branch and two-positive-witness recognition follow; the generic d4 upper bound<=339 is proved without computing its exact rank. Full classification remains open.",
     "new_mathematical_theorem": true
   },
   "checks": [
@@ -43,13 +43,23 @@
     },
     {
       "command": "PYTHONPATH=/workspace/.cache/nc-p3-python python3 computations/verify_trivial_extension_bitor.py --field eight --frame ternary --point-quotient --last-only --composition-check structural",
-      "result": "RUNNING",
-      "scope": "Exact native ternary frame and all original cubic equations passed; point-subcomplex preservation and rational reference d3 rank107 passed. No d4 certificate. Earlier native/full runs were superseded, not marked successful."
+      "result": "SUPERSEDED_TERMINATED",
+      "scope": "Exact frame, point preservation and reference d3 rank passed; d4 elimination did not finish. Terminated because the universal exclusion and required rank upper bound are now proved structurally; no exact-rank certificate is claimed."
+    },
+    {
+      "command": "PYTHONPATH=/workspace/.cache/nc-p3-python python3 computations/verify_one_return_involution.py --output research/one_return_involution_certificate.json",
+      "result": "PASS",
+      "scope": "Exact Boolean-point involution squared identity, commutation with all differentials, eigenspace dimensions and ranks; H3 split1+6."
+    },
+    {
+      "command": "PYTHONPATH=/workspace/.cache/nc-p3-python python3 computations/verify_one_return_involution.py --fixture generic --output research/one_return_involution_generic_certificate.json",
+      "result": "PASS",
+      "scope": "Independent non-Boolean product-net parameters2,5,11,3,7,17,23,31: all involution identities, dimensions and ranks; H3 split1+6. The universal lower bound5 is proved, not inferred from the fixtures."
     }
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed bar count direct-summand preservation, homological shift by one, two-sided projective resolution, internal-degree-five position constraints, both contraction signs, d2 surjectivity, Euler characteristic, and rank-specialization on the universal cubic-frame bundle. No identification of the seven commutative syzygies with this Tor is claimed. Reviewed point side-complex homology7 and3, independent cube kernels for two points, the jet filtration with truncated quotient and length-two bound42, absence of incoming top differential, conversion to the quartic35 obstruction, and the generic regular-sequence/smooth incidence proof of reduced-net coverage. Reviewed the seven ternary elimination conditions and point-quotient rank identities."
+    "scope": "Reviewed bar count direct-summand preservation, homological shift by one, two-sided projective resolution, internal-degree-five position constraints, both contraction signs, d2 surjectivity, Euler characteristic, and rank-specialization on the universal cubic-frame bundle. No identification of the seven commutative syzygies with this Tor is claimed. Reviewed point side-complex homology7 and3, independent cube kernels for two points, the jet filtration with truncated quotient and length-two bound42, absence of incoming top differential, conversion to the quartic35 obstruction, and the generic regular-sequence/smooth incidence proof of reduced-net coverage. Reviewed the seven ternary elimination conditions and point-quotient rank identities. Reviewed signed word reversal with tau interchanging first/last deconcatenations, the Koszul sign (-1)^(ab), point-subcomplex preservation, eigenspace dimensions60/200/135 including twisted flip on Q2, and Euler boundH3>=5. Reviewed conversion to nonlinear Tor4,5 and two-positive AS recognition. No full tensor-classification or exact generic rank claim."
   },
   "tex": {
     "result": "NOT_RUN",
@@ -65,15 +75,15 @@
   "github_save": {
     "result": "PENDING",
     "branch": "main",
-    "scope": "Previous one-return checkpoint56091ef pushed and fetched with exact HEAD match; current length-two theorem and reductions awaiting checkpoint."
+    "scope": "Length-two checkpoint55772f0 saved; universal signed-reversal exclusion awaiting checkpoint and readback."
   },
   "library_save": {
     "result": "not_attempted",
     "scope": "GitHub-first policy."
   },
   "open_mathematics": [
-    "Eight-variable d4 rank and universal basepoint AS exclusion remain unproved.",
-    "Comparison of commutative beta_(3,6)=7 with the one-return Tor is not constructed.",
-    "Other low-rank branches and complete classification remain unresolved."
+    "Remaining AS tensors outside symmetric CI/polynomial branches have at most one witness of each sign; their low-rank coverage and classification remain unresolved.",
+    "Exact generic one-return H3=7 is not proved, but is no longer required to exclude the basepoint branch.",
+    "Full moduli components, residual indexed isomorphism and complete classification remain unresolved."
   ]
 }

@@ -1,0 +1,124 @@
+\section{左右反転対合による三因子対称枝のAS決定}
+\label{sec:partial-symmetric-as}
+ここでは一般点の大行列階数を計算せず、戻り辺一回の複体の対称性から基点枝全体を排除する。
+
+\begin{theorem}[基点を持つ三因子対称切断の普遍的非Koszul性]
+\label{thm:partial-symmetric-basepoint-exclusion}
+$B=\operatorname{Sym}(V^*)/(L)$について$\dim B_1=4$, $\dim B_2=6$, $\dim B_3=4$とし、
+$L$が射影基点を持つとする。このとき$T_L=A_L\ltimes D A_L$はKoszulではない。
+より正確には、位置1から位置2の内部次数5成分で
+\[
+ \dim\operatorname{Tor}^{T_L}_{4,5}(S,S)\geq5.
+\]
+従って三次双対フレームから作る有限Frobenius候補に、標準Koszul AS対象は存在しない。
+基点の縮約性や個数、四次Koszul検査の正確性を仮定しない。
+\end{theorem}
+\begin{proof}
+基点を$p$とし、補題\ref{lem:one-return-point-quotient}の商複体$\overline C_\bullet$を取る。
+その係数空間は
+\[
+ N_r=B_r^*/k p^{\otimes r},\qquad
+ (\dim N_1,\dim N_2,\dim N_3)=(3,5,3),
+\]
+であり、次数1の項は零である。
+$Q_a$上の語順反転を$\tau_a$とする。
+$Q_0=k$, $Q_1=V^*$では恒等写像であり、
+$Q_2=\bigwedge^2(V^*)+L$は語順反転で保たれるので、$\tau_2^2=1$である。
+
+$\overline C_h$の$(a,b)$直和因子上で、
+\[
+ \sigma_h(u\otimes f\otimes v)
+   =(-1)^{ab}\tau_b(v)\otimes f\otimes\tau_a(u)
+ \qquad(a+b=h)
+\]
+と定める。$B$の乗法は可換なので、$B_r^*$への左右の一次式縮約は同一である。
+語順反転は$Q_a$の最後の文字による左微分を、$Q_a$の最初の文字による右微分へ移す。
+全微分の右成分の符号$(-1)^a$と表示の$(-1)^{ab}$を合わせると、
+$\sigma\partial=\partial\sigma$となる。また$\sigma^2=1$である。
+点評価部分も保たれるので、これは商複体上の対合として定まっている。
+
+標数零なので、正負の固有部分へ複体を直和分解できる。
+負固有部分の次数2,3,4の次元を計算すると
+\[
+ (\dim\overline C_2^-,\dim\overline C_3^-,\dim\overline C_4^-)
+ =(60,200,135)
+\]
+である。実際、次数2の$(2,0),(0,2)$対から$10\cdot3=30$、
+$(1,1)$因子では符号付き交換が$-\mathrm{flip}$なので
+$\operatorname{Sym}^2(V^*)\otimes N_1$から$10\cdot3=30$を得る。
+次数3は二つの交換される因子から$10\cdot4\cdot5=200$となる。
+次数4の$\tau_2$付き交換は、一方の$Q_2$へ$\tau_2$を作用させる共役によって通常の交換へ直るので、
+負固有空間は$\bigwedge^2 Q_2\otimes N_3$と同次元の$45\cdot3=135$である。
+
+従って負固有部分のEuler標数は
+\[
+ 135-200+60=-5.
+\]
+次数1の項がないから
+\[
+ \dim H_3(\overline C_\bullet^-)
+ =5+\dim H_2(\overline C_\bullet^-)+\dim H_4(\overline C_\bullet^-)
+ \geq5.
+\]
+一点部分の$H_2,H_3$は零なので、前記補題から
+$H_3(C_\bullet)\simeq H_3(\overline C_\bullet)$となる。
+命題\ref{prop:one-return-bar-tor}により、これは$\operatorname{Tor}^{T_L}_{4,5}$の直和因子である。
+Koszul性に必要な次数の一致に反する。
+有限Frobenius候補では$E(w)=T_L$であり、二次双対間のKoszul性の同値から最後の結論を得る。
+\end{proof}
+
+\begin{corollary}[八変数階数に必要な上界]\label{cor:product-net-rank-bound}
+八係数チャートの一般点では、戻り辺一回の小複体について
+\[
+ \rk\partial_3=136,\quad \rk\partial_4\leq339<344,
+ \qquad
+ \rk\overline\partial_3=107,\quad \rk\overline\partial_4\leq288<293.
+\]
+従って従来の階数移行命題の前提となる不等式も証明された。
+正確な一般階数が337（商では286）であるとの主張はしない。
+\end{corollary}
+\begin{proof}
+$\partial_2$の全射性から$\rk\partial_3\leq136$であり、
+チャート内の既知の有理数点で136を達成するので一般点では等しい。
+前定理の$\dim H_3\geq5$から
+$\rk\partial_4\leq480-136-5=339$となる。
+商の二式は補題\ref{lem:one-return-point-quotient}の階数公式による。
+\end{proof}
+
+\begin{corollary}[三因子対称枝の完全なAS条件]\label{cor:partial-symmetric-as-complete}
+三因子対称な有限Frobenius候補が標準Koszul AS対象を定めることは、
+その可換四二次式空間$L$が基点を持たないことと同値である。
+従ってこの枝の全AS対象は、既知の完全対称四二次式完全交叉チャートに属する。
+これは全四窓の完全分類ではなく、三因子対称化可能な枝の被覆・正則性を決定するものである。
+\end{corollary}
+\begin{proof}
+基点があれば前定理で排除される。なければ四二次式は正則列であり、
+定理\ref{thm:symmetric-frobenius-chart}を適用できる。
+\end{proof}
+
+\begin{corollary}[AS対象の対称認識には二証明書で十分]
+\label{cor:two-positive-as-recognition}
+標準Koszul AS対象の標準四窓テンソル$w$について、次は同値である。
+\begin{enumerate}
+\item 三つの$S_j(w)$のうち少なくとも二つが可逆元を持つ。
+\item 三つ全てが可逆元を持つ。
+\item $w$は四因子独立の変換で完全対称にできる。
+\end{enumerate}
+従って完全対称枝・可換多項式の交代枝の双方を除いた未分類AS残余では、
+正符号・負符号の可逆証明書はそれぞれ高々一位置にしか存在しない。
+両符号が存在するなら、系\ref{cor:mixed-symmetry-witness-exclusion}により同じ位置に限られる。
+\end{corollary}
+\begin{proof}
+二つの正符号証明書があれば命題\ref{prop:two-positive-global-split}の三因子対称表示へ移れる。
+基点枝は前定理で排除されるから、完全対称枝に属する。
+他の含意は既存の線型対称化判定による。
+負符号二証明書の場合は系\ref{cor:two-alternating-witnesses}を適用する。
+\end{proof}
+
+\begin{remark}[検算と未確定の精密値]
+\path{computations/verify_one_return_involution.py}は有理数境界点で
+$\sigma^2=1$、$\sigma\partial=\partial\sigma$、両固有複体の次元と階数を直接検算する。
+その点で正負の$H_3$次元は1と6であり、既知の合計7に一致する。
+上の普遍的下界5はこの標本から外挿したものではなく、対合とEuler標数のみから従う。
+八変数の一般点で正確な障害次元が7であるかは未確定だが、AS排除にはその精密値を必要としない。
+\end{remark}

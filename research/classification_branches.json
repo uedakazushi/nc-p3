@@ -49,7 +49,8 @@
       "nonempty_witness": "quantum polynomial sample rho=12; signed seven/nine samples rho=8",
       "normal_forms": "unresolved",
       "regularity_of_all_tensor_candidates": "unresolved",
-      "complete_isomorphism": "unresolved"
+      "complete_isomorphism": "unresolved",
+      "necessary_witness_restrictions": "At most one positive and at most one negative invertible symmetrizer witness; if both signs occur they have the same position. Every three-factor-symmetrizable AS object is already in the symmetric CI chart; cor:two-positive-as-recognition."
     },
     {
       "id": "SYMMETRIC-CHART",
@@ -62,7 +63,7 @@
       "period": "one-periodic",
       "complete_isomorphism": "proved for all U: GL4 equivalence of quadric spaces; 33-variable 41-equation criterion, cor:symmetric-chart-isomorphism",
       "normal_forms": "complete-intersection chart; no complete residual orbit normalization",
-      "membership": "three linear symmetrizer spaces contain invertible matrices; degree-four determinant nonidentity test, prop:linear-symmetrization-test",
+      "membership": "For already AS objects, any two positive linear symmetrizer spaces containing invertible matrices suffice; cor:two-positive-as-recognition. For arbitrary finite-Frobenius candidates, the original three-witness test applies.",
       "local_coverage_at_C0": "contains a G-invariant Zariski-open neighborhood of C0 in the rank<=6 finite-Frobenius tensor scheme; smooth presentation dimension 69, thm:clifford-low-rank-local",
       "local_coverage_at_pure_anti": "G-invariant open in X6, smooth presentation dimension 69; first-order quotient 12, not a 12-dimensional component"
     },
@@ -85,7 +86,7 @@
       "id": "POLYNOMIAL-ORBIT",
       "parent": "LOW-RESIDUAL",
       "predicate": "canonical tensor orbit meets Lambda^4 V",
-      "membership": "three negative-swap linear spaces contain invertible matrices; cor:linear-alternating-test",
+      "membership": "Any two negative-swap linear spaces contain invertible matrices; cor:two-alternating-witnesses.",
       "normal_forms": "one indexed class: commutative polynomial ring",
       "regularity_of_all_chart_fibers": "proved",
       "complete_isomorphism": "one class",
@@ -101,7 +102,8 @@
       "normal_forms": "unresolved",
       "regularity_of_all_tensor_candidates": "unresolved",
       "complete_isomorphism": "unresolved",
-      "excluded_subfamilies": "contains no quantum polynomial indexed class, by quantum rank formula and its two rank-six normal forms; also no member of the full polynomial-derivation Ore chart; neither uniform indexed commuting nor anticommuting Ore subclass contributes a point; entire diagonal quantum-three-generator Ore chart excluded, even up to indexed isomorphism; also avoids the proven G-invariant low-rank open neighborhood of the specified Clifford point C0"
+      "excluded_subfamilies": "contains no quantum polynomial indexed class, by quantum rank formula and its two rank-six normal forms; also no member of the full polynomial-derivation Ore chart; neither uniform indexed commuting nor anticommuting Ore subclass contributes a point; entire diagonal quantum-three-generator Ore chart excluded, even up to indexed isomorphism; also avoids the proven G-invariant low-rank open neighborhood of the specified Clifford point C0; every three-factor-symmetrizable candidate with a basepoint is non-Koszul by the signed-reversal Euler obstruction, thm:partial-symmetric-basepoint-exclusion",
+      "necessary_witness_restrictions": "At most one positive and at most one negative invertible symmetrizer witness; if both signs occur they have the same position. Every three-factor-symmetrizable AS object is already in the symmetric CI chart; cor:two-positive-as-recognition."
     }
   ],
   "limits": [
@@ -201,16 +203,17 @@
         "reduced_octad_extension": {
           "coverage": "all reduced (2,2,2) octads and a fourth quadric vanishing at exactly one point",
           "frame": "quadratic-evaluation kernel weighted by inverse fourth-quadric values",
-          "general_AS_status": "unresolved; a general-position rational fixture is non-Koszul",
+          "general_AS_status": "all basepoint members excluded by thm:partial-symmetric-basepoint-exclusion, independent of exact generic rank",
           "source": "sections/reduced_quadric_boundary.tex"
         },
         "dominant_basepoint_quadric_chart": {
           "family": "cyclic rank-two product net plus five coefficients in the fourth quadric",
           "coefficient_count": 8,
           "coverage": "stabilizer-saturated image dominates Gr(4,9), verified by exact tangent rank20",
-          "AS_status": "universal obstruction conditional on pending eight-variable d2 rank <84",
+          "AS_status": "all basepoint cubic-frame fibers excluded structurally; one-return generic d4<=339<344, exact rank not computed",
           "source": "sections/product_net_boundary.tex"
-        }
+        },
+        "partial_symmetric_AS_boundary": "No AS boundary point with a three-factor-symmetric presentation outside S. Boundary points without that presentation and other components remain unresolved."
       },
       {
         "id": "Z-ALT",

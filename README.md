@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の周期構造と代数的変形
 
-**2026-11-17 / v32。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-17 / v36。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 最初に読む
 
@@ -136,7 +136,7 @@ GitHub保存成功時はLibraryへ重複保存しない。
 個々のindexed同型類は正則領域内でも非閉になり得る明示例を得た。
 対称表示像の和集合は有限Frobenius領域内でも相対的に閉ではない。
 [明示的な非Koszul境界](sections/nonkoszul_boundary.tex)は全ての四次検査を通るが、
-ある始点の五次元数が56ではなく63となる。五次の7次元Koszul障害は、平方関係による6次元と明示的な7項の混合サイクルによる1次元で完全に生成され、3座標の線型汎関数で後者の独立性を検出できる（`prop:boundary-complete-quintic-cycles`）。一般の一基点境界・Koszul AS領域内の境界被覆は未解決である。
+ある始点の五次元数が56ではなく63となる。五次の7次元Koszul障害は、平方関係による6次元と明示的な7項の混合サイクルによる1次元で完全に生成され、3座標の線型汎関数で後者の独立性を検出できる（`prop:boundary-complete-quintic-cycles`）。一般の基点三因子対称境界も、左右反転対合によるTor下界5から非Koszulと証明した。対称閉包の全境界被覆は未解決である。
 
 三因子対称な有限Frobenius候補を、四層の切断代数のtrivial extensionとして記述した。
 また一般点の有限次数障害を族全体の排除へ拡張する階数補題を得た。
@@ -167,7 +167,7 @@ python3 computations/verify_boolean_quadric_homology.py --output research/boolea
 相異なる八点の任意の三二次式完全交叉にも、一基点境界の評価フレームを拡張した。
 点配置は列スカラーと射影変換の後に `[I | M]`, `M M^T = I` と表示できる（古典的な自己付随性に対応）。
 一般位置の有理数標本でも、有限Frobenius・四次正確・五次障害7を検算した。
-一般の八点配置全体のAS排除は未解決である。
+一般の八点配置全体も、左右反転対合による普遍的Tor下界によりAS対象から排除された。
 
 ```bash
 python3 computations/verify_reduced_octad_frame.py --output research/reduced_octad_frame_certificate.json
@@ -176,9 +176,13 @@ python3 computations/verify_reduced_octad_frame.py --output research/reduced_oct
 基点を固定した四二次式系 `Gr(4,9)` の一般点を、積型の三二次式と第四式からなる8係数族と基底変換で被覆した。
 接写像の20次小行列式 `-696/78125` により支配性を証明した。これはAS正則性や同型類次元の判定ではない。
 八変数の五次階数が84未満なら、フレーム束上の半連続性で基点域全体を排除できる移送命題も得た。
-当該八変数階数は計算中で、一般の基点域全体のAS排除は未証明である。
+八変数の正確な階数は未確定だが、一般の基点域全体のAS排除は独立の構造的証明で完成した。
 一方、長さ2の基点部分スキームは構造的に排除した。相異なる二点も二重点も四次元数42以上を強制する。
 四次検査を通る三因子対称な基点候補は一縮約点だけを持ち、縮約八点netによる表示と可換最小分解が適用できる。
+
+左右反転対合により、戻り辺一回の商複体の負固有部分は次元 `60,200,135` を持つ。
+Euler標数 `-5` が非線型 `Tor_(4,5)` を強制するため、基点を持つ三因子対称候補はすべて非Koszulである。
+したがって、認証済みAS対象の対称枝所属は二つの可逆な正符号証明書で判定できる。
 
 ```bash
 python3 computations/verify_product_net_dominance.py --output research/product_net_dominance_certificate.json
@@ -189,6 +193,9 @@ python3 computations/verify_trivial_extension_bitor.py --field two --output rese
 # Point/jet quartic obstruction and exact point-quotient regression
 python3 computations/verify_basepoint_length_two.py --output research/basepoint_length_two_certificate.json
 python3 computations/verify_trivial_extension_bitor.py --field two --frame ternary --point-quotient --last-only --output research/trivial_extension_bitor_quotient_certificate.json
-# Exploratory eight-variable rank; no completed certificate yet
+# Signed-reversal theorem regression, also at a non-Boolean product-net point
+python3 computations/verify_one_return_involution.py --output research/one_return_involution_certificate.json
+python3 computations/verify_one_return_involution.py --fixture generic --output research/one_return_involution_generic_certificate.json
+# Optional exact eight-variable rank; exclusion theorem no longer depends on it
 python3 computations/verify_trivial_extension_bitor.py --field eight --frame ternary --point-quotient --last-only --composition-check structural --output research/trivial_extension_bitor_eight_certificate.json
 ```

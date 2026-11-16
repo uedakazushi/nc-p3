@@ -1,0 +1,57 @@
+{
+  "result": "PASS",
+  "fixture": "generic",
+  "parameters": [
+    2,
+    5,
+    11,
+    3,
+    7,
+    17,
+    23,
+    31
+  ],
+  "arithmetic": "exact QQ",
+  "involution_squared_identity": true,
+  "differentials_commute_with_involution": true,
+  "blocks": {
+    "1": {
+      "dimensions_C2_C3_C4": [
+        48,
+        200,
+        165
+      ],
+      "ranks_d3_d4": [
+        47,
+        152
+      ],
+      "homology_H2_H3_H4": [
+        1,
+        1,
+        13
+      ]
+    },
+    "-1": {
+      "dimensions_C2_C3_C4": [
+        60,
+        200,
+        135
+      ],
+      "ranks_d3_d4": [
+        60,
+        134
+      ],
+      "homology_H2_H3_H4": [
+        0,
+        6,
+        1
+      ]
+    }
+  },
+  "universal_negative_euler_characteristic": -5,
+  "universal_H3_lower_bound": 5,
+  "limits": [
+    "The universal bound follows from the proved signed-reversal dimensions, not this pointwise rank calculation.",
+    "The exact eight-variable H3 dimension is not determined."
+  ]
+}

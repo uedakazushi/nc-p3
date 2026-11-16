@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-17",
-  "version": 35,
+  "version": 36,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -576,14 +576,14 @@
     },
     {
       "id": "PRODUCT-NET-UNIVERSAL-OBSTRUCTION-TRANSFER",
-      "claim": "If the generic eight-variable quintic d2 rank r is strictly below84, dominance and the irreducible universal cubic-frame bundle imply H2>=84-r at every finite-Frobenius quartic-exact partially symmetric basepoint candidate. The rank premise is not yet proved.",
+      "claim": "If the generic eight-variable quintic d2 rank r is strictly below84, dominance and the irreducible universal cubic-frame bundle imply H2>=84-r at every finite-Frobenius quartic-exact partially symmetric basepoint candidate. The rank premise is not yet proved. Universal basepoint exclusion is now proved independently by signed reversal; exact original d2 rank is no longer a classification prerequisite.",
       "proof": "sections/product_net_boundary.tex:prop:product-net-universal-obstruction-transfer",
       "status": "conditional_theorem_proof_written_rank_premise_open"
     },
     {
       "id": "PARTIAL-SYMMETRIZER-QUARTICS",
       "status": "proved",
-      "statement": "For a cubic-frame tensor with dim B3=4, S2 is canonically B4 dual, with matrix rank equal to first catalecticant rank. A one-basepoint B4-dual line yields rank-one symmetrizers. Any two invertible negative symmetrizers already imply full alternation. Projective rank-one elements of S2 correspond exactly to basepoints as closed points. In the finite-Frobenius partial-symmetric chart, absence of rank-one elements is equivalent to membership in the symmetric CI branch; the complementary basepoint branch is exhaustive but its AS status remains open. Globally, two invertible positive witnesses force either the symmetric CI branch or a remaining symmetrizer space consisting of singular matrices and containing a rank-one matrix. Mixed positive/negative invertible witnesses at different positions are impossible by the braid relation.",
+      "statement": "For a cubic-frame tensor with dim B3=4, S2 is canonically B4 dual, with matrix rank equal to first catalecticant rank. A one-basepoint B4-dual line yields rank-one symmetrizers. Any two invertible negative symmetrizers already imply full alternation. Projective rank-one elements of S2 correspond exactly to basepoints as closed points. In the finite-Frobenius partial-symmetric chart, absence of rank-one elements is equivalent to membership in the symmetric CI branch; the complementary basepoint branch is exhaustive and is now excluded from AS by thm:partial-symmetric-basepoint-exclusion. Globally, two invertible positive witnesses force either the symmetric CI branch or a remaining symmetrizer space consisting of singular matrices and containing a rank-one matrix. Mixed positive/negative invertible witnesses at different positions are impossible by the braid relation.",
       "proof": "sections/reduced_quadric_boundary.tex: prop:partial-symmetrizer-quartics and cor:one-basepoint-symmetrizer; sections/frobenius_tensor.tex: cor:two-alternating-witnesses; cor:basepoint-rank-one-symmetrizer and cor:partial-symmetric-exhaustive-split; prop:two-positive-global-split and cor:mixed-symmetry-witness-exclusion"
     },
     {
@@ -595,7 +595,7 @@
     {
       "id": "ONE-RETURN-BIMODULE-TOR",
       "status": "proved_with_exact_two_variable_regression",
-      "statement": "For a split square-zero extension A semidirect M, the one-M bar summand Tor^T_(n,d) is Tor^(A^e)_(n-1,d)(S^e,M). In the quadric truncation this yields an internal5 complex of dimensions8,144,480,400, with surjective d2. Koszulity requires H1=H2=H3=0,H4=56. Exact QQ(u,v) gives ranks8,136,337 and H3=7,H4=63; a CI positive control gives ranks8,136,344. Generic eight-variable d4 rank below344 would exclude every basepoint partial-symmetric candidate without requiring quartic exactness, but is not yet certified.",
+      "statement": "For a split square-zero extension A semidirect M, the one-M bar summand Tor^T_(n,d) is Tor^(A^e)_(n-1,d)(S^e,M). In the quadric truncation this yields an internal5 complex of dimensions8,144,480,400, with surjective d2. Koszulity requires H1=H2=H3=0,H4=56. Exact QQ(u,v) gives ranks8,136,337 and H3=7,H4=63; a CI positive control gives ranks8,136,344. The needed generic bound d4<=339<344 is now proved structurally by signed reversal; exact rank337 is not certified.",
       "proof": "sections/trivial_extension_bitor.tex",
       "verification": [
         "computations/trivial_extension_bitor.py",
@@ -617,6 +617,17 @@
       "statement": "The product-net cubic annihilator reduces to seven constraints on ten ternary cubic coordinates plus a point cube. Removing the point-evaluation bimodule yields a complex0,108,400,300 with full d3=29+quotient d3 and full d4=51+quotient d4. Exact QQ(u,v) quotient ranks107,286 reconstruct H3=7. Eight-variable rank remains incomplete.",
       "proof": "sections/ternary_cubic_reduction.tex; sections/trivial_extension_bitor.tex: lem:one-return-point-quotient",
       "verification": "computations/ternary_cubic_frame.py; computations/verify_trivial_extension_bitor.py; research/trivial_extension_bitor_quotient_certificate.json"
+    },
+    {
+      "id": "PARTIAL-SYMMETRIC-AS-CLASSIFIED",
+      "status": "proved_and_targeted_exact_regressions_passed",
+      "statement": "For every basepoint quadric space with hB=(1,4,6,4) through degree3, the point-quotient one-return Koszul complex has a signed word-reversal involution. Its negative block dimensions60,200,135 force H3>=5, hence Tor^(T_L)_(4,5)>=5 and non-Koszulity. Thus every finite-Frobenius three-factor-symmetrizable AS object is in the symmetric CI chart. Any two positive invertible witnesses suffice for symmetric AS recognition. All remaining AS objects outside symmetric and polynomial branches have at most one positive and at most one negative witness, at the same position if both exist. The generic one-return d4 bound<=339 follows without a full symbolic rank computation.",
+      "proof": "sections/partial_symmetric_as.tex: thm:partial-symmetric-basepoint-exclusion, cor:partial-symmetric-as-complete, cor:two-positive-as-recognition, cor:product-net-rank-bound",
+      "verification": [
+        "computations/verify_one_return_involution.py",
+        "research/one_return_involution_certificate.json",
+        "research/one_return_involution_generic_certificate.json"
+      ]
     }
   ],
   "document_paths": {
@@ -680,27 +691,25 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "56091ef9220cf8045a0753e032a001b3d982edc6",
+  "reviewed_source_commit": "55772f0",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
   "cloud_codex_status": "Repository-side Cloud guidance and preflight added; actual Cloud environment publishing, TeX tools and Git push permissions are not verifiable from repository alone.",
   "resume_point": {
     "task_id": "Z4-AS-004",
-    "status": "length_two_basepoints_excluded_simple_point_quintic_obstruction_pending",
-    "objective": "Determine whether the full finite-Frobenius rank-six boundary of the symmetric CI orbit contains Koszul AS points not symmetrizable; then expand structural classification to remaining rho=3,4,5 and higher-rank branches.",
-    "immediate_next_action": "For the remaining single-reduced-basepoint partial-symmetric quartic-exact branch, use the now-uniform commutative minimal resolution and the one-return quotient complex to prove generic quotient d4 rank<293 (expected286), or directly construct a nonzero H3. The current eight-variable ternary/point-quotient --last-only run passed the exact cubic annihilation equations, point-subcomplex preservation and exact rational reference d3 rank107, but no d4 rank is certified. Do not repeat the old C4-quotient or native full-matrix elimination indefinitely. Length-two/multiple/nonreduced basepoint schemes are already excluded analytically by thm:length-two-basepoint-obstruction. A generic bound activates prop:one-return-universal-transfer. If this step stalls, switch to candidates with at most one positive and at most one negative invertible witness.",
+    "status": "partial_three_factor_symmetric_AS_branch_classified",
+    "objective": "Classify the remaining AS tensors outside symmetric CI and alternating polynomial branches, now known to have at most one positive and at most one negative invertible symmetrizer witness.",
+    "immediate_next_action": "Move to a single adjacent negative witness: after identifying the two adjacent factors, R0=Lambda^2 V (its full dimension6), so rho=6. Determine whether the remaining rank/Frobenius/Koszul conditions force a second negative witness (hence the polynomial class), or construct an exact counterexample. Use the linear tensor parametrization Lambda^2 V tensor V2 tensor V3, then adjacent cut rank6 and cubic/quartic filters. Also record the easy rank constraint that any adjacent positive or negative witness forces rho=6; thus rho3/4/5 has no adjacent witness. Do not resume large eight-variable basepoint elimination: that entire branch is now excluded analytically. Exact generic H3=7 versus the proved bound>=5 is optional auxiliary work.",
     "read_first": [
       "research/plan_ja.tex",
       "AGENTS.md",
-      "sections/basepoint_length_two.tex",
-      "sections/trivial_extension_bitor.tex",
-      "sections/reduced_quadric_boundary.tex",
-      "sections/ternary_cubic_reduction.tex",
-      "computations/verify_trivial_extension_bitor.py"
+      "sections/partial_symmetric_as.tex",
+      "sections/frobenius_tensor.tex",
+      "research/classification_branches.json"
     ],
-    "known_obstruction": "The full eight-variable d4 rank is not certified. The small one-return complex avoids the old dense C4 quotient, but may still require a structural bound. No universal exclusion or full classification yet.",
-    "state_of_claim": "Longer basepoint schemes are excluded, including nonreduced jets; every remaining quartic-exact partial-symmetric basepoint candidate admits the reduced-octad presentation and commutative Betti pattern. One-return Tor necessary conditions and point-quotient reduction are proved; two-variable exact rank286 is checked. The universal one-point quintic obstruction and complete classification are not proved.",
+    "known_obstruction": "The remaining low-rank branches may have no adjacent witnesses; existence and classification are unresolved. A single negative witness has not been proved to propagate. Full X6 coverage and other components are still open.",
+    "state_of_claim": "Three-factor symmetrizable AS branch is completely covered by the symmetric CI chart; all its basepoint candidates are excluded by a universal nonnumerical Euler argument. Exact Boolean and non-Boolean fixtures verify the reversal signs and dimensions. No claim that all low-rank AS tensors lie in the two known branches.",
     "handoff_rule": "Overwrite with the current next concrete research action before task termination; no chronological status log."
   },
   "execution_policy": {
