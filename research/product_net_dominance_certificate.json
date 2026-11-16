@@ -1,0 +1,60 @@
+{
+  "result": "PASS",
+  "arithmetic": "exact rational tangent and evaluation matrices",
+  "target": "Gr(4,9), quadrics through p=(0,0,0,1)",
+  "target_dimension": 20,
+  "stabilizer_GL_dimension": 13,
+  "coefficient_parameters": 8,
+  "tangent_shape": [
+    20,
+    21
+  ],
+  "tangent_rank": 20,
+  "minor_columns": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "nonzero_minor": "-696/78125",
+  "checked_parameters": [
+    2,
+    3,
+    5,
+    2,
+    3,
+    5,
+    7,
+    11
+  ],
+  "other_seven_quadric_values": [
+    "1",
+    "2",
+    "3",
+    "20",
+    "61",
+    "55",
+    "2452/841"
+  ],
+  "conclusion": "The stabilizer action on the eight-parameter product-net chart is dominant in Gr(4,9).",
+  "limits": [
+    "Generic coverage of quadric spaces, not indexed-AS moduli dimensions.",
+    "No regularity conclusion follows from the Jacobian test."
+  ]
+}

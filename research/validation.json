@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-17",
-  "version": 31,
+  "version": 32,
   "reviewed_input": {
-    "source_commit": "d84d44e6063762a5b9126f7e6082c90f3ea634e4"
+    "source_commit": "bc5dff62ed13d1113cd9a66bf85aefba863b182c"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Completed uniform AS exclusion on the full fixed-Boolean one-point open; proved reduced-octad evaluation frames, orthogonal coordinates and a restricted complete orbit criterion; certified a non-Boolean general-position non-Koszul fixture.",
+    "scope": "Proved a dominating eight-parameter chart for all basepoint four-quadric spaces and the universal-frame obstruction-transfer implication. The generic eight-variable homology rank remains unproved.",
     "new_mathematical_theorem": true
   },
   "checks": [
@@ -55,15 +55,30 @@
       "command": "PYTHONPATH=/workspace/.cache/nc-p3-python python3 computations/verify_reduced_octad_frame.py --output research/reduced_octad_frame_certificate.json",
       "result": "PASS",
       "scope": "Rational orthogonal4x4 matrix, all70 nonzero four-point minors, quadric evaluation rank7, affine/hyperplane-section Groebner dimensions8/8, cubic evaluation rank8, nonzero weights, symmetrizer dimensions1/1/1 with rank1 middle map, full Frobenius ranks, quartic dimensions35 and exact quintic ranks77/36 with six square classes."
+    },
+    {
+      "command": "PYTHONPATH=/workspace/.cache/nc-p3-python python3 computations/verify_product_net_dominance.py --output research/product_net_dominance_certificate.json",
+      "result": "PASS",
+      "scope": "Exact tangent matrix20x21 rank20, minor -696/78125, eight distinct reduced product-net points and seven nonzero fourth-quadric evaluations."
+    },
+    {
+      "command": "PYTHONPATH=/workspace/.cache/nc-p3-python python3 computations/verify_product_net_homology.py --output research/product_net_homology_certificate.json",
+      "result": "RUNNING",
+      "scope": "Old-point cubic-frame compatibility, native eight-variable cubic equations and generic pair rank6 passed; quotient/homology stage has not produced a certificate."
+    },
+    {
+      "command": "bash scripts/cloud_preflight.sh --tex",
+      "result": "BLOCKED_TEX_DEPENDENCY",
+      "scope": "Python/project structure passed; Japanese TeX class ltjsarticle.cls is absent. No PDF compile or visual check performed."
     }
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed short-path proof of four-layer Koszulity, trace/evaluation identification and generation of the 64-dimensional trivial extension, inner parity twist, and constant-rank vector-bundle specialization argument with adjacent cut upper bounds. No formalization or independent peer review. Reviewed normalization c0!=0, adjacent-cut upper bounds from three-factor symmetry, nonempty Frobenius/quartic-exact open from the checked old point, exact generic obstruction, and extension of rank upper bounds across the entire open. This excludes AS even at coefficient values whose Frobenius status was not classified separately. Reviewed global coverage of the final-quadric one-point open, cube evaluation basis, face-circuit independence with unit minor, all-degree Hilbert calculation, t-deformation at the basepoint, and incompatibility of finite-Frobenius symmetrization with the surviving common basepoint. Reviewed global fixed-Boolean rank-specialization argument including all extra-denominator zeros; reduced-octad seven-point evaluation via associated graded Artin CI socle3; weighted cubic kernel basis, one-point Hilbert tail, controlled closure deformation, orthogonal column scaling, and symmetrizer-covariance proof of the restricted orbit criterion."
+    "scope": "Reviewed short-path proof of four-layer Koszulity, trace/evaluation identification and generation of the 64-dimensional trivial extension, inner parity twist, and constant-rank vector-bundle specialization argument with adjacent cut upper bounds. No formalization or independent peer review. Reviewed normalization c0!=0, adjacent-cut upper bounds from three-factor symmetry, nonempty Frobenius/quartic-exact open from the checked old point, exact generic obstruction, and extension of rank upper bounds across the entire open. This excludes AS even at coefficient values whose Frobenius status was not classified separately. Reviewed global coverage of the final-quadric one-point open, cube evaluation basis, face-circuit independence with unit minor, all-degree Hilbert calculation, t-deformation at the basepoint, and incompatibility of finite-Frobenius symmetrization with the surviving common basepoint. Reviewed global fixed-Boolean rank-specialization argument including all extra-denominator zeros; reduced-octad seven-point evaluation via associated graded Artin CI socle3; weighted cubic kernel basis, one-point Hilbert tail, controlled closure deformation, orthogonal column scaling, and symmetrizer-covariance proof of the restricted orbit criterion. Reviewed the product-net Grassmannian tangent construction, the marked parameter with a reduced net and unique basepoint, dominance after restriction to a nonempty open, and the lift to the irreducible universal cubic-frame bundle. The broad AS exclusion remains explicitly conditional on the uncomputed rank."
   },
   "tex": {
     "result": "NOT_RUN",
-    "scope": "No LuaLaTeX compilation in this checkpoint; full Japanese TeX dependencies are not established in the current tool environment."
+    "scope": "Current --tex preflight confirmed ltjsarticle.cls missing; source structure check is not a Japanese TeX compilation."
   },
   "visual_inspection": {
     "result": "NOT_RUN",
@@ -76,14 +91,14 @@
   "github_save": {
     "result": "PENDING",
     "branch": "main",
-    "scope": "Previous global Boolean frame checkpoint d84d44e pushed; current uniform-exclusion and general-octad checkpoint awaiting save/readback."
+    "scope": "Checkpoint bc5dff6 pushed; current dominance/conditional-transfer checkpoint awaiting push/readback."
   },
   "library_save": {
     "result": "not_attempted",
     "scope": "Project-specific GitHub-first policy; no emergency Library fallback needed while main saves succeed."
   },
   "open_mathematics": [
-    "The full fixed-Boolean one-point coefficient open is excluded, but arbitrary reduced octads and more general singular-symmetrizer boundaries may still contain unclassified Koszul AS points.",
+    "Generic eight-variable quintic rank and universal basepoint-partial-symmetry exclusion remain open; the full fixed-Boolean one-point coefficient open is excluded.",
     "All seven quintic H2 classes are now explicit for this single t=0 example; no universal formula or rank theorem for arbitrary basepoint boundaries.",
     "General 4-window necessary-and-sufficient Koszul/AS criterion, LOW-UNCLASSIFIED, rho=3,4,5, other X6 components and full moduli remain unresolved."
   ],

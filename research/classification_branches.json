@@ -203,6 +203,13 @@
           "frame": "quadratic-evaluation kernel weighted by inverse fourth-quadric values",
           "general_AS_status": "unresolved; a general-position rational fixture is non-Koszul",
           "source": "sections/reduced_quadric_boundary.tex"
+        },
+        "dominant_basepoint_quadric_chart": {
+          "family": "cyclic rank-two product net plus five coefficients in the fourth quadric",
+          "coefficient_count": 8,
+          "coverage": "stabilizer-saturated image dominates Gr(4,9), verified by exact tangent rank20",
+          "AS_status": "universal obstruction conditional on pending eight-variable d2 rank <84",
+          "source": "sections/product_net_boundary.tex"
         }
       },
       {

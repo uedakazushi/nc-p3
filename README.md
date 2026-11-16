@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の周期構造と代数的変形
 
-**2026-11-17 / v31。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-17 / v32。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 最初に読む
 
@@ -171,4 +171,14 @@ python3 computations/verify_boolean_quadric_homology.py --output research/boolea
 
 ```bash
 python3 computations/verify_reduced_octad_frame.py --output research/reduced_octad_frame_certificate.json
+```
+
+基点を固定した四二次式系 `Gr(4,9)` の一般点を、積型の三二次式と第四式からなる8係数族と基底変換で被覆した。
+接写像の20次小行列式 `-696/78125` により支配性を証明した。これはAS正則性や同型類次元の判定ではない。
+八変数の五次階数が84未満なら、フレーム束上の半連続性で基点域全体を排除できる移送命題も得た。
+当該八変数階数は計算中で、一般の基点域全体のAS排除は未証明である。
+
+```bash
+python3 computations/verify_product_net_dominance.py --output research/product_net_dominance_certificate.json
+python3 computations/verify_product_net_homology.py --output research/product_net_homology_certificate.json
 ```

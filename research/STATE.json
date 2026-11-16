@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-17",
-  "version": 31,
+  "version": 32,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -567,6 +567,18 @@
       "claim": "For cubic-frame tensors with pair rank6 and S1=S3=kI, independent four-factor equivalence is equivalent to ordinary GL4 equivalence of the four-quadric spaces. On AS objects this is an indexed-isomorphism criterion; on nonregular candidates it is only presentation equivalence.",
       "proof": "sections/reduced_quadric_boundary.tex:prop:partial-symmetric-orbit-congruence",
       "status": "proof_written"
+    },
+    {
+      "id": "PRODUCT-NET-DOMINANT-BASEPOINT-CHART",
+      "claim": "An eight-coefficient cyclic product-net family, acted on by the 13-dimensional stabilizer of p=(0,0,0,1), dominates Gr(4,9). A 20x20 Jacobian minor is -696/78125. The checked point has eight reduced net points and only the designated basepoint for the fourth quadric.",
+      "proof": "sections/product_net_boundary.tex:thm:product-net-dominance",
+      "status": "proof_written_exact_jacobian_verified"
+    },
+    {
+      "id": "PRODUCT-NET-UNIVERSAL-OBSTRUCTION-TRANSFER",
+      "claim": "If the generic eight-variable quintic d2 rank r is strictly below84, dominance and the irreducible universal cubic-frame bundle imply H2>=84-r at every finite-Frobenius quartic-exact partially symmetric basepoint candidate. The rank premise is not yet proved.",
+      "proof": "sections/product_net_boundary.tex:prop:product-net-universal-obstruction-transfer",
+      "status": "conditional_theorem_proof_written_rank_premise_open"
     }
   ],
   "document_paths": {
@@ -630,26 +642,26 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "d84d44e6063762a5b9126f7e6082c90f3ea634e4",
+  "reviewed_source_commit": "bc5dff62ed13d1113cd9a66bf85aefba863b182c",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
   "cloud_codex_status": "Repository-side Cloud guidance and preflight added; actual Cloud environment publishing, TeX tools and Git push permissions are not verifiable from repository alone.",
   "resume_point": {
     "task_id": "Z4-AS-004",
-    "status": "boolean_one_point_AS_excluded_general_reduced_octad_rank_open",
+    "status": "dominant_product_net_chart_proved_eight_variable_rank_pending",
     "objective": "Determine whether the full finite-Frobenius rank-six boundary of the symmetric CI orbit contains Koszul AS points not symmetrizable; then expand structural classification to remaining rho=3,4,5 and higher-rank branches.",
-    "immediate_next_action": "Prove a basis-independent quintic obstruction for arbitrary reduced octad one-basepoint frames, using the nonzero quadratic evaluation weights P*diag(lambda)*P^T=0 and the truncated-algebra trivial extension. The full Boolean five-parameter open is now uniformly excluded: d2 rank77, d3<=36. General-position rational octad fixture has H2=7 and six square classes, but this does not establish the general rank. A possible parameter reduction is to use three rank-two quadrics through the basepoint as a marked net and certify a dominating family by a Grassmannian tangent-rank test, rather than attempt an unscoped large elimination. Alternative: rho=3,4,5 matrix-space structure.",
+    "immediate_next_action": "Complete computations/verify_product_net_homology.py, which builds an exact eight-variable cubic frame with full low-complexity pivots, clears its return-basis denominators, and computes quintic d2. Dominance is already proved by minor -696/78125. The current exploratory run reached exact old-point compatibility, the eight-variable cubic frame and generic pair rank6; C4 quotient/rank calculation is still pending. If symbolic quotient construction stalls, use low-complexity full-pivot nullspace elimination instead of fixed monomial pivots. If r<84, invoke prop:product-net-universal-obstruction-transfer on the universal frame bundle; this would rule out every basepoint partially symmetric AS candidate, not merely reduced octads. Do not assert that conclusion before the rank is certified.",
     "read_first": [
       "research/plan_ja.tex",
       "AGENTS.md",
-      "sections/reduced_quadric_boundary.tex",
-      "sections/boolean_quadric_boundary.tex",
-      "computations/verify_reduced_octad_frame.py",
+      "sections/product_net_boundary.tex",
+      "computations/product_net_boundary.py",
+      "computations/verify_product_net_homology.py",
       "computations/quintic_field_analysis.py"
     ],
-    "known_obstruction": "Uniform exclusion is proved only for the fixed Boolean-net one-point coefficient family. Arbitrary reduced octads now have a frame and classical orthogonal coordinates, but their general quintic rank and all remaining boundary AS points remain open. No global low-rank AS coverage.",
-    "state_of_claim": "Five-variable exact full-pivot d2 computation completed with rank77 and a persisted certificate. Generic d3 rank36 is deduced from the universal upper bound and the already checked point; optional direct five-variable full homology was not completed or needed for exclusion. General-position rational octad passed finite Frobenius, all quartic dimensions35, d2/d3 ranks77/36, square-kernel6 and combined rank42. General geometric frame and restricted orbit-congruence proofs are written.",
+    "known_obstruction": "The generic eight-variable d2 rank is not certified. All geometric dominance and specialization steps are proved, but universal exclusion of basepoint partial-symmetry still depends on this rank (or an independent structural obstruction). General LOW-UNCLASSIFIED remains open.",
+    "state_of_claim": "Dominant product-net chart verified over Q at a reduced single-basepoint parameter, with exact tangent rank20 and nonzero minor. Native function-field frame construction passed the old-point match and generic pair-rank checks in the ongoing run. No eight-variable homology certificate exists yet. Five-variable Boolean exclusion and reduced-octad geometric/pointwise results remain proved.",
     "handoff_rule": "Overwrite with the current next concrete research action before task termination; no chronological status log."
   },
   "execution_policy": {
