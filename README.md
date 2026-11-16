@@ -63,6 +63,10 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 全ファイバーの正則性と `rho = 6 + rank Q` を証明した。`Q` は6×6交代行列で、
 低階数部分は可換多項式のindexed類だけとなる。18は係数空間の次元である。
 
+位置依存の可換・反可換Ore四窓でも、三次の線型条件が全AS/Koszul正則性に必要十分となる
+（[可換側](sections/polynomial_ore.tex)、[反可換側](sections/anticommutative_ore.tex)）。
+反可換側の三つの消せない交代方向は階数8となり、両チャートの低階数部分は既知の二枝へ入る。
+
 ### 次の研究
 
 **最優先は全四窓のAS正則条件・構造的不変量から網羅的な分類木を構築すること。**
@@ -89,6 +93,8 @@ python3 computations/verify_symmetric_congruence.py
 python3 computations/verify_rank_two_exclusion.py
 python3 computations/verify_quantum_indexed.py
 python3 computations/verify_polynomial_ore.py --output research/polynomial_ore_certificate.json
+python3 computations/verify_indexed_polynomial_ore.py --output research/indexed_polynomial_ore_certificate.json
+python3 computations/verify_indexed_anticommutative_ore.py --output research/indexed_anticommutative_ore_certificate.json
 python3 computations/verify_moduli_jets.py --output research/moduli_certificate.json
 python3 computations/verify_algebraic_family.py --output research/algebraic_family_certificate.json
 python3 computations/verify_elliptic_family.py --output research/elliptic_family_certificate.json

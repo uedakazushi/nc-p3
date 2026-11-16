@@ -98,7 +98,7 @@
       "normal_forms": "unresolved",
       "regularity_of_all_tensor_candidates": "unresolved",
       "complete_isomorphism": "unresolved",
-      "excluded_subfamilies": "contains no quantum polynomial indexed class, by quantum rank formula and its two rank-six normal forms; also no member of the full polynomial-derivation Ore chart"
+      "excluded_subfamilies": "contains no quantum polynomial indexed class, by quantum rank formula and its two rank-six normal forms; also no member of the full polynomial-derivation Ore chart; neither uniform indexed commuting nor anticommuting Ore subclass contributes a point"
     }
   ],
   "limits": [
@@ -130,6 +130,28 @@
       "low_rank_intersection": "radial fi=xi*ell only; one polynomial indexed class",
       "complete_indexed_isomorphism": "not supplied outside the radial subcase",
       "source": "sections/polynomial_ore.tex",
+      "global_coverage": false
+    },
+    {
+      "id": "INDEXED-COMMUTING-ORE",
+      "scope": "uniform commuting three-generator base and X-leading commutators",
+      "parameters": "four-window A72; regular linear locus dimension 27",
+      "regularity": "cubic dimension 20 iff adjacent differences radial iff full AS/Koszul",
+      "normalization": "constant polynomial Ore by periodic X shifts; thm:indexed-polynomial-ore",
+      "low_rank_intersection": "polynomial indexed orbit only",
+      "source": "sections/polynomial_ore.tex",
+      "global_coverage": false
+    },
+    {
+      "id": "INDEXED-ANTICOMMUTING-ORE",
+      "scope": "uniform anticommuting three-generator base and X-leading anticommutators",
+      "parameters": "four-window A72; regular linear locus dimension 21",
+      "regularity": "cubic dimension 20 iff all-parameter normal form H+(-1)^n*G exists",
+      "normalization": "central H nine coefficients plus outer G three coefficients, modulo X shifts",
+      "opposite_rank": "6 if G=0, otherwise 8",
+      "low_rank_intersection": "symmetric chart only",
+      "period": "divides two; minimal two not asserted",
+      "source": "sections/anticommutative_ore.tex",
       "global_coverage": false
     }
   ]

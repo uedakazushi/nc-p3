@@ -1,0 +1,20 @@
+{
+  "result": "PASS",
+  "arithmetic": "exact rational polynomial/linear algebra",
+  "primal_overlaps": 8,
+  "dual_overlaps": 40,
+  "adjacent_rank": 18,
+  "complete_adjacent_parameterization_rank": 18,
+  "four_window_condition_rank": 51,
+  "regular_four_window_coefficient_dimension": 21,
+  "normal_form_parameter_map_rank": 21,
+  "normal_form_parameter_count": 24,
+  "gauge_kernel_dimension": 3,
+  "top_tensor": "linear in H and G",
+  "opposite_rank": "6 if outer G=0, otherwise 8",
+  "low_rank": "exactly the symmetric Clifford subchart",
+  "limits": [
+    "21 is a presentation coefficient dimension, not indexed moduli dimension.",
+    "No assertion that every nonzero outer G has minimal period two."
+  ]
+}

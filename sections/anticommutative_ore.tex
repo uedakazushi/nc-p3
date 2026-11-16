@@ -1,0 +1,112 @@
+\section{反可換三生成部分の位置依存Ore正規化}
+\label{sec:anticommutative-ore}
+$B_-=k\langle x_0,x_1,x_2\rangle/(x_bx_a+x_ax_b:a<b)$とする。
+四次元indexed表示の残る関係が
+\[
+ Xx_a+x_aX=f_{n,a}\in(B_-)_2\qquad(a=0,1,2)
+\]
+である場合を考える。各位置の三二次式は最初は任意で、PBW性を仮定しない。
+
+\begin{theorem}[反可換Ore表示の三次判定と正規形]\label{thm:indexed-anticommutative-ore}
+この表示のindexed代数について、標準14641型Koszul AS正則性と
+全始点の$\dim C_{n,n+3}=20$は同値である。
+この条件が成立することは、一次写像$x_a\mapsto x_a$, $X\mapsto X+u_n$により
+\begin{equation}\label{eq:anti-ore-normal}
+ Xx_a+x_aX=\sum_b H_{ab}x_b^2+(-1)^n\gamma_a x_bx_c,
+ \qquad \{b,c\}=\{0,1,2\}\setminus\{a\},\quad b<c
+\end{equation}
+へ直せることと同値である。$H$の9成分と$\gamma$の3成分は任意で、全ファイバーが正則である。
+元の表示が$p$周期なら同型行列も$p$周期に選べ、$p$が奇数なら$\gamma=0$である。
+従ってこの表示を持つ正則対象の最小周期は1または2に限られる。
+\end{theorem}
+\begin{proof}
+反転した文字対を直すと三次の20個の順序付き語が生成系になる。
+重なり$Xx_bx_a$の差は$B_-$内の
+\begin{equation}\label{eq:anti-ore-overlap}
+ f_{n,b}x_a+f_{n,a}x_b-x_bf_{n+1,a}-x_af_{n+1,b}
+\end{equation}
+である。標準三次元数20なら、この差は$B_-$の順序付き三次基底において零でなければならない。
+その係数を比較すると、各$f_{n,a}$は一意に
+\[
+ f_{n,a}=\sum_b h_{n,ab}x_b^2+
+          \sum_{b\ne a}v_{n,b}x_bx_a+
+          \gamma_{n,a}x_bx_c\quad(b<c,\ b,c\ne a)
+\]
+と書け、条件は正確に
+\begin{align*}
+ h_{n+1,ab}&=h_{n,ab}\quad(a\ne b),&
+ \gamma_{n+1,a}&=-\gamma_{n,a},\\
+ h_{n+1,aa}-h_{n,aa}&=-v_{n,a}-v_{n+1,a}
+\end{align*}
+となる。ここで$x_bx_a$は表示通りの順序であり、順序付き基底へ直すときは反可換符号を入れる。
+三対の式\eqref{eq:anti-ore-overlap}を全て使うことが重要で、
+一対の比較だけでは二成分に現れる同じ$v_{n,b}$の一致をまだ強制しない。
+この係数比較は、30行36列の隣接窓行列の階数18と、上記パラメータ化の同じ階数でも検算できる。
+
+$u_n-u_{n+1}=v_n$を解くと、非対角の$H_{ab}=h_{n,ab}$は一定であり、
+$H_{aa}=h_{n,aa}-u_{n,a}-u_{n+1,a}$も最後の条件から一定となる。
+また$\gamma_n=(-1)^n\gamma_0$である。
+$X\mapsto X+u_n$を代入すれば、正確に\eqref{eq:anti-ore-normal}を得る。
+共通の$u_n$への定数加算で$H_{aa}=0$とすることもできるが、以下では対称性のため9成分を保持する。
+
+逆に正規形では、$x_b^2$は$B_-$の中心にあるので$H$の部分の重なり差は零である。
+$\gamma_a x_bx_c$は、その補集合の各生成元$x_b,x_c$と反可換するため、
+隣接位置で符号が変わる$\gamma$部分も重なり差を消す。
+全二次重なりは解消し、順序付き基底とKoszul性を得る。
+双対を$e_0,e_1,e_2,z$で書くと
+\[
+ z^2=0,\quad ze_a=e_az,\quad
+ e_a^2=-\sum_jH_{ja}e_jz,\quad
+ e_be_a-e_ae_b=(-1)^n\gamma_c e_cz\quad(a<b,\ c\ne a,b)
+\]
+である。補正は全て$z$を一つ増やし、二度使うと零になる。
+各$e_a$に重み1、$z$に重み0を与えると随伴次数代数は四生成の可換平方零完全交叉である。
+両始点での40個の双対三次重なりは恒等的に解消する。
+従って双対は14641型で完全対合を持ち、Koszul性と合わせて左右AS正則性を得る。
+再現コード\path{computations/verify_indexed_anticommutative_ore.py}は、
+原代数の8個と双対の40個の重なりを全12変数のまま検査する。
+
+$p$周期の場合、対角条件を一周足すと$2\sum_n v_n=0$なので、$u_n$を$p$周期に選べる。
+$\gamma$の交代則は奇数周期なら$\gamma=0$を強制する。
+正規形は高々2周期なので最小周期の主張も従う。
+\end{proof}
+
+\begin{proposition}[反可換Ore四窓の係数空間と第三階数]\label{prop:anticommutative-ore-rank}
+四窓72係数での正則条件は階数51の線型条件であり、正則係数空間は21次元である。
+正規形\eqref{eq:anti-ore-normal}における第三階数は
+\[
+ \rho=\begin{cases}6,&\gamma=0,\\8,&\gamma\ne0.\end{cases}
+\]
+従ってこの表示を持つ低階数対象は全て対称Frobeniusチャートに属し、
+\texttt{LOW-UNCLASSIFIED}には入らない。
+21は表示係数空間の次元であり、同型類像の次元ではない。
+\end{proposition}
+\begin{proof}
+四窓の係数は$H$の9成分、$\gamma$の3成分、四つの$u_n$の12成分から得られる。
+この24変数のパラメータ化の核は、全$u_n$への同じ一次式の加算と$H$の対角成分の補正という3次元である。
+従って像の次元は21であり、前定理の必要十分条件から72係数に対する独立条件数は51となる。
+
+最上双対traceを$e_0e_1e_2z$の係数で正規化する。
+前節と同様、$z$を二つ含む語は零、一つ含む語のtraceは平方自由の可換積であり、
+$z$を含まないtraceは$H,\gamma$に線型である。
+第三の二対二行列の$z$を一つ含む二つのブロックは双方階数3であり、
+今度は対称な非対角二次テンソルの3次元を像とする。
+残る商を$00,11,22,01-10,02-20,12-21$の順に取ると、誘導行列は
+\[
+ \begin{pmatrix}
+ 0&-\gamma_2&-\gamma_1\\
+ \gamma_2&0&-\gamma_0\\
+ \gamma_1&\gamma_0&0
+ \end{pmatrix}\oplus0_3.
+\]
+よって全階数は6にこの行列の階数を加えたものであり、主張を得る。
+$\gamma=0$なら正規形の全関係は対称二次テンソルで、双対は可換である。
+その可換双対の四二次式は
+$z^2$および$e_b^2+\sum_aH_{ab}e_az$で、共通非零零点を持たない。
+従って定理\ref{thm:symmetric-frobenius-chart}のチャートに属する。
+\end{proof}
+\begin{remark}
+$\gamma\ne0$で最小周期が常に2とは主張しない。
+また$\gamma=0$への帰着を仮定すると、消せない三つの交代方向を誤って失う。
+ここでは全方向を保持してから、その非消滅が低階数から外れることを証明した。
+\end{remark}

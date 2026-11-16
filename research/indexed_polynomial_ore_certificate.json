@@ -1,0 +1,26 @@
+{
+  "result": "PASS",
+  "arithmetic": "exact rational polynomial/linear algebra",
+  "adjacent_condition_shape": [
+    30,
+    18
+  ],
+  "adjacent_condition_rank": 15,
+  "four_window_condition_shape": [
+    120,
+    72
+  ],
+  "four_window_condition_rank": 45,
+  "regular_coefficient_dimension": 27,
+  "periodic_shift_witness": "PASS",
+  "nonregular_control_cubic_dimensions": [
+    18,
+    18,
+    20,
+    20
+  ],
+  "limits": [
+    "27 is a coefficient-space dimension, not indexed moduli dimension.",
+    "The theorem covers the specified commuting Ore presentation only."
+  ]
+}

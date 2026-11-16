@@ -3,11 +3,11 @@
   "date": "2026-11-16",
   "version": 22,
   "reviewed_input": {
-    "source_commit": "daedce7254c5becaf68dfa7fb99fcd644ba8db82"
+    "source_commit": "952624821be18318357a83052dbf3b6ed07d50db"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Added the all-parameter polynomial derivation Ore chart, dual trace computation and skew-matrix rank criterion; integrated current branch exclusion and next proof obligation. Existing results retained.",
+    "scope": "Added the commuting/anticommuting indexed Ore necessary-and-sufficient cubic AS criteria, explicit X-shift normal forms, periodicity statements and exact rank strata. Prior polynomial Ore proof retained.",
     "new_mathematical_theorem": true
   },
   "checks": [
@@ -25,11 +25,21 @@
       "command": "python3 scripts/check_project.py; git diff --check",
       "result": "PASS",
       "scope": "Paths, JSON, expanded TeX references and whitespace; not a math proof."
+    },
+    {
+      "command": "python3 computations/verify_indexed_polynomial_ore.py --output research/indexed_polynomial_ore_certificate.json",
+      "result": "PASS",
+      "scope": "Adjacent 30x18 condition rank 15, four-cycle 120x72 rank 45, periodic normalization relation-space witness, nonregular cubic dimensions (18,18,20,20)."
+    },
+    {
+      "command": "python3 computations/verify_indexed_anticommutative_ore.py --output research/indexed_anticommutative_ore_certificate.json",
+      "result": "PASS",
+      "scope": "All 12 normal-form variables: 8 primal/40 dual overlaps, orthogonality, linear top trace and quotient skew 3x3 block; complete adjacent parameterization rank 18, four-cycle condition rank 51 and normal-form map rank 21; independent top tensors for G=0 and two nonzero G samples."
     }
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "PBW termination/overlaps, dual exterior filtration and all-fiber perfect pairings; top trace linearity, opposite flattening block quotient and rho=6+rank Q; all kernel equations and global radial indexed shifts reviewed. No formalization or independent peer review."
+    "scope": "PBW termination/overlaps, dual exterior filtration and all-fiber perfect pairings; top trace linearity, opposite flattening block quotient and rho=6+rank Q; all kernel equations and global radial indexed shifts reviewed. No formalization or independent peer review. Necessity without PBW/domain assumptions checked from cubic normal spanning dimension 20; commuting radial differences and periodic shifts; anticommuting coefficient compatibility, alternating outer terms and periodic shifts; dual squarefree filtrations and full rank block quotient reviewed."
   },
   "tex": {
     "result": "NOT_RUN",
@@ -46,16 +56,16 @@
   "github_save": {
     "result": "PENDING",
     "branch": "main",
-    "scope": "Checkpoint push/readback required."
+    "scope": "Previous checkpoint 9526248 pushed and all changed files read back; new indexed Ore checkpoint awaits push/readback."
   },
   "library_save": {
     "result": "not_attempted",
     "scope": "Reserved for failed GitHub save."
   },
   "open_mathematics": [
-    "LOW-UNCLASSIFIED nonemptiness or emptiness remains unresolved.",
-    "General Koszul/AS criterion and exhaustive normal forms are incomplete.",
-    "Position-dependent quantum Ore normalization is not yet proved.",
-    "No complete indexed equivalence criterion for the nonradial polynomial Ore chart."
+    "LOW-UNCLASSIFIED remains globally unresolved.",
+    "Full quantum-background Ore low-rank exclusion is the next unproved step.",
+    "No complete indexed orbit classification of the nonradial/nonzero-outer Ore chart images.",
+    "General four-window Koszul/AS conditions, atlas coverage and components remain incomplete."
   ]
 }
