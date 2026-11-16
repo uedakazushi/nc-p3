@@ -62,7 +62,8 @@
       "period": "one-periodic",
       "complete_isomorphism": "proved for all U: GL4 equivalence of quadric spaces; 33-variable 41-equation criterion, cor:symmetric-chart-isomorphism",
       "normal_forms": "complete-intersection chart; no complete residual orbit normalization",
-      "membership": "three linear symmetrizer spaces contain invertible matrices; degree-four determinant nonidentity test, prop:linear-symmetrization-test"
+      "membership": "three linear symmetrizer spaces contain invertible matrices; degree-four determinant nonidentity test, prop:linear-symmetrization-test",
+      "local_coverage_at_C0": "contains a G-invariant Zariski-open neighborhood of C0 in the rank<=6 finite-Frobenius tensor scheme; smooth presentation dimension 69, thm:clifford-low-rank-local"
     },
     {
       "id": "LOW-RESIDUAL",
@@ -98,7 +99,7 @@
       "normal_forms": "unresolved",
       "regularity_of_all_tensor_candidates": "unresolved",
       "complete_isomorphism": "unresolved",
-      "excluded_subfamilies": "contains no quantum polynomial indexed class, by quantum rank formula and its two rank-six normal forms; also no member of the full polynomial-derivation Ore chart; neither uniform indexed commuting nor anticommuting Ore subclass contributes a point; entire diagonal quantum-three-generator Ore chart excluded, even up to indexed isomorphism"
+      "excluded_subfamilies": "contains no quantum polynomial indexed class, by quantum rank formula and its two rank-six normal forms; also no member of the full polynomial-derivation Ore chart; neither uniform indexed commuting nor anticommuting Ore subclass contributes a point; entire diagonal quantum-three-generator Ore chart excluded, even up to indexed isomorphism; also avoids the proven G-invariant low-rank open neighborhood of the specified Clifford point C0"
     }
   ],
   "limits": [

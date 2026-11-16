@@ -435,6 +435,24 @@
       "claim": "For H=0 in the signed anti Ore normal form, every gamma has a one-period root fixing base generators and negating X; nonzero gamma alone does not imply minimal period two.",
       "proof": "nc-p3.tex:cor:anti-ore-pure-outer-period",
       "status": "proof_written"
+    },
+    {
+      "id": "DUAL-ARTIN-FLATNESS",
+      "claim": "A degreewise-free quadratic Artin deformation of a Koszul finite dual is relative Koszul and has free quadratic-dual components. Finite Frobenius candidates near C0 therefore yield flat original algebras; no extra PBW hypothesis imposed on candidates.",
+      "proof": "nc-p3.tex:lem:dual-artin-flatness",
+      "status": "proof_written"
+    },
+    {
+      "id": "CLIFFORD-RANK-DERIVATIVE",
+      "claim": "At C0 the opposite-rank-six determinantal differential vanishes on all nine even classes and gauge directions and is injective on the six odd classes. The active odd 4x4 skew matrix has Pfaffian -Q, reinterpreting the known quadratic obstruction without determining higher obstructions.",
+      "proof": "nc-p3.tex:prop:clifford-rank-derivative",
+      "status": "proof_written"
+    },
+    {
+      "id": "CLIFFORD-LOW-RANK-LOCAL",
+      "claim": "The finite Frobenius tensor candidate scheme with opposite rank<=6 is smooth of presentation dimension 69 at C0. A G-invariant Zariski-open neighborhood is covered by the symmetric CI chart; its candidates are all Koszul/AS. Nine even parameters cover the based low-rank Artin deformations up to indexed isomorphism. No global low-locus or unrestricted Clifford-hull conclusion.",
+      "proof": "nc-p3.tex:thm:clifford-low-rank-local",
+      "status": "proof_written"
     }
   ],
   "document_paths": {
@@ -475,7 +493,9 @@
     "anticommutative_ore_section": "sections/anticommutative_ore.tex",
     "indexed_anticommutative_ore_certificate": "research/indexed_anticommutative_ore_certificate.json",
     "quantum_ore_section": "sections/quantum_ore.tex",
-    "quantum_ore_certificate": "research/quantum_ore_certificate.json"
+    "quantum_ore_certificate": "research/quantum_ore_certificate.json",
+    "clifford_rank_slice_section": "sections/clifford_rank_slice.tex",
+    "clifford_rank_slice_certificate": "research/clifford_rank_slice_certificate.json"
   },
   "unresolved_cautions": [
     "No proof of dimension 14 for the Clifford component.",
@@ -495,7 +515,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "30fc74c76590a5aa4c27240cd7b9dad8fb33c31d",
+  "reviewed_source_commit": "7e1eda95ad886ed0ab0c933acf13dfc17a2c998f",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -504,17 +524,17 @@
     "task_id": "Z4-AS-004",
     "status": "open_with_tensor_reconstruction_and_rank_split",
     "objective": "Find structurally meaningful necessary and sufficient Koszul/AS regularity criteria across the canonical 4-window representation; classify all exceptional loci.",
-    "immediate_next_action": "LOW-UNCLASSIFIED now excludes the entire diagonal quantum Ore chart. Seek a genuinely non-Ore residual witness or a structural exclusion for rho=3,4,5. An alternative targeted step is to compute the first-order rho<=6 determinantal constraint at the Clifford point using the existing 15 indexed tangent representatives: test whether it removes the six alternating directions, thereby certifying local coverage by the symmetric chart. Read only the tangent-basis construction and tensor code; do not repeat the old quadratic obstruction calculation or assume local coverage gives global coverage.",
+    "immediate_next_action": "The rank<=6 finite-Frobenius candidate scheme is now locally covered by the symmetric chart at C0. Test the other natural symmetric point (all quantum q_ab=-1, dual four square-zero commuting generators), where projective automorphisms jump: compute the canonical tensor tangent constraints, not just unmarked periodic PBW classes, and decide whether the same low-rank local coverage persists or new residual directions appear. If stabilizer/canonical complications stall, return to genuinely non-Ore rho=3,4,5 matrix spaces. Do not recompute the old Clifford quadratic obstruction.",
     "read_first": [
       "research/plan_ja.tex",
       "AGENTS.md",
-      "sections/quantum_ore.tex",
-      "sections/frobenius_tensor.tex",
-      "computations/verify_moduli_jets.py",
-      "computations/frobenius_tensor.py"
+      "sections/clifford_rank_slice.tex",
+      "computations/verify_clifford_rank_slice.py",
+      "computations/pbw_complex.py",
+      "sections/frobenius_tensor.tex"
     ],
-    "known_obstruction": "No global witness or emptiness theorem for LOW-UNCLASSIFIED. Entire diagonal quantum Ore chart has been excluded from this residual by a common cubic AS test, rank specialization and two indexed normalizations. General non-Ore Frobenius/Koszul tensor constraints remain unresolved.",
-    "state_of_claim": "Quantum Ore AS criterion, background rank bound and complete low-rank exclusion proved with exact coefficient/gauge fixtures. Pure outer anti normal form has a one-period subcase. Global classification and generic period strata remain incomplete.",
+    "known_obstruction": "LOW-UNCLASSIFIED still has no global witness or emptiness theorem, but it excludes the full diagonal quantum Ore chart and a G-invariant open neighborhood of C0 in the low-rank finite-Frobenius scheme. Pure anticommutative points have extra stabilizers, so their canonical tensor tangent cannot automatically be identified with all periodic PBW tangent classes.",
+    "state_of_claim": "Exact first-order rank cut, Pfaffian=-Q, dual Artin flatness and smooth-source local coverage at C0 have written proofs and targeted checks. Other symmetric points, the global residual and unrestricted higher Clifford obstructions remain open.",
     "handoff_rule": "Overwrite with the current next concrete research action before task termination; no chronological status log."
   },
   "execution_policy": {

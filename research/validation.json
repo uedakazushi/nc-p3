@@ -3,11 +3,11 @@
   "date": "2026-11-16",
   "version": 22,
   "reviewed_input": {
-    "source_commit": "30fc74c76590a5aa4c27240cd7b9dad8fb33c31d"
+    "source_commit": "7e1eda95ad886ed0ab0c933acf13dfc17a2c998f"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Added the all-parameter diagonal quantum Ore AS criterion, background-rank specialization and exclusion of the full chart from LOW-UNCLASSIFIED; retained signed outer directions and proved an explicit H=0 one-period subcase.",
+    "scope": "Added the Clifford rank-six determinantal derivative, its active skew/Pfaffian interpretation, dual Artin flatness and finite-type smooth-source proof of symmetric-chart coverage on a G-invariant low-rank neighborhood of C0.",
     "new_mathematical_theorem": true
   },
   "checks": [
@@ -45,11 +45,16 @@
       "command": "python3 computations/verify_indexed_anticommutative_ore.py --output research/indexed_anticommutative_ore_certificate.json",
       "result": "PASS",
       "scope": "Rerun all symbolic checks and added H=0, G=(1,2,3) one-period relation-space witness."
+    },
+    {
+      "command": "python3 computations/verify_clifford_rank_slice.py --output research/clifford_rank_slice_certificate.json",
+      "result": "PASS",
+      "scope": "Regenerated the four Fourier ranks and 9/6 class bases without recomputing quadratic obstructions. Solved and substituted all 481 top-trace lift equations for 15 representatives; even map zero, odd rank six with determinant -1; all 64 gauge directions zero; common kernel dimension six; active skew matrix Pfaffian exactly -Q."
     }
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "PBW termination/overlaps, dual exterior filtration and all-fiber perfect pairings; top trace linearity, opposite flattening block quotient and rho=6+rank Q; all kernel equations and global radial indexed shifts reviewed. No formalization or independent peer review. Necessity without PBW/domain assumptions checked from cubic normal spanning dimension 20; commuting radial differences and periodic shifts; anticommuting coefficient compatibility, alternating outer terms and periodic shifts; dual squarefree filtrations and full rank block quotient reviewed. Reviewed arbitrary-q cubic necessity/sufficiency, filtered quantum-exterior AS proof, flat t*f PBW specialization and algebraic top trace, nonperiodic indexed diagonal gauges to uniform +/- backgrounds and the two low-rank reductions. Explicit X sign period witness prevents a false nonzero-G minimal-period claim."
+    "scope": "PBW termination/overlaps, dual exterior filtration and all-fiber perfect pairings; top trace linearity, opposite flattening block quotient and rho=6+rank Q; all kernel equations and global radial indexed shifts reviewed. No formalization or independent peer review. Necessity without PBW/domain assumptions checked from cubic normal spanning dimension 20; commuting radial differences and periodic shifts; anticommuting coefficient compatibility, alternating outer terms and periodic shifts; dual squarefree filtrations and full rank block quotient reviewed. Reviewed arbitrary-q cubic necessity/sufficiency, filtered quantum-exterior AS proof, flat t*f PBW specialization and algebraic top trace, nonperiodic indexed diagonal gauges to uniform +/- backgrounds and the two low-rank reductions. Explicit X sign period witness prevents a false nonzero-G minimal-period claim. Reviewed constant-rank dual flatness over Artin rings and bar Gaussian elimination on the dual; injection into the periodic flat PBW tangent; rank bound 69 and a smooth symmetric nine-parameter source plus 60 orbit directions; finite-type smooth-source argument and open image. No claim of global low-rank coverage, stack/coarse smoothness or the unrestricted Clifford hull."
   },
   "tex": {
     "result": "NOT_RUN",
@@ -66,16 +71,16 @@
   "github_save": {
     "result": "PENDING",
     "branch": "main",
-    "scope": "Prior 30fc74c checkpoint pushed and read back; current full quantum Ore exclusion awaits save/readback."
+    "scope": "Prior 7e1eda9 checkpoint pushed and its 13 committed file blobs read back; new local-rank checkpoint awaits save/readback."
   },
   "library_save": {
     "result": "not_attempted",
     "scope": "Reserved for failed GitHub save."
   },
   "open_mathematics": [
-    "LOW-UNCLASSIFIED has no global witness or emptiness theorem and now cannot admit diagonal quantum Ore presentation.",
-    "General non-Ore four-window Koszul/AS criteria and complete global atlas remain unresolved.",
-    "Complete indexed orbit classification of full high-rank Ore chart images is not supplied.",
-    "Local rank-six determinantal constraints at Clifford have not yet been computed."
+    "Global LOW-UNCLASSIFIED remains unresolved outside the newly covered open neighborhood and excluded Ore charts.",
+    "Canonical low-rank tangent at the pure anticommutative point has not been computed; stabilizers differ from C0.",
+    "General non-Ore finite-Frobenius/Koszul conditions, full atlas, periods and components remain incomplete.",
+    "Unrestricted Clifford higher deformation obstructions remain unresolved."
   ]
 }

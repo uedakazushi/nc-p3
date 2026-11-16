@@ -1,0 +1,86 @@
+{
+  "result": "PASS",
+  "arithmetic": "exact rational and QQ(i)",
+  "mode_ranks": [
+    [
+      "1",
+      15,
+      36,
+      9
+    ],
+    [
+      "-1",
+      15,
+      39,
+      6
+    ],
+    [
+      "I",
+      15,
+      45,
+      0
+    ],
+    [
+      "-I",
+      15,
+      45,
+      0
+    ]
+  ],
+  "flat_representation_tangent_dimension": 75,
+  "rank_six_representation_tangent_dimension": 69,
+  "based_rank_six_quotient_tangent_dimension": 9,
+  "even_derivative_zero": true,
+  "odd_derivative_rank": 6,
+  "odd_derivative_minor_rows": [
+    12,
+    15,
+    19,
+    25,
+    29,
+    59
+  ],
+  "odd_derivative_minor_det": "-1",
+  "gauge_directions_checked": 64,
+  "top_tensor_lift_equations": 481,
+  "common_kernel_dimension": 6,
+  "active_indices": [
+    1,
+    2,
+    5,
+    9
+  ],
+  "active_skew_matrix": [
+    [
+      "0",
+      "o5",
+      "o2 - o4 - o5",
+      "-o4"
+    ],
+    [
+      "-o5",
+      "0",
+      "o1",
+      "o1 - o3"
+    ],
+    [
+      "-o2 + o4 + o5",
+      "-o1",
+      "0",
+      "-o0 - o1 + o3"
+    ],
+    [
+      "o4",
+      "-o1 + o3",
+      "o0 + o1 - o3",
+      "0"
+    ]
+  ],
+  "pfaffian": "-o0*o5 - o1*o2 + o2*o3 - o3*o4",
+  "comparison_with_known_obstruction": "Pfaffian=-Q",
+  "limits": [
+    "Tangent/trace computation at the specified Clifford point; the finite-type local coverage uses the manuscript proof.",
+    "No global low-rank coverage or full Clifford deformation-ring calculation.",
+    "First-order low-rank constraints do not establish vanishing of all higher obstructions of the unrestricted problem."
+  ]
+}

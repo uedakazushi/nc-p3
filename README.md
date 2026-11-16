@@ -71,6 +71,11 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 量子背景への特殊化と上の正規化から、低階数なら可換型または対称型に限られ、
 未分類低階数領域はこの表示を持たないことを証明した。
 
+[Clifford点の低階数近傍](sections/clifford_rank_slice.tex) も対称チャートで被覆した。
+階数6以下の有限Frobenius候補表示空間はこの点で滑らかな69次元となり、
+既知の二次障害Qは交代一次変形の4×4行列のPfaffianとして現れる。
+69は表示空間の次元で、全Clifford成分や粗モジュライの次元ではない。
+
 ### 次の研究
 
 **最優先は全四窓のAS正則条件・構造的不変量から網羅的な分類木を構築すること。**
@@ -100,6 +105,7 @@ python3 computations/verify_polynomial_ore.py --output research/polynomial_ore_c
 python3 computations/verify_indexed_polynomial_ore.py --output research/indexed_polynomial_ore_certificate.json
 python3 computations/verify_indexed_anticommutative_ore.py --output research/indexed_anticommutative_ore_certificate.json
 python3 computations/verify_quantum_ore.py --output research/quantum_ore_certificate.json
+python3 computations/verify_clifford_rank_slice.py --output research/clifford_rank_slice_certificate.json
 python3 computations/verify_moduli_jets.py --output research/moduli_certificate.json
 python3 computations/verify_algebraic_family.py --output research/algebraic_family_certificate.json
 python3 computations/verify_elliptic_family.py --output research/elliptic_family_certificate.json
