@@ -99,9 +99,10 @@
     "scope": "Fedorchuk--Isaev arXiv:1703.00438v5 Theorem 1.1 requires polystable regular input; arXiv:1807.02082v2 section 2 concerns the diagonal associated-form immersion. Neither directly settles independent-four-factor orbit-union closure. Novelty remains unconfirmed."
   },
   "github_save": {
-    "result": "PENDING",
+    "result": "PASS",
     "branch": "main",
-    "scope": "Core non-Koszul boundary was pushed as e9d7309; current exceptional-parameter and explicit cycle checkpoint awaiting push/readback."
+    "verified_mathematical_commit": "b094abfe73d160ebfcdc4d858b20a2b185187115",
+    "scope": "Fetched main and read back the proof, exact verifier, certificate and STATE with byte equality. This receipt is saved in a subsequent commit; final remote HEAD equality is checked after that push."
   },
   "library_save": {
     "result": "not_attempted",
