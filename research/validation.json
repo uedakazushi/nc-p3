@@ -1,117 +1,60 @@
 {
   "schema_version": 2,
   "date": "2026-11-16",
-  "version": 26,
+  "version": 27,
   "reviewed_input": {
-    "source_commit": "e9d7309d1a8e1e1a5ce38d3a616e7c31bfd7e15f"
+    "source_commit": "7973cb9b42b4ff3e3c4ca2b8895c99423df1b4c8"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Completed every exceptional parameter of the explicit boundary family; proved a polynomial indexed involution and identified six of seven quintic obstruction classes as square-relation cycles.",
+    "scope": "Derived an explicit seven-term mixed cycle completing the seven-dimensional quintic H2 at the known non-Koszul boundary. Added a sparse three-coordinate functional annihilating d3 and all six square classes and evaluating 4 on the new cycle. Updated manuscript, verifier, plan, notes, and STATE. General boundary coverage not asserted.",
     "new_mathematical_theorem": true
   },
   "checks": [
     {
-      "command": "bash scripts/cloud_preflight.sh",
+      "command": "Independent self-contained exact-Q reconstruction executed in the working container (check_cycle_exact.py, not a tracked repository script)",
       "result": "PASS",
-      "scope": "Python/SymPy and project structure only."
-    },
-    {
-      "command": "python3 computations/verify_polynomial_ore.py --output research/polynomial_ore_certificate.json",
-      "result": "PASS",
-      "scope": "All 18 variables: primal/dual orthogonality, four primal and twenty dual overlap identities, all 256 dual top-trace words, linearity, explicit skew map rank 15/kernel radial dimension 3, all four rank strata by independently reconstructed tensors, nonzero radial indexed witness."
-    },
-    {
-      "command": "python3 scripts/check_project.py; git diff --check",
-      "result": "PASS",
-      "scope": "Paths, JSON, expanded TeX references and whitespace; not a math proof."
-    },
-    {
-      "command": "python3 computations/verify_indexed_polynomial_ore.py --output research/indexed_polynomial_ore_certificate.json",
-      "result": "PASS",
-      "scope": "Adjacent 30x18 condition rank 15, four-cycle 120x72 rank 45, periodic normalization relation-space witness, nonregular cubic dimensions (18,18,20,20)."
-    },
-    {
-      "command": "python3 computations/verify_indexed_anticommutative_ore.py --output research/indexed_anticommutative_ore_certificate.json",
-      "result": "PASS",
-      "scope": "All 12 normal-form variables: 8 primal/40 dual overlaps, orthogonality, linear top trace and quotient skew 3x3 block; complete adjacent parameterization rank 18, four-cycle condition rank 51 and normal-form map rank 21; independent top tensors for G=0 and two nonzero G samples."
-    },
-    {
-      "command": "python3 computations/verify_quantum_ore.py --output research/quantum_ore_certificate.json",
-      "result": "PASS",
-      "scope": "Universal Laurent-polynomial sigma-derivation matrix and inner identity, four exact non-generic/generic fixtures, diagonal indexed gauges at negative and positive positions, rank floor controls, symmetric/alternating membership and nonregular cubic dimension 18."
-    },
-    {
-      "command": "python3 computations/verify_indexed_anticommutative_ore.py --output research/indexed_anticommutative_ore_certificate.json",
-      "result": "PASS",
-      "scope": "Rerun all symbolic checks and added H=0, G=(1,2,3) one-period relation-space witness."
-    },
-    {
-      "command": "python3 computations/verify_clifford_rank_slice.py --output research/clifford_rank_slice_certificate.json",
-      "result": "PASS",
-      "scope": "Regenerated the four Fourier ranks and 9/6 class bases without recomputing quadratic obstructions. Solved and substituted all 481 top-trace lift equations for 15 representatives; even map zero, odd rank six with determinant -1; all 64 gauge directions zero; common kernel dimension six; active skew matrix Pfaffian exactly -Q."
-    },
-    {
-      "command": "python3 computations/verify_pure_anticommutative_slice.py --output research/pure_anticommutative_slice_certificate.json",
-      "result": "PASS",
-      "scope": "300 exact linear determinantal equations in 256 tensor coefficients; pure anti affine/projective tangent 70/69, orbit rank 57, CI-source rank 24 and combined rank 69; C0 independent direct tangent 69; determinant projective tangent and orbit both 45."
-    },
-    {
-      "command": "python3 computations/verify_symmetric_specialization.py --output research/symmetric_specialization_certificate.json",
-      "result": "PASS",
-      "scope": "Symbolic all-word top trace, rational one-parameter independent factor gauge, exact ranks/symmetrization for t=0,1,2 and quadratic-factor rank."
-    },
-    {
-      "command": "python3 computations/verify_ci_centroid.py --output research/ci_centroid_certificate.json",
-      "result": "PASS",
-      "scope": "All 14 nonscalar Jordan profiles, exact minor-span ranks and eigenspace restrictions; anchored frame recovery at pure anti, the nonpolystable CI fixture and C0."
-    },
-    {
-      "command": "python3 computations/verify_singular_symmetrizer_boundary.py --output research/singular_symmetrizer_boundary_certificate.json",
-      "result": "PASS",
-      "scope": "Exact integer one-parameter weights, all sixteen tensor coefficients, singleton/pair ranks, exact three symmetrizer spaces and determinant identity, all four cubic/quartic dimensions, six explicit W03 basis vectors."
-    },
-    {
-      "command": "python3 computations/verify_permutation_support_limits.py --output research/permutation_support_limits_certificate.json",
-      "result": "PASS",
-      "scope": "Exhaustive 65536 bipartite graphs representing 7443 nonempty Birkhoff B4 faces; only the full face retains every singleton rank four."
+      "scope": "Built the t=0 83-term top tensor and four six-relation windows; exact rational row reductions gave 288 length-4 relation generators of rank 221, d2(mixed)=0, d3 rank36, d3 plus six square classes rank42, d3 plus seventh mixed class rank43. A three-coordinate functional (-coord(r0,[132])-coord(r3,[132])+coord(r5,[132])) vanishes on d3 and all square classes and evaluates 4 on the mixed cycle."
     },
     {
       "command": "python3 computations/verify_nonkoszul_boundary.py --output research/nonkoszul_boundary_certificate.json",
-      "result": "PASS",
-      "scope": "Symbolic cubic-frame determinant -2, polynomial family and normalized kernel equations; exact special singleton/pair ranks, W3/W4/W5 dimensions, singular one-dimensional symmetrizer, positive/negative membership failure, quartic dimensions 35, quintic dimensions (63,56,56,56), all d3 ranks 36 and H2/H3 values; generic t=1 symmetric fixture. Reran the full affected verifier after adding symbolic t -> -3-t frame identity with determinant -1, exact t=-1 failure dimensions, rank14 multiplication kernel dimension6, d2 rank77, cycle annihilation identities, rank(d3|Z)=42 and explicit tail303 surviving class."
+      "result": "NOT_RUN_AFTER_EDIT",
+      "scope": "Integrated independent exact-check identities into the repository verifier, but this updated repository script has not been executed in its original environment. Regenerate its tracked certificate before claiming the integrated verifier passes."
+    },
+    {
+      "command": "python3 scripts/check_project.py",
+      "result": "NOT_RUN_AFTER_EDIT",
+      "scope": "Repository structural validator not run during this checkpoint; do not infer a PASS from prior runs."
     }
   ],
   "proof_review": {
-    "result": "TARGETED",
-    "scope": "PBW termination/overlaps, dual exterior filtration and all-fiber perfect pairings; top trace linearity, opposite flattening block quotient and rho=6+rank Q; all kernel equations and global radial indexed shifts reviewed. No formalization or independent peer review. Necessity without PBW/domain assumptions checked from cubic normal spanning dimension 20; commuting radial differences and periodic shifts; anticommuting coefficient compatibility, alternating outer terms and periodic shifts; dual squarefree filtrations and full rank block quotient reviewed. Reviewed arbitrary-q cubic necessity/sufficiency, filtered quantum-exterior AS proof, flat t*f PBW specialization and algebraic top trace, nonperiodic indexed diagonal gauges to uniform +/- backgrounds and the two low-rank reductions. Explicit X sign period witness prevents a false nonzero-G minimal-period claim. Reviewed constant-rank dual flatness over Artin rings and bar Gaussian elimination on the dual; injection into the periodic flat PBW tangent; rank bound 69 and a smooth symmetric nine-parameter source plus 60 orbit directions; finite-type smooth-source argument and open image. No claim of global low-rank coverage, stack/coarse smoothness or the unrestricted Clifford hull. Reviewed the actual 24 CI deformations, stabilizer-aware source ranks, smooth-source open images in X6, the universal 19-dimensional source-fiber action giving symmetric closure dimension 69, the alternating open orbit closure dimension 45, and openness of finite-Frobenius candidate conditions inside X6. All component claims are restricted to presentation schemes, with boundaries and exhaustiveness unresolved. Reviewed centroid reduction to six quadratic minors, all nonscalar Jordan rank cases and basepoint obstruction; unique anchored PGL frames, regular inverse via constant-rank kernel lines and CI recovery. Reviewed nonclosed-orbit example and distinguished it from union closure. No assertion of ambient smoothness at all symmetric points or global boundary exhaustion. Reviewed explicit boundary weight minimum four, reconstructed first two windows, six independent cubic vectors with both-side decompositions, and singular two-dimensional symmetrizer space. Reviewed Birkhoff minimum-face argument and finite exact face enumeration. Floating-point facet discovery was used only for exploration; no exhaustive mathematical claim relies on it. Reviewed the eight Boolean base points of the first three quadrics and the exact excluded CI parameters; polynomial cubic frames and identification of generic tensors with CI top traces by an invertible factor map; special finite-Frobenius reconstruction and non-Koszul Hilbert identity. Relative closedness in finite Frobenius is disproved, while AS boundary coverage remains open. Reviewed all-parameter involution and the split of four exceptional values; finite-Frobenius and Koszul-AS iff conditions follow from the generic CI theorem and exact exceptional checks. Reviewed the intrinsic square-relation cycle map, its six-dimensional injectivity by rank42, and the distinction between six explained directions and one unresolved complementary direction."
+    "result": "TARGETED_INDEPENDENT_EXACT_RATIONAL",
+    "scope": "Independently reconstructed exact rational relation and quotient bases, verified the explicit mixed cycle and exact ranks (36,42,43), and computed the three-coordinate functional on all d3 and six square columns. New theorem concerns only the explicit t=0 boundary, not generic one-basepoint families or the full AS moduli. No formalization or independent peer review."
   },
   "tex": {
     "result": "NOT_RUN",
-    "scope": "No compile in this checkpoint. Earlier environment lacked Japanese TeX class/luaotfload; current structure checks do not replace compilation."
+    "scope": "No LuaLaTeX compilation in this checkpoint; full Japanese TeX dependencies are not established in the current tool environment."
   },
   "visual_inspection": {
     "result": "NOT_RUN",
-    "scope": "No PDF built."
+    "scope": "No PDF regenerated in this checkpoint."
   },
   "literature_review": {
-    "result": "TARGETED",
-    "scope": "Fedorchuk--Isaev arXiv:1703.00438v5 Theorem 1.1 requires polystable regular input; arXiv:1807.02082v2 section 2 concerns the diagonal associated-form immersion. Neither directly settles independent-four-factor orbit-union closure. Novelty remains unconfirmed."
+    "result": "NOT_RUN_FOR_NEW_CYCLE",
+    "scope": "New claim is an explicit exact calculation in the present family, with no asserted novelty relative to general Koszul-homology literature."
   },
   "github_save": {
-    "result": "PASS",
+    "result": "PENDING_FINAL_READBACK",
     "branch": "main",
-    "verified_mathematical_commit": "b094abfe73d160ebfcdc4d858b20a2b185187115",
-    "scope": "Fetched main and read back the proof, exact verifier, certificate and STATE with byte equality. This receipt is saved in a subsequent commit; final remote HEAD equality is checked after that push."
+    "scope": "Mathematical source edits committed to main; remote final readback to follow."
   },
   "library_save": {
     "result": "not_attempted",
-    "scope": "Reserved for failed GitHub save."
+    "scope": "Project-specific GitHub-first policy; no emergency Library fallback needed while main saves succeed."
   },
   "open_mathematics": [
-    "Koszul AS coverage of the symmetric component boundary is unresolved; relative closedness of the symmetric chart in finite Frobenius is disproved.",
-    "Other X6 components and rho=3,4,5 candidates are not classified.",
-    "No global LOW-UNCLASSIFIED witness or emptiness theorem.",
-    "Full AS-moduli components and unrestricted higher Clifford obstructions remain unresolved."
+    "General one-basepoint and singular-symmetrizer finite-Frobenius boundaries may or may not have Koszul AS points outside the symmetric chart.",
+    "All seven quintic H2 classes are now explicit for this single t=0 example; no universal formula or rank theorem for arbitrary basepoint boundaries.",
+    "General 4-window necessary-and-sufficient Koszul/AS criterion, LOW-UNCLASSIFIED, rho=3,4,5, other X6 components and full moduli remain unresolved."
   ]
 }
