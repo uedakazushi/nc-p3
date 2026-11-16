@@ -583,8 +583,8 @@
     {
       "id": "PARTIAL-SYMMETRIZER-QUARTICS",
       "status": "proved",
-      "statement": "For a cubic-frame tensor with dim B3=4, S2 is canonically B4 dual, with matrix rank equal to first catalecticant rank. A one-basepoint B4-dual line yields rank-one symmetrizers. Any two invertible negative symmetrizers already imply full alternation.",
-      "proof": "sections/reduced_quadric_boundary.tex: prop:partial-symmetrizer-quartics and cor:one-basepoint-symmetrizer; sections/frobenius_tensor.tex: cor:two-alternating-witnesses"
+      "statement": "For a cubic-frame tensor with dim B3=4, S2 is canonically B4 dual, with matrix rank equal to first catalecticant rank. A one-basepoint B4-dual line yields rank-one symmetrizers. Any two invertible negative symmetrizers already imply full alternation. Projective rank-one elements of S2 correspond exactly to basepoints as closed points. In the finite-Frobenius partial-symmetric chart, absence of rank-one elements is equivalent to membership in the symmetric CI branch; the complementary basepoint branch is exhaustive but its AS status remains open.",
+      "proof": "sections/reduced_quadric_boundary.tex: prop:partial-symmetrizer-quartics and cor:one-basepoint-symmetrizer; sections/frobenius_tensor.tex: cor:two-alternating-witnesses; cor:basepoint-rank-one-symmetrizer and cor:partial-symmetric-exhaustive-split"
     }
   ],
   "document_paths": {
