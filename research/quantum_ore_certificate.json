@@ -1,0 +1,48 @@
+{
+  "result": "PASS",
+  "arithmetic": "exact rational/Laurent polynomial identities",
+  "universal_derivation_matrix_shape": [
+    30,
+    18
+  ],
+  "universal_inner_sigma_derivation_identity": "PASS",
+  "rank_and_gauge_fixtures": [
+    {
+      "name": "generic_inner",
+      "derivation_condition_rank": 15,
+      "background_rho": 12,
+      "rho": 12,
+      "symmetric": false,
+      "alternating": false
+    },
+    {
+      "name": "commuting_resonance",
+      "derivation_condition_rank": 14,
+      "background_rho": 6,
+      "rho": 8,
+      "symmetric": false,
+      "alternating": false
+    },
+    {
+      "name": "anticommuting_central",
+      "derivation_condition_rank": 14,
+      "background_rho": 6,
+      "rho": 6,
+      "symmetric": true,
+      "alternating": false
+    },
+    {
+      "name": "anticommuting_outer",
+      "derivation_condition_rank": 14,
+      "background_rho": 6,
+      "rho": 8,
+      "symmetric": false,
+      "alternating": false
+    }
+  ],
+  "nonregular_control_cubic_dimension": 18,
+  "limits": [
+    "Global AS necessity/sufficiency and specialization inequality use the manuscript proof.",
+    "No claim that the quantum Ore chart covers all standard AS objects."
+  ]
+}

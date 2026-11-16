@@ -67,6 +67,10 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 （[可換側](sections/polynomial_ore.tex)、[反可換側](sections/anticommutative_ore.tex)）。
 反可換側の三つの消せない交代方向は階数8となり、両チャートの低階数部分は既知の二枝へ入る。
 
+さらに [対角量子Oreチャート全体](sections/quantum_ore.tex) でも30本の線型導分条件が正則性に必要十分。
+量子背景への特殊化と上の正規化から、低階数なら可換型または対称型に限られ、
+未分類低階数領域はこの表示を持たないことを証明した。
+
 ### 次の研究
 
 **最優先は全四窓のAS正則条件・構造的不変量から網羅的な分類木を構築すること。**
@@ -95,6 +99,7 @@ python3 computations/verify_quantum_indexed.py
 python3 computations/verify_polynomial_ore.py --output research/polynomial_ore_certificate.json
 python3 computations/verify_indexed_polynomial_ore.py --output research/indexed_polynomial_ore_certificate.json
 python3 computations/verify_indexed_anticommutative_ore.py --output research/indexed_anticommutative_ore_certificate.json
+python3 computations/verify_quantum_ore.py --output research/quantum_ore_certificate.json
 python3 computations/verify_moduli_jets.py --output research/moduli_certificate.json
 python3 computations/verify_algebraic_family.py --output research/algebraic_family_certificate.json
 python3 computations/verify_elliptic_family.py --output research/elliptic_family_certificate.json

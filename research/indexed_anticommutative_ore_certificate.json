@@ -13,6 +13,7 @@
   "top_tensor": "linear in H and G",
   "opposite_rank": "6 if outer G=0, otherwise 8",
   "low_rank": "exactly the symmetric Clifford subchart",
+  "pure_outer_one_period_witness": "PASS",
   "limits": [
     "21 is a presentation coefficient dimension, not indexed moduli dimension.",
     "No assertion that every nonzero outer G has minimal period two."

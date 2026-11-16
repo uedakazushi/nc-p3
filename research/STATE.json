@@ -411,6 +411,30 @@
       "claim": "Four-window regular coefficients form a linear 21-dimensional locus (rank 51 in A72); rho is 6 if gamma=0 and 8 otherwise. Every low-rank member belongs to the symmetric chart, hence none lies in LOW-UNCLASSIFIED. No general minimal-period-two claim.",
       "proof": "nc-p3.tex:prop:anticommutative-ore-rank",
       "status": "proof_written"
+    },
+    {
+      "id": "QUANTUM-ORE-AS",
+      "claim": "For all nonzero diagonal quantum backgrounds and arbitrary quadratic Ore corrections, standard AS/Koszul regularity is equivalent to the 30 linear coefficient sigma-derivation equations. Cubic dimension 20 forces PBW rather than assuming it.",
+      "proof": "nc-p3.tex:thm:quantum-ore-as",
+      "status": "proof_written"
+    },
+    {
+      "id": "QUANTUM-ORE-BACKGROUND-RANK",
+      "claim": "The PBW family f -> t*f is all-fiber regular and has constant indexed type off zero, so rho(quantum background)<=rho(extension).",
+      "proof": "nc-p3.tex:lem:quantum-ore-background-rank",
+      "status": "proof_written"
+    },
+    {
+      "id": "QUANTUM-ORE-LOW-EXCLUSION",
+      "claim": "Every regular diagonal quantum-three-generator Ore object has rho>=6; if rho<=6 it is indexed polynomial or belongs to the symmetric Frobenius chart. LOW-UNCLASSIFIED cannot admit such a presentation even after indexed isomorphism.",
+      "proof": "nc-p3.tex:thm:quantum-ore-low-exclusion",
+      "status": "proof_written"
+    },
+    {
+      "id": "ANTI-ORE-PURE-OUTER-PERIOD",
+      "claim": "For H=0 in the signed anti Ore normal form, every gamma has a one-period root fixing base generators and negating X; nonzero gamma alone does not imply minimal period two.",
+      "proof": "nc-p3.tex:cor:anti-ore-pure-outer-period",
+      "status": "proof_written"
     }
   ],
   "document_paths": {
@@ -449,7 +473,9 @@
     "polynomial_ore_certificate": "research/polynomial_ore_certificate.json",
     "indexed_polynomial_ore_certificate": "research/indexed_polynomial_ore_certificate.json",
     "anticommutative_ore_section": "sections/anticommutative_ore.tex",
-    "indexed_anticommutative_ore_certificate": "research/indexed_anticommutative_ore_certificate.json"
+    "indexed_anticommutative_ore_certificate": "research/indexed_anticommutative_ore_certificate.json",
+    "quantum_ore_section": "sections/quantum_ore.tex",
+    "quantum_ore_certificate": "research/quantum_ore_certificate.json"
   },
   "unresolved_cautions": [
     "No proof of dimension 14 for the Clifford component.",
@@ -469,7 +495,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "952624821be18318357a83052dbf3b6ed07d50db",
+  "reviewed_source_commit": "30fc74c76590a5aa4c27240cd7b9dad8fb33c31d",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -478,17 +504,17 @@
     "task_id": "Z4-AS-004",
     "status": "open_with_tensor_reconstruction_and_rank_split",
     "objective": "Find structurally meaningful necessary and sufficient Koszul/AS regularity criteria across the canonical 4-window representation; classify all exceptional loci.",
-    "immediate_next_action": "Prove the low-rank exclusion for the full graded quantum-three-generator Ore chart with arbitrary nonzero diagonal automorphism. First use delta -> lambda*delta PBW deformation to show rho(quantum background)<=rho(extension). A low-rank background must be indexed-gauge equivalent to uniform +1 or -1 quantum coefficients. After this diagonal indexed gauge, apply the proved commuting/anticommuting position-dependent normalization and rank formulas to exclude LOW-UNCLASSIFIED for the entire chart. Check the deformation and gauge statements before enlarging coverage.",
+    "immediate_next_action": "LOW-UNCLASSIFIED now excludes the entire diagonal quantum Ore chart. Seek a genuinely non-Ore residual witness or a structural exclusion for rho=3,4,5. An alternative targeted step is to compute the first-order rho<=6 determinantal constraint at the Clifford point using the existing 15 indexed tangent representatives: test whether it removes the six alternating directions, thereby certifying local coverage by the symmetric chart. Read only the tangent-basis construction and tensor code; do not repeat the old quadratic obstruction calculation or assume local coverage gives global coverage.",
     "read_first": [
       "research/plan_ja.tex",
       "AGENTS.md",
-      "sections/polynomial_ore.tex",
-      "sections/anticommutative_ore.tex",
-      "sections/quantum_indexed.tex",
-      "computations/verify_indexed_anticommutative_ore.py"
+      "sections/quantum_ore.tex",
+      "sections/frobenius_tensor.tex",
+      "computations/verify_moduli_jets.py",
+      "computations/frobenius_tensor.py"
     ],
-    "known_obstruction": "LOW-UNCLASSIFIED remains without a witness or emptiness theorem globally. Both uniform commuting and anticommuting indexed Ore subclasses now have full AS criteria and normalizations; the latter has three indispensable alternating outer directions, which raise rho to 8. Full quantum-background extension is next, not yet proved.",
-    "state_of_claim": "The two indexed Ore normalization/AS criteria and rank strata are proved with exact coefficient-space checks, 8 primal/40 dual anti overlap identities, and tensor comparisons. Complete global classification remains open.",
+    "known_obstruction": "No global witness or emptiness theorem for LOW-UNCLASSIFIED. Entire diagonal quantum Ore chart has been excluded from this residual by a common cubic AS test, rank specialization and two indexed normalizations. General non-Ore Frobenius/Koszul tensor constraints remain unresolved.",
+    "state_of_claim": "Quantum Ore AS criterion, background rank bound and complete low-rank exclusion proved with exact coefficient/gauge fixtures. Pure outer anti normal form has a one-period subcase. Global classification and generic period strata remain incomplete.",
     "handoff_rule": "Overwrite with the current next concrete research action before task termination; no chronological status log."
   },
   "execution_policy": {

@@ -1,0 +1,75 @@
+\section{対角量子Oreチャートの共通AS判定と低階数の除外}
+\label{sec:quantum-ore}
+六つの非零係数$q_{ab}$（$0\leq a<b\leq3$）を取り、
+三生成量子多項式環$B_q$とその対角自己同型$\sigma(x_a)=q_{a3}x_a$を考える。
+$B_q$の順序付き二次基底を用いた任意の$f_a$について、表示
+\[
+ A(q,f)=k\langle x_0,x_1,x_2,X\rangle/
+ (x_bx_a-q_{ab}x_ax_b,\ Xx_a-q_{a3}x_aX-f_a)
+\]
+を考える。ここで最初の関係は$a<b\leq2$、後者は$a\leq2$である。
+
+\begin{theorem}[全対角量子背景での有限AS判定]\label{thm:quantum-ore-as}
+この表示が標準14641型quadratic Koszul AS正則であるための必要十分条件は、
+$\delta(x_a)=f_a$が$B_q$上の$\sigma$-導分となることである。
+具体的には、三つの式
+\begin{equation}\label{eq:quantum-ore-derivation}
+ f_bx_a+q_{b3}x_bf_a-q_{ab}f_ax_b-q_{ab}q_{a3}x_af_b=0\quad(a<b\leq2)
+\end{equation}
+を$B_q$の10個の三次基底で検査すればよい。
+これは18個の$f$係数に対する30本の線型方程式であり、$q$の一般性条件を要しない。
+特に各固定量子背景で、核の全ファイバーが正則である。
+\end{theorem}
+\begin{proof}
+全ての二次書換えは量子順序付き単項式へ停止する。
+重なりは三つの$Xx_bx_a$と一つの$x_2x_1x_0$である。
+後者は量子多項式の恒等式、前者の差は正確に\eqref{eq:quantum-ore-derivation}である。
+従って標準三次元数20ならこの差は零であり、導分条件が必要である。
+逆に導分条件が成立すれば二次Gr\"obner基底で、Hilbert級数$(1-t)^{-4}$とKoszul性を得る。
+$X$の重みによる随伴次数代数は四生成量子多項式代数である。
+双対側には逆重みを入れると量子外積代数からの全射があり、
+Koszul Hilbert逆数公式による14641元数から同型となる。
+従って相補積の完全性も量子外積代数から持ち上がり、左右AS正則性を得る。
+\end{proof}
+
+\begin{lemma}[量子背景への特殊化と階数下界]\label{lem:quantum-ore-background-rank}
+前定理の正則対象について、$A(q,0)$を量子背景とすると
+\[
+ \rho(\check A(q,0))\leq\rho(\check A(q,f))
+\]
+である。
+\end{lemma}
+\begin{proof}
+$f_a$を$t f_a$へ置き換える。導分条件は線型なので全$t\in\mathbb A^1$で成立し、
+二次書換えから成分ごとに自由な全ファイバー正則族となる。
+双対の逆重みの随伴次数は同じ量子外積代数であり、最上traceはその基底で正規化して代数的に選べる。
+従って第三階数は一つの代数的行列の階数で、特殊化で増加しない。
+$t\ne0$では$X\mapsto tX$が$A(q,t f)\simeq A(q,f)$を与えるため、一般階数は元の階数に等しい。
+\end{proof}
+
+\begin{theorem}[対角量子Ore表示から低階数残余は生じない]\label{thm:quantum-ore-low-exclusion}
+前定理の正則対象は常に$\rho\geq6$を満たす。
+さらに$\rho\leq6$なら、そのindexed類は可換多項式類または対称Frobeniusチャートに属する。
+従って\texttt{LOW-UNCLASSIFIED}の対象は、添字保持同型を許してもこの対角量子Ore表示を持たない。
+\end{theorem}
+\begin{proof}
+量子背景の第三階数は命題\ref{prop:quantum-opposite-rank}より6以上である。
+前補題により元の階数も6以上で、低階数なら背景・元対象とも階数6である。
+同命題の証明から、置換を使わない頂点対角変換により、背景の全六係数を
+同じ$s\in\{1,-1\}$へ直せる。
+具体的に$q_{ab}d_a/d_b=s$とし、位置$n$の写像を$x_a\mapsto d_a^{-n}x_a$と取る。
+補正$f_a$は位置依存になり得るが、三生成部分以外の文字を含まず、
+先頭係数は一様な$s$となる。これは全整数での可逆な一次変換であり、正則性を保つ。
+
+$s=1$なら定理\ref{thm:indexed-polynomial-ore}で一定の多項式導分Ore表示へ直せる。
+その第三階数が6なら定理\ref{thm:polynomial-ore-rank}から径方向の場合であり、可換多項式のindexed類である。
+$s=-1$なら定理\ref{thm:indexed-anticommutative-ore}で$H+(-1)^n\gamma$の正規形へ直せる。
+階数6なら命題\ref{prop:anticommutative-ore-rank}から$\gamma=0$なので、対称チャートに属する。
+両所属条件と第三階数はindexed同型不変だから、最後の排除も従う。
+\end{proof}
+\begin{remark}
+低階数部分を分類する際に、元対象へPBW・domainを追加仮定していない。
+この表示を持つ標準対象なら、三次元数が導分条件とPBW性を強制する。
+ただし全正則対象が量子三生成部分や対角Ore表示を持つという構造定理は未証明である。
+Ore手法自体の新規性は主張せず、ここでの寄与は共通判定と全低階数部分の既知枝への排除に置く。
+\end{remark}

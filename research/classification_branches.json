@@ -98,7 +98,7 @@
       "normal_forms": "unresolved",
       "regularity_of_all_tensor_candidates": "unresolved",
       "complete_isomorphism": "unresolved",
-      "excluded_subfamilies": "contains no quantum polynomial indexed class, by quantum rank formula and its two rank-six normal forms; also no member of the full polynomial-derivation Ore chart; neither uniform indexed commuting nor anticommuting Ore subclass contributes a point"
+      "excluded_subfamilies": "contains no quantum polynomial indexed class, by quantum rank formula and its two rank-six normal forms; also no member of the full polynomial-derivation Ore chart; neither uniform indexed commuting nor anticommuting Ore subclass contributes a point; entire diagonal quantum-three-generator Ore chart excluded, even up to indexed isomorphism"
     }
   ],
   "limits": [
@@ -152,6 +152,17 @@
       "low_rank_intersection": "symmetric chart only",
       "period": "divides two; minimal two not asserted",
       "source": "sections/anticommutative_ore.tex",
+      "global_coverage": false
+    },
+    {
+      "id": "DIAGONAL-QUANTUM-ORE",
+      "scope": "three-generator quantum polynomial base, arbitrary nonzero diagonal automorphism, quadratic Ore corrections",
+      "parameters": "(Gm)^6 backgrounds plus A18 correction coefficients",
+      "regularity": "iff the 30 sigma-derivation equations; all roots/special parameters included",
+      "opposite_rank_bound": "rho(background)<=rho(extension), hence rho>=6",
+      "low_rank_intersection": "polynomial or symmetric chart only; thm:quantum-ore-low-exclusion",
+      "complete_indexed_isomorphism": "not supplied on the full chart",
+      "source": "sections/quantum_ore.tex",
       "global_coverage": false
     }
   ]

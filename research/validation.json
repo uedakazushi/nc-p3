@@ -3,11 +3,11 @@
   "date": "2026-11-16",
   "version": 22,
   "reviewed_input": {
-    "source_commit": "952624821be18318357a83052dbf3b6ed07d50db"
+    "source_commit": "30fc74c76590a5aa4c27240cd7b9dad8fb33c31d"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Added the commuting/anticommuting indexed Ore necessary-and-sufficient cubic AS criteria, explicit X-shift normal forms, periodicity statements and exact rank strata. Prior polynomial Ore proof retained.",
+    "scope": "Added the all-parameter diagonal quantum Ore AS criterion, background-rank specialization and exclusion of the full chart from LOW-UNCLASSIFIED; retained signed outer directions and proved an explicit H=0 one-period subcase.",
     "new_mathematical_theorem": true
   },
   "checks": [
@@ -35,11 +35,21 @@
       "command": "python3 computations/verify_indexed_anticommutative_ore.py --output research/indexed_anticommutative_ore_certificate.json",
       "result": "PASS",
       "scope": "All 12 normal-form variables: 8 primal/40 dual overlaps, orthogonality, linear top trace and quotient skew 3x3 block; complete adjacent parameterization rank 18, four-cycle condition rank 51 and normal-form map rank 21; independent top tensors for G=0 and two nonzero G samples."
+    },
+    {
+      "command": "python3 computations/verify_quantum_ore.py --output research/quantum_ore_certificate.json",
+      "result": "PASS",
+      "scope": "Universal Laurent-polynomial sigma-derivation matrix and inner identity, four exact non-generic/generic fixtures, diagonal indexed gauges at negative and positive positions, rank floor controls, symmetric/alternating membership and nonregular cubic dimension 18."
+    },
+    {
+      "command": "python3 computations/verify_indexed_anticommutative_ore.py --output research/indexed_anticommutative_ore_certificate.json",
+      "result": "PASS",
+      "scope": "Rerun all symbolic checks and added H=0, G=(1,2,3) one-period relation-space witness."
     }
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "PBW termination/overlaps, dual exterior filtration and all-fiber perfect pairings; top trace linearity, opposite flattening block quotient and rho=6+rank Q; all kernel equations and global radial indexed shifts reviewed. No formalization or independent peer review. Necessity without PBW/domain assumptions checked from cubic normal spanning dimension 20; commuting radial differences and periodic shifts; anticommuting coefficient compatibility, alternating outer terms and periodic shifts; dual squarefree filtrations and full rank block quotient reviewed."
+    "scope": "PBW termination/overlaps, dual exterior filtration and all-fiber perfect pairings; top trace linearity, opposite flattening block quotient and rho=6+rank Q; all kernel equations and global radial indexed shifts reviewed. No formalization or independent peer review. Necessity without PBW/domain assumptions checked from cubic normal spanning dimension 20; commuting radial differences and periodic shifts; anticommuting coefficient compatibility, alternating outer terms and periodic shifts; dual squarefree filtrations and full rank block quotient reviewed. Reviewed arbitrary-q cubic necessity/sufficiency, filtered quantum-exterior AS proof, flat t*f PBW specialization and algebraic top trace, nonperiodic indexed diagonal gauges to uniform +/- backgrounds and the two low-rank reductions. Explicit X sign period witness prevents a false nonzero-G minimal-period claim."
   },
   "tex": {
     "result": "NOT_RUN",
@@ -56,16 +66,16 @@
   "github_save": {
     "result": "PENDING",
     "branch": "main",
-    "scope": "Previous checkpoint 9526248 pushed and all changed files read back; new indexed Ore checkpoint awaits push/readback."
+    "scope": "Prior 30fc74c checkpoint pushed and read back; current full quantum Ore exclusion awaits save/readback."
   },
   "library_save": {
     "result": "not_attempted",
     "scope": "Reserved for failed GitHub save."
   },
   "open_mathematics": [
-    "LOW-UNCLASSIFIED remains globally unresolved.",
-    "Full quantum-background Ore low-rank exclusion is the next unproved step.",
-    "No complete indexed orbit classification of the nonradial/nonzero-outer Ore chart images.",
-    "General four-window Koszul/AS conditions, atlas coverage and components remain incomplete."
+    "LOW-UNCLASSIFIED has no global witness or emptiness theorem and now cannot admit diagonal quantum Ore presentation.",
+    "General non-Ore four-window Koszul/AS criteria and complete global atlas remain unresolved.",
+    "Complete indexed orbit classification of full high-rank Ore chart images is not supplied.",
+    "Local rank-six determinantal constraints at Clifford have not yet been computed."
   ]
 }

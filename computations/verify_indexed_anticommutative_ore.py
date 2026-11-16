@@ -9,7 +9,7 @@ from itertools import product,combinations,combinations_with_replacement
 import sympy as s
 from frobenius_tensor import top_tensor,flatten
 from tensor_symmetrization import symmetrize
-from verify_quartic_obstruction import insertion_columns,exact_rank
+from verify_quartic_obstruction import insertion_columns,exact_rank,relation_matrix
 P=list(combinations_with_replacement(range(3),2))
 H=s.symbols('h0:9');G=s.symbols('g0:3')
 
@@ -172,6 +172,13 @@ def main():
         assert flatten(actual,(0,2))==(6 if not any(gv) else 8)
         assert (symmetrize(actual)[0] is not None)==(not any(gv))
         assert all(64-exact_rank(insertion_columns(windows,n,3))==20 for n in range(4))
+    # Pure outer terms have an explicit one-period root despite nonzero G.
+    period=s.diag(1,1,1,-1)
+    for n in range(2):
+        source=relation_matrix(window([0]*9,[1,2,3],n))
+        target=relation_matrix(window([0]*9,[1,2,3],n+1))
+        annihilator=s.Matrix.hstack(*target.T.nullspace()).T
+        assert annihilator*s.kronecker_product(period,period)*source==s.zeros(10,6)
     certificate={'result':'PASS','arithmetic':'exact rational polynomial/linear algebra',
         'primal_overlaps':counts[0],'dual_overlaps':counts[1],
         'adjacent_rank':18,'complete_adjacent_parameterization_rank':18,'four_window_condition_rank':51,
@@ -180,6 +187,7 @@ def main():
         'gauge_kernel_dimension':3,'top_tensor':'linear in H and G',
         'opposite_rank':'6 if outer G=0, otherwise 8',
         'low_rank':'exactly the symmetric Clifford subchart',
+        'pure_outer_one_period_witness':'PASS',
         'limits':['21 is a presentation coefficient dimension, not indexed moduli dimension.',
                   'No assertion that every nonzero outer G has minimal period two.']}
     if args.output:args.output.write_text(json.dumps(certificate,ensure_ascii=False,indent=2)+'\n')
