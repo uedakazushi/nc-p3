@@ -149,3 +149,16 @@ F. De Terán, F. M. Dopico and J. M. Landsberg,
 `prop:no-opposite-rank-two` の特異束の階数下界、正則束の核次元10の場合分け、
 二つの残るテンソルの三次交差次元12はnc-p3本文で証明し、固定小表と交差空間をコードで検算する。
 この出典の成分定理や未確認の出版版ページは引用していない。
+
+## 対称完全交叉のassociated formと軌道閉包の限界
+
+M. Fedorchuk and A. Isaev, *Stability of associated forms*,
+https://arxiv.org/pdf/1703.00438v5 、本文Theorem 1.1（p.2）と導入の定義を確認。
+標数零で、入力の正則列部分空間がpolystableである場合のassociated formのpolystabilityを扱う。
+正則列という条件だけでこの追加仮定を省略しない。全文証明の再監査はしていない。
+同著者 *Associated form morphism*, https://arxiv.org/pdf/1807.02082v2 、
+§2のMacaulay逆系の射と対角SL(n)の同変性を確認。
+いずれもnc-p3の四因子独立GL4^4作用の閉包を直接決定するものとしては使わない。
+`prop:symmetric-regular-specialization` の明示的SL4一パラメータ変換は、
+異なるindexed対称AS対象への正則特殊化を与え、個別軌道の閉性を否定する。
+特殊点も対称チャート内なので、チャート像全体の有限Frobenius部分での相対閉性は未解決のままである。

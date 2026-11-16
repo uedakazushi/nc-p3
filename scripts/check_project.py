@@ -22,6 +22,8 @@ REQUIRED = [
     'research/indexed_anticommutative_ore_certificate.json',
     'computations/verify_quantum_ore.py', 'research/quantum_ore_certificate.json',
     'computations/verify_clifford_rank_slice.py', 'research/clifford_rank_slice_certificate.json',
+    'computations/verify_symmetric_specialization.py', 'research/symmetric_specialization_certificate.json',
+    'computations/verify_ci_centroid.py', 'research/ci_centroid_certificate.json',
     'computations/verify_pure_anticommutative_slice.py',
     'research/pure_anticommutative_slice_certificate.json', 'research/frobenius_tensor_certificate.json',
     'research/classification_branches.json', 'research/plan_ja.tex',

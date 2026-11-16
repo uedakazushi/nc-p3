@@ -187,3 +187,114 @@ $G$不変性により可換多項式軌道全体との非交差も従う。
 全ASモジュライの成分数・次元や、基底変更の商の成分とは区別する。
 特に閉包境界に新しい有限Frobenius/Koszul候補があるかは残る問題である。
 \end{remark}
+
+\subsection{低階数内の明示的な正則特殊化と閉包の注意}
+\begin{proposition}[対称型の個別indexed軌道は閉とは限らない]\label{prop:symmetric-regular-specialization}
+$D_t$を、全ての対で$x_bx_a+x_ax_b=0$とし、ただし対$01$だけ
+\[
+ x_1x_0+x_0x_1=t^2x_3^2
+\]
+に置き換えた四生成代数のindexed化とする。
+これは$\mathbb A^1_t$上で成分ごとに自由な全ファイバー標準AS正則族であり、全て$\rho=6$である。
+$t\ne0$では全て$D_1$とgraded同型だが、$D_0$とはindexed同型でない。
+従って、対称完全交叉チャートの個別$G$軌道は、その有限Frobenius部分内でも閉とは限らない。
+\end{proposition}
+\begin{proof}
+可換双対は
+\[
+ E_t=k[e_0,e_1,e_2,e_3]/(e_0^2,e_1^2,e_2^2,e_3^2+t^2e_0e_1)
+\]
+である。四二次式の共通非零零点は存在しないので、全$t$で対称完全交叉チャートに属する。
+平坦性も、$D_t$を反可換三生成部分$\langle x_0,x_2,x_3\rangle$上で$x_1$を追加する
+中心二次補正のOre表示として書けば、全基底が係数環上で自由であることから分かる。
+最上traceを$e_0e_1e_2e_3$の係数とすると、対応する対称四次形式は
+\[
+ F_t(z)=\frac1{4!}\lambda\bigl((z_0e_0+z_1e_1+z_2e_2+z_3e_3)^4\bigr)
+ =z_0z_1z_2z_3-\frac{t^2}{6}z_2z_3^3.
+\]
+$g(t)=\operatorname{diag}(t^{-1},t^{-1},t^2,1)$は$t\ne0$で行列式1を持ち、
+$g(t)^{\otimes4}w_1=w_t$を与える。関係空間でも同じ変換が$D_1\simeq D_t$を与える。
+一方$F_0$は四つの一次因子の積だが、$t\ne0$の$F_t$の因子次数は$1,1,2$である。
+最後の二次因子$z_0z_1-(t^2/6)z_3^2$は階数3なので既約である。
+従って$F_1,F_0$は通常の線型変換で同値でなく、
+系\ref{cor:symmetric-chart-isomorphism}よりindexed同型でもない。
+\end{proof}
+\begin{remark}
+この例は$\overline{G\cdot w(U)}$の境界に対称化不能なFrobenius点があることを示さない。
+特殊点も対称チャート内であり、個別軌道の閉性とチャート像全体の相対閉性は別である。
+Macaulay逆系の安定性について\cite[Theorem 1.1]{FIstability}は、
+入力の二次式部分空間がpolystableであることを仮定する。
+また\cite[\S2]{FIassociated}のassociated-form射は対角群の作用を扱う。
+これらを、その仮定の確認や独立四因子への移植なしに、ここで必要な相対閉性へ適用しない。
+\end{remark}
+
+\subsection{対称チャート全体の滑らかな表示モデル}
+\begin{lemma}[四二次完全交叉のtraceの中心]\label{lem:ci-tensor-centroid-scalar}
+$L\in U$の最上対称テンソル$w_L$について、
+$Z(w_L)=\{A:A^{(i)}w_L=A^{(j)}w_L\text{ for all }i,j\}$はスカラーだけである。
+\end{lemma}
+\begin{proof}
+$W=V^*$とし、$A$の双対を$T\in\operatorname{End}(W)$とする。
+完全対合により、中心条件は全ての$u,v\in W$について
+$uT(v)-vT(u)\in L$となることと同値である。
+これら六つの二次式の張る空間を$J_T$とする。
+非スカラー$T$に対して$\dim J_T\leq4$となる可能性は、Jordan形で次の四つに限られる。
+\[
+\begin{array}{c|c|c}
+ T\text{ の型}&\dim J_T&\mathbb P(\text{固有空間})\text{ の次元下界}\\\hline
+ \text{半単純 }3+1&3&2\\
+ \text{半単純 }2+2&4&1\\
+ \text{一固有値 }(2,1,1)&3&2\\
+ \text{一固有値 }(2,2)&4&1
+\end{array}
+\]
+この表は、異なる固有空間間では全ての交差二次式が得られ、
+一固有値の四つの非スカラー分割$(2,1,1),(2,2),(3,1),(4)$では次元が順に$3,4,5,6$となることから分かる。
+固有ベクトルは全て$J_T$の共通零点である。
+$\dim J_T=4$なら$L=J_T$なので基点がある。
+$\dim J_T=3$なら$L$に追加できる二次式は一つだけであり、
+$J_T$の零点に含まれる射影平面上から共通零点を全て消すことはできない。
+いずれも$L\in U$に反する。従って$T$、従って$A$はスカラーである。
+\end{proof}
+
+\begin{theorem}[対称化可能な表示の大域的積モデル]\label{thm:symmetric-presentation-product}
+対称完全交叉チャートの$G$飽和像を$S$とする。
+第一因子を基準にした固定座標の下で、写像
+\[
+ \operatorname{PGL}(V)^3\times U\longrightarrow S,\qquad
+ (A_1,A_2,A_3,L)\longmapsto
+ [(I\otimes A_1\otimes A_2\otimes A_3)w_L]
+\]
+は代数多様体の同型である。
+特に$S$は滑らかで既約な69次元の局所閉表示部分であり、$Z_{\mathrm{sym}}$の稠密開部分となる。
+これは$S$が有限Frobenius部分の中で閉であることや、$\mathfrak X_6$の全ての$S$上の点が滑らかであることを意味しない。
+\end{theorem}
+\begin{proof}
+任意の四因子変換では、その第0写像を全因子に吸収すれば第0因子を$I$にできるので全射である。
+二つの表示が同じなら、その比を取って
+$w_{L'}=(I\otimes B_1\otimes B_2\otimes B_3)w_L$と書ける。
+両辺は対称だから、因子$0,j$の交換と他因子の消去により$B_j\in Z(w_L)$となる。
+前補題から全$B_j$はスカラーなので、射影的には全て恒等、$L'=L$である。
+従ってこの表示は一意である。
+
+逆写像は構成的である。命題\ref{prop:linear-symmetrization-test}の三つの解空間は、
+この表示上で正確に$kA_j^{-1}$という一次元空間である。
+実際、その方程式へ上の表示を代入すれば$HA_j\in Z(w_L)$を得る。
+従って解空間の階数は常に15で、kernel線から$[A_j^{-1}]\in\operatorname{PGL}(V)$を正則に回収できる。
+それらで$w$を対称化し、対称二対二行列の核$L$を回収すれば逆写像となる。
+
+三線型写像の階数15という層、kernel線の可逆性、
+および対称化後のテンソルの有限Frobenius階数条件はいずれも局所閉または開条件である。
+よって$S$は自然な局所閉部分として定義され、上の両向きの写像は正則である。
+その次元は$3\cdot15+24=69$であり、閉包は$Z_{\mathrm{sym}}$なので稠密開性も従う。
+\end{proof}
+\begin{corollary}[対称成分の未処理境界の必要条件]\label{cor:symmetric-boundary-singular-intertwiners}
+$w\in Z_{\mathrm{sym}}$では三つの線型symmetrizer空間は全て非零である。
+さらに$w$が有限Frobenius候補であるが$S$に属さないなら、
+少なくとも一つの空間は可逆行列を一つも持たない。
+従って境界探索は、三空間が全て非零であり、そのうち一つが特異行列だけからなる場合へ絞れる。
+\end{corollary}
+\begin{proof}
+$S$上では三空間の次元が1なので、それらを定める行列の16次小行列式は閉包でも零である。
+最後は線型対称化判定と有限Frobenius候補の対称チャート認証による。
+\end{proof}

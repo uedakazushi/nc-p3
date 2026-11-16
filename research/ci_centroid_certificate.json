@@ -1,0 +1,80 @@
+{
+  "result": "PASS",
+  "arithmetic": "exact rational polynomial/linear algebra",
+  "nonscalar_Jordan_profiles": 14,
+  "low_minor_rank_profiles": [
+    {
+      "multiplicities": [
+        4
+      ],
+      "Jordan_blocks": [
+        [
+          2,
+          2
+        ]
+      ],
+      "minor_span_rank": 4,
+      "common_eigenspace_vector_dimension": 2
+    },
+    {
+      "multiplicities": [
+        4
+      ],
+      "Jordan_blocks": [
+        [
+          2,
+          1,
+          1
+        ]
+      ],
+      "minor_span_rank": 3,
+      "common_eigenspace_vector_dimension": 3
+    },
+    {
+      "multiplicities": [
+        3,
+        1
+      ],
+      "Jordan_blocks": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "minor_span_rank": 3,
+      "common_eigenspace_vector_dimension": 3
+    },
+    {
+      "multiplicities": [
+        2,
+        2
+      ],
+      "Jordan_blocks": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "minor_span_rank": 4,
+      "common_eigenspace_vector_dimension": 2
+    }
+  ],
+  "anchored_frame_recovery": [
+    "pure",
+    "regular_specialization_generic",
+    "C0"
+  ],
+  "presentation_product": "PGL4^3 x U, dimension 69",
+  "limits": [
+    "The Jordan/basepoint-free proof, not the fixtures alone, establishes scalar centroid for every U point.",
+    "Smoothness of the symmetric image does not prove closedness in the finite-Frobenius locus or ambient smoothness at every point."
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "result": "PASS",
+  "arithmetic": "exact rational polynomial identities",
+  "dual_quadrics": [
+    "e0^2",
+    "e1^2",
+    "e2^2",
+    "e3^2+t^2*e0*e1"
+  ],
+  "associated_form": "-t**2*z2*z3**3/6 + z0*z1*z2*z3",
+  "SL4_gauge": "diag(t^-1,t^-1,t^2,1)",
+  "graded_generic_isomorphism": "PASS",
+  "trace_tensor_generic_gauge": "PASS",
+  "irreducible_quadratic_Hessian_det": "t^2/3",
+  "ranks_at_t_0_1_2": [
+    6,
+    6,
+    6
+  ],
+  "nonisomorphism_reason": "generic form has irreducible-factor degrees (1,1,2), special form (1,1,1,1); symmetric congruence criterion applies",
+  "limits": [
+    "Individual orbit closure only, not failure of closedness of the entire symmetric chart image.",
+    "All fibers remain in the certified symmetric AS chart."
+  ]
+}

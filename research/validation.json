@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-16",
-  "version": 22,
+  "version": 23,
   "reviewed_input": {
-    "source_commit": "54ca6c1dc97ea593ac12b5542c81bbfe9dd5872b"
+    "source_commit": "1c9b5a01ca6ef8b9808b22f6810ee76c9de91d84"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Added direct three-cut tangent coverage at the stabilizer-jumping pure anti point and alternating determinant point; identified two irreducible components of the ambient low-rank tensor presentation scheme with explicit scope limits.",
+    "scope": "Added scalar-centroid theorem for every basepoint-free four-quadric CI and global symmetric presentation product; supplied an all-AS degeneration between distinct indexed classes and scoped primary GIT literature.",
     "new_mathematical_theorem": true
   },
   "checks": [
@@ -55,11 +55,21 @@
       "command": "python3 computations/verify_pure_anticommutative_slice.py --output research/pure_anticommutative_slice_certificate.json",
       "result": "PASS",
       "scope": "300 exact linear determinantal equations in 256 tensor coefficients; pure anti affine/projective tangent 70/69, orbit rank 57, CI-source rank 24 and combined rank 69; C0 independent direct tangent 69; determinant projective tangent and orbit both 45."
+    },
+    {
+      "command": "python3 computations/verify_symmetric_specialization.py --output research/symmetric_specialization_certificate.json",
+      "result": "PASS",
+      "scope": "Symbolic all-word top trace, rational one-parameter independent factor gauge, exact ranks/symmetrization for t=0,1,2 and quadratic-factor rank."
+    },
+    {
+      "command": "python3 computations/verify_ci_centroid.py --output research/ci_centroid_certificate.json",
+      "result": "PASS",
+      "scope": "All 14 nonscalar Jordan profiles, exact minor-span ranks and eigenspace restrictions; anchored frame recovery at pure anti, the nonpolystable CI fixture and C0."
     }
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "PBW termination/overlaps, dual exterior filtration and all-fiber perfect pairings; top trace linearity, opposite flattening block quotient and rho=6+rank Q; all kernel equations and global radial indexed shifts reviewed. No formalization or independent peer review. Necessity without PBW/domain assumptions checked from cubic normal spanning dimension 20; commuting radial differences and periodic shifts; anticommuting coefficient compatibility, alternating outer terms and periodic shifts; dual squarefree filtrations and full rank block quotient reviewed. Reviewed arbitrary-q cubic necessity/sufficiency, filtered quantum-exterior AS proof, flat t*f PBW specialization and algebraic top trace, nonperiodic indexed diagonal gauges to uniform +/- backgrounds and the two low-rank reductions. Explicit X sign period witness prevents a false nonzero-G minimal-period claim. Reviewed constant-rank dual flatness over Artin rings and bar Gaussian elimination on the dual; injection into the periodic flat PBW tangent; rank bound 69 and a smooth symmetric nine-parameter source plus 60 orbit directions; finite-type smooth-source argument and open image. No claim of global low-rank coverage, stack/coarse smoothness or the unrestricted Clifford hull. Reviewed the actual 24 CI deformations, stabilizer-aware source ranks, smooth-source open images in X6, the universal 19-dimensional source-fiber action giving symmetric closure dimension 69, the alternating open orbit closure dimension 45, and openness of finite-Frobenius candidate conditions inside X6. All component claims are restricted to presentation schemes, with boundaries and exhaustiveness unresolved."
+    "scope": "PBW termination/overlaps, dual exterior filtration and all-fiber perfect pairings; top trace linearity, opposite flattening block quotient and rho=6+rank Q; all kernel equations and global radial indexed shifts reviewed. No formalization or independent peer review. Necessity without PBW/domain assumptions checked from cubic normal spanning dimension 20; commuting radial differences and periodic shifts; anticommuting coefficient compatibility, alternating outer terms and periodic shifts; dual squarefree filtrations and full rank block quotient reviewed. Reviewed arbitrary-q cubic necessity/sufficiency, filtered quantum-exterior AS proof, flat t*f PBW specialization and algebraic top trace, nonperiodic indexed diagonal gauges to uniform +/- backgrounds and the two low-rank reductions. Explicit X sign period witness prevents a false nonzero-G minimal-period claim. Reviewed constant-rank dual flatness over Artin rings and bar Gaussian elimination on the dual; injection into the periodic flat PBW tangent; rank bound 69 and a smooth symmetric nine-parameter source plus 60 orbit directions; finite-type smooth-source argument and open image. No claim of global low-rank coverage, stack/coarse smoothness or the unrestricted Clifford hull. Reviewed the actual 24 CI deformations, stabilizer-aware source ranks, smooth-source open images in X6, the universal 19-dimensional source-fiber action giving symmetric closure dimension 69, the alternating open orbit closure dimension 45, and openness of finite-Frobenius candidate conditions inside X6. All component claims are restricted to presentation schemes, with boundaries and exhaustiveness unresolved. Reviewed centroid reduction to six quadratic minors, all nonscalar Jordan rank cases and basepoint obstruction; unique anchored PGL frames, regular inverse via constant-rank kernel lines and CI recovery. Reviewed nonclosed-orbit example and distinguished it from union closure. No assertion of ambient smoothness at all symmetric points or global boundary exhaustion."
   },
   "tex": {
     "result": "NOT_RUN",
@@ -70,13 +80,13 @@
     "scope": "No PDF built."
   },
   "literature_review": {
-    "result": "NOT_RUN",
-    "scope": "Ore/PBW/Frobenius methods are existing tools; self-contained overlap/rank proof supplied. Novelty unconfirmed."
+    "result": "TARGETED",
+    "scope": "Fedorchuk--Isaev arXiv:1703.00438v5 Theorem 1.1 requires polystable regular input; arXiv:1807.02082v2 section 2 concerns the diagonal associated-form immersion. Neither directly settles independent-four-factor orbit-union closure. Novelty remains unconfirmed."
   },
   "github_save": {
     "result": "PENDING",
     "branch": "main",
-    "scope": "Prior local C0 checkpoint committed; current pure/alternating local coverage and component checkpoint await push/readback."
+    "scope": "Previous checkpoint 1c9b5a0; current global symmetric presentation and regular specialization checkpoint awaiting push/readback."
   },
   "library_save": {
     "result": "not_attempted",

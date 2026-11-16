@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-16",
-  "version": 22,
+  "version": 23,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -465,6 +465,18 @@
       "claim": "The closures of the saturated symmetric CI image and alternating determinant orbit are distinct irreducible components of X6, of presentation dimensions 69 and 45. The finite-Frobenius low candidate locus is open in X6 and meets both. The symmetric closure does not meet the polynomial orbit. Neither exhaustiveness nor full AS-moduli component statements follow.",
       "proof": "nc-p3.tex:cor:two-low-rank-presentation-components",
       "status": "proof_written"
+    },
+    {
+      "id": "SYMMETRIC-PRESENTATION-PRODUCT",
+      "claim": "The entire symmetric CI saturated presentation image is PGL4^3 x U, smooth irreducible dimension 69; CI top tensor centroid is scalar everywhere.",
+      "proof": "sections/clifford_rank_slice.tex:thm:symmetric-presentation-product",
+      "status": "proof_written"
+    },
+    {
+      "id": "SYMMETRIC-REGULAR-SPECIALIZATION",
+      "claim": "An explicit all-AS one-parameter family specializes between distinct symmetric indexed classes; individual symmetric orbits need not be closed even inside the regular locus.",
+      "proof": "sections/clifford_rank_slice.tex:prop:symmetric-regular-specialization",
+      "status": "proof_written"
     }
   ],
   "document_paths": {
@@ -528,7 +540,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "54ca6c1dc97ea593ac12b5542c81bbfe9dd5872b",
+  "reviewed_source_commit": "1c9b5a01ca6ef8b9808b22f6810ee76c9de91d84",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -537,17 +549,17 @@
     "task_id": "Z4-AS-004",
     "status": "open_with_tensor_reconstruction_and_rank_split",
     "objective": "Find structurally meaningful necessary and sufficient Koszul/AS regularity criteria across the canonical 4-window representation; classify all exceptional loci.",
-    "immediate_next_action": "Study the boundary of Z_sym inside the finite-Frobenius low candidate locus: is every such boundary point still symmetrizable, or can the three linear symmetrizer spaces lose all invertible witnesses while Frobenius ranks remain constant? Use the existing determinant membership test and look for a controlled degeneration or a proof of relative closedness. Consult primary orbit-closure/symmetric-tensor results only if they address this exact question. If this stalls, analyze other X6 components with rho=3,4,5 and W3=4 rather than redoing the now-covered C0/pure-anti/polynomial neighborhoods.",
+    "immediate_next_action": "Analyze the remaining finite-Frobenius boundary of Z_sym using the necessary condition that all three symmetrizer spaces are nonzero but at least one consists entirely of singular matrices. Start with controlled independent-factor one-parameter diagonal degenerations of symmetric CI tensors, retaining singleton rank 4, adjacent cut ranks 6 and W3=4/W4=1. The entire symmetric image itself is now proved PGL4^3 x U; do not repeat centroid or local smooth-source calculations. Distinguish nonclosed individual orbits (explicit regular example proved) from the still-open relative closedness of their union. If this approach stalls, investigate other X6 components at rho=3,4,5.",
     "read_first": [
       "research/plan_ja.tex",
       "AGENTS.md",
       "sections/clifford_rank_slice.tex",
-      "computations/verify_pure_anticommutative_slice.py",
+      "computations/verify_ci_centroid.py",
       "computations/tensor_symmetrization.py",
       "research/classification_branches.json"
     ],
     "known_obstruction": "Two presentation components of X6 are identified but their full finite-Frobenius boundaries and all other components remain unclassified. LOW-UNCLASSIFIED avoids the proved symmetric open neighborhoods, polynomial orbit and diagonal quantum Ore chart; no global witness or emptiness theorem is established.",
-    "state_of_claim": "Direct 300-equation tensor tangent calculations prove local coverage at pure anti and alternating points; smooth-source/fiber arguments identify ambient presentation components 69 and 45. These are not full AS-moduli components. Boundary coverage is the next unproved step.",
+    "state_of_claim": "Two auxiliary presentation components have dimensions 69 and 45. The whole symmetric saturated image is a smooth locally closed PGL4^3 x U and dense open in the 69-dimensional component. Its boundary in the finite-Frobenius locus is unresolved; scalar-centroid proof and exact anchored-frame recovery supplied.",
     "handoff_rule": "Overwrite with the current next concrete research action before task termination; no chronological status log."
   },
   "execution_policy": {
