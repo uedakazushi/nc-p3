@@ -8,7 +8,7 @@
 \newcommand{\PGL}{\operatorname{PGL}}
 \title{nc-p3研究ノート：周期構造・局所変形・未解決の障害}
 \author{}
-\date{2026年11月22日\quad 第42版}
+\date{2026年11月22日\quad 第43版}
 \begin{document}
 \maketitle
 \section{記法と確実性}
@@ -560,20 +560,13 @@ $\operatorname{soc}\mathcal M=\mathcal M_2$である。
 完全交叉全体の標準中央加群の剛性は補題\texttt{lem:ci-middle-rigidity}にある。
 依然残るのは、標準加群の開軌道外にある加群がAS条件を満たすかどうかである。
 
-\paragraph{二対二の対称化配置に残る有限問題。}
-正証明書で互いに同一視できる位置の関係は、同じ位置を基準に同時に対称化すれば推移的になる。
-対称閉包内で二対二に分かれるAS候補では、対をまたぐ両向きの極限行列は本文の
-\texttt{cor:two-pairs-transfer-ranks}により階数2である。
-二対を$V,V$と$W,W$に正規化し、$H:W\to V$, $K:V\to W$、
-$A=\operatorname{im}H$, $D=\operatorname{im}K$とすると、
-$w\in\operatorname{Sym}^2 A\otimes\operatorname{Sym}^2 W+
-\operatorname{Sym}^2 V\otimes\operatorname{Sym}^2 D$となる。
-実際、$W$側の一文字を$D$の消去子で縮約すると、$H$の証明書と$V$二因子の対称性から
-両$V$因子が$A$に支持される。二対が隣接し、対を分ける切断の階数が6なら、
-$3+3$の上界で等号になり、$R_0\supset\operatorname{Sym}^2 A$、
-$R_2\supset\operatorname{Sym}^2 D$を得る（隣接対を$01,23$とした）。
-従って$R_1$に$A\otimes W$または$V\otimes D$内の純テンソルが一つでもあれば、
-連続純粋関係となりAS性が破れる。この段階で二対二配置全体を除いたわけではない。
+\paragraph{未分類境界の向き付き証明書。}
+対称閉包内のAS残余で可逆対は高々一つである（本文\texttt{thm:no-two-pair-AS-boundary}）。
+隣接可逆対は本文の定理\texttt{thm:one-adjacent-AS-in-symmetric-closure}で排除される。
+向かい合う可逆対が一つ残ると仮定した場合も、相補平面を使った二種類の射影で指数成長を得る（本文\texttt{thm:one-positive-AS-in-symmetric-closure}）。従って閉包内で未分類のAS候補では全ての正証明書が特異である。
+対称閉包では線型symmetrizerの核が全て非零であるため、可逆対が一つもない場合も、
+向き付きの特異行列の核と像の配置から始めることができる。
+七つの既知因子の一般点では未分類AS点が近づけないが、さらに深い交叉は未決定である。
 
 \section{再開時の使い方}
 次の課題と優先順位は\path{research/plan_ja.tex}に集約する。

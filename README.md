@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の周期構造と代数的変形
 
-**2026-11-22 / v42。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v43。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 最初に読む
 
@@ -205,6 +205,8 @@ python3 computations/verify_square_kernel_recognition.py --output research/squar
 # Boundary divisor and exponential growth from a single marker
 python3 computations/verify_boolean_boundary_divisor.py --output research/boolean_boundary_divisor_certificate.json
 python3 computations/verify_cubic_slice_growth.py --output research/cubic_slice_growth_certificate.json
+# Finite Frobenius two-pair degeneration and both cyclic orders
+python3 computations/verify_two_pair_boundary.py --output research/two_pair_boundary_certificate.json
 # Control for the residual single-adjacent-negative linear matrix slice
 python3 computations/verify_single_negative_slice.py --output research/single_negative_slice_certificate.json
 # Exhaustive partial-alternation models and their Frobenius exclusions
@@ -220,4 +222,4 @@ python3 computations/verify_trivial_extension_bitor.py --field eight --frame ter
 
 対称完全交叉チャート全体は三つの二対二階数を6以下にした射影表示空間の滑らかな69次元開部分である。対称類と可換多項式類を除いた低階数部分は有限Frobenius候補内で相対閉となる。この閉部分に標準AS対象が存在するかは未解決である。
 
-対称成分の境界には、例外因子の位置で区別される四つの68次元因子がある。それぞれの一般点の近傍で、低階数のAS点は対称チャートに尽きる。さらに任意の標準AS四窓では、連続二つの二次関係が非零の純テンソルとその共通の中央文字を持つことはない。Boolean境界では長さ $4m$ の次元が少なくとも $10^m$ となる。
+対称成分の境界には、四位置の三対一の分割から四つ、二対二の分割から三つの、計七つの異なる68次元因子を構成した。それぞれの一般点の近傍で、低階数のAS点は対称チャートに尽きる。さらに任意の標準AS四窓では、連続二つの二次関係が非零の純テンソルとその共通の中央文字を持つことはない。Boolean境界では長さ $4m$ の次元が少なくとも $10^m$ となる。対称閉包内の標準AS点が対称チャートに属するための必要十分条件は、六つの位置対のどれか一つに可逆な正の対称化写像があることである。向かい合う一対だけが可逆だと仮定すると、二つの相補平面を使った経路商が指数成長を強制する。閉包内の未分類AS候補では全ての正の対称化写像が特異になる。ほかの境界因子の有無は未解決である。

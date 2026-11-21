@@ -1,0 +1,148 @@
+\section{対称閉包での隣接正証明書の伝播}
+\label{sec:adjacent-witness-boundary}
+\begin{theorem}[対称閉包内での一つの隣接正証明書]\label{thm:one-adjacent-AS-in-symmetric-closure}
+$Z_{\rm sym}$に属する標準AS対象が一つの隣接可逆正証明書を持てば、その対象は$S$に属する。
+\end{theorem}
+\begin{proof}
+巡回順序を$V,V,W,U$とし、最初の二位置で$w$を対称にする。
+$w\notin S$と仮定する。外側の位置とこの対の間に可逆証明書があれば、
+三因子対称のAS認識から矛盾する。$S$の上の両向きの同一視のグラフを閉じて、
+各$T=W,U$について非零の正証明書$H_T:T\to V$, $K_T:V\to T$を
+$H_TK_T=K_TH_T=0$となるように取れる
+（系\ref{cor:two-pairs-transfer-ranks}の固有射影の議論）。
+どちらの$T$も$V$二位置の一方とは向かい合い、二位置の交換で$w$は不変なので、
+系\ref{cor:opposite-singular-rank-two}により四行列全てが階数2である。
+\[
+ A_T=\operatorname{im} H_T=\ker K_T,\qquad D_T=\ker H_T=\operatorname{im}K_T
+\]
+と置く。$H_T$を作用させた三位置は同時対称であり、その三因子全てが$A_T$に支持される。
+従って$V$と$T$にわたる混合縮約像は$A_T\otimes T+V\otimes D_T$に入る。
+
+まず一次空間を順に$V/A_U,V/A_W,W/D_W,U/D_U$へ落とす。
+位置1,3の関係の像は零なので、残る二つの二次経路商の次元を$e_0,e_2$とすれば、
+長さ$4m$の経路商次元は$(e_0e_2)^m$になる。
+$H_W,H_U$を同時に作用させたテンソルは
+$\operatorname{Sym}^4(A_W\cap A_U)$に入る。実際、それぞれの変換は別々の位置に作用し、
+変換後の各位置と元の二つの$V$位置との交換対称性が全置換を生成する。
+従って$A_W\ne A_U$なら、位置2の投影関係の次元は高々1で$e_2\ge3$である。
+
+各$T$について、$H_T$を作用させたテンソルの二つの元の$V$位置への縮約像は
+$R_0\cap\operatorname{Sym}^2 A_T$の中で少なくとも二次元である。
+そうでなければ、残る一因子を縮約して得られる全ての対称三テンソルが
+一つの二次テンソル$q$に対し$q\otimes a$の形になる。
+非零で対称なら$q$は$a^2$の倍であり、全ての$a$の方向も等しい。
+これは変換した$T$位置の一因子階数が$\rk H_T=2$であることと矛盾する。
+$A_W\ne A_U$の場合は二つの対称二乗の交叉が高々一次元なので、
+$R_0$の少なくとも三次元が位置0の射影で消える。よって$e_0\ge1$となる。
+これは指数成長を与えるので、$A_W=A_U=A$の場合だけが残る。
+
+$B=V/A$と置く。位置0の投影関係は$\operatorname{Sym}^2 B$に入る。
+位置2の投影関係も、$H_W,H_U$で商を$A$と同一視すると
+$\operatorname{Sym}^2 A$に入る。従って$e_0,e_2\ge1$であり、
+多項式成長には両方が1でなければならない。二つの投影の階数は従って3である。
+特に$H_W,H_U$を両方作用させた二変数四次形式は中間縮約の階数が3となり、
+$R_0\supset\operatorname{Sym}^2A$を得る。
+また二つの$V$位置を$B$へ落としたテンソルは$D_W\otimes D_U$に外側支持を持つ。
+$K_W,K_U$の同型$B\simeq D_W,D_U$で読むと、これは$\operatorname{Sym}^4 B$の元である。
+実際、二変換を別の$V$位置に施すと元の二位置間の対称性と、
+それぞれの変換位置と対応する外側位置との対称性が残る。
+こちらも中間縮約の階数が3なので、この同一視の下で
+$G=\operatorname{Sym}^2 B\subset D_W\otimes D_U$が$R_2$に含まれる。
+$R_2$から$(W/D_W)\otimes(U/D_U)$への射影の核はちょうど三次元だから
+$R_2\cap (D_W\otimes U)=G$である。
+さらに$(R_0/\operatorname{Sym}^2 A)\simeq G^*$が最上テンソルで誘導される。
+実際、$W$または$U$をそれぞれ$D_W^\perp,D_U^\perp$で縮約すると
+両$V$位置は$A$に入るので、$\operatorname{Sym}^2 A$で割ったテンソルの外側支持は
+$R_2\cap(D_W\otimes D_U)=G$であり、階数は3である。
+
+最後に命題\ref{prop:adjacent-position-pairs}の四次サイクルの計数を、
+$W,U$の同一視なしに行う。$F_A=R_1\cap(A\otimes W)$は純テンソルを含まない。
+含めば$R_0$内の平方から連続純粋関係になる。
+逆順に読んだ$R_3$の$V\otimes D_U$部分にも純テンソルはない。
+実際、$G$は$B\simeq D_W,D_U$で同じ文字を二回使う全ての平方を含み、
+純テンソルがあれば$R_2,R_3$に連続純粋関係ができる。
+先の射影次元定理より両空間の次元は3以下である。
+$V$を$A^\perp$、$W$を任意に縮約した像は転置切断によって次元$6-\dim F_A$で、
+逆順の$R_3$の$V\otimes D_U$部分に入る。従って両次元は3であり、
+この像の$V$支持は4である（$3\times2$内の三次元部分空間は純テンソルを含む）。
+これにより$(F_A\otimes U)\cap(A\otimes R_2)=0$である。
+実際、その元を$w(\phi)$、$\phi\in V^*$と書くと、$\phi$は今の四次元支持を消す。
+
+$A\otimes W\otimes U$の$C_{1,4}$での像は$32-12-12=8$次元以下であり、
+$\operatorname{Sym}^2 A\otimes C_{2,4}$から少なくとも14次元の四次サイクルを得る。
+$R_0/\operatorname{Sym}^2 A=G^*$へ射影した$d_3$は、
+$D_U^*\otimes U$から$G^*\otimes((D_W\otimes U)/G)$への縮約である。
+$B\simeq D_W,D_U$のもとで前命題と同じく、$U/D_U$方向の階数4と
+内側の$z\wedge Tz$の階数3で合計7となる。
+従って先のサイクル空間内の境界は$15-7=8$次元以下であり、
+$\dim C_{0,4}\ge41$となって矛盾する。
+この証明は外の二位置の間の対称性を要求しない。
+\end{proof}
+
+\begin{corollary}[向かい合う一対が残る場合の相補平面]\label{cor:opposite-witness-complementary-planes}
+$Z_{\rm sym}\setminus S$内の標準AS対象に向かい合う可逆正証明書があると仮定し、
+巡回順序を$V,W,V,U$とする。$S$上の全同一視を同時に極限に取って得られる
+$H_T:T\to V$, $K_T:V\to T$（$T=W,U$）と$L:U\to W$, $M:W\to U$は
+いずれも階数2である。さらに
+\[
+ V=A_W\oplus A_U,\qquad A_T=\operatorname{im}H_T=\ker K_T,\qquad
+ \ker H_W=\operatorname{im}L,\quad \ker H_U=\operatorname{im}M .
+\]
+ここで二つの$V$位置の一方を同一視の基準に選ぶ。
+\end{corollary}
+\begin{proof}
+定理\ref{thm:no-two-pair-AS-boundary}と三因子対称化の認識により、
+列挙した六つの写像は非零かつ特異である。$L,M$は向かい合うため階数2で、
+対の外から入る$H_W,H_U$は系\ref{cor:no-rank-one-into-positive-pair}により階数2以上である。
+$A_W+A_U\ne V$なら、二つの$V$位置をともに$V/(A_W+A_U)$へ、
+$W,U$をそれぞれ$W/\ker H_W,U/\ker H_U$へ落とす。
+$H_T$を施した三位置が$A_T$に支持されるので、全ての隣接関係が消える。
+長さ$4m$の商次元は少なくとも$4^m$となり、従って$A_W+A_U=V$である。
+
+全射影行列のグラフ閉包では、三位置間の合成行列と直接の同一視は線型従属である。
+これは$S$上の恒等式から従い、合成が零のときも閉条件である。
+例えば$H_W L$が非零なら$H_U$に比例し、$A_U\subset A_W$となる。
+$A_W$は真部分空間だから、これは上の和に反する。従って$H_W L=H_U M=0$である。
+よって$\ker H_W,\ker H_U$は二次元以上であり、階数の下界からいずれもちょうど二次元である。
+従って像$A_W,A_U$は相補的であり、$\ker H_W=\operatorname{im}L$,
+$\ker H_U=\operatorname{im}M$を得る。
+$K_WH_W=0$かつ$K_W\ne0$なので$K_WH_U\ne0$であり、合成は$L$に比例する。
+従って$K_W$の階数も2である。同様に$K_U$の階数も2で、主張を得る。
+\end{proof}
+
+\begin{theorem}[対称閉包内での任意の可逆正証明書]\label{thm:one-positive-AS-in-symmetric-closure}
+$Z_{\rm sym}$に属する標準AS対象について、六つの位置対の少なくとも一つに
+可逆な正証明書があることは、対象が$S$に属することと同値である。
+\end{theorem}
+\begin{proof}
+$S$では全六対に可逆な正証明書がある。逆向きは隣接対について既に示したので、
+$Z_{\rm sym}\setminus S$内のAS対象に向かい合う可逆対があると仮定する。
+系\ref{cor:opposite-witness-complementary-planes}の記号で
+$D_T=\ker H_T$とし、順に一次空間を
+\[
+ V/A_W,\quad W/D_W,\quad V/A_U,\quad U/D_U
+\]
+へ射影する。位置0,2の隣接関係が消え、残る二つの独立な辺の関係の像次元を
+$s_W,s_U$とすると、位置1から始まる長さ$4m$の商次元は
+$((4-s_W)(4-s_U))^m$である。$W/D_W\simeq A_W$、
+$V/A_U\simeq A_W$の下で辺1の関係像は$\operatorname{Sym}^2 A_W$に入る。
+これは$H_W$を$W$位置に施した三位置の対称性と支持から従う。
+辺3でも同様に$\operatorname{Sym}^2 A_U$に入る。
+従って$s_W,s_U\le3$であり、多項式成長には$s_W=s_U=3$が必要となる。
+
+今度は両方の$V$を$P=V/A_U$に落とし、$W$は全て残し、$U$を$U/D_U$に落とす。
+$U$に接する二辺の関係像は零である。
+$V,W$に残る関係の像次元が高々3であることを示す。
+元の$V\otimes W$内の関係空間を$F$とすると$\dim F=6$で、
+他方の$V$位置と$U$位置を縮約した全像が$F$である。
+先の辺3への投影の転置は、$U$位置を$D_U^\perp$、
+対応する$V$位置を$A_W^\perp$で縮約する写像である。
+$s_U=3$よりその像は三次元であり、$H_U$の支持条件から
+$F\cap(A_U\otimes W)$に入る。従って$F$の$P\otimes W$への像次元は高々3である。
+二つの$V$位置の対称性から、$W\otimes P$側の関係像にも同じ上界がある。
+
+残る三文字$P\otimes W\otimes P$の商は少なくとも
+$2\cdot4\cdot2-3\cdot2-2\cdot3=4$次元である。
+これに二次元の$U/D_U$が関係なしに続くので、長さ$4m$の商次元は少なくとも$8^m$となる。
+標準AS対象の多項式成長に矛盾する。
+\end{proof}

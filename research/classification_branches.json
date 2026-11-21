@@ -110,7 +110,7 @@
       "necessary_witness_restrictions": "No invertible negative witness at any position; at most one positive witness. One negative witness already recognizes the polynomial indexed class; cor:one-negative-frobenius-recognition.",
       "adjacent_witness_restriction": "Any adjacent positive witness forces rho6. Thus rho3/4/5 has no adjacent witnesses of either sign. Negative witnesses are entirely excluded from this residual by the three-form rigidity theorem.",
       "relative_geometry": "Relatively closed in the complete standard finite-Frobenius candidate locus, hence also in the AS subspace; cor:closed-low-residual. Nonemptiness on the AS locus remains open.",
-      "boundary_restriction": "Avoids X6 neighborhoods of generic points of the four three-factor-symmetric boundary divisors, including rotated Boolean points. In the 2+2 partition inside Zsym, a compatible pair of cross transfers must have ranks2,2."
+      "boundary_restriction": "Inside Zsym outside S, all positive witnesses on a residual AS object must be singular. Opposite transfers have rank two whenever nonzero. Avoids X6 neighborhoods of general points of seven known 68-dimensional boundary divisors (four 3+1 and three 2+2). Other components and deeper strata are not excluded."
     }
   ],
   "limits": [

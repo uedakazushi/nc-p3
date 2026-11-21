@@ -1,0 +1,64 @@
+{
+  "result": "PASS",
+  "arithmetic": "exact rational",
+  "mixed_Schur_obstruction_derivative": "-54",
+  "coefficient_scale": "-23/162",
+  "all_singleton_ranks": 4,
+  "all_pair_ranks": 6,
+  "directed_symmetrizer_ranks_target_by_source": [
+    [
+      null,
+      4,
+      2,
+      2
+    ],
+    [
+      4,
+      null,
+      2,
+      2
+    ],
+    [
+      2,
+      2,
+      null,
+      4
+    ],
+    [
+      2,
+      2,
+      4,
+      null
+    ]
+  ],
+  "projective_three_cut_tangent_dimension": 69,
+  "finite_Frobenius_both_orders": true,
+  "mixed_window_has_no_pure_tensor": true,
+  "quartic_dimensions_adjacent_pairs": [
+    41,
+    42,
+    41,
+    42
+  ],
+  "quartic_dimensions_opposite_pairs": [
+    35,
+    35,
+    35,
+    35
+  ],
+  "complementary_plane_projection_control": {
+    "first_edge_ranks": [
+      0,
+      3,
+      0,
+      3
+    ],
+    "second_edge_ranks": [
+      3,
+      3,
+      0,
+      0
+    ],
+    "second_length_four_block_dimension": 16
+  }
+}
