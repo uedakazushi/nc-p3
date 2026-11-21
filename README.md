@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-22 / v45。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v46。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -95,7 +95,7 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 
 **最優先は、二窓の全次数AS条件を実効化し、対称閉包外を含む網羅的な分類木を構築すること。**
 対称閉包内のAS対象は対称完全交叉チャートに尽きると証明した（`thm:symmetric-closure-as-exact`）。
-次は閉包外の rho=3,4,5 と残る rho=6 の被覆を進め、同時に高階数の共通AS認証を調べる。
+標準AS対象の反対位置切断階数は4以上である。階数4では全ての辺の点対応が正次元、階数5で有限の場合は両端の三次小行列式の張る次元の和が20以下となる。二窓のExt反復は四項の微分と経路の乗法から計算でき、指定基底で各窓の先頭語の重なりが四つなら、有限Frobenius候補を全次数で認証できる。
 二窓から作る56次元代数で、低次Extの消滅を逆Serre反復が保つ構造条件を探す。
 「全次数を証明してAS認証」「有限障害で排除」「未決定」を分け、有限検査の成功を全AS認証としない。
 正規形の枝、特殊値、枝間同型の条件を証明し、未分類の残余を明示する。
@@ -115,6 +115,8 @@ python3 scripts/check_project.py
 python3 computations/verify_exterior_trace.py
 python3 computations/verify_period_witness.py
 python3 computations/verify_quartic_obstruction.py
+python3 computations/verify_incidence_cubics.py
+python3 computations/verify_two_window_ext.py --output research/two_window_ext_certificate.json
 python3 computations/verify_frobenius_tensor.py --output research/frobenius_tensor_certificate.json
 python3 computations/verify_quantum_tensor_rank.py
 python3 computations/verify_symmetric_congruence.py

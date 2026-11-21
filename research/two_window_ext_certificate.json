@@ -1,0 +1,314 @@
+{
+  "signed_Ore": [
+    {
+      "start": 0,
+      "first_Ext_by_endpoint": [
+        [
+          0,
+          0,
+          0,
+          35
+        ],
+        [
+          0,
+          0,
+          0,
+          56
+        ],
+        [
+          0,
+          0,
+          0,
+          84
+        ],
+        [
+          0,
+          0,
+          0,
+          120
+        ]
+      ],
+      "first_pure": true,
+      "second_top_module_Ext_at_degree_8": [
+        0,
+        0,
+        0,
+        165
+      ]
+    },
+    {
+      "start": 1,
+      "first_Ext_by_endpoint": [
+        [
+          0,
+          0,
+          0,
+          20
+        ],
+        [
+          0,
+          0,
+          0,
+          35
+        ],
+        [
+          0,
+          0,
+          0,
+          56
+        ],
+        [
+          0,
+          0,
+          0,
+          84
+        ]
+      ],
+      "first_pure": true,
+      "second_top_module_Ext_at_degree_8": [
+        0,
+        0,
+        0,
+        165
+      ]
+    },
+    {
+      "start": 2,
+      "first_Ext_by_endpoint": [
+        [
+          0,
+          0,
+          0,
+          10
+        ],
+        [
+          0,
+          0,
+          0,
+          20
+        ],
+        [
+          0,
+          0,
+          0,
+          35
+        ],
+        [
+          0,
+          0,
+          0,
+          56
+        ]
+      ],
+      "first_pure": true,
+      "second_top_module_Ext_at_degree_8": [
+        0,
+        0,
+        0,
+        165
+      ]
+    },
+    {
+      "start": 3,
+      "first_Ext_by_endpoint": [
+        [
+          0,
+          0,
+          0,
+          4
+        ],
+        [
+          0,
+          0,
+          0,
+          10
+        ],
+        [
+          0,
+          0,
+          0,
+          20
+        ],
+        [
+          0,
+          0,
+          0,
+          35
+        ]
+      ],
+      "first_pure": true,
+      "second_top_module_Ext_at_degree_8": [
+        0,
+        0,
+        0,
+        165
+      ]
+    }
+  ],
+  "Boolean": [
+    {
+      "start": 0,
+      "first_Ext_by_endpoint": [
+        [
+          0,
+          0,
+          0,
+          35
+        ],
+        [
+          0,
+          0,
+          7,
+          63
+        ],
+        [
+          0,
+          0,
+          21,
+          105
+        ],
+        [
+          0,
+          0,
+          41,
+          161
+        ]
+      ],
+      "first_pure": false,
+      "second_top_module_Ext_at_degree_8": [
+        1,
+        1,
+        8,
+        239
+      ]
+    },
+    {
+      "start": 1,
+      "first_Ext_by_endpoint": [
+        [
+          0,
+          0,
+          0,
+          20
+        ],
+        [
+          0,
+          0,
+          0,
+          35
+        ],
+        [
+          0,
+          0,
+          0,
+          56
+        ],
+        [
+          0,
+          0,
+          0,
+          84
+        ]
+      ],
+      "first_pure": true,
+      "second_top_module_Ext_at_degree_8": [
+        0,
+        0,
+        74,
+        239
+      ]
+    },
+    {
+      "start": 2,
+      "first_Ext_by_endpoint": [
+        [
+          0,
+          0,
+          0,
+          10
+        ],
+        [
+          0,
+          0,
+          0,
+          20
+        ],
+        [
+          0,
+          0,
+          0,
+          35
+        ],
+        [
+          0,
+          0,
+          0,
+          56
+        ]
+      ],
+      "first_pure": true,
+      "second_top_module_Ext_at_degree_8": [
+        0,
+        0,
+        122,
+        287
+      ]
+    },
+    {
+      "start": 3,
+      "first_Ext_by_endpoint": [
+        [
+          0,
+          0,
+          0,
+          4
+        ],
+        [
+          0,
+          0,
+          0,
+          10
+        ],
+        [
+          0,
+          0,
+          0,
+          20
+        ],
+        [
+          0,
+          0,
+          0,
+          35
+        ]
+      ],
+      "first_pure": true,
+      "second_top_module_Ext_at_degree_8": [
+        0,
+        0,
+        122,
+        287
+      ]
+    }
+  ],
+  "PBW_leading_triple_counts": {
+    "quantum_rank_12": [
+      4,
+      4,
+      4,
+      4
+    ],
+    "signed_Ore": [
+      4,
+      4,
+      4,
+      4
+    ],
+    "Boolean": [
+      7,
+      14,
+      14,
+      7
+    ]
+  }
+}

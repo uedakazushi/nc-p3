@@ -1,29 +1,33 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 45,
+  "version": 46,
   "reviewed_input": {
-    "source_commit": "a08d1f97941861681762c62197254ece126c7479"
+    "source_commit": "44bb4a7cccbbc1c5333c794c12bb7486356cc408"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Fixed the immutable shortest-route complete-classification goal and excluded interim publication from research objectives. Updated the current plan, instructions, atlas and resume point. Added thm:symmetric-closure-as-exact and the Ext-recurrence reformulation. Moved the complete main manuscript to papers/nc-p3.tex without deleting existing mathematics."
+    "scope": "Explicit Ext maps and tensor recurrence; AS rank lower bound, incidence obstructions at ranks four and five, and constant-plane Kronecker normal forms."
   },
   "checks": [
     {
-      "command": "python3 scripts/check_project.py",
+      "command": "python computations/verify_two_window_ext.py",
       "result": "PASS",
-      "scope": "Current paths, all JSON, tasks, expanded TeX inputs, labels and citations; not a mathematical proof."
+      "scope": "Over Q, checked all consecutive differential products, top Ext against independently constructed path quotients, first-return endpoints and same-endpoint degree-eight components for two examples. PBW overlap counts for a rank-12 quantum point, signed Ore and Boolean."
     },
     {
-      "command": "git diff --check",
+      "command": "python computations/verify_incidence_cubics.py",
       "result": "PASS",
-      "scope": "Whitespace and patch consistency."
+      "scope": "Two exact cubic restriction ranks on a reduced complete intersection of length twenty; the nonreduced result has a separate proof."
+    },
+    {
+      "command": "bash scripts/cloud_preflight.sh --tex; git diff --check",
+      "result": "PASS"
     }
   ],
   "proof_review": {
-    "result": "TARGETED_INTERNAL_REVIEW",
-    "scope": "Multiple internal readers checked the new symmetric-closure exclusion in the actual source: support of c, consecutive pure relations, full relation-space quotient, exact triple-block intersection, growth bound4096>2925, opposite-algebra convention. Also checked the Ext recurrence shifts and induction. Existing dependency proofs were not exhaustively re-audited. No formal proof or external peer review."
+    "result": "TARGETED",
+    "scope": "Checked v45 growth quotient, cut orientation, Koszul bimodule resolution, ordinary vs derived iterations, projective dimension, scheme-theoretic local splitting, Chern class obstruction and matrix pencil type counts."
   },
   "mathematical_computation": {
     "result": "NOT_RUN_THIS_CHECKPOINT",
@@ -31,26 +35,21 @@
   },
   "tex": {
     "result": "PASS",
-    "scope": "LuaLaTeX/latexmk rebuilt the main manuscript103 pages, plan5 pages and notes12 pages. Final logs: no unresolved references/citations, overfull boxes or missing glyphs. Font substitutions and bookmark/legacy-command warnings remain. VS Code recipe-equivalent command succeeded; VS Code UI was not tested.",
-    "environment": "The host default lacked lualatex.fmt; an existing complete TeX runtime and writable font cache were used for the successful builds. Normal reproduction requires LuaLaTeX, latexmk, LuaTeX-ja and Harano Aji; no machine-specific path was written into tracked build settings.",
-    "synctex": "PDF and SyncTeX share root build/. Main-source lookup and recorded fragment-path lookup succeeded. This runtime records fragments with build/../sections; normalized-path CLI lookup returned No tag. VS Code synchronization is not claimed as UI-tested."
+    "scope": "Main 106 pages, plan 5, notes 12; no undefined references or overfull boxes in final logs."
   },
   "visual_inspection": {
     "result": "PASS",
-    "scope": "Rendered and inspected manuscript first page and new-proof pages76-77, all5 plan pages, notes pages11-12. No clipping, overlap or missing text observed in these pages."
+    "scope": "Inspected manuscript page 78 with the rank lower bound."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT",
     "scope": "The new argument uses current internal results. No independent novelty determination or external-source claim was added."
   },
   "github_save": {
-    "result": "PASS",
-    "verified_research_commit": "3c4614e189b399b531ec4671f3b26c3e98bcc2d3",
-    "scope": "Normal main fast-forward with expected-head check succeeded. Fetched origin/main and compared all54 changed entries byte for byte, including the new main manuscript and removal of the old root path. This verification record is saved in a following ordinary commit; no force push or GitHub Actions."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "All-degree AS recognition on general two-window inputs remains ineffective; no uniform finite cutoff is proved.",
-    "Other low-rank components outside Zsym, high-rank coverage, complete orbit classification and global strata remain unresolved.",
-    "The classification goal and scope are fixed; interim publication is not a task."
+    "Rank-four AS existence, rank-five residual, other components and full orbit classification remain unresolved.",
+    "No universal finite Ext cutoff or all-branch propagation theorem."
   ]
 }

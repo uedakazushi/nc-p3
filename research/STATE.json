@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 45,
+  "version": 46,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -762,6 +762,25 @@
         "thm:symmetric-frobenius-chart"
       ],
       "review_scope": "New support and full-relation quotient argument checked by multiple internal readers; prior dependency chain not exhaustively re-audited, no formal proof or external peer review."
+    },
+    {
+      "id": "TWO-WINDOW-EXT-COMPLEX",
+      "status": "proved_and_exact_controls",
+      "statement": "Four-term bimodule Koszul formula computes Ext(DB,M). The ordinary iterations are path components of the explicitly presented tensor algebra. Once the first step is pure, later obstructions are ordinary higher Tors of tensor powers. A finite leading-triple count certifies the quadratic PBW branch in all degrees.",
+      "proof": "sections/two_window_ext.tex",
+      "verification": [
+        "computations/verify_two_window_ext.py",
+        "research/two_window_ext_certificate.json"
+      ]
+    },
+    {
+      "id": "AS-OPPOSITE-RANK-AND-POINT-INCIDENCE",
+      "status": "proved",
+      "statement": "Every standard AS object has rho>=4. In rank four every adjacent point correspondence has positive dimension. At rank five a finite correspondence requires the two cubic-minor span dimensions to sum to at most 20, including nonreduced intersections. For rho four the point scheme is a fiber product of kernel and image plane maps. Constant-plane fibers have the listed full-column-rank Kronecker types; a moving plane yields paired lines on the determinant surfaces. Both determinant quartics cannot be smooth.",
+      "proof": "sections/opposite_evaluation.tex",
+      "verification": [
+        "computations/verify_incidence_cubics.py"
+      ]
     }
   ],
   "document_paths": {
@@ -825,26 +844,24 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "a08d1f97941861681762c62197254ece126c7479",
+  "reviewed_source_commit": "44bb4a7cccbbc1c5333c794c12bb7486356cc408",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
   "cloud_codex_status": "Repository-side Cloud guidance and preflight added; actual Cloud environment publishing, TeX tools and Git push permissions are not verifiable from repository alone.",
   "resume_point": {
     "task_id": "Z4-AS-004",
-    "status": "active_global_as_recognition_outside_symmetric_closure",
+    "status": "active_rank_four_incidence_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "For the 56-dimensional B from two windows, explicitly compute the right-B-module Ext recurrence M0=B, Mnext=Ext^3_B(DB,M). Find a structurally described class containing B, stable under Ext^3 and with Ext^0,1,2 vanishing; prove propagation on a selected branch or exhibit a finite obstruction. In parallel stratify LOW-UNCLASSIFIED outside Zsym by rho, dimensions/maximal ranks of signed witness spaces and kernel/image incidence; keep all exceptional ranks and denominators.",
+    "immediate_next_action": "At rho=4 impose adjacent cut rank six and cubic overlap four on each listed constant-plane Kronecker block; for moving planes compare the two ruled determinant surfaces. At rho=5 use the cubic-minor dimension bound. For recognition outside the certified PBW branch, test propagation by ordinary path-row modules.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/cut_serre_criterion.tex",
-      "research/notes_ja.tex",
-      "research/classification_branches.json",
-      "sections/frobenius_tensor.tex",
-      "sections/singular_transfer_planes.tex"
+      "sections/opposite_evaluation.tex",
+      "sections/two_window_ext.tex",
+      "research/classification_branches.json"
     ],
     "known_obstruction": "No uniform finite Koszul/Serre cutoff or effective global regularity criterion is proved; finite-dimensional B and seven-degree tests do not suffice. Other low-rank components and high-rank witness-free regions remain unclassified.",
-    "state_of_claim": "AS intersection Zsym equals S by the new complete source proof. The Ext recurrence is a reformulation of the existing Serre criterion; the stable-class propagation theorem and outside-Zsym coverage remain open.",
+    "state_of_claim": "The symmetric closure is settled. Rho=3 is excluded on AS and all four rho=4 point incidences have positive dimension. Explicit Ext recurrence and finite PBW branch certificate; the general propagation criterion and orbit coverage remain open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
