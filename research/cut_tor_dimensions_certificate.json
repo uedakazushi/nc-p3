@@ -1,0 +1,194 @@
+{
+  "result": "PASS",
+  "arithmetic": "exact integer dimensions and edge counts",
+  "all16_vertex_pairs": [
+    {
+      "start": 0,
+      "end": 0,
+      "internal_degree": 4,
+      "dimensions": {
+        "0": 1,
+        "1": 16,
+        "2": 60,
+        "3": 80
+      },
+      "top_signed_euler": 35
+    },
+    {
+      "start": 0,
+      "end": 1,
+      "internal_degree": 5,
+      "dimensions": {
+        "1": 8,
+        "2": 104,
+        "3": 360,
+        "4": 320
+      },
+      "top_signed_euler": 56
+    },
+    {
+      "start": 0,
+      "end": 2,
+      "internal_degree": 6,
+      "dimensions": {
+        "2": 36,
+        "3": 400,
+        "4": 1080,
+        "5": 800
+      },
+      "top_signed_euler": 84
+    },
+    {
+      "start": 0,
+      "end": 3,
+      "internal_degree": 7,
+      "dimensions": {
+        "3": 120,
+        "4": 1040,
+        "5": 2400,
+        "6": 1600
+      },
+      "top_signed_euler": 120
+    },
+    {
+      "start": 1,
+      "end": 0,
+      "internal_degree": 3,
+      "dimensions": {
+        "0": 4,
+        "1": 24,
+        "2": 40
+      },
+      "top_signed_euler": 20
+    },
+    {
+      "start": 1,
+      "end": 1,
+      "internal_degree": 4,
+      "dimensions": {
+        "0": 1,
+        "1": 32,
+        "2": 156,
+        "3": 160
+      },
+      "top_signed_euler": 35
+    },
+    {
+      "start": 1,
+      "end": 2,
+      "internal_degree": 5,
+      "dimensions": {
+        "1": 8,
+        "2": 144,
+        "3": 480,
+        "4": 400
+      },
+      "top_signed_euler": 56
+    },
+    {
+      "start": 1,
+      "end": 3,
+      "internal_degree": 6,
+      "dimensions": {
+        "2": 36,
+        "3": 400,
+        "4": 1080,
+        "5": 800
+      },
+      "top_signed_euler": 84
+    },
+    {
+      "start": 2,
+      "end": 0,
+      "internal_degree": 2,
+      "dimensions": {
+        "0": 6,
+        "1": 16
+      },
+      "top_signed_euler": 10
+    },
+    {
+      "start": 2,
+      "end": 1,
+      "internal_degree": 3,
+      "dimensions": {
+        "0": 4,
+        "1": 48,
+        "2": 64
+      },
+      "top_signed_euler": 20
+    },
+    {
+      "start": 2,
+      "end": 2,
+      "internal_degree": 4,
+      "dimensions": {
+        "0": 1,
+        "1": 32,
+        "2": 156,
+        "3": 160
+      },
+      "top_signed_euler": 35
+    },
+    {
+      "start": 2,
+      "end": 3,
+      "internal_degree": 5,
+      "dimensions": {
+        "1": 8,
+        "2": 104,
+        "3": 360,
+        "4": 320
+      },
+      "top_signed_euler": 56
+    },
+    {
+      "start": 3,
+      "end": 0,
+      "internal_degree": 1,
+      "dimensions": {
+        "0": 4
+      },
+      "top_signed_euler": 4
+    },
+    {
+      "start": 3,
+      "end": 1,
+      "internal_degree": 2,
+      "dimensions": {
+        "0": 6,
+        "1": 16
+      },
+      "top_signed_euler": 10
+    },
+    {
+      "start": 3,
+      "end": 2,
+      "internal_degree": 3,
+      "dimensions": {
+        "0": 4,
+        "1": 24,
+        "2": 40
+      },
+      "top_signed_euler": 20
+    },
+    {
+      "start": 3,
+      "end": 3,
+      "internal_degree": 4,
+      "dimensions": {
+        "0": 1,
+        "1": 16,
+        "2": 60,
+        "3": 80
+      },
+      "top_signed_euler": 35
+    }
+  ],
+  "one_return_cut_covers_all_internal_degrees_through7": true,
+  "degree8_requires_multiple_return_parts": true,
+  "limits": [
+    "No differential matrices or their ranks are calculated.",
+    "This is a degree<=7 Koszul truncation criterion, not a full Koszul or AS certificate."
+  ]
+}

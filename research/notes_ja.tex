@@ -8,7 +8,7 @@
 \newcommand{\PGL}{\operatorname{PGL}}
 \title{nc-p3研究ノート：周期構造・局所変形・未解決の障害}
 \author{}
-\date{2026年11月17日\quad 第38版}
+\date{2026年11月22日\quad 第39版}
 \begin{document}
 \maketitle
 \section{記法と確実性}
@@ -543,6 +543,20 @@ $\operatorname{im}Q(x)=\ker P(x)$が全てその三空間に入り、$G$の行�
 $(P,Q)$を$(Q^{\mathsf T},P^{\mathsf T})$へ変えれば、極化恒等式と必要な非退化性は保たれるので、
 同じ証明で$s=4$も除ける。
 
+
+\paragraph{単一隣接正証明書の可換加群表示。}
+二つの対称因子を$V$とし、第三切断の階数6の分解から
+$P(x):k^6\to W$, $Q(x):U^*\to k^6$を取ると、
+$P(x)Q(y)=P(y)Q(x)$となる。
+従って次数0,1,2を$U^*,k^6,W$、高次を零とし、一次式を順に$Q(x),P(x),0$で作用させれば、
+$R=\operatorname{Sym}(V^*)$上の次数付き加群$\mathcal M$を得る。
+そのHilbert列は$(4,6,4)$であり、切断階数6と一因子階数4から次数0で生成される。
+$Q(x)$の共通核と$P(x)$の共通核はそれぞれ一因子階数4と階数分解の非退化性から零なので、
+$\operatorname{soc}\mathcal M=\mathcal M_2$である。
+また$L=R_0(w)^\perp\cap\operatorname{Sym}^2(V^*)$は四次元であり、$L\mathcal M=0$である。
+これは指定した正証明書のもとでの表示であり、加群の存在だけをAS十分条件とせず、
+証明書の選択を忘れた完全なindexed同型不変量とも主張しない。
+次はこの加群が完全対称CIの標準切断加群へ延長される条件を調べる。
 
 \section{再開時の使い方}
 次の課題と優先順位は\path{research/plan_ja.tex}に集約する。

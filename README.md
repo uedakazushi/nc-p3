@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の周期構造と代数的変形
 
-**2026-11-17 / v38。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v39。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 最初に読む
 
@@ -203,3 +203,7 @@ python3 computations/verify_negative_witness_rigidity.py --output research/negat
 # Optional exact eight-variable rank; exclusion theorem no longer depends on it
 python3 computations/verify_trivial_extension_bitor.py --field eight --frame ternary --point-quotient --last-only --composition-check structural --output research/trivial_extension_bitor_eight_certificate.json
 ```
+
+任意の有限Frobenius標準四窓も、一辺切断した32次元四層代数のtrivial extensionとして表せる。
+四切断の戻り辺一回Torは内部次数7以下を覆い、最大の次元列は120,1040,2400,1600となる。
+この次数7までの検査は全Koszul性の十分条件ではなく、現在の検算は次元とEuler標数のみである。

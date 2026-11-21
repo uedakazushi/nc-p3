@@ -1,0 +1,79 @@
+\section{一般四窓の切断と七次までの共通Tor検査}
+\label{sec:general-cut-trivial-extension}
+三因子対称性を使わずにも、戻り辺の切断は有限Frobenius候補全体に適用できる。
+ここでは有限次数での必要条件を整理し、全Koszul性の有限判定とは区別する。
+
+\begin{proposition}[任意の一辺切断によるtrivial extension]
+\label{prop:general-cut-trivial-extension}
+標準Frobenius四窓を折り畳んだ代数$E(w)$で、次数一の四辺のうち一辺を選ぶ。
+その辺を通らない経路の部分代数を$A$とすると、$A$は32次元の四層二次Koszul代数で、
+大域次元は3以下である。また
+\[
+ E(w)\simeq A\ltimes DA
+\]
+が成り立つ。$A$の長さ$r$成分の双対には次数$4-r$を入れる。
+四つの切断のいずれでもこの表示を取れる。
+これは一般対象に可換性・domain・noetherian性を加える主張ではない。
+\end{proposition}
+\begin{proof}
+切断後の頂点を$0,1,2,3$の順に置く。
+$A$の次数別次元は$4,12,12,4$であり、全次元は32である。
+端点と長さを固定した経路は切断辺を通る回数が一定なので、
+二次関係を課しても「切断辺を通らない部分」と「一回通る部分」の直和は保たれる。
+前者は四層の二次表示を持つ部分代数であり、補題\ref{lem:four-layer-koszul}を適用できる。
+後者を$M$と書くと$E=A\oplus M$で、$M$は双加群イデアルである。
+切断辺を二回通る経路の長さは5以上であり、$E$の五次以上は零なので$M^2=0$である。
+
+標準traceの巡回恒等式から、四頂点のtraceの和$\lambda$は対称なFrobenius形式を与える。
+$\lambda(AA)=0$、$\lambda(MM)=0$なので、完全対合は$A$と$M$を完全に対合させる。
+写像$m\mapsto(a\mapsto\lambda(am))$は$M\simeq DA$を与え、
+traceの巡回性から左右の$A$作用を保つ。次数は$\lambda$の次数4から決まる。
+従って平方零拡大の積は通常のtrivial extensionの積そのものである。
+\end{proof}
+
+切断後の位置$i,j\in\{0,1,2,3\}$を固定し、$d=4+j-i$と置く。
+左右のKoszul分解を使って命題\ref{prop:one-return-bar-tor}の一回部分を計算する。
+$h$番目の項$K_h^{i,j}$では、左右のKoszul次数を$p,q$として
+\[
+ p+q=h,\qquad 0\leq p\leq3-i,\quad0\leq q\leq j,
+ \qquad r=i-j+h
+\]
+となり、中央係数は長さ$r$の$A$成分の双対である。
+$h_r=(1,4,6,4)_r$とし、範囲外では$h_r=0$と定めれば
+\[
+ \dim K_h^{i,j}
+ =h_{i-j+h}\!!\sum_{\substack{p+q=h\\p\leq3-i,\ q\leq j}}
+       \binom{p+3}{3}\binom{q+3}{3}.
+\]
+ここでKoszul空間の次元$1,4,10,20$は、$A$のHilbert行列の逆行列から従う。
+異なる窓の空間を同一視することは仮定していない。
+
+\begin{proposition}[七次切断の必要十分な共通検査]
+\label{prop:cut-tor-through-seven}
+四つの切断それぞれで、全16組$(i,j)$の上の複体が最上次数$d-1$より下で正確であることは、
+$E(w)$の内部次数$1\leq d\leq7$で$\operatorname{Tor}_{n,d}^{E(w)}=0$ ($n\ne d$)となることと同値である。
+正確な場合の最上ホモロジー次元は$\binom{d+3}{3}$である。
+特に$d=7$の一回部分は、零でない項の次元が
+\[
+ (\dim K_3,\dim K_4,\dim K_5,\dim K_6)=(120,1040,2400,1600)
+\]
+となる小複体で検査できる。
+この有限検査だけから全Koszul性やAS正則性は結論しない。
+\end{proposition}
+\begin{proof}
+一回部分の内部次数は$4+j-i$、最上Koszul次数は$3+j-i=d-1$である。
+そのホモロジーは$E$の$\operatorname{Tor}_{h+1,d}$の対応する直和因子となる。
+長さ7以下の有向四周期経路では、少なくとも一つの辺をちょうど一回通る。
+その辺で切れば、端点と内部次数を固定した被約バー複体全体が戻り辺一回部分になる。
+従って四切断の検査は内部次数7以下の全Tor成分を覆い、述べた同値を得る。
+最上次数の符号を正に取った上の次元公式のEuler標数は
+$\sum_h(-1)^{d-1-h}\dim K_h^{i,j}=\binom{d+3}{3}$である。
+これは$0\leq i,j\leq3$の有限和で直接計算でき、$d=7$の表示も同じ公式による。
+
+長さ8では全ての辺を二回通る経路があり、一回部分では覆えない。
+また、より高次の非線型Torの消滅はここでは証明していないので、全Koszul性の十分条件とはしない。
+\end{proof}
+
+\path{computations/verify_cut_tor_dimensions.py}は全16組の項次元とEuler標数、
+長さ7までの全始点の経路に一回辺があることを整数で検算する。
+これは行列の階数や実際の複体の正確性を検算するものではない。

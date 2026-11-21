@@ -1,110 +1,63 @@
 {
   "schema_version": 2,
-  "date": "2026-11-17",
-  "version": 38,
+  "date": "2026-11-22",
+  "version": 39,
   "reviewed_input": {
-    "source_commit": "6d7791c32f6722227badf49cdb0114e69bbf51db"
+    "source_commit": "f71afaa42cee8880fd86284bf011f9767c1d651a"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Proved the three normal forms for partially alternating tensors with the other pair ranks6, and excluded both compression forms from finite Frobenius using nine explicit cubic monomials. A single negative invertible witness now recognizes the polynomial class. Also established opposite positive witnesses on the known signed-Ore chart, so the residual single-positive AS branch is nonempty. Full classification remains open.",
+    "scope": "General one-edge trivial-extension description for all finite-Frobenius standard four-windows, and a common Tor-diagonality criterion only through internal degree7. Added the specified-positive-witness commutative464 module construction as a research note. Full classification and full Koszul criterion remain open.",
     "new_mathematical_theorem": true
   },
   "checks": [
     {
       "command": "bash scripts/cloud_preflight.sh",
       "result": "PASS",
-      "scope": "Python/SymPy and project source structure only."
+      "scope": "Python3.12.14, SymPy1.14.0 and source structure."
     },
     {
-      "command": "PYTHONPATH=/workspace/.cache/nc-p3-python python3 computations/verify_trivial_extension_bitor.py --field ci --output research/trivial_extension_bitor_ci_certificate.json",
+      "command": "python3 computations/verify_cut_tor_dimensions.py --output research/cut_tor_dimensions_certificate.json",
       "result": "PASS",
-      "scope": "Direct zero compositions, ranks8/136/344, H=(0,0,0,56); positive complete-intersection control."
-    },
-    {
-      "command": "PYTHONPATH=/workspace/.cache/nc-p3-python python3 computations/verify_trivial_extension_bitor.py --field two --output research/trivial_extension_bitor_two_certificate.json",
-      "result": "PASS",
-      "scope": "Exact QQ(u,v), direct zero compositions, ranks8/136/337, H=(0,0,7,63). No sample-based generic inference."
+      "scope": "All16 vertex pairs: exact integer dimensions, Euler coefficients and every path/start through degree7 admits a cut traversed once. Known quartic/quintic dimensions match; degree8 has two visits to every edge. No differential rank or actual Koszul exactness is checked."
     },
     {
       "command": "python3 scripts/check_project.py; git diff --check",
       "result": "PASS",
-      "scope": "Source structure only; no TeX compilation or formal proof."
-    },
-    {
-      "command": "PYTHONPATH=/workspace/.cache/nc-p3-python python3 computations/verify_basepoint_length_two.py --output research/basepoint_length_two_certificate.json",
-      "result": "PASS",
-      "scope": "Exact CI/two-distinct-point/nonreduced fixtures, direct zero compositions; quartic top homology35/46/84 and direct length-two witnesses. Not a sample-based proof of the universal bound42."
-    },
-    {
-      "command": "PYTHONPATH=/workspace/.cache/nc-p3-python python3 computations/verify_trivial_extension_bitor.py --field two --frame ternary --point-quotient --last-only --output research/trivial_extension_bitor_quotient_certificate.json",
-      "result": "PASS",
-      "scope": "Exact ternary frame, original cubic equations, point-subcomplex preservation, direct quotient zero compositions, rational reference d3 rank107, exact QQ(u,v) quotient d4 rank286; reconstructed full ranks8/136/337."
-    },
-    {
-      "command": "PYTHONPATH=/workspace/.cache/nc-p3-python python3 computations/verify_trivial_extension_bitor.py --field eight --frame ternary --point-quotient --last-only --composition-check structural",
-      "result": "SUPERSEDED_TERMINATED",
-      "scope": "Exact frame, point preservation and reference d3 rank passed; d4 elimination did not finish. Terminated because the universal exclusion and required rank upper bound are now proved structurally; no exact-rank certificate is claimed."
-    },
-    {
-      "command": "PYTHONPATH=/workspace/.cache/nc-p3-python python3 computations/verify_one_return_involution.py --output research/one_return_involution_certificate.json",
-      "result": "PASS",
-      "scope": "Exact Boolean-point involution squared identity, commutation with all differentials, eigenspace dimensions and ranks; H3 split1+6."
-    },
-    {
-      "command": "PYTHONPATH=/workspace/.cache/nc-p3-python python3 computations/verify_one_return_involution.py --fixture generic --output research/one_return_involution_generic_certificate.json",
-      "result": "PASS",
-      "scope": "Independent non-Boolean product-net parameters2,5,11,3,7,17,23,31: all involution identities, dimensions and ranks; H3 split1+6. The universal lower bound5 is proved, not inferred from the fixtures."
-    },
-    {
-      "command": "python3 computations/verify_single_negative_slice.py --output research/single_negative_slice_certificate.json",
-      "result": "PASS",
-      "scope": "Exact opposite rank-six factorization, all polarized zero-composition identities, all maximal minors zero and rank-three witness for the alternating determinant control. Not a proof that every matrix slice is polynomial."
-    },
-    {
-      "command": "PYTHONPATH=/workspace/.cache/nc-p3-python python3 computations/verify_negative_witness_rigidity.py --output research/negative_witness_rigidity_certificate.json",
-      "result": "PASS",
-      "scope": "Pfaffian matrix identities, generated Clifford algebra dimension64, identity-wedge opposite rank16, singleton/cut ranks of all three normal forms, exact W3/W4 and complete cubic kernel bases; compression forms fail Frobenius."
-    },
-    {
-      "command": "python3 computations/verify_opposite_witness_ore.py --output research/opposite_witness_ore_certificate.json",
-      "result": "PASS",
-      "scope": "All12-parameter swap02/swap13 polynomial identities; independent top-tensor reconstruction at two fixtures, rho8 and positive/negative witness tests. Existing all-fiber AS theorem supplies regularity."
-    },
-    {
-      "command": "bash scripts/cloud_preflight.sh --tex",
-      "result": "BLOCKED_TEX_DEPENDENCY",
-      "scope": "Current Python/SymPy/source checks pass; ltjsarticle.cls is still missing. No PDF compilation or visual check."
+      "scope": "Current paths, JSON, TeX references and whitespace only."
     }
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed bar count direct-summand preservation, homological shift by one, two-sided projective resolution, internal-degree-five position constraints, both contraction signs, d2 surjectivity, Euler characteristic, and rank-specialization on the universal cubic-frame bundle. No identification of the seven commutative syzygies with this Tor is claimed. Reviewed point side-complex homology7 and3, independent cube kernels for two points, the jet filtration with truncated quotient and length-two bound42, absence of incoming top differential, conversion to the quartic35 obstruction, and the generic regular-sequence/smooth incidence proof of reduced-net coverage. Reviewed the seven ternary elimination conditions and point-quotient rank identities. Reviewed signed word reversal with tau interchanging first/last deconcatenations, the Koszul sign (-1)^(ab), point-subcomplex preservation, eigenspace dimensions60/200/135 including twisted flip on Q2, and Euler boundH3>=5. Reviewed conversion to nonlinear Tor4,5 and two-positive AS recognition. No full tensor-classification or exact generic rank claim. Reviewed adjacent-transposition action on pair-cut ranks, polarized skew identity from the rank factorization, and the rank-one matrix-space dichotomy excluding generic rank1; this leaves exactly six necessary rank pairs. Reviewed the rank2 normal form, D=0 and CB=0 from Schur-complement coefficients, rank1-space dichotomy for C, and the three-variable row b(x) producing a forbidden common kernel; applied also to Q transpose. Retained the independent Pluecker-gcd rank4 exclusion as an auxiliary note. Reviewed nonconstant outer kernel maps and Klein rank2 condition; rank3 adjugate exclusion; rank2 square compression via CAB=0; the two three-space normalizations and shear elimination; the split Clifford algebra Mat8 and parity-preserving-or-swapping conjugacy of matrix factorizations; exclusion of identity wedge by opposite rank16; and the explicit nine-monomial cubic intersection obstruction after canonical cyclic reordering. No formalization or independent referee review."
+    "scope": "Reviewed cut-count grading, square-zero return ideal, cyclic trace bimodule identification withDA, quadraticity of the acyclic cut, two-sided Koszul resolution bounds, and edge-count coverage for all Tor components through degree7. Reviewed the specified-positive commuting464 module construction and its generation/socle arguments. No formalization or independent referee review."
   },
   "tex": {
-    "result": "BLOCKED_TEX_DEPENDENCY",
-    "scope": "Current --tex preflight confirms ltjsarticle.cls missing; no PDF generated."
+    "result": "NOT_RUN",
+    "scope": "Last preflight found ltjsarticle.cls missing; no current PDF generated."
   },
   "visual_inspection": {
     "result": "NOT_RUN"
   },
   "literature_review": {
-    "result": "NOT_USED_FOR_NEW_THEOREMS",
-    "scope": "A Bertini source lookup did not yield a verified primary text; the reduced-net statement instead has a self-contained smooth incidence/generic-fiber argument. Signed-reversal and matrix-slice proofs are written directly. Novelty remains unconfirmed."
+    "result": "NOT_RUN_THIS_CHECKPOINT",
+    "scope": "Cut and Tor arguments are proved directly from existing repository lemmas. No novelty claim."
   },
   "github_save": {
-    "result": "PASS",
-    "branch": "main",
-    "verified_commit": "a1756f7aa4541f31232a730c83c8c6a95807f43a",
-    "scope": "Fetched origin/main with exact HEAD equality; universal partial-symmetry proof, single-negative rigidity proof, STATE and normal-form certificate read back byte-for-byte. Full classification remains open."
+    "result": "PENDING",
+    "branch": "main"
   },
   "library_save": {
     "result": "not_attempted",
     "scope": "GitHub-first policy."
   },
   "open_mathematics": [
-    "Adjacent single-positive witness propagation or counterexamples at rho6.",
-    "Exhaustive classification of opposite-positive and fully witness-free AS tensors, especially rho3/4/5.",
-    "Full indexed moduli, components and complete classification remain unresolved."
-  ]
+    "Adjacent single-positive propagation or exact counterexamples.",
+    "General-cut differential ranks, especially degrees6/7, are not implemented in the new dimension verifier.",
+    "Degree<=7 Tor diagonality is not proved sufficient for full Koszulity.",
+    "Full classification remains unresolved."
+  ],
+  "pause": {
+    "requested_by_user": true,
+    "scope": "Pause after saving this mathematical checkpoint."
+  }
 }

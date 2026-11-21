@@ -1,8 +1,8 @@
 {
   "schema_version": 3,
   "project_id": "nc-p3",
-  "date": "2026-11-17",
-  "version": 38,
+  "date": "2026-11-22",
+  "version": 39,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -657,6 +657,22 @@
       "statement": "All parameters of the known signed anticommutative Ore chart have top tensors invariant under02 and13 swaps. For nonzero outerG, rho8 and exactly the opposite positive position can contain invertibles; no negative witness exists. This shows the single-positive AS branch is genuinely nonempty and must not be universally excluded.",
       "proof": "sections/anticommutative_ore.tex:prop:ore-opposite-positive-witness",
       "verification": "computations/verify_opposite_witness_ore.py; research/opposite_witness_ore_certificate.json"
+    },
+    {
+      "id": "GENERAL-CUT-TOR-THROUGH-SEVEN",
+      "status": "proved_dimension_and_coverage_checks_passed",
+      "statement": "Every standard finite-Frobenius folded four-window algebra is the ordinary graded trivial extension of any one-edge acyclic cut A, dimA32, A quadratic Koszul gldim<=3. For all four cuts the one-return bimodule Tor complexes cover every internal degree<=7. Vanishing below their tops is equivalent to Tor diagonality through degree7, not full Koszulity. The universal dimension formula gives maximal degree7 dimensions120,1040,2400,1600 and top Euler120. Only dimensions/edge coverage are computationally checked; general differential ranks are not.",
+      "proof": "sections/general_cut_trivial_extension.tex:prop:general-cut-trivial-extension and prop:cut-tor-through-seven",
+      "verification": [
+        "computations/verify_cut_tor_dimensions.py",
+        "research/cut_tor_dimensions_certificate.json"
+      ]
+    },
+    {
+      "id": "SINGLE-POSITIVE-COMMUTATIVE-MODULE",
+      "status": "construction_proved_not_AS_classification",
+      "statement": "A specified adjacent positive witness with opposite cut rank6 gives commuting P(x)Q(y) and a commutative R-module of Hilbert464 generated in degree0 with socle exactly degree2 and annihilated by the four-quadric L. This is a representation depending on the specified witness, not a full indexed invariant or AS criterion.",
+      "proof": "research/notes_ja.tex: paragraph 単一隣接正証明書の可換加群表示"
     }
   ],
   "document_paths": {
@@ -720,27 +736,28 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "6d7791c32f6722227badf49cdb0114e69bbf51db",
+  "reviewed_source_commit": "f71afaa42cee8880fd86284bf011f9767c1d651a",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
   "cloud_codex_status": "Repository-side Cloud guidance and preflight added; actual Cloud environment publishing, TeX tools and Git push permissions are not verifiable from repository alone.",
   "resume_point": {
     "task_id": "Z4-AS-004",
-    "status": "two_positive_and_any_negative_AS_branches_settled",
+    "status": "paused_at_user_request_after_general_cut_checkpoint",
     "objective": "Classify the remaining AS tensors with no negative invertible symmetrizer and at most one positive invertible symmetrizer; the low-rank witness-free region remains the principal coverage hole.",
-    "immediate_next_action": "Investigate a single ADJACENT positive witness at rho6: after identifying the adjacent factors, w is in Sym^2 V tensor V2 tensor V3, and an opposite-cut rank factorization gives P(x)Q(y)=P(y)Q(x). The four-variable4x6 nondegeneracy lemma forces both generic ranks>=3; determine whether AS/Koszul conditions force a second positive witness (hence symmetric CI) or find an exact counterexample. Do NOT try to exclude all single-positive witnesses: the already regular signed Ore chart with nonzeroG has rho8, opposite02/13 symmetry, and precisely one positive anchor position. Also study the no-adjacent-witness rho3/4/5 region separately. The entire negative-witness branch and all basepoint three-factor-symmetric candidates are already settled.",
+    "immediate_next_action": "Resume the single-adjacent-positive branch via the commutative R-module Hilbert464 constructed in research/notes_ja.tex. Determine whether finite-Frobenius/Koszul conditions force extension to the symmetric CI truncation (a second positive witness), or produce an exact counterexample. As a common verification tool, implement the actual general-cut one-return differential matrices in sections/general_cut_trivial_extension.tex, first degree6/7 on the already regular Ore controls; only their universal dimensions and degree coverage were checked. These finite tests are not a full Koszul certificate. Preserve the known opposite-positive rho8 signed-Ore family, so do not try to exclude all single-positive AS objects.",
     "read_first": [
       "research/plan_ja.tex",
       "AGENTS.md",
-      "sections/single_negative_rigidity.tex",
+      "sections/general_cut_trivial_extension.tex",
+      "research/notes_ja.tex",
       "sections/partial_symmetric_as.tex",
-      "sections/anticommutative_ore.tex",
-      "research/classification_branches.json"
+      "sections/anticommutative_ore.tex"
     ],
     "known_obstruction": "No proof that an adjacent positive witness propagates. Opposite-positive and witness-free AS objects exist in known higher-rank charts, but no exhaustive low-rank residual atlas is proved. Full classification and component geometry remain open.",
     "state_of_claim": "Basepoint partial-symmetric exclusion and single-negative rigidity are proved without domain/noetherian/PBW assumptions on the target class. Normal-form exhaustiveness is analytical; exact fixtures verify Pfaffian identities, Clifford matrix-algebra dimension64 and compression intersection failure. Existing signed Ore examples anchor a nonempty single-positive branch. No claim that every low-rank AS object lies in symmetric or polynomial branches.",
-    "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
+    "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log.",
+    "pause_reason": "User requested a pause at a natural stopping point; completed the general-cut lemma and dimension/coverage verifier, then saved the current resume point."
   },
   "execution_policy": {
     "goal": "Continue useful mathematical work across subproblems until classification completes or actual Cloud/runtime/access constraints stop the current task.",
