@@ -1,49 +1,55 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 44,
+  "version": 45,
   "reviewed_input": {
-    "source_commit": "989a6e38b1d5ba17a44eb07d272fc4f65bf27565"
+    "source_commit": "a08d1f97941861681762c62197254ece126c7479"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All-rank-two coherent transfer tuples excluded in the residual of the symmetric closure; an adjacent two-dimensional rank-one pencil and a projected binary normal form are necessary."
+    "scope": "Fixed the immutable shortest-route complete-classification goal and excluded interim publication from research objectives. Updated the current plan, instructions, atlas and resume point. Added thm:symmetric-closure-as-exact and the Ext-recurrence reformulation. Moved the complete main manuscript to papers/nc-p3.tex without deleting existing mathematics."
   },
   "checks": [
     {
-      "command": "python3 computations/verify_transfer_plane_patterns.py",
+      "command": "python3 scripts/check_project.py",
       "result": "PASS",
-      "scope": "Enumerated all 625 labeled local partitions, with 29 satisfying the composition implication; common-kernel counts 12,16,1. Verified all maximal minors of the projected binary pencil symbolically. Two independent runs produced byte-identical JSON."
+      "scope": "Current paths, all JSON, tasks, expanded TeX inputs, labels and citations; not a mathematical proof."
     },
     {
-      "command": "bash scripts/cloud_preflight.sh --tex and git diff --check",
+      "command": "git diff --check",
       "result": "PASS",
-      "scope": "Repository structure, plan compilation, references and whitespace."
+      "scope": "Whitespace and patch consistency."
     }
   ],
   "proof_review": {
-    "result": "TARGETED",
-    "scope": "Checked the binary quartic middle-image argument, plane composition identities and common kernels. Checked rank-one covector factoring after reversal, consecutive-relation obstruction on the binary restriction, independence of the three coefficients and the inverse-image hyperplane. No external peer review or formal verification."
+    "result": "TARGETED_INTERNAL_REVIEW",
+    "scope": "Multiple internal readers checked the new symmetric-closure exclusion in the actual source: support of c, consecutive pure relations, full relation-space quotient, exact triple-block intersection, growth bound4096>2925, opposite-algebra convention. Also checked the Ext recurrence shifts and induction. Existing dependency proofs were not exhaustively re-audited. No formal proof or external peer review."
+  },
+  "mathematical_computation": {
+    "result": "NOT_RUN_THIS_CHECKPOINT",
+    "scope": "No new matrix, symbolic-family or repository-wide mathematical verification scripts were run. The new result is a structural proof and uses existing manuscript theorems; simple dimension and integer inequalities were checked in the proof review."
   },
   "tex": {
     "result": "PASS",
-    "scope": "Clean rebuild of Japanese paper (101 pages), plan (6), notes (11); final logs contain no undefined references or overfull boxes."
+    "scope": "LuaLaTeX/latexmk rebuilt the main manuscript103 pages, plan5 pages and notes12 pages. Final logs: no unresolved references/citations, overfull boxes or missing glyphs. Font substitutions and bookmark/legacy-command warnings remain. VS Code recipe-equivalent command succeeded; VS Code UI was not tested.",
+    "environment": "The host default lacked lualatex.fmt; an existing complete TeX runtime and writable font cache were used for the successful builds. Normal reproduction requires LuaLaTeX, latexmk, LuaTeX-ja and Harano Aji; no machine-specific path was written into tracked build settings.",
+    "synctex": "PDF and SyncTeX share root build/. Main-source lookup and recorded fragment-path lookup succeeded. This runtime records fragments with build/../sections; normalized-path CLI lookup returned No tag. VS Code synchronization is not claimed as UI-tested."
+  },
+  "visual_inspection": {
+    "result": "PASS",
+    "scope": "Rendered and inspected manuscript first page and new-proof pages76-77, all5 plan pages, notes pages11-12. No clipping, overlap or missing text observed in these pages."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT",
-    "scope": "Uses internal theorems and explicit computations. No novelty determination."
+    "scope": "The new argument uses current internal results. No independent novelty determination or external-source claim was added."
   },
   "github_save": {
-    "result": "PASS",
-    "verified_research_commit": "3e03a030e06e549061a052382f748718e4d0a059",
-    "scope": "Fetched GitHub main after fast-forward push. Matched HEAD and compared all 17 changed research, source and metadata files since v42 byte for byte with the fetched commit."
+    "result": "PENDING_THIS_CHECKPOINT",
+    "scope": "Must verify the normal main update and changed source bytes after saving; not yet recorded as successful."
   },
   "open_mathematics": [
-    "Existence of AS objects with the required common-image rank-one pencil in the symmetric boundary remains open.",
-    "Other low-rank components and the complete standard AS classification are unresolved."
-  ],
-  "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected rendered page 75 with the projected normal form and its proof."
-  }
+    "All-degree AS recognition on general two-window inputs remains ineffective; no uniform finite cutoff is proved.",
+    "Other low-rank components outside Zsym, high-rank coverage, complete orbit classification and global strata remain unresolved.",
+    "The classification goal and scope are fixed; interim publication is not a task."
+  ]
 }

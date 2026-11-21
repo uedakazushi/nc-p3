@@ -26,10 +26,10 @@
 \newcommand{\Sym}{\operatorname{Sym}}
 \newcommand{\HH}{\operatorname{HH}}
 \newcommand{\NF}{\operatorname{NF}}
-\title{非可換射影三空間の周期構造と代数的変形\\
-\large 四窓への還元・Clifford点の変形・楕円Ore族}
+\title{標準14641型AS正則$\mathbb Z$-代数の完全分類に向けて\\
+\large 有限表示・構造分岐・周期構造と代数的変形}
 \author{}
-\date{2026年11月22日\quad 研究原稿 v44\\
+\date{2026年11月22日\quad 研究原稿 v45\\
 \small 全分類およびClifford点の高次障害の決定は未完成}
 \begin{document}
 \maketitle
@@ -38,7 +38,7 @@
 添字保持同型による分類の有限表示と、graded代数には由来しない代数的族を研究する。
 Frobenius traceにより標準4周期構造を構成し、幾何学的同型類・周期判定を四窓へ還元する。
 連続する二つの関係空間から標準延長を復元し、全次数のKoszul性を56次元切断代数の3-representation infinite条件に帰着する。
-中心となる構成は、三生成Clifford部分を動かす九変数の楕円Ore族である。
+具体的な正則族として、三生成Clifford部分を動かす九変数の楕円Ore族を構成する。
 全ファイバーのAS正則性、同型類の像の次元9、一般点の最小周期2を証明する。
 非1周期性は楕円曲線上の12点因子と非零2等分点による平行移動を用いて示す。
 
@@ -55,7 +55,10 @@ Clifford点における接空間9次元から15次元への増大を区別する
 中央三次数の加群の剛性から、対称完全交叉チャート全体が三つの二対二階数を6以下とする表示空間の滑らかな開部分であることを示す。
 一つの可逆な交代化証明書を持つ有限Frobenius候補についても、Klein二次曲面と六次元Clifford代数で三正規形に還元し、
 可換多項式のindexed類だけが有限Frobenius条件を満たすことを示す。
-対称成分の境界に、四位置を三対一または二対二に分ける七つの68次元因子を構成し、各一般点の近傍でAS点が対称チャートに尽きることを示す。同じ閉包内の標準AS点が対称チャートに属することと、いずれか一対に可逆正証明書があることは同値である。一般四窓でも、連続する純粋二次関係から指数成長を導き、標準AS候補を排除できる。
+対称成分の境界には、四位置を三対一または二対二に分ける七つの68次元因子を構成する。
+さらに、特異な同時移送写像と四周期二次商の指数成長を用いて、
+対称閉包内のAS点が対称完全交叉チャートに尽きることを証明する。
+一般四窓でも、連続する純粋二次関係から指数成長を導き、標準AS候補を排除できる。
 九次元の族の像の成分としての最大性、完全な族内同型判定、
 Clifford点の高次障害、全AS正則locusの分類および新規性の最終確認は未完成である。
 \end{abstract}
@@ -169,11 +172,15 @@ Stephenson--Vancliff\cite{SV}も三生成Clifford部分と平面三次曲線を�
 定理\ref{thm:canonical-four}、\ref{thm:finite-period-test}。
 AS正則な標準型対象の同型・周期を有限表示へ還元する。
 一般四窓のAS正則性まで判定したものではない。\\
+対称閉包のAS点 &
+定理\ref{thm:symmetric-closure-as-exact}により
+$\mathrm{AS}\cap Z_{\rm sym}=S$。
+この閉包外の低階数・高階数領域の被覆は未完成。\\
 二つの次元比較 &
 定理\ref{thm:quantum-orbits}、\ref{thm:quantum-local}の$6\to3$は同型類の局所成分。
 定理\ref{thm:clifford-tangent}の$9\to15$は接空間。
 二次障害は定理\ref{thm:clifford-quadratic}、全局所模型は予想\ref{conj:clifford-model}。\\
-中心となる代数的族 &
+認証済みの代数的族 &
 定理\ref{thm:algebraic-seven}、\ref{thm:algebraic-nine}。
 全ファイバー正則性、同型類像の次元、一般最小周期2を別々に証明する。
 七変数族の証明も保持する。\\
@@ -193,47 +200,50 @@ AS正則な標準型対象の同型・周期を有限表示へ還元する。
 四次Koszul検査を全て通る具体的な非Koszul境界を構成する。
 その五次ホモロジーは一始点で7次元となり、一般四窓の正則性判定に残る問題を具体化する。
 
-\input{sections/four_window}
-\input{sections/frobenius_tensor}
-\input{sections/quantum_indexed}
-\input{sections/polynomial_ore}
-\input{sections/anticommutative_ore}
-\input{sections/quantum_ore}
-\input{sections/local_moduli}
-\input{sections/clifford_rank_slice}
-\input{sections/nonkoszul_boundary}
-\input{sections/truncated_quadric_boundary}
-\input{sections/trivial_extension_bitor}
-\input{sections/general_cut_trivial_extension}
-\input{sections/cut_serre_criterion}
-\input{sections/boolean_quadric_boundary}
-\input{sections/reduced_quadric_boundary}
-\input{sections/basepoint_length_two}
-\input{sections/partial_symmetric_as}
-\input{sections/adjacent_square_pencil}
-\input{sections/symmetric_ci_tangent}
-\input{sections/symmetric_boundary_divisors}
-\input{sections/cubic_slice_growth}
-\input{sections/two_pair_boundary}
-\input{sections/adjacent_witness_boundary}
-\input{sections/singular_transfer_planes}
-\input{sections/single_negative_rigidity}
-\input{sections/product_net_boundary}
-\input{sections/ternary_cubic_reduction}
-\input{sections/algebraic_family}
+\input{../sections/four_window}
+\input{../sections/frobenius_tensor}
+\input{../sections/quantum_indexed}
+\input{../sections/polynomial_ore}
+\input{../sections/anticommutative_ore}
+\input{../sections/quantum_ore}
+\input{../sections/local_moduli}
+\input{../sections/clifford_rank_slice}
+\input{../sections/nonkoszul_boundary}
+\input{../sections/truncated_quadric_boundary}
+\input{../sections/trivial_extension_bitor}
+\input{../sections/general_cut_trivial_extension}
+\input{../sections/cut_serre_criterion}
+\input{../sections/boolean_quadric_boundary}
+\input{../sections/reduced_quadric_boundary}
+\input{../sections/basepoint_length_two}
+\input{../sections/partial_symmetric_as}
+\input{../sections/adjacent_square_pencil}
+\input{../sections/symmetric_ci_tangent}
+\input{../sections/symmetric_boundary_divisors}
+\input{../sections/cubic_slice_growth}
+\input{../sections/two_pair_boundary}
+\input{../sections/adjacent_witness_boundary}
+\input{../sections/singular_transfer_planes}
+\input{../sections/single_negative_rigidity}
+\input{../sections/product_net_boundary}
+\input{../sections/ternary_cubic_reduction}
+\input{../sections/algebraic_family}
 
-\input{sections/elliptic_ore_family}
-\input{sections/ore_complete}
-\input{sections/isogeny_invariant}
-\input{sections/nonore_family}
-\input{sections/nonore_period_two}
-\input{sections/ore_boundary}
-\input{sections/nine_closure}
+\input{../sections/elliptic_ore_family}
+\input{../sections/ore_complete}
+\input{../sections/isogeny_invariant}
+\input{../sections/nonore_family}
+\input{../sections/nonore_period_two}
+\input{../sections/ore_boundary}
+\input{../sections/nine_closure}
 
 \section{残る分類問題と検証範囲}
 標準四窓への抽象的な還元は得られたが、一般四窓のKoszul/AS正則locusの
 明示的な必要十分条件、正則な代数的族による全被覆、全閉特殊値、
 相対族の大域的下降、全モジュライの既約成分は未解決である。
+対称閉包の残余は定理\ref{thm:symmetric-closure-as-exact}で排除した。
+残る構造分類は、その閉包外の低階数領域、特に$\rho=3,4,5$と、
+$\rho\ge7$の高階数領域を含む。対称閉包での認識を全分類と同一視しない。
 
 九変数族については、一般点の全変形と既存族の接像を比較し、
 像が成分を尽くすかを決める必要がある。

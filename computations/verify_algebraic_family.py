@@ -2,7 +2,7 @@
 """Exact checks for the seven-parameter algebraic AS-regular Z-family.
 
 This verifies identities over QQ[u,v,r,s,a,b,c], not truncated power series.
-The global AS argument and the open-set nonperiodicity proof are in nc-p3.tex.
+The global AS argument and the open-set nonperiodicity proof are in papers/nc-p3.tex.
 """
 from functools import lru_cache
 from itertools import combinations, combinations_with_replacement

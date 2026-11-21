@@ -15,7 +15,7 @@ Izuru Mori and Adam Nyman, *A categorical characterization of quantum projective
 
 ## 現行プロジェクトと確認範囲
 
-主論文は `nc-p3.tex`、証明の対応表は `research/STATE.json`、検証対象のcommit・コード・実行結果は `research/validation.json` に集約する。
+主原稿は `papers/nc-p3.tex`、証明の対応表は `research/STATE.json`、検証対象のcommit・コード・実行結果は `research/validation.json` に集約する。
 この文書は有効な一次文献、利用箇所、外部依存と未確認点を記す。旧版の取得経緯や先端履歴は蓄積しない。
 
 以下の既存文献の「確認済み」は以前の本文確認記録を含み、今回すべてを再監査したという意味ではない。
@@ -122,7 +122,7 @@ as4のCodex指示はnc-p3の実行指示ではない。
 - D. R. Stephenson, M. Vancliff, *Constructing Clifford quantum P^3s with finitely many points*, Journal of Algebra 312 (2007), 86–110。DOI https://doi.org/10.1016/j.jalgebra.2007.02.015 。出版社要旨・書誌で三次元Clifford部分と平面三次曲線を利用する四次元graded構成を確認。出版社本文は取得できず、定理番号・詳細仮定・証明は今回未確認。現行九変数族の全特殊化との比較も未了。indexed非1周期族がそのままgraded構成に含まれるとは推論しない。
 - V. Bhatoy, C. Ingalls, *Discrete Invariants of Koszul Artin-Schelter Regular Algebras of Dimension four*, arXiv:2602.13178v1 (2026-02-13), https://arxiv.org/html/2602.13178v1 。Introduction、§3、§6の一次本文を確認。既知のgraded族のsuperpotentialをSchur–Weyl分解し幾何的な離散不変量を比較する。対角的な生成空間の同型を扱うため、独立な頂点基底変更を許すindexed同型へ無条件には移せない。同論文の成分数の記述を本稿の全分類の根拠にしない。
 
-公表前の未解決作業は、これらの具体的なgraded族と現行族の1周期的特殊化を照合し、
+全分類で必要になった際の未解決比較は、これらの具体的なgraded族と現行族の1周期的特殊化を照合し、
 非1周期的な一般ファイバー・境界・必要不変量のどこが既知結果を超えるかを明確にすることである。
 
 ## 対称テンソルの独立同値と合同

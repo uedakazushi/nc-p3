@@ -8,7 +8,7 @@
 \newcommand{\PGL}{\operatorname{PGL}}
 \title{nc-p3研究ノート：周期構造・局所変形・未解決の障害}
 \author{}
-\date{2026年11月22日\quad 第43版}
+\date{2026年11月22日\quad 第45版}
 \begin{document}
 \maketitle
 \section{記法と確実性}
@@ -17,7 +17,7 @@ $R_i=\ker(V_i\otimes V_{i+1}\to C_{i,i+2})$とする。
 標準14641型では$\dim V_i=4$、$\dim R_i=6$である。
 同型は添字保持。周期構造を選んだ同型、graded同型、Zhang twist同値、
 $qgr$同値、導来同値、添字移動を割る同値を区別する。
-現行論文は\path{nc-p3.tex}。本文の定理に完全な証明がある場合、本ノートへ重複収録しない。
+現行論文は\path{papers/nc-p3.tex}。本文の定理に完全な証明がある場合、本ノートへ重複収録しない。
 計算補助証明は浮動小数点ではなく有理数・$\mathbb Q(i)$上の有限計算である。
 形式化・第三者査読・新規性確定を意味しない。
 
@@ -478,7 +478,7 @@ trivial extension側のKoszul性は自動ではなく、既知の標本がその
 主論文\texttt{thm:generic-one-point-uniform-exclusion}の半連続性によって、
 この係数族では特殊値も含めて標準型Koszul AS点を排除した。
 一般点では平方型関係から来る六次元部分も単射であり、その商は一次元である。
-ただし一般の一基点四二次式系へはまだ普遍化していない。
+七次元障害の明示生成公式は一般の一基点四二次式系へ未普遍化だが、AS排除は本文の構造的証明で完成している。
 有理関数の純Python消去はGCDが律速となったため、正確な多変数多項式GCDを持つ
 python-flintへ演算を移した。標本の数値化や補間によって結論を置換していない。
 
@@ -560,13 +560,48 @@ $\operatorname{soc}\mathcal M=\mathcal M_2$である。
 完全交叉全体の標準中央加群の剛性は補題\texttt{lem:ci-middle-rigidity}にある。
 依然残るのは、標準加群の開軌道外にある加群がAS条件を満たすかどうかである。
 
-\paragraph{未分類境界の向き付き証明書。}
-対称閉包内のAS残余で可逆対は高々一つである（本文\texttt{thm:no-two-pair-AS-boundary}）。
-隣接可逆対は本文の定理\texttt{thm:one-adjacent-AS-in-symmetric-closure}で排除される。
-向かい合う可逆対が一つ残ると仮定した場合も、相補平面を使った二種類の射影で指数成長を得る（本文\texttt{thm:one-positive-AS-in-symmetric-closure}）。従って閉包内で未分類のAS候補では全ての正証明書が特異である。
-対称閉包では線型symmetrizerの核が全て非零であるため、可逆対が一つもない場合も、
-向き付きの特異行列の核と像の配置から始められる。同時極限の全写像が階数2なら一位置に三つの核が集中し、平方が連続するため、隣接階数1が残余に必要である。
-七つの既知因子の一般点では未分類AS点が近づけないが、さらに深い交叉は未決定である。
+\paragraph{対称閉包の特異移送写像と全AS境界の排除。}
+本文\texttt{thm:symmetric-closure-as-exact}により、対称閉包内のAS対象は対称CIチャートに尽きる。
+可逆対があれば\texttt{thm:one-positive-AS-in-symmetric-closure}を使い、全写像が特異な場合は
+\texttt{prop:forced-binary-endpoint-pencil}の二変数表示と超平面条件から排除する。
+要点は、係数超平面を消す汎関数で縮約した三テンソルの両端支持を一次空間から除くと、
+元の全二次関係のうち二辺が零になり、三文字ブロックが少なくとも四次元残ることである。
+この商の長さ$4m$の成長は$4^m$以上となる。完全な証明は本文に置く。
+従って、対称閉包のさらに深い交叉にも新たなAS対象はない。
+非AS境界の全因子列挙、閉包外の低階数残余、高階数の分類は別問題である。
+
+\section{全次数AS条件の加群反復と残る証明義務}
+本文\texttt{thm:cut-serre}の右加群規約で、$\nu_B=-\otimes_B^{\mathbf L}DB$とし、
+$F=(\nu_B[-3])^{-1}=\mathbf R\operatorname{Hom}_B(DB,-)[3]$と置く。
+$\operatorname{gldim}B\le3$なので、通常の右加群$M$について
+\[
+ H^{q-3}(F(M))=\operatorname{Ext}_B^q(DB,M)\quad(0\le q\le3)
+\]
+であり、それ以外のコホモロジーは零である。
+従って$F(M)$が次数零の加群となることは、$q=0,1,2$のExt消滅と同値であり、
+成立するとき$F(M)\simeq\operatorname{Ext}_B^3(DB,M)$である。
+$M_0=B$, $M_{m+1}=\operatorname{Ext}_B^3(DB,M_m)$と定め、$m$について帰納すると、
+本文の全反復条件は
+\[
+ \operatorname{Ext}_B^q(DB,M_m)=0\qquad(q=0,1,2,\ m\ge0)
+\]
+と同値になる。これは既存判定の書換えであり、有限停止定理ではない。
+
+\paragraph{未解決の伝播命題。}
+有限の表示規則で記述する加群のクラス$\mathcal C$を見つけ、
+$B\in\mathcal C$、全$M\in\mathcal C$の低次Ext消滅、
+$\operatorname{Ext}_B^3(DB,M)\in\mathcal C$を証明すれば、その枝の全次数条件は帰納的に従う。
+このような有効なクラスの構成と、必要性・全体被覆は未解決である。
+$\mathcal C$を単に未知の反復軌道そのものと定義しても、認識問題を解いたことにはならない。
+全反復の加群の次元が増大し得るため、有限個の加群だけで閉じることは要求しない。
+
+\paragraph{有限検査の限界。}
+七次までの全微分の成功、有限次元$B$、有限型の係数空間、標準4周期性は、
+いずれも全次数への自動伝播を保証しない。
+各次数の正確性を開条件で記述できても、得られる開集合の減少列が
+Noether性だけで安定するとはいえない。
+二回戻りの最初の共通未検査成分は内部次数8であり、構造的な障害探索に使えるが、
+そこを通るだけでもAS認証にはならない。全次数証明・有限障害・未決定を区別する。
 
 \section{再開時の使い方}
 次の課題と優先順位は\path{research/plan_ja.tex}に集約する。

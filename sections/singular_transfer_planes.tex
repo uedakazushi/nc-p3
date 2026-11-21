@@ -1,3 +1,4 @@
+% !TeX root = ../papers/nc-p3.tex
 \section{全ての対称化写像が特異な境界}
 \label{sec:singular-transfer-planes}
 $Z_{\rm sym}$では、$S$上の四位置間の同一視のグラフを射影行列空間の積で閉じると、
@@ -118,3 +119,104 @@ $H_{31}u\ne0$なら位置3の三次元の支持$Z$が変換後にそのまま残
 対称な相手の支持は一次元なので矛盾する。逆方向に$H_{13}$を位置3に作用させると、
 位置1の支持が$ku$に入るため$H_{13}Z\subset ku$である。
 $\ker H_{13}$は二次元で$\dim Z=3$なので$H_{13}Z=ku$であり、主張を得る。
+
+\begin{theorem}[対称閉包のAS点の完全な認識]\label{thm:symmetric-closure-as-exact}
+$Z_{\rm sym}$内の標準AS対象の集合は、対称完全交叉チャート$S$に等しい。
+\end{theorem}
+\begin{proof}
+$S$の全点のAS性は定理\ref{thm:symmetric-frobenius-chart}による。
+逆に、$Z_{\rm sym}\setminus S$に標準AS対象があると仮定する。
+定理\ref{thm:singular-transfer-rank-one-required}と
+命題\ref{prop:forced-binary-endpoint-pencil}の表示を用いる。
+そこでの巡回順序の変更は証明の始点の選択であり、逆順の場合は反対代数で議論する。
+標準AS性と標準Hilbert級数はこの操作で保たれる。
+分類の同値関係に添字移動や反転を加えるものではない。
+
+次の二次元空間と三次元空間を記す。
+\[
+ \begin{gathered}
+ D_0=\ker H_{20},\qquad B_0=V_0/D_0,\qquad
+ B_2=\operatorname{im}H_{20},\\
+ A_1=\operatorname{im}H_{13},\qquad
+ Z=\langle v_0,v_1,v_2\rangle=H_{13}^{-1}(ku).
+ \end{gathered}
+\]
+特に$u\in A_1$であり、命題の表示から
+\[
+ R_1\supset ku\otimes B_2,\qquad
+ \operatorname{im}\bigl(R_0\longrightarrow B_0\otimes V_1\bigr)
+       =B_0\otimes ku.                                      \tag{1}
+\]
+第二の等号は、位置0だけを商にしたテンソルを残る位置2,3で全て縮約して得る。
+表示中の三係数$v_0,v_1,v_2$の独立性により、その像は二次元である。
+
+$Z$を消す非零の$\ell\in V_3^*$を取り、位置3で縮約した三テンソルを$c=w(\ell)$とする。
+位置3の一因子階数が4なので$c\ne0$である。
+位置0を$B_0$へ落とした表示の位置3の支持は$Z$に入るため、
+$c\in D_0\otimes V_1\otimes V_2$である。
+また$\ker H_{13}\subset Z$より、ある$\eta\in V_1^*$で$\ell=\eta H_{13}$と書ける。
+位置3に$H_{13}$を作用させたテンソルは位置1,3の交換で不変であり、
+位置3の支持が$A_1$なので位置1の支持も$A_1$に入る。
+その位置3を$\eta$で縮約すると
+\[
+                         c\in D_0\otimes A_1\otimes V_2                 \tag{2}
+\]
+を得る。
+
+$c$の末端の支持を$E\subset V_2$とし、$e=\dim E$と置く。
+このとき$1\le e\le2$である。
+実際、位置2で$c$を縮約した像
+$J\subset D_0\otimes A_1$の次元は$e$である。
+$e\ge3$なら、四次元の$D_0\otimes A_1$の中で
+$J$は二次元の$D_0\otimes ku$と非自明に交わる。
+従ってある$0\ne d\in D_0$について$d\otimes u\in J\subset R_0$となる。
+(1)の$u\otimes B_2\subset R_1$と合わせると連続純粋関係が存在し、
+定理\ref{thm:no-consecutive-pure-relations}に反する。
+
+ここで\emph{元の二次代数の商}を作る。
+$Q=V_2/E$、$z=\dim Q=4-e\ge2$とし、四位置の一次空間を順に
+\[
+                        B_0,\quad V_1,\quad Q,\quad k_\ell              \tag{3}
+\]
+へ写す。最後の写像は$\ell:V_3\to k$である。
+$R_2$を$\ell$で縮約した像は$c$の末端支持$E$であり、
+$R_3$を$\ell$で縮約した像は$c$の先頭支持で、$D_0$に含まれる。
+従って(3)では辺2,3の関係空間全体が零になる。
+辺0の関係像は(1)より$B_0\otimes ku$である。
+辺1の関係像を$F\subset V_1\otimes Q$とし、
+\[
+ s=\dim(B_2\cap E),\qquad r=\dim F,\qquad
+ t=\dim\bigl(F\cap(ku\otimes Q)\bigr)
+\]
+と置く。$\dim R_1=6$と(1)により
+\[
+                             r\le6-s,\qquad t\ge2-s.                    \tag{4}
+\]
+すなわち、$R_1$の射影の核は$ku\otimes(B_2\cap E)$を含み、
+像は$ku\otimes\operatorname{im}(B_2\to Q)$を含む。
+
+三文字ブロックの商
+\[
+ T=\frac{B_0\otimes V_1\otimes Q}
+          {B_0\otimes ku\otimes Q+B_0\otimes F}
+\]
+の次元$d$は、分母の二部分空間の交叉が
+$B_0\otimes(F\cap(ku\otimes Q))$であることから
+\[
+ d=8z-2z-2r+2t
+   \ge 6z-2(6-s)+2(2-s)
+   =6z-8\ge4.                                                        \tag{5}
+\]
+これは射影した最上テンソルの縮約空間の次元ではなく、
+各辺の\emph{全二次関係を射影した像}による商の次元である。
+
+辺2,3の関係が零なので、(3)で得た四周期二次商代数の長さ$4m$の経路空間は、
+一次元の矢を挿入した$T^{\otimes m}$である。
+従って元の代数$C$について$\dim C_{0,4m}\ge d^m\ge4^m$となる。
+例えば$m=6$で
+\[
+               \dim C_{0,24}\ge4096>2925=\binom{27}{3}
+\]
+となり、標準AS対象のHilbert級数$(1-t)^{-4}$に反する。
+これで対称閉包の残余全体を排除した。
+\end{proof}

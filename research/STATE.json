@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 44,
+  "version": 45,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -18,13 +18,13 @@
       "id": "Z4-AS-004",
       "priority": 1,
       "status": "active",
-      "objective": "Find necessary and sufficient general four-window Koszul/AS regularity criteria, structurally rather than by unscoped brute-force elimination; track all exceptional values."
+      "objective": "Make the all-iteration two-window/56-dimensional algebra criterion effective through structural propagation or branchwise all-degree certificates; no assumed uniform finite cutoff."
     },
     {
       "id": "STRUCTURE-009",
       "priority": 2,
       "status": "partial_exhaustive_rank_split",
-      "objective": "Prove intrinsic, indexed-isomorphism-invariant structural splits that cover the standard four-window AS locus; record residual cases, do not presume completeness."
+      "objective": "Prove invariant splits covering all objects outside the now settled symmetric closure, including low-rank residual and high rank; do not wait for low rank to finish before studying high rank."
     },
     {
       "id": "ATLAS-010",
@@ -54,7 +54,7 @@
       "id": "ALGEBRAIC-FAMILY-008",
       "priority": 7,
       "status": "auxiliary",
-      "objective": "Use nine-parameter elliptic family as a regression/testbed; analyze generic deformation maximality or complete family isomorphism only when it advances global classification or a publishable independent result."
+      "objective": "Use the nine-parameter family as a regression/testbed; analyze maximality or complete family isomorphism only when it advances complete classification. No independent interim-publication goal."
     },
     {
       "id": "PERIOD-ROOTS-007",
@@ -79,391 +79,391 @@
     {
       "id": "PERIOD4",
       "claim": "Standard 14641 objects have canonical Frobenius 4-periodicity; geometric isomorphism classes do not depend on the trace choice.",
-      "proof": "nc-p3.tex:thm:canonical-four",
+      "proof": "papers/nc-p3.tex:thm:canonical-four",
       "status": "proof_written"
     },
     {
       "id": "FOUR-WINDOW",
       "claim": "Marked four-periodic quadratic presentations form the four-window GL4^4 action groupoid.",
-      "proof": "nc-p3.tex:thm:four-window",
+      "proof": "papers/nc-p3.tex:thm:four-window",
       "status": "proof_written"
     },
     {
       "id": "CANONICAL-MATRIX",
       "claim": "Canonical marking is P_i^T=Q_i with suitable traces.",
-      "proof": "nc-p3.tex:prop:canonical-matrix",
+      "proof": "papers/nc-p3.tex:prop:canonical-matrix",
       "status": "proof_written"
     },
     {
       "id": "FINITE-FROBENIUS",
       "claim": "Frobenius can be checked in degrees 0..5; this alone does not imply Koszulity.",
-      "proof": "nc-p3.tex:prop:finite-frobenius",
+      "proof": "papers/nc-p3.tex:prop:finite-frobenius",
       "status": "proof_written"
     },
     {
       "id": "FINITE-PERIOD",
       "claim": "Unmarked periods on canonical four windows are finite relation-space solvability conditions.",
-      "proof": "nc-p3.tex:thm:finite-period-test",
+      "proof": "papers/nc-p3.tex:thm:finite-period-test",
       "status": "proof_written"
     },
     {
       "id": "POLYNOMIAL-SYSTEM",
       "claim": "Period conditions have 212 variables and 388 equations.",
-      "proof": "nc-p3.tex:prop:period-polynomial-system",
+      "proof": "papers/nc-p3.tex:prop:period-polynomial-system",
       "status": "proof_written"
     },
     {
       "id": "FINITE-ISOM",
       "claim": "The same finite format tests indexed isomorphism of two certified standard AS objects.",
-      "proof": "nc-p3.tex:cor:finite-isom-test",
+      "proof": "papers/nc-p3.tex:cor:finite-isom-test",
       "status": "proof_written"
     },
     {
       "id": "GRADED-MARKING",
       "claim": "A selected one-period structure corresponds to a graded presentation.",
-      "proof": "nc-p3.tex:prop:graded-period",
+      "proof": "papers/nc-p3.tex:prop:graded-period",
       "status": "proof_written"
     },
     {
       "id": "COMPATIBLE-PERIOD",
       "claim": "Compatible roots of a selected period-four structure give diagonal periodic windows.",
-      "proof": "nc-p3.tex:prop:compatible-periodic-windows",
+      "proof": "papers/nc-p3.tex:prop:compatible-periodic-windows",
       "status": "proof_written"
     },
     {
       "id": "SIGN-SHIFT",
       "claim": "A(lambda)(1)=A(-lambda); minimal period two implies indexed nonisomorphism.",
-      "proof": "nc-p3.tex:prop:period-two-sign",
+      "proof": "papers/nc-p3.tex:prop:period-two-sign",
       "status": "proof_written_external_dependency"
     },
     {
       "id": "RELATIVE-FOUR",
       "claim": "Flat quadratic Artin deformations of the standard class are relative Koszul-Frobenius and admit canonical four-periodic coordinates.",
-      "proof": "nc-p3.tex:lem:relative-four",
+      "proof": "papers/nc-p3.tex:lem:relative-four",
       "status": "proof_written"
     },
     {
       "id": "QUANTUM-ORBITS",
       "claim": "Generic quantum graded isomorphism parameters have dimension six; indexed Z isomorphism parameters have dimension three.",
-      "proof": "nc-p3.tex:thm:quantum-orbits",
+      "proof": "papers/nc-p3.tex:thm:quantum-orbits",
       "status": "proof_written"
     },
     {
       "id": "QUANTUM-LOCAL",
       "claim": "Generic quantum local deformations are exhausted by the quantum family; local component dimensions are six and three for the two equivalence relations.",
-      "proof": "nc-p3.tex:thm:quantum-local",
+      "proof": "papers/nc-p3.tex:thm:quantum-local",
       "status": "proof_written"
     },
     {
       "id": "CLIFFORD-TANGENT",
       "claim": "At the chosen Clifford point the graded deformation tangent is 9 and the indexed Z deformation tangent is 15; the specific forgetful differential has cokernel 6.",
-      "proof": "nc-p3.tex:thm:clifford-tangent",
+      "proof": "papers/nc-p3.tex:thm:clifford-tangent",
       "status": "proof_written"
     },
     {
       "id": "CLIFFORD-QUADRATIC",
       "claim": "All fifteen-variable quadratic obstructions span Q=o0*o5+o1*o2-o2*o3+o3*o4, of rank six.",
-      "proof": "nc-p3.tex:thm:clifford-quadratic",
+      "proof": "papers/nc-p3.tex:thm:clifford-quadratic",
       "status": "proof_written"
     },
     {
       "id": "TWO-AXES",
       "claim": "The two indicated alternating axes are exact PBW families; the mixed tangent has obstruction ab.",
-      "proof": "nc-p3.tex:prop:two-axes",
+      "proof": "papers/nc-p3.tex:prop:two-axes",
       "status": "proof_written"
     },
     {
       "id": "CLIFFORD-HULL",
       "claim": "The full Clifford deformation ring is the 14-dimensional hypersurface suggested by Q.",
-      "proof": "nc-p3.tex:conj:clifford-model",
+      "proof": "papers/nc-p3.tex:conj:clifford-model",
       "status": "conjecture"
     },
     {
       "id": "ALGEBRAIC-SEVEN",
       "claim": "Polynomial PBW family over A7; every geometric fiber is standard 14641 AS-regular.",
-      "proof": "nc-p3.tex:thm:algebraic-seven",
+      "proof": "papers/nc-p3.tex:thm:algebraic-seven",
       "status": "proof_written"
     },
     {
       "id": "SEVEN-IMAGE",
       "claim": "The indexed isomorphism-class image has dimension seven; three alternating directions integrate algebraically.",
-      "proof": "nc-p3.tex:thm:seven-image",
+      "proof": "papers/nc-p3.tex:thm:seven-image",
       "status": "proof_written"
     },
     {
       "id": "SEVEN-PERIOD-TWO",
       "claim": "An explicitly specified nonempty open set has minimal period two.",
-      "proof": "nc-p3.tex:thm:seven-period-two",
+      "proof": "papers/nc-p3.tex:thm:seven-period-two",
       "status": "proof_written"
     },
     {
       "id": "ALGEBRAIC-NINE",
       "claim": "Over Spec k[u,v,r,s,a,b,c,t,h,(1+th)^(-1)] all fibers are standard AS-regular; t=h=0 is the seven-family; indexed image dimension nine; a nonempty open set has minimal period two.",
-      "proof": "nc-p3.tex:thm:algebraic-nine",
+      "proof": "papers/nc-p3.tex:thm:algebraic-nine",
       "status": "proof_written"
     },
     {
       "id": "ELLIPTIC-DIVISOR",
       "claim": "The nine-family nonperiodicity follows from twelve-point elliptic divisors in an anti-invariant six plus invariant three section space; the unique nonreduced point has length eight.",
-      "proof": "nc-p3.tex:lem:elliptic-nonperiod",
+      "proof": "papers/nc-p3.tex:lem:elliptic-nonperiod",
       "status": "proof_written"
     },
     {
       "id": "ORE-DERIVATIONS",
       "claim": "For 1+t*h != 0, degree-one ordinary derivations of ternary Clifford B(t,h) form a free rank-six module generated by three inner and three explicit outer derivations. Parity-twisted degree-one derivations are all central-quadratic-valued maps, free rank nine.",
-      "proof": "nc-p3.tex:thm:ore-derivations",
+      "proof": "papers/nc-p3.tex:thm:ore-derivations",
       "status": "proof_written"
     },
     {
       "id": "ORE-SLICE",
       "claim": "Generic marked parity-Ore extensions over the specified ternary Clifford B(t,h) are represented by the existing nine-parameter normal form after shifts and diagonal scalings. Not all AS regular Z algebras.",
-      "proof": "nc-p3.tex:cor:ore-slice",
+      "proof": "papers/nc-p3.tex:cor:ore-slice",
       "status": "proof_written"
     },
     {
       "id": "ELLIPTIC-J",
       "claim": "On the smooth elliptic twelve-point open, indexed-isomorphic members have equal J(th), an explicit rational function of degree twelve. Equality is only necessary.",
-      "proof": "nc-p3.tex:prop:elliptic-j-obstruction",
+      "proof": "papers/nc-p3.tex:prop:elliptic-j-obstruction",
       "status": "proof_written"
     },
     {
       "id": "INTRINSIC-2ISOGENY",
       "claim": "At a generic nine-family member, the unique nonreduced point intrinsically recovers the ternary Clifford indexed subalgebra, polarized elliptic curve with nontrivial order-two translation, and its 2-isogenous quotient.",
-      "proof": "nc-p3.tex:lem:intrinsic-elliptic-tau",
+      "proof": "papers/nc-p3.tex:lem:intrinsic-elliptic-tau",
       "status": "proof_written"
     },
     {
       "id": "EXPLICIT-2ISOGENY",
       "claim": "The elliptic quotient has cubic th*A^3+t*B^3+h*C^3-(th+4)*ABC=0. The ordered two j invariants give U(x)=4096(x+1)^3/[x*(x-8)^3], degree four; generic indexed isomorphism implies equal U(th).",
-      "proof": "nc-p3.tex:thm:explicit-two-isogeny",
+      "proof": "papers/nc-p3.tex:thm:explicit-two-isogeny",
       "status": "proof_written"
     },
     {
       "id": "ISOGENY-MONODROMY",
       "claim": "The rational degree-four map x->U(x) has ramification types (3,1),(2,2),(3,1) and Galois closure A4.",
-      "proof": "nc-p3.tex:cor:isogeny-a4",
+      "proof": "papers/nc-p3.tex:cor:isogeny-a4",
       "status": "proof_written"
     },
     {
       "id": "NONORE-FIVE",
       "claim": "The five-parameter 2-periodic family YW+WY=(-1)^i*a*ZX is PBW and standard 14641 quadratic Koszul AS-regular for all parameters; indexed-isomorphism image has dimension exactly two.",
-      "proof": "nc-p3.tex:thm:nonore-five",
+      "proof": "papers/nc-p3.tex:thm:nonore-five",
       "status": "proof_written"
     },
     {
       "id": "NONORE-GENERIC-PERIOD2",
       "claim": "On a nonempty Zariski open of the alternative Ore A5 family, left point-scheme support is one line plus five isolated points and even/odd supports are not projectively isomorphic. Hence generic minimal period is exactly 2.",
-      "proof": "nc-p3.tex:thm:nonore-generic-two",
+      "proof": "papers/nc-p3.tex:thm:nonore-generic-two",
       "status": "proof_written"
     },
     {
       "id": "NONORE-CLOSURE",
       "claim": "The entire five-parameter boundary family lies in the orbit-saturated Zariski closure of the seven-parameter Ore family, via a flat one-parameter family and a singular generic change of generators.",
-      "proof": "nc-p3.tex:thm:nonore-in-seven-closure",
+      "proof": "papers/nc-p3.tex:thm:nonore-in-seven-closure",
       "status": "proof_written"
     },
     {
       "id": "SEVEN-SINGULAR",
       "claim": "The orbit-saturated 37-dimensional Grassmannian image closure of the seven-family is singular at the Clifford point, with tangent dimension at least 39.",
-      "proof": "nc-p3.tex:thm:seven-closure-singular",
+      "proof": "papers/nc-p3.tex:thm:seven-closure-singular",
       "status": "proof_written"
     },
     {
       "id": "NINE-CLOSURE-SINGULAR",
       "claim": "The nine-parameter elliptic Ore family has irreducible orbit-saturated relation-space closure Z9 of dimension 39, containing Z7 in codimension two; tangent space at Clifford is at least 41, hence Z9 singular.",
-      "proof": "nc-p3.tex:thm:nine-closure-singular",
+      "proof": "papers/nc-p3.tex:thm:nine-closure-singular",
       "status": "proof_written"
     },
     {
       "id": "NINE-CURVE-OBSTRUCTION",
       "claim": "Nine family plus two boundary degenerations span eleven individually algebraically integrable first-order classes, seven even and four odd, but their Clifford quadratic obstruction restricts to lambda*c, ruling out a smooth eleven-parameter simultaneous family with that tangent image.",
-      "proof": "nc-p3.tex:prop:nine-closure-obstruction",
+      "proof": "papers/nc-p3.tex:prop:nine-closure-obstruction",
       "status": "proof_written"
     },
     {
       "id": "NINE-PERIOD1-SPECIALIZATION",
       "claim": "Every member of the nine-parameter family, including the seven-parameter specialization, is connected to a strictly one-periodic member by the componentwise-free A1 family (a,b,c)->(lambda*a,lambda*b,lambda*c), with every fiber standard quadratic Koszul AS-regular.",
-      "proof": "nc-p3.tex:cor:nine-to-period-one",
+      "proof": "papers/nc-p3.tex:cor:nine-to-period-one",
       "status": "proof_written"
     },
     {
       "id": "QUARTIC-KOSZUL-OBSTRUCTION",
       "claim": "On the finite Frobenius four-window locus, the first possible right Koszul homology is H_2 in internal degree four, of dimension delta_i=221-rank D_i,4=dim C_i,i+4-35 >=0. Simultaneous vanishing is an indexed-isomorphism-invariant relatively open necessary filter, not a sufficient AS/Koszul criterion.",
-      "proof": "nc-p3.tex:prop:quartic-koszul-obstruction",
+      "proof": "papers/nc-p3.tex:prop:quartic-koszul-obstruction",
       "status": "proof_written"
     },
     {
       "id": "QUINTIC-KOSZUL-OBSTRUCTION",
       "claim": "On the delta=0 finite-Frobenius locus, degree-five exactness is equivalent to h_i,5=56 and rank of the 120x40 Koszul d3 matrix equal to 36. H3=36-rank(d3), H2=h_i,5-20-rank(d3); higher degrees unresolved.",
-      "proof": "nc-p3.tex:prop:quintic-koszul-obstruction",
+      "proof": "papers/nc-p3.tex:prop:quintic-koszul-obstruction",
       "status": "proof_written"
     },
     {
       "id": "FROBENIUS-DEGREE4",
       "claim": "Dimensions 14641 and perfect complementary pairings through degree four force degree five and all higher dual components to vanish; no Koszulity conclusion.",
-      "proof": "nc-p3.tex:prop:frobenius-degree-four",
+      "proof": "papers/nc-p3.tex:prop:frobenius-degree-four",
       "status": "proof_written"
     },
     {
       "id": "FROBENIUS-TENSOR",
       "claim": "Canonical finite-Frobenius four windows are equivalent to projective 4-tensors with single-factor ranks four, adjacent-pair ranks six and W3/W4 dimensions four/one; Koszul/AS remains an extra condition.",
-      "proof": "nc-p3.tex:thm:frobenius-tensor-reconstruction",
+      "proof": "papers/nc-p3.tex:thm:frobenius-tensor-reconstruction",
       "status": "proof_written"
     },
     {
       "id": "OPPOSITE-RANK-SPLIT",
       "claim": "The opposite-pair rank rho is an indexed-isomorphism invariant with 2<=rho<=16. The disjoint branches rho<=6 and rho>=7 cover every standard AS object; their full normal forms and regularity criteria remain unresolved.",
-      "proof": "nc-p3.tex:prop:opposite-rank-split",
+      "proof": "papers/nc-p3.tex:prop:opposite-rank-split",
       "status": "proof_written"
     },
     {
       "id": "QUANTUM-OPPOSITE-RANK",
       "claim": "For nonzero quantum parameters, rho=6+2 times the number of nonzero F1,F2,F3. All four ranks 6,8,10,12 occur; rho=6 quantum objects have exactly two indexed classes represented by all q=1 and all q=-1. Not the full global rho=6 classification.",
-      "proof": "nc-p3.tex:prop:quantum-opposite-rank",
+      "proof": "papers/nc-p3.tex:prop:quantum-opposite-rank",
       "status": "proof_written"
     },
     {
       "id": "SYMMETRIC-FROBENIUS-CHART",
       "claim": "Symmetrizable canonical Frobenius tensors are covered by the nonempty open U in Gr(4,Sym^2 V*) of basepoint-free four-quadric systems. Their commutative complete-intersection duals are Koszul, hence all chart fibers are standard AS-regular and one-periodic.",
-      "proof": "nc-p3.tex:thm:symmetric-frobenius-chart",
+      "proof": "papers/nc-p3.tex:thm:symmetric-frobenius-chart",
       "status": "proof_written"
     },
     {
       "id": "SYMMETRIC-RANK-SIX",
       "claim": "The symmetric chart lies in rho=6; it and its complement cover the low-rank branch. The alternating tensor orbit is the commutative polynomial indexed class and is disjoint from the symmetric chart.",
-      "proof": "nc-p3.tex:cor:symmetric-rank-six",
+      "proof": "papers/nc-p3.tex:cor:symmetric-rank-six",
       "status": "proof_written"
     },
     {
       "id": "SYMMETRIC-TENSOR-CONGRUENCE",
       "claim": "Full-single-rank symmetric fourth-order tensors independently GL-equivalent are commonly GL-congruent over algebraically closed char 0; direct centroid/root proof, standard general principle not claimed novel.",
-      "proof": "nc-p3.tex:lem:symmetric-tensor-congruence",
+      "proof": "papers/nc-p3.tex:lem:symmetric-tensor-congruence",
       "status": "proof_written_existing_principle"
     },
     {
       "id": "SYMMETRIC-CHART-ISOM",
       "claim": "For all U-chart members, bare indexed isomorphism is equivalent to ordinary GL4 equivalence of the four-dimensional quadric spaces, hence graded isomorphism of the chosen presentations. Complete solvability criterion: 33 variables, 41 equations; explicit orbit normal forms remain unresolved.",
-      "proof": "nc-p3.tex:cor:symmetric-chart-isomorphism",
+      "proof": "papers/nc-p3.tex:cor:symmetric-chart-isomorphism",
       "status": "proof_written"
     },
     {
       "id": "LINEAR-SYMMETRIZATION-TEST",
       "claim": "Symmetric-chart membership of any finite Frobenius tensor is equivalent to each of three 16-unknown linear symmetrizer spaces containing an invertible matrix. Degree-four determinant polynomials decide this and construct rational certificates on rational input. Passing certifies Koszul/AS by the symmetric chart theorem.",
-      "proof": "nc-p3.tex:prop:linear-symmetrization-test",
+      "proof": "papers/nc-p3.tex:prop:linear-symmetrization-test",
       "status": "proof_written"
     },
     {
       "id": "NO-OPPOSITE-RANK-TWO",
       "claim": "No finite-Frobenius 14641 candidate has opposite rank two. Singular matrix pencils force adjacent rank >=8; regular pencils with adjacent rank six reduce to semisimple or rank-one nilpotent types, each with W3 dimension 12 instead of 4. Global bound improves to 3<=rho<=16.",
-      "proof": "nc-p3.tex:prop:no-opposite-rank-two",
+      "proof": "papers/nc-p3.tex:prop:no-opposite-rank-two",
       "status": "proof_written"
     },
     {
       "id": "QUANTUM-INDEXED-ALL",
       "claim": "For every nonzero quantum parameter, indexed isomorphism is equivalent to permutation plus vertex gauge, or matching all oriented triple products. Necessity handles all point-support types (0,1,2,4 compatible triangles), including the GL2 exceptional support.",
-      "proof": "nc-p3.tex:thm:quantum-indexed-all",
+      "proof": "papers/nc-p3.tex:thm:quantum-indexed-all",
       "status": "proof_written"
     },
     {
       "id": "QUANTUM-TORUS-NORMAL-FORM",
       "claim": "Every quantum indexed class has q01=q02=q03=1 and (q12,q13,q23)=(p,q,r) in (Gm)^3. Complete residual equivalence is the explicit S4 action generated by (1/p,1/q,pr/q), (1/p,r,q), (q,p,1/r); all special parameters included, coarse classes only.",
-      "proof": "nc-p3.tex:cor:quantum-torus-normal-form",
+      "proof": "papers/nc-p3.tex:cor:quantum-torus-normal-form",
       "status": "proof_written"
     },
     {
       "id": "LINEAR-ALTERNATING-TEST",
       "claim": "Replacing the three linear symmetrizer equations by their negative-swap versions exactly recognizes the alternating tensor orbit. For finite Frobenius candidates this is precisely the commutative polynomial indexed class, with constructive rational certificates on rational input.",
-      "proof": "nc-p3.tex:cor:linear-alternating-test",
+      "proof": "papers/nc-p3.tex:cor:linear-alternating-test",
       "status": "proof_written"
     },
     {
       "id": "POLYNOMIAL-ORE-REGULAR",
       "claim": "For arbitrary 18 quadratic coefficients, the derivation Ore extension of k[x0,x1,x2] is quadratic PBW, Koszul and standard AS-regular. Dual squarefree PBW/Frobenius holds by 20 symbolic overlap identities; one-periodic. No 18-dimensional indexed-image or component claim.",
-      "proof": "nc-p3.tex:thm:polynomial-ore-regular",
+      "proof": "papers/nc-p3.tex:thm:polynomial-ore-regular",
       "status": "proof_written"
     },
     {
       "id": "POLYNOMIAL-ORE-RANK",
       "claim": "On this chart rho=6+rank Q for an explicit surjective linear map to alternating 6x6 matrices. Kernel consists exactly of radial fields fi=xi*ell. Thus all ranks 6,8,10,12 occur, and every low-rank member is the polynomial indexed class; no LOW-UNCLASSIFIED witness arises in the full chart.",
-      "proof": "nc-p3.tex:thm:polynomial-ore-rank",
+      "proof": "papers/nc-p3.tex:thm:polynomial-ore-rank",
       "status": "proof_written"
     },
     {
       "id": "INDEXED-POLYNOMIAL-ORE",
       "claim": "In the commuting-base commuting-leading Ore presentation, standard cubic dimension 20 is necessary and sufficient for full Koszul/AS regularity. Adjacent quadratic vector fields differ radially; position-dependent X shifts give a constant polynomial derivation Ore algebra. Periodic shifts may be chosen for periodic input.",
-      "proof": "nc-p3.tex:thm:indexed-polynomial-ore",
+      "proof": "papers/nc-p3.tex:thm:indexed-polynomial-ore",
       "status": "proof_written"
     },
     {
       "id": "INDEXED-POLYNOMIAL-ORE-FOUR",
       "claim": "For four windows the regular coefficient locus is linear dimension 27 in A72 (condition rank 45), not moduli dimension. Low-rank members are polynomial indexed objects.",
-      "proof": "nc-p3.tex:cor:indexed-polynomial-ore-four",
+      "proof": "papers/nc-p3.tex:cor:indexed-polynomial-ore-four",
       "status": "proof_written"
     },
     {
       "id": "INDEXED-ANTICOMMUTATIVE-ORE",
       "claim": "In the anticommuting-base anticommuting-leading Ore presentation, cubic dimension 20 is necessary and sufficient for full Koszul/AS regularity. All regular sequences normalize by X shifts to constant central H plus three alternating opposite-pair terms gamma; periods divide two, odd marked periods force gamma=0.",
-      "proof": "nc-p3.tex:thm:indexed-anticommutative-ore",
+      "proof": "papers/nc-p3.tex:thm:indexed-anticommutative-ore",
       "status": "proof_written"
     },
     {
       "id": "ANTICOMMUTATIVE-ORE-RANK",
       "claim": "Four-window regular coefficients form a linear 21-dimensional locus (rank 51 in A72); rho is 6 if gamma=0 and 8 otherwise. Every low-rank member belongs to the symmetric chart, hence none lies in LOW-UNCLASSIFIED. No general minimal-period-two claim.",
-      "proof": "nc-p3.tex:prop:anticommutative-ore-rank",
+      "proof": "papers/nc-p3.tex:prop:anticommutative-ore-rank",
       "status": "proof_written"
     },
     {
       "id": "QUANTUM-ORE-AS",
       "claim": "For all nonzero diagonal quantum backgrounds and arbitrary quadratic Ore corrections, standard AS/Koszul regularity is equivalent to the 30 linear coefficient sigma-derivation equations. Cubic dimension 20 forces PBW rather than assuming it.",
-      "proof": "nc-p3.tex:thm:quantum-ore-as",
+      "proof": "papers/nc-p3.tex:thm:quantum-ore-as",
       "status": "proof_written"
     },
     {
       "id": "QUANTUM-ORE-BACKGROUND-RANK",
       "claim": "The PBW family f -> t*f is all-fiber regular and has constant indexed type off zero, so rho(quantum background)<=rho(extension).",
-      "proof": "nc-p3.tex:lem:quantum-ore-background-rank",
+      "proof": "papers/nc-p3.tex:lem:quantum-ore-background-rank",
       "status": "proof_written"
     },
     {
       "id": "QUANTUM-ORE-LOW-EXCLUSION",
       "claim": "Every regular diagonal quantum-three-generator Ore object has rho>=6; if rho<=6 it is indexed polynomial or belongs to the symmetric Frobenius chart. LOW-UNCLASSIFIED cannot admit such a presentation even after indexed isomorphism.",
-      "proof": "nc-p3.tex:thm:quantum-ore-low-exclusion",
+      "proof": "papers/nc-p3.tex:thm:quantum-ore-low-exclusion",
       "status": "proof_written"
     },
     {
       "id": "ANTI-ORE-PURE-OUTER-PERIOD",
       "claim": "For H=0 in the signed anti Ore normal form, every gamma has a one-period root fixing base generators and negating X; nonzero gamma alone does not imply minimal period two.",
-      "proof": "nc-p3.tex:cor:anti-ore-pure-outer-period",
+      "proof": "papers/nc-p3.tex:cor:anti-ore-pure-outer-period",
       "status": "proof_written"
     },
     {
       "id": "DUAL-ARTIN-FLATNESS",
       "claim": "A degreewise-free quadratic Artin deformation of a Koszul finite dual is relative Koszul and has free quadratic-dual components. Finite Frobenius candidates near C0 therefore yield flat original algebras; no extra PBW hypothesis imposed on candidates.",
-      "proof": "nc-p3.tex:lem:dual-artin-flatness",
+      "proof": "papers/nc-p3.tex:lem:dual-artin-flatness",
       "status": "proof_written"
     },
     {
       "id": "CLIFFORD-RANK-DERIVATIVE",
       "claim": "At C0 the opposite-rank-six determinantal differential vanishes on all nine even classes and gauge directions and is injective on the six odd classes. The active odd 4x4 skew matrix has Pfaffian -Q, reinterpreting the known quadratic obstruction without determining higher obstructions.",
-      "proof": "nc-p3.tex:prop:clifford-rank-derivative",
+      "proof": "papers/nc-p3.tex:prop:clifford-rank-derivative",
       "status": "proof_written"
     },
     {
       "id": "CLIFFORD-LOW-RANK-LOCAL",
       "claim": "The finite Frobenius tensor candidate scheme with opposite rank<=6 is smooth of presentation dimension 69 at C0. A G-invariant Zariski-open neighborhood is covered by the symmetric CI chart; its candidates are all Koszul/AS. Nine even parameters cover the based low-rank Artin deformations up to indexed isomorphism. No global low-locus or unrestricted Clifford-hull conclusion.",
-      "proof": "nc-p3.tex:thm:clifford-low-rank-local",
+      "proof": "papers/nc-p3.tex:thm:clifford-low-rank-local",
       "status": "proof_written"
     },
     {
       "id": "PURE-ANTI-AND-ALTERNATING-LOCAL",
       "claim": "In the projective three-flattening rank<=6 scheme X6, the pure anticommutative point is smooth dimension 69 and locally covered by the symmetric CI chart; orbit tangent 57 and first-order quotient 12. The alternating determinant point is smooth dimension 45 and its polynomial indexed orbit is open in X6. The C0 dimension-69 result also holds directly in X6.",
-      "proof": "nc-p3.tex:thm:pure-anti-and-alternating-local",
+      "proof": "papers/nc-p3.tex:thm:pure-anti-and-alternating-local",
       "status": "proof_written"
     },
     {
       "id": "TWO-LOW-RANK-PRESENTATION-COMPONENTS",
       "claim": "The closures of the saturated symmetric CI image and alternating determinant orbit are distinct irreducible components of X6, of presentation dimensions 69 and 45. The finite-Frobenius low candidate locus is open in X6 and meets both. The symmetric closure does not meet the polynomial orbit. Neither exhaustiveness nor full AS-moduli component statements follow.",
-      "proof": "nc-p3.tex:cor:two-low-rank-presentation-components",
+      "proof": "papers/nc-p3.tex:cor:two-low-rank-presentation-components",
       "status": "proof_written"
     },
     {
@@ -706,7 +706,7 @@
     {
       "id": "FOUR-RESULTANT-BOUNDARY-DIVISORS",
       "status": "proved_with_Boolean_tangent_and_transverse_certificate",
-      "statement": "The four exceptional-slot closures of finite-Frobenius three-factor-symmetric non-CI tensors are distinct 68-dimensional boundary divisors of Zsym. Each generic point has an X6 neighborhood whose AS points are all in S. At the rotated Boolean point, boundary support is smooth, exceptional-to-ordinary determinant vanishes to order3, elementary exponents 0,1,1,1. Other boundary divisors or deeper AS points unresolved.",
+      "statement": "The four exceptional-slot closures of finite-Frobenius three-factor-symmetric non-CI tensors are distinct 68-dimensional boundary divisors of Zsym. Each generic point has an X6 neighborhood whose AS points are all in S. At the rotated Boolean point, boundary support is smooth, exceptional-to-ordinary determinant vanishes to order3, elementary exponents 0,1,1,1. Other non-AS boundary divisors unresolved; all AS points of Zsym are now in S by thm:symmetric-closure-as-exact.",
       "proof": "sections/symmetric_boundary_divisors.tex",
       "verification": [
         "computations/verify_boolean_boundary_divisor.py",
@@ -748,12 +748,26 @@
         "computations/verify_transfer_plane_patterns.py",
         "research/transfer_plane_patterns_certificate.json"
       ]
+    },
+    {
+      "id": "SYMMETRIC-CLOSURE-AS-EXACT",
+      "status": "proof_written_targeted_internal_review",
+      "claim": "The standard AS locus in Zsym is exactly the symmetric complete-intersection chart S. The remaining singular-pencil configuration gives an actual quadratic quotient with two zero relation edges and at least four-dimensional three-letter blocks; length24 has dimension at least4096>2925. No conclusion of exhaustive low-rank or full AS-moduli classification.",
+      "proof": "sections/singular_transfer_planes.tex:thm:symmetric-closure-as-exact",
+      "dependencies": [
+        "thm:one-positive-AS-in-symmetric-closure",
+        "thm:singular-transfer-rank-one-required",
+        "prop:forced-binary-endpoint-pencil",
+        "thm:no-consecutive-pure-relations",
+        "thm:symmetric-frobenius-chart"
+      ],
+      "review_scope": "New support and full-relation quotient argument checked by multiple internal readers; prior dependency chain not exhaustively re-audited, no formal proof or external peer review."
     }
   ],
   "document_paths": {
     "plan": "research/plan_ja.tex",
     "notes": "research/notes_ja.tex",
-    "paper": "nc-p3.tex",
+    "paper": "papers/nc-p3.tex",
     "baseline": "research/BASELINE.md",
     "instructions": "AGENTS.md",
     "certificate": "research/moduli_certificate.json",
@@ -811,33 +825,39 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "989a6e38b1d5ba17a44eb07d272fc4f65bf27565",
+  "reviewed_source_commit": "a08d1f97941861681762c62197254ece126c7479",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
   "cloud_codex_status": "Repository-side Cloud guidance and preflight added; actual Cloud environment publishing, TeX tools and Git push permissions are not verifiable from repository alone.",
   "resume_point": {
     "task_id": "Z4-AS-004",
-    "status": "active_singular_transfers_and_other_components",
-    "objective": "Classify the remaining AS tensors with no negative invertible symmetrizer and at most one invertibly positive partner per position; the low-rank witness-free region remains the principal coverage hole.",
-    "immediate_next_action": "Use the projected binary tensor in Proposition forced-binary-endpoint-pencil: the coefficient hyperplane is exactly the inverse image of the fixed line by the other opposite transfer. Control the complementary two source directions, their mixed relation spaces and the marker quotient. The case outside Zsym remains separate.",
+    "status": "active_global_as_recognition_outside_symmetric_closure",
+    "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
+    "immediate_next_action": "For the 56-dimensional B from two windows, explicitly compute the right-B-module Ext recurrence M0=B, Mnext=Ext^3_B(DB,M). Find a structurally described class containing B, stable under Ext^3 and with Ext^0,1,2 vanishing; prove propagation on a selected branch or exhibit a finite obstruction. In parallel stratify LOW-UNCLASSIFIED outside Zsym by rho, dimensions/maximal ranks of signed witness spaces and kernel/image incidence; keep all exceptional ranks and denominators.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/singular_transfer_planes.tex",
-      "sections/adjacent_witness_boundary.tex",
-      "sections/two_pair_boundary.tex",
-      "sections/cubic_slice_growth.tex",
-      "sections/symmetric_boundary_divisors.tex",
-      "sections/cut_serre_criterion.tex"
+      "sections/cut_serre_criterion.tex",
+      "research/notes_ja.tex",
+      "research/classification_branches.json",
+      "sections/frobenius_tensor.tex",
+      "sections/singular_transfer_planes.tex"
     ],
-    "known_obstruction": "The coherent singular transfers on the residual inside Zsym need not identify a pair of factors; no global exclusion of this locus is proved. Single-adjacent propagation outside Zsym remains open.",
-    "state_of_claim": "Any residual AS point inside Zsym must have only singular positive witnesses, with an adjacent rank-one map in every coherent tuple. Its existence remains open.",
+    "known_obstruction": "No uniform finite Koszul/Serre cutoff or effective global regularity criterion is proved; finite-dimensional B and seven-degree tests do not suffice. Other low-rank components and high-rank witness-free regions remain unclassified.",
+    "state_of_claim": "AS intersection Zsym equals S by the new complete source proof. The Ext recurrence is a reformulation of the existing Serre criterion; the stable-class propagation theorem and outside-Zsym coverage remain open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
-    "goal": "Continue useful mathematical work across subproblems until classification completes or actual Cloud/runtime/access constraints stop the current task.",
+    "goal": "Reach complete classification by the shortest mathematically rigorous route; fixed highest goal, no interim publication. Continue actual mathematical work within the authorized task and actual runtime/access constraints.",
     "checkpoint": "Best effort every approximately 15 minutes when new meaningful work exists, and before task termination; avoid empty WIP commits.",
     "stopping": "Full verified classification, real runtime/usage/access/safety block, or rigorously described exhaustion of currently actionable work; none implied by one failed method.",
     "restart": "Use current GitHub main and resume_point; Cloud cannot start future tasks automatically."
+  },
+  "objective_policy": {
+    "highest_goal": "Reach complete classification by the shortest mathematically rigorous route; this highest goal and the stated scope are fixed.",
+    "interim_publication": false,
+    "changeable": "Methods, intermediate tasks and priorities, according to their contribution to complete classification.",
+    "not_allowed": "Downgrade to partial classification, narrow the scope, or pursue submission, independent papers or publication polishing before complete classification.",
+    "scale": "No cap on branches or manuscript size; retain all mathematical proof and reproduction assets. Universal equations or finitely tested candidates with undecided AS conditions are not completion."
   }
 }

@@ -7,7 +7,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 REQUIRED = [
-    'README.md', 'AGENTS.md', 'START_CODEX_ja.md', 'nc-p3.tex',
+    'README.md', 'AGENTS.md', 'START_CODEX_ja.md', 'papers/nc-p3.tex',
     'sections/elliptic_ore_family.tex', 'sections/ore_complete.tex',
     'sections/isogeny_invariant.tex', 'sections/nonore_family.tex',
     'sections/nonore_period_two.tex',
@@ -50,7 +50,7 @@ REQUIRED = [
     'research/isogeny_certificate.json', 'research/nonore_certificate.json',
     'research/nonore_point_certificate.json',
     'research/ore_boundary_certificate.json', 'research/nine_closure_certificate.json', '.latexmkrc', '.gitignore',
-    '.vscode/settings.json', 'requirements.txt', 'computations/pbw_complex.py',
+    '.vscode/settings.json', '.vscode/extensions.json', 'requirements.txt', 'computations/pbw_complex.py',
     'computations/verify_moduli_jets.py', 'computations/verify_exterior_trace.py',
     'computations/verify_period_witness.py', 'computations/verify_third_order_samples.py',
     'computations/verify_algebraic_family.py', 'computations/verify_elliptic_family.py', 'computations/verify_ore_derivations.py',
@@ -64,8 +64,8 @@ for name in REQUIRED:
         errors.append('missing ' + name)
 
 
-def expanded_tex(name, ancestors=()):
-    """Expand braced local input/include commands relative to repository root."""
+def expanded_tex(name, ancestors=(), main_directory=None):
+    """Expand local inputs from the main document directory, as latexmk -cd does."""
     path = (ROOT / name).resolve()
     if not path.is_relative_to(ROOT) or path in ancestors:
         errors.append('invalid or cyclic TeX input ' + name)
@@ -73,6 +73,8 @@ def expanded_tex(name, ancestors=()):
     if not path.is_file():
         errors.append('missing TeX input ' + name)
         return ''
+    if main_directory is None:
+        main_directory = path.parent
     text = path.read_text(encoding='utf-8')
     clean = '\n'.join(re.split(r'(?<!\\)%', line, maxsplit=1)[0]
                       for line in text.splitlines())
@@ -80,7 +82,12 @@ def expanded_tex(name, ancestors=()):
         child = match.group(1)
         if not child.endswith('.tex'):
             child += '.tex'
-        return expanded_tex(child, ancestors + (path,))
+        child_path = (main_directory / child).resolve()
+        if not child_path.is_relative_to(ROOT):
+            errors.append('TeX input outside repository ' + child)
+            return ''
+        return expanded_tex(str(child_path.relative_to(ROOT)),
+                            ancestors + (path,), main_directory)
     return re.sub(r'\\(?:input|include)\{([^}]+)\}', replace, clean)
 
 
@@ -102,7 +109,7 @@ except (OSError, ValueError, KeyError) as exc:
     state = {}
 
 paper_labels = set()
-for name in ['nc-p3.tex', 'research/plan_ja.tex', 'research/notes_ja.tex']:
+for name in ['papers/nc-p3.tex', 'research/plan_ja.tex', 'research/notes_ja.tex']:
     clean = expanded_tex(name)
     depth = 0
     for char in re.findall(r'(?<!\\)[{}]', clean):
@@ -131,11 +138,11 @@ for name in ['nc-p3.tex', 'research/plan_ja.tex', 'research/notes_ja.tex']:
         for key in entry.split(','):
             if key.strip() not in bibliography:
                 errors.append('unresolved citation ' + name + ':' + key)
-    if name == 'nc-p3.tex':
+    if name == 'papers/nc-p3.tex':
         paper_labels = set(labels)
 for result in state.get('mathematical_results', []):
     proof = result.get('proof', '')
-    if proof.startswith('nc-p3.tex:') and proof.split(':', 1)[1] not in paper_labels:
+    if proof.startswith('papers/nc-p3.tex:') and proof.split(':', 1)[1] not in paper_labels:
         errors.append('broken proof reference ' + result['id'])
 if (ROOT / '.github/workflows').exists():
     errors.append('GitHub Actions forbidden')

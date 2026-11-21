@@ -3,7 +3,7 @@
 
 All checks use rational/polynomial arithmetic.  The all-fiber AS argument,
 elliptic-divisor nonperiodicity proof, and generic-finiteness argument are in
-nc-p3.tex.  No truncated power series or numerical root approximations occur.
+papers/nc-p3.tex.  No truncated power series or numerical root approximations occur.
 """
 from functools import lru_cache
 from itertools import combinations, combinations_with_replacement, product

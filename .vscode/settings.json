@@ -2,28 +2,37 @@
   "latex-workshop.latex.outDir": "%WORKSPACE_FOLDER%/build",
   "latex-workshop.latex.tools": [
     {
-      "name": "latexmk (LuaLaTeX)",
+      "name": "latexmk-project",
       "command": "latexmk",
+      "cwd": "%WORKSPACE_FOLDER%",
       "args": [
+        "-norc",
         "-r",
         "%WORKSPACE_FOLDER%/.latexmkrc",
-        "-lualatex",
-        "-synctex=1",
-        "-interaction=nonstopmode",
-        "-file-line-error",
-        "-outdir=%OUTDIR%",
-        "%DOC%"
+        "%DOC_EXT%"
       ]
     }
   ],
   "latex-workshop.latex.recipes": [
     {
-      "name": "LuaLaTeX via latexmk",
+      "name": "latexmk (LuaLaTeX, project settings)",
       "tools": [
-        "latexmk (LuaLaTeX)"
+        "latexmk-project"
       ]
     }
   ],
   "latex-workshop.latex.recipe.default": "first",
-  "latex-workshop.view.pdf.viewer": "tab"
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.latex.build.enableMagicComments": true,
+  "latex-workshop.synctex.afterBuild.enabled": true,
+  "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
+  "latex-workshop.latex.clean.method": "command",
+  "latex-workshop.latex.clean.command": "latexmk",
+  "latex-workshop.latex.clean.args": [
+    "-norc",
+    "-r",
+    "%WORKSPACE_FOLDER%/.latexmkrc",
+    "-c",
+    "%DOC_EXT%"
+  ]
 }
