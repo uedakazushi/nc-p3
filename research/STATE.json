@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 41,
+  "version": 42,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -702,6 +702,26 @@
         "computations/verify_square_kernel_recognition.py",
         "research/square_kernel_recognition_certificate.json"
       ]
+    },
+    {
+      "id": "FOUR-RESULTANT-BOUNDARY-DIVISORS",
+      "status": "proved_with_Boolean_tangent_and_transverse_certificate",
+      "statement": "The four exceptional-slot closures of finite-Frobenius three-factor-symmetric non-CI tensors are distinct 68-dimensional boundary divisors of Zsym. Each generic point has an X6 neighborhood whose AS points are all in S. At the rotated Boolean point, boundary support is smooth, exceptional-to-ordinary determinant vanishes to order3, elementary exponents 0,1,1,1. Other boundary divisors or deeper AS points unresolved.",
+      "proof": "sections/symmetric_boundary_divisors.tex",
+      "verification": [
+        "computations/verify_boolean_boundary_divisor.py",
+        "research/boolean_boundary_divisor_certificate.json"
+      ]
+    },
+    {
+      "id": "CUBIC-SLICE-GROWTH",
+      "status": "proved_general_exclusion",
+      "statement": "One marker covector gives a tensor-power quotient with growth d^m on length4m. For finite-Frobenius candidates d is the corank of a 20x120 linear matrix. Any pure cubic overlap forces at least 6^m, hence no AS candidate has consecutive rank-one relations sharing a middle letter. Triple symmetric basepoint branch gives at least 9^m or 10^m for Jacobian rank3; Boolean marked quotient has exact dimension10^m. Any rank-one transfer into an invertibly symmetric pair from outside is excluded on AS; across a two-pair split in Zsym there are compatible transfers of ranks2,2.",
+      "proof": "sections/cubic_slice_growth.tex",
+      "verification": [
+        "computations/verify_cubic_slice_growth.py",
+        "research/cubic_slice_growth_certificate.json"
+      ]
     }
   ],
   "document_paths": {
@@ -765,24 +785,25 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "22e9ee1fbcd5d44af2da12ae317cd97d80350d10",
+  "reviewed_source_commit": "6dca2871dd332cce4799dd255e46ab7f00a7de67",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
   "cloud_codex_status": "Repository-side Cloud guidance and preflight added; actual Cloud environment publishing, TeX tools and Git push permissions are not verifiable from repository alone.",
   "resume_point": {
     "task_id": "Z4-AS-004",
-    "status": "active_closed_low_residual",
+    "status": "active_exponential_growth_obstructions",
     "objective": "Classify the remaining AS tensors with no negative invertible symmetrizer and at most one positive invertible symmetrizer; the low-rank witness-free region remains the principal coverage hole.",
-    "immediate_next_action": "Work on the closed low-rank residual. Use the two-window incidence stratum U=(R0 tensor V2) intersect (V0 tensor R1), dim U=4; identify the open finite-Frobenius pairs and compute their incidence differential to study the singular symmetric boundary or find AS residual pairs. In the square-axis branch only exceptional ranks or dependent input and output kernel lines remain. Full-rank signed Ore fixtures stay in higher rank.",
+    "immediate_next_action": "Study the 2+2 invertible-pair partition in Zsym. In the adjacent-pair case normalize compatible rank2 transfers H,K with HK=KH=0; analyze R1 intersect (imH tensor W) and R1 intersect (V tensor imK), which cannot contain pure tensors on AS. Use the marker-matrix corank>=2 test and the two-window Serre criterion on resulting normal forms. Other low-rank components and partitions with fewer invertible pairs remain open.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/cubic_slice_growth.tex",
+      "sections/symmetric_boundary_divisors.tex",
       "sections/cut_serre_criterion.tex",
-      "sections/symmetric_ci_tangent.tex",
-      "sections/adjacent_square_pencil.tex"
+      "research/notes_ja.tex"
     ],
     "known_obstruction": "No proof that an adjacent positive witness propagates. Opposite-positive and witness-free AS objects exist in known higher-rank charts, but no exhaustive low-rank residual atlas is proved. Full classification and component geometry remain open.",
-    "state_of_claim": "S is smooth open throughout the three-cut scheme. This only settles neighborhoods of known symmetric points. The closed residual may still have AS points, and no finite Serre bound is known.",
+    "state_of_claim": "Four codimension-one boundary components identified, with generic AS-neighborhood exclusion. General marked growth and pure cubic slice exclusions proved. Neither exhaustiveness of boundary divisors nor emptiness of residual AS is established.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

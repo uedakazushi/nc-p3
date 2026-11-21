@@ -1,52 +1,52 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 41,
+  "version": 42,
   "reviewed_input": {
-    "source_commit": "22e9ee1fbcd5d44af2da12ae317cd97d80350d10"
+    "source_commit": "6dca2871dd332cce4799dd255e46ab7f00a7de67"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Uniform graded rigidity and smooth openness along every symmetric CI point of X6; relatively closed low residual; explicit four-square kernel criterion."
+    "scope": "Four three-factor boundary divisors, oriented transverse degeneration, global exponential-growth exclusion of pure cubic overlaps."
   },
   "checks": [
     {
-      "command": "python3 computations/verify_ci_middle_rigidity.py",
+      "command": "python3 computations/verify_boolean_boundary_divisor.py",
       "result": "PASS",
-      "scope": "Nonsquare regular pencil; fixed-ring action rank125 on 192 unknowns, affine tangent70, fixed55, projective69."
+      "scope": "Boolean three-cut tangent, twelve oriented symmetrizer lines, full symbolic transverse determinant and inverse."
     },
     {
-      "command": "python3 computations/verify_square_kernel_recognition.py; python3 computations/verify_single_negative_slice.py",
+      "command": "python3 computations/verify_cubic_slice_growth.py",
       "result": "PASS",
-      "scope": "Square normal form, cubic inclusion and fourth-slot reconstruction at two exact rational gauges. Original alternating-slice certificate unchanged on rerun."
+      "scope": "Boolean quotient dimension10 and independent linear marker matrix rank10. Twenty-four regular marker controls via both formulas."
     },
     {
       "command": "python3 scripts/check_project.py and git diff --check",
       "result": "PASS",
-      "scope": "Structure, references, JSON and whitespace."
+      "scope": "Structure, references, whitespace."
     }
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked the graded Ext sequences, dual-number module lift, S4 sign quotient and determinant kernels, incidence lines in the square-axis proof. No formalization or independent referee review."
+    "scope": "Reviewed frame dimensions, irreducibility and separation of the four labeled divisors, local resultant equation and determinant order. Reviewed tensor-power quotient, pure cubic support, reversal lower bound and the simple-point graph intersection bound."
   },
   "tex": {
     "result": "PASS",
-    "scope": "With available workspace TeX activation, preflight --tex and latexmk for main, plan, notes passed. Main 89 pages. Fixed previously undefined GL in the plan and unescaped filename in ternary cubic section."
+    "scope": "Workspace TeX activation and latexmk on paper (93 pages), plan and notes. PDFs kept out of git."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT",
-    "scope": "CI Ext calculation and tangent arguments are supplied in full; no priority claim."
+    "scope": "Uses internal theorems and explicit computations. No novelty determination."
   },
   "github_save": {
     "result": "PENDING"
   },
   "open_mathematics": [
-    "No finite bound on Serre powers.",
-    "Residual single-adjacent-positive and witness-free cases, explicit exhaustive atlas remain open."
+    "Other boundary divisors and special AS points unresolved.",
+    "No finite bound for complete Koszul recognition.",
+    "Full classification unresolved."
   ],
   "visual_inspection": {
-    "result": "TARGETED",
-    "scope": "Rendered and inspected main page62 with uniform smoothness proof and residual corollary. Not a full visual pass."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   }
 }

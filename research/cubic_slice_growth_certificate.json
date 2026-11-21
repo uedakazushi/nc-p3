@@ -1,0 +1,151 @@
+{
+  "result": "PASS",
+  "arithmetic": "exact rational",
+  "Boolean_t0_marker2_pure_cube": {
+    "outer_dimensions": [
+      3,
+      3
+    ],
+    "projected_relations": [
+      5,
+      5
+    ],
+    "insertion_rank": 26,
+    "block_dimension": 10
+  },
+  "Boolean_marker_matrix_rank": 10,
+  "regular_controls": [
+    {
+      "marker": 0,
+      "covector": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "polynomial": 1,
+      "signed_Ore": 1
+    },
+    {
+      "marker": 0,
+      "covector": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "polynomial": 1,
+      "signed_Ore": 1
+    },
+    {
+      "marker": 0,
+      "covector": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "polynomial": 1,
+      "signed_Ore": 0
+    },
+    {
+      "marker": 1,
+      "covector": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "polynomial": 1,
+      "signed_Ore": 1
+    },
+    {
+      "marker": 1,
+      "covector": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "polynomial": 1,
+      "signed_Ore": 1
+    },
+    {
+      "marker": 1,
+      "covector": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "polynomial": 1,
+      "signed_Ore": 0
+    },
+    {
+      "marker": 2,
+      "covector": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "polynomial": 1,
+      "signed_Ore": 1
+    },
+    {
+      "marker": 2,
+      "covector": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "polynomial": 1,
+      "signed_Ore": 1
+    },
+    {
+      "marker": 2,
+      "covector": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "polynomial": 1,
+      "signed_Ore": 0
+    },
+    {
+      "marker": 3,
+      "covector": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "polynomial": 1,
+      "signed_Ore": 1
+    },
+    {
+      "marker": 3,
+      "covector": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "polynomial": 1,
+      "signed_Ore": 1
+    },
+    {
+      "marker": 3,
+      "covector": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "polynomial": 1,
+      "signed_Ore": 0
+    }
+  ]
+}

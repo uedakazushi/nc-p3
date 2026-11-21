@@ -24,7 +24,8 @@
       ],
       "coverage": "disjoint exhaustive split proved in prop:opposite-rank-split",
       "normal_forms": "unresolved",
-      "witness_partition": "Any negative witness: polynomial indexed class. At least two positive witnesses: symmetric CI chart. Residual: no negative and at most one positive. These predicates exhaust AS objects but do not give a complete residual classification."
+      "witness_partition": "Any negative witness: polynomial indexed class. At least two positive witnesses: symmetric CI chart. Residual: no negative and at most one positive. These predicates exhaust AS objects but do not give a complete residual classification.",
+      "growth_obstruction": "All marked 20x120 matrices have rank >=19 on P3. No nonzero pure tensor in a cubic overlap; thm:no-consecutive-pure-relations."
     },
     {
       "id": "OPPOSITE-LOW",
@@ -108,7 +109,8 @@
       "excluded_subfamilies": "contains no quantum polynomial indexed class, by quantum rank formula and its two rank-six normal forms; also no member of the full polynomial-derivation Ore chart; neither uniform indexed commuting nor anticommuting Ore subclass contributes a point; entire diagonal quantum-three-generator Ore chart excluded, even up to indexed isomorphism; also avoids the proven G-invariant low-rank open neighborhood of the specified Clifford point C0; every three-factor-symmetrizable candidate with a basepoint is non-Koszul by the signed-reversal Euler obstruction, thm:partial-symmetric-basepoint-exclusion",
       "necessary_witness_restrictions": "No invertible negative witness at any position; at most one positive witness. One negative witness already recognizes the polynomial indexed class; cor:one-negative-frobenius-recognition.",
       "adjacent_witness_restriction": "Any adjacent positive witness forces rho6. Thus rho3/4/5 has no adjacent witnesses of either sign. Negative witnesses are entirely excluded from this residual by the three-form rigidity theorem.",
-      "relative_geometry": "Relatively closed in the complete standard finite-Frobenius candidate locus, hence also in the AS subspace; cor:closed-low-residual. Nonemptiness on the AS locus remains open."
+      "relative_geometry": "Relatively closed in the complete standard finite-Frobenius candidate locus, hence also in the AS subspace; cor:closed-low-residual. Nonemptiness on the AS locus remains open.",
+      "boundary_restriction": "Avoids X6 neighborhoods of generic points of the four three-factor-symmetric boundary divisors, including rotated Boolean points. In the 2+2 partition inside Zsym, a compatible pair of cross transfers must have ranks2,2."
     }
   ],
   "limits": [

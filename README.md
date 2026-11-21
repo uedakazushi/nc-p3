@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の周期構造と代数的変形
 
-**2026-11-22 / v41。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v42。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 最初に読む
 
@@ -202,6 +202,9 @@ python3 computations/verify_general_cut_tor.py --output research/general_cut_tor
 # Tangent spaces at a square-free pencil (no rank-one quadric), and the four-square recognition fixture
 python3 computations/verify_ci_middle_rigidity.py --output research/ci_middle_rigidity_certificate.json
 python3 computations/verify_square_kernel_recognition.py --output research/square_kernel_recognition_certificate.json
+# Boundary divisor and exponential growth from a single marker
+python3 computations/verify_boolean_boundary_divisor.py --output research/boolean_boundary_divisor_certificate.json
+python3 computations/verify_cubic_slice_growth.py --output research/cubic_slice_growth_certificate.json
 # Control for the residual single-adjacent-negative linear matrix slice
 python3 computations/verify_single_negative_slice.py --output research/single_negative_slice_certificate.json
 # Exhaustive partial-alternation models and their Frobenius exclusions
@@ -216,3 +219,5 @@ python3 computations/verify_trivial_extension_bitor.py --field eight --frame ter
 連続二窓の三次交叉が四次元のとき、そこから作る56次元代数が3-representation infiniteであることは標準AS延長の必要十分条件である。延長の同型類はこの二窓で決まる。この全次数条件を有限個の反復で判定する方法と、二窓の明示的な軌道分類は未解決である。
 
 対称完全交叉チャート全体は三つの二対二階数を6以下にした射影表示空間の滑らかな69次元開部分である。対称類と可換多項式類を除いた低階数部分は有限Frobenius候補内で相対閉となる。この閉部分に標準AS対象が存在するかは未解決である。
+
+対称成分の境界には、例外因子の位置で区別される四つの68次元因子がある。それぞれの一般点の近傍で、低階数のAS点は対称チャートに尽きる。さらに任意の標準AS四窓では、連続二つの二次関係が非零の純テンソルとその共通の中央文字を持つことはない。Boolean境界では長さ $4m$ の次元が少なくとも $10^m$ となる。
