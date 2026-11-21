@@ -34,7 +34,9 @@
     "scope": "Uses internal theorems and explicit computations. No novelty determination."
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "verified_research_commit": "3e03a030e06e549061a052382f748718e4d0a059",
+    "scope": "Fetched GitHub main after fast-forward push. Matched HEAD and compared all 17 changed research, source and metadata files since v42 byte for byte with the fetched commit."
   },
   "open_mathematics": [
     "Existence of AS objects with the required common-image rank-one pencil in the symmetric boundary remains open.",
