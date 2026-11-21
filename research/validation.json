@@ -42,7 +42,9 @@
     "scope": "The new argument uses current internal results. No independent novelty determination or external-source claim was added."
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "verified_research_commit": "2e29e1b01aa54bd6afae3ae563e65e037142eef1",
+    "scope": "Fetched main after fast-forward push, checked the commit and all 14 changed files since v45 against the worktree byte for byte."
   },
   "open_mathematics": [
     "Existence/exclusion at opposite rank five, classification at residual rank six and higher ranks, and global orbit coverage are open.",
