@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 43,
+  "version": 44,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -583,7 +583,7 @@
     {
       "id": "PARTIAL-SYMMETRIZER-QUARTICS",
       "status": "proved",
-      "statement": "For a cubic-frame tensor with dim B3=4, S2 is canonically B4 dual, with matrix rank equal to first catalecticant rank. A one-basepoint B4-dual line yields rank-one symmetrizers. Any two invertible negative symmetrizers already imply full alternation. Projective rank-one elements of S2 correspond exactly to basepoints as closed points. In the finite-Frobenius partial-symmetric chart, absence of rank-one elements is equivalent to membership in the symmetric CI branch; the complementary basepoint branch is exhaustive and is now excluded from AS by thm:partial-symmetric-basepoint-exclusion. Globally, two invertible positive witnesses force either the symmetric CI branch or a remaining symmetrizer space consisting of singular matrices and containing a rank-one matrix. Mixed positive/negative invertible witnesses at different positions are impossible by the braid relation.",
+      "statement": "For a cubic-frame tensor with dim B3=4, S2 is canonically B4 dual, with matrix rank equal to first catalecticant rank. A one-basepoint B4-dual line yields rank-one symmetrizers. Any two invertible negative symmetrizers already imply full alternation. Projective rank-one elements of S2 correspond exactly to basepoints as closed points. In the finite-Frobenius partial-symmetric chart, absence of rank-one elements is equivalent to membership in the symmetric CI branch; the complementary basepoint branch is exhaustive and is now excluded from AS by thm:partial-symmetric-basepoint-exclusion. Globally, two invertible positive witnesses sharing an anchor force either the symmetric CI branch or a remaining symmetrizer space consisting of singular matrices and containing a rank-one matrix. Mixed positive/negative invertible witnesses at different positions are impossible by the braid relation.",
       "proof": "sections/reduced_quadric_boundary.tex: prop:partial-symmetrizer-quartics and cor:one-basepoint-symmetrizer; sections/frobenius_tensor.tex: cor:two-alternating-witnesses; cor:basepoint-rank-one-symmetrizer and cor:partial-symmetric-exhaustive-split; prop:two-positive-global-split and cor:mixed-symmetry-witness-exclusion"
     },
     {
@@ -621,7 +621,7 @@
     {
       "id": "PARTIAL-SYMMETRIC-AS-CLASSIFIED",
       "status": "proved_and_targeted_exact_regressions_passed",
-      "statement": "For every basepoint quadric space with hB=(1,4,6,4) through degree3, the point-quotient one-return Koszul complex has a signed word-reversal involution. Its negative block dimensions60,200,135 force H3>=5, hence Tor^(T_L)_(4,5)>=5 and non-Koszulity. Thus every finite-Frobenius three-factor-symmetrizable AS object is in the symmetric CI chart. Any two positive invertible witnesses suffice for symmetric AS recognition. All remaining AS objects outside symmetric and polynomial branches have at most one positive witness; the subsequent single-negative rigidity theorem excludes every negative witness. The generic one-return d4 bound<=339 follows without a full symbolic rank computation.",
+      "statement": "For every basepoint quadric space with hB=(1,4,6,4) through degree3, the point-quotient one-return Koszul complex has a signed word-reversal involution. Its negative block dimensions60,200,135 force H3>=5, hence Tor^(T_L)_(4,5)>=5 and non-Koszulity. Thus every finite-Frobenius three-factor-symmetrizable AS object is in the symmetric CI chart. Two positive invertible witnesses sharing an anchor suffice for symmetric AS recognition. All remaining AS objects outside symmetric and polynomial branches have at most one positive partner per position; the subsequent single-negative rigidity theorem excludes every negative witness. The generic one-return d4 bound<=339 follows without a full symbolic rank computation.",
       "proof": "sections/partial_symmetric_as.tex: thm:partial-symmetric-basepoint-exclusion, cor:partial-symmetric-as-complete, cor:two-positive-as-recognition, cor:product-net-rank-bound",
       "verification": [
         "computations/verify_one_return_involution.py",
@@ -738,6 +738,16 @@
       "status": "proved_in_symmetric_closure",
       "statement": "For a standard AS object in Zsym, one invertible positive witness on any pair is equivalent to membership in S. For the single opposite pair the limit maps force complementary planes; one quotient forces two binary edge ranks to be three, and the other then grows at least as 8^m in length 4m. On arbitrary standard AS objects nonzero singular transfers across opposite positions have rank two for either sign.",
       "proof": "sections/adjacent_witness_boundary.tex; sections/cubic_slice_growth.tex:cor:opposite-singular-rank-two"
+    },
+    {
+      "id": "SINGULAR-TRANSFER-RANK-ONE-REQUIRED",
+      "status": "proved_with_finite_incidence_check",
+      "statement": "Every coherent projective transfer tuple at any residual AS point of Zsym contains an adjacent rank-one map. When all ranks equal two the composition identities force a common binary quotient at one position. Its binary quartic contains a square in the middle image, giving consecutive pure relations. After choosing the source on one of two opposite slots, the rank-one covector factors through its opposite binary quotient. The whole projected tensor is a binary symmetric quadratic with three independent vector coefficients times one fixed neighboring letter. Thus a two-dimensional pencil of rank-one positive maps with a common image is forced.",
+      "proof": "sections/singular_transfer_planes.tex",
+      "verification": [
+        "computations/verify_transfer_plane_patterns.py",
+        "research/transfer_plane_patterns_certificate.json"
+      ]
     }
   ],
   "document_paths": {
@@ -801,7 +811,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "49dc510159b785b7d67f45711cda5733dc308752",
+  "reviewed_source_commit": "989a6e38b1d5ba17a44eb07d272fc4f65bf27565",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -809,10 +819,11 @@
   "resume_point": {
     "task_id": "Z4-AS-004",
     "status": "active_singular_transfers_and_other_components",
-    "objective": "Classify the remaining AS tensors with no negative invertible symmetrizer and at most one positive invertible symmetrizer; the low-rank witness-free region remains the principal coverage hole.",
-    "immediate_next_action": "In Zsym outside S, analyze coherent projective transfers when every pair has only singular positive witnesses. Opposite pairs have constant rank two; compose consecutive transfers and test marker-growth or quartic obstructions. Outside Zsym keep the general low-rank residual in scope.",
+    "objective": "Classify the remaining AS tensors with no negative invertible symmetrizer and at most one invertibly positive partner per position; the low-rank witness-free region remains the principal coverage hole.",
+    "immediate_next_action": "Use the projected binary tensor in Proposition forced-binary-endpoint-pencil: the coefficient hyperplane is exactly the inverse image of the fixed line by the other opposite transfer. Control the complementary two source directions, their mixed relation spaces and the marker quotient. The case outside Zsym remains separate.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/singular_transfer_planes.tex",
       "sections/adjacent_witness_boundary.tex",
       "sections/two_pair_boundary.tex",
       "sections/cubic_slice_growth.tex",
@@ -820,7 +831,7 @@
       "sections/cut_serre_criterion.tex"
     ],
     "known_obstruction": "The coherent singular transfers on the residual inside Zsym need not identify a pair of factors; no global exclusion of this locus is proved. Single-adjacent propagation outside Zsym remains open.",
-    "state_of_claim": "Inside Zsym an AS object has any invertible positive witness exactly when it belongs to S. Seven known divisors with no residual AS near general points. The all-singular locus, other components and full classification remain open.",
+    "state_of_claim": "Any residual AS point inside Zsym must have only singular positive witnesses, with an adjacent rank-one map in every coherent tuple. Its existence remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

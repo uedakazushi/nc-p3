@@ -24,7 +24,7 @@
       ],
       "coverage": "disjoint exhaustive split proved in prop:opposite-rank-split",
       "normal_forms": "unresolved",
-      "witness_partition": "Any negative witness: polynomial indexed class. At least two positive witnesses: symmetric CI chart. Residual: no negative and at most one positive. These predicates exhaust AS objects but do not give a complete residual classification.",
+      "witness_partition": "Any negative witness: polynomial indexed class. Two invertible positive pairs sharing a position: symmetric CI chart. Residual: no negative and at most one positive partner per position. These predicates exhaust AS objects but do not give a complete residual classification.",
       "growth_obstruction": "All marked 20x120 matrices have rank >=19 on P3. No nonzero pure tensor in a cubic overlap; thm:no-consecutive-pure-relations."
     },
     {
@@ -52,7 +52,7 @@
       "normal_forms": "unresolved",
       "regularity_of_all_tensor_candidates": "unresolved",
       "complete_isomorphism": "unresolved",
-      "necessary_witness_restrictions": "No invertible negative witness at any position; at most one positive witness. One negative witness already recognizes the polynomial indexed class; cor:one-negative-frobenius-recognition.",
+      "necessary_witness_restrictions": "No invertible negative witness at any position; at most one invertibly positive partner per position. One negative witness already recognizes the polynomial indexed class; cor:one-negative-frobenius-recognition.",
       "adjacent_witness_restriction": "No adjacent witness of either sign. A positive opposite witness requires rho<=10; rho>=11 has no invertible witnesses at all."
     },
     {
@@ -66,7 +66,7 @@
       "period": "one-periodic",
       "complete_isomorphism": "proved for all U: GL4 equivalence of quadric spaces; 33-variable 41-equation criterion, cor:symmetric-chart-isomorphism",
       "normal_forms": "complete-intersection chart; no complete residual orbit normalization",
-      "membership": "For already AS objects, any two positive linear symmetrizer spaces containing invertible matrices suffice; cor:two-positive-as-recognition. For arbitrary finite-Frobenius candidates, the original three-witness test applies.",
+      "membership": "For already AS objects, two positive linear symmetrizer spaces based at the same position and containing invertible matrices suffice; cor:two-positive-as-recognition. For arbitrary finite-Frobenius candidates, the original three-witness test applies.",
       "local_coverage_at_C0": "contains a G-invariant Zariski-open neighborhood of C0 in the rank<=6 finite-Frobenius tensor scheme; smooth presentation dimension 69, thm:clifford-low-rank-local",
       "local_coverage_at_pure_anti": "G-invariant open in X6, smooth presentation dimension 69; first-order quotient 12, not a 12-dimensional component",
       "local_coverage_all_CI": "Open in X6 at every symmetric CI point; smooth presentation dimension 69, thm:symmetric-open-all."
@@ -107,10 +107,10 @@
       "regularity_of_all_tensor_candidates": "unresolved",
       "complete_isomorphism": "unresolved",
       "excluded_subfamilies": "contains no quantum polynomial indexed class, by quantum rank formula and its two rank-six normal forms; also no member of the full polynomial-derivation Ore chart; neither uniform indexed commuting nor anticommuting Ore subclass contributes a point; entire diagonal quantum-three-generator Ore chart excluded, even up to indexed isomorphism; also avoids the proven G-invariant low-rank open neighborhood of the specified Clifford point C0; every three-factor-symmetrizable candidate with a basepoint is non-Koszul by the signed-reversal Euler obstruction, thm:partial-symmetric-basepoint-exclusion",
-      "necessary_witness_restrictions": "No invertible negative witness at any position; at most one positive witness. One negative witness already recognizes the polynomial indexed class; cor:one-negative-frobenius-recognition.",
+      "necessary_witness_restrictions": "No invertible negative witness at any position; at most one invertibly positive partner per position. One negative witness already recognizes the polynomial indexed class; cor:one-negative-frobenius-recognition.",
       "adjacent_witness_restriction": "Any adjacent positive witness forces rho6. Thus rho3/4/5 has no adjacent witnesses of either sign. Negative witnesses are entirely excluded from this residual by the three-form rigidity theorem.",
       "relative_geometry": "Relatively closed in the complete standard finite-Frobenius candidate locus, hence also in the AS subspace; cor:closed-low-residual. Nonemptiness on the AS locus remains open.",
-      "boundary_restriction": "Inside Zsym outside S, all positive witnesses on a residual AS object must be singular. Opposite transfers have rank two whenever nonzero. Avoids X6 neighborhoods of general points of seven known 68-dimensional boundary divisors (four 3+1 and three 2+2). Other components and deeper strata are not excluded."
+      "boundary_restriction": "Inside Zsym outside S, all positive witnesses on a residual AS object must be singular. Opposite transfers have rank two whenever nonzero. Every coherent transfer tuple must contain an adjacent rank-one map. Avoids X6 neighborhoods of general points of seven known 68-dimensional boundary divisors (four 3+1 and three 2+2). Other components and deeper strata are not excluded."
     }
   ],
   "limits": [

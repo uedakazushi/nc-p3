@@ -1,0 +1,14 @@
+{
+  "patterns_tested": 625,
+  "compatible_patterns": 29,
+  "by_number_of_common_kernel_positions": {
+    "2": 12,
+    "3": 16,
+    "4": 1
+  },
+  "projected_binary_pencil_minors": [
+    "a**2",
+    "a*b",
+    "b**2"
+  ]
+}

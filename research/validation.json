@@ -1,38 +1,33 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 43,
+  "version": 44,
   "reviewed_input": {
-    "source_commit": "49dc510159b785b7d67f45711cda5733dc308752"
+    "source_commit": "989a6e38b1d5ba17a44eb07d272fc4f65bf27565"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Three two-pair boundary divisors and exclusion of every residual invertible positive witness inside the symmetric closure."
+    "scope": "All-rank-two coherent transfer tuples excluded in the residual of the symmetric closure; an adjacent two-dimensional rank-one pencil and a projected binary normal form are necessary."
   },
   "checks": [
     {
-      "command": "python3 computations/verify_two_pair_boundary.py",
+      "command": "python3 computations/verify_transfer_plane_patterns.py",
       "result": "PASS",
-      "scope": "Ran twice with byte-identical JSON. Checked Schur derivative, all symmetrizer lines, tangent, both cyclic orders and both complementary-plane projections on a separate binary-quartic control."
+      "scope": "Enumerated all 625 labeled local partitions, with 29 satisfying the composition implication; common-kernel counts 12,16,1. Verified all maximal minors of the projected binary pencil symbolically. Two independent runs produced byte-identical JSON."
     },
     {
-      "command": "python3 computations/verify_cubic_slice_growth.py",
+      "command": "bash scripts/cloud_preflight.sh --tex and git diff --check",
       "result": "PASS",
-      "scope": "Recomputed Boolean and regular marker controls and compared with the tracked certificate."
-    },
-    {
-      "command": "bash scripts/cloud_preflight.sh --tex; git diff --check",
-      "result": "PASS",
-      "scope": "Structure, TeX environment and whitespace."
+      "scope": "Repository structure, plan compilation, references and whitespace."
     }
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked dimensions of the two-pair strata, formal smoothing, adjacent quartic cycle and boundary counts, opposite-transfer rank exclusion, projective composition identities and both path quotients for a single opposite pair. Rational fixtures are separate from the general proofs."
+    "scope": "Checked the binary quartic middle-image argument, plane composition identities and common kernels. Checked rank-one covector factoring after reversal, consecutive-relation obstruction on the binary restriction, independence of the three coefficients and the inverse-image hyperplane. No external peer review or formal verification."
   },
   "tex": {
     "result": "PASS",
-    "scope": "Paper (100 pages), notes (11), plan (6); no undefined references or overfull boxes in final logs."
+    "scope": "Clean rebuild of Japanese paper (101 pages), plan (6), notes (11); final logs contain no undefined references or overfull boxes."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT",
@@ -42,12 +37,11 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Inside Zsym the all-singular residual AS locus is unresolved. Other boundary divisors and other low-rank components may exist.",
-    "Global propagation outside Zsym and full classification remain open.",
-    "No finite bound for complete Koszul recognition."
+    "Existence of AS objects with the required common-image rank-one pencil in the symmetric boundary remains open.",
+    "Other low-rank components and the complete standard AS classification are unresolved."
   ],
   "visual_inspection": {
     "result": "PASS",
-    "scope": "Rendered and inspected paper page 73 with complementary planes and Theorem 28.3."
+    "scope": "Inspected rendered page 75 with the projected normal form and its proof."
   }
 }
