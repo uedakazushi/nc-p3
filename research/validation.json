@@ -43,8 +43,10 @@
     "scope": "Cut and Tor arguments are proved directly from existing repository lemmas. No novelty claim."
   },
   "github_save": {
-    "result": "PENDING",
-    "branch": "main"
+    "result": "PASS",
+    "branch": "main",
+    "verified_commit": "ae508b7a4f89d45f953ef3ad36adeac7ae41d725",
+    "scope": "Fetched origin/main with exact HEAD match; new proof, resume point and dimension certificate read back byte-for-byte. Pausing at the user-requested checkpoint."
   },
   "library_save": {
     "result": "not_attempted",
