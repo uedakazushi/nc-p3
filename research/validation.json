@@ -44,8 +44,9 @@
     "scope": "The new argument uses current internal results. No independent novelty determination or external-source claim was added."
   },
   "github_save": {
-    "result": "PENDING_THIS_CHECKPOINT",
-    "scope": "Must verify the normal main update and changed source bytes after saving; not yet recorded as successful."
+    "result": "PASS",
+    "verified_research_commit": "3c4614e189b399b531ec4671f3b26c3e98bcc2d3",
+    "scope": "Normal main fast-forward with expected-head check succeeded. Fetched origin/main and compared all54 changed entries byte for byte, including the new main manuscript and removal of the old root path. This verification record is saved in a following ordinary commit; no force push or GitHub Actions."
   },
   "open_mathematics": [
     "All-degree AS recognition on general two-window inputs remains ineffective; no uniform finite cutoff is proved.",
