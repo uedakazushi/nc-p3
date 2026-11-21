@@ -1,0 +1,17 @@
+{
+  "result": "PASS",
+  "arithmetic": "exact rational",
+  "quadrics": "x_i^2+c_i*x_(i+1)*x_(i+2), cyclic indices",
+  "c": [
+    1,
+    2,
+    3,
+    5
+  ],
+  "quartic_trace_dimension": 1,
+  "module_linearization_rank": 125,
+  "fixed_ring_module_tangent": 67,
+  "three_cut_affine_tangent": 70,
+  "swap01_fixed_affine_tangent": 55,
+  "three_cut_projective_tangent": 69
+}

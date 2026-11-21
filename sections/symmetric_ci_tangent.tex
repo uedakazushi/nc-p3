@@ -1,0 +1,105 @@
+\section{対称完全交叉の全点での三階数切断の滑らかさ}
+\label{sec:ci-global-tangent}
+$\mathfrak X_6$は三つの二対二分割について全ての7次小行列式を課した射影スキームである。
+定理\ref{thm:symmetric-presentation-product}の対称チャート$S$が、そのどの点でも
+$\mathfrak X_6$の局所構造全体を与えることを示す。
+
+\begin{lemma}[中央三次数の次数零剛性]\label{lem:ci-middle-rigidity}
+$B=\operatorname{Sym}(V^*)/(L)$を四つの二次式のArtin完全交叉とし、
+$\mathfrak m=B_{>0}$, $N=\mathfrak m/B_4$を元の次数$1,2,3$に置く。
+このとき$\operatorname{End}_B(N)_0=k$、
+$\operatorname{Ext}^1_B(N,N)_0=0$である。
+\end{lemma}
+\begin{proof}
+全てのHomとExtで内部次数零を取る。$D_0=B/B_4$と置く。
+$B$はFrobeniusで自己入射的、$B_4=k(-4)$であり、
+二次完全交叉はKoszulなので
+$\operatorname{Ext}^p_B(k,k(-4))_0=0$ ($p\ne4$)である。
+$0\to k(-4)\to B\to D_0\to0$から
+$\operatorname{Ext}^p_B(k,D_0)_0=0$ ($p=1,2$)を得る。
+また$\operatorname{Hom}_B(k,D_0)_0=0$である。
+$0\to N\to D_0\to k\to0$と$\operatorname{Ext}^p_B(k,k)_0=0$ ($p>0$)より
+$\operatorname{Ext}^1_B(k,N)_0=k$、$\operatorname{Ext}^2_B(k,N)_0=0$となる。
+次に$0\to\mathfrak m\to B\to k\to0$で$N_0=0$を使うと
+$\operatorname{Hom}_B(\mathfrak m,N)_0=k$、
+$\operatorname{Ext}^1_B(\mathfrak m,N)_0=0$である。
+最後に$0\to k(-4)\to\mathfrak m\to N\to0$へ$\operatorname{Hom}_B(-,N)_0$を適用する。
+$N_4=0$なので$\operatorname{Hom}_B(k(-4),N)_0=0$となり、両方の主張が従う。
+\end{proof}
+
+\begin{theorem}[対称チャートは三階数切断の開部分]\label{thm:symmetric-open-all}
+$\mathfrak X_6$は$S$の全点で滑らかであり、$S$は$\mathfrak X_6$の69次元の開部分である。
+特に$Z_{\mathrm{sym}}$と異なる既約成分の交わりは$S$を避ける。
+\end{theorem}
+\begin{proof}
+四因子の基底変更により$[w]=[w_L]$を完全対称なCIのtraceとしてよい。
+アフィン錐の非零点$w$での接空間をそれぞれ$T_X,T_S$とする。
+まず$\dot w\in T_X$が因子$0,1$の交換で不変とする。
+$D=k[\epsilon]/(\epsilon^2)$上の$w'=w+\epsilon\dot w$はこの二因子に対称である。
+各分割で階数6の小行列式の一つが単元で、全7次小行列式が消えるため、
+行列の像・核は直和因子である（単元小行列で掃き出す）。
+$01|23$の縮約の$\operatorname{Sym}^2 V^*$内の核は$L$を持ち上げる階数4の$L'$となる。
+$B'=\operatorname{Sym}_D(V^*\otimes D)/(L')$は完全交叉族の引戻しであり、
+各次数は$D$上自由である。これは、特殊ファイバーで正則列を解消するKoszul複体を
+次数ごとに単元掃き出しすることからも従う。
+
+$02|13$の階数分解を$P'(x)Q'(y)$と書く。第0・第1因子の対称性より
+$P'(x)Q'(y)=P'(y)Q'(x)$である。従って順に$Q',P'$を一次式の作用とする
+階数$(4,6,4)$の三層加群を作れる。$L'$の全二次式が両作用の積を消し、
+その加群は$B'$上である。特殊ファイバーは$N$に同型である。
+実際、標準の階数分解は$B_1\to B_2\to B_3$の二つの乗法であり、
+$B_3$を$B_1$の双対と同定するtraceは最上テンソルを与える。
+全階数分解は中間空間の基底変更でこれに移る。
+
+同じ$B'$に対して標準加群$N'_{\rm st}=B'_{>0}/B'_4$がある。
+三次数ごとに基底を合わせ、二つの加群の特殊ファイバーを同一にする。
+その二つの一次作用の差は$\epsilon$の係数として$B$上の次数付き自己拡大を定める。
+具体的には、$B'$の元$b'$の二つの作用の差を$\epsilon$で割れば、
+特殊化$b$だけに依存する写像$\delta(b)$が得られる。
+$\delta(bc)=b\delta(c)+\delta(b)c$なので、対角に元の作用、
+上三角成分に$\delta$を入れた$N\oplus N$が拡大加群である。
+補題\ref{lem:ci-middle-rigidity}から次数零で分裂し、差は次数別基底変更
+$1+\epsilon f$で消える。従って$w'$は$B'$の対称traceテンソルから、
+入力・出力の基底変更とtraceの単元倍によって得られる。中間次数の基底変更は
+$P'Q'$の積で相殺する。ゆえに$\dot w\in T_S$である。
+
+$w$は完全対称、両方の錐は四因子の置換で不変なので$T_X,T_S$は
+$\mathfrak S_4$表現である。上の議論を共役すれば、各互換の固定部分は$T_S$に入る。
+従って商$T_X/T_S$では全互換が$-1$で作用し、交代化射影が恒等になる。
+一方、$T_X$に完全交代テンソルは存在しない。実際、$01|23$行列の左右核は
+ともに$\bigwedge^2 V^*$を含む。接条件は左右核上で$\dot w$の双線型形式が零となることである。
+完全交代テンソルを二組の交代二形式に評価すると、その四文字係数の4倍を得るので、
+この条件は全係数を消す。従って交代化射影は$T_X$上零であり、$T_X=T_S$である。
+
+射影化後の接次元は定理\ref{thm:symmetric-presentation-product}より69である。
+$S$を含むので局所次元は少なくとも69であり、接次元との一致から
+$\mathfrak X_6$はここで正則かつ滑らかである。通過する既約成分は
+$Z_{\mathrm{sym}}$一つで、$S$はその中で開である。他の有限個の成分を除けば
+各点の近傍を$S$内に取れるため、全体としても$S$は開である。
+\end{proof}
+
+この定理は全ての対称正則点を扱うが、決定式条件を外したAS表示空間の滑らかさや、
+$\mathfrak X_6$の他の成分の不存在は与えない。
+$S$の閉包には既知の有限Frobenius非Koszul境界がある。
+
+\begin{corollary}[未分類低階数部分の特殊化]\label{cor:closed-low-residual}
+有限Frobenius標準候補のうち、$\rho\leq6$で、対称CIと可換多項式軌道のいずれにも
+入らない部分は、全有限Frobenius標準候補の中で相対閉である。
+標準AS対象に制限しても同じ相対閉性が成り立つ。
+\end{corollary}
+\begin{proof}
+二つの既知部分は、定理\ref{thm:symmetric-open-all}と
+定理\ref{thm:pure-anti-and-alternating-local}により$\mathfrak X_6$の開部分である。
+その補集合は$\mathfrak X_6$で閉であり、$\mathfrak X_6$自体が射影テンソル空間で閉なので、
+候補部分・AS部分との交叉を取ればよい。未分類AS部分の非空性はこの議論からは従わない。
+\end{proof}
+
+\paragraph{平方を含まない完全交叉での検算。}
+巡回添字で$f_i=x_i^2+c_ix_{i+1}x_{i+2}$、$(c_0,c_1,c_2,c_3)=(1,2,3,5)$と取る。
+共通零点に一つでも非零座標があれば全座標が非零になり、四式の積から$\prod c_i=1$が必要になる。
+また$\ell^2\in L$なら、非零座標$\ell_i$は混合項によって$\ell_{i+2}\ne0$を強制するが、
+$x_ix_{i+2}$はどの$f_j$にも現れない。従って射影基点も非零平方もない。
+\path{computations/verify_ci_middle_rigidity.py}で四次traceを求め、
+固定した$B$の二作用を線型化すると192変数で階数125を得る。
+核次元67は三次数の基底変更群の次元からスカラー安定化群を除いた数に等しい。
+三分割全部のアフィン接次元は70、その$01$交換固定部分は55で、射影接次元は69である。

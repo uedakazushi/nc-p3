@@ -161,7 +161,7 @@ https://arxiv.org/pdf/1703.00438v5 、本文Theorem 1.1（p.2）と導入の定�
 いずれもnc-p3の四因子独立GL4^4作用の閉包を直接決定するものとしては使わない。
 `prop:symmetric-regular-specialization` の明示的SL4一パラメータ変換は、
 異なるindexed対称AS対象への正則特殊化を与え、個別軌道の閉性を否定する。
-特殊点も対称チャート内なので、チャート像全体の有限Frobenius部分での相対閉性は未解決のままである。
+この特殊点は対称チャート内にある。有限Frobenius候補内での非閉性は、別のBoolean境界の証明で判明している。
 
 ### 有限切断とtrivial extensionの比較
 Joseph Grant, *Higher zigzag algebras*, Documenta Mathematica 24 (2019), 749–814, doi:10.4171/DM/693. 出版社PDF https://ems.press/content/serial-article-files/26472 の Definitions 2.3, 2.5 とその直前の符号自己同型を確認した。定義は有限大域次元のKoszul入力を要求する。本稿の四層切断ではその仮定を自前で証明し、長さ符号が内部自己同型なので通常のtrivial extensionへ移す。構成自体や自動的なKoszul性の新規性は主張しない。

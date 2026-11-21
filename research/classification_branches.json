@@ -67,7 +67,8 @@
       "normal_forms": "complete-intersection chart; no complete residual orbit normalization",
       "membership": "For already AS objects, any two positive linear symmetrizer spaces containing invertible matrices suffice; cor:two-positive-as-recognition. For arbitrary finite-Frobenius candidates, the original three-witness test applies.",
       "local_coverage_at_C0": "contains a G-invariant Zariski-open neighborhood of C0 in the rank<=6 finite-Frobenius tensor scheme; smooth presentation dimension 69, thm:clifford-low-rank-local",
-      "local_coverage_at_pure_anti": "G-invariant open in X6, smooth presentation dimension 69; first-order quotient 12, not a 12-dimensional component"
+      "local_coverage_at_pure_anti": "G-invariant open in X6, smooth presentation dimension 69; first-order quotient 12, not a 12-dimensional component",
+      "local_coverage_all_CI": "Open in X6 at every symmetric CI point; smooth presentation dimension 69, thm:symmetric-open-all."
     },
     {
       "id": "LOW-RESIDUAL",
@@ -106,7 +107,8 @@
       "complete_isomorphism": "unresolved",
       "excluded_subfamilies": "contains no quantum polynomial indexed class, by quantum rank formula and its two rank-six normal forms; also no member of the full polynomial-derivation Ore chart; neither uniform indexed commuting nor anticommuting Ore subclass contributes a point; entire diagonal quantum-three-generator Ore chart excluded, even up to indexed isomorphism; also avoids the proven G-invariant low-rank open neighborhood of the specified Clifford point C0; every three-factor-symmetrizable candidate with a basepoint is non-Koszul by the signed-reversal Euler obstruction, thm:partial-symmetric-basepoint-exclusion",
       "necessary_witness_restrictions": "No invertible negative witness at any position; at most one positive witness. One negative witness already recognizes the polynomial indexed class; cor:one-negative-frobenius-recognition.",
-      "adjacent_witness_restriction": "Any adjacent positive witness forces rho6. Thus rho3/4/5 has no adjacent witnesses of either sign. Negative witnesses are entirely excluded from this residual by the three-form rigidity theorem."
+      "adjacent_witness_restriction": "Any adjacent positive witness forces rho6. Thus rho3/4/5 has no adjacent witnesses of either sign. Negative witnesses are entirely excluded from this residual by the three-form rigidity theorem.",
+      "relative_geometry": "Relatively closed in the complete standard finite-Frobenius candidate locus, hence also in the AS subspace; cor:closed-low-residual. Nonemptiness on the AS locus remains open."
     }
   ],
   "limits": [

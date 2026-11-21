@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 40,
+  "version": 41,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -682,6 +682,26 @@
       "status": "proof_in_manuscript_no_finite_bound",
       "statement": "Two consecutive six-dimensional primal relations with cubic intersection of dimension four admit a standard AS extension iff the opposite of their 56-dimensional path cut is 3-representation infinite (right module convention). The extension is unique up to index-preserving isomorphism. A single cut computes all bigraded Tor via shifted Serre powers. No effective finite recognition bound or orbit normal forms.",
       "proof": "sections/cut_serre_criterion.tex:thm:cut-serre, cor:two-window-extension"
+    },
+    {
+      "id": "SYMMETRIC-OPEN-ALL-CI",
+      "status": "proved_and_exact_non_square_fixture",
+      "statement": "At every symmetric quadratic CI the graded middle truncation has End_0=k and Ext^1_0=0. Swap-fixed deformations of the three-flattening rank scheme lift to a varying CI and changes of basis; the alternating quotient vanishes. Thus all of S is smooth open in X6 of presentation dimension69. LOW-UNCLASSIFIED is relatively closed in all finite Frobenius candidates and in AS. Its AS nonemptiness is unresolved.",
+      "proof": "sections/symmetric_ci_tangent.tex:thm:symmetric-open-all, cor:closed-low-residual",
+      "verification": [
+        "computations/verify_ci_middle_rigidity.py",
+        "research/ci_middle_rigidity_certificate.json"
+      ]
+    },
+    {
+      "id": "FOUR-SQUARE-KERNEL-RECOGNITION",
+      "status": "proved_and_exact_gauge_test",
+      "statement": "With specified adjacent symmetry and four independent squares annihilating it, axis ranks (3,3) and independent kernel lines on either side force the product tensor even without AS. Six common lines chosen simultaneously give a middle basis; commutation normalizes the scalar ratios.",
+      "proof": "sections/adjacent_square_pencil.tex:prop:square-kernel-recognition",
+      "verification": [
+        "computations/verify_square_kernel_recognition.py",
+        "research/square_kernel_recognition_certificate.json"
+      ]
     }
   ],
   "document_paths": {
@@ -745,24 +765,24 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "df3c08398f4f32df2cbcafb3cceb47d39037ef6a",
+  "reviewed_source_commit": "22e9ee1fbcd5d44af2da12ae317cd97d80350d10",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
   "cloud_codex_status": "Repository-side Cloud guidance and preflight added; actual Cloud environment publishing, TeX tools and Git push permissions are not verifiable from repository alone.",
   "resume_point": {
     "task_id": "Z4-AS-004",
-    "status": "active_after_two_window_reduction",
+    "status": "active_closed_low_residual",
     "objective": "Classify the remaining AS tensors with no negative invertible symmetrizer and at most one positive invertible symmetrizer; the low-rank witness-free region remains the principal coverage hole.",
-    "immediate_next_action": "Use the commuting 464 module of a single adjacent positive witness. On the square CI slice L=<x_i^2>, analyze kernels of Q_i, their pairwise intersections and propagation to a second symmetry. Also test later Serre iterates via lower Ext of injectives of the 56-dimensional cut.",
+    "immediate_next_action": "Work on the closed low-rank residual. Use the two-window incidence stratum U=(R0 tensor V2) intersect (V0 tensor R1), dim U=4; identify the open finite-Frobenius pairs and compute their incidence differential to study the singular symmetric boundary or find AS residual pairs. In the square-axis branch only exceptional ranks or dependent input and output kernel lines remain. Full-rank signed Ore fixtures stay in higher rank.",
     "read_first": [
       "research/plan_ja.tex",
       "sections/cut_serre_criterion.tex",
-      "sections/general_cut_trivial_extension.tex",
-      "research/notes_ja.tex"
+      "sections/symmetric_ci_tangent.tex",
+      "sections/adjacent_square_pencil.tex"
     ],
     "known_obstruction": "No proof that an adjacent positive witness propagates. Opposite-positive and witness-free AS objects exist in known higher-rank charts, but no exhaustive low-rank residual atlas is proved. Full classification and component geometry remain open.",
-    "state_of_claim": "General all-degree structural equivalence and two-window orbit criterion are proved; it remains to recognize the 3-representation-infinite pairs and classify their orbits. Exact all-cut checks at regular and nonregular fixtures cover degrees1..7.",
+    "state_of_claim": "S is smooth open throughout the three-cut scheme. This only settles neighborhoods of known symmetric points. The closed residual may still have AS points, and no finite Serre bound is known.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

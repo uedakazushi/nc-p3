@@ -1,42 +1,42 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 40,
+  "version": 41,
   "reviewed_input": {
-    "source_commit": "df3c08398f4f32df2cbcafb3cceb47d39037ef6a"
+    "source_commit": "22e9ee1fbcd5d44af2da12ae317cd97d80350d10"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Single-cut all-degree Serre criterion, two-relation extension and exact finite controls."
+    "scope": "Uniform graded rigidity and smooth openness along every symmetric CI point of X6; relatively closed low residual; explicit four-square kernel criterion."
   },
   "checks": [
     {
-      "command": "bash scripts/cloud_preflight.sh",
+      "command": "python3 computations/verify_ci_middle_rigidity.py",
       "result": "PASS",
-      "scope": "Python, SymPy, source structure"
+      "scope": "Nonsquare regular pencil; fixed-ring action rank125 on 192 unknowns, affine tangent70, fixed55, projective69."
     },
     {
-      "command": "python3 computations/verify_general_cut_tor.py --output research/general_cut_tor_certificate.json",
+      "command": "python3 computations/verify_square_kernel_recognition.py; python3 computations/verify_single_negative_slice.py",
       "result": "PASS",
-      "scope": "Both rational fixtures, 64 cuts/endpoints per fixture, zero compositions, exact ranks, agreement between cuts and known quintic controls."
+      "scope": "Square normal form, cubic inclusion and fourth-slot reconstruction at two exact rational gauges. Original alternating-slice certificate unchanged on rerun."
     },
     {
       "command": "python3 scripts/check_project.py and git diff --check",
       "result": "PASS",
-      "scope": "Paths, references, JSON, whitespace."
+      "scope": "Structure, references, JSON and whitespace."
     }
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed derived bar shifts, direction of right-module Serre and tilting, two-window reconstruction and Frobenius/Koszul duality. No formalization or independent review."
+    "scope": "Checked the graded Ext sequences, dual-number module lift, S4 sign quotient and determinant kernels, incidence lines in the square-axis proof. No formalization or independent referee review."
   },
   "tex": {
-    "result": "NOT_RUN",
-    "scope": "PDF not compiled in this checkpoint."
+    "result": "PASS",
+    "scope": "With available workspace TeX activation, preflight --tex and latexmk for main, plan, notes passed. Main 89 pages. Fixed previously undefined GL in the plan and unescaped filename in ternary cubic section."
   },
   "literature_review": {
-    "result": "TARGETED",
-    "scope": "HIO section2, Grant--Iyama Definitions and Theorems B,C, comparison with higher T-Koszul Corollary5.7. No novelty determination."
+    "result": "NOT_RUN_THIS_CHECKPOINT",
+    "scope": "CI Ext calculation and tangent arguments are supplied in full; no priority claim."
   },
   "github_save": {
     "result": "PENDING"
@@ -44,5 +44,9 @@
   "open_mathematics": [
     "No finite bound on Serre powers.",
     "Residual single-adjacent-positive and witness-free cases, explicit exhaustive atlas remain open."
-  ]
+  ],
+  "visual_inspection": {
+    "result": "TARGETED",
+    "scope": "Rendered and inspected main page62 with uniform smoothness proof and residual corollary. Not a full visual pass."
+  }
 }

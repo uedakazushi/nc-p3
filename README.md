@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の周期構造と代数的変形
 
-**2026-11-22 / v40。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v41。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 最初に読む
 
@@ -199,6 +199,9 @@ python3 computations/verify_one_return_involution.py --fixture generic --output 
 # All cuts through degree seven, exact differentials and two controls
 python3 computations/verify_cut_tor_dimensions.py
 python3 computations/verify_general_cut_tor.py --output research/general_cut_tor_certificate.json
+# Tangent spaces at a square-free pencil (no rank-one quadric), and the four-square recognition fixture
+python3 computations/verify_ci_middle_rigidity.py --output research/ci_middle_rigidity_certificate.json
+python3 computations/verify_square_kernel_recognition.py --output research/square_kernel_recognition_certificate.json
 # Control for the residual single-adjacent-negative linear matrix slice
 python3 computations/verify_single_negative_slice.py --output research/single_negative_slice_certificate.json
 # Exhaustive partial-alternation models and their Frobenius exclusions
@@ -211,3 +214,5 @@ python3 computations/verify_trivial_extension_bitor.py --field eight --frame ter
 四切断の戻り辺一回Torは内部次数7以下を覆い、最大の次元列は120,1040,2400,1600となる。
 符号付きOre対照点とBoolean境界点で、七次までの全微分の階数とホモロジーを有理数上で検算した。
 連続二窓の三次交叉が四次元のとき、そこから作る56次元代数が3-representation infiniteであることは標準AS延長の必要十分条件である。延長の同型類はこの二窓で決まる。この全次数条件を有限個の反復で判定する方法と、二窓の明示的な軌道分類は未解決である。
+
+対称完全交叉チャート全体は三つの二対二階数を6以下にした射影表示空間の滑らかな69次元開部分である。対称類と可換多項式類を除いた低階数部分は有限Frobenius候補内で相対閉となる。この閉部分に標準AS対象が存在するかは未解決である。
