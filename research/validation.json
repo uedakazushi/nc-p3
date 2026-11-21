@@ -1,33 +1,29 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 46,
+  "version": 47,
   "reviewed_input": {
-    "source_commit": "44bb4a7cccbbc1c5333c794c12bb7486356cc408"
+    "source_commit": "e9b5a4576e24901736af8af305917166acc10b7f"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Explicit Ext maps and tensor recurrence; AS rank lower bound, incidence obstructions at ranks four and five, and constant-plane Kronecker normal forms."
+    "scope": "Exclude the moving and constant rank-four cases; obtain rho>=5, the rank-five three-finite-edge obstruction, finite-edge point sequence extension, and a point-fiber result for any rank-two evaluation."
   },
   "checks": [
     {
-      "command": "python computations/verify_two_window_ext.py",
+      "command": "python computations/verify_matched_pencils.py",
       "result": "PASS",
-      "scope": "Over Q, checked all consecutive differential products, top Ext against independently constructed path quotients, first-return endpoints and same-endpoint degree-eight components for two examples. PBW overlap counts for a rank-12 quantum point, signed Ore and Boolean."
-    },
-    {
-      "command": "python computations/verify_incidence_cubics.py",
-      "result": "PASS",
-      "scope": "Two exact cubic restriction ranks on a reduced complete intersection of length twenty; the nonreduced result has a separate proof."
+      "scope": "Exact rational ranks of both restrictions in all twelve pairs of block types, threshold from singleton support, and the independent two-parameter Segre factorization with adjacent rank nine."
     },
     {
       "command": "bash scripts/cloud_preflight.sh --tex; git diff --check",
-      "result": "PASS"
+      "result": "PASS",
+      "scope": "Project structure, current JSON, references and whitespace."
     }
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked v45 growth quotient, cut orientation, Koszul bimodule resolution, ordinary vs derived iterations, projective dimension, scheme-theoretic local splitting, Chern class obstruction and matrix pencil type counts."
+    "scope": "Reviewed concise pencil classification, support thresholds, both fixed-letter growth arguments, disjoint moving lines, nonzero determinant by directional derivatives, Chern character parity, two rulings and strict parameter orientation in the rank-nine cut. Checked neighboring support inequalities and the local rank argument over nonreduced finite schemes. No independent referee or formalization."
   },
   "mathematical_computation": {
     "result": "NOT_RUN_THIS_CHECKPOINT",
@@ -35,11 +31,11 @@
   },
   "tex": {
     "result": "PASS",
-    "scope": "Main 106 pages, plan 5, notes 12; no undefined references or overfull boxes in final logs."
+    "scope": "Japanese paper 109 pages, plan 5, notes 12. No undefined references, missing characters or overfull boxes in final logs."
   },
   "visual_inspection": {
     "result": "PASS",
-    "scope": "Inspected manuscript page 78 with the rank lower bound."
+    "scope": "Rendered and inspected page 82 of the manuscript with Theorem 31.8 and the complete rank-nine factorization."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT",
@@ -49,7 +45,7 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Rank-four AS existence, rank-five residual, other components and full orbit classification remain unresolved.",
-    "No universal finite Ext cutoff or all-branch propagation theorem."
+    "Existence/exclusion at opposite rank five, classification at residual rank six and higher ranks, and global orbit coverage are open.",
+    "General Ext propagation outside the finite PBW test is open."
   ]
 }

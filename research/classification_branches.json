@@ -6,12 +6,12 @@
     "name": "rho",
     "definition": "Rank of the 02|13 flattening of the canonical top Frobenius tensor",
     "bounds": [
-      4,
+      5,
       16
     ],
     "isomorphism_invariance": "proof_written",
     "complete_invariant": false,
-    "bound_proof": "thm:opposite-rank-at-least-four for AS objects; prop:opposite-rank-split"
+    "bound_proof": "thm:as-opposite-rank-five-lower (AS scope) and prop:opposite-rank-split"
   },
   "branches": [
     {
@@ -111,7 +111,7 @@
       "necessary_witness_restrictions": "No invertible negative witness at any position; at most one invertibly positive partner per position. One negative witness already recognizes the polynomial indexed class; cor:one-negative-frobenius-recognition.",
       "adjacent_witness_restriction": "Any adjacent positive witness forces rho6. Thus rho3/4/5 has no invertible adjacent witnesses of either sign. Negative witnesses are entirely excluded from this residual by the three-form rigidity theorem.",
       "relative_geometry": "Relatively closed in the complete standard finite-Frobenius candidate locus, hence also in the AS subspace; cor:closed-low-residual. Nonemptiness on the AS locus remains open.",
-      "boundary_restriction": "Disjoint from Zsym on AS. Only rho=4,5,6 remain. Rank four requires all adjacent point correspondences to have positive dimension; rank five with finite incidence requires c_i+c_(i+1)<=20 for cubic-minor span dimensions."
+      "boundary_restriction": "Disjoint from Zsym on AS. Only rho five and six remain. For rho five, finite adjacent point incidence requires the two cubic-minor span dimensions to sum to at most twenty. At rho five at least two edge point correspondences must be positive-dimensional."
     }
   ],
   "limits": [

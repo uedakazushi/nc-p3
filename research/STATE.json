@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 46,
+  "version": 47,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -781,6 +781,15 @@
       "verification": [
         "computations/verify_incidence_cubics.py"
       ]
+    },
+    {
+      "id": "AS-OPPOSITE-RANK-FOUR-EXCLUSION",
+      "status": "proved_with_exact_block_controls",
+      "statement": "No standard AS object has rho four. A matched binary central slice has a concise full-rank rectangular pencil at every parameter. Twelve restriction rank checks force point fibers and L3 pencils. A moving ruling sweeps a smooth Segre quadric, and simultaneous kernel and cokernel cubics factor the two coefficient nets through 3-by-3 isomorphisms. The adjacent cut then has rank nine instead of six. At rho five at least two of the four adjacent point correspondences have positive dimension. Four finite correspondences of a finite-Frobenius candidate glue scheme-theoretically into unique point sequences of length-twenty parameter schemes. At any rho the row-plane map of the rank-two evaluation locus has point fibers, by a growth quotient of dimension at least 12^m.",
+      "proof": "sections/opposite_evaluation.tex:thm:as-opposite-rank-five-lower",
+      "verification": [
+        "computations/verify_matched_pencils.py"
+      ]
     }
   ],
   "document_paths": {
@@ -844,16 +853,16 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "44bb4a7cccbbc1c5333c794c12bb7486356cc408",
+  "reviewed_source_commit": "e9b5a4576e24901736af8af305917166acc10b7f",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
   "cloud_codex_status": "Repository-side Cloud guidance and preflight added; actual Cloud environment publishing, TeX tools and Git push permissions are not verifiable from repository alone.",
   "resume_point": {
     "task_id": "Z4-AS-004",
-    "status": "active_rank_four_incidence_and_non_pbw_propagation",
+    "status": "active_rank_five_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "At rho=4 impose adjacent cut rank six and cubic overlap four on each listed constant-plane Kronecker block; for moving planes compare the two ruled determinant surfaces. At rho=5 use the cubic-minor dimension bound. For recognition outside the certified PBW branch, test propagation by ordinary path-row modules.",
+    "immediate_next_action": "At rho five at least two edge correspondences have positive dimension. Stratify them by the three evaluation-rank pairs and use the full rectangular constant-rank pencil when a slot has rank two. Isolate triples of compatible zero pairs and moving coefficient flags in the five-dimensional coefficient space. Also seek Ext propagation beyond the finite PBW branch.",
     "read_first": [
       "research/plan_ja.tex",
       "sections/opposite_evaluation.tex",
@@ -861,7 +870,7 @@
       "research/classification_branches.json"
     ],
     "known_obstruction": "No uniform finite Koszul/Serre cutoff or effective global regularity criterion is proved; finite-dimensional B and seven-degree tests do not suffice. Other low-rank components and high-rank witness-free regions remain unclassified.",
-    "state_of_claim": "The symmetric closure is settled. Rho=3 is excluded on AS and all four rho=4 point incidences have positive dimension. Explicit Ext recurrence and finite PBW branch certificate; the general propagation criterion and orbit coverage remain open.",
+    "state_of_claim": "Standard AS requires 5<=rho<=16. Rho five, the residual rho six outside Zsym and higher-rank coverage are unresolved. The explicit Ext recurrence and PBW subcase do not give a universal cutoff.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
