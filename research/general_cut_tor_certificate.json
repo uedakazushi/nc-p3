@@ -1,0 +1,1454 @@
+{
+  "arithmetic": "exact rational kernel frames, direct zero compositions and ranks",
+  "tor_indices": "homological n in Tor_E(n,d); ranks in ascending nonzero-source h",
+  "signed_Ore_H0_G100": [
+    {
+      "degree": 1,
+      "start": 0,
+      "homology": {
+        "1": 4
+      },
+      "presentations": [
+        {
+          "cut_origin": 1,
+          "ranks": []
+        }
+      ]
+    },
+    {
+      "degree": 1,
+      "start": 1,
+      "homology": {
+        "1": 4
+      },
+      "presentations": [
+        {
+          "cut_origin": 2,
+          "ranks": []
+        }
+      ]
+    },
+    {
+      "degree": 1,
+      "start": 2,
+      "homology": {
+        "1": 4
+      },
+      "presentations": [
+        {
+          "cut_origin": 3,
+          "ranks": []
+        }
+      ]
+    },
+    {
+      "degree": 1,
+      "start": 3,
+      "homology": {
+        "1": 4
+      },
+      "presentations": [
+        {
+          "cut_origin": 0,
+          "ranks": []
+        }
+      ]
+    },
+    {
+      "degree": 2,
+      "start": 0,
+      "homology": {
+        "2": 10
+      },
+      "presentations": [
+        {
+          "cut_origin": 1,
+          "ranks": [
+            6
+          ]
+        },
+        {
+          "cut_origin": 2,
+          "ranks": [
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 2,
+      "start": 1,
+      "homology": {
+        "2": 10
+      },
+      "presentations": [
+        {
+          "cut_origin": 2,
+          "ranks": [
+            6
+          ]
+        },
+        {
+          "cut_origin": 3,
+          "ranks": [
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 2,
+      "start": 2,
+      "homology": {
+        "2": 10
+      },
+      "presentations": [
+        {
+          "cut_origin": 0,
+          "ranks": [
+            6
+          ]
+        },
+        {
+          "cut_origin": 3,
+          "ranks": [
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 2,
+      "start": 3,
+      "homology": {
+        "2": 10
+      },
+      "presentations": [
+        {
+          "cut_origin": 0,
+          "ranks": [
+            6
+          ]
+        },
+        {
+          "cut_origin": 1,
+          "ranks": [
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 3,
+      "start": 0,
+      "homology": {
+        "3": 20
+      },
+      "presentations": [
+        {
+          "cut_origin": 1,
+          "ranks": [
+            4,
+            20
+          ]
+        },
+        {
+          "cut_origin": 2,
+          "ranks": [
+            4,
+            44
+          ]
+        },
+        {
+          "cut_origin": 3,
+          "ranks": [
+            4,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 3,
+      "start": 1,
+      "homology": {
+        "3": 20
+      },
+      "presentations": [
+        {
+          "cut_origin": 0,
+          "ranks": [
+            4,
+            20
+          ]
+        },
+        {
+          "cut_origin": 2,
+          "ranks": [
+            4,
+            20
+          ]
+        },
+        {
+          "cut_origin": 3,
+          "ranks": [
+            4,
+            44
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 3,
+      "start": 2,
+      "homology": {
+        "3": 20
+      },
+      "presentations": [
+        {
+          "cut_origin": 0,
+          "ranks": [
+            4,
+            44
+          ]
+        },
+        {
+          "cut_origin": 1,
+          "ranks": [
+            4,
+            20
+          ]
+        },
+        {
+          "cut_origin": 3,
+          "ranks": [
+            4,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 3,
+      "start": 3,
+      "homology": {
+        "3": 20
+      },
+      "presentations": [
+        {
+          "cut_origin": 0,
+          "ranks": [
+            4,
+            20
+          ]
+        },
+        {
+          "cut_origin": 1,
+          "ranks": [
+            4,
+            44
+          ]
+        },
+        {
+          "cut_origin": 2,
+          "ranks": [
+            4,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 4,
+      "start": 0,
+      "homology": {
+        "4": 35
+      },
+      "presentations": [
+        {
+          "cut_origin": 0,
+          "ranks": [
+            1,
+            15,
+            45
+          ]
+        },
+        {
+          "cut_origin": 1,
+          "ranks": [
+            1,
+            15,
+            45
+          ]
+        },
+        {
+          "cut_origin": 2,
+          "ranks": [
+            1,
+            31,
+            125
+          ]
+        },
+        {
+          "cut_origin": 3,
+          "ranks": [
+            1,
+            31,
+            125
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 4,
+      "start": 1,
+      "homology": {
+        "4": 35
+      },
+      "presentations": [
+        {
+          "cut_origin": 0,
+          "ranks": [
+            1,
+            31,
+            125
+          ]
+        },
+        {
+          "cut_origin": 1,
+          "ranks": [
+            1,
+            15,
+            45
+          ]
+        },
+        {
+          "cut_origin": 2,
+          "ranks": [
+            1,
+            15,
+            45
+          ]
+        },
+        {
+          "cut_origin": 3,
+          "ranks": [
+            1,
+            31,
+            125
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 4,
+      "start": 2,
+      "homology": {
+        "4": 35
+      },
+      "presentations": [
+        {
+          "cut_origin": 0,
+          "ranks": [
+            1,
+            31,
+            125
+          ]
+        },
+        {
+          "cut_origin": 1,
+          "ranks": [
+            1,
+            31,
+            125
+          ]
+        },
+        {
+          "cut_origin": 2,
+          "ranks": [
+            1,
+            15,
+            45
+          ]
+        },
+        {
+          "cut_origin": 3,
+          "ranks": [
+            1,
+            15,
+            45
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 4,
+      "start": 3,
+      "homology": {
+        "4": 35
+      },
+      "presentations": [
+        {
+          "cut_origin": 0,
+          "ranks": [
+            1,
+            15,
+            45
+          ]
+        },
+        {
+          "cut_origin": 1,
+          "ranks": [
+            1,
+            31,
+            125
+          ]
+        },
+        {
+          "cut_origin": 2,
+          "ranks": [
+            1,
+            31,
+            125
+          ]
+        },
+        {
+          "cut_origin": 3,
+          "ranks": [
+            1,
+            15,
+            45
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 5,
+      "start": 0,
+      "homology": {
+        "5": 56
+      },
+      "presentations": [
+        {
+          "cut_origin": 0,
+          "ranks": [
+            8,
+            96,
+            264
+          ]
+        },
+        {
+          "cut_origin": 2,
+          "ranks": [
+            8,
+            96,
+            264
+          ]
+        },
+        {
+          "cut_origin": 3,
+          "ranks": [
+            8,
+            136,
+            344
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 5,
+      "start": 1,
+      "homology": {
+        "5": 56
+      },
+      "presentations": [
+        {
+          "cut_origin": 0,
+          "ranks": [
+            8,
+            136,
+            344
+          ]
+        },
+        {
+          "cut_origin": 1,
+          "ranks": [
+            8,
+            96,
+            264
+          ]
+        },
+        {
+          "cut_origin": 3,
+          "ranks": [
+            8,
+            96,
+            264
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 5,
+      "start": 2,
+      "homology": {
+        "5": 56
+      },
+      "presentations": [
+        {
+          "cut_origin": 0,
+          "ranks": [
+            8,
+            96,
+            264
+          ]
+        },
+        {
+          "cut_origin": 1,
+          "ranks": [
+            8,
+            136,
+            344
+          ]
+        },
+        {
+          "cut_origin": 2,
+          "ranks": [
+            8,
+            96,
+            264
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 5,
+      "start": 3,
+      "homology": {
+        "5": 56
+      },
+      "presentations": [
+        {
+          "cut_origin": 1,
+          "ranks": [
+            8,
+            96,
+            264
+          ]
+        },
+        {
+          "cut_origin": 2,
+          "ranks": [
+            8,
+            136,
+            344
+          ]
+        },
+        {
+          "cut_origin": 3,
+          "ranks": [
+            8,
+            96,
+            264
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 6,
+      "start": 0,
+      "homology": {
+        "6": 84
+      },
+      "presentations": [
+        {
+          "cut_origin": 0,
+          "ranks": [
+            36,
+            364,
+            716
+          ]
+        },
+        {
+          "cut_origin": 3,
+          "ranks": [
+            36,
+            364,
+            716
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 6,
+      "start": 1,
+      "homology": {
+        "6": 84
+      },
+      "presentations": [
+        {
+          "cut_origin": 0,
+          "ranks": [
+            36,
+            364,
+            716
+          ]
+        },
+        {
+          "cut_origin": 1,
+          "ranks": [
+            36,
+            364,
+            716
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 6,
+      "start": 2,
+      "homology": {
+        "6": 84
+      },
+      "presentations": [
+        {
+          "cut_origin": 1,
+          "ranks": [
+            36,
+            364,
+            716
+          ]
+        },
+        {
+          "cut_origin": 2,
+          "ranks": [
+            36,
+            364,
+            716
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 6,
+      "start": 3,
+      "homology": {
+        "6": 84
+      },
+      "presentations": [
+        {
+          "cut_origin": 2,
+          "ranks": [
+            36,
+            364,
+            716
+          ]
+        },
+        {
+          "cut_origin": 3,
+          "ranks": [
+            36,
+            364,
+            716
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 7,
+      "start": 0,
+      "homology": {
+        "7": 120
+      },
+      "presentations": [
+        {
+          "cut_origin": 0,
+          "ranks": [
+            120,
+            920,
+            1480
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 7,
+      "start": 1,
+      "homology": {
+        "7": 120
+      },
+      "presentations": [
+        {
+          "cut_origin": 1,
+          "ranks": [
+            120,
+            920,
+            1480
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 7,
+      "start": 2,
+      "homology": {
+        "7": 120
+      },
+      "presentations": [
+        {
+          "cut_origin": 2,
+          "ranks": [
+            120,
+            920,
+            1480
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 7,
+      "start": 3,
+      "homology": {
+        "7": 120
+      },
+      "presentations": [
+        {
+          "cut_origin": 3,
+          "ranks": [
+            120,
+            920,
+            1480
+          ]
+        }
+      ]
+    }
+  ],
+  "Boolean_t0": [
+    {
+      "degree": 1,
+      "start": 0,
+      "homology": {
+        "1": 4
+      },
+      "presentations": [
+        {
+          "cut_origin": 1,
+          "ranks": []
+        }
+      ]
+    },
+    {
+      "degree": 1,
+      "start": 1,
+      "homology": {
+        "1": 4
+      },
+      "presentations": [
+        {
+          "cut_origin": 2,
+          "ranks": []
+        }
+      ]
+    },
+    {
+      "degree": 1,
+      "start": 2,
+      "homology": {
+        "1": 4
+      },
+      "presentations": [
+        {
+          "cut_origin": 3,
+          "ranks": []
+        }
+      ]
+    },
+    {
+      "degree": 1,
+      "start": 3,
+      "homology": {
+        "1": 4
+      },
+      "presentations": [
+        {
+          "cut_origin": 0,
+          "ranks": []
+        }
+      ]
+    },
+    {
+      "degree": 2,
+      "start": 0,
+      "homology": {
+        "2": 10
+      },
+      "presentations": [
+        {
+          "cut_origin": 1,
+          "ranks": [
+            6
+          ]
+        },
+        {
+          "cut_origin": 2,
+          "ranks": [
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 2,
+      "start": 1,
+      "homology": {
+        "2": 10
+      },
+      "presentations": [
+        {
+          "cut_origin": 2,
+          "ranks": [
+            6
+          ]
+        },
+        {
+          "cut_origin": 3,
+          "ranks": [
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 2,
+      "start": 2,
+      "homology": {
+        "2": 10
+      },
+      "presentations": [
+        {
+          "cut_origin": 0,
+          "ranks": [
+            6
+          ]
+        },
+        {
+          "cut_origin": 3,
+          "ranks": [
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 2,
+      "start": 3,
+      "homology": {
+        "2": 10
+      },
+      "presentations": [
+        {
+          "cut_origin": 0,
+          "ranks": [
+            6
+          ]
+        },
+        {
+          "cut_origin": 1,
+          "ranks": [
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 3,
+      "start": 0,
+      "homology": {
+        "3": 20
+      },
+      "presentations": [
+        {
+          "cut_origin": 1,
+          "ranks": [
+            4,
+            20
+          ]
+        },
+        {
+          "cut_origin": 2,
+          "ranks": [
+            4,
+            44
+          ]
+        },
+        {
+          "cut_origin": 3,
+          "ranks": [
+            4,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 3,
+      "start": 1,
+      "homology": {
+        "3": 20
+      },
+      "presentations": [
+        {
+          "cut_origin": 0,
+          "ranks": [
+            4,
+            20
+          ]
+        },
+        {
+          "cut_origin": 2,
+          "ranks": [
+            4,
+            20
+          ]
+        },
+        {
+          "cut_origin": 3,
+          "ranks": [
+            4,
+            44
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 3,
+      "start": 2,
+      "homology": {
+        "3": 20
+      },
+      "presentations": [
+        {
+          "cut_origin": 0,
+          "ranks": [
+            4,
+            44
+          ]
+        },
+        {
+          "cut_origin": 1,
+          "ranks": [
+            4,
+            20
+          ]
+        },
+        {
+          "cut_origin": 3,
+          "ranks": [
+            4,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 3,
+      "start": 3,
+      "homology": {
+        "3": 20
+      },
+      "presentations": [
+        {
+          "cut_origin": 0,
+          "ranks": [
+            4,
+            20
+          ]
+        },
+        {
+          "cut_origin": 1,
+          "ranks": [
+            4,
+            44
+          ]
+        },
+        {
+          "cut_origin": 2,
+          "ranks": [
+            4,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 4,
+      "start": 0,
+      "homology": {
+        "4": 35
+      },
+      "presentations": [
+        {
+          "cut_origin": 0,
+          "ranks": [
+            1,
+            15,
+            45
+          ]
+        },
+        {
+          "cut_origin": 1,
+          "ranks": [
+            1,
+            15,
+            45
+          ]
+        },
+        {
+          "cut_origin": 2,
+          "ranks": [
+            1,
+            31,
+            125
+          ]
+        },
+        {
+          "cut_origin": 3,
+          "ranks": [
+            1,
+            31,
+            125
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 4,
+      "start": 1,
+      "homology": {
+        "4": 35
+      },
+      "presentations": [
+        {
+          "cut_origin": 0,
+          "ranks": [
+            1,
+            31,
+            125
+          ]
+        },
+        {
+          "cut_origin": 1,
+          "ranks": [
+            1,
+            15,
+            45
+          ]
+        },
+        {
+          "cut_origin": 2,
+          "ranks": [
+            1,
+            15,
+            45
+          ]
+        },
+        {
+          "cut_origin": 3,
+          "ranks": [
+            1,
+            31,
+            125
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 4,
+      "start": 2,
+      "homology": {
+        "4": 35
+      },
+      "presentations": [
+        {
+          "cut_origin": 0,
+          "ranks": [
+            1,
+            31,
+            125
+          ]
+        },
+        {
+          "cut_origin": 1,
+          "ranks": [
+            1,
+            31,
+            125
+          ]
+        },
+        {
+          "cut_origin": 2,
+          "ranks": [
+            1,
+            15,
+            45
+          ]
+        },
+        {
+          "cut_origin": 3,
+          "ranks": [
+            1,
+            15,
+            45
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 4,
+      "start": 3,
+      "homology": {
+        "4": 35
+      },
+      "presentations": [
+        {
+          "cut_origin": 0,
+          "ranks": [
+            1,
+            15,
+            45
+          ]
+        },
+        {
+          "cut_origin": 1,
+          "ranks": [
+            1,
+            31,
+            125
+          ]
+        },
+        {
+          "cut_origin": 2,
+          "ranks": [
+            1,
+            31,
+            125
+          ]
+        },
+        {
+          "cut_origin": 3,
+          "ranks": [
+            1,
+            15,
+            45
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 5,
+      "start": 0,
+      "homology": {
+        "4": 7,
+        "5": 63
+      },
+      "presentations": [
+        {
+          "cut_origin": 0,
+          "ranks": [
+            8,
+            96,
+            257
+          ]
+        },
+        {
+          "cut_origin": 2,
+          "ranks": [
+            8,
+            96,
+            257
+          ]
+        },
+        {
+          "cut_origin": 3,
+          "ranks": [
+            8,
+            136,
+            337
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 5,
+      "start": 1,
+      "homology": {
+        "5": 56
+      },
+      "presentations": [
+        {
+          "cut_origin": 0,
+          "ranks": [
+            8,
+            136,
+            344
+          ]
+        },
+        {
+          "cut_origin": 1,
+          "ranks": [
+            8,
+            96,
+            264
+          ]
+        },
+        {
+          "cut_origin": 3,
+          "ranks": [
+            8,
+            96,
+            264
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 5,
+      "start": 2,
+      "homology": {
+        "5": 56
+      },
+      "presentations": [
+        {
+          "cut_origin": 0,
+          "ranks": [
+            8,
+            96,
+            264
+          ]
+        },
+        {
+          "cut_origin": 1,
+          "ranks": [
+            8,
+            136,
+            344
+          ]
+        },
+        {
+          "cut_origin": 2,
+          "ranks": [
+            8,
+            96,
+            264
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 5,
+      "start": 3,
+      "homology": {
+        "5": 56
+      },
+      "presentations": [
+        {
+          "cut_origin": 1,
+          "ranks": [
+            8,
+            96,
+            264
+          ]
+        },
+        {
+          "cut_origin": 2,
+          "ranks": [
+            8,
+            136,
+            344
+          ]
+        },
+        {
+          "cut_origin": 3,
+          "ranks": [
+            8,
+            96,
+            264
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 6,
+      "start": 0,
+      "homology": {
+        "5": 21,
+        "6": 105
+      },
+      "presentations": [
+        {
+          "cut_origin": 0,
+          "ranks": [
+            36,
+            364,
+            695
+          ]
+        },
+        {
+          "cut_origin": 3,
+          "ranks": [
+            36,
+            364,
+            695
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 6,
+      "start": 1,
+      "homology": {
+        "6": 84
+      },
+      "presentations": [
+        {
+          "cut_origin": 0,
+          "ranks": [
+            36,
+            364,
+            716
+          ]
+        },
+        {
+          "cut_origin": 1,
+          "ranks": [
+            36,
+            364,
+            716
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 6,
+      "start": 2,
+      "homology": {
+        "6": 84
+      },
+      "presentations": [
+        {
+          "cut_origin": 1,
+          "ranks": [
+            36,
+            364,
+            716
+          ]
+        },
+        {
+          "cut_origin": 2,
+          "ranks": [
+            36,
+            364,
+            716
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 6,
+      "start": 3,
+      "homology": {
+        "5": 21,
+        "6": 105
+      },
+      "presentations": [
+        {
+          "cut_origin": 2,
+          "ranks": [
+            36,
+            364,
+            695
+          ]
+        },
+        {
+          "cut_origin": 3,
+          "ranks": [
+            36,
+            364,
+            695
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 7,
+      "start": 0,
+      "homology": {
+        "6": 41,
+        "7": 161
+      },
+      "presentations": [
+        {
+          "cut_origin": 0,
+          "ranks": [
+            120,
+            920,
+            1439
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 7,
+      "start": 1,
+      "homology": {
+        "7": 120
+      },
+      "presentations": [
+        {
+          "cut_origin": 1,
+          "ranks": [
+            120,
+            920,
+            1480
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 7,
+      "start": 2,
+      "homology": {
+        "6": 41,
+        "7": 161
+      },
+      "presentations": [
+        {
+          "cut_origin": 2,
+          "ranks": [
+            120,
+            920,
+            1439
+          ]
+        }
+      ]
+    },
+    {
+      "degree": 7,
+      "start": 3,
+      "homology": {
+        "6": 63,
+        "7": 183
+      },
+      "presentations": [
+        {
+          "cut_origin": 3,
+          "ranks": [
+            120,
+            920,
+            1417
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -8,7 +8,7 @@
 \newcommand{\PGL}{\operatorname{PGL}}
 \title{nc-p3研究方針と再開手順}
 \author{}
-\date{2026年11月22日\quad 第39版}
+\date{2026年11月22日\quad 第40版}
 \begin{document}
 \maketitle
 
@@ -121,14 +121,14 @@ AS正則性を保ったまま1周期的対象へ特殊化する
 \path{research/classification_architecture.md}に集約する。
 
 \paragraph{優先1：Z4-AS-004。}
-標準四窓への還元は既知である。残るのは、一般四窓の
-Koszul/AS正則性の必要十分条件、全正則locusを扱う共通の判定原理である。
+連続二窓と56次元代数のSerre反復による全次数必要十分条件を得た。
+残るのは、入力二窓の係数からこの条件を認識し、全正則locusを明示的に覆うことである。
 有限Frobenius条件だけでKoszul性を宣言せず、構造定理を求める。
 最初の障害は命題\texttt{prop:quartic-koszul-obstruction}により
 $\delta_i=221-\operatorname{rank}D_{i,4}=\dim C_{i,i+4}-35$として切り出した。
 全$\delta_i=0$は必要条件に限る。内部次数5ではHilbert係数56と
 $120\times40$微分行列の階数36が正確性の必要十分条件である
-（\texttt{prop:quintic-koszul-obstruction}）。次は後者が四次切断上で自動かを調べる。
+（\texttt{prop:quintic-koszul-obstruction}）。既知の境界では四次切断を通っても五次障害が生じる。
 一般の四窓の巨大な方程式を一度に消去する方法に固執しない。
 双対Frobenius検査は完全対合込みなら四次までで足りる
 （\texttt{prop:frobenius-degree-four}）。標準候補を最上次数四階テンソルから復元する
@@ -276,7 +276,8 @@ Cloud Codexでは実際の数学的作業を反復し、困難な課題に固執
 次は正符号証明書が一つだけ、または可逆証明書が一つもない残余へ進む。
 一般四窓も任意の一辺切断で32次元代数のtrivial extensionに表示でき、
 四切断の一回Torによって内部次数7以下のKoszul切断を共通に検査できると証明した。
-これは全Koszul性の有限判定ではなく、一般行列の正確性も今回は未検算である。
+既知の正則例と非正則境界の七次までの微分を検算した。
+全次数には単一切断のSerre反復が使える。次は二窓上のExt消滅条件の持続を調べる。
 特に一つの隣接正証明書では$P(x)Q(y)=P(y)Q(x)$となり、一般階数は3以上だが、
 第二の正証明書がAS条件から強制されるかは未解決である。
 $\rho=3,4,5$および$\rho\geq7$には隣接正証明書もなく、$\rho\geq11$では正証明書も全位置で存在しない。

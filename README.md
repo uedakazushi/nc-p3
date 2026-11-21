@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の周期構造と代数的変形
 
-**2026-11-22 / v39。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v40。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 最初に読む
 
@@ -196,6 +196,9 @@ python3 computations/verify_trivial_extension_bitor.py --field two --frame terna
 # Signed-reversal theorem regression, also at a non-Boolean product-net point
 python3 computations/verify_one_return_involution.py --output research/one_return_involution_certificate.json
 python3 computations/verify_one_return_involution.py --fixture generic --output research/one_return_involution_generic_certificate.json
+# All cuts through degree seven, exact differentials and two controls
+python3 computations/verify_cut_tor_dimensions.py
+python3 computations/verify_general_cut_tor.py --output research/general_cut_tor_certificate.json
 # Control for the residual single-adjacent-negative linear matrix slice
 python3 computations/verify_single_negative_slice.py --output research/single_negative_slice_certificate.json
 # Exhaustive partial-alternation models and their Frobenius exclusions
@@ -206,4 +209,5 @@ python3 computations/verify_trivial_extension_bitor.py --field eight --frame ter
 
 任意の有限Frobenius標準四窓も、一辺切断した32次元四層代数のtrivial extensionとして表せる。
 四切断の戻り辺一回Torは内部次数7以下を覆い、最大の次元列は120,1040,2400,1600となる。
-この次数7までの検査は全Koszul性の十分条件ではなく、現在の検算は次元とEuler標数のみである。
+符号付きOre対照点とBoolean境界点で、七次までの全微分の階数とホモロジーを有理数上で検算した。
+連続二窓の三次交叉が四次元のとき、そこから作る56次元代数が3-representation infiniteであることは標準AS延長の必要十分条件である。延長の同型類はこの二窓で決まる。この全次数条件を有限個の反復で判定する方法と、二窓の明示的な軌道分類は未解決である。

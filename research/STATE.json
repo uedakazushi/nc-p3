@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 39,
+  "version": 40,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -660,12 +660,15 @@
     },
     {
       "id": "GENERAL-CUT-TOR-THROUGH-SEVEN",
-      "status": "proved_dimension_and_coverage_checks_passed",
-      "statement": "Every standard finite-Frobenius folded four-window algebra is the ordinary graded trivial extension of any one-edge acyclic cut A, dimA32, A quadratic Koszul gldim<=3. For all four cuts the one-return bimodule Tor complexes cover every internal degree<=7. Vanishing below their tops is equivalent to Tor diagonality through degree7, not full Koszulity. The universal dimension formula gives maximal degree7 dimensions120,1040,2400,1600 and top Euler120. Only dimensions/edge coverage are computationally checked; general differential ranks are not.",
+      "status": "proved_and_exact_fixture_ranks",
+      "statement": "Every standard finite-Frobenius folded four-window algebra is the ordinary graded trivial extension of any one-edge acyclic cut A, dimA32, A quadratic Koszul gldim<=3. For all four cuts the one-return bimodule Tor complexes cover every internal degree<=7. Vanishing below their tops is equivalent to Tor diagonality through degree7, not full Koszulity. The universal dimension formula gives maximal degree7 dimensions120,1040,2400,1600 and top Euler120. All rational differentials are now checked at signed Ore H0,G100 and Boolean t0. In degrees6 and7 the latter has Tor(d-1,d) dimensions (21,0,0,21) and (41,0,41,63) by starting vertex.",
       "proof": "sections/general_cut_trivial_extension.tex:prop:general-cut-trivial-extension and prop:cut-tor-through-seven",
       "verification": [
         "computations/verify_cut_tor_dimensions.py",
-        "research/cut_tor_dimensions_certificate.json"
+        "research/cut_tor_dimensions_certificate.json",
+        "computations/general_cut_tor.py",
+        "computations/verify_general_cut_tor.py",
+        "research/general_cut_tor_certificate.json"
       ]
     },
     {
@@ -673,6 +676,12 @@
       "status": "construction_proved_not_AS_classification",
       "statement": "A specified adjacent positive witness with opposite cut rank6 gives commuting P(x)Q(y) and a commutative R-module of Hilbert464 generated in degree0 with socle exactly degree2 and annihilated by the four-quadric L. This is a representation depending on the specified witness, not a full indexed invariant or AS criterion.",
       "proof": "research/notes_ja.tex: paragraph 単一隣接正証明書の可換加群表示"
+    },
+    {
+      "id": "TWO-WINDOW-SERRE-EXTENSION",
+      "status": "proof_in_manuscript_no_finite_bound",
+      "statement": "Two consecutive six-dimensional primal relations with cubic intersection of dimension four admit a standard AS extension iff the opposite of their 56-dimensional path cut is 3-representation infinite (right module convention). The extension is unique up to index-preserving isomorphism. A single cut computes all bigraded Tor via shifted Serre powers. No effective finite recognition bound or orbit normal forms.",
+      "proof": "sections/cut_serre_criterion.tex:thm:cut-serre, cor:two-window-extension"
     }
   ],
   "document_paths": {
@@ -736,28 +745,25 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "f71afaa42cee8880fd86284bf011f9767c1d651a",
+  "reviewed_source_commit": "df3c08398f4f32df2cbcafb3cceb47d39037ef6a",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
   "cloud_codex_status": "Repository-side Cloud guidance and preflight added; actual Cloud environment publishing, TeX tools and Git push permissions are not verifiable from repository alone.",
   "resume_point": {
     "task_id": "Z4-AS-004",
-    "status": "paused_at_user_request_after_general_cut_checkpoint",
+    "status": "active_after_two_window_reduction",
     "objective": "Classify the remaining AS tensors with no negative invertible symmetrizer and at most one positive invertible symmetrizer; the low-rank witness-free region remains the principal coverage hole.",
-    "immediate_next_action": "Resume the single-adjacent-positive branch via the commutative R-module Hilbert464 constructed in research/notes_ja.tex. Determine whether finite-Frobenius/Koszul conditions force extension to the symmetric CI truncation (a second positive witness), or produce an exact counterexample. As a common verification tool, implement the actual general-cut one-return differential matrices in sections/general_cut_trivial_extension.tex, first degree6/7 on the already regular Ore controls; only their universal dimensions and degree coverage were checked. These finite tests are not a full Koszul certificate. Preserve the known opposite-positive rho8 signed-Ore family, so do not try to exclude all single-positive AS objects.",
+    "immediate_next_action": "Use the commuting 464 module of a single adjacent positive witness. On the square CI slice L=<x_i^2>, analyze kernels of Q_i, their pairwise intersections and propagation to a second symmetry. Also test later Serre iterates via lower Ext of injectives of the 56-dimensional cut.",
     "read_first": [
       "research/plan_ja.tex",
-      "AGENTS.md",
+      "sections/cut_serre_criterion.tex",
       "sections/general_cut_trivial_extension.tex",
-      "research/notes_ja.tex",
-      "sections/partial_symmetric_as.tex",
-      "sections/anticommutative_ore.tex"
+      "research/notes_ja.tex"
     ],
     "known_obstruction": "No proof that an adjacent positive witness propagates. Opposite-positive and witness-free AS objects exist in known higher-rank charts, but no exhaustive low-rank residual atlas is proved. Full classification and component geometry remain open.",
-    "state_of_claim": "Basepoint partial-symmetric exclusion and single-negative rigidity are proved without domain/noetherian/PBW assumptions on the target class. Normal-form exhaustiveness is analytical; exact fixtures verify Pfaffian identities, Clifford matrix-algebra dimension64 and compression intersection failure. Existing signed Ore examples anchor a nonempty single-positive branch. No claim that every low-rank AS object lies in symmetric or polynomial branches.",
-    "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log.",
-    "pause_reason": "User requested a pause at a natural stopping point; completed the general-cut lemma and dimension/coverage verifier, then saved the current resume point."
+    "state_of_claim": "General all-degree structural equivalence and two-window orbit criterion are proved; it remains to recognize the 3-representation-infinite pairs and classify their orbits. Exact all-cut checks at regular and nonregular fixtures cover degrees1..7.",
+    "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
     "goal": "Continue useful mathematical work across subproblems until classification completes or actual Cloud/runtime/access constraints stop the current task.",

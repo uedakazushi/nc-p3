@@ -1,0 +1,108 @@
+\section{連続二窓への還元と全次数のSerre判定}
+\label{sec:cut-serre}
+四窓のうち、連続する二つの関係空間を固定する。以下では、残りの二窓の復元と、
+どの入力がAS正則な四窓へ延びるかを同じ切断から扱う。
+判定には有限次元代数を使うが、調べるSerre関手の反復回数には上限を置かない。
+
+\begin{theorem}[戻り回数別のTorとSerre反復]\label{thm:cut-serre}
+$A$を頂点$0,1,2,3$、矢は位置を一つ増やす四層二次代数とし、
+$E=A\ltimes DA$で$(A_r)^*$を内部次数$4-r$に置く。
+$S_i$を右単純、$D S_j$を左単純とし、$D$は体上の双対とする。
+$\mathcal D=D^b(\mathrm{mod}\text{-}A)$で$\nu_A=-\otimes_A^{\mathbf L}DA$を取る。
+$m\geq0$, $d=4m+j-i$に対して
+\[
+ D\operatorname{Tor}^E_{n,d}(S_i,D S_j)
+ \simeq\operatorname{Hom}_{\mathcal D}(\nu_A^m S_i,S_j[n-m]).
+\]
+各内部次数の非零成分はこの形で尽くされる。
+$T=\bigoplus_{i=0}^3 S_i[i]$, $B=\operatorname{End}_{\mathcal D}(T)$と置く。
+通常の合成を$B$の積とし、$B$でも右加群を用いる。次は同値である。
+\begin{enumerate}
+\item $E$が経路長次数についてKoszulである。
+\item 全ての$m\geq0$で$(\nu_B[-3])^{-m}B$のコホモロジーが次数零に集中する。
+\end{enumerate}
+すなわち、切断の$B$が右加群の規約で3-representation infiniteであることが必要十分である。
+\end{theorem}
+\begin{proof}
+被約バー複体の各項を$DA$因子の個数$m$で分ける。
+$(DA)^2=0$なのでこれは複体の直和分解である。
+$A$の各因子の内部次数は終点位置と始点位置の差であり、$DA$因子ではその差に4を加える。
+従って端点$i,j$を固定すると内部次数は$4m+j-i$になり、$m$は一意である。
+$m$個の$DA$の両端と間にある$m+1$個の$A_+$の列を、それぞれ正規化された相対両側バーと読む。
+隣接する$A_+$同士の積と各列の端での作用がそのバー微分である。
+$DA$を一因子として数えた次数$m$を除けば、これは
+\[
+ S_i\otimes_A^{\mathbf L}(DA)^{\otimes_A^{\mathbf L}m}
+       \otimes_A^{\mathbf L}D S_j
+\]
+のモデルである（$m=0$の中央は$A$）。実際、各接合に
+$A\otimes_{A_0}(A_+)^{\otimes_{A_0}p}\otimes_{A_0}A$を挿入する両側バー分解は、
+$A_0$が半単純なので導来テンソル積を計算する。全複体の符号は、固定した$DA$因子を
+一つずつホモロジー次数1に置く通常のテンソル積の符号である。
+従ってバー次数$n$の双対ホモロジーは表示した導来Homとなる。
+有限大域次元なので$\nu_A$はSerre自己同値である。
+
+補題\ref{lem:four-layer-koszul}より$A$はKoszulである。全経路の長さが頂点位置差なので
+$\operatorname{Ext}^p_A(S_i,S_j)$は$p=j-i$以外で零である。
+従って$\operatorname{Hom}(T,T[k])=0$ ($k\ne0$)であり、単純加群のシフトは
+$\mathcal D$を生成する。よって$T$はtilting対象で、導来tilting同値
+$\mathbf R\operatorname{Hom}_A(T,-)$は$T$を右正則$B$加群へ、Serre関手をSerre関手へ送る。
+$B$の非恒等射は位置を真に増やす方向にのみあり、対角成分は$k$なので
+（右射影の順序は逆になるが）極小分解の長さは3以下である。
+$T_i=S_i[i]$と置けば、先の式の右辺は
+\[
+ \operatorname{Hom}_{\mathcal D}\bigl((\nu_A[-3])^m T_i,
+                                      T_j[n-d]\bigr)
+ =\operatorname{Hom}_{\mathcal D}\bigl(T_i,(\nu_A[-3])^{-m}T_j[n-d]\bigr).
+\]
+固定した$m,i,j$について$n<m$の側の消滅も、上のバーによる導来テンソル積が
+ホモロジー負次数を持たないことから従う。
+全ての成分で$n\ne d$の消滅を要求することは、tilting同値を通して
+$H^k((\nu_B[-3])^{-m}B)=0$ ($k\ne0$)と同値である。
+これが3-representation infiniteの条件である\cite{HIOrep,GrantIyama}.
+\end{proof}
+
+\begin{corollary}[二窓からの延長と添字保持同型]\label{cor:two-window-extension}
+四次元空間$V_0,V_1,V_2$と六次元部分空間
+$R_0\subset V_0\otimes V_1$, $R_1\subset V_1\otimes V_2$を与え、
+\[
+ U=(R_0\otimes V_2)\cap(V_0\otimes R_1),\qquad \dim U=4
+\]
+とする。矢$V_0^*,V_1^*,V_2^*$、関係$R_0^\perp,R_1^\perp$の四層代数を$A$とする。
+この二窓が標準14641型Koszul AS正則対象へ延びる必要十分条件は、
+定理\ref{thm:cut-serre}の$B$が3-representation infiniteとなることである。
+延長があれば添字保持同型を除き一意であり、二つの延長が添字保持同型となる必要十分条件は
+三つの基底変更$(g_0,g_1,g_2)$が二つの関係空間を同時に対応させることである。
+ここで始点の添字を固定し、巡回移動で商を取らない。
+\end{corollary}
+\begin{proof}
+$A$の長さ3成分の双対は$U$である。条件$\dim U=4$より、
+$A$の非零な端点別次元は長さ順に$1,4,6,4$である。
+従って$E=A\ltimes DA$は対称Frobeniusで、各始点の次数別次元は$(1,4,6,4,1)$になる。
+定理の条件が成立すると$E$はKoszul、特に次数一生成かつ二次である。
+その二次双対を整数頂点列に展開すれば、最初の二窓は指定した$R_0,R_1$となる。
+左右のKoszul単純分解の項は相補次数の完全trace対合で互いに双対になり、
+双対複体は反対側の単純分解を4だけ移したものになる。従って大域次元4と
+左右のAS--Gorenstein条件を得る。Hilbert行列のKoszul逆公式から
+各始点の長さ$d$の次元は$\binom{d+3}{3}$であり、成長条件も満たす。
+逆に標準AS対象の双対を選んだ辺で切れば命題\ref{prop:general-cut-trivial-extension}から
+この$E$そのものであり、Koszul性より定理の条件を得る。
+
+明示的には第四の一次空間を$V_3=U^*$とする。
+標準テンソルは包含$U\hookrightarrow V_0\otimes V_1\otimes V_2$を表す
+$w=\sum_a u_a\otimes u_a^*$であり、これは基底によらない。
+実際、切断における三つの矢の積と$DA$の戻り矢とのtraceはこの評価である。
+残る二つの関係を定理\ref{thm:frobenius-tensor-reconstruction}の縮約で復元できる。
+三つの基底変更が指定の二窓を対応させれば$U$と$U^*$にも同型を誘導するので、
+全四窓が同型になる。逆は添字保持同型の次数一、二への制限による。
+\end{proof}
+
+$B$は明示的にも小さい。Koszul分解から
+$\operatorname{Ext}_A^p(S_i,S_{i+p})$は長さ$p$の二次双対の経路商であり、
+Yoneda積はテンソルの連接を与える（分解のdeconcatenationの双対）。
+従って$B^{\mathrm{op}}$は矢$V_0,V_1,V_2$と関係$R_0,R_1$を持つ四層代数である。
+長さ別の総次元は$4,12,20,20$である。最後の20は
+$64-24-24+\dim U$から得る。従って一般のAS問題を56次元代数上で扱える。
+Grant--Iyama\cite[Theorems B, C]{GrantIyama}は$d$-hereditaryなどの仮定のもと、
+高次前射影代数の正則性と二次双対からtrivial extensionへの写像を扱う。
+上の証明は、候補が最初から3-hereditaryであることを要求せず、各非対角Torの位置を保つ。
