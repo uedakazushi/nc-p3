@@ -85,6 +85,9 @@ def gaussian_jets(radicand=-1, initial_precision=INITIAL_PRECISION):
 
         __rmul__ = __mul__
 
+        def __truediv__(self, other):
+            return self * other.inverse()
+
         def unit(self):
             real = self.real[0]
             imag = self.imag[0] if self.imag else 0

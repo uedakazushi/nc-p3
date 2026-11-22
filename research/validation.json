@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 131,
+  "version": 132,
   "reviewed_input": {
-    "source_commit": "61e35dd024b8191efd5e6618bf98ef0b1df9652a"
+    "source_commit": "b660feb0ecc3467872f669147e40ca284ee2c591"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every ordinary characteristic-zero window on both primitive genus-three levels in both rank-fifteen presentations is standard Koszul left/right AS regular and free of rank 256 from each start over a polynomial ring on four central quartics. The certificate covers every geometric residue at 109, using two quotient-minor charts, 89 higher-degree residual factors, and mixed-characteristic saturation at all trace ±1 disks."
+    "scope": "On the genus-five level c=3/4 (ξ=9/16), both presentations have standard Koszul left/right AS-regular ordinary lifts from every one of the 56 nonordinary boundary points of the reduction at 101. Each start is free of rank 256 over four central quartics. At the eight trace ±1 ends the saturated path modules and commutator kernels construct the local central forms before the 13-step cut."
   },
   "checks": [
     {
@@ -15,7 +15,7 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_octic_ordinary.py",
+      "command": "python computations/verify_rank_fifteen_pencil_trace_disks.py",
       "result": "PASS"
     },
     {
@@ -33,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed specialization of path and center ranks, nonempty open intersection of the four start-wise cut choices, simple trace-disk expansions, exact divisibility before saturation, and coverage under shifts and Galois conjugation."
+    "scope": "Reviewed two square-root expansions at each sign, precision propagation through path and center saturation, exact rank from the general-center lower bounds, and the completion of all 56 boundary points at 101."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Characteristic-109 path and center minors; two central cuts, sixteen split-sample quotient charts; full residual tests at 23,17,28,21 higher-degree factors; exact biquadratic-field jets at 32 trace-boundary starts to degree thirteen.",
-    "reproduction": "SymPy 1.14.0 and python-flint 0.9.0. Staged exact verification of sixteen quotient charts and all 89 higher-degree residual factors, 32 mixed-characteristic trace-disk starts, and independent equality checks of both integral presentations and four modular path/center charts. The exceptional split pivot for presentation 1, j=41, start 1 was recomputed at t=4."
+    "scope": "Rational jets to order 32; normalized path lattices, lifted commuting quartics and quotient profile to length 13 in all 32 starts. Rechecked both quadratic trace roots and all eight infinity ends at the same prime 101."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 254,
+      "nc-p3": 255,
       "plan_ja": 7,
       "notes_ja": 15
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Reviewed the all-points theorem, two-chart residue counts and local saturation proof on rendered page 227 and extracted pages 227–228."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "fb3cc9c69addcf7b2ae461474d0498401024178c",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "On the genus-five pencil work at c=3/4 (s=25/12) above 101. At the eight trace ±1 ends use n as uniformizer, K=k sqrt(1+(1+c²)n²), and r,w with first slopes ±(c+k), ±(c-k). Saturate the length-four and length-five path modules, then the central commutator kernel, before the central cut through length thirteen. Test the other-trace quadratic boundary at 101 over its residue extensions. Seek a uniform method over Q(c) and use the Kummer or plane-quartic model for ordinary geometric residues.",
+    "For the genus-five level c=3/4 at 101, use x=K+H, K=(x+1/x)/2, H=(x-1/x)/2. At ordinary x, (2xA)^2=(x²+2(s-1)x+1)(x²+2(s+1)x+1) and (2xB)^2 is obtained by replacing s by -s. Certify the 44 inverse pairs of rational ordinary x residues and then use the degree-four function field for geometric residues of higher degrees. On the general pencil use the solved genus-three fiber to restrict horizontal bad curves via the relative projective three-quadric model.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
