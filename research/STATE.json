@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 148,
+  "version": 149,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -1745,6 +1745,15 @@
       "verification": [
         "computations/verify_rank_fifteen_small_residues.py"
       ]
+    },
+    {
+      "id": "RANK-FIFTEEN-PARAMETER-ORBITS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "An invertible fifteen-coefficient Pauli normal form and a group of 192 signed projective transformations enumerate all indexed-equivalent ordinary first-display parameters wherever the two products span 16. The generic indexed fiber consists of precisely 24 first-display tuples over 12 distinct multiplier pairs, and 48 tuples if both displays are counted.",
+      "proof": "sections/rank_fifteen_parameter_orbits.tex",
+      "verification": [
+        "computations/verify_rank_fifteen_parameter_orbits.py"
+      ]
     }
   ],
   "document_paths": {
@@ -1808,7 +1817,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "1c920e277a15282b3dea86f4871a5ff4354ce647",
+  "reviewed_source_commit": "242cbd044b48626ddded76608f7014e76893b70d",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -1817,16 +1826,16 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Determine the remaining interior regularity locus outside the five certified prime-field tests. Use the Pauli table on the dimension-16 open to recover the multiplier and root from label squares and compare fibers over different multiplier orbits.",
+    "immediate_next_action": "Use the 192 transformations to propagate the all-degree coordinate-end certificates into the interior and compute the exceptional endpoint identifications. Determine the locus where the two generated products have dimension below 16, or recover the same lines intrinsically there. Continue the remaining interior regularity tests.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/rank_fifteen_parameter_orbits.tex",
       "sections/rank_fifteen_small_residues.tex",
-      "sections/rank_fifteen_branch_period.tex",
-      "sections/rank_fifteen_root_exchange.tex",
-      "sections/rank_fifteen_pauli_comparison.tex"
+      "sections/rank_fifteen_pauli_comparison.tex",
+      "sections/rank_fifteen_coordinate_collisions.tex"
     ],
-    "known_obstruction": "Unresolved interior regularity and indexed comparisons across different multiplier orbits. Other special endpoint levels remain.",
-    "state_of_claim": "All ordinary prime-field multiplier residues for these five primes are covered; exceptional interior algebraic points elsewhere remain possible.",
+    "known_obstruction": "Interior regularity and indexed comparisons outside the dimension-16 open remain possible sources of exceptions.",
+    "state_of_claim": "Complete orbit enumeration on the intrinsic dimension-16 open. At its complement these transformations still give isomorphisms; necessity there and unrestricted classification are open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 148,
+  "version": 149,
   "reviewed_input": {
-    "source_commit": "1c920e277a15282b3dea86f4871a5ff4354ce647"
+    "source_commit": "242cbd044b48626ddded76608f7014e76893b70d"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every ordinary rank-fifteen lift of every prime-field ordinary multiplier pair in characteristic 7, 11, 13, 17 or 19 is standard Koszul left/right AS regular and free of rank 256 over four central quartics at each start. The 480 residue pairs reduce to 120 exact certificates of root degree at most four."
+    "scope": "An invertible fifteen-coefficient Pauli normal form and a group of 192 signed projective transformations enumerate all indexed-equivalent ordinary first-display parameters wherever the two products span 16. The generic indexed fiber consists of precisely 24 first-display tuples over 12 distinct multiplier pairs, and 48 tuples if both displays are counted."
   },
   "checks": [
     {
@@ -15,7 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_small_residues.py",
+      "command": "python computations/verify_rank_fifteen_parameter_orbits.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_rank_fifteen_pauli_comparison.py",
       "result": "PASS"
     },
     {
@@ -33,36 +37,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked integral root extension even at repeated residual roots and transfer by reversal and indexed basis changes."
+    "scope": "Checked independent conjugations, the four allowed characters per label permutation using two nonzero coefficient pairs, all eight radical choices per target, and genericity from a simple reduction."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Full enumeration, 120 representatives, four sixth insertion ranks and four-start central profiles through length 13.",
-    "reproduction": "Recomputed all 120 finite-field witnesses and the root-exchange and separation identities."
+    "scope": "All rational Pauli projections modulo the quartic, projective inverse and five quadrics, 768 signed lifts, 192 template symmetries and the complete split residue fiber."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 272,
+      "nc-p3": 273,
       "plan_ja": 8,
       "notes_ja": 16
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected manuscript page 246, including the complete root-degree table, all four cut profiles and the lifting argument."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "44fdc6c5c9e280dab62a6d358e9fca969e1a6d6f",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Determine the remaining interior regularity locus outside the five certified prime-field tests. Use the Pauli table on the dimension-16 open to recover the multiplier and root from label squares and compare fibers over different multiplier orbits.",
+    "Use the 192 transformations to propagate the all-degree coordinate-end certificates into the interior and compute the exceptional endpoint identifications. Determine the locus where the two generated products have dimension below 16, or recover the same lines intrinsically there. Continue the remaining interior regularity tests.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
