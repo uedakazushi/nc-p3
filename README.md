@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-22 / v83。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v84。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -154,6 +154,8 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 
 四次の導分を計算し、十五次元成分の全方向に五つの中心四次式が延びることを証明した。一つの開集合の全幾何点が正則となり、閉包の全標準AS点は共通の多項式恒等式を持つ。[証明と判定](sections/quartic_euler_lifting.tex)
 
+全中心は五つの四次中心元で生成され、一つの四次関係を持つ正規な整超曲面である。十五次元成分の開集合でPI次数は16、各頂点の商は次数4の可除代数となる。[証明と判定](sections/quartic_center_order.tex)
+
 二窓から作る56次元代数で、低次Extの消滅を逆Serre反復が保つ構造条件を探す。
 「全次数を証明してAS認証」「有限障害で排除」「未決定」を分け、有限検査の成功を全AS認証としない。
 正規形の枝、特殊値、枝間同型の条件を証明し、未分類の残余を明示する。
@@ -208,6 +210,7 @@ python3 computations/verify_single_configuration_projection.py
 python3 computations/verify_configuration_quartic_pencil.py
 python3 computations/verify_configuration_intersections.py
 python3 computations/verify_quartic_euler_derivations.py
+python3 computations/verify_quartic_center_order.py
 python3 computations/verify_klein_elliptic_center.py
 python3 computations/verify_klein_full_rank_configurations.py
 python3 computations/verify_rank_five_pencils.py

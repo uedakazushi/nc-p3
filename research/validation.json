@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 83,
+  "version": 84,
   "reviewed_input": {
-    "source_commit": "fd5a2e1307e1d3e7922c74c872747b351efaf53e"
+    "source_commit": "58fe489fdabf4b0a884a43b5e410fcd9ff5fb444"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All five central quartics lift over the unrestricted fifteen-dimensional component. At the rational full-rank sample every degree-four derivation vanishing on the vertex idempotents is inner plus a central Euler multiple. A regular central element kills its own commutator obstruction. On one open neighborhood every geometric fiber is standard Koszul AS and each starting ideal is free of rank 256 over four central parameters. Every standard AS specialization on the closure satisfies a common polynomial identity."
+    "scope": "On one open containing the rational full-rank sample, the full center is a geometrically integral normal quartic hypersurface on five quartic generators. The folded algebra is prime of PI degree 16, and its central quotient is a 4 by 4 matrix algebra over a degree-four central division algebra. All composable nonzero paths have nonzero product there. All standard AS specializations of the component satisfy the sharper standard identity s32."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_quartic_euler_derivations.py",
+      "command": "python computations/verify_quartic_center_order.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_configuration_intersections.py",
+      "command": "python computations/verify_quartic_euler_derivations.py",
       "result": "PASS"
     },
     {
@@ -33,16 +33,16 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed exact differentiation on the folded algebra, regular Euler multiples, the self-commutator obstruction, flat Artinian deformations, faithful completion, and a single Zariski-open all-degree central certificate."
+    "scope": "Reviewed integral transfer on the finite filtered Rees components, saturation of four independent central powers, interpolation on the plane, trace semisimplicity, Morita ranks and the homogeneous right-ideal divisibility argument."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Four 224-column degree-four Leibniz systems on the rational path bases reduced at 1009 have ranks 188,184,192,192. Inner derivations and independent central Euler multiples give the matching lower bounds."
+    "scope": "Filtered paths through length 16 at the zero parameters and six nonzero parameter fibers modulo 1009. Center commutator kernel dimension four, corner trace rank 64, squarefree quartic, and a geometrically smooth projective plane section."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 195,
+      "nc-p3": 198,
       "plan_ja": 6,
       "notes_ja": 14
     }
@@ -57,7 +57,7 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Compute the full center and its quartic relation and generic central-simple degree on the fifteen-dimensional component. Determine which boundary points retain a central-parameter certificate, and address positive-dimensional edges.",
+    "Determine how the quartic center degenerates at the symmetric divisor: compute the degree-eight center, test a double cover of a quadric, and stratify the non-Azumaya locus. Continue finite AS tests on the component boundary.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
