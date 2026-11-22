@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exhausted the 32 projective points, computed the 24 tensor entries, six binomial relations at every start, periodic diagonal rescaling and all five central quartic multidegrees."
+    "scope": "Exhausted the 32 projective points, computed the 24 tensor entries, six binomial relations at every start, periodic diagonal rescaling and all five central quartic multidegrees.",
+    "reproduction": "Recomputed the projective orbit, sparse tensor and periodic quantum gauge over Gaussian rationals. Recomputed the full residue-line certificate at 3."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected pages 255 and 256, including the quantum parameters, the periodic basis changes and the valuation argument."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "e4b506a11f0a02e73bf32d47c8d4f8a8f1db48a8",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Analyze the equality wall val(y)=2 val(x)<0 via the limiting rank-fourteen U=1 chart and transport ordinary geometric residual certificates. On p=0 only y integral at odd places and vanishing at every place above 3 can still fail; analyze the saturated H=0 disk.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "a1a507b2f5f806bc1aa3ff1c8a4f71bae5cd9ff7",
+    "commit": "8f0e336b5c16c3e8c8d151e0d98990cd06b3006b",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
