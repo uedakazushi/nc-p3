@@ -19,7 +19,7 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_horizontal_fibers.py",
+      "command": "python computations/verify_rank_fifteen_overlap_annulus.py",
       "result": "PASS"
     },
     {
@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Fifteen-term rational-function H-jets through length seven at all four starts, independently checked F9 two-sided residue bounds at lengths eight through thirteen, exact homological proof of the ninth-degree gap."
+    "scope": "Fifteen-term rational-function H-jets through length seven at all four starts, independently checked F9 two-sided residue bounds at lengths eight through thirteen, exact homological proof of the ninth-degree gap.",
+    "reproduction": "Verified all four degree-seven rational-function cuts at fifteen digits; independently replayed the residue multiplication through degree thirteen. Reviewed the depth and projective-dimension proof establishing exact dimension twenty in degree nine."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript pages 267 through 269, including the Koszul syzygy proof, the residue table and the slope descent."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "1a207fce65a579066307d8fec960398a538c446b",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Make the finite residue-slope obstruction in characteristic three effective. On v(y)>0 with D=x^3/y a unit at three, record the polynomial denominators and unit pivots of the F3(z) overlap certificate, descend their zero set through the degree-24 trace map, and treat any whole bad residue fibers. Use the exact seventh integral lattices and the three-residue-class criterion when extending to unrestricted v(y). The unrestricted classification still includes isolated interior points and nonsymmetric branches.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "b7c42ddb9f4e5ad6ec4e57f37eafd5c207435d52",
+    "commit": "6227bfe388b0d8617c376c09cb858d96e162f08a",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
