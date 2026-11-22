@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 128,
+  "version": 129,
   "reviewed_input": {
-    "source_commit": "a9397d0659355df82913b70d300e4ee172e82389"
+    "source_commit": "e1ea1d94bbefdde40a5f00a0876d7f123a3b3f0b"
   },
   "generation": {
     "result": "PASS",
-    "scope": "On both primitive genus-three levels and both rank-fifteen presentations, every ordinary characteristic-zero window reducing to trace 0 or ±2 at 109 is standard Koszul left/right AS regular. At trace ±1 the unweighted Grassmann relation limits have path dimensions 20,38,72 in degrees 3,4,5 at every start."
+    "scope": "Every genus-five pencil curve has a canonical model as the intersection of three quadrics and a smooth plane quartic as its two-position-shift quotient. On general levels both presentations have regular ordinary neighborhoods of all 24 finite unramified ends at K=0 and K²+sK-1=0. At c reducing to 3/4 the corresponding ordinary disks are certified at primes 101 and 197 respectively."
   },
   "checks": [
     {
@@ -15,7 +15,7 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_octic_boundary.py",
+      "command": "python computations/verify_rank_fifteen_pencil_unramified.py",
       "result": "PASS"
     },
     {
@@ -33,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked local parameter and unit pivot at each boundary point, Frobenius and shift coverage, and the path jumps over Q(zeta_24)."
+    "scope": "Verified absence of base points, generic projection degree two, smoothness and genus of the plane quotient. Checked all three unramified trace values split simply at the selected primes."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact cyclotomic Pluecker coordinates and Taylor coefficients; finite-field center and four-start quartets on eight trace/sign/color representatives for both j. Exact characteristic-zero path dimensions on all sixteen ±1 branch/color choices.",
-    "reproduction": "SymPy 1.14.0 and python-flint 0.9.0. Exact cyclotomic expansions, sixteen positive 109-adic trace/embedding/color checks and sixteen characteristic-zero path-jump checks at trace ±1."
+    "scope": "Verified the plane-quartic identity and every sheet of the c=3/4 trace-zero and trace-quadratic fibers, 48 four-start central-cut certificates across the two presentations."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 251,
+      "nc-p3": 252,
       "plan_ja": 7,
       "notes_ja": 15
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Reviewed the theorem and proposition on rendered page 224 and the concluding proof on extracted page 225."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "8b0977053061c9c2ce1654ed730a0219ae46a136",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "On the genus-three octic certify higher-degree ordinary residues of the four-cut at 109 by intersecting two independent minor charts through degree thirteen and rechecking residual factors. At K=±1 use u=Y and saturate the integral degree-four relation lattice first: the raw quadratic limit misses three dimensions at degree four, and sixteen at degree five. These are the only unresolved finite boundary traces.",
+    "Complete the genus-three ordinary-residue four-cut via a pair of minor charts at 109, and saturate the four-cut at the remaining disks K=±1 using the uniformizer Y. On the general genus-five pencil, after the 24 unramified finite ends and the eight infinite ends, handle the 24 ramified ends above K=±1, ±s±1 using the three quadrics.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

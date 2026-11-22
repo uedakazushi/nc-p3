@@ -252,7 +252,8 @@
       "rank_fifteen_regular_ramification_and_pencil": "sections/rank_fifteen_all_ramification.tex",
       "rank_fifteen_pencil_infinity": "sections/rank_fifteen_pencil_infinity.tex",
       "rank_fifteen_octic_center": "sections/rank_fifteen_octic_center.tex",
-      "rank_fifteen_octic_boundary": "sections/rank_fifteen_octic_boundary.tex"
+      "rank_fifteen_octic_boundary": "sections/rank_fifteen_octic_boundary.tex",
+      "rank_fifteen_pencil_unramified": "sections/rank_fifteen_pencil_unramified.tex"
     },
     {
       "id": "UNRESTRICTED-SINGLY-SYMMETRIC-14",

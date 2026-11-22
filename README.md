@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-22 / v128。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v129。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -240,6 +240,8 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 
 種数3の四曲線で109の有限境界 K=0,±2 に還元する全通常点を認証した。残る K=±1 では二次関係の極限の経路次元を数体上で決定した。[証明と判定](sections/rank_fifteen_octic_boundary.tex)
 
+種数5の各水準の二位置移動商を平面四次式で与えた。一般水準の有限非分岐境界24点では、その近傍の通常窓が全次数で正則である。[証明と判定](sections/rank_fifteen_pencil_unramified.tex)
+
 二窓から作る56次元代数で、低次Extの消滅を逆Serre反復が保つ構造条件を探す。
 「全次数を証明してAS認証」「有限障害で排除」「未決定」を分け、有限検査の成功を全AS認証としない。
 正規形の枝、特殊値、枝間同型の条件を証明し、未分類の残余を明示する。
@@ -342,6 +344,7 @@ python3 computations/verify_rank_fifteen_octic_center.py
 python3 computations/verify_rank_fifteen_octic_residues.py
 python3 computations/verify_rank_fifteen_octic_boundary.py
 python3 computations/verify_rank_fifteen_octic_path_jump.py
+python3 computations/verify_rank_fifteen_pencil_unramified.py
 python3 computations/verify_rank_fifteen_rational_residues.py
 python3 computations/verify_varying_opposite_rank.py
 python3 computations/verify_fixed_rank_fourteen.py
