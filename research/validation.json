@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 98,
+  "version": 99,
   "reviewed_input": {
-    "source_commit": "2fbddb684aec34e73ea886db4962b69b3861d44f"
+    "source_commit": "dce02912484a15bb8934ca309a56e86fcad3ee2e"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For every bisymmetric rank-six adjacent Gram window, standard Koszul left/right AS regularity is equivalent to the two starting rows having path dimensions at most 20 in length 3 and at most 2024 in length 21. Equivalently one excludes pure relations, rectangular evaluations and either orientation of the binary (2,3) quotient. The regular locus is open with no central-finiteness or opposite-rank assumption."
+    "scope": "For any pure-free six-plane of relations, the binary quotient with prescribed kernel line is recognized by an integral rank-one curve spanning both factors after projection. Its unique rank-one scheme is a rational normal quintic. Matching vertex curves give a four-window exponential-growth certificate even with nontrivial PGL2 monodromy."
   },
   "checks": [
     {
@@ -15,19 +15,11 @@
       "result": "PASS"
     },
     {
+      "command": "python computations/verify_binary_window_transfer.py",
+      "result": "PASS"
+    },
+    {
       "command": "python computations/verify_bisymmetric_finite_test.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_binary_product_obstruction.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_polygon_multiplication.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_exceptional_exchange_sheets.py",
       "result": "PASS"
     },
     {
@@ -41,16 +33,16 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Rechecked every obstruction in the reduced degeneration proofs, including rank loss for polygons, integral conductor alternatives, and additive models; the pure-overlap inference uses only the cubic bound and injective contractions."
+    "scope": "Proved the equality case of the function-space product bound, intrinsic recovery of the projection kernel and unordered curve data, and propagation of identifications along the integer line."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Reconstructed the two conductor examples from a 36 by 16 Hankel system; verified the binary and rectangular witness dimensions, the polygon multiplication ranks and semipositive multidegree signatures."
+    "scope": "Compared the ten quadratic generators of the rank-one Hankel scheme and verified four edge spans with an explicit nonidentity return on the parameter line."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 216,
+      "nc-p3": 218,
       "plan_ja": 7,
       "notes_ja": 14
     },
@@ -66,7 +58,7 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Use the binary and rectangular quotient tests on non-bisymmetric windows: recover compatible column and row projections around four positions, then test the complementary determinant pairing on exceptional slopes.",
+    "Determine the codimension and generic recoverability of a single-edge binary quotient, then compare its rank-two determinantal curves with explicit non-bisymmetric windows.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
