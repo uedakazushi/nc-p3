@@ -15,15 +15,31 @@
       "result": "PASS"
     },
     {
+      "command": "python computations/verify_unique_character_frames.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_flip_character_locus.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_fixed_line_elliptic_curves.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_fixed_branch_regular.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_central_window_cutoff.py",
+      "result": "PASS"
+    },
+    {
       "command": "python computations/verify_fixed_exchange_isogeny.py",
       "result": "PASS"
     },
     {
       "command": "python computations/verify_fixed_quartic_ranks.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_fixed_line_elliptic_curves.py",
       "result": "PASS"
     },
     {
@@ -41,7 +57,7 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Verified both discriminant-preserving Möbius maps, the signs of the actual matrix-exchange lifts, quotient equations, closure of the twelve sections under exchange, and all 205 affine finite-field test points."
+    "scope": "Unmarked frame and multiple-marking certificates; fixed-line discriminants, resultants, j-invariants, twelve rational function field defects; 32 central quotient profiles at the eight ramification points mod 307; both signed exchange maps and their quotient field equations; four-character ranks at 205 affine rational points mod 101."
   },
   "tex": {
     "result": "PASS",
@@ -53,13 +69,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Rendered and visually checked manuscript pages 198 and 200, including the lifting argument and the exchange quotient."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "60ec6fab66c57bc4c6235dff37780023a58eec7d",
+    "scope": "Re-fetched main and compared all changed source files byte for byte from the previous v103 readback (7b58de1) through the v107 research commit."
   },
   "open_mathematics": [
     "On the explicit exchange quotient V^2=R(U)H(U), compute the degeneracy ideals for the four outer-pair rank maps (targets 17,16,16,16). Saturate by the chart denominators and the six known excluded points; test any residual geometric zeros for longer path obstructions or central regularity.",
@@ -67,7 +86,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "d286d4e455b51e3e242a850a6be2bfed98e44456",
-    "scope": "Merged current hub main by fast-forward, updated only the nc-p3 row, fetched main and compared the README byte for byte."
+    "commit": "2a74ffc05b476e1d4f99e090b29fe15d1d3311f6",
+    "scope": "Updated only the nc-p3 row after fetching the research hub, then re-fetched and byte-compared its README."
   }
 }
