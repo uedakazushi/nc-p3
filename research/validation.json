@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "All 68 prime-field plane points, cubic and quadratic root lifts, explicit cyclic adjacent relations and four-start central profiles through length thirteen."
+    "scope": "All 68 prime-field plane points, cubic and quadratic root lifts, explicit cyclic adjacent relations and four-start central profiles through length thirteen.",
+    "reproduction": "Recomputed all 68 quotient-plane profiles, the four intrinsic contraction checks and one pre-existing characteristic-101 pencil sample with the default central pair."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript page 252 including the integral cubic, all 68 residues, extension degrees and the alternative central pair at (0,2) in characteristic 7."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "9d8ae47f8dafd8b9611f6feb3e678609e91fd240",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Determine the remaining isolated all-degree regularity candidates in the (x,y) plane outside the four certified curves and the certified residue neighborhoods. Use the cubic v(x-4v)^2=y and direct tensor adjacent images to compute relative sixth insertion and later central-cut Fitting supports over curves or the plane. Indexed comparison on the ordinary positive-fixed rank-fifteen locus is complete.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "c63cbdf6ab558c6465d7575a7cb6dafb337f799d",
+    "commit": "47689a05abceca6bd1af6f7bfb501196cea288f4",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
