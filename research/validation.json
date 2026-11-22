@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact Gaussian-function-field path, center and central-cut ranks; both residue signs above all 12 remaining orbits and all four degree-13 profiles."
+    "scope": "Exact Gaussian-function-field path, center and central-cut ranks; both residue signs above all 12 remaining orbits and all four degree-13 profiles.",
+    "reproduction": "Both endpoint curve computations independently reproduced, including all 464 and 593 pivot factors. Rational residual roots at 101, 109, 173 and 193 verified at both Gaussian signs and four starts through degree 13."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript page 241, including the full coordinate-end result and all 12 rational orbit degrees."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "d9e9aecbc81b3a2b17def2cfcc8d4cce72aada7e",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "The coordinate-end regularity problem is finished. Seek isolated failure at abef nonzero on the first surface only: investigate the four sixth matrices at starts 0,1 and characters 0,2 with two independent pivot charts; for higher degrees extend the reciprocal central-cut method to another interior curve. For indexed classification use the explicit finite exceptional levels on the endpoint curves and recover tensor basis changes from the opposite map T.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "e7b8c61b2e0bc344b671713a6cd0a6387a62c9df",
+    "commit": "5729e217b641c219a241382e7196dc51bd12c2bb",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
