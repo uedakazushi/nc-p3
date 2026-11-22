@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact Q(i) jets through order 24 and the four central quotients through length 13. Verified the common slope, discriminants and both elliptic j invariants symbolically."
+    "scope": "Exact Q(i) jets through order 24 and the four central quotients through length 13. Verified the common slope, discriminants and both elliptic j invariants symbolically.",
+    "reproduction": "Recomputed every Gaussian central cut through length 13 at precision 25. Independently reproduced the four starts, checked the pencil and both j invariants in SymPy, and reran the sixteen variable-trace degree-six residue ranks."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript pages 262 and 263, including the genus-two parameter curve, shifted quotient, generic slopes and the valuation tube."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "d3bc120ae4fe23632482a445a81ef5153c6f5a69",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Return to the variable-trace sixth cut on 0 < val(y) < 3 val(x). Compute the two missing ranks in characters 2 and 3 using eleven H coefficients and the saturated degree-five product spaces. If the sixth quotient is exact, propagate the four-section quotient to degree seven and then thirteen. The Gaussian specialization now has an all-degree proof and needs no further fixed-slope tests.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "861466cd96b09c266aa7594ec032045b50da6c38",
+    "commit": "109ff61707135c6337bbe3acdf4cdeb16a55eb31",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
