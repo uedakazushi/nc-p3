@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 97,
+  "version": 98,
   "reviewed_input": {
-    "source_commit": "03ff2955ef209cddb151f0491b5845a3498c569a"
+    "source_commit": "2fbddb684aec34e73ea886db4962b69b3861d44f"
   },
   "generation": {
     "result": "PASS",
-    "scope": "On each of the four extra exchange presentations, the entire non-AS locus is the chart intersection with eight explicit projective lines on the exceptional discriminant quadric. All simple-root windows on these presentations are standard AS. For any bisymmetric window with a reducible opposite quadric the two elementary rank obstructions are necessary and sufficient."
+    "scope": "For every bisymmetric rank-six adjacent Gram window, standard Koszul left/right AS regularity is equivalent to the two starting rows having path dimensions at most 20 in length 3 and at most 2024 in length 21. Equivalently one excludes pure relations, rectangular evaluations and either orientation of the binary (2,3) quotient. The regular locus is open with no central-finiteness or opposite-rank assumption."
   },
   "checks": [
     {
@@ -15,11 +15,19 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_exceptional_exchange_sheets.py",
+      "command": "python computations/verify_bisymmetric_finite_test.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_exceptional_ramification.py",
+      "command": "python computations/verify_binary_product_obstruction.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_polygon_multiplication.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_exceptional_exchange_sheets.py",
       "result": "PASS"
     },
     {
@@ -33,16 +41,16 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed reduction to pure relations and axis ranks for all reducible opposite quadrics, missing-zero coordinate cases, and equivalence under both changes of positive and negative slopes."
+    "scope": "Rechecked every obstruction in the reduced degeneration proofs, including rank loss for polygons, integral conductor alternatives, and additive models; the pure-overlap inference uses only the cubic bound and injective contractions."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Verified all eight two-coordinate evaluation systems, their necessary linear constraints, the nonzero square-root witnesses, and ramification containment."
+    "scope": "Reconstructed the two conductor examples from a 36 by 16 Hankel system; verified the binary and rectangular witness dimensions, the polygon multiplication ranks and semipositive multidegree signatures."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 214,
+      "nc-p3": 216,
       "plan_ja": 7,
       "notes_ja": 14
     },
@@ -58,7 +66,7 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Seek a uniform short Hilbert or growth test for bisymmetric windows without reducible quadrics and use it to simplify the common AS decision. The other completion sheet at exceptional slopes and ordinary residual fibers remain.",
+    "Use the binary and rectangular quotient tests on non-bisymmetric windows: recover compatible column and row projections around four positions, then test the complementary determinant pairing on exceptional slopes.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

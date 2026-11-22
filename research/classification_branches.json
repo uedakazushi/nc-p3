@@ -26,7 +26,12 @@
       "normal_forms": "unresolved",
       "witness_partition": "Any invertible negative witness: polynomial indexed class. Two invertible positive pairs sharing a position: symmetric CI chart. Residual: no negative and at most one positive partner per position. These predicates exhaust AS objects but do not give a complete residual classification.",
       "growth_obstruction": "All marked 20x120 matrices have rank >=19 on P3. No nonzero pure tensor in a cubic overlap; thm:no-consecutive-pure-relations.",
-      "single_opposite_symmetric": "For singly opposite-symmetric standard AS windows all four evaluation ranks are at least three. A separated three-letter block gives exponential growth for a small odd evaluation. Both maximal-minor schemes coincide on the common even projective space, all four point correspondences are graphs, and four-shift is the identity without a finiteness assumption. The other half is canonically computed by the four-dimensional positive prolongation of the first window."
+      "single_opposite_symmetric": "For singly opposite-symmetric standard AS windows all four evaluation ranks are at least three. A separated three-letter block gives exponential growth for a small odd evaluation. Both maximal-minor schemes coincide on the common even projective space, all four point correspondences are graphs, and four-shift is the identity without a finiteness assumption. The other half is canonically computed by the four-dimensional positive prolongation of the first window.",
+      "bisymmetric_regularity": {
+        "hypothesis": "adjacent rank six and a bisymmetric reversal presentation",
+        "criterion": "For both starts, dimensions in degrees 3 and 21 are at most 20 and 2024.",
+        "proof": "sections/bisymmetric_finite_path_test.tex"
+      }
     },
     {
       "id": "OPPOSITE-LOW",
@@ -206,7 +211,18 @@
     {
       "id": "KLEIN-ELLIPTIC-FULL-RANK",
       "current_result": "The full nondegenerate Klein (2,2,1,1) rank chart, including all coefficient-zero determinant fibers, is covered by the elliptic closure and the four exceptional presentations. If both determinant quadratics vanish identically the normalized base has eight explicit types, each with one bilinear equation for the entire fiber; all lie in the elliptic closure.",
-      "current_proof": "sections/klein_zero_quadratics.tex"
+      "current_proof": "sections/klein_zero_quadratics.tex",
+      "boundary_results": {
+        "ordinary_ramification": "sections/kummer_ramification.tex",
+        "contact_exclusion": "sections/kummer_polar_completion.tex",
+        "root_resolution": "sections/paired_root_resolution.tex",
+        "exchange_quotient": "sections/kummer_exchange_quotient.tex",
+        "zero_polynomials": [
+          "sections/zero_pairing_defect.tex",
+          "sections/single_zero_pairings.tex"
+        ],
+        "exceptional_exchange_sheets": "sections/exceptional_exchange_sheets.tex"
+      }
     },
     {
       "id": "UNRESTRICTED-SINGLY-SYMMETRIC-14",
@@ -215,8 +231,8 @@
     },
     {
       "id": "TWENTY-CONORMAL-FULL-COMPONENT",
-      "current_result": "On each of the four extra exchange presentations, the entire non-AS locus is the chart intersection with eight explicit projective lines on the exceptional discriminant quadric. All simple-root windows on these presentations are standard AS. For any bisymmetric window with a reducible opposite quadric the two elementary rank obstructions are necessary and sufficient.",
-      "current_proof": "sections/exceptional_exchange_sheets.tex",
+      "current_result": "The zero-pairing boundary contains an entire non-AS bilinear curve at (z,lambda)=(3,2), with generic degree-six path dimensions (92,84,85,84), and a non-AS two-parameter sublocus x=z-1 with degree-four dimensions (35,36,36,35).",
+      "current_proof": "sections/zero_pairing_defect.tex",
       "configuration_projection": {
         "result": "The generic recovery degree from one projected configuration is exactly two. The two finite-edge AS windows are the original orientation and its reversal; one ordered first edge determines the extension. At both rational samples the same classification holds. A pencil of quartics with twenty triple points recovers every normalized square root, including the exclusion of degenerate Grassmann candidates.",
         "proof": "sections/configuration_quartic_pencil.tex"
