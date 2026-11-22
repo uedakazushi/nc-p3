@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 125,
+  "version": 126,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -1526,6 +1526,15 @@
         "computations/verify_rank_fifteen_all_ramification.py",
         "computations/verify_rank_fifteen_pencil.py"
       ]
+    },
+    {
+      "id": "RANK-FIFTEEN-PENCIL-INFINITY",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "All eight places over K=infinity on a general level of either rank-15 pencil, and every one on the two genus-three levels, admit explicit standard Koszul AS-regular weighted limits. All characteristic-zero lifts on the genus-three levels with a pole of K at 109 are standard and 256-free.",
+      "proof": "sections/rank_fifteen_pencil_infinity.tex",
+      "verification": [
+        "computations/verify_rank_fifteen_pencil_infinity.py"
+      ]
     }
   ],
   "document_paths": {
@@ -1589,7 +1598,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "eac00f2b800902fcfa6181aeb3871f267964f874",
+  "reviewed_source_commit": "4d1741451608590f7bffb25f44bc44047e2c98ec",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -1598,15 +1607,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Use the genus-three octic model on the two primitive-cube-root levels of the rank-15 surfaces. Substitute K=-(t²+1)²/D, H=Y/D, D=2t(t²-1), n=H/j, j⁴-j²+1=0 into the four relation spaces. Compute exact path and quartic center ranks over Q(j)(t,Y), or construct the univariate dual support modulo a prime splitting j (for example 109), then resolve residual or boundary disks. The complete ordinary rank-15 ramification curves and the rank-14 collision are settled.",
+    "immediate_next_action": "On the two genus-three levels use the octic Y²=t⁸+14t⁴+1, j⁴-j²+1=0, and compute the degree-4/5 paths and quartic center over Q(j)(t,Y), then the length-13 central cut. In a 109-adic argument the entire K=infinity boundary is settled: concentrate on ordinary higher-degree residues and the finite K boundary {0,±1,±2, roots of K²+K-1}.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/rank_fifteen_pencil_infinity.tex",
       "sections/rank_fifteen_all_ramification.tex",
-      "sections/rank_fifteen_boundary_disks.tex",
-      "sections/rank_fifteen_branch_center.tex"
+      "sections/rank_fifteen_boundary_disks.tex"
     ],
-    "known_obstruction": "The genus-three octic has a multicyclotomic constant field in the original windows and an unclassified finite exceptional locus for the AS test. The general genus-five levels also remain.",
-    "state_of_claim": "The two complete ramification curves are certified. Pointwise regularity remains on the genus-three and general genus-five pencil levels of the rank-15 surfaces; unrestricted classification remains open.",
+    "known_obstruction": "Genus-three regularity is open at general finite parameters. Infinity disks at 109 are resolved; finite nonordinary residues still need separate local certificates.",
+    "state_of_claim": "The infinite ends of the genus-three levels have uniform good weighted reduction at 109. The finite places of these levels and the full genus-five pencil remain open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

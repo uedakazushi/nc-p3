@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-22 / v125。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v126。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -234,6 +234,8 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 
 階数15の二分岐曲線の全通常点で正則性を証明した。残る階数15面を種数5の曲線族に分け、二つの種数3の特殊値を八次超楕円式で表示した。[証明と判定](sections/rank_fifteen_all_ramification.tex)
 
+階数15面の一般水準と種数3の二特殊水準で、無限遠八点の正則な重み付き極限を求めた。種数3で109におけるKの極を持つ全通常窓が正則となる。[証明と判定](sections/rank_fifteen_pencil_infinity.tex)
+
 二窓から作る56次元代数で、低次Extの消滅を逆Serre反復が保つ構造条件を探す。
 「全次数を証明してAS認証」「有限障害で排除」「未決定」を分け、有限検査の成功を全AS認証としない。
 正規形の枝、特殊値、枝間同型の条件を証明し、未分類の残余を明示する。
@@ -331,6 +333,7 @@ python3 computations/verify_rank_fifteen_branch_center.py
 python3 computations/verify_rank_fifteen_boundary_disks.py
 python3 computations/verify_rank_fifteen_all_ramification.py
 python3 computations/verify_rank_fifteen_pencil.py
+python3 computations/verify_rank_fifteen_pencil_infinity.py
 python3 computations/verify_rank_fifteen_rational_residues.py
 python3 computations/verify_varying_opposite_rank.py
 python3 computations/verify_fixed_rank_fourteen.py

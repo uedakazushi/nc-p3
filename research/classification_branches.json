@@ -249,7 +249,8 @@
       "rank_fifteen_covers": "sections/rank_fifteen_covers.tex",
       "rank_fifteen_branch_center": "sections/rank_fifteen_branch_center.tex",
       "rank_fifteen_boundary_disks": "sections/rank_fifteen_boundary_disks.tex",
-      "rank_fifteen_regular_ramification_and_pencil": "sections/rank_fifteen_all_ramification.tex"
+      "rank_fifteen_regular_ramification_and_pencil": "sections/rank_fifteen_all_ramification.tex",
+      "rank_fifteen_pencil_infinity": "sections/rank_fifteen_pencil_infinity.tex"
     },
     {
       "id": "UNRESTRICTED-SINGLY-SYMMETRIC-14",
