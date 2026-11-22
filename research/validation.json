@@ -15,11 +15,67 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_two_block_recovery.py",
+      "command": "python computations/verify_zero_pairing_defect.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_all_zero_pairing_defects.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_single_zero_pairings.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_kummer_discriminant.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_kummer_polar.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_paired_root_resolution.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_kummer_exchange_quotient.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_exceptional_ramification.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_polygon_multiplication.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_exceptional_exchange_sheets.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_binary_product_obstruction.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_bisymmetric_finite_test.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_binary_window_transfer.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_binary_incidence_sextic.py",
       "result": "PASS"
     },
     {
       "command": "python computations/verify_companion_rank_two_sections.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_rank_two_block_recovery.py",
       "result": "PASS"
     },
     {
@@ -37,7 +93,7 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Rechecked eight component-degree certificates, eight centralizers and eight separable characteristic polynomials with nonzero trace."
+    "scope": "Boundary Hilbert ranks on eight three-variable simultaneous-zero spaces and 32 exceptional single-zero spaces; rational ramification central cut and four point configurations; Kummer discriminant, polarity, small resolution and free exchange; four exceptional exchange sheets; uniform bisymmetric path criterion; Frobenius partitions and characteristic frames at eight full-rank edges."
   },
   "tex": {
     "result": "PASS",
@@ -49,19 +105,24 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Rendered and inspected the manuscript pages 190 and 194, containing the finite path criterion and the rank-two curves."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "4ebb1b189585edd78b0ad7ee611b273416c46567",
+    "scope": "Re-fetched main and byte-compared every modified source file from c43c5d1 through the research commit."
   },
   "open_mathematics": [
     "Compute which of the three candidate character frames preserve the two thin pencils at each edge, determine their exact multiplicity and recover the remaining scale and finite relabelings. Continue residual AS work on the Kummer complement and rank-two degeneration on the degree-six boundary.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
-    "result": "PENDING"
+    "result": "PASS",
+    "commit": "d286d4e455b51e3e242a850a6be2bfed98e44456",
+    "scope": "Merged current hub main by fast-forward, updated only the nc-p3 row, fetched main and compared the README byte for byte."
   }
 }
