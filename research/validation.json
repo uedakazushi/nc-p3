@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 86,
+  "version": 87,
   "reviewed_input": {
-    "source_commit": "90a0af5d68b852d86b815ffd47e1b593251f4b88"
+    "source_commit": "2f1a389ee8645e0b8bdb7277804c62af4130eb69"
   },
   "generation": {
     "result": "PASS",
-    "scope": "On the normal-center open the reduced trace identifies the order with its center dual and the Azumaya locus equals the smooth locus. Every simple over the punctured center has constant vertex dimension 1,2,3 or 4. Generically the twenty minimal simples give distinct singular points of the projective quartic center. Each such character supports exactly one additional simple, of total dimension eight or twelve."
+    "scope": "All twenty distinguished singular points of the general projective quartic center are ordinary double points. The two simple dimensions there are 4 and 12. The completed order on the projective chart is End(R^4 + I^12) for the conifold R and the rank-one cokernel of its two-by-two matrix."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_minimum_central_characters.py",
+      "command": "python computations/verify_central_nodes.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_symmetric_center.py",
+      "command": "python computations/verify_minimum_central_characters.py",
       "result": "PASS"
     },
     {
@@ -33,16 +33,16 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked the graded Frobenius trace shift, separability over smooth central points, four-period Hilbert divisibility, integral tangent lift, rigidity after fixing degree scale, and primitive-idempotent rank sum."
+    "scope": "Checked integral norm transfer, the reduced eigenvalue bound, trace multiplicities of primitive idempotents, reflexive Morita recovery, and the local trace ideal calculation forcing a node."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Rational first-order tangent across all four characters, paths and quartic center modulo 2657 squared, unique lifts of twenty four-cycles and pairwise distinct projective evaluations."
+    "scope": "Over 2657 all twenty central roots have multiplicity 2, and the regular action of a fixed quartic loop pencils off an eigenvalue of multiplicity 8. The reduced characteristic polynomial has a simple eigenvalue."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 202,
+      "nc-p3": 203,
       "plan_ja": 6,
       "notes_ja": 14
     },
@@ -58,7 +58,7 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Determine the larger simple degree at the twenty separated singular characters, bound other singular strata, and give a terminating commutative-module AS test for the central-finite boundary.",
+    "Test whether the twenty ordinary nodes exhaust the isolated singular points or whether other curves or points carry degree-two corner simples. Make the bounded central-finite AS criterion effective outside the proven regular open.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

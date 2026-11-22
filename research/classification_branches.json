@@ -215,8 +215,8 @@
     },
     {
       "id": "TWENTY-CONORMAL-FULL-COMPONENT",
-      "current_result": "On the normal-center open the reduced trace identifies the order with its center dual and the Azumaya locus equals the smooth locus. Every simple over the punctured center has constant vertex dimension 1,2,3 or 4. Generically the twenty minimal simples give distinct singular points of the projective quartic center. Each such character supports exactly one additional simple, of total dimension eight or twelve.",
-      "current_proof": "sections/minimum_central_characters.tex",
+      "current_result": "All twenty distinguished singular points of the general projective quartic center are ordinary double points. The two simple dimensions there are 4 and 12. The completed order on the projective chart is End(R^4 + I^12) for the conifold R and the rank-one cokernel of its two-by-two matrix.",
+      "current_proof": "sections/twenty_central_nodes.tex",
       "configuration_projection": {
         "result": "The generic recovery degree from one projected configuration is exactly two. The two finite-edge AS windows are the original orientation and its reversal; one ordered first edge determines the extension. At both rational samples the same classification holds. A pencil of quartics with twenty triple points recovers every normalized square root, including the exclusion of degenerate Grassmann candidates.",
         "proof": "sections/configuration_quartic_pencil.tex"
