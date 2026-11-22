@@ -52,7 +52,9 @@
     "scope": "The new argument uses current internal results. No independent novelty determination or external-source claim was added."
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "verified_commit": "62390eb987c913a08565640705fa904ef3a5e6ee",
+    "scope": "Fetched GitHub main and compared all 11 changed source and state files since the v49 receipt byte-for-byte with the working tree."
   },
   "open_mathematics": [
     "Exact geometric generic opposite rank (8, 9 or 10) and AS regularity of exceptional closed fibers, other finite components, positive-dimensional point schemes and overall classification."
