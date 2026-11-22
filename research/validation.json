@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Three exact four-position tensor identities, full cubic contractions after cyclic shift at the 101 split point, and the preceding invariant/regression tests."
+    "scope": "Three exact four-position tensor identities, full cubic contractions after cyclic shift at the 101 split point, and the preceding invariant/regression tests.",
+    "reproduction": "SymPy 1.14.0 and python-flint 0.9.0. Checked all three tensor identities symbolically, all four anchored and shifted cubic values at 101, and both Jacobian regressions."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript page 236, including the word reversal and the oriented cubic proof."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "3a674a41de61c02c6d44cccaa0ad3729c878b952",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Use first-sheet sixth_insertion at starts 0,1 and characters 0,2 only (ranks 36,34). On the explicit n=1 elliptic slice, z=t and lambda=(4t+Y)/(t(t+1)), Y²=-t³+14t²-t, a=2,e=0,b=(t+1)/(2t),f=4/(t+1). Test complementary minors and solve their remaining ordinary support. For the surface use two independent chart minors per block and saturate the ordinary denominators. Indexed comparisons may add the anchored cubic C to J2,J3.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "1c44d4d06c7e351e89d7ce9f6056e883faec8287",
+    "commit": "e40e13c80320560b3aabc2031dc492651336857b",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
