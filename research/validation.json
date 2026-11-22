@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 81,
+  "version": 82,
   "reviewed_input": {
-    "source_commit": "c4f2955b6b444671eebb46b845e45649b3a84071"
+    "source_commit": "46211e76edc01c5867b2bdbf3a3a38abd4ddb9a5"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The generic recovery degree from one projected configuration is exactly two. The two finite-edge AS windows are the original orientation and its reversal; one ordered first edge determines the extension. At both rational samples the same classification holds. A pencil of quartics with twenty triple points recovers every normalized square root, including the exclusion of degenerate Grassmann candidates."
+    "scope": "The two Veronese images in each parity intersect scheme-theoretically in the twenty marked evaluations. A single determinant pencil determines four generic indexed windows with Klein Galois group, and the unordered Gale-dual pencil pair determines eight, with dihedral Galois group. The orientation double cover ramifies with index two along the odd-symmetric divisor, where only one finite-edge AS orientation remains."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_configuration_quartic_pencil.py",
+      "command": "python computations/verify_configuration_intersections.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_single_configuration_projection.py",
+      "command": "python computations/verify_configuration_quartic_pencil.py",
       "result": "PASS"
     },
     {
@@ -33,16 +33,16 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed nonvanishing for deficient square maps, polar-rank criterion, projective gcd specialization including infinity, determinant uniqueness, properness of the Grassmann fiber, and two-window uniqueness."
+    "scope": "Reviewed scheme-theoretic generation of the intersection, intrinsic recovery of the pencil pair, rotation invariance, finite Galois quotients, and the reflection valuation at the odd-symmetric divisor."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "2-dimensional kernels in four 1100 by 715 polar systems; compressed seven-minors have gcd degree two with no common root at infinity. At the rank-ten even root the gcd is a square. Reversed cubic overlap checked at rank sixteen."
+    "scope": "Rank 15 of restricted two-by-two minors on both full-rank Veronese varieties; symmetric specialization has ranks 0 and 15. Rotated full-rank sample has nonzero cross and Schur minors and normalized thin ratio -1/8."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 193,
+      "nc-p3": 194,
       "plan_ja": 6,
       "notes_ja": 14
     }
@@ -57,7 +57,7 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Use the pair of determinant quartics to study the double cover and its ramification at the odd-symmetric divisor; determine the intrinsic intersection scheme of the two Veronese images. Seek an effective closed-fiber AS criterion and quartic centers on the full component.",
+    "Prove lifting of four central parameters on the entire fifteen-dimensional component via exact degree-four derivation ranks. Determine its closed regular fibers, full center and PI degree, and continue with degenerating pencils.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

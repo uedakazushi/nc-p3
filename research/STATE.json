@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 81,
+  "version": 82,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -1114,6 +1114,15 @@
       "verification": [
         "computations/verify_configuration_quartic_pencil.py"
       ]
+    },
+    {
+      "id": "VERONESE-PENCIL-GALOIS-QUOTIENT",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "The two Veronese images in each parity intersect scheme-theoretically in the twenty marked evaluations. A single determinant pencil determines four generic indexed windows with Klein Galois group, and the unordered Gale-dual pencil pair determines eight, with dihedral Galois group. The orientation double cover ramifies with index two along the odd-symmetric divisor, where only one finite-edge AS orientation remains.",
+      "proof": "sections/veronese_pencil_quotient.tex",
+      "verification": [
+        "computations/verify_configuration_intersections.py"
+      ]
     }
   ],
   "document_paths": {
@@ -1177,7 +1186,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "c4f2955b6b444671eebb46b845e45649b3a84071",
+  "reviewed_source_commit": "46211e76edc01c5867b2bdbf3a3a38abd4ddb9a5",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -1186,15 +1195,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Use the pair of determinant quartics to study the double cover and its ramification at the odd-symmetric divisor; determine the intrinsic intersection scheme of the two Veronese images. Seek an effective closed-fiber AS criterion and quartic centers on the full component.",
+    "immediate_next_action": "Prove lifting of four central parameters on the entire fifteen-dimensional component via exact degree-four derivation ranks. Determine its closed regular fibers, full center and PI degree, and continue with degenerating pencils.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/veronese_pencil_quotient.tex",
       "sections/configuration_quartic_pencil.tex",
-      "sections/single_configuration_projection.tex",
       "sections/twenty_conormal_component.tex"
     ],
     "known_obstruction": "No uniform finite Koszul/Serre cutoff or effective global regularity criterion is proved; finite-dimensional B and seven-degree tests do not suffice. Other low-rank components and high-rank witness-free regions remain unclassified.",
-    "state_of_claim": "Two orientations exhaust all four-finite-edge AS realizations at the geometric generic configuration and two rational samples. Global regularity and positive-dimensional edges remain open.",
+    "state_of_claim": "The two pencil quotients and generic orientation ramification are established; effective AS regularity and closed singular edges remain open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
