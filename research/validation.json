@@ -19,10 +19,6 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_relative_trace_centers.py",
-      "result": "PASS"
-    },
-    {
       "command": "python scripts/check_project.py",
       "result": "PASS"
     },
@@ -37,7 +33,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Relative rational-function jets through degree thirteen at the eight trace ends, simultaneous units at both quadratic polynomials and equality of the K-sign related presentations, all four starts."
+    "scope": "Relative rational-function jets through degree thirteen at the eight trace ends, simultaneous units at both quadratic polynomials and equality of the K-sign related presentations, all four starts.",
+    "reproduction": "Exact Q(c) series with a common polynomial denominator at both primitive polynomials. Positive precision remained in all sixteen full degree-thirteen cut calculations, covering both trace signs, both presentations and all four starts."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +46,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Read the generic-fiber and finite-exception argument on rendered page 232 and extracted the relative proof on pages 231–232."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "070a29e3817c414a7de5a852916d492214af9157",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Determine the vertical exceptions. For each smooth genus-five level prove that at least one infinity end admits the finite central-cut certificate. The weighted infinity coefficients are rational in v=L+c and v,-1/v give the same c. Intersect reciprocal pivot-exception supports and check algebraic residual roots in a split prime. This would restrict the possible nonregular ordinary windows on the two sheets to finitely many points. Then locate or exclude individual points on the exceptional levels; the rational level ξ=9/16 has its 101 boundary and rational x residues certified.",
@@ -63,7 +63,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "da909e7465319f96c4198c3a5135b5ea96f60d45",
+    "commit": "35300e3ddc21874c1c719fe471de06f681c251ae",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
