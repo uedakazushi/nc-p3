@@ -236,7 +236,8 @@
       "uniform_quartic_defect": "sections/uniform_fixed_quartic_support.tex",
       "quintic_slice": "sections/fixed_quintic_locus.tex",
       "quintic_slope_test": "sections/uniform_positive_quintics.tex",
-      "quintic_defect": "On both signed fixed elliptic curves at every ordinary characteristic-zero slope, the geometric support of the length-five defect equals that of the length-four defect. It consists of the twelve old sections and the four positive opposite-determinant sections, with the four negative pairs coincident when lambda squared times z equals minus one."
+      "quintic_defect": "On both signed fixed elliptic curves at every ordinary characteristic-zero slope, the geometric support of the length-five defect equals that of the length-four defect. It consists of the twelve old sections and the four positive opposite-determinant sections, with the four negative pairs coincident when lambda squared times z equals minus one.",
+      "regular_fixed_residual_points": "sections/fixed_residual_regularity.tex"
     },
     {
       "id": "UNRESTRICTED-SINGLY-SYMMETRIC-14",

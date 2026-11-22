@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 112,
+  "version": 113,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -1400,6 +1400,17 @@
         "computations/verify_uniform_quintic_companions.py",
         "computations/verify_fixed_line_elliptic_curves.py"
       ]
+    },
+    {
+      "id": "REGULARITY-OF-FIXED-COMPANIONS-AND-OCTIC-ORBITS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "At (3,2), both positive coordinate endpoints, the four conjugate companion sheets and the sixteen geometric points on the two residual degree-eight orbits are standard Koszul two-sided AS regular in all degrees, with opposite flattening rank 16. Endpoint and companion regularity persists over a common open of slopes containing (3,2).",
+      "proof": "sections/fixed_residual_regularity.tex",
+      "verification": [
+        "computations/verify_fixed_residual_regularity.py",
+        "computations/verify_fixed_branch_regular.py",
+        "computations/verify_fixed_quintic_locus.py"
+      ]
     }
   ],
   "document_paths": {
@@ -1463,7 +1474,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "3501d6cfc52b25b596a456b1d279b71a807ae4aa",
+  "reviewed_source_commit": "2c7e997c51c4aa7773fa5799472e2bc1a4bf1490",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -1472,15 +1483,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "At (z,lambda)=(3,2), construct the length-six insertion matrix by first quotienting the three disjoint adjacent pairs. Compute its character targets and compare independent maximal minors on both fixed curves outside the quartic support, including geometric points not rational over the sampling primes. If a new defect is found, certify its residue field and all starting positions; otherwise prove saturation or use the central quartic finite-quotient test to address higher lengths.",
+    "immediate_next_action": "At (3,2), first settle the rank-drop sublocus of the opposite flattening on the positive curve. The two nontrivial candidate first-coordinate factors from its character blocks are 932*a^4-8229*a^3+18228*a^2-5265*a-576 and 64*a^4+1755*a^3-18228*a^2+24687*a-8388. Recover the corresponding sheets via the curve equation, certify the actual rank, and test the quartic central quotient at a simple prime over each field with rank 15 allowed. Then determine the central rank and finite-quotient exceptional divisor on both remaining rank-16 complements.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/fixed_residual_regularity.tex",
       "sections/uniform_positive_quintics.tex",
-      "sections/varying_fixed_quintics.tex",
-      "sections/uniform_fixed_quartic_support.tex"
+      "sections/fixed_line_elliptic_curves.tex"
     ],
-    "known_obstruction": "Length six is not implied by the degree-five unit minors. Rational-point scans at four primes at (3,2) give no extra length-six jump in the tested affine chart; geometric support still requires exact elimination or a separate propagation proof.",
-    "state_of_claim": "Both fixed curves at all ordinary slopes have exactly the listed geometric defect support through length five. The higher-degree AS locus of their complement and the unrestricted classification remain open.",
+    "known_obstruction": "A common center frame and finite-quotient certificate have not been extended across the entire quartic-good curve. A prime-field scan through length six cannot rule out exceptional geometric points. In the invertible affine chart at (3,2) modulo 101, all 97 positive and 96 negative quartic-good rational windows had the minimal center dimensions (3,2,0,0). Determining the characteristic-zero geometric exceptional locus requires controlling non-rational points.",
+    "state_of_claim": "The geometric length-four and length-five defect supports on both fixed curves are known for all ordinary slopes. At (3,2) the explicit 22 positive geometric points in this proposition are AS regular in all degrees. Residual points outside the certified opens and unrestricted windows remain open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

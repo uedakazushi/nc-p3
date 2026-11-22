@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 112,
+  "version": 113,
   "reviewed_input": {
-    "source_commit": "3501d6cfc52b25b596a456b1d279b71a807ae4aa"
+    "source_commit": "2c7e997c51c4aa7773fa5799472e2bc1a4bf1490"
   },
   "generation": {
     "result": "PASS",
-    "scope": "On both signed fixed elliptic curves at every ordinary characteristic-zero slope, the geometric support of the length-five defect equals that of the length-four defect. It consists of the twelve old sections and the four positive opposite-determinant sections, with the four negative pairs coincident when lambda squared times z equals minus one."
+    "scope": "At (3,2), both positive coordinate endpoints, the four conjugate companion sheets and the sixteen geometric points on the two residual degree-eight orbits are standard Koszul two-sided AS regular in all degrees, with opposite flattening rank 16. Endpoint and companion regularity persists over a common open of slopes containing (3,2)."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_uniform_positive_quintics.py",
+      "command": "python computations/verify_fixed_residual_regularity.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_varying_fixed_quintics.py",
+      "command": "python computations/verify_uniform_positive_quintics.py",
       "result": "PASS"
     },
     {
@@ -29,30 +29,22 @@
     {
       "command": "git diff --check",
       "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_uniform_quintic_companions.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_fixed_line_elliptic_curves.py",
-      "result": "PASS"
     }
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed localization factors, quadratic conjugate and norm, unit row scaling, finite resultants on the four remaining families, and lower semicontinuity of rank on the old sections."
+    "scope": "Reviewed integral specialization of curve coordinates and the constant path and center ranks, lifting the four central sections, the rank-256 graded freeness argument and openness for the six varying points."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Verified 344 invertible pivots on the quadratic algebra, exact residual two-variable rank minors and projected common roots for all sixteen companion and endpoint matrices, and function-field quintic profiles of the twelve old sections."
+    "scope": "Recomputed two distinct irreducible octic point ideals, certified their simple residue roots at 1009, and checked centers and all 32 Artinian central-quotient dimension profiles over 193 and 1009."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 231,
+      "nc-p3": 232,
       "plan_ja": 7,
-      "notes_ja": 14
+      "notes_ja": 15
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
@@ -66,7 +58,7 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "At (z,lambda)=(3,2), construct the length-six insertion matrix by first quotienting the three disjoint adjacent pairs. Compute its character targets and compare independent maximal minors on both fixed curves outside the quartic support, including geometric points not rational over the sampling primes. If a new defect is found, certify its residue field and all starting positions; otherwise prove saturation or use the central quartic finite-quotient test to address higher lengths.",
+    "Compute the exceptional divisor of quartic central equations on the (3,2) fixed curves away from the finite quartic defect, using the now constant length-four and length-five path dimensions. Obtain one rational frame of the five generic central sections and minors for the finite quotient by four combinations; test the residual closed points over their own fields as in the new certificates. For a separate length-six rank test, split paths into two triples and insert only the middle relation.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

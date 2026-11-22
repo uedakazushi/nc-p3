@@ -92,6 +92,7 @@ def check_residual(point, irreducible, matrix):
 
     at = matrix.subs({a: aa, u: red(uu)})
     assert nmod_mat(at.rows, at.cols, [red(v) for v in at], p).rank() == 86
+    return curve.monic().as_expr(), U
 
 
 def verify_position(matrix, curve, N, D, excluded, boundary, sign):
@@ -106,7 +107,7 @@ def verify_position(matrix, curve, N, D, excluded, boundary, sign):
         det = determinant(cleared_rows(sub, lambda den: not den.free_symbols))
         assert det
         tables.append(projection_table(det, curve, excluded))
-    extra = 0
+    extra = set()
     for key in tables[0].keys() & tables[1].keys():
         base = sp.groebner([key, expression(curve)], u, a, domain=sp.QQ)
         conditions = []
@@ -120,8 +121,7 @@ def verify_position(matrix, curve, N, D, excluded, boundary, sign):
         )
         residue = ideal.reduce(boundary)[1]
         if ideal.reduce(residue**2)[1] != 0:
-            check_residual(ideal, key, restricted)
-            extra += 1
+            extra.add(check_residual(ideal, key, restricted))
     return extra
 
 
@@ -155,6 +155,7 @@ def check(sign):
     if sign == 1:
         H *= a * a - z + (N * N - z * D * D) * u * u
     blocks = symbolic_blocks(sign)
+    residual = set()
     for start in (0, 1):
         cases = [
             verify_position(
@@ -162,16 +163,18 @@ def check(sign):
             )
             for h in range(4)
         ]
+        residual.update(*cases)
         print(
             sign,
             start,
             "residual number fields checked per character",
-            cases,
+            [len(points) for points in cases],
             flush=True,
         )
     # The p or q endpoints and infinity were excluded in projection. The positive
     # a=0 point exchanges with the p=0 endpoint and the negative one is inadmissible.
     boundary_fibers(sign)
+    return residual
 
 
 if __name__ == "__main__":

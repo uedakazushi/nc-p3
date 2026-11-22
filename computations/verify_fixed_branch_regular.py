@@ -10,12 +10,12 @@ from verify_fixed_line_elliptic_curves import branch_polynomial
 p = 307
 
 
-def red(x):
-    return int(s.numer(x)) * pow(int(s.denom(x)), -1, p) % p
+def red(x, prime=p):
+    return int(s.numer(x)) * pow(int(s.denom(x)), -1, prime) % prime
 
 
-def matrix(A):
-    return nmod_mat(A.rows, A.cols, [red(x) for x in A], p)
+def matrix(A, prime=p):
+    return nmod_mat(A.rows, A.cols, [red(x, prime) for x in A], prime)
 
 
 def check(sig, aa):
@@ -28,16 +28,20 @@ def check(sig, aa):
     y = -Q[1] / (2 * Q[0])
     f, F, g, G, e, E, h, H = co
     B = s.Matrix([[e + E * y, f + F * x], [g + G * x, h + H * y]])
+    check_window(A, B, z, l, (sig, aa), p)
+
+
+def check_window(A, B, z, l, label, prime):
     w, opp, rev = gram_twist(A, B, z, l)
     rel = []
     for j, M in enumerate((w, rev, w.T, rev.T)):
-        rr, rank = matrix(M.T).rref()
+        rr, rank = matrix(M.T, prime).rref()
         assert rank == 6
         rules = []
         for ii in range(rank):
             row = {
                 (k // 4, k % 4) if j % 2 == 0 else (k % 4, k // 4): nmod(
-                    int(rr[ii, k]), p
+                    int(rr[ii, k]), prime
                 )
                 for k in range(16)
                 if rr[ii, k]
@@ -45,12 +49,12 @@ def check(sig, aa):
             h, jj = next(iter(row))
             rules.append((h ^ jj, row))
         rel.append(rules)
-    basis, image = field_paths(rel, nmod(1, p))
+    basis, image = field_paths(rel, nmod(1, prime))
     counts = [
         sum(len(basis[i, n, h]) for h in range(4)) for i in range(4) for n in (4, 5)
     ]
-    print(sig, aa, "counts", counts, "opp", matrix(opp).rank(), flush=True)
-    assert counts == [35, 56] * 4 and matrix(opp).rank() == 16
+    print(label, "counts", counts, "opp", matrix(opp, prime).rank(), flush=True)
+    assert counts == [35, 56] * 4 and matrix(opp, prime).rank() == 16
     sections = []
     for h, choices in [
         (0, ((1, 3, 5), (2, 7, 11))),
@@ -60,7 +64,7 @@ def check(sig, aa):
     ]:
         rows, n = central_equations(basis, image, h)
         m = nmod_mat(
-            len(rows), n, [int(row.get(j, 0)) for row in rows for j in range(n)], p
+            len(rows), n, [int(row.get(j, 0)) for row in rows for j in range(n)], prime
         )
         ker, dim = m.nullspace()
         print("ker", h, dim, flush=True)
@@ -73,7 +77,7 @@ def check(sig, aa):
                 words = basis[i, 4, h]
                 section.append(
                     {
-                        w: nmod(int(vec[start + j]), p)
+                        w: nmod(int(vec[start + j]), prime)
                         for j, w in enumerate(words)
                         if vec[start + j]
                     }
@@ -82,9 +86,9 @@ def check(sig, aa):
             sections.append(section)
     windows = [[r for _, r in rs] for rs in rel]
     for i in range(4):
-        ds = quotient_dimensions(windows, sections, i, nmod(1, p))
+        ds = quotient_dimensions(windows, sections, i, nmod(1, prime))
         assert ds == [1, 4, 10, 20, 31, 40, 44, 40, 31, 20, 10, 4, 1, 0]
-        print(sig, aa, "cut", i, ds, flush=True)
+        print(label, "cut", i, ds, flush=True)
 
 
 if __name__ == "__main__":
