@@ -41,7 +41,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact elliptic function-field rotation, equality of second and third moments, two quintic contractions and polynomial gcd of their norm obstructions."
+    "scope": "Exact elliptic function-field rotation, equality of second and third moments, two quintic contractions and polynomial gcd of their norm obstructions.",
+    "reproduction": "Recomputed the second and third cyclic moments, both elliptic fifth contractions, and the gcd of the two norm numerators. Re-ran the endpoint collision and root-exchange/resultant verifiers."
   },
   "tex": {
     "result": "PASS",
@@ -53,13 +54,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript pages 244 and 245, including the two simultaneous period equations, the seven boundary factors, and the conclusion."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "5de9b96c7a1f23ad3bbf557004b68f59047e6390",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "For interior regularity choose one root over each remaining possible multiplier (all roots and both displays have equivalent left/right regularity). Test the four degree-six insertion matrices and higher central cuts, or determine the remaining exceptional indexed comparisons among the three coordinate-end curves. Ordinary fixed-multiplier indexed counts and rank-fifteen minimal periods are settled.",
@@ -67,7 +71,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "9e75ef188c5add52e00d4d5ee6a7373f712b3116",
+    "commit": "017073c30280f9fa96ff26edc32badabe7ef83bc",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
