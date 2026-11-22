@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 120,
+  "version": 121,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -1479,6 +1479,15 @@
       "verification": [
         "computations/verify_rank_fourteen_ramified_disks.py"
       ]
+    },
+    {
+      "id": "ORDINARY-RANK-FOURTEEN-ALL-REGULAR",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "Every ordinary geometric window on both elliptic opposite-rank-14 components of the positive fixed locus is standard Koszul and left/right AS regular in characteristic zero. The four central quartics give a free polynomial-module basis of rank 256 at each start. Exact local saturation settles the two remaining residue disks t=19,80.",
+      "proof": "sections/rank_fourteen_all_ordinary.tex",
+      "verification": [
+        "computations/verify_rank_fourteen_all_ordinary.py"
+      ]
     }
   ],
   "document_paths": {
@@ -1542,7 +1551,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "079067616ed83e54d2d9ede21d714c4f7f06c281",
+  "reviewed_source_commit": "ed2db9340e17f930c455bd7a1995dec2619e797a",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -1551,15 +1560,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Resolve the two unramified 101-adic disks t=19 and 80. Their saturated six-relation limits have fourth and fifth dimensions 38 and 72; every diagonal transformation in the Klein character basis has adjacent residual rank at most four. Try a nondiagonal generator basis adapted to the rank-four tensor, or compute the horizontal maximal-minor ideals over Q(i)[t] using modular reconstruction and remove factors with any reduction away from 19,80.",
+    "immediate_next_action": "Move to the positive fixed opposite-rank-15 stratum. Analyze the two projected quartics over the ordinary slope plane using two-position exchange: determine their finite fibers, collisions, and what additional degeneracies remain off the now fully certified rank-fourteen curve. Use central-quotient certificates where constancy of the center is available.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/rank_fourteen_all_ordinary.tex",
       "sections/rank_fourteen_ramified_disks.tex",
-      "sections/rank_fourteen_boundary.tex",
-      "sections/rank_fourteen_geometric_reduction.tex"
+      "sections/fixed_opposite_rank_drop.tex"
     ],
-    "known_obstruction": "Only two unramified residue disks remain: t=19,80. Their fixed projective tensors have rank four, so their raw image relations do not have the generic rank.",
-    "state_of_claim": "The only possible ordinary exceptions on the rank-fourteen components have every 101-adic conjugate reducing to 19 or 80. The rank-fourteen stratum and the unrestricted classification are still open.",
+    "known_obstruction": "Outside rank fourteen, generic regularity on each stratum does not certify all its exceptional fibers. Begin with the two degree-four covers in opposite rank fifteen.",
+    "state_of_claim": "The regularity question is closed on both entire ordinary rank-14 components of the fixed curves. Uniform rank 15, higher opposite rank, other strata and the unrestricted indexed classification remain open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

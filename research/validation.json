@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 120,
+  "version": 121,
   "reviewed_input": {
-    "source_commit": "079067616ed83e54d2d9ede21d714c4f7f06c281"
+    "source_commit": "ed2db9340e17f930c455bd7a1995dec2619e797a"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All ordinary characteristic-zero windows on the two rank-fourteen components with any reduction at 101 outside t=19,80 are standard Koszul and AS regular, including all four ramification disks and infinity. A hypothetical bad closed point has primitive minimal polynomial of unchanged degree modulo 101, supported only at 19 and 80."
+    "scope": "Every ordinary geometric window on both elliptic opposite-rank-14 components of the positive fixed locus is standard Koszul and left/right AS regular in characteristic zero. The four central quartics give a free polynomial-module basis of rank 256 at each start. Exact local saturation settles the two remaining residue disks t=19,80."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fourteen_ramified_disks.py",
+      "command": "python computations/verify_rank_fourteen_all_ordinary.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fourteen_boundary.py",
+      "command": "python computations/verify_rank_fourteen_ramified_disks.py",
       "result": "PASS"
     },
     {
@@ -33,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed ramified base changes, diagonal action at the four generator positions, parity of leading terms and integral expansions before specializing at 101. Used degreewise lower bounds and the residual central quotient to lift all-degree regularity."
+    "scope": "Checked Gaussian norm units, common scaling of central components, precision loss under division, evaluation of integral formal power series on the punctured residue disks, and the all-degree Hilbert and Koszul argument."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Verified exact valuations of all tensor entries at the four ramification points, integral unit denominators, 32 surviving entries at each, and all eight residual central cuts through degree thirteen at all four starts.",
-    "reproduction": "SymPy 1.14.0 and python-flint 0.9.0. Exact local orders and Gaussian leading coefficients, both fourth roots of unity modulo 101, every start through degree 13, and the independent characteristic-zero path counts 20,38,72 at the other two residues."
+    "scope": "Computed exact Gaussian rational jets to order 27. Checked unit pivots at both primes over 101 and exact divisibility before each division by t-alpha, for both components, both sheets and all four starts."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 240,
+      "nc-p3": 241,
       "plan_ja": 7,
       "notes_ja": 15
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected the complete ramified-disk theorem, the diagonal weight table and the remaining obstruction on manuscript page 214."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "abdcf20c889881c36a49588dfff8fb877f699cdc",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Resolve the two unramified 101-adic disks t=19 and 80, lying above t^2+2t+5. In the unmodified homogeneous frame their rank-four projective limits fail degree two. Compare the saturated limiting six-dimensional relation spaces (Pluecker coordinates) rather than the image of the limiting tensor, or use a nondiagonal change of generators adapted to those rank-four tensors. The four ramified disks already admit the certified weights, and require no further tests. Another approach is modular reconstruction of the actual horizontal Fitting ideals constrained by the two allowed roots.",
+    "Move to the positive fixed opposite-rank-15 stratum. Analyze the two projected quartics over the ordinary slope plane using two-position exchange: determine their finite fibers, collisions, and what additional degeneracies remain off the now fully certified rank-fourteen curve. Use central-quotient certificates where constancy of the center is available.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

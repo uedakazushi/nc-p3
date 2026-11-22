@@ -101,15 +101,15 @@ def exact_projection(rows, size):
     return determinant, free, projection
 
 
-def quotient_from_start(windows, sections, start, limit=6):
+def quotient_layers(windows, sections, start, limit, unit, project):
+    """Append one arrow and impose terminal quadratic relations and the central cut."""
     paths = {(0, h): [()] if h == 0 else [] for h in range(4)}
     arrows = {}
-    factors = set()
 
     @cache
     def image(word):
         if not word:
-            return {0: one}
+            return {0: unit}
         prefix = word[:-1]
         h = reduce(xor, prefix, 0)
         row = {}
@@ -142,13 +142,24 @@ def quotient_from_start(windows, sections, start, limit=6):
                             col = offsets[word[-1]] + k
                             row[col] = row.get(col, 0) + c * v
                     rows.append({k: v for k, v in row.items() if v})
-            det, free, projection = exact_projection(rows, len(words))
-            factors.update(irreducible_factors(det.norm_numerator()))
-            factors.update(irreducible_factors(det.denominator))
+            free, projection = project(n, h, rows, len(words))
             paths[n, h] = [words[j] for j in free]
             for a in range(4):
                 arrows[n - 1, h ^ a, a] = projection[offsets[a] : offsets[a + 1]]
         assert sum(len(paths[n, h]) for h in range(4)) == profile[n], (start, n)
+        yield n
+
+
+def quotient_from_start(windows, sections, start, limit=6):
+    factors = set()
+
+    def project(n, h, rows, size):
+        det, free, projection = exact_projection(rows, size)
+        factors.update(irreducible_factors(det.norm_numerator()))
+        factors.update(irreducible_factors(det.denominator))
+        return free, projection
+
+    for n in quotient_layers(windows, sections, start, limit, one, project):
         print("Verified start", start, "length", n, flush=True)
     return factors
 
