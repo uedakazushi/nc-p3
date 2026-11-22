@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-22 / v166。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v167。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -316,6 +316,8 @@ x=0 の全窓を正則と証明し、添字保持同型類を穴あき二次曲�
 
 3進の可変跡環帯で左右の積を照合し、全次数のKoszul・左右AS正則性と中心上の自由階数256を認証した。[証明と判定](sections/rank_fifteen_overlap_annulus.tex)
 
+水平切片の添字保持曲線、移動商、二つの節点退化と周期層を決定し、切片y=3の明示的な正則領域を得た。[証明と判定](sections/rank_fifteen_horizontal_fibers.tex)
+
 二窓から作る56次元代数で、低次Extの消滅を逆Serre反復が保つ構造条件を探す。
 「全次数を証明してAS認証」「有限障害で排除」「未決定」を分け、有限検査の成功を全AS認証としない。
 正規形の枝、特殊値、枝間同型の条件を証明し、未分類の残余を明示する。
@@ -450,6 +452,7 @@ python3 computations/verify_rank_fifteen_saturated_center_products.py
 python3 computations/verify_rank_fifteen_sixth_center_minors.py
 python3 computations/verify_rank_fifteen_integral_slope.py
 python3 computations/verify_rank_fifteen_overlap_annulus.py
+python3 computations/verify_rank_fifteen_horizontal_fibers.py
 python3 computations/verify_rank_fifteen_gaussian_pencil.py
 python3 computations/verify_rank_fourteen_wall_centers.py
 python3 computations/verify_rank_fifteen_quotient_residues.py

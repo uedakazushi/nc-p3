@@ -1,0 +1,55 @@
+% !TeX root = ../papers/nc-p3.tex
+\section{正則性座標の水平切片と添字保持同型曲線}
+\label{sec:rank-fifteen-horizontal-fibers}
+\begin{theorem}\label{thm:rank-fifteen-horizontal-fibers}
+標数零の代数閉体で $y=c\ne0$ を固定する。階数15のPauli商曲面の添字保持同型類の
+水平切片は、$t\ne0$ 上の曲線
+\[
+       V^2=2t\bigl((-t^2+2t-4c)^3-216ct^3\bigr)
+\]
+である。$c\ne1,1/64$ では滑らかな完備超楕円曲線の二つの
+Weierstrass点を除いたもので、種数は3、全点の最小周期は2である。
+一位置移動の商は種数2の曲線 $W^2=(x^3-27c)((1-x)^2-4c)$ から
+無限遠点を除いたものである。
+ある有限集合 $E\subset\overline{\mathbb Q}^{\times}$ の外では
+水平切片の全点が標準Koszul左右AS正則で、中心四次式上の自由階数は各始点で256である。
+\end{theorem}
+\begin{proof}
+定理\ref{thm:rank-fifteen-rational-quotient}、第\ref{sec:rank-fifteen-global-invariants}節および
+定理\ref{thm:rank-fifteen-formal-boundary}より、$p^2=x^3-27c$, $q^2=(1-x)^2-4c$
+の各点が一つの添字保持同型類を与え、一位置移動は $(p,q)\mapsto(-p,-q)$ である。
+$t=1-x+q$ と取れば $(1-x+q)(1-x-q)=4c$ より
+\[
+ x=1-(t+4c/t)/2,\qquad q=(t-4c/t)/2,\qquad V=4t^2p .
+\]
+従って表示はアフィン曲線の同型である。一位置移動は
+$(t,V)\mapsto(4c/t,-16c^2V/t^4)$ となる。
+$0,\infty$ はいずれも二重被覆の分岐点であり、この二点だけを除く。
+移動不変環は $k[x,pq]$ である。実際、$k[x]$ 上の自由基底
+$1,p,q,pq$ のうち $1,pq$ が固定されるので $W=pq$ と取れる。
+
+二つの被開平式の終結式は $(c-1)^2(1-64c)$ である。
+\path{computations/verify_rank_fifteen_horizontal_fibers.py} は $t$ 表示の六次因子の
+判別式が非零定数と $c^{10}(c-1)^2(64c-1)$ の積であることを検査する。
+六次因子の定数項も非零なので、通常の切片の二重被覆は八点で分岐し種数3、
+移動の商は五次式の五根と無限遠で分岐し種数2となる。
+同時に $p=q=0$ となる点が無いので、最小周期は2である。
+定理\ref{thm:rank-fifteen-vertical-curves}の有限例外集合の $y$ 座標を $E$ とすれば
+全次数の主張が従い、通常表示外の四点は定理\ref{thm:rank-fifteen-formal-boundary}で覆われる。
+\end{proof}
+\begin{corollary}
+$c=1,1/64$ の水平切片にはそれぞれ一つの通常二重点があり、
+切片の正規化の種数は2、移動の商の正規化の種数は1である。
+各二重点が表す窓は最小周期1の標準Koszul左右AS正則窓であり、
+その切片の他の全点は最小周期2である。
+\end{corollary}
+\begin{proof}
+二重点の $(x,t)$ は順に $(3,-2),(3/4,1/4)$ である。
+七次式にある唯一の二重根を $b$ とすると、$(t-b)^2$ を取り除いた五次式は平方自由で、
+$b$ で非零である。よって二つの異なる接線があり、正規化の二点が一つの同型類に重なる。
+商の五次式も唯一の二重因子を除くと平方自由三次式となる。
+二重点は $p=q=0$ の二つの既知の正則窓である。
+\end{proof}
+特に $c=3$ は滑らかな種数3切片である。3の上で $\nu(3)=1$ とすれば、
+この曲線の $\nu(x)>1/3$ を満たす全点は定理\ref{thm:rank-fifteen-overlap-annulus}により
+全次数で認証される。この明示的な範囲には、例えば $x\in3\mathbb Z_3$ の全ての持上げが入る。

@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 166,
+  "version": 167,
   "reviewed_input": {
-    "source_commit": "bb70bf992ef99a03f3248c6797c6a79bb3c9f0c1"
+    "source_commit": "7f02ab879665416e5dc69832f1d2017db761259b"
   },
   "generation": {
     "result": "PASS",
-    "scope": "On the mixed-characteristic three-adic annulus of ordinary rank-fifteen windows with 0<v(y)<3v(x) and 5v(y)<=6v(3), all four starts are standard Koszul, left and right AS-regular and free of rank 256 over the four central quartics. Two-sided multiplication tables reach the target four-cut in every degree through vanishing at thirteen, using fifteen H-digits over F3(z) and restarting from the integral length-six lattices at five digits."
+    "scope": "A nonzero horizontal level y=c in the indexed rank-fifteen Pauli quotient is a twice-punctured genus-three hyperelliptic curve, with genus-two shift quotient, except at c=1 and 1/64. Each special level has one ordinary node representing its unique period-one regular window, and normalization genera two and one respectively before and after shifting. Outside finitely many algebraic c every class on the level is AS-regular. At c=3 the full disk v_3(x)>1/3 is certified."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_overlap_annulus.py",
+      "command": "python computations/verify_rank_fifteen_horizontal_fibers.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_integral_slope.py",
+      "command": "python computations/verify_rank_fifteen_overlap_annulus.py",
       "result": "PASS"
     },
     {
@@ -33,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed reduction of the free length-six lattices, the map to the truncated valuation ring, lifting of the four central elements, both multiplication maps, precision losses, the free-module Hilbert comparison, and the two-sided Koszul argument."
+    "scope": "Checked punctures, branch and fixed points, ordinary nodes, the distinction between a branch of the normalization and an indexed class, and the finite exceptional set argument."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Fifteen H-digits over F3(z), four starts and four characters. Two-sided overlap saturations from degrees six through thirteen lose 2,2,0,2,0,0,0,0 digits. All denominators and pivots are units at z^2+z+2.",
-    "reproduction": "Computed every product block at four starts through length thirteen over F3(z), independently replayed the two-sided calculation, and checked the lifted lattice bases through length six against the rational-function certificate."
+    "scope": "Symbolic resultant, degree-six discriminant, rational inverse maps and shift involution. Exact gcds and squarefree normalizations on both exceptional levels."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 292,
+      "nc-p3": 293,
       "plan_ja": 8,
       "notes_ja": 16
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected manuscript pages 265 and 266, including the integral-lattice restart, the degree-nine loss and the norm criterion."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "1eca6be4cfe8ec34f1e074fb655d3ba616d2181b",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Remove the annulus bound 5v(y)<=6v(3) on the variable-trace disk. Run the same two-sided overlap over Q(z), checking exact vanishing before each H division and unit pivots at (3,z^2+z+2). Degree nine is the last stage requiring two divisions. If the full computation is slow, seed multiplication from length seven and test the residue overlap through length thirteen.",
+    "Continue the integral two-sided product computation on the entire small-trace disk: prove the length-seven free lattices, then test length nine over Q(z) for the last H divisions. After degree seven a residue computation with three remaining digits suffices on v(y)<=2v(3). Retain the unrestricted objective and the finite unresolved horizontal levels.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
