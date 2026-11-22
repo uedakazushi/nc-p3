@@ -1,17 +1,21 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 60,
+  "version": 61,
   "reviewed_input": {
-    "source_commit": "33ec573ca444e651eb42bcda2990dd4785618058"
+    "source_commit": "d5eae50a1413169da2c5ba4b866f608f1ffca3ce"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Uniform conductor exclusion, integral apolar recognition, nonnegative multidegree criterion on cycles and elliptic multiple points."
+    "scope": "Common polygon specialization and exclusion of mixed polygon/multiple-point models."
   },
   "checks": [
     {
       "command": "bash scripts/cloud_preflight.sh --tex (project environment activated)",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_polygon_multiplication.py",
       "result": "PASS"
     },
     {
@@ -29,15 +33,15 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked direction of the quadratic quotient, the multihomogeneous diagonal ideal, conductor restrictions, complementary arcs and the exceptional triangle/triple-point multidegrees."
+    "scope": "Checked resolutions of nodal total families, connected fibers, mixed-product lattice correction, degree-pair enumeration, additive-tail rank bounds and the graph criterion with equal multidegrees."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact binary dual projections, semipositive distributions on two to eight components and the degree-17 comparison."
+    "scope": "Exhaustive enumeration of 174 unequal common-cycle orbits. Rank lower bounds by reduction mod 2, 24 rank-seven lower bounds, 150 rank-eight products, and every growth witness verified."
   },
   "tex": {
     "result": "PASS",
-    "scope": "Main 149 pages, plan 6 and notes 13. Checked final logs for overfull boxes, missing characters and unresolved references."
+    "scope": "Main 152 pages, plan 6 and notes 13. No overfull boxes, missing characters or unresolved references in final logs."
   },
   "visual_inspection": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
@@ -50,6 +54,6 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Specialization of mixed multiplication on two reducible apolar models, other singular limits, non-bisymmetric components."
+    "Both additive reduced limits, nonreduced limits and non-bisymmetric windows."
   ]
 }
