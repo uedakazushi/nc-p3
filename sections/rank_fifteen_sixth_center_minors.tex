@@ -1,0 +1,38 @@
+% !TeX root = ../papers/nc-p3.tex
+\section{可変跡円板の六次中心商の完全な文字別次元}
+\label{sec:rank-fifteen-sixth-center-minors}
+\begin{theorem}\label{thm:rank-fifteen-sixth-center-minors}
+標数零、剰余標数3の通常な階数15窓で $0<\nu(y)<3\nu(x)$ とする。
+定理\ref{thm:rank-fifteen-variable-zero-disk}の四中心式による商の次数6の次元は
+全始点で44、文字別には $(12,12,10,10)$ である。
+\end{theorem}
+\begin{proof}
+第\ref{sec:rank-fifteen-saturated-center-products}節の六行十二列の残余行列を
+文字 $h=2,3$ について調べる。
+$R=\mathbb Z[z]_{(3,z^2+z+2)}$ 上で $H^{11}$ を法として出発する。
+長さ5の未切断経路と四次中心を構成すると七桁が残り、
+各始点の五次イデアル基底にはさらに四桁、第六挿入の射影には二桁を使う。
+両者を合成した十六行二十二列の行列は三桁まで正しい。
+
+\path{computations/verify_rank_fifteen_sixth_center_minors.py}
+は級数の係数に一つの共通分母を用いる。分母の単元性は
+$z^2+z+2$ による剰余を取って二係数を3で還元して検査する。
+十個の単元主元を消した後の全成分について、$H^0,H^1$ 係数の分子が
+$\mathbb Z[z]$ で厳密に零になる。
+従って残余行列は $B_h=H^2 C_h$ と書ける。$C_h$ の定数項を
+$z=1+i$、標数3に還元し、行と列を二つずつ選んで行列式を計算すると、
+全四始点で同じ二列 $(4,11)$ を使える。元の十六行の番号を零から数えると、
+文字2で二行 $(0,5)$、文字3で $(1,4)$ を取った小行列式が単元となる。
+対応する $B_h$ の二次小行列式は $H^4$ と単元の積である。
+$H\ne0$ で残余階数は少なくとも2となり、二次経路と四中心式の積の個数から
+上界も2である。文字0,1と合わせて主張が従う。
+\end{proof}
+\begin{corollary}
+$D\ne0$ が3の上の正付値を持つとする。$x^3=Dy$ 上の全通常窓で、
+四つの中心四次式を選んで各始点の商の長さ6の次元を44にできる。
+\end{corollary}
+\begin{proof}
+$\nu(y)>0$ は本定理による。$\nu(y)=0$ では剰余直線、
+$\nu(y)<0$ では極の定理の自由性の証明で四式を選べる。
+その商のHilbert級数は $(1+t+t^2+t^3)^4$ で、六次係数は44である。
+\end{proof}

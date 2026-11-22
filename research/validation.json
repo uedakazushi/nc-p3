@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 163,
+  "version": 164,
   "reviewed_input": {
-    "source_commit": "850173faed0fb5bcee0bd85c1ff1861b25be9e5f"
+    "source_commit": "02a6217c33d9bac7aedb5ff08b816b102efb7cf9"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All rank-fifteen points on x^3=(59319/10000)y are standard Koszul left/right AS-regular and free of rank 256 over four quartics. Their indexed classes form a genus-two curve minus four points; all have minimal period two. The one-step shift quotient is an elliptic curve minus three points."
+    "scope": "At every start on the full small-trace, small-y disk at three, the sixth central quotient has dimensions (12,12,10,10), total 44. In both missing characters the six-by-twelve residual block is divisible by H^2 and has a minor of order exactly four with unit leading coefficient. Every ordinary point on every pencil with 3-adically positive D admits a four-quartic cut of sixth dimension 44."
   },
   "checks": [
     {
@@ -15,7 +15,7 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_gaussian_pencil.py",
+      "command": "python computations/verify_rank_fifteen_sixth_center_minors.py",
       "result": "PASS"
     },
     {
@@ -33,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked all three valuation cases, the normalization maps, the four missing compactification points, the indexed period and the shift quotient."
+    "scope": "Checked the three available digits, the two exact H divisions, all eight nonzero minors and the upper rank bound. Reviewed the three valuation cases for the pencil statements."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact Q(i) jets through order 24 and the four central quotients through length 13. Verified the common slope, discriminants and both elliptic j invariants symbolically.",
-    "reproduction": "Recomputed every Gaussian central cut through length 13 at precision 25. Independently reproduced the four starts, checked the pencil and both j invariants in SymPy, and reran the sixteen variable-trace degree-six residue ranks."
+    "scope": "Eleven-term H-jets over Q(z), exact divisibility by H squared and eight unit minors over F9. Independently tested the same ranks with coefficient-wise rational functions."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 289,
+      "nc-p3": 290,
       "plan_ja": 8,
       "notes_ja": 16
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected manuscript pages 262 and 263, including the genus-two parameter curve, shifted quotient, generic slopes and the valuation tube."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "d3bc120ae4fe23632482a445a81ef5153c6f5a69",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Return to the variable-trace sixth cut on 0 < val(y) < 3 val(x). Compute the two missing ranks in characters 2 and 3 using eleven H coefficients and the saturated degree-five product spaces. If the sixth quotient is exact, propagate the four-section quotient to degree seven and then thirteen. The Gaussian specialization now has an all-degree proof and needs no further fixed-slope tests.",
+    "Propagate the variable-trace four-center cut to length seven. At precision 15 use common-denominator jets over Q(z) and all four starts, or compute the next relations after appending to the proved sixth quotient. The expected seventh profile is (10,10,10,10); continue toward vanishing in length 13. The two sixth-degree characters and the Gaussian genus-two pencil are settled.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

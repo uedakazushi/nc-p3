@@ -144,14 +144,18 @@ def relations():
     one = Jet.constant(1)
     half = Jet.scalar(Rational(ONE, fmpz_poly([2])))
     z = Jet.scalar(Rational(fmpz_poly([0, 1])))
-    zi = z.inverse()
     h = Jet([Rational.integer(j == 1) for j in range(Jet.precision)])
+    return trace_relations(one, half, z, h, Jet.precision)
+
+
+def trace_relations(one, half, z, h, precision):
+    zi = z.inverse()
     p0, q0 = z+zi, z-zi
     K, n0 = (z*z+zi*zi)*half, (z*z-zi*zi)*half
 
     def root(square, initial):
         result = initial
-        for _ in range(Jet.precision.bit_length()):
+        for _ in range(precision.bit_length()):
             result = (result + square*result.inverse())*half
         assert not (result*result-square)
         return result
@@ -162,35 +166,43 @@ def relations():
     n = root((n2 + root(n2*n2-4*h*h, n2))*half, n0)
     gamma = pattern(one, (K-1)*half, n*half, h*n.inverse()*half,
                     (u-p)*half*half, (u+p)*half*half, (v-q)*half*half, (v+q)*half*half)
-    return tensor_relations(gamma, Jet.constant(0))
+    return tensor_relations(gamma, one*0)
 
 
-def center_data(precision):
-    Jet.precision = precision
-    windows = relations()
+def center_data(precision, jet=Jet, build_relations=relations):
+    jet.precision = precision
+    windows = build_relations()
     order = iter(product(range(1, 6), range(4), range(4)))
     losses = []
 
     def reduce(rows):
         n, p, h = next(order)
-        pivots, loss = pivot_rows(rows, sum(UNCUT[n-1]), UNCUT[n][h], Jet)
+        pivots, loss = pivot_rows(rows, sum(UNCUT[n-1]), UNCUT[n][h], jet)
         losses.append(loss)
         if p == h == 3:
             assert max(losses) == (0, 0, 0, 2, 2)[n-1]
-            Jet.precision -= max(losses)
+            jet.precision -= max(losses)
             losses.clear()
         return pivots
 
-    basis, image = field_paths(windows, Jet.constant(1), reduce)
-    assert Jet.precision == precision - 4
+    basis, image = field_paths(windows, jet.constant(1), reduce)
+    assert jet.precision == precision - 4
     centers = [[] for _ in range(4)]
     for h, dimension in enumerate((3, 2, 0, 0)):
         rows, width = central_equations(basis, image, h)
-        pivots, loss = pivot_rows(rows, width, dimension, Jet)
+        pivots, loss = pivot_rows(rows, width, dimension, jet)
         assert not loss
         free = [j for j in range(width) if j not in pivots]
+        if h in (0, 1):
+            # These free coordinates fix the same exact center sections when
+            # the jet precision changes. All are in the last start's word basis.
+            labels = tuple("".join(map(str, w)) for w in basis[3, 4, h])
+            expected = (("1313", "2222", "2323", "2332", "3131", "3223", "3232", "3322", "3333"),
+                        ("1312", "2223", "2232", "2322", "2333", "3130", "3222", "3233", "3323", "3332"))
+            assert labels == expected[h]
+            assert free == list(range(width-dimension, width))
         for col in (free[1:] if h == 0 else free):
-            vector = {col: Jet.constant(1)}
+            vector = {col: jet.constant(1)}
             vector.update({j: -row[col] for j, row in pivots.items() if col in row})
             offset = 0
             for p in range(4):

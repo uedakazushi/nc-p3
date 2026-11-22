@@ -287,7 +287,8 @@
       "rank_fifteen_variable_zero_disk": "sections/rank_fifteen_variable_zero_disk.tex",
       "rank_fifteen_first_center_products": "sections/rank_fifteen_first_center_products.tex",
       "rank_fifteen_saturated_center_products": "sections/rank_fifteen_saturated_center_products.tex",
-      "rank_fifteen_gaussian_pencil": "sections/rank_fifteen_gaussian_pencil.tex"
+      "rank_fifteen_gaussian_pencil": "sections/rank_fifteen_gaussian_pencil.tex",
+      "rank_fifteen_sixth_center_minors": "sections/rank_fifteen_sixth_center_minors.tex"
     },
     {
       "id": "UNRESTRICTED-SINGLY-SYMMETRIC-14",
