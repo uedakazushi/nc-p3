@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Checked all numerator and denominator leading coefficients, the eight weight choices, rational specialization and four split cyclotomic roots through the full central-cut profile."
+    "scope": "Checked all numerator and denominator leading coefficients, the eight weight choices, rational specialization and four split cyclotomic roots through the full central-cut profile.",
+    "reproduction": "SymPy 1.14.0 and python-flint 0.9.0. Both rank-15 presentations, all four large/small pairs and all four primitive twelfth roots at 109 were verified with degree-13 four-start cuts."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Reviewed rendered page 222 including the eight-end theorem, both leading-term frames, the weight rule and the lifting argument."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "3a87397083737e9b37a2eea773e6f01050d3ccf6",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "On the two genus-three levels use the octic Y²=t⁸+14t⁴+1, j⁴-j²+1=0, and compute the degree-4/5 paths and quartic center over Q(j)(t,Y), then the length-13 central cut. In a 109-adic argument the entire K=infinity boundary is settled: concentrate on ordinary higher-degree residues and the finite K boundary {0,±1,±2, roots of K²+K-1}.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "3bcbf94bdbff8b1aa738faa63e3ce0225ab534e9",
+    "commit": "45ad7bbe84140b1fcda207a7519041c7178aef6a",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
