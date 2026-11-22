@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-22 / v173。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v174。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -330,6 +330,8 @@ x=0 の全窓を正則と証明し、添字保持同型類を穴あき二次曲�
 
 縦切片 $x=1$ の正付値領域を全て認証し、全有理水準で添字保持同型類と最小周期を決定した。[証明と判定](sections/rank_fifteen_vertical_one.tex)
 
+座標1の単元剰余を種数1の48重被覆で表し、縦切片の三次以下の全代数的水準を決定した。[証明と判定](sections/rank_fifteen_vertical_unit_levels.tex)
+
 二窓から作る56次元代数で、低次Extの消滅を逆Serre反復が保つ構造条件を探す。
 「全次数を証明してAS認証」「有限障害で排除」「未決定」を分け、有限検査の成功を全AS認証としない。
 正規形の枝、特殊値、枝間同型の条件を証明し、未分類の残余を明示する。
@@ -474,6 +476,7 @@ python3 computations/verify_rank_fifteen_pole_fibers.py
 python3 computations/verify_rank_fifteen_ramified_pole.py
 python3 computations/verify_rank_fifteen_vertical_one.py
 python3 computations/verify_rank_fifteen_unit_residues.py
+python3 computations/verify_rank_fifteen_vertical_unit_levels.py
 python3 computations/verify_rank_fifteen_gaussian_pencil.py
 python3 computations/verify_rank_fourteen_wall_centers.py
 python3 computations/verify_rank_fifteen_quotient_residues.py

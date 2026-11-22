@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 173,
+  "version": 174,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -1974,6 +1974,15 @@
       "verification": [
         "computations/verify_rank_fifteen_vertical_one.py"
       ]
+    },
+    {
+      "id": "RANK-FIFTEEN-VERTICAL-CUBIC-LEVELS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "At xbar=1 all nonzero y residues of degrees at most three over F3 are certified for ordinary characteristic-zero rank-fifteen windows. Their signed multiplier lifts are given by a degree-48 genus-one Galois cover over the geometric residue field. On x=1 every nonzero algebraic level of degree at most three is standard Koszul left/right AS-regular, free of rank 256 per start, with four distinct minimum-period-two indexed classes (two at 1/27). The same holds whenever the reduced primitive homogeneous minimal polynomial has a closed zero of degree at most three.",
+      "proof": "sections/rank_fifteen_vertical_unit_levels.tex",
+      "verification": [
+        "computations/verify_rank_fifteen_vertical_unit_levels.py"
+      ]
     }
   ],
   "document_paths": {
@@ -2037,7 +2046,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "9d20aa5cc207af44447bf58004a504d6a89c52c0",
+  "reviewed_source_commit": "b67fb63988072434d1ae95509124cd54a3d1f3b4",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -2046,15 +2055,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Continue exact higher-degree overlaps for the nonbranch and tangent unit-x charts to remove their depth bounds, and cover remaining unit-y residues on the x=1 line. For x=1 the only still possible exceptional levels are totally 3-adic units whose primitive minimal polynomial has no projective F3 root; all nonzero rational levels are settled. On the positive-y side, the vertical and Gaussian tubes are settled without depth restrictions.",
+    "immediate_next_action": "On xbar=1 and unit y, compute the pivot divisor on W^2=t-t^3 with v=t*(1-t^2)/(1+t^2)^2 and y=(v-v^3)^2. Descend its good locus along the genus-one cover, then check the remaining residue fibers. The eleven irreducible quadratic and cubic fibers have already been certified directly. In parallel use the full-order primary pole cuts to remove the six-digit depth bounds and address the remaining collision and outer sectors.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/rank_fifteen_vertical_unit_levels.tex",
       "sections/rank_fifteen_vertical_one.tex",
-      "sections/rank_fifteen_ramified_pole.tex",
-      "sections/rank_fifteen_pole_fibers.tex"
+      "sections/rank_fifteen_integral_annulus.tex"
     ],
     "known_obstruction": "Possible isolated interior failures of all-degree regularity on the (x,y) plane and uncovered general nonsymmetric windows.",
-    "state_of_claim": "All rational levels on x=1 and the stated algebraic levels have explicit regular indexed fibers. The remaining totally unit levels and the unrestricted nonsymmetric classification are open.",
+    "state_of_claim": "Every algebraic level of degree at most three on x=1 is settled; higher unit residues, pole directions and general nonsymmetric branches remain.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

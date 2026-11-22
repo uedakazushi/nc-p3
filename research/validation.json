@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 173,
+  "version": 174,
   "reviewed_input": {
-    "source_commit": "9d20aa5cc207af44447bf58004a504d6a89c52c0"
+    "source_commit": "b67fb63988072434d1ae95509124cd54a3d1f3b4"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The vertical x=1 at positive v(y), and the tube 4v(x-1)>=17v(y)>0 over three, are unconditionally standard Koszul left/right AS-regular, free of rank 256 per start. For each algebraic y!=0 whose primitive minimal polynomial has a projective F3 root, in particular every rational y!=0, all indexed classes at x=1 are exactly the four solutions y=-(t-1/t)^2/108 (two at y=1/27); all have minimum period two."
+    "scope": "At xbar=1 all nonzero y residues of degrees at most three over F3 are certified for ordinary characteristic-zero rank-fifteen windows. Their signed multiplier lifts are given by a degree-48 genus-one Galois cover over the geometric residue field. On x=1 every nonzero algebraic level of degree at most three is standard Koszul left/right AS-regular, free of rank 256 per start, with four distinct minimum-period-two indexed classes (two at 1/27). The same holds whenever the reduced primitive homogeneous minimal polynomial has a closed zero of degree at most three."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_vertical_one.py",
+      "command": "python computations/verify_rank_fifteen_vertical_unit_levels.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_ramified_pole.py",
+      "command": "python computations/verify_rank_fifteen_unit_residues.py",
       "result": "PASS"
     },
     {
@@ -33,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked Hensel localization in the eighth cyclotomic field, two-unit distance identity, finite precision transfer, projective residue-root criterion and signed conic involution."
+    "scope": "Checked the elliptic cover, its four inertia groups, the Artin-Schreier quotient and the Hensel transfer to all conjugate residue roots."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact Q(zeta_8) arithmetic with local testing at the selected factor of Z^4+1, length-13 overlaps and exact conic inversion.",
-    "reproduction": "Exact 17-digit Q(zeta_8) products through degree thirteen, checked at the chosen prime above 3 by lifting c^2=-2; exact conic inversion and the period-two fibers."
+    "scope": "Checked every irreducible monic quadratic and cubic over F3, with explicit roots, square-root presentations and the degree-13 central quotient at all four starts."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 302,
+      "nc-p3": 304,
       "plan_ja": 8,
       "notes_ja": 16
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected manuscript page 276, including the cyclotomic unit test, distance formula and rational conic classification."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "1d243f49c1c59e570050387644a4ab2c155d54ac",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Continue exact higher-degree overlaps for the nonbranch and tangent unit-x charts to remove their depth bounds, and cover remaining unit-y residues on the x=1 line. For x=1 the only still possible exceptional levels are totally 3-adic units whose primitive minimal polynomial has no projective F3 root; all nonzero rational levels are settled. On the positive-y side, the vertical and Gaussian tubes are settled without depth restrictions.",
+    "On xbar=1 and unit y, compute the pivot divisor on W^2=t-t^3 with v=t*(1-t^2)/(1+t^2)^2 and y=(v-v^3)^2. Descend its good locus along the genus-one cover, then check the remaining residue fibers. The eleven irreducible quadratic and cubic fibers have already been certified directly. In parallel use the full-order primary pole cuts to remove the six-digit depth bounds and address the remaining collision and outer sectors.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

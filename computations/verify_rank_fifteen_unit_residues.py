@@ -25,22 +25,26 @@ def element(field, encoded):
     return field(coefficients)
 
 
+def verify_unit_point(field, x, y, coordinates, choices):
+    k, h, n, p, u, q, v = (element(field, c) for c in coordinates)
+    U, V = k*k, h*h
+    assert U != 1 and V*(U+3)/(U-1)**2 == x and V**3/(U-1)**4 == y
+    assert n**4+(1-U)*n*n+V == field.zero() and not n.is_zero()
+    assert (p*p, u*u, q*q, v*v) == (2*(k+1+h), 2*(k+1-h), 2*(k-1+h), 2*(k-1-h))
+    gamma = pattern(field.one(), (k-1)/2, n/2, h/(2*n),
+                    (u-p)/4, (u+p)/4, (v-q)/4, (v+q)/4)
+    entries = tuple(Scalar(field.zero() if c == 0 else c) for c in gamma)
+    windows = tensor_relations(entries, Scalar(field.zero()))
+    assert graded_profile(windows, Scalar(field.one()), choices)
+
+
 def verify():
     for x, y, modulus, coordinates in POINTS:
         m = fmpz_mod_poly_ctx(3)(list(modulus))
         assert m.is_irreducible()
         field = fq_default_ctx(modulus=m, var="a")
-        k, h, n, p, u, q, v = (element(field, c) for c in coordinates)
-        U, V = k*k, h*h
-        assert U != 1 and V*(U+3)/(U-1)**2 == field(x) and V**3/(U-1)**4 == field(y)
-        assert n**4+(1-U)*n*n+V == field.zero() and not n.is_zero()
-        assert (p*p, u*u, q*q, v*v) == (2*(k+1+h), 2*(k+1-h), 2*(k-1+h), 2*(k-1-h))
-        gamma = pattern(field.one(), (k-1)/2, n/2, h/(2*n),
-                        (u-p)/4, (u+p)/4, (v-q)/4, (v+q)/4)
-        entries = tuple(Scalar(field.zero() if c == 0 else c) for c in gamma)
-        windows = tensor_relations(entries, Scalar(field.zero()))
         choices = ((1, 0, 0), (0, 1, 0)) if (x, y) == (1, 2) else ((0, 1, 0), (0, 0, 1))
-        assert graded_profile(windows, Scalar(field.one()), choices)
+        verify_unit_point(field, field(x), field(y), coordinates, choices)
         print("Verified unit residues", (x, y), "in extension degree", m.degree(), flush=True)
 
 
