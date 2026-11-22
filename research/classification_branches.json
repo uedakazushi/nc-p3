@@ -253,7 +253,8 @@
       "rank_fifteen_pencil_infinity": "sections/rank_fifteen_pencil_infinity.tex",
       "rank_fifteen_octic_center": "sections/rank_fifteen_octic_center.tex",
       "rank_fifteen_octic_boundary": "sections/rank_fifteen_octic_boundary.tex",
-      "rank_fifteen_pencil_unramified": "sections/rank_fifteen_pencil_unramified.tex"
+      "rank_fifteen_pencil_unramified": "sections/rank_fifteen_pencil_unramified.tex",
+      "rank_fifteen_pencil_ramified_ends": "sections/rank_fifteen_pencil_ramified_ends.tex"
     },
     {
       "id": "UNRESTRICTED-SINGLY-SYMMETRIC-14",

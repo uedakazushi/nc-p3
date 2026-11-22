@@ -1,17 +1,21 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 129,
+  "version": 130,
   "reviewed_input": {
-    "source_commit": "e1ea1d94bbefdde40a5f00a0876d7f123a3b3f0b"
+    "source_commit": "7a6dfe08f3241cb1dcc40f10793439b183fa1c38"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every genus-five pencil curve has a canonical model as the intersection of three quadrics and a smooth plane quartic as its two-position-shift quotient. On general levels both presentations have regular ordinary neighborhoods of all 24 finite unramified ends at K=0 and K²+sK-1=0. At c reducing to 3/4 the corresponding ordinary disks are certified at primes 101 and 197 respectively."
+    "scope": "On general genus-five levels the ordinary neighborhoods of all sixteen ramified ends over K=±s±1 are standard Koszul left/right AS regular in both presentations. At 101 this includes all ordinary mixed-characteristic lifts with c reducing to 3/4 and K reducing to one of those four traces. Together with the infinite and finite unramified ends, this accounts for 48 of the 56 boundary points."
   },
   "checks": [
     {
       "command": "bash scripts/cloud_preflight.sh --tex",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_rank_fifteen_pencil_ramified_ends.py",
       "result": "PASS"
     },
     {
@@ -29,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Verified absence of base points, generic projection degree two, smoothness and genus of the plane quotient. Checked all three unramified trace values split simply at the selected primes."
+    "scope": "Checked the relative local parameter, absence of linear terms in K,n and the unramified root, polynomial divisibility before division by u, and all four sheet choices for each trace."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Verified the plane-quartic identity and every sheet of the c=3/4 trace-zero and trace-quadratic fibers, 48 four-start central-cut certificates across the two presentations.",
-    "reproduction": "SymPy 1.14.0 and python-flint 0.9.0. Exact elimination identity, three split trace values at primes 101 and 197, 48 residue/presentation choices with four-start quotients through degree thirteen."
+    "scope": "Identities over the quadratic boundary algebra over Q(c), exact derivative of every vanishing Pluecker block, and all 32 choices of presentation and residue with four-start central cuts at 101."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 252,
+      "nc-p3": 253,
       "plan_ja": 7,
       "notes_ja": 15
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Reviewed the three-quadrics model, plane quotient and 24-end theorem on rendered page 225 and the remaining proof on extracted page 226."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "ee3c82380f47e78e1bbd465415ffa8d46f368b29",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Complete the genus-three ordinary-residue four-cut via a pair of minor charts at 109, and saturate the four-cut at the remaining disks K=±1 using the uniformizer Y. On the general genus-five pencil, after the 24 unramified finite ends and the eight infinite ends, handle the 24 ramified ends above K=±1, ±s±1 using the three quadrics.",
+    "Finish the genus-three four-cut over all ordinary reductions at 109 and saturate the two trace ±1 disks through length thirteen. On the genus-five pencil only the eight ends over K=±1 lack regular neighborhoods on a general level. For these use u=n, compute the locally saturated degree-four relations and compare against the genus-three trace-disk calculation.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
