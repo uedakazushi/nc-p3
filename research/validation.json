@@ -19,6 +19,10 @@
       "result": "PASS"
     },
     {
+      "command": "python computations/verify_rank_fourteen_central_cut.py",
+      "result": "PASS"
+    },
+    {
       "command": "python computations/verify_rank_fourteen_ramified_disks.py",
       "result": "PASS"
     },
@@ -37,7 +41,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Computed exact Gaussian rational jets to order 27. Checked unit pivots at both primes over 101 and exact divisibility before each division by t-alpha, for both components, both sheets and all four starts."
+    "scope": "Computed exact Gaussian rational jets to order 27. Checked unit pivots at both primes over 101 and exact divisibility before each division by t-alpha, for both components, both sheets and all four starts.",
+    "reproduction": "SymPy 1.14.0 and python-flint 0.9.0. All 16 Gaussian-jet runs at starting precision 27 ended at precision 6 in length thirteen. Independently reran the complete degree-six and ramified-disk verifiers."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +54,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected the complete local saturation proof and theorem on page 215 of the 241-page manuscript."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "227caf7f9de2f136dd9c6c5f4f60c6d2d6e0ed06",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Move to the positive fixed opposite-rank-15 stratum. Analyze the two projected quartics over the ordinary slope plane using two-position exchange: determine their finite fibers, collisions, and what additional degeneracies remain off the now fully certified rank-fourteen curve. Use central-quotient certificates where constancy of the center is available.",
@@ -63,7 +71,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "5c30ef3809d9060329c8001e7c6258bdd7765de5",
+    "commit": "a84e553b3f85d848d054eba2286f11380700ec35",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
