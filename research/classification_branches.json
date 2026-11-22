@@ -281,7 +281,8 @@
       "rank_fifteen_formal_boundary": "sections/rank_fifteen_formal_boundary.tex",
       "rank_fifteen_residue_line": "sections/rank_fifteen_residue_line.tex",
       "rank_twelve_quantum_limit": "sections/rank_twelve_quantum_limit.tex",
-      "pauli_projective_boundary": "sections/pauli_projective_boundary.tex"
+      "pauli_projective_boundary": "sections/pauli_projective_boundary.tex",
+      "rank_fifteen_cubic_zero_disk": "sections/rank_fifteen_cubic_zero_disk.tex"
     },
     {
       "id": "UNRESTRICTED-SINGLY-SYMMETRIC-14",

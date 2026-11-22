@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-22 / v157。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v158。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -298,6 +298,8 @@ Pauli射影境界の32点が一つの周期1の量子多項式環を与えるこ
 
 Pauli射影閉包の全境界で正則性を判定した。階数14・12は正則、階数9・4は有限障害で排除され、付値の等号でも剰余標数零・101で正則となる。[証明と判定](sections/pauli_projective_boundary.tex)
 
+三次曲線 p=0 の全点で正則性を証明した。二点は周期1、残りは周期2である。境界で増える経路を3進の飽和計算で除き、曲線近傍にも判定を拡張した。[証明と判定](sections/rank_fifteen_cubic_zero_disk.tex)
+
 二窓から作る56次元代数で、低次Extの消滅を逆Serre反復が保つ構造条件を探す。
 「全次数を証明してAS認証」「有限障害で排除」「未決定」を分け、有限検査の成功を全AS認証としない。
 正規形の枝、特殊値、枝間同型の条件を証明し、未分類の残余を明示する。
@@ -424,6 +426,7 @@ python3 computations/verify_rank_fifteen_formal_boundary.py
 python3 computations/verify_rank_fifteen_residue_line.py
 python3 computations/verify_rank_twelve_quantum_limit.py
 python3 computations/verify_pauli_projective_boundary.py
+python3 computations/verify_rank_fifteen_cubic_zero_disk.py
 python3 computations/verify_rank_fourteen_wall_centers.py
 python3 computations/verify_rank_fifteen_quotient_residues.py
 python3 computations/verify_rank_fifteen_regular_orbits.py
