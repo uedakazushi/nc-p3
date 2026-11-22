@@ -78,6 +78,23 @@ def verify(nodal):
     print("nodal" if nodal else "cuspidal", "flattenings 6,8; cubic hulls 12,13; window overlaps 4,4; degree seven 120,121")
 
 
+
+def nodal_parameter_line():
+    u = sp.Symbol("u")
+    field = sp.QQ.frac_field(u)
+    a, b = [1+t**4, t, t**2, t**3], [1, t, t**2, t**3]
+    windows = []
+    for left, right in [(a, b), (b, a)]:
+        matrix = coefficients([p*q for p, q in product(left, right)], 7)
+        # In the quotient t^7=-u*t^3 and 1=0.
+        matrix[3,:] -= u*matrix[7,:]
+        windows.append([{divmod(j, 4): field.from_sympy(matrix[i,j])
+                         for j in range(16) if matrix[i,j]} for i in range(1,7)])
+    assert PathRow(windows*2, 1, 7).dims == [1,4,10,20,35,56,84,121]
+    print("nodal pencil line over Q(u): B-start degree seven 121")
+
+
 if __name__ == "__main__":
+    nodal_parameter_line()
     verify(True)
     verify(False)

@@ -49,7 +49,7 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact rational cubic hulls 12 and 13, window overlaps 4 and 4 and ranks 6/8 in both normalized conductor models. Both sample path quotients give dimensions 120 and 121 at the two starts in degree seven. Earlier marked, ribbon and nonreduced checks were also executed in this run."
+    "scope": "Exact rational cubic hulls 12 and 13, window overlaps 4 and 4 and ranks 6/8 in both normalized conductor models. Both sample path quotients give dimensions 120 and 121 at the two starts in degree seven. Earlier marked, ribbon and nonreduced checks were also executed in this run. An exact Q(u) path quotient excludes the full nodal pencil line W=<1,t^7+u*t^3>."
   },
   "tex": {
     "result": "PASS",
@@ -64,11 +64,7 @@
     "scope": "The new argument uses current internal results. No independent novelty determination or external-source claim was added."
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "c70aa27d1b1db8b38260157b600f43f48fcffb89",
-    "scope": "Normal pushes to main. Fetched remote HEAD and read back all 17 changed files since 2f2d327 byte-for-byte, including the current resume point.",
-    "research_hub_commit": "6ad1c799716db75c405d7959c76ea45268185329",
-    "hub_scope": "Updated only the nc-p3 README row and verified the entire remote README byte-for-byte."
+    "result": "PENDING"
   },
   "open_mathematics": [
     "Whole conductor families versus the seventh-degree obstruction, other rank-seven/singular rank-eight limits, and non-bisymmetric windows."

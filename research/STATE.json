@@ -899,7 +899,7 @@
     {
       "id": "INTEGRAL-APOLAR-CONDUCTOR-LIMIT",
       "status": "proved_under_stated_hypotheses",
-      "statement": "An AS limit retaining an integral nodal/cuspidal quartic pencil has opposite rank six or eight. Noninvertible second sheaves give precisely the necessary binary quartic hyperplane times binary cubics model, with twisted cubic plus secant/tangent on the opposite side. Every basepoint-free conductor pencil has a quadratic finite Frobenius dual, complete ordered recognition, and overlaps four on both sides. Explicit nodal and cuspidal pencils fail standard AS in degree seven (121 rather than 120) despite a correct Hilbert function through degree six. All-fiber Koszulity or its failure remains to be decided.",
+      "statement": "An AS limit retaining an integral nodal/cuspidal quartic pencil has opposite rank six or eight. Noninvertible second sheaves give precisely the necessary binary quartic hyperplane times binary cubics model, with twisted cubic plus secant/tangent on the opposite side. Every basepoint-free conductor pencil has a quadratic finite Frobenius dual, complete ordered recognition, and overlaps four on both sides. Explicit nodal and cuspidal pencils fail standard AS in degree seven (121 rather than 120) despite a correct Hilbert function through degree six. All-fiber Koszulity or its failure remains to be decided. The full nodal line W=<1,t^7+u*t^3> fails in degree seven by exact generic rank over Q(u) and semicontinuity.",
       "proof": "sections/integral_apolar_limits.tex",
       "verification": [
         "computations/verify_conductor_pencil.py"
@@ -976,7 +976,7 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "On the nodal and cuspidal conductor pencil spaces in sections/integral_apolar_limits.tex, determine whether the B-start excess of one path in degree seven is universal. Work over the function field of the pencil or exhibit a structural syzygy, using the extra skew cubic on the exceptional line; exclude a full stratum or certify a surviving AS fiber. In parallel the remaining rank-seven problem has only reducible or nonreduced limiting curve pencils.",
+    "immediate_next_action": "On the nodal and cuspidal conductor pencil spaces in sections/integral_apolar_limits.tex, determine whether the B-start excess of one path in degree seven is universal beyond the now-excluded nodal line W=<1,t^7+u*t^3>. Work over the function field of the pencil or exhibit a structural syzygy, using the extra skew cubic on the exceptional line; exclude a full stratum or certify a surviving AS fiber. In parallel the remaining rank-seven problem has only reducible or nonreduced limiting curve pencils.",
     "read_first": [
       "research/plan_ja.tex",
       "sections/integral_apolar_limits.tex",
