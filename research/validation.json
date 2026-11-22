@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Two complementary eliminations on each endpoint curve, irreducible pivot-norm intersections, and both lifts above each of 18 remaining base factors, with full central-cut certificates."
+    "scope": "Two complementary eliminations on each endpoint curve, irreducible pivot-norm intersections, and both lifts above each of 18 remaining base factors, with full central-cut certificates.",
+    "reproduction": "SymPy 1.14.0 and python-flint 0.9.0. Two complementary exact charts on each curve, both lifts over 18 residual factors at four primes, full four-start cut profiles through length 13 and the preceding symmetry regression."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript page 237, including the two multiplier parametrizations, factor counts and central-cut lifting proof."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "3ad70acc8d6d83d4a788e029f1ed4895535d1def",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Eliminate the isolated whole-surface exceptions. First complete four-center cut charts through degree 13 on the n=1 elliptic curve and the n=i, m=ik rational curve. The field frames, both splitting signs, and certified specializations are in verify_rank_fifteen_coordinate_ends.py. Use independent center choices or sparse fraction-free minors if polynomial growth limits dense elimination. For the surface retain first-sheet starts 0,1 and characters 0,2 (ranks 36,34).",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "e40e13c80320560b3aabc2031dc492651336857b",
+    "commit": "a6aaeead8750717d4949a11a09e280c8c5724d69",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
