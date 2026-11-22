@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Checked homogeneous completion and admissibility for both covers, the branch and overlap equations, irreducibility and inverse formulas for the elliptic model, and all four central-cut profiles at the sixteen split-prime windows."
+    "scope": "Checked homogeneous completion and admissibility for both covers, the branch and overlap equations, irreducibility and inverse formulas for the elliptic model, and all four central-cut profiles at the sixteen split-prime windows.",
+    "reproduction": "SymPy 1.14.0 and python-flint 0.9.0. Run computations/verify_rank_fifteen_covers.py for the identities, ordinary endpoint checks and the sixteen finite-field profiles."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Reviewed the extracted new section and rendered page 216 containing the counts, proof and ramification statement."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "143a1a910528db0613297ff99b4f335573ce9ddd",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Determine the remaining exceptional fibers on the two rank-15 ramification curves using their common quartic model. Compute the four central sections and the generic Artinian quotient; find the bad residue factors over F101[t] and use local saturation where direct specialization loses rank. The full ordinary rank-14 stratum and the rank-15 fiber counts are settled.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "a84e553b3f85d848d054eba2286f11380700ec35",
+    "commit": "277000dfe3c8b50002efc9700da805780a7b32c4",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
