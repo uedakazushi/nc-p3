@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Seven-term jets over Q(z) with residue field F9. Computed all four center ranks, the evaluation ranks of four selected center sections at each start, and all sixteen sixth insertion ranks. The divisions by H are polynomial identities before residue evaluation."
+    "scope": "Seven-term jets over Q(z) with residue field F9. Computed all four center ranks, the evaluation ranks of four selected center sections at each start, and all sixteen sixth insertion ranks. The divisions by H are polynomial identities before residue evaluation.",
+    "reproduction": "Computed 7-term H-jets over Q(z), all 16 sixth ranks, all four center ranks and four-center evaluation in every start. Reran the ramified x-zero certificate through length 13."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript page 260, including the root parameter, saturation proof, and pencil corollary."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "02f0321b9e8ec84474658be0ad5efc985fe3450b",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Over R=Z[z] localized at (3,z^2+z+2), continue the common four-section cut beyond length four at all starts in the small-trace, small-y disk. The four chosen central sections are independent at every start. Use the computed full degree-five/six bases to certify the ranks of their products by one/two letters, then continue the cut to length 13. If a pivot degenerates, isolate the first affected character and its initial coefficient. The complementary valuation sector and unrestricted classification remain open.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "92942e7e269969826ae8c967a6302a60e2edd756",
+    "commit": "36a20a8c95543c6b995d2e5628fa1433f6723cda",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
