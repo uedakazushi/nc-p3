@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 156,
+  "version": 157,
   "reviewed_input": {
-    "source_commit": "8a98a95cc132b0d31ed12b1c0958dc40b2d444c8"
+    "source_commit": "a80a3b27e11838ed2e6d545efd6fa7857d6cbfc4"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All 32 points a=b=0 of the projective Pauli equations give one rank-twelve quantum polynomial indexed algebra of minimal period one. Every characteristic-zero ordinary rank-fifteen lift with val(y)<min(0,2 val(x)) is regular at every odd or equicharacteristic-zero valuation."
+    "scope": "The whole projective boundary of the normalized Pauli surface has exactly four opposite ranks. All rank-fourteen and rank-twelve points are standard regular; rank nine has at least 36 degree-four paths and rank four has four adjacent relations. The equality wall val(y)=2 val(x)<0 is regular in residue characteristics zero and 101."
   },
   "checks": [
     {
@@ -15,11 +15,15 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_twelve_quantum_limit.py",
+      "command": "python computations/verify_pauli_projective_boundary.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_residue_line.py",
+      "command": "python computations/verify_rank_fourteen_wall_centers.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_rank_twelve_quantum_limit.py",
       "result": "PASS"
     },
     {
@@ -33,36 +37,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked both Newton regimes for D=x^3/y, the simple root choices, pole-cone transport, explicit quantum normal form and residue characteristic independence away from 2."
+    "scope": "Checked the four strata, the dimension bound excluding hidden boundary components, specialization inequalities, and center base change on the equality wall."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exhausted the 32 projective points, computed the 24 tensor entries, six binomial relations at every start, periodic diagonal rescaling and all five central quartic multidegrees.",
-    "reproduction": "Recomputed the projective orbit, sparse tensor and periodic quantum gauge over Gaussian rationals. Recomputed the full residue-line certificate at 3."
+    "scope": "Exact degree-four insertion ranks on sixteen rational charts, four rank-four adjacent images, all exceptional rank-fourteen roots and four-start cuts. Checked 33 reduced Fitting-chart factors for the rank-fourteen center at 101."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 282,
+      "nc-p3": 283,
       "plan_ja": 8,
       "notes_ja": 16
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected pages 255 and 256, including the quantum parameters, the periodic basis changes and the valuation argument."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "e4b506a11f0a02e73bf32d47c8d4f8a8f1db48a8",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Analyze the equality wall val(y)=2 val(x)<0 via the limiting rank-fourteen U=1 chart and transport ordinary geometric residual certificates. On p=0 only y integral at odd places and vanishing at every place above 3 can still fail; analyze the saturated H=0 disk.",
+    "On the interior p=0 curve, resolve the characteristic-three H=0 disk by saturating the rank-nine degree-four jump. Use the normalized K=0 slice t=i s and a unit root n near H=0; track the extra quartic relation before testing centers. In the two-dimensional plane the complementary valuation sector val(y)>2 val(x) and other isolated candidates remain.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

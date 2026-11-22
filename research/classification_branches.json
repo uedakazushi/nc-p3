@@ -280,7 +280,8 @@
       "rank_fifteen_quotient_residues": "sections/rank_fifteen_quotient_residues.tex",
       "rank_fifteen_formal_boundary": "sections/rank_fifteen_formal_boundary.tex",
       "rank_fifteen_residue_line": "sections/rank_fifteen_residue_line.tex",
-      "rank_twelve_quantum_limit": "sections/rank_twelve_quantum_limit.tex"
+      "rank_twelve_quantum_limit": "sections/rank_twelve_quantum_limit.tex",
+      "pauli_projective_boundary": "sections/pauli_projective_boundary.tex"
     },
     {
       "id": "UNRESTRICTED-SINGLY-SYMMETRIC-14",

@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 156,
+  "version": 157,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -1817,6 +1817,16 @@
       "verification": [
         "computations/verify_rank_twelve_quantum_limit.py"
       ]
+    },
+    {
+      "id": "PAULI-PROJECTIVE-BOUNDARY-AND-EQUALITY-WALL",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "The whole projective boundary of the normalized Pauli surface has exactly four opposite ranks. All rank-fourteen and rank-twelve points are standard regular; rank nine has at least 36 degree-four paths and rank four has four adjacent relations. The equality wall val(y)=2 val(x)<0 is regular in residue characteristics zero and 101.",
+      "proof": "sections/pauli_projective_boundary.tex",
+      "verification": [
+        "computations/verify_pauli_projective_boundary.py",
+        "computations/verify_rank_fourteen_wall_centers.py"
+      ]
     }
   ],
   "document_paths": {
@@ -1880,7 +1890,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "8a98a95cc132b0d31ed12b1c0958dc40b2d444c8",
+  "reviewed_source_commit": "a80a3b27e11838ed2e6d545efd6fa7857d6cbfc4",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -1889,15 +1899,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Analyze the equality wall val(y)=2 val(x)<0 via the limiting rank-fourteen U=1 chart and transport ordinary geometric residual certificates. On p=0 only y integral at odd places and vanishing at every place above 3 can still fail; analyze the saturated H=0 disk.",
+    "immediate_next_action": "On the interior p=0 curve, resolve the characteristic-three H=0 disk by saturating the rank-nine degree-four jump. Use the normalized K=0 slice t=i s and a unit root n near H=0; track the extra quartic relation before testing centers. In the two-dimensional plane the complementary valuation sector val(y)>2 val(x) and other isolated candidates remain.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/pauli_projective_boundary.tex",
       "sections/rank_twelve_quantum_limit.tex",
-      "sections/rank_fifteen_residue_line.tex",
-      "sections/rank_fifteen_global_invariants.tex"
+      "sections/rank_fourteen_geometric_reduction.tex"
     ],
     "known_obstruction": "Possible isolated interior failures of all-degree regularity on the (x,y) plane and uncovered general nonsymmetric windows.",
-    "state_of_claim": "A rank-twelve boundary orbit and an unbounded valuation region are certified. The p=0 curve can only have exceptions integral away from 2 and vanishing at every place above 3. The unrestricted classification is open.",
+    "state_of_claim": "Complete regularity decision on the projective boundary of this surface. Interior rank-fifteen regularity, unrestricted coverage and the full classification remain open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
