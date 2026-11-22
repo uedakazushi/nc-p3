@@ -1,17 +1,21 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 64,
+  "version": 65,
   "reviewed_input": {
-    "source_commit": "c9ad36c3fd76434ff2806f007386632458d60bb0"
+    "source_commit": "c4dbfacdc4fcaaa094a70757d5f5d8c4d23460d8"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All standard bisymmetric AS windows have opposite rank six or eight. Rank six is fully symmetrizable, and both rank-eight apolar pencils are quartic complete intersections. Factor partners are unique and opposite changes of coordinates are projectively equal in every rank. The transverse marked block has residual rank zero or two by PGL2 conjugation, while a radical line gives two coupled cubic forms and an alternating binary residual."
+    "scope": "Effective AS and ordered indexed isomorphism classification for all adjacent-rank-six bisymmetric reversing windows. A transverse distinct factor pair is regular exactly for nonassociative ternary multiplication, while a one-dimensional radical requires precisely its nonsingular binary relation. Ternary Clifford amalgams over the cubic binary algebra or the weighted polynomial algebra give all-degree Koszul and Frobenius proofs. Together with square and reduced-apolar recognition this covers every input in the class."
   },
   "checks": [
     {
       "command": "bash scripts/cloud_preflight.sh --tex (project environment activated)",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_factor_regular_windows.py",
       "result": "PASS"
     },
     {
@@ -45,15 +49,15 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed factor-partner uniqueness, six-pivot elimination with nonassociative products, degenerate metric cubics, radical-row and column pairing, binary skew residual and the low-rank projective dimension argument."
+    "scope": "Reviewed both ternary Clifford identifications, common cubic binary presentation, weighted polynomial subalgebra and shifted central generator, induced-module resolution, internal-degree Tor maps and full-rank trace reconstruction."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Transverse spin-factor fixtures with scalar, semisimple and unipotent transitions give 6,6,8,8,8. Exact radical-line fixtures with coincident or distinct identifications give 6,8,8,8."
+    "scope": "Exact rational path ranks in both parities for transverse and radical-line fixtures including independent nonradical units, plus an associative pure-relation failure. Previous rank/parity fixtures remain reproducible."
   },
   "tex": {
     "result": "PASS",
-    "scope": "Main 160 pages, plan 6 and notes 13. No overfull boxes, missing characters or unresolved references."
+    "scope": "Main 163 pages, plan 6 and notes 13. No overfull boxes, missing characters or unresolved references."
   },
   "visual_inspection": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
@@ -66,7 +70,7 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "For opposite rank eight and a square-free nonreduced apolar complete intersection, compare both ordered rank-two factor schemes and determine when both pencils describe the same nonreduced curve. Seek an effective regularity or graph recognition criterion via the transverse or radical-line marked models.",
-    "General nonsymmetric windows and full classification."
+    "Move to four-windows with one symmetric pair of opposite positions. Factor the adjacent pairing into two maps with dual six-spaces, compare their evaluation kernels at the shared four-space, and use factor marks or growth quotients to test whether an AS window is forced into the finished bisymmetric chart. Distinguish the two odd windows throughout.",
+    "Other nonsymmetric windows and full classification."
   ]
 }
