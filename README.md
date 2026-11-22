@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-22 / v55。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v56。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -102,6 +102,8 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 正の多重次数を持つ被約二二次式完全交叉では、二束の多重次数の一致が鉛筆構成の標準AS正則性の必要十分条件になる。接点・三重点・四枝の楕円多重点でも、異なる二束の同型は曲線データから判定できる。[多重点の証明](sections/additive_pencil_boundary.tex)
 
 二重二次曲線の鉛筆も全ファイバーがAS正則で、異なる二束の9次元の層では冪零方向まで同型を復元できる。反転テンソルの隣接階数が6、反対階数が8で二つの反対核が滑らかな楕円四次曲線なら、第一窓の一つの単純零点から楕円表示とAS正則性を認識できる。[二重曲線と逆判定](sections/ribbon_and_graph_recognition.tex)
+非被約な二二次式完全交叉の全ての正次数鉛筆についてAS正則性を証明した。異なる二束では冪零方向を含む曲線の同型が添字保持同型の必要十分条件になる。滑らかな反対核を持つ有限窓では、第一窓の零点の台が11点以上なら楕円表示に入る。[非被約曲線の証明](sections/nonreduced_quartic_pencils.tex)・[小行列式による逆判定](sections/ribbon_and_graph_recognition.tex)
+
 二窓から作る56次元代数で、低次Extの消滅を逆Serre反復が保つ構造条件を探す。
 「全次数を証明してAS認証」「有限障害で排除」「未決定」を分け、有限検査の成功を全AS認証としない。
 正規形の枝、特殊値、枝間同型の条件を証明し、未分類の残余を明示する。
@@ -128,6 +130,8 @@ python3 computations/verify_marked_opposite_rank.py
 python3 computations/verify_elliptic_reversible_pencil.py
 python3 computations/verify_additive_pencil.py
 python3 computations/verify_ribbon_trace.py
+python3 computations/verify_nonreduced_polarizations.py
+python3 computations/verify_smooth_apolar_defect.py
 python3 computations/verify_rank_five_pencils.py
 python3 computations/verify_matched_pencils.py
 python3 computations/verify_incidence_cubics.py

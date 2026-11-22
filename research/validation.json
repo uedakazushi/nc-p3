@@ -1,21 +1,29 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 55,
+  "version": 56,
   "reviewed_input": {
-    "source_commit": "f67dacb67e0eb7abe385a40bcfcd1998b60c3b7e"
+    "source_commit": "b1786b9e8cffef97e02231d095e50d9ae42b641e"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Conic ribbon certification and graph descent, degree-64 smooth graph test and transverse-zero recognition with singular-commutator dimension bound."
+    "scope": "All nonreduced quartic pencil inputs, scheme-theoretic reconstruction, smooth-apolar tangent defect and finite-support recognition."
   },
   "checks": [
     {
-      "command": "python computations/verify_ribbon_trace.py",
+      "command": "python computations/verify_nonreduced_polarizations.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_marked_opposite_rank.py",
+      "command": "python computations/verify_smooth_apolar_defect.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_elliptic_reversible_pencil.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_ribbon_trace.py",
       "result": "PASS"
     },
     {
@@ -29,18 +37,19 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked restriction of evaluation kernels to P1, the two nilpotent graph comparisons, degree-64 determinant and infinitesimal graph separation, and rank-two/rank-one strata of independent marked nets. No independent referee."
+    "scope": "Reviewed pencil normal forms, socle derivations, Picard orbits, semicontinuity degree by degree, pencil duality, graph separation, and the Gram tangent rank calculation."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact section multiplication and socle functionals on the ribbon and all Gaussian monomials; reran the marked commutator identity."
+    "scope": "Eleven normal-form models over Q with nonzero residue weights and proper test-line cuts; all three tangent defects and both flattenings on the smooth elliptic curve y^2=x^3-x."
   },
   "tex": {
     "result": "PASS",
-    "scope": "Manuscript 136 pages, plan 6 and notes 12. No overfull boxes, unresolved references or missing characters in final logs."
+    "scope": "Main 138 pages, plan 6 and notes 12. No overfull boxes, unresolved references or missing characters in the final logs."
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Rendered and inspected manuscript page 111 in the nonreduced classification proof."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT",
@@ -50,6 +59,6 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Other nonreduced quartics, and rank-eight tensors without a simple zero or graph certificate outside the known component."
+    "All-nontransverse smooth-apolar windows outside the recognized component, other tensors without a pencil presentation, and global classification."
   ]
 }
