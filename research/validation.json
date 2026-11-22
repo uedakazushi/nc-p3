@@ -19,6 +19,10 @@
       "result": "PASS"
     },
     {
+      "command": "python computations/verify_rank_fourteen_cyclotomic.py",
+      "result": "PASS"
+    },
+    {
       "command": "python computations/verify_rank_fourteen_central_cut.py",
       "result": "PASS"
     },
@@ -37,7 +41,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Computed all dual path kernels and maximal-minor supports through length thirteen over F101[t] for both starts and signs, checked exceptional orbits in extension fields and repeated the generic calculation at 109 to cover the remaining cyclotomic orders."
+    "scope": "Computed all dual path kernels and maximal-minor supports through length thirteen over F101[t] for both starts and signs, checked exceptional orbits in extension fields and repeated the generic calculation at 109 to cover the remaining cyclotomic orders.",
+    "reproduction": "SymPy 1.14.0, python-flint 0.9.0, Singular 4.4.1. All 192 character blocks at 101, 72 residual base factors counted separately by i, and another 96 character blocks at 109. The maximum excluded factor degree at 109 is 10."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +54,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected pages 212 and 213 of the 239-page paper with the kernel calculation and the proof of the cyclotomic corollary."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "2c26f5a37a6cb23a92b3c38519fc526c86916506",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Settle the finite characteristic-zero exceptional locus of the rank-fourteen components. For a putative bad closed point, every reduction over 101 lies on the explicit nonordinary boundary or at infinity. Study the finitely many residue disks by saturating quadratic and central sections on the compactified curve (local uniformizers, leading minors in characteristic zero and modulo 101). In parallel methodologically, the exact dual path/Fitting recursion can be run over Q(i)[t] with modular reconstruction. Use the cyclotomic and degree-six results as proved inputs.",
@@ -63,7 +71,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "70536c9134a88bb014a0cae868367e5f8765802b",
+    "commit": "2cbc5e0a0f8a091591e29d55ab95c28c1c6ccade",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
