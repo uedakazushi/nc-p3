@@ -15,11 +15,71 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fourteen_descent.py",
+      "command": "python computations/verify_fixed_geometric_quartic_locus.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_opposite_fixed_determinants.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_fixed_quartic_ranks.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_fixed_exchange_isogeny.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_uniform_fixed_quartic_support.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_uniform_fixed_quartic_residuals.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_fixed_quintic_locus.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_varying_fixed_quintics.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_uniform_positive_quintics.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_uniform_quintic_companions.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_fixed_line_elliptic_curves.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_fixed_branch_regular.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_fixed_residual_regularity.py",
       "result": "PASS"
     },
     {
       "command": "python computations/verify_fixed_opposite_rank_drop.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_varying_opposite_rank.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_fixed_rank_fourteen.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_rank_fourteen_descent.py",
       "result": "PASS"
     },
     {
@@ -37,7 +97,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Verified the homogeneous frame, its determinant units and exact exchange identity. Scanned both fourth roots of unity and all t and s residues; all 768 Artinian quotient profiles have the required dimensions through degree thirteen."
+    "scope": "Exact quartic elimination, including the four opposite-determinant sections and collisions; degree-five unit rank minors with 344 pivots and sixteen residual families of matrices; function-field lower bounds on the old sections; eight modular central certificates lifting to 22 geometric points, with all 32 central-quotient profiles checked through degree thirteen. The opposite-rank calculation adds four-variable rank determinants, normalized binary homogeneous resultants and admissibility factors, the two genus-one function fields, and three new quartic residue certificates at 101 (12 central quotient profiles). The one-variable global frame satisfies the exchange and unit identities. All 192 rational ordinary rank-14 residues at 101 give the required 768 Artinian quotient profiles.",
+    "reproduction": "SymPy 1.14.0 and python-flint 0.9.0. The integer polynomial certificates use characteristic zero. Positive residual regularity uses residue characteristics 193 and 1009; opposite-rank-drop regularity uses 101."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +110,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected the rendered main manuscript pages 205 through 209 for the fixed-curve quintic theorem, central certificates, rank stratification, binary resultants, rank-drop regularity and the rational exchange quotient."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "225ec6ceb17713dddf2f025d886f8564afcc8786",
+    "scope": "Re-fetched main and compared every changed source file byte for byte from the previous v107 readback (be1f0a5) through the v115 research commit."
   },
   "open_mathematics": [
     "Over the localized PID Q(i)[t] on the ordinary rank-fourteen base, use the global frame in sections/rank_fourteen_descent.tex and replace c+d*s by its two-by-two multiplication matrix. Construct the length-four and length-five free presentations without a monomial-basis pole, then compute gcds of maximal minors of the character-graded central commutators. Certify the Artinian quotient on each remaining geometric root over its residue field. The 192 F101-rational residues are already checked; extension-field points and reductions at the boundary still matter.",
@@ -63,7 +127,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "13db7a4bfc500dfe1bf1a2c3f476abd5993e8c18",
+    "commit": "b8432754552e118d296874a77866e24929cf27f5",
     "scope": "Updated only the nc-p3 row after fetching the research hub, then re-fetched and byte-compared its README."
   }
 }
