@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Evaluated all four choices in finite extensions of F101 above each of four quadratic factors; verified raw tensor ranks, centers and all four central quotient profiles. Computed exact projective initial tensors and degree-three paths over Q(i)."
+    "scope": "Evaluated all four choices in finite extensions of F101 above each of four quadratic factors; verified raw tensor ranks, centers and all four central quotient profiles. Computed exact projective initial tensors and degree-three paths over Q(i).",
+    "reproduction": "SymPy 1.14.0 and python-flint 0.9.0; integral univariate polynomial arithmetic on the elliptic function field and exact split-prime rank certificates."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected the boundary classification, degree-three dimensions and ramified rank table on pages 213 and 214 of the 240-page manuscript."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "93311b3398995bf219a2bb1b9244127ae4d11581",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Resolve the six remaining 101-adic boundary values for ordinary characteristic-zero lifts. The projective tensor in the given homogeneous frame fails at the central points, so that failure alone gives no obstruction to nearby ordinary windows. Try a valuation-dependent change of generators on the four positions, or saturated Pluecker coordinates of the quadratic and quartic subspaces; compare initial ranks in characteristic zero and modulo 101. Alternatively recover the horizontal Fitting ideals by modular reconstruction over Q(i)[t].",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "2cbc5e0a0f8a091591e29d55ab95c28c1c6ccade",
+    "commit": "8c91ff9ec1de77d9a88001f2c53522fd601e19be",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
