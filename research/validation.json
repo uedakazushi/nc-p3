@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Twelve orbit labels and all three exact plane equations, finite enumeration of the boundary lifts, cyclic relation spaces and length-thirteen four-start central cuts over F_(17^16)."
+    "scope": "Twelve orbit labels and all three exact plane equations, finite enumeration of the boundary lifts, cyclic relation spaces and length-thirteen four-start central cuts over F_(17^16).",
+    "reproduction": "Recomputed three identities, all eight coordinate-end and eleven octic residual orbit certificates, and all 192 projective template actions."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript pages 248 and 249 including the three curve equations, exceptional levels and normalized tensor verification."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "4c01046e137c8c7835a664f0a08716f78b82b49e",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Study the remaining isolated interior regularity candidates away from the six explicit orbit curves and the branch. Use the paired Pauli tensor to work directly with normalized relations and to test the locus where dimension 16 fails; also resolve special coordinate-end equivalences using the explicit 192 actions.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "4438cdcf71f7967ce1db2f73fbb1d69fe7247c07",
+    "commit": "c740ff5863ab158ec4a24298ccdfe04d172e66eb",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
