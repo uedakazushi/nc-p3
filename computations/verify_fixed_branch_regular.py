@@ -31,7 +31,16 @@ def check(sig, aa):
     check_window(A, B, z, l, (sig, aa), p)
 
 
-def check_window(A, B, z, l, label, prime, opposite_rank=16):
+def check_window(
+    A,
+    B,
+    z,
+    l,
+    label,
+    prime,
+    opposite_rank=16,
+    degree_zero_choices=((1, 3, 5), (2, 7, 11)),
+):
     w, opp, rev = gram_twist(A, B, z, l)
     rel = []
     for j, M in enumerate((w, rev, w.T, rev.T)):
@@ -57,7 +66,7 @@ def check_window(A, B, z, l, label, prime, opposite_rank=16):
     assert counts == [35, 56] * 4 and matrix(opp, prime).rank() == opposite_rank
     sections = []
     for h, choices in [
-        (0, ((1, 3, 5), (2, 7, 11))),
+        (0, degree_zero_choices),
         (1, ((1, 0), (0, 1))),
         (2, ()),
         (3, ()),

@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 114,
+  "version": 115,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -1422,6 +1422,15 @@
         "computations/verify_varying_opposite_rank.py",
         "computations/verify_fixed_rank_fourteen.py"
       ]
+    },
+    {
+      "id": "ONE-VARIABLE-DESCENT-OF-RANK-FOURTEEN-REGULARITY",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "Each rank-fourteen elliptic component has an everywhere-defined homogeneous frame on the ordinary base with B(s)=-A(-s), where s squared equals w(t). The two-position shift is the deck involution; all finite central rank tests descend by restriction of scalars to one polynomial variable. All 192 ordinary F101-rational rank-fourteen residues certify two-sided AS regularity for characteristic-zero integral lifts.",
+      "proof": "sections/rank_fourteen_descent.tex",
+      "verification": [
+        "computations/verify_rank_fourteen_descent.py"
+      ]
     }
   ],
   "document_paths": {
@@ -1485,7 +1494,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "dbf281c8a37e39b54127e327f5a378c65c32760a",
+  "reviewed_source_commit": "7bc87c3d5ffbb52ff3844efb8b51ba7efcf69b26",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -1494,15 +1503,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Use the explicit j=1728 model Y^2=2(t-1)(t+1)(t+3) to decide the finite possible nonregular locus on each of the two rank-14 components. Compute the quartic central kernel over this curve, project the bad minors for a central four-form Artinian quotient, and test the remaining closed points including poles of the first chart. On the rank-15 locus the analogous starting equations are the two block quadrics. Continue to the rank-16 complement after these smaller curves.",
+    "immediate_next_action": "Over the localized PID Q(i)[t] on the ordinary rank-fourteen base, use the global frame in sections/rank_fourteen_descent.tex and replace c+d*s by its two-by-two multiplication matrix. Construct the length-four and length-five free presentations without a monomial-basis pole, then compute gcds of maximal minors of the character-graded central commutators. Certify the Artinian quotient on each remaining geometric root over its residue field. The 192 F101-rational residues are already checked; extension-field points and reductions at the boundary still matter.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/rank_fourteen_descent.tex",
       "sections/fixed_opposite_rank_drop.tex",
-      "sections/fixed_residual_regularity.tex",
-      "sections/uniform_positive_quintics.tex"
+      "sections/fixed_residual_regularity.tex"
     ],
-    "known_obstruction": "All rank-14 points pass lengths four and five. Positive rank-14 elliptic components have a cofinite all-degree AS open, but the quartic central kernel and the Artinian quotient test have not been saturated on the remaining closed points.",
-    "state_of_claim": "All ordinary slopes have an exact opposite-rank test on both signed fixed curves and an exact count and parametrization of the rank-14 stratum. AS regularity is proved on the specified rank-14 and rank-15 opens. All-degree classification at all remaining points is open.",
+    "known_obstruction": "The quotient base is rational and the path spaces in lengths four and five are free after restriction of scalars. The univariate invariant factors of the center equations and the Artinian quotient ideals are still unknown. Ordinary geometric points can reduce outside F101-rational ordinary fibers.",
+    "state_of_claim": "Both rank-fourteen elliptic components quotient by position exchange to the ordinary rational t-base. The 192 rational residue disks described in the proposition are regular in characteristic zero. A global all-degree classification of the finite remaining geometric candidates is open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
