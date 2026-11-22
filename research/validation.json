@@ -72,7 +72,11 @@
     "scope": "The new argument uses current internal results. No independent novelty determination or external-source claim was added."
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "c2a01f0aeed5383d4ddf219d7b96f34c6d024c36",
+    "scope": "Fetched main after ordinary fast-forward pushes and read all 22 files changed since 33ec573 byte for byte, including the proofs, exact checks and resume point.",
+    "research_hub_commit": "6272cfa3f7b492b129c5e4cc942a426cae10eb86",
+    "hub_scope": "Fetched the current hub, preserved concurrent changes, pushed just the nc-p3 row and verified the remote README byte for byte."
   },
   "open_mathematics": [
     "Use the intrinsic 10-column last Eagon-Northcott differential of a finite singly symmetric window. Classify distinct Veronese threefolds through its scheme of kernel lines, first for a reduced length-twenty scheme, and test whether a second representation has the required four-dimensional prolongation and AS property.",
