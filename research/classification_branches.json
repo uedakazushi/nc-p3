@@ -234,7 +234,8 @@
       "fixed_curve_exchange": "sections/fixed_exchange_isogeny.tex",
       "geometric_quartic_defect": "sections/fixed_geometric_quartic_locus.tex",
       "uniform_quartic_defect": "sections/uniform_fixed_quartic_support.tex",
-      "quintic_slice": "sections/fixed_quintic_locus.tex"
+      "quintic_slice": "sections/fixed_quintic_locus.tex",
+      "quintic_slope_test": "sections/varying_fixed_quintics.tex"
     },
     {
       "id": "UNRESTRICTED-SINGLY-SYMMETRIC-14",

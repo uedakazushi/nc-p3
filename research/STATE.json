@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 110,
+  "version": 111,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -1379,6 +1379,15 @@
       "verification": [
         "computations/verify_fixed_quintic_locus.py"
       ]
+    },
+    {
+      "id": "VARYING-SLOPE-FIXED-QUINTIC-RANKS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "Every ordinary negative fixed curve has no first obstruction in length five. The same is proved on every positive fixed curve over a common Zariski open of slopes containing (3,2), by eight characteristic and starting-position minors and a finite specialization argument.",
+      "proof": "sections/varying_fixed_quintics.tex",
+      "verification": [
+        "computations/verify_varying_fixed_quintics.py"
+      ]
     }
   ],
   "document_paths": {
@@ -1442,7 +1451,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "929e1dc4710f525c52a6b27ba488706884b6228c",
+  "reviewed_source_commit": "44f8a0df8d5aca011d4bcddf3bfb83f647ff37bf",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -1451,15 +1460,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Extend the length-five no-new-obstruction result to varying slopes using integer polynomial rank minors and the monomial flip at odd length. On the positive residual divisors test whether rank can drop on special slopes.",
+    "immediate_next_action": "Decide the remaining special slopes of the positive fixed curve in length five. The additional projected factors from its 86-by-86 minors are explicit in the integer polynomial computation. Compare independent minors on their common roots and on the four residual positive sections. In parallel as a mathematical alternative, test whether length six introduces genuinely new obstructions.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/varying_fixed_quintics.tex",
       "sections/fixed_quintic_locus.tex",
-      "sections/uniform_fixed_quartic_support.tex",
-      "sections/fixed_geometric_quartic_locus.tex"
+      "sections/uniform_fixed_quartic_support.tex"
     ],
-    "known_obstruction": "A fixed (3,2) quintic calculation does not exclude a generic defect specializing to a chart boundary or to the quartic locus.",
-    "state_of_claim": "The (3,2) geometric fiber has no first obstruction in length five. Uniformity of the quintic test and all-degree regularity remain separate obligations.",
+    "known_obstruction": "The extra positive resultant factors may meet under slope specialization; the (3,2) finite-fiber argument proves an open neighborhood only.",
+    "state_of_claim": "Length four is classified for all ordinary slopes on both curves. Conditional on the quartic test, length five is standard uniformly on the negative curve and on a slope open for the positive curve. All-degree AS regularity on the whole complement is not established.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 110,
+  "version": 111,
   "reviewed_input": {
-    "source_commit": "929e1dc4710f525c52a6b27ba488706884b6228c"
+    "source_commit": "44f8a0df8d5aca011d4bcddf3bfb83f647ff37bf"
   },
   "generation": {
     "result": "PASS",
-    "scope": "At slopes (3,2), every admissible fixed-curve window passing the length-four test passes length five at every start. A 120-by-100 insertion matrix in each character tests the quintic dimension; the only remaining degree-eight candidate orbits in the geometric slice satisfy the expected ranks."
+    "scope": "Every ordinary negative fixed curve has no first obstruction in length five. The same is proved on every positive fixed curve over a common Zariski open of slopes containing (3,2), by eight characteristic and starting-position minors and a finite specialization argument."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_fixed_quintic_locus.py",
+      "command": "python computations/verify_varying_fixed_quintics.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_uniform_fixed_quartic_support.py",
+      "command": "python computations/verify_fixed_quintic_locus.py",
       "result": "PASS"
     },
     {
@@ -33,16 +33,16 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed the two projected middle insertions, standard quintic character, two-position propagation and the number-field upper bounds."
+    "scope": "Reviewed odd-length character exchange, primitive row contents and determinant multipliers, proper finite projection and the separated companion sections."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Verified sixteen characteristic and starting-position insertion matrices, their maximal minors and residual ideals, and modular certificates on the two degree-eight fields."
+    "scope": "Certified eight exact four-variable degree-five minors, checked all projected factors on the negative curve and degree-preserving unramified finite first-coordinate factors above the (3,2) positive slice."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 229,
+      "nc-p3": 230,
       "plan_ja": 7,
       "notes_ja": 14
     },
@@ -58,7 +58,7 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Extend the length-five no-new-obstruction result to varying slopes using integer polynomial rank minors and the monomial flip at odd length. On the positive residual divisors test whether rank can drop on special slopes.",
+    "Decide the remaining special slopes of the positive fixed curve in length five. The additional projected factors from its 86-by-86 minors are explicit in the integer polynomial computation. Compare independent minors on their common roots and on the four residual positive sections. In parallel as a mathematical alternative, test whether length six introduces genuinely new obstructions.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
