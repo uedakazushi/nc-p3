@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 121,
+  "version": 122,
   "reviewed_input": {
-    "source_commit": "ed2db9340e17f930c455bd7a1995dec2619e797a"
+    "source_commit": "44e85899369d0266156b05dba29e79510da9bc7f"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every ordinary geometric window on both elliptic opposite-rank-14 components of the positive fixed locus is standard Koszul and left/right AS regular in characteristic zero. The four central quartics give a free polynomial-module basis of rank 256 at each start. Exact local saturation settles the two remaining residue disks t=19,80."
+    "scope": "Two explicit finite flat biquadratic covers give every rank-15 window on the positive ordinary fixed locus. The generic monodromy is D4. There are eight distinct rank-15 points off the collision and branch divisors, four distinct rank-15 points on the branch, and precisely the four regular rank-14 points on the collision. Both reduced ramification curves have model y²=-t⁴+14t²-1, j=35152/9; all sixteen windows above K=2 and both generic branch windows are AS regular."
   },
   "checks": [
     {
@@ -15,15 +15,11 @@
       "result": "PASS"
     },
     {
+      "command": "python computations/verify_rank_fifteen_covers.py",
+      "result": "PASS"
+    },
+    {
       "command": "python computations/verify_rank_fourteen_all_ordinary.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_rank_fourteen_central_cut.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_rank_fourteen_ramified_disks.py",
       "result": "PASS"
     },
     {
@@ -37,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked Gaussian norm units, common scaling of central components, precision loss under division, evaluation of integral formal power series on the punctured residue disks, and the all-degree Hilbert and Koszul argument."
+    "scope": "Reviewed normalization at a+e or b+f, endpoint validity by resultants, discriminants and monodromy, and generic regularity on both reduced ramification curves."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Computed exact Gaussian rational jets to order 27. Checked unit pivots at both primes over 101 and exact divisibility before each division by t-alpha, for both components, both sheets and all four starts.",
-    "reproduction": "SymPy 1.14.0 and python-flint 0.9.0. All 16 Gaussian-jet runs at starting precision 27 ended at precision 6 in length thirteen. Independently reran the complete degree-six and ramified-disk verifiers."
+    "scope": "Checked homogeneous completion and admissibility for both covers, the branch and overlap equations, irreducibility and inverse formulas for the elliptic model, and all four central-cut profiles at the sixteen split-prime windows."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 241,
+      "nc-p3": 243,
       "plan_ja": 7,
       "notes_ja": 15
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected the complete local saturation proof and theorem on page 215 of the 241-page manuscript."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "227caf7f9de2f136dd9c6c5f4f60c6d2d6e0ed06",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Move to the positive fixed opposite-rank-15 stratum. Analyze the two projected quartics over the ordinary slope plane using two-position exchange: determine their finite fibers, collisions, and what additional degeneracies remain off the now fully certified rank-fourteen curve. Use central-quotient certificates where constancy of the center is available.",
+    "Determine the remaining exceptional fibers on the two rank-15 ramification curves using their common quartic model. Compute the four central sections and the generic Artinian quotient; find the bad residue factors over F101[t] and use local saturation where direct specialization loses rank. The full ordinary rank-14 stratum and the rank-15 fiber counts are settled.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

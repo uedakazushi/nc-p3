@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 121,
+  "version": 122,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -1488,6 +1488,15 @@
       "verification": [
         "computations/verify_rank_fourteen_all_ordinary.py"
       ]
+    },
+    {
+      "id": "RANK-FIFTEEN-COVERS-AND-RAMIFICATION",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "Two explicit finite flat biquadratic covers give every rank-15 window on the positive ordinary fixed locus. The generic monodromy is D4. There are eight distinct rank-15 points off the collision and branch divisors, four distinct rank-15 points on the branch, and precisely the four regular rank-14 points on the collision. Both reduced ramification curves have model y²=-t⁴+14t²-1, j=35152/9; all sixteen windows above K=2 and both generic branch windows are AS regular.",
+      "proof": "sections/rank_fifteen_covers.tex",
+      "verification": [
+        "computations/verify_rank_fifteen_covers.py"
+      ]
     }
   ],
   "document_paths": {
@@ -1551,7 +1560,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "ed2db9340e17f930c455bd7a1995dec2619e797a",
+  "reviewed_source_commit": "44e85899369d0266156b05dba29e79510da9bc7f",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -1560,15 +1569,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Move to the positive fixed opposite-rank-15 stratum. Analyze the two projected quartics over the ordinary slope plane using two-position exchange: determine their finite fibers, collisions, and what additional degeneracies remain off the now fully certified rank-fourteen curve. Use central-quotient certificates where constancy of the center is available.",
+    "immediate_next_action": "Determine the remaining exceptional fibers on the two rank-15 ramification curves using their common quartic model. Compute the four central sections and the generic Artinian quotient; find the bad residue factors over F101[t] and use local saturation where direct specialization loses rank. The full ordinary rank-14 stratum and the rank-15 fiber counts are settled.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/rank_fifteen_covers.tex",
       "sections/rank_fourteen_all_ordinary.tex",
-      "sections/rank_fourteen_ramified_disks.tex",
       "sections/fixed_opposite_rank_drop.tex"
     ],
-    "known_obstruction": "Outside rank fourteen, generic regularity on each stratum does not certify all its exceptional fibers. Begin with the two degree-four covers in opposite rank fifteen.",
-    "state_of_claim": "The regularity question is closed on both entire ordinary rank-14 components of the fixed curves. Uniform rank 15, higher opposite rank, other strata and the unrestricted indexed classification remain open.",
+    "known_obstruction": "A nonempty regular open on each ramification elliptic curve does not yet decide its finite exceptional subset or all of the rank-15 surfaces.",
+    "state_of_claim": "The rank-15 covering geometry over every ordinary slope is explicit. The pointwise regularity problem remains on the two covers, including possible exceptional points of their ramification curves.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
