@@ -50,7 +50,9 @@
     "scope": "The new argument uses current internal results. No independent novelty determination or external-source claim was added."
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "verified_commit": "86f4d0850fee1e382612e78339b26d95eb958eb8",
+    "scope": "Fetched GitHub main after the v49 push and compared all eleven changed files since v47 byte-for-byte with the working tree."
   },
   "open_mathematics": [
     "Enumeration of the remaining genuine normalized square roots and their AS extensions, rank-six positive-dimensional branches, higher-rank coverage and general effective AS recognition."

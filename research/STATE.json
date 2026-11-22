@@ -896,7 +896,7 @@
     "goal": "Reach complete classification by the shortest mathematically rigorous route; fixed highest goal, no interim publication. Continue actual mathematical work within the authorized task and actual runtime/access constraints.",
     "checkpoint": "Best effort every approximately 15 minutes when new meaningful work exists, and before task termination; avoid empty WIP commits.",
     "stopping": "Full verified classification, real runtime/usage/access/safety block, or rigorously described exhaustion of currently actionable work; none implied by one failed method.",
-    "restart": "Use current GitHub main and resume_point; Cloud cannot start future tasks automatically."
+    "restart": "On each manual or scheduled start, fetch current GitHub main and follow resume_point. Check for work already saved by another run before starting or pushing."
   },
   "objective_policy": {
     "highest_goal": "Reach complete classification by the shortest mathematically rigorous route; this highest goal and the stated scope are fixed.",
