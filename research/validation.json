@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 75,
+  "version": 76,
   "reviewed_input": {
-    "source_commit": "80876607f0d356c640f28fa7f856e061bf0228ee"
+    "source_commit": "c10ed181ee3f747b4bb20f20e2eec7be3331e723"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Removing even symmetry produces a five-dimensional unmarked Klein-graded family whose final parameter lies on a genus-one double cover. The two neighboring rank constraints reduce to two quadratics with the same discriminant. The generic AS fibers have opposite rank sixteen, minimal period four and no exchange witnesses. An explicit rational fiber is certified by four central quartics, with four pairwise inequivalent reduced twenty-point configurations and Klein automorphism group at every position."
+    "scope": "On the nondegenerate thin chart with separable projective determinant quadratics (or both genuinely quadratic), every additional pairing is exactly one of four explicit sheets at lambda=+/-1,+/-1/z. Two are bisymmetric and the other two are Klein cocycle twists, giving an AS decision on all four. The quartic center lifts over the function field of an explicit elliptic parameter curve, yielding one open of regular closed fibers. Up to 32 affine character permutations decide unmarked indexed isomorphism on the generic full-rank chart."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_klein_elliptic_completion.py",
+      "command": "python computations/verify_klein_exceptional_pairings.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_klein_generic_quartics.py",
+      "command": "python computations/verify_klein_elliptic_completion.py",
       "result": "PASS"
     },
     {
@@ -31,26 +31,23 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_klein_full_rank_configurations.py",
+      "command": "python computations/verify_klein_elliptic_center.py",
       "result": "PASS"
     }
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed independent even-axis gauge, paired thin coefficient normalization, determinant quadratics, opposite scalar signs and the smooth branched cover, specialization from a regular point and polynomial rank squeeze at the full-rank rational fiber."
+    "scope": "Reviewed bilinear projective comparison at finite and infinite simple roots, eigenvalue factors, the four representations and twist equivalence, elliptic function-field exactness and the common affine character action."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Six-variable common-discriminant and quadratic-remainder identities, excluded pairing at a rational base, quartic separability, both adjacent ranks, full opposite determinant, rational quartic center and Artinian quotient at four starts. Prime 2657 checks all four schemes and projective map counts."
+    "scope": "Symbolic transfer of even and odd factors, cocycle tensor signs, graph presentation against the rank-six Gram matrices, and quartic center ranks over the exact quadratic elliptic function field."
   },
   "tex": {
     "result": "PASS",
-    "pages": {
-      "main": 183,
-      "plan": 6,
-      "notes": 13
-    },
-    "warnings": "No overfull boxes, missing glyphs or unresolved references."
+    "main_pages": 185,
+    "plan_pages": 6,
+    "notes_pages": 13
   },
   "visual_inspection": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
@@ -62,7 +59,7 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Decide the remaining root pairings and character reindexings on the elliptic chart, extend the central quartic certificate along its elliptic parameter, and determine the general deformations outside the marked Klein subgroup.",
+    "Study unrestricted deformations at the rational rank-ten and rank-sixteen points; compute orbit-normal tangents and primary obstructions, then seek full-dimensional actual components or a finite obstruction. Address identically zero determinant quadratics and singular cross blocks outside the present chart.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

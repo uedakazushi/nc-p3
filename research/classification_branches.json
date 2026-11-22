@@ -205,8 +205,8 @@
     },
     {
       "id": "KLEIN-ELLIPTIC-FULL-RANK",
-      "current_result": "Removing even symmetry produces a five-dimensional unmarked Klein-graded family whose final parameter lies on a genus-one double cover. The two neighboring rank constraints reduce to two quadratics with the same discriminant. The generic AS fibers have opposite rank sixteen, minimal period four and no exchange witnesses. An explicit rational fiber is certified by four central quartics, with four pairwise inequivalent reduced twenty-point configurations and Klein automorphism group at every position.",
-      "current_proof": "sections/klein_elliptic_completion.tex"
+      "current_result": "On the nondegenerate thin chart with separable projective determinant quadratics (or both genuinely quadratic), every additional pairing is exactly one of four explicit sheets at lambda=+/-1,+/-1/z. Two are bisymmetric and the other two are Klein cocycle twists, giving an AS decision on all four. The quartic center lifts over the function field of an explicit elliptic parameter curve, yielding one open of regular closed fibers. Up to 32 affine character permutations decide unmarked indexed isomorphism on the generic full-rank chart.",
+      "current_proof": "sections/klein_second_pairings.tex"
     }
   ],
   "presentation_components": {
