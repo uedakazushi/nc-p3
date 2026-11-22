@@ -1,0 +1,33 @@
+% !TeX root = ../papers/nc-p3.tex
+\section{階数15の全座標端での標準AS正則性}
+\label{sec:rank-fifteen-all-coordinate-ends}
+\begin{theorem}\label{thm:rank-fifteen-all-coordinate-ends}
+標数零の通常な階数15窓で枠のいずれかの座標が零ならば、両表示とも
+標準Koszul左右AS正則である。各始点の道空間は四本の四次中心元が生成する
+多項式環上で階数256の自由加群になる。従って定理\ref{thm:rank-fifteen-vertical-curves}
+の有限な正則性失敗候補は、$abef\ne0$ の内部に限られる。
+\end{theorem}
+\begin{proof}
+定理\ref{thm:rank-fifteen-coordinate-ends}で全座標端を楕円成分と
+有理成分に還元し、定理\ref{thm:rank-fifteen-coordinate-regularity}で楕円成分を認証した。
+残る第一表示の $m=ik,n=i$ で $\mathbb Q(i)(t)$ を係数体とする。
+四次中心と経路の一定次元は全通常点で既知である。楕円の場合と同じ自由座標の四中心切断で割り、
+始点0,1から右へ矢を追加する。
+\path{computations/verify_rank_fifteen_coordinate_regularity.py} は、
+両始点の各文字で長さ13まで前定理と同じ商次元上界を与える主元を取る。
+逆にした分子 $A+Bi$ の各ノルム $A^2+B^2$ の既約因子は合わせて593個である。
+
+同時反転 $t\mapsto-1/t$ により、$g(0)\ne0$ で
+$t^{\deg g}g(-1/t)$ の規格化も記録にある因子は26個となる。
+非通常点・表示外を除き、負の相反変換で組にすると残りは12軌道で、
+代表因子の次数は順に
+\[
+ 1,2,2,2,4,4,4,4,4,6,8,12
+\]
+となる。各代表について101,109,173,193のいずれかの単根を取る。
+両方の $i$ の剰余値で、経路、四次中心および四始点の四中心商を独立に検算する。
+$t$ の根の体に既に $i$ が含まれる場合にもこの二検査が全点を覆う。
+よって各通常窓に、四始点で同時に使える中心商の証明書を得る。
+中心多項式環に関する自由性と左右のKoszul複体の完全性は楕円成分と同じ議論で従う。
+二位置移動、倍率反転と有理成分の共役を適用して全座標端に戻す。
+\end{proof}

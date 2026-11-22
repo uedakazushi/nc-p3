@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 143,
+  "version": 144,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -1700,6 +1700,15 @@
       "verification": [
         "computations/verify_rank_fifteen_coordinate_collisions.py"
       ]
+    },
+    {
+      "id": "RANK-FIFTEEN-ALL-COORDINATE-ENDS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "All ordinary rank-fifteen coordinate ends on both presentations are standard Koszul and left/right AS regular, with paths free of rank 256 over four central quartics. On the remaining rational components 593 pivot factors reduce to 12 ordinary negative-reciprocal orbits, all verified at both Gaussian lifts. Any isolated rank-fifteen failure is interior, with all four frame coordinates nonzero.",
+      "proof": "sections/rank_fifteen_all_coordinate_ends.tex",
+      "verification": [
+        "computations/verify_rank_fifteen_coordinate_regularity.py"
+      ]
     }
   ],
   "document_paths": {
@@ -1763,7 +1772,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "98a461da11d2e0149457b898cf68849b9f8d5c36",
+  "reviewed_source_commit": "6c49023cc2746017e8d9f8d7c335e519c20aec93",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -1772,16 +1781,16 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Complete the Gaussian coordinate-end cut as in the preceding checkpoint, then search for isolated failures on the surface with all four frame coordinates nonzero. For indexed comparisons on the coordinate ends, only the explicit U-polynomials in rank_fifteen_coordinate_collisions.tex remain; decide actual equivalences at their geometric roots via exact tensor basis changes or further polynomial invariants.",
+    "immediate_next_action": "The coordinate-end regularity problem is finished. Seek isolated failure at abef nonzero on the first surface only: investigate the four sixth matrices at starts 0,1 and characters 0,2 with two independent pivot charts; for higher degrees extend the reciprocal central-cut method to another interior curve. For indexed classification use the explicit finite exceptional levels on the endpoint curves and recover tensor basis changes from the opposite map T.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/rank_fifteen_all_coordinate_ends.tex",
       "sections/rank_fifteen_coordinate_collisions.tex",
       "sections/rank_fifteen_coordinate_regularity.tex",
-      "sections/rank_fifteen_endpoint_orbits.tex",
-      "sections/rank_fifteen_coordinate_ends.tex"
+      "sections/rank_fifteen_word_symmetries.tex"
     ],
-    "known_obstruction": "A finite list of endpoint levels still requires an exact positive or negative comparison. The rational endpoint regularity computation and the isolated interior Koszul problem remain.",
-    "state_of_claim": "The listed levels are necessary collision conditions. Positive isomorphisms at these finite candidates and the remaining all-degree surface problem are open.",
+    "known_obstruction": "Only interior rank-fifteen points can still lack an all-degree regularity certificate. The full standard-14641 classification remains open.",
+    "state_of_claim": "Every ordinary coordinate-end window is certified. Interior isolated candidate failures and the positive or negative decisions for the finite exceptional indexed levels remain open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

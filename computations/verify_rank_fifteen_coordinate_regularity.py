@@ -8,11 +8,14 @@ from flint import fmpz_poly, nmod
 from rank_fifteen_octic import finite_windows
 from verify_rank_fifteen_coordinate_ends import (
     ELLIPTIC_BOUNDARY,
+    GAUSSIAN_BOUNDARY,
     EllipticChart,
+    GaussianChart,
     ONE,
     VARIABLE,
     ZERO,
     elliptic_frame,
+    gaussian_frame,
     irreducible_factors,
 )
 from verify_rank_fifteen_pencil_trace_disks import local_central_sections
@@ -161,6 +164,22 @@ ELLIPTIC_WITNESSES = (
 )
 
 
+GAUSSIAN_WITNESSES = (
+    (101, 3, 10),
+    (101, 26, 10),
+    (109, 60, 33),
+    (109, 62, 33),
+    (193, 185, 81),
+    (109, 45, 33),
+    (109, 85, 33),
+    (109, 103, 33),
+    (193, 85, 81),
+    (173, 66, 80),
+    (101, 99, 10),
+    (109, 101, 33),
+)
+
+
 def certify(family, frame, boundary, sign, expected, witnesses):
     factors = central_cut_factors(family, frame)
     confirm_residues(factors, family, frame, boundary, sign, expected, witnesses)
@@ -192,4 +211,13 @@ if __name__ == "__main__":
         1,
         (464, 69, 55),
         ELLIPTIC_WITNESSES,
+    )
+
+    certify(
+        GaussianChart,
+        gaussian_frame,
+        GAUSSIAN_BOUNDARY,
+        -1,
+        (593, 26, 12),
+        GAUSSIAN_WITNESSES,
     )
