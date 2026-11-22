@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 158,
+  "version": 159,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -1836,6 +1836,15 @@
       "verification": [
         "computations/verify_rank_fifteen_cubic_zero_disk.py"
       ]
+    },
+    {
+      "id": "RANK-FIFTEEN-X-ZERO-COMPLETE-CONIC",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "All rank-fifteen windows with x=0 are standard Koszul left/right AS-regular of minimal period two and free of rank 256 over four quartics. Their indexed classes form the punctured conic j in G_m minus plus/minus one. A transverse quantitative 3-adic tube is also certified.",
+      "proof": "sections/rank_fifteen_x_zero.tex",
+      "verification": [
+        "computations/verify_rank_fifteen_x_zero.py"
+      ]
     }
   ],
   "document_paths": {
@@ -1899,7 +1908,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "9e53d6e06e298222c53fe48615b0aa9a1ba955ff",
+  "reviewed_source_commit": "2318337ebdbf0bb9f3745d2b657cc74d9f949bec",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -1908,16 +1917,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Move from the now complete fixed curve p=0 to the remaining isolated rank-fifteen interior candidates. Test x=0 using U=-3 and its small-y disk at 3, or resolve the complementary sector val(y)>2 val(x) through the rank-four degeneration. Use the p=0 saturation procedure when initial path ranks drop.",
+    "immediate_next_action": "Pursue a uniform small-y disk for traces reducing to zero at 3. At H=0 parametrize K=(z^2+z^-2)/2, P=z+1/z, Q=z-1/z, n0=(z^2-z^-2)/2. Compute the saturated generic minors over Q(z), beginning with the order-two fourth defect and then the sixth insertion and centers. The complementary valuation sector and unrestricted coverage are open.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/rank_fifteen_x_zero.tex",
       "sections/rank_fifteen_cubic_zero_disk.tex",
-      "sections/pauli_projective_boundary.tex",
-      "sections/rank_fifteen_residue_line.tex",
-      "sections/rank_twelve_quantum_limit.tex"
+      "sections/rank_fifteen_residue_line.tex"
     ],
     "known_obstruction": "Possible isolated interior failures of all-degree regularity on the (x,y) plane and uncovered general nonsymmetric windows.",
-    "state_of_claim": "All of the shifted-opposite fixed divisor, including the two exceptional period-one points, is certified. Other isolated interior candidates and unrestricted coverage remain open.",
+    "state_of_claim": "The x=0 conic has complete indexed parameters, regularity and period. A uniform disk for variable trace and the unrestricted classification remain open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

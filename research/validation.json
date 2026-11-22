@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 158,
+  "version": 159,
   "reviewed_input": {
-    "source_commit": "9e53d6e06e298222c53fe48615b0aa9a1ba955ff"
+    "source_commit": "2318337ebdbf0bb9f3745d2b657cc74d9f949bec"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every characteristic-zero rank-fifteen window on p=0 (x^3=27y) is standard Koszul left/right AS-regular and free of rank 256 over four quartics. The cubic is a rational nodal curve with two period-one points and period two elsewhere. The exact 3-adic cut certifies the transverse neighborhood val(K-3)>=25 val(H)>0."
+    "scope": "All rank-fifteen windows with x=0 are standard Koszul left/right AS-regular of minimal period two and free of rank 256 over four quartics. Their indexed classes form the punctured conic j in G_m minus plus/minus one. A transverse quantitative 3-adic tube is also certified."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_cubic_zero_disk.py",
+      "command": "python computations/verify_rank_fifteen_x_zero.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_pauli_projective_boundary.py",
+      "command": "python computations/verify_rank_fifteen_cubic_zero_disk.py",
       "result": "PASS"
     },
     {
@@ -33,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked integral roots on K=3, H=0, center reconstruction, precision loss, dependence on K mod H^25, all three valuation cases and both minimal periods."
+    "scope": "Checked the ramified integral basis, univariate roots, all three valuation cases, the transverse tube and the conic parameter and fibers."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact order-25 Q(sqrt(2)) jets; unit or exact H-divisibility checks at each pivot, four central equations and four-start central quotients through length 13.",
-    "reproduction": "Recomputed exact order-25 jets at all four starts, with positive precision through length 13. Recomputed the rank-nine obstruction and the exceptional rank-fourteen certificates."
+    "scope": "Exact arithmetic over Q(i,sqrt(3)) with its ramified prime above three; four periodic saturated central cuts through length 13, and regression on the inert cubic trace."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 285,
+      "nc-p3": 286,
       "plan_ja": 8,
       "notes_ja": 16
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected page 258, including the saturated path and center calculations, per-length precision losses, and valuation covering proof."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "1aca58b6d0634d6a215e41b9c0d1115c25ba1627",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Move from the now complete fixed curve p=0 to the remaining isolated rank-fifteen interior candidates. Test x=0 using U=-3 and its small-y disk at 3, or resolve the complementary sector val(y)>2 val(x) through the rank-four degeneration. Use the p=0 saturation procedure when initial path ranks drop.",
+    "Pursue a uniform small-y disk for traces reducing to zero at 3. At H=0 parametrize K=(z^2+z^-2)/2, P=z+1/z, Q=z-1/z, n0=(z^2-z^-2)/2. Compute the saturated generic minors over Q(z), beginning with the order-two fourth defect and then the sixth insertion and centers. The complementary valuation sector and unrestricted coverage are open.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
