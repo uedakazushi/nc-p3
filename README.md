@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-22 / v115。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v116。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -214,6 +214,8 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 
 階数14の二位置移動を二重被覆の共役と同定し、全域の表示から中心の計算を一変数に降ろした。101で有理な全192剰余点に還元される標数零の窓はAS正則である。[証明と判定](sections/rank_fourteen_descent.tex)
 
+階数14の全通常点で四次中心の文字次元を (3,2,0,0) と決定し、中心小行列式の例外に属する全280幾何点の全次数正則性を証明した。[証明と判定](sections/rank_fourteen_center.tex)
+
 二窓から作る56次元代数で、低次Extの消滅を逆Serre反復が保つ構造条件を探す。
 「全次数を証明してAS認証」「有限障害で排除」「未決定」を分け、有限検査の成功を全AS認証としない。
 正規形の枝、特殊値、枝間同型の条件を証明し、未分類の残余を明示する。
@@ -299,6 +301,7 @@ python3 computations/verify_uniform_positive_quintics.py
 python3 computations/verify_fixed_residual_regularity.py
 python3 computations/verify_fixed_opposite_rank_drop.py
 python3 computations/verify_rank_fourteen_descent.py
+python3 computations/verify_rank_fourteen_center.py
 python3 computations/verify_varying_opposite_rank.py
 python3 computations/verify_fixed_rank_fourteen.py
 python3 computations/verify_uniform_quintic_companions.py

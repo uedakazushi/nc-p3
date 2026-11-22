@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 115,
+  "version": 116,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -1431,6 +1431,16 @@
       "verification": [
         "computations/verify_rank_fourteen_descent.py"
       ]
+    },
+    {
+      "id": "UNIFORM-QUARTIC-CENTER-ON-RANK-FOURTEEN",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "The quartic center of both rank-fourteen elliptic components has character dimensions (3,2,0,0) at every ordinary geometric point. Exact commutator minors and a path-basis chart leave four rational irreducible base factors of degrees 8,8,20,34. All 280 geometric windows over them are AS regular in all degrees.",
+      "proof": "sections/rank_fourteen_center.tex",
+      "verification": [
+        "computations/verify_rank_fourteen_center.py",
+        "computations/rank_fourteen_function_field.py"
+      ]
     }
   ],
   "document_paths": {
@@ -1494,7 +1504,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "7bc87c3d5ffbb52ff3844efb8b51ba7efcf69b26",
+  "reviewed_source_commit": "40382565eafc836b1f9e84282f5534c59e671ff0",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -1503,15 +1513,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Over the localized PID Q(i)[t] on the ordinary rank-fourteen base, use the global frame in sections/rank_fourteen_descent.tex and replace c+d*s by its two-by-two multiplication matrix. Construct the length-four and length-five free presentations without a monomial-basis pole, then compute gcds of maximal minors of the character-graded central commutators. Certify the Artinian quotient on each remaining geometric root over its residue field. The 192 F101-rational residues are already checked; extension-field points and reductions at the boundary still matter.",
+    "immediate_next_action": "Use the explicit quartic center basis on the complement of the four certified base factors. Pick two degree-zero character combinations and the two character-one forms, compute the character-graded Artinian quotient through degree thirteen over the elliptic function field, and certify candidate roots of the pivot minors with independent cuts or simple-prime certificates. If needed use degree-bounded or fraction-free row reduction to avoid coefficient growth. The four center-minor factors need no additional tests.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/rank_fourteen_center.tex",
       "sections/rank_fourteen_descent.tex",
-      "sections/fixed_opposite_rank_drop.tex",
       "sections/fixed_residual_regularity.tex"
     ],
-    "known_obstruction": "The quotient base is rational and the path spaces in lengths four and five are free after restriction of scalars. The univariate invariant factors of the center equations and the Artinian quotient ideals are still unknown. Ordinary geometric points can reduce outside F101-rational ordinary fibers.",
-    "state_of_claim": "Both rank-fourteen elliptic components quotient by position exchange to the ordinary rational t-base. The 192 rational residue disks described in the proposition are regular in characteristic zero. A global all-degree classification of the finite remaining geometric candidates is open.",
+    "known_obstruction": "Only the Artinian central quotient remains on this stratum. The path normalization has one octic pole, already certified, and all four projected center-minor orbits are settled.",
+    "state_of_claim": "The quartic commutator rank is now constant on the entire ordinary rank-14 locus. All exceptions of the chosen path and center minors are AS regular; the Artinian quotient on the rest is still to be classified.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
