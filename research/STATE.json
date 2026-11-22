@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 136,
+  "version": 137,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -1637,6 +1637,15 @@
       "verification": [
         "computations/verify_rank_fifteen_vertical_curves.py"
       ]
+    },
+    {
+      "id": "RANK-FIFTEEN-UNIFORM-FROBENIUS-DUAL",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "Every ordinary rank-fifteen window in both positive-fixed presentations has standard Frobenius quadratic dual (1,4,6,4,1), including all potential isolated failures. Each opposite null line is an invertible two-letter form; the cubic overlaps are precisely the potential contractions, the fourth overlap is the potential line and the fifth is zero. Standard regularity on these sheets thus reduces to Koszulity.",
+      "proof": "sections/rank_fifteen_quadratic_dual.tex",
+      "verification": [
+        "computations/verify_rank_fifteen_quadratic_dual.py"
+      ]
     }
   ],
   "document_paths": {
@@ -1700,7 +1709,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "502209278887cb8523a74fe98fa2b31aba988f5e",
+  "reviewed_source_commit": "fc321d607f7f3ee81209f4dd78fa7667bee1c016",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -1709,16 +1718,16 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Locate or exclude the isolated algebraic points on the two ordinary rank-fifteen surfaces. Start with the low-degree path rank jumps: use a homogeneous minor chart on (z,lambda,n) satisfying P(n)=0, saturate the ordinary denominators, and use a second chart before solving the zero-dimensional Fitting locus. Keep center and central-cut failures separate from path jumps. As an independent fixed-fiber test the 101 proof on ξ=9/16 still lacks higher-degree ordinary x residues.",
+    "immediate_next_action": "On the ordinary P(n)=0 surfaces use the known constant path dimensions through five, not new degree-four or degree-five path tests. Form the degree-six relation-insertion matrices of sizes 56×54,56×54,56×51,56×51 for each start and saturate their rank-drop ideals (target ranks 36,36,34,34) by ordinary denominators. Their possible geometric support is finite. In parallel logically distinguish the quartic-center rank and four-cut obstructions: the degree-six Hilbert test alone need not decide Koszulity.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/rank_fifteen_quadratic_dual.tex",
       "sections/rank_fifteen_vertical_curves.tex",
-      "sections/rank_fifteen_generic_levels.tex",
-      "sections/rank_fifteen_pencil_infinity.tex",
+      "sections/fixed_opposite_rank_drop.tex",
       "sections/rank_fifteen_covers.tex"
     ],
-    "known_obstruction": "A regular generic point on every fiber excludes vertical components but does not decide individual isolated points. The auxiliary infinity factors only test the ends and are not coordinates of failures.",
-    "state_of_claim": "All ordinary positive-fixed rank-fifteen windows are certified outside a finite set of algebraic points; the possible isolated failures are neither enumerated nor shown to exist. Other branches of the unrestricted classification remain open.",
+    "known_obstruction": "The Frobenius quadratic dual and the path dimensions through degree five hold everywhere on these surfaces. The degree-six determinantal support is finite but has not been calculated, and Koszulity can require further data.",
+    "state_of_claim": "All candidate exceptions on these sheets are isolated algebraic points with standard Frobenius quadratic dual. Their Koszulity and even their existence remain open. Other branches remain open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

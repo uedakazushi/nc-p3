@@ -1,17 +1,21 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 136,
+  "version": 137,
   "reviewed_input": {
-    "source_commit": "502209278887cb8523a74fe98fa2b31aba988f5e"
+    "source_commit": "fc321d607f7f3ee81209f4dd78fa7667bee1c016"
   },
   "generation": {
     "result": "PASS",
-    "scope": "On both ordinary positive-fixed rank-fifteen surfaces all potential failures of the four central quartic criterion, hence of standard Koszul left/right AS regularity, form at most a finite set of algebraic points. Every smooth genus-five level has a certified generic point via at least one of its two simultaneous small-root infinity ends."
+    "scope": "Every ordinary rank-fifteen window in both positive-fixed presentations has standard Frobenius quadratic dual (1,4,6,4,1), including all potential isolated failures. Each opposite null line is an invertible two-letter form; the cubic overlaps are precisely the potential contractions, the fourth overlap is the potential line and the fifth is zero. Standard regularity on these sheets thus reduces to Koszulity."
   },
   "checks": [
     {
       "command": "bash scripts/cloud_preflight.sh --tex",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_rank_fifteen_quadratic_dual.py",
       "result": "PASS"
     },
     {
@@ -29,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked the gauge equation including the numerical factor 2, reciprocal level identification, simple root lifting for every residual orbit, irreducibility of each smooth fiber and the dimension of the finite-type certificate complement."
+    "scope": "Checked the connected 2×2 consistency system, full opposite kernel on both sides, the intertwining of endomorphisms across the opposite flattening, vanishing of the fifth intersection and the Euler ranks in degree six."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact periodic gauge and Q(y) central cuts at the two small-root infinity ends, 994/923 primitive pivot factors, 17/33 reciprocal candidates and 11/19 residual orbit representatives checked at split primes.",
-    "reproduction": "Computed the two Q(y) infinity charts exactly, factored all pivot numerators, intersected reciprocal supports and verified the 30 remaining smooth orbits with simple split roots at 101, 103 or 107."
+    "scope": "Exact determinants of the four thick and thin block charts, both symmetric opposite-block identities, nondegeneracy of the monomial null lines, and character ranks for the first undecided Hilbert layer."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 259,
+      "nc-p3": 260,
       "plan_ja": 7,
       "notes_ja": 15
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Read the periodic-gauge proof and the residual and constructibility arguments on pages 232–233, including rendered page 233."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "5b0152b130f235891a0dbc9aae0ce235aab8096b",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Locate or exclude the isolated algebraic points on the two ordinary rank-fifteen surfaces. Start with the low-degree path rank jumps: use a homogeneous minor chart on (z,lambda,n) satisfying P(n)=0, saturate the ordinary denominators, and use a second chart before solving the zero-dimensional Fitting locus. Keep center and central-cut failures separate from path jumps. As an independent fixed-fiber test the 101 proof on ξ=9/16 still lacks higher-degree ordinary x residues.",
+    "On the ordinary P(n)=0 surfaces use the known constant path dimensions through five, not new degree-four or degree-five path tests. Form the degree-six relation-insertion matrices of sizes 56×54,56×54,56×51,56×51 for each start and saturate their rank-drop ideals (target ranks 36,36,34,34) by ordinary denominators. Their possible geometric support is finite. In parallel logically distinguish the quartic-center rank and four-cut obstructions: the degree-six Hilbert test alone need not decide Koszulity.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

@@ -260,7 +260,8 @@
       "rank_fifteen_horizontal_specialization": "sections/rank_fifteen_horizontal_specialization.tex",
       "rank_fifteen_relative_trace_centers": "sections/rank_fifteen_relative_trace_centers.tex",
       "rank_fifteen_generic_levels": "sections/rank_fifteen_generic_levels.tex",
-      "rank_fifteen_isolated_exceptions": "sections/rank_fifteen_vertical_curves.tex"
+      "rank_fifteen_isolated_exceptions": "sections/rank_fifteen_vertical_curves.tex",
+      "rank_fifteen_frobenius_dual": "sections/rank_fifteen_quadratic_dual.tex"
     },
     {
       "id": "UNRESTRICTED-SINGLY-SYMMETRIC-14",
