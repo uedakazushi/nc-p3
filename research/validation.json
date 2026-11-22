@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Degree-aware pivots in the exact elliptic function field, reciprocal comparison, both residue lifts above 55 ordinary orbits with four-center-cut profiles, and conjugate rational image separation at 109."
+    "scope": "Degree-aware pivots in the exact elliptic function field, reciprocal comparison, both residue lifts above 55 ordinary orbits with four-center-cut profiles, and conjugate rational image separation at 109.",
+    "reproduction": "Independently reproduced all 464 exact elliptic pivot factors using the public implementation, then verified both residue lifts for the 55 ordinary reciprocal orbits. Checked the distinct rational image fibers at 109."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript page 239, including the central quotient profile, reciprocal factor reduction and the normalization formulas."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "a845287530d38c673cd5e9e6569994106878bced",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Finish the remaining m=ik,n=i rational coordinate endpoint with the identical degree-aware four-central-cut algorithm. Use GaussianChart, gaussian_frame, GAUSSIAN_BOUNDARY, reciprocal sign -1, and both square roots of -1 at each split-prime witness. Then any candidate isolated failure is interior to both frame charts. For special indexed collisions compare the complete normalized curves, retaining trace-zero points.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "df8328faef3023c5904639528b0c0887618217f5",
+    "commit": "84b7666e1955b669c7fea01516baa1c6a0ad536e",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
