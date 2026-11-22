@@ -227,7 +227,8 @@
         "exceptional_exchange_sheets": "sections/exceptional_exchange_sheets.tex"
       },
       "intrinsic_block_recovery": "sections/rank_two_block_recovery.tex",
-      "unmarked_character_frames": "On both full-rank marked neighborhoods the two block determinant quadrics leave exactly three even-sign involutions per edge as character-frame candidates. A shared pair of axes fixes the neighboring choice, so at most three unlabeled decompositions survive around four positions."
+      "unmarked_character_frames": "The thin pencil and the branch divisor of the recovered quartic select a unique unmarked character frame at both full-rank samples and on their neighborhoods. Standard windows on this open are index-preservingly isomorphic exactly when one of 32 monomial permutations passes an integral torus test, including coefficient zeroes.",
+      "unmarked_frame_isomorphism": "sections/unique_character_frames.tex"
     },
     {
       "id": "UNRESTRICTED-SINGLY-SYMMETRIC-14",

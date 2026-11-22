@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-22 / v103。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v104。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -190,6 +190,8 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 
 階数16の単根・重根の両近傍で四辺全ての階数二曲線は次数4と16に分かれる。四次成分から二文字ブロックを、第一辺から印なし不変量を復元できる。四辺に整合する順序なし文字直線の候補は高々三通りである。[証明と判定](sections/rank_two_block_recovery.tex)
 
+薄い二色と四次成分の分岐因子で文字直線の分解が一意に決まる。二十点配置を計算せず、32置換と係数の積で印なし添字保持同型を判定できる。[証明と判定](sections/unique_character_frames.tex)
+
 二窓から作る56次元代数で、低次Extの消滅を逆Serre反復が保つ構造条件を探す。
 「全次数を証明してAS認証」「有限障害で排除」「未決定」を分け、有限検査の成功を全AS認証としない。
 正規形の枝、特殊値、枝間同型の条件を証明し、未分類の残余を明示する。
@@ -263,6 +265,7 @@ python3 computations/verify_binary_window_transfer.py
 python3 computations/verify_binary_incidence_sextic.py
 python3 computations/verify_companion_rank_two_sections.py
 python3 computations/verify_rank_two_block_recovery.py
+python3 computations/verify_unique_character_frames.py
 python3 computations/verify_klein_elliptic_center.py
 python3 computations/verify_klein_full_rank_configurations.py
 python3 computations/verify_rank_five_pencils.py

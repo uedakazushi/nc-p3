@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 103,
+  "version": 104,
   "reviewed_input": {
-    "source_commit": "0f07785ce82734f7ee96845cf844e71d77f781a3"
+    "source_commit": "7b58de1ab92ccf65da939010dd0dca916bcb5a11"
   },
   "generation": {
     "result": "PASS",
-    "scope": "On both full-rank marked neighborhoods the two block determinant quadrics leave exactly three even-sign involutions per edge as character-frame candidates. A shared pair of axes fixes the neighboring choice, so at most three unlabeled decompositions survive around four positions."
+    "scope": "The thin pencil and the branch divisor of the recovered quartic select a unique unmarked character frame at both full-rank samples and on their neighborhoods. Standard windows on this open are index-preservingly isomorphic exactly when one of 32 monomial permutations passes an integral torus test, including coefficient zeroes."
   },
   "checks": [
     {
@@ -15,63 +15,7 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_zero_pairing_defect.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_all_zero_pairing_defects.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_single_zero_pairings.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_kummer_discriminant.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_kummer_polar.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_paired_root_resolution.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_kummer_exchange_quotient.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_exceptional_ramification.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_polygon_multiplication.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_exceptional_exchange_sheets.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_binary_product_obstruction.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_bisymmetric_finite_test.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_binary_window_transfer.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_binary_incidence_sextic.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_companion_rank_two_sections.py",
+      "command": "python computations/verify_unique_character_frames.py",
       "result": "PASS"
     },
     {
@@ -89,35 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked the simultaneous stabilizer via trace, even signs, rulings, fixed-point pairs and matching of adjacent candidates."
+    "scope": "Checked the commuting projective involutions, intrinsic thin-axis comparison, marked sparsity in all high-bit patterns, and saturated integral kernel of the torus map."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Boundary Hilbert ranks on eight three-variable simultaneous-zero spaces and 32 exceptional single-zero spaces; rational ramification central cut and four point configurations; Kummer discriminant, polarity, small resolution and free exchange; four exceptional exchange sheets; uniform bisymmetric path criterion; Frobenius partitions and characteristic frames at eight full-rank edges."
+    "scope": "Computed distinct branch roots, reciprocal-branch exclusions, both Smith forms, all 32 self-comparisons, including the ramification sample with a zero coefficient."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 221,
+      "nc-p3": 222,
       "plan_ja": 7,
       "notes_ja": 14
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Rendered and inspected the manuscript pages 190 and 194, containing the finite path criterion and the rank-two curves."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "4ebb1b189585edd78b0ad7ee611b273416c46567",
-    "scope": "Re-fetched main and byte-compared every modified source file from c43c5d1 through the research commit."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Compute which of the three candidate character frames preserve the two thin pencils at each edge, determine their exact multiplicity and recover the remaining scale and finite relabelings. Continue residual AS work on the Kummer complement and rank-two degeneration on the degree-six boundary.",
+    "Determine the first-edge reciprocal-branch divisor on the whole marked chart and resolve where alternative frames can really pass both thin-block comparisons. Independently diagnose the degree-six boundary via the degenerating rank-two curve.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
