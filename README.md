@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-22 / v123。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v124。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -230,6 +230,8 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 
 階数15の二分岐曲線の全通常点で四次中心と長さ6までの中心商を決定した。消去に残る5336点は全次数で正則。[証明と判定](sections/rank_fifteen_branch_center.tex)
 
+階数15の二分岐曲線で、101で境界または有理点に還元される全通常点の正則性を証明した。第一座標が有理数の全点を含む。[証明と判定](sections/rank_fifteen_boundary_disks.tex)
+
 二窓から作る56次元代数で、低次Extの消滅を逆Serre反復が保つ構造条件を探す。
 「全次数を証明してAS認証」「有限障害で排除」「未決定」を分け、有限検査の成功を全AS認証としない。
 正規形の枝、特殊値、枝間同型の条件を証明し、未分類の残余を明示する。
@@ -324,6 +326,8 @@ python3 computations/verify_rank_fourteen_ramified_disks.py
 python3 computations/verify_rank_fourteen_all_ordinary.py
 python3 computations/verify_rank_fifteen_covers.py
 python3 computations/verify_rank_fifteen_branch_center.py
+python3 computations/verify_rank_fifteen_boundary_disks.py
+python3 computations/verify_rank_fifteen_rational_residues.py
 python3 computations/verify_varying_opposite_rank.py
 python3 computations/verify_fixed_rank_fourteen.py
 python3 computations/verify_uniform_quintic_companions.py

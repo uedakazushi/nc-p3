@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 123,
+  "version": 124,
   "reviewed_input": {
-    "source_commit": "9f36e91db6174e1c2e87bcf8abe01449c112fbd9"
+    "source_commit": "931db595d10c89588af5b0efed45c8b5cd8e7a2d"
   },
   "generation": {
     "result": "PASS",
-    "scope": "On both elliptic rank-15 ramification curves the quartic center has character dimensions (3,2,0,0) at every ordinary point, and a common four-cut attains the standard profile through length six. All 5336 geometric points from the residual factors (2720 and 2616) are standard Koszul AS regular. The regular slope open for both entire finite covers contains the complete ordinary rank-14 collision divisor."
+    "scope": "Both rank-15 ramification curves are standard Koszul left/right AS regular and 256-free at every ordinary characteristic-zero point whose parameter reduces above 101 to a boundary point or to P1(F101). This includes all rational parameters. The two pole divisors admit regular weighted limits after a quadratic base change."
   },
   "checks": [
     {
@@ -15,15 +15,11 @@
       "result": "PASS"
     },
     {
+      "command": "python computations/verify_rank_fifteen_boundary_disks.py",
+      "result": "PASS"
+    },
+    {
       "command": "python computations/verify_rank_fifteen_branch_center.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_rank_fifteen_covers.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_rank_fourteen_center.py",
       "result": "PASS"
     },
     {
@@ -37,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked selected minors versus their specializations, the shift involution for the four starts, both sheets at simple residue roots and the quartic-center lifting hypotheses."
+    "scope": "Audited Hensel uniformizers, exact divisibility, characterwise quotient ranks, the eight half-integral arrow rescalings and finite-field lifting."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Checked exact minors over both ramification function fields, 49 and 47 residual factors, their two split sheets and four starting positions, and finite morphism descent of the regular neighborhood.",
-    "reproduction": "SymPy 1.14.0 and python-flint 0.9.0. Run computations/verify_rank_fifteen_branch_center.py for the exact minors and finite geometric fibers."
+    "scope": "Verified exact saturated series at the finite and infinite boundary, eight regular weighted limits, both sheets above six quadratic residual factors, and all 48 shift pairs for each cover at ordinary degree-one residues."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 245,
+      "nc-p3": 246,
       "plan_ja": 7,
       "notes_ja": 15
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected the rendered manuscript page 218 with both counts, the recurrence and the collision-neighborhood corollary."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "aeddea37290d8323ee00a8b69af6cbbd6a776782",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Decide regularity in length 7 through 13 on both ordinary rank-15 ramification curves. Compute the degree-13 dual Fitting support at 101, specialize all residual ordinary roots and use weighted reductions or saturated local rows on the nonordinary residue disks.",
+    "Finish the F_101[t] dual Fitting supports in lengths 2 to 13 for starts 0 and 1 on both rank-15 ramification curves; retest the remaining ordinary irreducible factors of degree at least two. All boundary and degree-one disks are settled.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

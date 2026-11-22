@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 123,
+  "version": 124,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -1506,6 +1506,16 @@
       "verification": [
         "computations/verify_rank_fifteen_branch_center.py"
       ]
+    },
+    {
+      "id": "RANK-FIFTEEN-BOUNDARY-DISKS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "Both rank-15 ramification curves are standard Koszul left/right AS regular and 256-free at every ordinary characteristic-zero point whose parameter reduces above 101 to a boundary point or to P1(F101). This includes all rational parameters. The two pole divisors admit regular weighted limits after a quadratic base change.",
+      "proof": "sections/rank_fifteen_boundary_disks.tex",
+      "verification": [
+        "computations/verify_rank_fifteen_boundary_disks.py",
+        "computations/verify_rank_fifteen_rational_residues.py"
+      ]
     }
   ],
   "document_paths": {
@@ -1569,7 +1579,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "9f36e91db6174e1c2e87bcf8abe01449c112fbd9",
+  "reviewed_source_commit": "931db595d10c89588af5b0efed45c8b5cd8e7a2d",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -1578,15 +1588,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Decide regularity in length 7 through 13 on both ordinary rank-15 ramification curves. Compute the degree-13 dual Fitting support at 101, specialize all residual ordinary roots and use weighted reductions or saturated local rows on the nonordinary residue disks.",
+    "immediate_next_action": "Finish the F_101[t] dual Fitting supports in lengths 2 to 13 for starts 0 and 1 on both rank-15 ramification curves; retest the remaining ordinary irreducible factors of degree at least two. All boundary and degree-one disks are settled.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/rank_fifteen_boundary_disks.tex",
       "sections/rank_fifteen_branch_center.tex",
-      "sections/rank_fifteen_covers.tex",
-      "sections/rank_fourteen_all_ordinary.tex"
+      "sections/rank_fifteen_covers.tex"
     ],
-    "known_obstruction": "The length-six uniform bound does not yet certify length thirteen across all ordinary ramification points. Residue disks with nonordinary reduction need direct treatment.",
-    "state_of_claim": "Ramification center and length-six bounds are uniform. Global regularity on the rank-15 ramification curves and surfaces remains open.",
+    "known_obstruction": "Only ordinary higher-degree residue factors of the dual Fitting support can still obstruct the rank-15 ramification theorem. The complete rank-15 surfaces and unrestricted classification remain open.",
+    "state_of_claim": "All boundary and degree-one residue disks are certified. A possible exceptional ordinary window must reduce only to ordinary higher-degree factors.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
