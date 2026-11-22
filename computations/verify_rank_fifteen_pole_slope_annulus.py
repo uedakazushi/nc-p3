@@ -55,7 +55,8 @@ def relations(jet, half, r, s):
 
 
 def initial_tables(jet, precision, half, r, s, *, build=relations,
-                   uncut_losses=(0, 1, 1, 2, 2), fifth_loss=2):
+                   uncut_losses=(0, 1, 1, 2, 2), center_losses=(0, 1, 1, 1),
+                   fourth_loss=0, fifth_loss=2):
     jet.precision = precision
     windows = build(jet, half, r, s)
     normalization = []
@@ -84,7 +85,7 @@ def initial_tables(jet, precision, half, r, s, *, build=relations,
             if coordinates:
                 normalization.append((h, p, tuple(words), coordinates))
             offset += len(words)
-        assert loss == (0 if h == 0 else 1)
+        assert loss == center_losses[h]
         for j in range(1 if h == 0 else 0, dimension):
             offset = 0
             for p in range(4):
@@ -92,9 +93,9 @@ def initial_tables(jet, precision, half, r, s, *, build=relations,
                 centers[p].append((h, {word: projection[offset+i][j] for i, word in enumerate(paths)
                                        if j in projection[offset+i]}))
                 offset += len(paths)
-    jet.precision -= 1
-    assert jet.precision == precision-sum(uncut_losses)-1
-    tables = initial_products(jet, basis, image, centers, (0, 0, 0, 0, 0, fifth_loss))
+    jet.precision -= max(center_losses)
+    assert jet.precision == precision-sum(uncut_losses)-max(center_losses)
+    tables = initial_products(jet, basis, image, centers, (0, 0, 0, 0, fourth_loss, fifth_loss))
     return tables, normalization
 
 

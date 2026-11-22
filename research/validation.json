@@ -1,17 +1,21 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 171,
+  "version": 172,
   "reviewed_input": {
-    "source_commit": "6da17c1e6ec7ef02ae4fb0c9a95eaafcf78267d9"
+    "source_commit": "d1a4a815b20ea1b10d8f96113cc5ec533cd61809"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For ordinary characteristic-zero rank-fifteen windows above three, every nonzero geometric x residue other than 1 on the pole-slope annulus is standard Koszul left/right AS-regular and free of rank 256 per start over four central quartics whenever 0<3v(y)<=2v(3)."
+    "scope": "For ordinary characteristic-zero rank-fifteen windows over three with xbar=1, v(y)>0, 2v(x-1)>=v(y) and residue J=(x-1)^2/(4y) different from 1, the six-digit annulus 3v(y)<=2v(3) is standard Koszul left/right AS-regular and free of rank 256 per start. This includes the vertical x=1 annulus. At the collision, v(J-1)>=9v(y) suffices at arbitrary depth by an exact Gaussian 20-digit certificate."
   },
   "checks": [
     {
       "command": "bash scripts/cloud_preflight.sh --tex",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_rank_fifteen_ramified_pole.py",
       "result": "PASS"
     },
     {
@@ -29,17 +33,16 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked the eight conic charts, saturation through the sixth degree and transfer from formal word lattices to the specialized multiplication tables."
+    "scope": "Checked the change of square-root coordinates, the lift of all eight tangent representatives, the two-sided basis changes, and mixed-characteristic restart. Factored both collision branches and checked the H^2 gain in the distance from the Gaussian chart."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact six-degree lattices over Q(s) with pivot divisor s^9-s; degree-121 residue divisor, degree-48 orbit core and the two cubic fibers over F3(s).",
-    "reproduction": "Exact Q(s) computations through length six yielded the divisor s^9-s. Over F3(s), the degree-121 pivot divisor left a degree-48 core; the two cubic fibers passed direct elimination through thirteen, including matching degree-four center normalizations."
+    "scope": "Degree-100 tangent divisor after orbit descent; all 308 Smith profiles on the five extra tangent fibers and the 212 exact characteristic-zero cuts through seven. The two factorizations were checked symbolically and the 20-digit collision calculation was reproduced in two independent representations of Q(i)."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 299,
+      "nc-p3": 301,
       "plan_ja": 8,
       "notes_ja": 16
     },
@@ -47,18 +50,16 @@
   },
   "visual_inspection": {
     "result": "PASS",
-    "scope": "Inspected manuscript page 273 with the eightfold conic map, the two exceptional polynomials and the six-digit restart."
+    "scope": "Inspected the tangent and Gaussian collision proofs on manuscript pages 274 and 275."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "c0af9eff9acc0de2191198dbad5599fbfdb106cf",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Lift the higher two-sided pole-chart pivots over Q(s) for the full unit-x, xbar!=1 disk. At xbar=1 use h=r/(sqrt(1+r^2)+1), L=(lambda+1/lambda)/2, C=(lambda-1/lambda)/2 and B-A=h*L; the small square root is h*C. Start with 2v(x-1)>=v(y), including x=1, then treat the complementary valuation sectors.",
+    "Remove the depth restriction in the nonbranch and resolved tangent charts by exact higher two-sided cuts. On Jbar=1 the Gaussian tube v(J-1)>=9v(y) is settled; resolve the remaining ratios using L and H as local parameters. For 0<2v(x-1)<v(y) use H=a*b and z=1/b to make both a and b small. Unit residues outside the rational grid and unrestricted nonsymmetric branches also remain.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

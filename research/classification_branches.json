@@ -295,7 +295,8 @@
       "rank_fifteen_three_residue_classes": "sections/rank_fifteen_three_residue_classes.tex",
       "rank_fifteen_integral_annulus": "sections/rank_fifteen_integral_annulus.tex",
       "rank_fifteen_integral_depth": "sections/rank_fifteen_integral_depth.tex",
-      "rank_fifteen_pole_fibers": "sections/rank_fifteen_pole_fibers.tex"
+      "rank_fifteen_pole_fibers": "sections/rank_fifteen_pole_fibers.tex",
+      "rank_fifteen_ramified_pole": "sections/rank_fifteen_ramified_pole.tex"
     },
     {
       "id": "UNRESTRICTED-SINGLY-SYMMETRIC-14",
