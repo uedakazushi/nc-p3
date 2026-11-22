@@ -193,6 +193,7 @@ def expand(presentation, Jet, component, sheet):
 
 def saturated_projection(rows, size, target, Jet, *, select_pivot=None):
     pivots = []
+    orders = []
     loss = 0
     while len(pivots) < size - target:
         rows = [row for row in rows if row]
@@ -216,6 +217,7 @@ def saturated_projection(rows, size, target, Jet, *, select_pivot=None):
                 {k: v.divide_by_parameter() for k, v in row.items()} for row in rows
             ]
             continue
+        orders.append(loss)
         j, k = pivot
         row = rows.pop(j)
         inverse = row.pop(k).inverse()
@@ -232,6 +234,9 @@ def saturated_projection(rows, size, target, Jet, *, select_pivot=None):
         for k, value in row.items():
             add_multiple(result, images[k], -value)
         images[j] = result
+    report = getattr(Jet, "record_pivot_orders", None)
+    if report is not None:
+        report(tuple(orders))
     return free, [images[j] for j in range(size)], loss
 
 

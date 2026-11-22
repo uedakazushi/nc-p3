@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 169,
+  "version": 170,
   "reviewed_input": {
-    "source_commit": "70e9fa14354689ab7c149ea268d0818ec528d3b9"
+    "source_commit": "b84f0e9530766477d039cfad977e279c920d39c9"
   },
   "generation": {
     "result": "PASS",
-    "scope": "At residue characteristic three every ordinary window with integral D=x^3/y, v(y)>0 and 5v(y)<=6v(3) is standard Koszul left/right AS-regular, free of rank 256 per start. Descending the 9835-degree overlap pivot divisor together with the sixth lattice divisor leaves exactly three irreducible slope polynomials; every geometric root is covered by aligned central sections on supplemental charts. All four prime-field unit pairs (xbar,ybar) also lift to regular windows."
+    "scope": "At residue characteristic three all ordinary rank-fifteen windows with positive v(y) and integral D=x^3/y are standard Koszul left/right AS-regular and free of rank 256 per start over four central quartics, at every depth and every geometric residue slope. The pivot divisor of degree 12017 leaves a degree-96 core; all remaining lifts match 200 complete H-Smith profiles. Every rational coordinate pair with 3-integral D is therefore regular. In the distinct pole-slope direction xbar=-1, the full annulus 0<2v(y)<=v(3) is also certified."
   },
   "checks": [
     {
@@ -15,15 +15,15 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_integral_annulus.py",
+      "command": "python computations/verify_rank_fifteen_integral_depth.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_unit_residues.py",
+      "command": "python computations/verify_rank_fifteen_smith_slopes.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_overlap_bound.py",
+      "command": "python computations/verify_rank_fifteen_pole_slope_annulus.py",
       "result": "PASS"
     },
     {
@@ -37,36 +37,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked reduction of the same central sections by changing the last-start word basis, degree-24 fibers including conjugate roots, and integral lifting at four unit pairs."
+    "scope": "Reviewed transfer of all Smith exponents over local domains, invariance under changing saturated word bases, the fixed central coordinates, trace descent and the conic parameter on the pole chart."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Recorded the complete F3(z) overlap pivot divisor (degree 9835), joined it to the proven integral sixth chart, checked the 144-degree core and three residual polynomials, and replayed all four cuts at the supplemental charts and unit residue pairs.",
-    "reproduction": "Reproduced the degree-9835 divisor, its exact 144-degree joint core, three aligned supplemental charts through degree thirteen, and all four finite-field unit pairs. The exact integral sixth divisor and all its supplemental checks also passed a fresh complete replay."
+    "scope": "Degree-12017 chart and exact degree-96 core, three supplemental residue fields matching 200 complete pivot-order lists and all overlap ranks; exact five-degree lattices over Q(s) with matching center coordinates and an eight-digit restart over F3(s) for the independent pole chart."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 296,
+      "nc-p3": 298,
       "plan_ja": 8,
       "notes_ja": 16
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected pages 269 and 270 with the three residual polynomials, aligned word bases and four unit pairs."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "d4b68d621097daf824408db2d3cebdc8bdb18633",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Remove the depth bound on the integral-slope annulus. Record the mod-three numerators and denominators actually inverted in the Q(z) degree-seven cuts; extend their H-constant multiplication tables over F3(z) through degree thirteen with nine allowed dimension 24. Descend this exact chart and cover surviving finite residue fibers. The full positive-slope disk, the bounded-depth integral-slope annulus and the four prime-field unit residue pairs are settled.",
+    "Continue on the remaining pole slopes D=x^3/y. For xbar=-1 and v(y)>0 use r^2=U-1, H=r^2 T, and the rational conic parameter in the pole-slope annulus verifier. Starting from the verified characteristic-zero central quotient through length five, lift the degree-six and higher pole-chart pivots to relax or remove the eight-digit restart bound. Also handle the ramified xbar=1 case where one leading root A+B or A-B vanishes, and unit-y residues outside the rational grid. The integral-slope positive-y region is settled at every depth; unrestricted nonsymmetric branches remain open.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

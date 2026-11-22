@@ -22,7 +22,9 @@ def residue_scalar(v):
     return Scalar(evaluate(v.coeffs[0])/evaluate(v.den))
 
 
-def seed_layers(start, limit, windows, centers, dims, right, jet, specialize):
+def seed_layers(start, limit, windows, centers, dims, right, jet, specialize, *, keep=None):
+    if keep is None:
+        keep = jet.unit
     words = {(0, h): [()] if h == 0 else [] for h in range(4)}
     for h in range(4):
         dims[start, 0, h] = len(words[0, h])
@@ -38,7 +40,7 @@ def seed_layers(start, limit, windows, centers, dims, right, jet, specialize):
         for a in range(4):
             end = offset+len(words[n-1, h^a])
             right[start, n, h, a] = [
-                {k: specialize(v) for k, v in row.items() if v.unit()}
+                {k: specialize(v) for k, v in row.items() if keep(v)}
                 for row in projection[offset:end]
             ]
             offset = end
@@ -53,11 +55,14 @@ def seed_layers(start, limit, windows, centers, dims, right, jet, specialize):
     return words
 
 
-def prepend_tables(start, limit, words, right):
+def prepend_tables(start, limit, words, right, *, unit=None):
+    if unit is None:
+        unit = Scalar(F9.one())
+
     @cache
     def image(word):
         if not word:
-            return {0: Scalar(F9.one())}
+            return {0: unit}
         h = reduce(xor, word, 0)
         out = {}
         for j, v in image(word[:-1]).items():
@@ -71,12 +76,14 @@ def prepend_tables(start, limit, words, right):
     return left
 
 
-def overlap(n, p, h, dims, left, right):
+def overlap(n, p, h, dims, left, right, *, unit=None):
+    if unit is None:
+        unit = Scalar(F9.one())
     ends, beginnings, width, rows = overlap_rows(n, p, h, dims, left, right)
     pivots = echelon(rows)
     free = [j for j in range(width) if j not in pivots]
     indices = {j: k for k, j in enumerate(free)}
-    projected = [{indices[j]: Scalar(F9.one())} if j in indices else
+    projected = [{indices[j]: unit} if j in indices else
                  {indices[k]: -v for k, v in pivots[j].items() if k != j} for j in range(width)]
     store_projection(n, p, h, dims, left, right, ends, beginnings, free, projected)
     return len(free)

@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 169,
+  "version": 170,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -1936,6 +1936,17 @@
         "computations/verify_rank_fifteen_integral_annulus.py",
         "computations/verify_rank_fifteen_unit_residues.py"
       ]
+    },
+    {
+      "id": "RANK-FIFTEEN-ALL-INTEGRAL-SLOPES-AT-THREE",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "At residue characteristic three all ordinary rank-fifteen windows with positive v(y) and integral D=x^3/y are standard Koszul left/right AS-regular and free of rank 256 per start over four central quartics, at every depth and every geometric residue slope. The pivot divisor of degree 12017 leaves a degree-96 core; all remaining lifts match 200 complete H-Smith profiles. Every rational coordinate pair with 3-integral D is therefore regular. In the distinct pole-slope direction xbar=-1, the full annulus 0<2v(y)<=v(3) is also certified.",
+      "proof": "sections/rank_fifteen_integral_depth.tex",
+      "verification": [
+        "computations/verify_rank_fifteen_integral_depth.py",
+        "computations/verify_rank_fifteen_smith_slopes.py",
+        "computations/verify_rank_fifteen_pole_slope_annulus.py"
+      ]
     }
   ],
   "document_paths": {
@@ -1999,7 +2010,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "70e9fa14354689ab7c149ea268d0818ec528d3b9",
+  "reviewed_source_commit": "b84f0e9530766477d039cfad977e279c920d39c9",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -2008,15 +2019,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Remove the depth bound on the integral-slope annulus. Record the mod-three numerators and denominators actually inverted in the Q(z) degree-seven cuts; extend their H-constant multiplication tables over F3(z) through degree thirteen with nine allowed dimension 24. Descend this exact chart and cover surviving finite residue fibers. The full positive-slope disk, the bounded-depth integral-slope annulus and the four prime-field unit residue pairs are settled.",
+    "immediate_next_action": "Continue on the remaining pole slopes D=x^3/y. For xbar=-1 and v(y)>0 use r^2=U-1, H=r^2 T, and the rational conic parameter in the pole-slope annulus verifier. Starting from the verified characteristic-zero central quotient through length five, lift the degree-six and higher pole-chart pivots to relax or remove the eight-digit restart bound. Also handle the ramified xbar=1 case where one leading root A+B or A-B vanishes, and unit-y residues outside the rational grid. The integral-slope positive-y region is settled at every depth; unrestricted nonsymmetric branches remain open.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/rank_fifteen_integral_depth.tex",
       "sections/rank_fifteen_integral_annulus.tex",
-      "sections/rank_fifteen_three_residue_classes.tex",
-      "sections/rank_fifteen_integral_slope.tex"
+      "sections/rank_fifteen_three_residue_classes.tex"
     ],
     "known_obstruction": "Possible isolated interior failures of all-degree regularity on the (x,y) plane and uncovered general nonsymmetric windows.",
-    "state_of_claim": "All integral slopes are certified in the bounded-depth annulus and all prime-field unit pairs are certified. Effective all-depth coverage of unit slopes and the unrestricted classification remain open.",
+    "state_of_claim": "All positive-y integral slopes at three are settled, including all residue extensions; rational integral-slope points are settled at all y valuations. Deep pole slopes, further unit residues and unrestricted nonsymmetric classification remain open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

@@ -9,11 +9,16 @@ from verify_rank_fourteen_all_ordinary import DIMENSIONS, saturated_projection
 
 def initial_layers(jet, build_relations, center_builder):
     _, basis, image, centers = center_builder(15, jet, build_relations)
+    assert jet.precision == 11
+    return initial_products(jet, basis, image, centers, (0, 0, 0, 0, 0, 4))
+
+
+def initial_products(jet, basis, image, centers, losses_by_degree):
     precision = jet.precision
-    assert precision == 11
     dims, left, right, words = {}, {}, {}, {}
     for n in range(6):
         projections = {}
+        losses = []
         for start, h in product(range(4), repeat=2):
             jet.precision = precision
             paths = basis[start, n, h]
@@ -26,13 +31,14 @@ def initial_layers(jet, build_relations, center_builder):
                             add_multiple(row, image(start, w+tail), c)
                         rows.append(row)
             free, pi, loss = saturated_projection(rows, len(paths), DIMENSIONS[n][h], jet)
-            assert loss == (4 if n == 5 else 0)
+            losses.append(loss)
             words[start, n, h] = [paths[j] for j in free]
             projections[start, h] = pi
             dims[start, n, h] = len(free)
+        assert max(losses) == losses_by_degree[n]
         if n == 0:
             continue
-        jet.precision = precision-(4 if n == 5 else 0)
+        jet.precision = precision-max(losses)
         for start, h in product(range(4), repeat=2):
             def coords(w):
                 result = {}
@@ -43,7 +49,6 @@ def initial_layers(jet, build_relations, center_builder):
             for a in range(4):
                 right[start, n, h, a] = [coords(w+(a,)) for w in words[start, n-1, h^a]]
                 left[start, n, h, a] = [coords((a,)+w) for w in words[(start+1)%4, n-1, h^a]]
-    assert jet.precision == 7
     return dims, left, right
 
 
