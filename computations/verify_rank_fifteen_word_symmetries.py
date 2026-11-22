@@ -22,10 +22,10 @@ def prove_tensor_identities():
     r, d, q = sp.symbols("r d q", nonzero=True)
     ii = sp.I
 
-    def tensor(a, b, e, f):
-        left = sp.Matrix([[a, b], [z * b, a]])
-        right = sp.Matrix([[e, f], [z * f, e]])
-        return gram_twist(left, right, z, lam)[0]
+    def tensor(a, b, e, f, zz=z, multiplier=lam):
+        left = sp.Matrix([[a, b], [zz * b, a]])
+        right = sp.Matrix([[e, f], [zz * f, e]])
+        return gram_twist(left, right, zz, multiplier)[0]
 
     original = tensor(a, b, e, f)
     swapped = tensor(z * b, a, z * f, e)
@@ -41,7 +41,9 @@ def prove_tensor_identities():
                     target[4 * i + j, 4 * k + t] == original[4 * I + J, 4 * K + T] == 0
                 )
                 continue
-            scale = sp.sympify(sp.prod(diagonals[p][letter] for p, letter in enumerate(word)))
+            scale = sp.sympify(
+                sp.prod(diagonals[p][letter] for p, letter in enumerate(word))
+            )
             powers = scale.as_powers_dict()
             for root, square in ((r, z), (d, lam), (q, u * (z * b * b - a * a))):
                 exponent = powers[root]
@@ -63,6 +65,28 @@ def prove_tensor_identities():
         ),
     )
     perm = (0, 1, 3, 2)
+    # Simultaneous inversion of r,w preserves the first presentation.
+    verify(
+        tensor(a, z * b, e, z * f, 1 / z, 1 / lam),
+        lambda i, j, k, t: (perm[i], perm[j], perm[k], perm[t]),
+        (
+            (d / r, d / r, 1 / z, 1 / z),
+            (d * r, d / r, 1, 1),
+            (r / d, r / d, 1, 1),
+            (1 / (r * d), r / d, 1, 1),
+        ),
+    )
+    # Replacing w by its inverse identifies the second presentation with the first.
+    verify(
+        tensor(z * b, a, z * f, e, z, 1 / (lam * z)),
+        lambda i, j, k, t: (i, j, k ^ 1, t ^ 1),
+        (
+            (r * d, r * d, 1, 1),
+            (r * d, r * d, 1, 1),
+            (1 / (r * d), 1 / (r * d), 1 / z, 1),
+            (r / d, 1 / (r * d), 1, 1),
+        ),
+    )
     verify(
         original,
         lambda i, j, k, t: (perm[k], perm[t], perm[i], perm[j]),
