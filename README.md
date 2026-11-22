@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-22 / v76。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v77。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -140,6 +140,8 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 
 楕円曲線の根と別の組合せは四つの倍率でのみ生じる。それらは両対称窓またはそのコサイクル捻りで判定できる。明示的楕円曲線上でも五つの中心四次式が延び、一般の印なし同型は32通りの置換で判定できる。[証明と判定](sections/klein_second_pairings.tex)
 
+四元群を仮定しない片側対称窓に、一般の射影自己同型が自明な十四次元族を得た。階数10と16の両有理点で対称性も外した接空間は十五次元となり、全二次障害が消える。[証明と判定](sections/unrestricted_doublet_deformations.tex)
+
 二窓から作る56次元代数で、低次Extの消滅を逆Serre反復が保つ構造条件を探す。
 「全次数を証明してAS認証」「有限障害で排除」「未決定」を分け、有限検査の成功を全AS認証としない。
 正規形の枝、特殊値、枝間同型の条件を証明し、未分類の残余を明示する。
@@ -187,6 +189,7 @@ python3 computations/verify_klein_center_lift.py
 python3 computations/verify_klein_generic_quartics.py
 python3 computations/verify_klein_elliptic_completion.py
 python3 computations/verify_klein_exceptional_pairings.py
+python3 computations/verify_unrestricted_doublet_deformations.py
 python3 computations/verify_klein_elliptic_center.py
 python3 computations/verify_klein_full_rank_configurations.py
 python3 computations/verify_rank_five_pencils.py

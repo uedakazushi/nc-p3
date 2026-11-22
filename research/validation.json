@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 76,
+  "version": 77,
   "reviewed_input": {
-    "source_commit": "c10ed181ee3f747b4bb20f20e2eec7be3331e723"
+    "source_commit": "006d9bbf12707c7a971cee25de301c1981cffe56"
   },
   "generation": {
     "result": "PASS",
-    "scope": "On the nondegenerate thin chart with separable projective determinant quadratics (or both genuinely quadratic), every additional pairing is exactly one of four explicit sheets at lambda=+/-1,+/-1/z. Two are bisymmetric and the other two are Klein cocycle twists, giving an AS decision on all four. The quartic center lifts over the function field of an explicit elliptic parameter curve, yielding one open of regular closed fibers. Up to 32 affine character permutations decide unmarked indexed isomorphism on the generic full-rank chart."
+    "scope": "With no Klein grading imposed, the singly symmetric rank-ten locus is smooth at the rational regular sample and has a fourteen-dimensional unmarked family, geometrically generically AS, with trivial projective indexed stabilizer and minimal period four. At this and the rank-sixteen sample the unrestricted normal tangents have dimensions (5,2,4,4) by character and all primary obstructions vanish. The extra alternating direction maps the opposite kernel isomorphically to its cokernel."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_klein_exceptional_pairings.py",
+      "command": "python computations/verify_unrestricted_doublet_deformations.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_klein_elliptic_completion.py",
+      "command": "python computations/verify_klein_exceptional_pairings.py",
       "result": "PASS"
     },
     {
@@ -29,25 +29,21 @@
     {
       "command": "git diff --check",
       "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_klein_elliptic_center.py",
-      "result": "PASS"
     }
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed bilinear projective comparison at finite and infinite simple roots, eigenvalue factors, the four representations and twist equivalence, elliptic function-field exactness and the common affine character action."
+    "scope": "Verified Schur derivatives in both cuts, orbit-normal dimensions, smoothness of the even locus, specialization of finite stabilizers, second-order lifting and degreewise flatness over Artinian bases."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Symbolic transfer of even and odd factors, cocycle tensor signs, graph presentation against the rank-six Gram matrices, and quartic center ranks over the exact quadratic elliptic function field."
+    "scope": "Exact rational Jacobians, orbit inclusion and rank, polarized pairwise obstruction image tests and opposite-kernel compression."
   },
   "tex": {
     "result": "PASS",
-    "main_pages": 185,
+    "main_pages": 186,
     "plan_pages": 6,
-    "notes_pages": 13
+    "notes_pages": 14
   },
   "visual_inspection": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
@@ -59,7 +55,7 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Study unrestricted deformations at the rational rank-ten and rank-sixteen points; compute orbit-normal tangents and primary obstructions, then seek full-dimensional actual components or a finite obstruction. Address identically zero determinant quadratics and singular cross blocks outside the present chart.",
+    "Compute higher obstructions or algebraize the fifteen unrestricted directions at the rational maximal-rank point. Complete the double-zero determinant fibers on the marked chart and analyze singular cross blocks.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

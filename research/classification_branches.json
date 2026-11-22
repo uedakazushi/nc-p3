@@ -207,6 +207,11 @@
       "id": "KLEIN-ELLIPTIC-FULL-RANK",
       "current_result": "On the nondegenerate thin chart with separable projective determinant quadratics (or both genuinely quadratic), every additional pairing is exactly one of four explicit sheets at lambda=+/-1,+/-1/z. Two are bisymmetric and the other two are Klein cocycle twists, giving an AS decision on all four. The quartic center lifts over the function field of an explicit elliptic parameter curve, yielding one open of regular closed fibers. Up to 32 affine character permutations decide unmarked indexed isomorphism on the generic full-rank chart.",
       "current_proof": "sections/klein_second_pairings.tex"
+    },
+    {
+      "id": "UNRESTRICTED-SINGLY-SYMMETRIC-14",
+      "current_result": "With no Klein grading imposed, the singly symmetric rank-ten locus is smooth at the rational regular sample and has a fourteen-dimensional unmarked family, geometrically generically AS, with trivial projective indexed stabilizer and minimal period four. At this and the rank-sixteen sample the unrestricted normal tangents have dimensions (5,2,4,4) by character and all primary obstructions vanish. The extra alternating direction maps the opposite kernel isomorphically to its cokernel.",
+      "current_proof": "sections/unrestricted_doublet_deformations.tex"
     }
   ],
   "presentation_components": {
