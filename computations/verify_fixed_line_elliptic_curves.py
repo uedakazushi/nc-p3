@@ -116,9 +116,13 @@ def check_sections(z, l):
             )
         )
         windows = relation_bases(A, B, z, l, {z: 3, l: 2}, field)
-        dims = [PathRow(windows, i, 4, field.one).dims[-1] for i in range(4)]
+        profiles = [PathRow(windows, i, 5, field.one).dims[-2:] for i in range(4)]
+        dims = [quartic for quartic, _ in profiles]
         assert sorted(dims) == ([36] * 4 if sign == 1 else [35, 35, 36, 36])
-        print(sign, a, e, f, dims, flush=True)
+        assert sorted(quintic for _, quintic in profiles) == (
+            [68] * 4 if sign == 1 else [56, 60, 60, 68]
+        )
+        print(sign, a, e, f, profiles, flush=True)
 
 
 if __name__ == "__main__":

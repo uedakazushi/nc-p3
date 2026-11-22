@@ -1,0 +1,55 @@
+% !TeX root = ../papers/nc-p3.tex
+\section{両固定曲線で四次と五次の障害点が一致すること}
+\label{sec:uniform-positive-quintics}
+\begin{theorem}\label{thm:uniform-fixed-quintics}
+標数零の全ての通常倍率において、両固定曲線上の許容窓について次の三条件は同値である。
+\begin{enumerate}
+\item ある始点で長さ5の道空間の次元が56を超える。
+\item ある始点で長さ4の道空間の次元が35を超える。
+\item 命題\ref{prop:fixed-line-defects}の十二表示のいずれかであるか、
+正の曲線上で $\det A+\det B=0$ である。
+\end{enumerate}
+従って各倍率での幾何点の個数は正で八点、負で八点
+（$\lambda^2z=-1$ のとき四点）である。その補集合では全始点で長さ5の次元が56になる。
+\end{theorem}
+\begin{proof}
+四次の判定は定理\ref{thm:uniform-fixed-quartic}による。
+十二表示の道空間を $\mathbb Q(z,\lambda)$ 上で直接計算すると、
+長さ5の四始点の次元を並べ替えた値は、正で $(68,68,68,68)$、
+負で $(56,60,60,68)$ である。
+\path{computations/verify_fixed_line_elliptic_curves.py} は各表示でこの値を検算する。
+関係の挿入行列の階数は特殊化で増えないため、全通常倍率で少なくとも一始点は68以上になる。
+新しい正の四表示にも定理\ref{thm:opposite-fixed-dets}の同じ下界がある。
+
+逆向きは負では定理\ref{thm:varying-fixed-quintics}で示した。正の曲線で $b=1$ とし、
+定理\ref{thm:uniform-fixed-quartic}の表の第一座標と通常倍率から除いた因子を逆にする。
+$(e,f)=(Nu,Du)$ を代入して得る二次式を $G=g_2u^2+g_1u+g_0$ と書く。
+この局所化上で $g_2$ は単元で、$v=g_2u$ とすれば
+\[
+ v^2=-g_1v-g_0g_2,\qquad
+ \operatorname{Nm}(X+Yv)=X^2-g_1XY+g_0g_2Y^2 .
+\]
+命題\ref{prop:fixed-quintic-slice}の挿入行列に対し、始点0,1と文字0,2の各組で
+86行86列を選ぶ。行と列の順序は
+\path{research/fixed_quintic_pivot_certificate.json} に収録した。
+分母を払った成分は $u$ について高々二次で、$g_2^2$ 倍すれば上式で $X+Yv$ に帰着する。
+\path{computations/verify_uniform_positive_quintics.py} はこの形で各行列を掃き出す。
+各ピボットのノルムを許した因子で割り尽くすと、344回全てで非零定数が残る。
+従ってピボットはこの二次代数で可逆である。行の消去には共役とノルムを用い、
+行から取り除く内容も全て単元であることを検査する。
+よって四つの小行列式はいずれもこの開集合で消えない。
+二位置移動と奇数長の同時文字交換により、残る始点・文字も目標階数86に達する。
+
+表に残る第一座標のうち、四次を通過しうる許容点は同定理により、
+二位置移動を除けば座標端の二表示と $H_\epsilon$ の既知の根の相方に尽きる。
+$r^2=z$ として、これら四表示では係数を $r,\lambda$ の有理式で書ける。
+\path{computations/verify_uniform_quintic_companions.py} は四表示の各四行列で
+86次小行列式を求める。通常倍率の単元、定義域の分母、および
+$xy\det A\det B(\det A+\det B)$ の因子を除き、その分子の各既約因子を $P$ とする。
+別の小行列式の残余因子を $Q$ とすると、共通零点では少なくとも一つの $Q$ が消え、
+その $r$ は $\operatorname{Res}_\lambda(P,Q)$ の根になる。
+$Q$ が $r$ のみの式なら直接 $Q$ を使う。各終結式は非零である。
+別の小行列式ごとに得た一変数既約因子の集合を交差すると、許した因子の外では全て空になる。
+小行列を選ぶために使う素数307に依存せず、この因数分解と終結式の等式は整数上で成立する。
+従って許容な相方と端点にも新しい五次障害はない。各文字の余核次元の下界14と合わせて結論を得る。
+\end{proof}

@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-22 / v111。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v112。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -206,6 +206,8 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 
 負の曲線では全通常倍率、正の曲線では(3,2)を含む開集合で、長さ5に初めて現れる障害がないことを証明した。[証明と判定](sections/varying_fixed_quintics.tex)
 
+両固定曲線では全通常倍率で、長さ5の障害点が長さ4の障害点と一致することを証明した。[証明と判定](sections/uniform_positive_quintics.tex)
+
 二窓から作る56次元代数で、低次Extの消滅を逆Serre反復が保つ構造条件を探す。
 「全次数を証明してAS認証」「有限障害で排除」「未決定」を分け、有限検査の成功を全AS認証としない。
 正規形の枝、特殊値、枝間同型の条件を証明し、未分類の残余を明示する。
@@ -287,6 +289,8 @@ python3 computations/verify_fixed_geometric_quartic_locus.py
 python3 computations/verify_uniform_fixed_quartic_support.py
 python3 computations/verify_fixed_quintic_locus.py
 python3 computations/verify_varying_fixed_quintics.py
+python3 computations/verify_uniform_positive_quintics.py
+python3 computations/verify_uniform_quintic_companions.py
 python3 computations/verify_uniform_fixed_quartic_residuals.py
 python3 computations/verify_opposite_fixed_determinants.py
 python3 computations/verify_fixed_quartic_ranks.py

@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 111,
+  "version": 112,
   "reviewed_input": {
-    "source_commit": "44f8a0df8d5aca011d4bcddf3bfb83f647ff37bf"
+    "source_commit": "3501d6cfc52b25b596a456b1d279b71a807ae4aa"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every ordinary negative fixed curve has no first obstruction in length five. The same is proved on every positive fixed curve over a common Zariski open of slopes containing (3,2), by eight characteristic and starting-position minors and a finite specialization argument."
+    "scope": "On both signed fixed elliptic curves at every ordinary characteristic-zero slope, the geometric support of the length-five defect equals that of the length-four defect. It consists of the twelve old sections and the four positive opposite-determinant sections, with the four negative pairs coincident when lambda squared times z equals minus one."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_varying_fixed_quintics.py",
+      "command": "python computations/verify_uniform_positive_quintics.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_fixed_quintic_locus.py",
+      "command": "python computations/verify_varying_fixed_quintics.py",
       "result": "PASS"
     },
     {
@@ -29,20 +29,28 @@
     {
       "command": "git diff --check",
       "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_uniform_quintic_companions.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_fixed_line_elliptic_curves.py",
+      "result": "PASS"
     }
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed odd-length character exchange, primitive row contents and determinant multipliers, proper finite projection and the separated companion sections."
+    "scope": "Reviewed localization factors, quadratic conjugate and norm, unit row scaling, finite resultants on the four remaining families, and lower semicontinuity of rank on the old sections."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Certified eight exact four-variable degree-five minors, checked all projected factors on the negative curve and degree-preserving unramified finite first-coordinate factors above the (3,2) positive slice."
+    "scope": "Verified 344 invertible pivots on the quadratic algebra, exact residual two-variable rank minors and projected common roots for all sixteen companion and endpoint matrices, and function-field quintic profiles of the twelve old sections."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 230,
+      "nc-p3": 231,
       "plan_ja": 7,
       "notes_ja": 14
     },
@@ -58,7 +66,7 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Decide the remaining special slopes of the positive fixed curve in length five. The additional projected factors from its 86-by-86 minors are explicit in the integer polynomial computation. Compare independent minors on their common roots and on the four residual positive sections. In parallel as a mathematical alternative, test whether length six introduces genuinely new obstructions.",
+    "At (z,lambda)=(3,2), construct the length-six insertion matrix by first quotienting the three disjoint adjacent pairs. Compute its character targets and compare independent maximal minors on both fixed curves outside the quartic support, including geometric points not rational over the sampling primes. If a new defect is found, certify its residue field and all starting positions; otherwise prove saturation or use the central quartic finite-quotient test to address higher lengths.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
