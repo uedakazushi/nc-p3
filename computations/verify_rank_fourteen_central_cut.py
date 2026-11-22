@@ -14,19 +14,23 @@ from verify_klein_center_lift import add_multiple, central_equations, echelon
 from verify_rank_fourteen_center import certify_residue, path_chart
 
 
-def central_sections(basis, image, unit=one):
+def central_sections(basis, image, unit=one, invariant_pairs=((1, 0, 0), (0, 0, 1))):
     sections = [[] for _ in range(4)]
-    for h, selected in ((0, (0, 2)), (1, (0, 1))):
+    for h, selected in enumerate((invariant_pairs, ((1, 0), (0, 1)))):
         rows, size = central_equations(basis, image, h)
         pivots = echelon(rows)
         free = [k for k in range(size) if k not in pivots]
         assert len(free) == 3 - h
-        for index in selected:
-            column = free[index]
-            vector = {column: unit}
-            vector.update(
-                {k: -row[column] for k, row in pivots.items() if column in row}
-            )
+        for weights in selected:
+            assert len(free) == len(weights)
+            vector = {k: value * unit for k, value in zip(free, weights) if value}
+            for k, row in pivots.items():
+                value = -sum(
+                    (w * row[col] for col, w in zip(free, weights) if w and col in row),
+                    0 * unit,
+                )
+                if value:
+                    vector[k] = value
             offset = 0
             for p, components in enumerate(sections):
                 words = basis[p, 4, h]
@@ -53,8 +57,8 @@ def residue(value):
     )
 
 
-def independent_rows(rows, specialize=residue):
-    """A split prime chooses rows; every resulting determinant is computed in characteristic zero."""
+def independent_rows(rows, specialize=residue, prime=101):
+    """Choose independent rows at a split prime before computing the determinant in the original field."""
     pivots = {}
     for index in sorted(range(len(rows)), key=lambda j: (len(rows[j]), j)):
         row = {j: v for j, value in rows[index].items() if (v := specialize(value))}
@@ -62,22 +66,22 @@ def independent_rows(rows, specialize=residue):
             if j in row:
                 factor = row[j]
                 for k, value in pivots[j].items():
-                    result = (row.get(k, 0) - factor * value) % 101
+                    result = (row.get(k, 0) - factor * value) % prime
                     if result:
                         row[k] = result
                     else:
                         row.pop(k, None)
         if row:
             j = min(row)
-            inverse = pow(row[j], -1, 101)
-            pivots[j] = {k: value * inverse % 101 for k, value in row.items()}
+            inverse = pow(row[j], -1, prime)
+            pivots[j] = {k: value * inverse % prime for k, value in row.items()}
             yield rows[index].copy()
 
 
-def exact_projection(rows, size, unit=one, specialize=residue):
+def exact_projection(rows, size, unit=one, specialize=residue, prime=101):
     pivots = {}
     determinant = unit
-    for row in independent_rows(rows, specialize):
+    for row in independent_rows(rows, specialize, prime):
         for j in sorted(pivots):
             if j in row:
                 add_multiple(row, pivots[j], -row[j])

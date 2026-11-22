@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 130,
+  "version": 131,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -1573,6 +1573,16 @@
       "verification": [
         "computations/verify_rank_fifteen_pencil_ramified_ends.py"
       ]
+    },
+    {
+      "id": "RANK-FIFTEEN-OCTIC-ALL",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "Every ordinary characteristic-zero window on both primitive genus-three levels in both rank-fifteen presentations is standard Koszul left/right AS regular and free of rank 256 from each start over a polynomial ring on four central quartics. The certificate covers every geometric residue at 109, using two quotient-minor charts, 89 higher-degree residual factors, and mixed-characteristic saturation at all trace ±1 disks.",
+      "proof": "sections/rank_fifteen_octic_all.tex",
+      "verification": [
+        "computations/verify_rank_fifteen_octic_ordinary.py",
+        "computations/verify_rank_fifteen_octic_trace_disks.py"
+      ]
     }
   ],
   "document_paths": {
@@ -1636,7 +1646,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "7a6dfe08f3241cb1dcc40f10793439b183fa1c38",
+  "reviewed_source_commit": "61e35dd024b8191efd5e6618bf98ef0b1df9652a",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -1645,15 +1655,16 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Finish the genus-three four-cut over all ordinary reductions at 109 and saturate the two trace ±1 disks through length thirteen. On the genus-five pencil only the eight ends over K=±1 lack regular neighborhoods on a general level. For these use u=n, compute the locally saturated degree-four relations and compare against the genus-three trace-disk calculation.",
+    "immediate_next_action": "On the genus-five pencil work at c=3/4 (s=25/12) above 101. At the eight trace ±1 ends use n as uniformizer, K=k sqrt(1+(1+c²)n²), and r,w with first slopes ±(c+k), ±(c-k). Saturate the length-four and length-five path modules, then the central commutator kernel, before the central cut through length thirteen. Test the other-trace quadratic boundary at 101 over its residue extensions. Seek a uniform method over Q(c) and use the Kummer or plane-quartic model for ordinary geometric residues.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/rank_fifteen_octic_all.tex",
       "sections/rank_fifteen_pencil_ramified_ends.tex",
-      "sections/rank_fifteen_pencil_unramified.tex",
+      "sections/rank_fifteen_octic_center.tex",
       "sections/rank_fifteen_octic_boundary.tex"
     ],
-    "known_obstruction": "At trace ±1 the raw quadratic limits jump from 35 to 38 quartic paths. Saturate the higher-degree relations or change lattice. Higher-degree ordinary residue fibers of the central cut still require certification.",
-    "state_of_claim": "General genus-five levels have eight remaining ramified ends at K=±1. The genus-three ordinary residual fibers and the two trace disks still require all-degree verification.",
+    "known_obstruction": "On a general genus-five level the raw K=±1 relation limits are constant but have 38 quartic and 72 quintic paths. The ordinary cut on the genus-five Kummer cover and coverage of unrestricted four-windows still require proof.",
+    "state_of_claim": "All four genus-three curves are certified at every ordinary point. The genus-five pencil and unrestricted nonsymmetric four-windows remain open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
