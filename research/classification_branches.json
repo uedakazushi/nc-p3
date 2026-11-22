@@ -215,8 +215,8 @@
     },
     {
       "id": "TWENTY-CONORMAL-FULL-COMPONENT",
-      "current_result": "The companion of a marked ramification window is the projective polar map of its Kummer surface followed by an explicit symmetric polarity. It is an involution up to two-position shift. All sixteen trope conics are determined and no admissible window on them is standard AS.",
-      "current_proof": "sections/kummer_polar_completion.tex",
+      "current_result": "For ordinary slopes the signed discriminant double solid has sixteen ordinary double points. Over invertible first matrices its projective paired-root graph is a small resolution with eight exceptional lines of normal bundle O(-1) twice; the companion embeds each in the opposite contact conic. Reversing the sign interchanges the two local small resolutions.",
+      "current_proof": "sections/paired_root_resolution.tex",
       "configuration_projection": {
         "result": "The generic recovery degree from one projected configuration is exactly two. The two finite-edge AS windows are the original orientation and its reversal; one ordered first edge determines the extension. At both rational samples the same classification holds. A pencil of quartics with twenty triple points recovers every normalized square root, including the exclusion of degenerate Grassmann candidates.",
         "proof": "sections/configuration_quartic_pencil.tex"

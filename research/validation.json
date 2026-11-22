@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 93,
+  "version": 94,
   "reviewed_input": {
-    "source_commit": "1ee0147a29b2ea374133944e13afef932cd6ba33"
+    "source_commit": "419fe4b4113c7d02fb9dcc3c35296dd951518d14"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The companion of a marked ramification window is the projective polar map of its Kummer surface followed by an explicit symmetric polarity. It is an involution up to two-position shift. All sixteen trope conics are determined and no admissible window on them is standard AS."
+    "scope": "For ordinary slopes the signed discriminant double solid has sixteen ordinary double points. Over invertible first matrices its projective paired-root graph is a small resolution with eight exceptional lines of normal bundle O(-1) twice; the companion embeds each in the opposite contact conic. Reversing the sign interchanges the two local small resolutions."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_kummer_polar.py",
+      "command": "python computations/verify_paired_root_resolution.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_kummer_discriminant.py",
+      "command": "python computations/verify_kummer_polar.py",
       "result": "PASS"
     },
     {
@@ -33,16 +33,16 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked block exchange on thick and thin entries, dominance for each slope by the limiting tangent conics, uniqueness at double roots, and transfer of Hilbert defects via two-position shift."
+    "scope": "Verified the local rank-one matrix model, proper quasi-finite descent to the normal small resolution, normal bundles, and transpose flop."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Verified six polar cross products, preservation of the quartic, nondegenerate conic squares on sixteen planes, and their sixteen singular images."
+    "scope": "Checked both local-coordinate Jacobians, all eight bilinear graph determinants, all contact-plane and discriminant identities, and base-point-free degree-two embeddings."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 210,
+      "nc-p3": 211,
       "plan_ja": 7,
       "notes_ja": 14
     },
@@ -58,7 +58,7 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Resolve the paired-root graph at the eight invertible nodes and determine its behavior under the sign of the square root. Then determine the two-position shift on the resolved ramification surface and the AS locus away from its contact curves.",
+    "Determine whether the two-position exchange has fixed points on the resolved Kummer family, and use the exceptional slopes or the residual complement to refine the regularity test.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
