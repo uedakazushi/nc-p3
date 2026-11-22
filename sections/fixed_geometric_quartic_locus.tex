@@ -1,0 +1,76 @@
+% !TeX root = ../papers/nc-p3.tex
+\section{固定楕円曲線の四次障害の幾何点と反対行列式}
+\label{sec:fixed-geometric-quartic-locus}
+正の固定直線で $A=\left(\begin{smallmatrix}a&b\\zb&a\end{smallmatrix}\right)$,
+$B=\left(\begin{smallmatrix}e&f\\zf&e\end{smallmatrix}\right)$とする。座標は共通倍率まで取る。
+\begin{theorem}\label{thm:opposite-fixed-dets}
+$r^2=z$ とし、$r$ の二通りの選択と $\epsilon=\pm1$ ごとに
+\[
+\begin{aligned}
+ a&=r\{\lambda r(r+1)+\epsilon(r-1)\},&
+ b&=r+1+\epsilon\lambda r(r-1),\\
+ e&=r\{r+1-\epsilon\lambda r(r-1)\},&
+ f&=\lambda r(r+1)-\epsilon(r-1)
+\end{aligned}
+\]
+と置く。全ての通常倍率でこれらは可逆な対根窓で、$\det B=-\det A$、反対階数16を持つ。
+全始点で長さ4の次元は36以上、長さ5は68以上で、一般倍率ではどちらも等号である。
+\end{theorem}
+\begin{proof}
+$x=a^2-zf^2=4\epsilon\lambda r^3(z-1)=-y$,
+$\det A=4r^3(\lambda^2z-1)=-\det B$を直接得る。
+$P(x)=Q(y)=0$、符号の一致と補完式を代入で確認できる。
+一般点では真の二次式の対根が窓を与え、全ての通常倍率で四つの行列式
+$x,y,\det A,\det B$は単元であるから、切断のSchur関係も特殊化できる。
+反対切断の文字別四行四列ブロックは全て行列式
+$-(\lambda-1)^2(\lambda z-1)^2/\lambda^2$を持つ。
+\path{computations/verify_opposite_fixed_determinants.py} はこれらを検算し、
+$\mathbb Q(r,\lambda)$上で四始点の経路次元 $1,4,10,20,36,68$ を
+関係の全挿入から計算する。各二次関係空間は定階数なので特殊化で商次元は減らない。
+\end{proof}
+
+\begin{theorem}\label{thm:fixed-geometric-quartic}
+倍率 $(z,\lambda)=(3,2)$ の両固定曲線の全ての許容幾何点で、
+いずれかの始点の長さ4が標準次元35を超える軌跡はちょうど十六点である。
+正の曲線では命題\ref{prop:fixed-line-defects}の四点と上の四点、
+負の曲線では同命題の八点で尽きる。二位置移動による商では各曲線に四点ずつとなる。
+\end{theorem}
+\begin{proof}
+まず $b=1$、$pq\ne0$ とする。前節の $M$ の分子・分母を $N,D$ と書く。
+$e=Nf/D$で、曲線の式は分母を払った
+$g=\sigma z f_1 f^2+f-f_0-\sigma f_1 a^2=0$である。
+正の側で $N^2-zD^2=-z(\lambda^2z-1)^2(a^2-z)$。
+従って $\det B=-\det A$ は $f=D/(r(\lambda^2 z-1))$ と書ける。
+これを $g$ に代入し分子を因数分解すると、$D$ と上の二表示の
+$b_\epsilon a-a_\epsilon$ の積の定数倍である。
+ここで $r$ の両根を取ると、新しい四点の $a$ 座標は
+\[
+ a^2-78a+69=0,\qquad 23a^2-78a+3=0.
+\]
+四根は相異なり、既知の $a=6,1/2$ からも離れる。各根に対応する新しい点は一つずつである。
+
+除外の上界を得るため、前節の外側二対を割った挿入行列を使う。
+四位置の各文字 $h$ で切断の最初の $r_h=2,2,1,1$ 本の列を取る。
+関係行列の右端の $r_h$ 列が定数可逆なので、これを単位行列にして
+行を $(L\mid I)$ と書ける。商の座標は核基底 $(I,-L)^t$（縦に積む）から得られる。
+挿入行列の各成分は $a,e,f$ の多項式となる。
+\path{computations/verify_fixed_geometric_quartic_locus.py} は全四始点・四文字次数で
+目標階数 $17,16,16,16$ の小行列式を取る。素数307での掃き出しは行と列を選ぶためだけに用い、
+選んだ全行列式は有理係数で再計算する。
+
+各小行列式に $e=Nf/D$ を入れて分母を払った多項式を $W_j$ とする。
+$\operatorname{Res}_f(g,W_j)$ の最大公約数の平方自由部分から、
+$a^2-3=0$, $pqD=0$ および既知の十二表示の $a$ 座標を取り除いたものを $u(a)$ とする。
+既知の座標の上では既に二つの相異なる根が尽くされている。
+$u$ が定数なら残余は空である。それ以外の場合は
+$(u,g,W_1,\ldots,W_m)\subset\mathbb Q[f,a]$ のGröbner基底を求める。
+$xy\det B$ の分母を払った式（正の側ではさらに $\det A+\det B$ を掛ける）の
+平方の正規形は零になる。従って残った全幾何点は非許容点または上で同定した点である。
+目標階数は正則一般点からの特殊化で上界でもあるため、これで残りの点の等号が従う。
+
+最後に $b=0$ または $pqD=0$ のうち $\det A\ne0$ の点を直接調べる。
+正では $[a:b]=[13:4],[12:13],[1:0]$ で各一点が許容され、
+四始点とも長さ4,5の次元は35,56である。負では $[0:1],[1:0]$ に許容点はない。
+検算は各 $P,Q$ の全有限根から符号と $xy\det B\ne0$ で選別する。
+以上で正負それぞれ八点となり、前節の自由な対合はその集合を保つ。
+\end{proof}

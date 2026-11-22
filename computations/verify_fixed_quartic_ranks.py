@@ -30,31 +30,29 @@ def relation_blocks(A, B, z, l, p):
     return blocks
 
 
-def path_dimensions(blocks, start, p):
+def projected_entries(blocks, start, h):
     left, middle, right = [blocks[(start + j) % 4] for j in range(3)]
-    dims = []
-    for h in range(4):
-        columns = [
-            (u, h ^ u, j, k)
-            for u in range(4)
-            for j in range(4 - len(left[u][0]))
-            for k in range(4 - len(right[h ^ u][0]))
-        ]
-        rows = []
-        for head, tail in product(range(4), repeat=2):
-            for rule in middle[head ^ tail ^ h][0]:
-                rows.append(
-                    [
-                        int(
-                            rule[head ^ u]
-                            * left[u][1][head, j]
-                            * right[v][1][tail ^ v, k]
-                        )
-                        for u, v, j, k in columns
-                    ]
-                )
-        dims.append(len(columns) - nmod_mat(rows, p).rank())
-    return tuple(dims)
+    columns = [
+        (u, h ^ u, j, k)
+        for u in range(4)
+        for j in range(4 - len(left[u][0]))
+        for k in range(4 - len(right[h ^ u][0]))
+    ]
+    rows = []
+    for head, tail in product(range(4), repeat=2):
+        for rule in middle[head ^ tail ^ h][0]:
+            rows.append(
+                [
+                    rule[head ^ u] * left[u][1][head, j] * right[v][1][tail ^ v, k]
+                    for u, v, j, k in columns
+                ]
+            )
+    return rows
+
+
+def path_dimensions(blocks, start, p):
+    matrices = [nmod_mat(projected_entries(blocks, start, h), p) for h in range(4)]
+    return tuple(m.ncols() - m.rank() for m in matrices)
 
 
 def audit(sign):

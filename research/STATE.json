@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 107,
+  "version": 108,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -1350,6 +1350,16 @@
         "computations/verify_fixed_exchange_isogeny.py",
         "computations/verify_fixed_quartic_ranks.py"
       ]
+    },
+    {
+      "id": "GEOMETRIC-QUARTIC-DEFECT-AND-OPPOSITE-DETERMINANTS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "At slopes (3,2), the entire geometric length-four defect on the two fixed elliptic curves consists of sixteen admissible points, eight modulo exchange. Four nonsplit points missed over F_101 extend to explicit opposite-determinant sections at every ordinary slope; they have opposite rank sixteen and dimensions at least 36,68 in lengths four and five at every start.",
+      "proof": "sections/fixed_geometric_quartic_locus.tex",
+      "verification": [
+        "computations/verify_fixed_geometric_quartic_locus.py",
+        "computations/verify_opposite_fixed_determinants.py"
+      ]
     }
   ],
   "document_paths": {
@@ -1413,7 +1423,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "c51d4371961c1004d9d8dfe58879894e90601f14",
+  "reviewed_source_commit": "be1f0a5659694a457770a8a29d9b887d7f41d3b2",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -1422,15 +1432,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "On the explicit exchange quotient V^2=R(U)H(U), compute the degeneracy ideals for the four outer-pair rank maps (targets 17,16,16,16). Saturate by the chart denominators and the six known excluded points; test any residual geometric zeros for longer path obstructions or central regularity.",
+    "immediate_next_action": "Test whether the exact sixteen-point quartic defect support persists at generic slopes, by bounding the divisors of the normalized rank minors before specialization; also look for length-five or higher obstructions off this support.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/fixed_geometric_quartic_locus.tex",
       "sections/fixed_exchange_isogeny.tex",
-      "sections/fixed_line_elliptic_curves.tex",
-      "sections/kummer_polar_completion.tex"
+      "sections/fixed_line_elliptic_curves.tex"
     ],
-    "known_obstruction": "The finite-field rational sweep misses nonsplit points. A characteristic-zero saturated minors computation must establish whether more than the six quotient points occur.",
-    "state_of_claim": "The invariant quotient reduces the obstruction problem on both fixed curves; the exhaustive F_101 check covers only rational points of the specified affine charts. The characteristic-zero degeneracy divisor and the unrestricted classification remain open.",
+    "known_obstruction": "The upper bound on the geometric quartic jump set was computed at fixed slopes. A unit ideal on an affine special fiber alone cannot exclude generic defects specializing to punctures.",
+    "state_of_claim": "All geometric length-four jumps in the (3,2) slice are classified. The four additional full-rank sections are excluded at all ordinary slopes. The generic-slope upper bound and all-degree regularity on the complementary open curve remain undecided.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

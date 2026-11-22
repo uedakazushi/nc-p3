@@ -231,7 +231,8 @@
       "unmarked_frame_isomorphism": "sections/unique_character_frames.tex",
       "multiple_markings": "sections/flip_character_locus.tex",
       "fixed_elliptic_curves": "sections/fixed_line_elliptic_curves.tex",
-      "fixed_curve_exchange": "sections/fixed_exchange_isogeny.tex"
+      "fixed_curve_exchange": "sections/fixed_exchange_isogeny.tex",
+      "geometric_quartic_defect": "sections/fixed_geometric_quartic_locus.tex"
     },
     {
       "id": "UNRESTRICTED-SINGLY-SYMMETRIC-14",

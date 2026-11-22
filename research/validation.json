@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 107,
+  "version": 108,
   "reviewed_input": {
-    "source_commit": "c51d4371961c1004d9d8dfe58879894e90601f14"
+    "source_commit": "be1f0a5659694a457770a8a29d9b887d7f41d3b2"
   },
   "generation": {
     "result": "PASS",
-    "scope": "On both fixed elliptic curves the actual two-position window shift is translation by nonzero two-torsion. A degree-two isogeny and explicit quotient equation reduce the length-four obstruction search. The twelve known generically distinct exclusions descend to six points. All 205 rational affine points on the indicated two split-prime charts have been tested at (3,2) mod 101."
+    "scope": "At slopes (3,2), the entire geometric length-four defect on the two fixed elliptic curves consists of sixteen admissible points, eight modulo exchange. Four nonsplit points missed over F_101 extend to explicit opposite-determinant sections at every ordinary slope; they have opposite rank sixteen and dimensions at least 36,68 in lengths four and five at every start."
   },
   "checks": [
     {
@@ -15,31 +15,19 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_unique_character_frames.py",
+      "command": "python computations/verify_fixed_geometric_quartic_locus.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_flip_character_locus.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_fixed_line_elliptic_curves.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_fixed_branch_regular.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_central_window_cutoff.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_fixed_exchange_isogeny.py",
+      "command": "python computations/verify_opposite_fixed_determinants.py",
       "result": "PASS"
     },
     {
       "command": "python computations/verify_fixed_quartic_ranks.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_fixed_exchange_isogeny.py",
       "result": "PASS"
     },
     {
@@ -53,35 +41,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Derived the quotient function field and four character ranks, distinguished a position shift from an index-preserving isomorphism, and bounded the scope of the enumeration."
+    "scope": "Verified four-character rank bounds, geometric support including nonsplit and boundary points, exchange pairs and localization."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Unmarked frame and multiple-marking certificates; fixed-line discriminants, resultants, j-invariants, twelve rational function field defects; 32 central quotient profiles at the eight ramification points mod 307; both signed exchange maps and their quotient field equations; four-character ranks at 205 affine rational points mod 101."
+    "scope": "Recomputed maximal minors over Q, projected by resultants, saturated residuals with rational Groebner bases, and tested all endpoint completions. Four additional sections have exact generic path ranks 36 and 68."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 226,
+      "nc-p3": 227,
       "plan_ja": 7,
       "notes_ja": 14
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Rendered and visually checked manuscript pages 198 and 200, including the lifting argument and the exchange quotient."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "60ec6fab66c57bc4c6235dff37780023a58eec7d",
-    "scope": "Re-fetched main and compared all changed source files byte for byte from the previous v103 readback (7b58de1) through the v107 research commit."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "On the explicit exchange quotient V^2=R(U)H(U), compute the degeneracy ideals for the four outer-pair rank maps (targets 17,16,16,16). Saturate by the chart denominators and the six known excluded points; test any residual geometric zeros for longer path obstructions or central regularity.",
+    "Test whether the exact sixteen-point quartic defect support persists at generic slopes, by bounding the divisors of the normalized rank minors before specialization; also look for length-five or higher obstructions off this support.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
