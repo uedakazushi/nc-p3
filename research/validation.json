@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Nine-term H-jets over Q(z); every four-by-fourteen central product block loses four H orders and has rank four. Reran all uncut sixth, center and degree-four quotient ranks at seven-term precision."
+    "scope": "Nine-term H-jets over Q(z); every four-by-fourteen central product block loses four H orders and has rank four. Reran all uncut sixth, center and degree-four quotient ranks at seven-term precision.",
+    "reproduction": "Recomputed all sixteen four-by-fourteen blocks over Q(z) at H precision nine and reran all sixteen uncut sixth blocks and degree-four cuts at precision seven."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript page 261, including the degree-five multiplication argument and its character dimensions."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "e649e91553307ca63b068524d1bb97e6516e178c",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Compute the four-center quotient in degree six on the small-trace disk. Nine-term H-jets prove the degree-five products have full rank after four H divisions. In the first degree-six block (start 0, character 0), the direct product test exhausted the three remaining H coefficients before proving rank eight. Try higher precision (at least eleven input coefficients) or first saturate the degree-five product spaces and use their append maps. Continue toward length 13. No degree-six central-quotient failure or all-degree regularity follows from the precision limit.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "36a20a8c95543c6b995d2e5628fa1433f6723cda",
+    "commit": "d0750272fc4ba2cd129a69bd52e23f8560677743",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
