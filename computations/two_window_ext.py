@@ -45,7 +45,7 @@ def add_scaled(vector, other, scale):
             vector.pop(index, None)
 
 
-def quotient_images(size, relations):
+def quotient_images(size, relations, unit=Fraction(1)):
     """Sparse quotient map on every standard basis vector."""
     pivots = {}
     for relation in relations:
@@ -59,7 +59,7 @@ def quotient_images(size, relations):
             scale = row.pop(i)
             add_scaled(row, pivots[i], scale)
     free = [i for i in range(size) if i not in pivots]
-    images = {i: {j: Fraction(1)} for j, i in enumerate(free)}
+    images = {i: {j: unit} for j, i in enumerate(free)}
     for i in sorted(pivots, reverse=True):
         images[i] = {}
         for j, value in pivots[i].items():
@@ -69,7 +69,7 @@ def quotient_images(size, relations):
 
 class PathRow:
     """Path quotients from one start; multiplication appends the last arrow."""
-    def __init__(self, windows, start, length):
+    def __init__(self, windows, start, length, unit=Fraction(1)):
         self.dims = [1]
         self.arrows = []
         for d in range(length):
@@ -81,7 +81,7 @@ class PathRow:
                         for i, c in self.arrows[-1][4*b+x].items():
                             add_scaled(vector, {4*i+y: c}, value)
                     relations.append(vector)
-            size, images = quotient_images(4*self.dims[d], relations)
+            size, images = quotient_images(4*self.dims[d], relations, unit)
             self.dims.append(size)
             self.arrows.append(images)
 

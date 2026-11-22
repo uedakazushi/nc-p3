@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 88,
+  "version": 89,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -1177,6 +1177,15 @@
       "verification": [
         "computations/verify_central_window_cutoff.py"
       ]
+    },
+    {
+      "id": "ZERO-PAIRING-HILBERT-DEFECT",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "The zero-pairing boundary contains an entire non-AS bilinear curve at (z,lambda)=(3,2), with generic degree-six path dimensions (92,84,85,84), and a non-AS two-parameter sublocus x=z-1 with degree-four dimensions (35,36,36,35).",
+      "proof": "sections/zero_pairing_defect.tex",
+      "verification": [
+        "computations/verify_zero_pairing_defect.py"
+      ]
     }
   ],
   "document_paths": {
@@ -1240,7 +1249,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "43dd28efdc5d3873fbef75923a8b7cf31e1bf6ae",
+  "reviewed_source_commit": "3dd4e14878f3d1efc5b2151ec0ac405ec823f987",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -1249,15 +1258,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Apply the degree-16 test to the quartic-central boundary beyond the known regular open, and determine the remaining degree-two corner-simple locus of the general quartic center.",
+    "immediate_next_action": "Extend the generic Hilbert-rank obstruction to all eight zero-quadratics parametrizations, including reducible special fibers. Use the degree-16 test where the early Hilbert functions agree; determine the remaining degree-two corner-simple locus.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/zero_pairing_defect.tex",
       "sections/central_window_cutoff.tex",
-      "sections/twenty_central_nodes.tex",
-      "sections/two_window_ext.tex"
+      "sections/klein_zero_quadratics.tex"
     ],
     "known_obstruction": "The degree-16 cutoff requires four central quartics cutting a finite quotient. Outside that chart no uniform finite Koszul/Serre cutoff is proved; finite-dimensional B and seven-degree tests do not suffice. Other low-rank components and high-rank witness-free regions remain unclassified.",
-    "state_of_claim": "Complete finite AS decision on central-quartic finite-cut charts; their global coverage and the remaining non-Azumaya strata are open.",
+    "state_of_claim": "Positive-dimensional non-AS boundary strata proved; the other zero-pairing charts and higher singular strata remain.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

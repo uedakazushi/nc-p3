@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 88,
+  "version": 89,
   "reviewed_input": {
-    "source_commit": "43dd28efdc5d3873fbef75923a8b7cf31e1bf6ae"
+    "source_commit": "3dd4e14878f3d1efc5b2151ec0ac405ec823f987"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For any standard finite-Frobenius four-window with four marked central quartics cutting a finite quotient, left/right AS regularity has a complete internal-degree-16 test. Truncated ranks through 16 force global polynomial freeness and global Koszul exactness. This gives an open all-fiber certificate without a previously known regular generic point."
+    "scope": "The zero-pairing boundary contains an entire non-AS bilinear curve at (z,lambda)=(3,2), with generic degree-six path dimensions (92,84,85,84), and a non-AS two-parameter sublocus x=z-1 with degree-four dimensions (35,36,36,35)."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_central_window_cutoff.py",
+      "command": "python computations/verify_zero_pairing_defect.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_central_nodes.py",
+      "command": "python computations/verify_central_window_cutoff.py",
       "result": "PASS"
     },
     {
@@ -28,6 +28,10 @@
     },
     {
       "command": "git diff --check",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_central_nodes.py",
       "result": "PASS"
     },
     {
@@ -57,21 +61,24 @@
     {
       "command": "python computations/verify_minimum_central_characters.py",
       "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_two_window_ext.py",
+      "result": "PASS"
     }
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked AS duality for the central Koszul complex, bounded arrow representation identities, the degree-bounded comparison cone and the openness argument."
+    "scope": "Checked rational parameter inversion, the admissible graph closure, complete insertion of quadratic relations, and specialization of the path-dimension excess."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact rational sparse left and right complexes through degree sixteen on polynomial and four-position signed windows, with a failed central cut and a noncentral tuple as controls.",
-    "reproduction": "Targeted rational and finite-field tests with SymPy 1.14.0, python-flint 0.9.0 and NumPy 2.3.5. Cutoff controls were run over Q. Local rank and normality transfer are proved in the manuscript."
+    "scope": "Exact path quotients over rational function fields in one and two parameters, with independent exact specialization through length six."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 205,
+      "nc-p3": 206,
       "plan_ja": 6,
       "notes_ja": 14
     },
@@ -79,7 +86,7 @@
   },
   "visual_inspection": {
     "result": "PASS",
-    "scope": "Rendered manuscript pages 176 and 178 inspected, including the completed-node formula and the degree-16 criterion."
+    "scope": "Rendered pages 176 and 178 in the v88 build preceding the final boundary section."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
@@ -88,7 +95,7 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Apply the degree-16 test to the quartic-central boundary beyond the known regular open, and determine the remaining degree-two corner-simple locus of the general quartic center.",
+    "Extend the generic Hilbert-rank obstruction to all eight zero-quadratics parametrizations, including reducible special fibers. Use the degree-16 test where the early Hilbert functions agree; determine the remaining degree-two corner-simple locus.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
