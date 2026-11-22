@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 172,
+  "version": 173,
   "reviewed_input": {
-    "source_commit": "d1a4a815b20ea1b10d8f96113cc5ec533cd61809"
+    "source_commit": "9d20aa5cc207af44447bf58004a504d6a89c52c0"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For ordinary characteristic-zero rank-fifteen windows over three with xbar=1, v(y)>0, 2v(x-1)>=v(y) and residue J=(x-1)^2/(4y) different from 1, the six-digit annulus 3v(y)<=2v(3) is standard Koszul left/right AS-regular and free of rank 256 per start. This includes the vertical x=1 annulus. At the collision, v(J-1)>=9v(y) suffices at arbitrary depth by an exact Gaussian 20-digit certificate."
+    "scope": "The vertical x=1 at positive v(y), and the tube 4v(x-1)>=17v(y)>0 over three, are unconditionally standard Koszul left/right AS-regular, free of rank 256 per start. For each algebraic y!=0 whose primitive minimal polynomial has a projective F3 root, in particular every rational y!=0, all indexed classes at x=1 are exactly the four solutions y=-(t-1/t)^2/108 (two at y=1/27); all have minimum period two."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_ramified_pole.py",
+      "command": "python computations/verify_rank_fifteen_vertical_one.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_pole_fibers.py",
+      "command": "python computations/verify_rank_fifteen_ramified_pole.py",
       "result": "PASS"
     },
     {
@@ -33,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked the change of square-root coordinates, the lift of all eight tangent representatives, the two-sided basis changes, and mixed-characteristic restart. Factored both collision branches and checked the H^2 gain in the distance from the Gaussian chart."
+    "scope": "Checked Hensel localization in the eighth cyclotomic field, two-unit distance identity, finite precision transfer, projective residue-root criterion and signed conic involution."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Degree-100 tangent divisor after orbit descent; all 308 Smith profiles on the five extra tangent fibers and the 212 exact characteristic-zero cuts through seven. The two factorizations were checked symbolically and the 20-digit collision calculation was reproduced in two independent representations of Q(i).",
-    "reproduction": "Over F3(z), the squarefree pivot divisor of degree 897 has a degree-100 invariant core. Five extra residue charts match all 308 complete pivot lists; exact Q(z) cuts match the first 212. The two collision identities passed symbolic verification, and independent Q(i) arithmetic with 20 digits verified every degree through thirteen."
+    "scope": "Exact Q(zeta_8) arithmetic with local testing at the selected factor of Z^4+1, length-13 overlaps and exact conic inversion."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 301,
+      "nc-p3": 302,
       "plan_ja": 8,
       "notes_ja": 16
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected the normalized tangent change, five supplemental residue polynomials and the Gaussian collision tube on manuscript pages 274 and 275."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "22fdd8169d931667486d64a1a67725ee421ea290",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Remove the depth restriction in the nonbranch and resolved tangent charts by exact higher two-sided cuts. On Jbar=1 the Gaussian tube v(J-1)>=9v(y) is settled; resolve the remaining ratios using L and H as local parameters. For 0<2v(x-1)<v(y) use H=a*b and z=1/b to make both a and b small. Unit residues outside the rational grid and unrestricted nonsymmetric branches also remain.",
+    "Continue exact higher-degree overlaps for the nonbranch and tangent unit-x charts to remove their depth bounds, and cover remaining unit-y residues on the x=1 line. For x=1 the only still possible exceptional levels are totally 3-adic units whose primitive minimal polynomial has no projective F3 root; all nonzero rational levels are settled. On the positive-y side, the vertical and Gaussian tubes are settled without depth restrictions.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
