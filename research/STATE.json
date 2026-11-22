@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 117,
+  "version": 118,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -1450,6 +1450,17 @@
       "verification": [
         "computations/verify_rank_fourteen_central_cut.py"
       ]
+    },
+    {
+      "id": "RANK-FOURTEEN-GEOMETRIC-REDUCTION-AND-CYCLOTOMIC",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "Every characteristic-zero ordinary rank-fourteen window with ordinary geometric reduction in characteristic 101 is standard Koszul and AS regular in every degree, including arbitrarily large residue extensions. Every ordinary root-of-unity value of the rational parameter t is regular on both components, by an auxiliary calculation at 109.",
+      "proof": "sections/rank_fourteen_geometric_reduction.tex",
+      "verification": [
+        "computations/verify_rank_fourteen_geometric_reduction.py",
+        "computations/rank_fourteen_dual.py",
+        "computations/verify_rank_fourteen_cyclotomic.py"
+      ]
     }
   ],
   "document_paths": {
@@ -1513,7 +1524,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "1ab9d9dad87c0484f8e9053455f29dd7d1662f47",
+  "reviewed_source_commit": "f792ac8413cbb4b873fc040d72dc098e946afd02",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -1522,15 +1533,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Settle the four-quartic cut in lengths seven to thirteen on the ordinary rank-fourteen curve. Use the right-append recurrence from verify_rank_fourteen_central_cut.py. To avoid large rational pivots, dualize each character block over Q(i)[t], restricting scalars from the quadratic Y-cover, and take a polynomial kernel basis. Inspect maximal-minor ideals and certify any remaining orbits with an independent quartet or split primes. The 22 factors through length six are already AS regular.",
+    "immediate_next_action": "Settle the finite characteristic-zero exceptional locus of the rank-fourteen components. For a putative bad closed point, every reduction over 101 lies on the explicit nonordinary boundary or at infinity. Study the finitely many residue disks by saturating quadratic and central sections on the compactified curve (local uniformizers, leading minors in characteristic zero and modulo 101). In parallel methodologically, the exact dual path/Fitting recursion can be run over Q(i)[t] with modular reconstruction. Use the cyclotomic and degree-six results as proved inputs.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/rank_fourteen_geometric_reduction.tex",
       "sections/rank_fourteen_central_cut.tex",
-      "sections/rank_fourteen_center.tex",
-      "sections/rank_fourteen_descent.tex"
+      "sections/rank_fourteen_center.tex"
     ],
-    "known_obstruction": "Ordinary rank fourteen still requires a simultaneous Artinian upper bound from length seven to thirteen; direct function-field elimination grows with the degree of the selected minor.",
-    "state_of_claim": "Through length six there is no Hilbert obstruction anywhere on the ordinary rank-14 stratum. The higher central quotient on the complement of the 22 certified factors and the unrestricted classification remain open.",
+    "known_obstruction": "The ordinary curve is not proper. A hypothetical horizontal exceptional point can specialize entirely to a nonordinary boundary over 101. The cyclotomic case is resolved at 109.",
+    "state_of_claim": "All ordinary geometric reductions at 101, and all ordinary cyclotomic parameters in characteristic zero, are settled. Characteristic-zero points with only boundary reductions and the unrestricted classification still require proof.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

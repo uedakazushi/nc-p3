@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 117,
+  "version": 118,
   "reviewed_input": {
-    "source_commit": "1ab9d9dad87c0484f8e9053455f29dd7d1662f47"
+    "source_commit": "f792ac8413cbb4b873fc040d72dc098e946afd02"
   },
   "generation": {
     "result": "PASS",
-    "scope": "On both ordinary rank-fourteen components a common four-quartic cut at each geometric point has the standard quotient profile through length six at all starts. The uncut sixth path dimension is 84. The 22 rational base factors of the cut certificate have total degree 1192; all 4768 geometric windows above them are standard Koszul and AS regular in every degree."
+    "scope": "Every characteristic-zero ordinary rank-fourteen window with ordinary geometric reduction in characteristic 101 is standard Koszul and AS regular in every degree, including arbitrarily large residue extensions. Every ordinary root-of-unity value of the rational parameter t is regular on both components, by an auxiliary calculation at 109."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fourteen_central_cut.py",
+      "command": "python computations/verify_rank_fourteen_geometric_reduction.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fourteen_center.py",
+      "command": "python computations/verify_rank_fourteen_central_cut.py",
       "result": "PASS"
     },
     {
@@ -33,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked central exchange, specializations of selected exact minors, common cuts via irreducibility of the Grassmannian, lower and upper Hilbert bounds and all conjugates of each residual orbit."
+    "scope": "Reviewed saturated PID kernels, maximal-minor ideals via row and column bases, both eigenvalues after etale splitting, lifting central sections and reduction of cyclotomic conjugates."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact right-append projection in four character blocks at starts 0 and 1 through length six; all 22 projected irreducible factors tested over a split prime with both signs of i and s and all four starts through length thirteen.",
-    "reproduction": "SymPy 1.14.0 and python-flint 0.9.0; integral univariate polynomial arithmetic on the elliptic function field and exact split-prime rank certificates."
+    "scope": "Computed all dual path kernels and maximal-minor supports through length thirteen over F101[t] for both starts and signs, checked exceptional orbits in extension fields and repeated the generic calculation at 109 to cover the remaining cyclotomic orders."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 237,
+      "nc-p3": 239,
       "plan_ja": 7,
       "notes_ja": 15
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected rendered paper pages 210 and 211 with the theorem and the complete degree-six certificate."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "be1fd91ea0b65abeb6d8badeb06072c19c6eb7e3",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Settle the four-quartic cut in lengths seven to thirteen on the ordinary rank-fourteen curve. Use the right-append recurrence from verify_rank_fourteen_central_cut.py. To avoid large rational pivots, dualize each character block over Q(i)[t], restricting scalars from the quadratic Y-cover, and take a polynomial kernel basis. Inspect maximal-minor ideals and certify any remaining orbits with an independent quartet or split primes. The 22 factors through length six are already AS regular.",
+    "Settle the finite characteristic-zero exceptional locus of the rank-fourteen components. For a putative bad closed point, every reduction over 101 lies on the explicit nonordinary boundary or at infinity. Study the finitely many residue disks by saturating quadratic and central sections on the compactified curve (local uniformizers, leading minors in characteristic zero and modulo 101). In parallel methodologically, the exact dual path/Fitting recursion can be run over Q(i)[t] with modular reconstruction. Use the cyclotomic and degree-six results as proved inputs.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
