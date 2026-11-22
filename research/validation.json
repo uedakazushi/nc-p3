@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 87,
+  "version": 88,
   "reviewed_input": {
-    "source_commit": "2f1a389ee8645e0b8bdb7277804c62af4130eb69"
+    "source_commit": "43dd28efdc5d3873fbef75923a8b7cf31e1bf6ae"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All twenty distinguished singular points of the general projective quartic center are ordinary double points. The two simple dimensions there are 4 and 12. The completed order on the projective chart is End(R^4 + I^12) for the conifold R and the rank-one cokernel of its two-by-two matrix."
+    "scope": "For any standard finite-Frobenius four-window with four marked central quartics cutting a finite quotient, left/right AS regularity has a complete internal-degree-16 test. Truncated ranks through 16 force global polynomial freeness and global Koszul exactness. This gives an open all-fiber certificate without a previously known regular generic point."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_central_nodes.py",
+      "command": "python computations/verify_central_window_cutoff.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_minimum_central_characters.py",
+      "command": "python computations/verify_central_nodes.py",
       "result": "PASS"
     },
     {
@@ -29,27 +29,57 @@
     {
       "command": "git diff --check",
       "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_single_configuration_projection.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_configuration_quartic_pencil.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_configuration_intersections.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_quartic_euler_derivations.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_quartic_center_order.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_symmetric_center.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_minimum_central_characters.py",
+      "result": "PASS"
     }
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked integral norm transfer, the reduced eigenvalue bound, trace multiplicities of primitive idempotents, reflexive Morita recovery, and the local trace ideal calculation forcing a node."
+    "scope": "Checked AS duality for the central Koszul complex, bounded arrow representation identities, the degree-bounded comparison cone and the openness argument."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Over 2657 all twenty central roots have multiplicity 2, and the regular action of a fixed quartic loop pencils off an eigenvalue of multiplicity 8. The reduced characteristic polynomial has a simple eigenvalue."
+    "scope": "Exact rational sparse left and right complexes through degree sixteen on polynomial and four-position signed windows, with a failed central cut and a noncentral tuple as controls.",
+    "reproduction": "Targeted rational and finite-field tests with SymPy 1.14.0, python-flint 0.9.0 and NumPy 2.3.5. Cutoff controls were run over Q. Local rank and normality transfer are proved in the manuscript."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 203,
+      "nc-p3": 205,
       "plan_ja": 6,
       "notes_ja": 14
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Rendered manuscript pages 176 and 178 inspected, including the completed-node formula and the degree-16 criterion."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
@@ -58,7 +88,7 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Test whether the twenty ordinary nodes exhaust the isolated singular points or whether other curves or points carry degree-two corner simples. Make the bounded central-finite AS criterion effective outside the proven regular open.",
+    "Apply the degree-16 test to the quartic-central boundary beyond the known regular open, and determine the remaining degree-two corner-simple locus of the general quartic center.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
