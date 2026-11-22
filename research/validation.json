@@ -97,13 +97,23 @@
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "repository": "uedakazushi/nc-p3",
+    "branch": "main",
+    "source_commit": "f1b030013603d7cfcd2c76f05561d417ec7d6f5d",
+    "verified_from": "cafd8f7befc04d5ed2f711c33e795a2c51f00d67",
+    "changed_files_verified": 28,
+    "method": "Regular fast-forward push, fresh git fetch, comparison of all changed remote blobs to local files."
   },
   "open_mathematics": [
     "Determine the exact generic degree over a single projected configuration. Normalize Q=A^2 and Q-perp, enumerate isolated Grassmann square roots up to coordinate signs, reject pairs by the cubic intersection, then recover the two-window extension. Determine the quartic center and effective regularity on the full component and the remaining singular rank charts.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
-    "result": "PENDING"
+    "result": "PASS",
+    "repository": "uedakazushi/research-hub",
+    "branch": "main",
+    "commit": "8b1f1810183341364b4247b3ee4bcb931729c865",
+    "method": "Updated the nc-p3 row only, then fetched main and verified README bytes."
   }
 }
