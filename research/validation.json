@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Verified exact valuations of all tensor entries at the four ramification points, integral unit denominators, 32 surviving entries at each, and all eight residual central cuts through degree thirteen at all four starts."
+    "scope": "Verified exact valuations of all tensor entries at the four ramification points, integral unit denominators, 32 surviving entries at each, and all eight residual central cuts through degree thirteen at all four starts.",
+    "reproduction": "SymPy 1.14.0 and python-flint 0.9.0. Exact local orders and Gaussian leading coefficients, both fourth roots of unity modulo 101, every start through degree 13, and the independent characteristic-zero path counts 20,38,72 at the other two residues."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected the complete ramified-disk theorem, the diagonal weight table and the remaining obstruction on manuscript page 214."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "abdcf20c889881c36a49588dfff8fb877f699cdc",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Resolve the two unramified 101-adic disks t=19 and 80, lying above t^2+2t+5. In the unmodified homogeneous frame their rank-four projective limits fail degree two. Compare the saturated limiting six-dimensional relation spaces (Pluecker coordinates) rather than the image of the limiting tensor, or use a nondiagonal change of generators adapted to those rank-four tensors. The four ramified disks already admit the certified weights, and require no further tests. Another approach is modular reconstruction of the actual horizontal Fitting ideals constrained by the two allowed roots.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "8c91ff9ec1de77d9a88001f2c53522fd601e19be",
+    "commit": "5c30ef3809d9060329c8001e7c6258bdd7765de5",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
