@@ -1,0 +1,121 @@
+% !TeX root = ../papers/nc-p3.tex
+\section{反対位置の一組だけを対称化した四窓}
+\label{sec:one-opposite-symmetric-evaluations}
+四階テンソルを$E\otimes F\otimes E\otimes G$に置き、二つの$E$位置の交換で不変とする。
+$F,G$の同定は仮定しない。以下では点座標を$E^*,F^*,G^*$と書く。
+隣接階数6の因子分解を双対な六次元空間への全射$\beta:E^*\otimes F^*\to H$、
+$\gamma:E^*\otimes G^*\to H^*$とすれば、テンソル対称性は
+\[
+ \langle\beta(x,f),\gamma(y,g)\rangle
+ =\langle\beta(y,f),\gamma(x,g)\rangle
+\]
+である。関係の列は$R_\beta,R_\beta^{\rm op},R_\gamma,R_\gamma^{\rm op}$である。
+ここで$R_\beta$は$H^*$との全対合であり、$R_\gamma$も同様である。
+
+\begin{theorem}[四つの評価の下界]\label{thm:single-opposite-evaluation-ranks}
+この四窓が標準AS正則なら、二つの写像をどちら側の非零文字で評価しても階数は3以上である。
+\end{theorem}
+\begin{proof}
+各関係空間は次または前の転置窓と隣り合うので、
+定理\ref{thm:no-consecutive-pure-relations}から純テンソルを含まない。
+$d=\operatorname{rank}\beta(x,-)\le2$とする。$f\in\ker\beta(x,-)$では
+$\beta(E^*,f)$が$\gamma(x,G^*)$を消す。従って後者は$R_\beta$内で
+四行$d$列に支えられた関係空間に単射で写る。
+その階数が4なら、射影三平面が四行二列の階数1のSegre多様体（次元4）に
+$\mathbb P^7$内で交わる。$d<2$でも零列を補って同じである。
+よって$\gamma(x,-)$の階数は3以下である。両$E$位置を$x$の一次元商、
+$F,G$位置をそれぞれの核の双対へ制限すれば全関係が消え、
+長さ$4m$の次元は$2^m$以上になる。$\gamma$側も同様である。
+
+次に$a=\operatorname{rank}\beta(-,f)\le2$として
+$S=\ker\beta(-,f)$、$s=4-a$と置く。両$E$位置を$S^*$、$F$位置を$f$の
+一次元商へ制限する。この文字に触れる関係は全て消える。
+$\gamma(S,G^*)$は$\beta(E^*,f)^\perp$に入り、そこは$6-a=s+2$次元である。
+従って残る$S^*,G,S^*$の三文字ブロックの次元は少なくとも
+$4s^2-2s(s+2)$で、$s\ge3$なら6以上である。
+
+$s=2$では四次元を標的とする二行列$A,B:G^*\to k^4$で制限された$\gamma$を表す。
+三文字ブロックの双対は$h_{ij}\in G^*$ ($i,j=0,1$)のうち
+\[
+ Ah_{0j}+Bh_{1j}=0,\qquad Ah_{i0}+Bh_{i1}=0
+\]
+を満たす空間である。$A$が可逆なら$h_{11}$を任意に選び、
+$h_{01}=h_{10}=-A^{-1}B h_{11}$、$h_{00}=(A^{-1}B)^2 h_{11}$とできる。
+一般の二行列でも核次元の上半連続性で4以上である。
+一文字$f$でブロックを分離すると前後を結ぶ関係はないため、
+$m$個のブロックはそのテンソル積となり指数成長する。
+$\gamma(-,g)$については二つの奇位置を取り替えればよい。
+\end{proof}
+
+\begin{corollary}[同じ点スキームと恒等四移動]\label{cor:single-opposite-common-points}
+同じ標準AS仮定の下で、
+$\mathbb P(E^*)$上の$\beta(x,-)$と$\gamma(x,-)$の四次小行列式は
+同じ退化スキームを定める。四辺の点対応は全てこのスキームのグラフで、
+点列の四移動は恒等である。台の有限性・被約性は要らない。
+\end{corollary}
+\begin{proof}
+$\beta(x,-)$の退化スキーム上では階数が丁度3であり、核直線$f$が定まる。
+恒等式により$\gamma(x,G^*)$は$\beta(E^*,f)^\perp$に含まれる。
+後者の直交条件に独立な三本があり、前者にも独立な三本がある。
+局所的に単元となる小行列式を取れば、$\gamma$の評価像は階数3の部分束と一致し、
+四次小行列式はスキーム上で消える。逆の包含も同じである。
+各辺の零点スキームは定階数の核直線のグラフであり、反対側の評価でも階数3のため
+両射影はそれぞれの退化スキームへの同型である。
+従って$x$から出る点列はスキーム上で一意な$x,f,x,g,x,\ldots$となる。
+\end{proof}
+
+\begin{proposition}[片側対称の相手窓の決定]\label{prop:single-opposite-prolongation}
+第一窓$R_\beta$から
+\[
+ P(\beta)=\{L:E^*\to H^*:\quad
+ \langle\beta(x,f),L(y)\rangle=\langle\beta(y,f),L(x)\rangle\ \forall x,y,f\}
+\]
+を作る。片側対称な標準AS延長があれば$G^*=P(\beta)$で、
+$\gamma$は普遍評価$\gamma(x,L)=L(x)$である。
+逆の操作でも$P(\gamma)=F^*$である。各段は二十四元二十四式の線型演算で、
+両端交代な類似の連立式の核は零でなければならない。
+\end{proposition}
+\begin{proof}
+$R_\beta\otimes E$を$\operatorname{Hom}(E^*,H^*)$と同定すると、
+$R_\beta\otimes E$と$E\otimes R_\beta^{\rm op}$の交叉は
+両端交換に安定で、正固有部分が$P(\beta)$である。
+全部の交叉は標準AS性から四次元、$\gamma(-,g)$の四元は一文字切断の全階数から
+独立であり、対称式で正固有部分に入る。これで主張と逆向きの結果を得る。
+\end{proof}
+
+構成した相手が第二の反対対称性も持つかを調べるには、
+$T:F^*\to P(\beta)$と対称写像$D:H\to H^*$について
+$T(f)(x)=D\beta(x,f)$を線型に解き、両方が可逆な解を探せばよい。
+実際、これが成り立つと前節のGram表示であり、
+逆に$F^*$と$G^*$を同定した後で両対称なら二文字をまとめたGram行列が対称となる。
+全射$\beta$の核はその行列の両核であるため相手の写像は$\beta$を経由し、
+誘導される六次元の写像は可逆対称となる。次の未解決域は、この線型空間に
+可逆解がなくても両方の普遍評価が四評価下界とAS条件を満たす場合である。
+
+\begin{proposition}[有限な共通点スキームの固有な二乗像]\label{prop:single-opposite-intrinsic-square}
+共通点スキーム$X\subset\mathbb P(E^*)$が有限な場合、その飽和イデアルの
+最小解消の最後の一次行列から射$X\to\mathbb P^9$が決まり、
+これは両方の奇位置への射の二次Veronese像を同時に与える。
+このスキーム像を含むVeronese三次元多様体が一意なら、片側対称の標準AS延長は
+両対称チャートに入る。
+\end{proposition}
+\begin{proof}
+$6\times4$評価行列の最大小行列式イデアルは期待余次元3である。
+Eagon--Northcott解消は次数$4,5,6$で階数$15,24,10$を持ち、
+完全Cohen--Macaulay商なのでイデアルは飽和している。
+両評価行列は系\ref{cor:single-opposite-common-points}で同じイデアルを解消する。
+次数零の鎖同型は各項の定数基底変換となり、恒等写像の二つの持ち上げの差の
+零ホモトピーは、次の項のシフトが厳密に大きいため零である。
+従って最後の行列とその核の射影像は基底を除いて固有である。
+体積直線を除くと、この行列を$x$で評価した写像は
+$Q\mapsto\beta(x,-) Q$である。ここで$Q\in\operatorname{Sym}^2(F^*)$を
+$F\to F^*$とみなす。これは最後の対称二乗から一文字を縮約する解消の微分である。
+$X$上で評価核が直線$kf$なので、この行列の核は$kf^2$である。
+階数一定の局所基底で同じことが言えるためスキーム上の射を得る。
+$G$での表示も同じ十次元空間の射を与える。
+Veroneseが一意ならその二つの表示は射影三空間の同型で対応し、$X$上で$f$と$g$が同定される。
+すると二辺の有限グラフが一致する。有限な六双一次式完全交叉の$(1,1)$イデアルは
+その六式で張られるので（定理\ref{thm:finite-square-chart}）、両奇窓の関係空間も一致する。
+今度は奇位置を両端とする三次交叉も、命題\ref{prop:finite-flip-obstructions}により
+端交換の正固有部分に入る。従ってテンソルはこの同定で両対称である。
+\end{proof}

@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-22 / v65。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v66。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -118,6 +118,8 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 
 **両対称反転窓の枝ではAS正則性と添字保持同型の判定が完結した。** 相異なる二平面の評価像が横断すれば三次元可換単位積の非結合性が必要十分で、共通根基が直線ならそこから得る二行二列関係の可逆性が必要十分である。二つの三生成Clifford代数の自由積を共通部分で貼り合わせ、全次数のTorを計算した。平方・被約反対核の結果と合わせて全入力を覆う。[因子対の正則性と分類手順](sections/transverse_factor_amalgam.tex)
 
+一組だけの反対対称性を仮定しても、AS窓では四つの評価が全て階数3以上で、二つの窓は同じ点スキーム上の恒等四移動を与える。第三窓は第一窓の24元の線型系から復元できる。有限な場合は共通の最小解消から両奇位置の二乗像が決まり、それを含むVeronese三次元多様体の一意性で両対称性が従う。[片側対称の成長障害と相手窓](sections/one_opposite_symmetric_evaluations.tex)
+
 二窓から作る56次元代数で、低次Extの消滅を逆Serre反復が保つ構造条件を探す。
 「全次数を証明してAS認証」「有限障害で排除」「未決定」を分け、有限検査の成功を全AS認証としない。
 正規形の枝、特殊値、枝間同型の条件を証明し、未分類の残余を明示する。
@@ -153,6 +155,7 @@ python3 computations/verify_additive_graph_limits.py
 python3 computations/verify_square_apolar_ore.py
 python3 computations/verify_transverse_apolar_factors.py
 python3 computations/verify_factor_regular_windows.py
+python3 computations/verify_single_opposite_block.py
 python3 computations/verify_rank_five_pencils.py
 python3 computations/verify_matched_pencils.py
 python3 computations/verify_incidence_cubics.py

@@ -25,7 +25,8 @@
       "coverage": "disjoint exhaustive split proved in prop:opposite-rank-split",
       "normal_forms": "unresolved",
       "witness_partition": "Any invertible negative witness: polynomial indexed class. Two invertible positive pairs sharing a position: symmetric CI chart. Residual: no negative and at most one positive partner per position. These predicates exhaust AS objects but do not give a complete residual classification.",
-      "growth_obstruction": "All marked 20x120 matrices have rank >=19 on P3. No nonzero pure tensor in a cubic overlap; thm:no-consecutive-pure-relations."
+      "growth_obstruction": "All marked 20x120 matrices have rank >=19 on P3. No nonzero pure tensor in a cubic overlap; thm:no-consecutive-pure-relations.",
+      "single_opposite_symmetric": "For singly opposite-symmetric standard AS windows all four evaluation ranks are at least three. A separated three-letter block gives exponential growth for a small odd evaluation. Both maximal-minor schemes coincide on the common even projective space, all four point correspondences are graphs, and four-shift is the identity without a finiteness assumption. The other half is canonically computed by the four-dimensional positive prolongation of the first window."
     },
     {
       "id": "OPPOSITE-LOW",

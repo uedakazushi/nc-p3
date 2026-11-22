@@ -1,17 +1,21 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 65,
+  "version": 66,
   "reviewed_input": {
-    "source_commit": "c4dbfacdc4fcaaa094a70757d5f5d8c4d23460d8"
+    "source_commit": "213b792447b6d1b3ce58f091aff65fd17138e61d"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Effective AS and ordered indexed isomorphism classification for all adjacent-rank-six bisymmetric reversing windows. A transverse distinct factor pair is regular exactly for nonassociative ternary multiplication, while a one-dimensional radical requires precisely its nonsingular binary relation. Ternary Clifford amalgams over the cubic binary algebra or the weighted polynomial algebra give all-degree Koszul and Frobenius proofs. Together with square and reduced-apolar recognition this covers every input in the class."
+    "scope": "For singly opposite-symmetric standard AS windows all four evaluation ranks are at least three. A separated three-letter block gives exponential growth for a small odd evaluation. Both maximal-minor schemes coincide on the common even projective space, all four point correspondences are graphs, and four-shift is the identity without a finiteness assumption. The other half is canonically computed by the four-dimensional positive prolongation of the first window."
   },
   "checks": [
     {
       "command": "bash scripts/cloud_preflight.sh --tex (project environment activated)",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_single_opposite_block.py",
       "result": "PASS"
     },
     {
@@ -49,18 +53,19 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed both ternary Clifford identifications, common cubic binary presentation, weighted polynomial subalgebra and shifted central generator, induced-module resolution, internal-degree Tor maps and full-rank trace reconstruction."
+    "scope": "Verified the rectangular and separated-block quotients, small-column Segre intersection, scheme-theoretic kernel-line maps in both directions and prolongation recovery. Checked the expected-codimension determinantal resolution, its linear last differential, and the finite complete-intersection flip criterion."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact rational path ranks in both parities for transverse and radical-line fixtures including independent nonradical units, plus an associative pure-relation failure. Previous rank/parity fixtures remain reproducible."
+    "scope": "Exact separated pencil block dimensions 4,4,7,16; companion cubic/quartic amalgam fixtures checked in the same run. Last differential has ranks 9 and 10 for evaluation ranks 3 and 4, with precisely the square kernel at rank 3."
   },
   "tex": {
     "result": "PASS",
-    "scope": "Main 163 pages, plan 6 and notes 13. No overfull boxes, missing characters or unresolved references."
+    "scope": "Main 165 pages, plan 6 and notes 13. No overfull boxes, missing characters or unresolved references in final logs."
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected rendered page 138 of the principal manuscript, including the intrinsic Veronese reconstruction."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT",
@@ -70,7 +75,7 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Move to four-windows with one symmetric pair of opposite positions. Factor the adjacent pairing into two maps with dual six-spaces, compare their evaluation kernels at the shared four-space, and use factor marks or growth quotients to test whether an AS window is forced into the finished bisymmetric chart. Distinguish the two odd windows throughout.",
+    "Use the intrinsic 10-column last Eagon-Northcott differential of a finite singly symmetric window. Classify distinct Veronese threefolds through its scheme of kernel lines, first for a reduced length-twenty scheme, and test whether a second representation has the required four-dimensional prolongation and AS property.",
     "Other nonsymmetric windows and full classification."
   ]
 }
