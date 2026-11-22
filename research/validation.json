@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 126,
+  "version": 127,
   "reviewed_input": {
-    "source_commit": "4d1741451608590f7bffb25f44bc44047e2c98ec"
+    "source_commit": "bf692c3b3b36be24b4cc8ca759a54d6e515b84d5"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All eight places over K=infinity on a general level of either rank-15 pencil, and every one on the two genus-three levels, admit explicit standard Koszul AS-regular weighted limits. All characteristic-zero lifts on the genus-three levels with a pole of K at 109 are standard and 256-free."
+    "scope": "All ordinary genus-three windows on the two levels and both rank-15 presentations have quartic center (3,2,0,0). All 7104 geometric windows from the 17 residual factors per presentation are standard Koszul AS regular. At 109 all ordinary degree-one parameter residues, all infinity disks, and both K²+K-1 boundary fibers lift to regular windows."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_pencil_infinity.py",
+      "command": "python computations/verify_rank_fifteen_octic_center.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_pencil.py",
+      "command": "python computations/verify_rank_fifteen_pencil_infinity.py",
       "result": "PASS"
     },
     {
@@ -33,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed the Hensel coordinates, the two n signs, row scaling, eight-point count, specialization of the path/center modules and regularity lifting."
+    "scope": "Checked norm multiplicativity and the eight conjugate sheets; the 7104 count fixes one j per level; inspected liftability at both finite trace boundary fibers."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Checked all numerator and denominator leading coefficients, the eight weight choices, rational specialization and four split cyclotomic roots through the full central-cut profile.",
-    "reproduction": "SymPy 1.14.0 and python-flint 0.9.0. Both rank-15 presentations, all four large/small pairs and all four primitive twelfth roots at 109 were verified with degree-13 four-start cuts."
+    "scope": "Four-start path projections and exact center minors over Q(i,√3)(t,Y), 34 split-number-field samples, all 48 rational residue orbits per level and both trace boundary fibers at 109."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 248,
+      "nc-p3": 250,
       "plan_ja": 7,
       "notes_ja": 15
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Reviewed rendered page 222 including the eight-end theorem, both leading-term frames, the weight rule and the lifting argument."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "3a87397083737e9b37a2eea773e6f01050d3ccf6",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "On the two genus-three levels use the octic Y²=t⁸+14t⁴+1, j⁴-j²+1=0, and compute the degree-4/5 paths and quartic center over Q(j)(t,Y), then the length-13 central cut. In a 109-adic argument the entire K=infinity boundary is settled: concentrate on ordinary higher-degree residues and the finite K boundary {0,±1,±2, roots of K²+K-1}.",
+    "On the genus-three octic compute four central sections, then quotient ranks through length thirteen modulo 109 for j=8,41, both colors and starts 0,1. Use integral dual kernels or two independent sparse minor charts; recheck higher-degree ordinary residue factors. For finite boundary disks only K=0, ±1, ±2 remain. The quartic center, K=infinity and both golden-ratio boundary disks are settled.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

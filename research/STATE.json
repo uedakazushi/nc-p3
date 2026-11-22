@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 126,
+  "version": 127,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -1535,6 +1535,16 @@
       "verification": [
         "computations/verify_rank_fifteen_pencil_infinity.py"
       ]
+    },
+    {
+      "id": "RANK-FIFTEEN-OCTIC-CENTER",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "All ordinary genus-three windows on the two levels and both rank-15 presentations have quartic center (3,2,0,0). All 7104 geometric windows from the 17 residual factors per presentation are standard Koszul AS regular. At 109 all ordinary degree-one parameter residues, all infinity disks, and both K²+K-1 boundary fibers lift to regular windows.",
+      "proof": "sections/rank_fifteen_octic_center.tex",
+      "verification": [
+        "computations/verify_rank_fifteen_octic_center.py",
+        "computations/verify_rank_fifteen_octic_residues.py"
+      ]
     }
   ],
   "document_paths": {
@@ -1598,7 +1608,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "4d1741451608590f7bffb25f44bc44047e2c98ec",
+  "reviewed_source_commit": "bf692c3b3b36be24b4cc8ca759a54d6e515b84d5",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -1607,15 +1617,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "On the two genus-three levels use the octic Y²=t⁸+14t⁴+1, j⁴-j²+1=0, and compute the degree-4/5 paths and quartic center over Q(j)(t,Y), then the length-13 central cut. In a 109-adic argument the entire K=infinity boundary is settled: concentrate on ordinary higher-degree residues and the finite K boundary {0,±1,±2, roots of K²+K-1}.",
+    "immediate_next_action": "On the genus-three octic compute four central sections, then quotient ranks through length thirteen modulo 109 for j=8,41, both colors and starts 0,1. Use integral dual kernels or two independent sparse minor charts; recheck higher-degree ordinary residue factors. For finite boundary disks only K=0, ±1, ±2 remain. The quartic center, K=infinity and both golden-ratio boundary disks are settled.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/rank_fifteen_octic_center.tex",
       "sections/rank_fifteen_pencil_infinity.tex",
-      "sections/rank_fifteen_all_ramification.tex",
-      "sections/rank_fifteen_boundary_disks.tex"
+      "sections/rank_fifteen_all_ramification.tex"
     ],
-    "known_obstruction": "Genus-three regularity is open at general finite parameters. Infinity disks at 109 are resolved; finite nonordinary residues still need separate local certificates.",
-    "state_of_claim": "The infinite ends of the genus-three levels have uniform good weighted reduction at 109. The finite places of these levels and the full genus-five pencil remain open.",
+    "known_obstruction": "Uniform quartic center does not yet force a finite four-cut over every genus-three point; five finite boundary traces and higher-degree ordinary residue factors remain.",
+    "state_of_claim": "The genus-three quartic center is uniform. The all-degree problem remains on higher-degree ordinary residues and five finite trace boundary values.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

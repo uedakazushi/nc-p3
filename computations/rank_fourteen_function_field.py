@@ -164,17 +164,25 @@ def relations():
     return evaluate_relations(values, one)
 
 
-def evaluate_relations(values, unit):
+@cache
+def positive_relation_blocks():
+    return symbolic_blocks(1, z, l, b)
+
+
+def evaluate_relations(values, unit, lift=None):
+    if lift is None:
+        lift = unit.lift
+
     @cache
     def evaluate(expression):
         if expression in values:
             return values[expression]
         if expression.is_Rational:
-            return unit.lift(int(expression.p)) / int(expression.q)
+            return lift(int(expression.p)) / int(expression.q)
         if expression.is_Pow:
             return evaluate(expression.base) ** index(expression.exp)
         if expression.is_Add:
-            return sum(map(evaluate, expression.args), unit.lift(0))
+            return sum(map(evaluate, expression.args), lift(0))
         if expression.is_Mul:
             result = unit
             for factor in expression.args:
@@ -182,7 +190,7 @@ def evaluate_relations(values, unit):
             return result
         raise ValueError(expression)
 
-    sides = symbolic_blocks(1, z, l, b)
+    sides = positive_relation_blocks()
     return [
         [
             (h, {(j, j ^ h): evaluate(v) for j, v in enumerate(row) if v != 0})
