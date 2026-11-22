@@ -1,17 +1,21 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 61,
+  "version": 62,
   "reviewed_input": {
-    "source_commit": "d5eae50a1413169da2c5ba4b866f608f1ffca3ce"
+    "source_commit": "8a93985d34085b7c15dfe92cc5130364f50cfd2a"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Common polygon specialization and exclusion of mixed polygon/multiple-point models."
+    "scope": "Complete classification of both-reduced apolar specializations in the bisymmetric branch."
   },
   "checks": [
     {
       "command": "bash scripts/cloud_preflight.sh --tex (project environment activated)",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_additive_graph_limits.py",
       "result": "PASS"
     },
     {
@@ -33,15 +37,15 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked resolutions of nodal total families, connected fibers, mixed-product lattice correction, degree-pair enumeration, additive-tail rank bounds and the graph criterion with equal multidegrees."
+    "scope": "Checked graph support, disjoint-center derivatives, normalized Segre span, terminal branch growth, matching independence and scheme-level descent of the derivative gluing conditions."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exhaustive enumeration of 174 unequal common-cycle orbits. Rank lower bounds by reduction mod 2, 24 rank-seven lower bounds, 150 rank-eight products, and every growth witness verified."
+    "scope": "Exact additive graph ranks seven, eight and nine over Q for aligned, misaligned, satellite and separated cases. Earlier binary and common-polygon checks also executed."
   },
   "tex": {
     "result": "PASS",
-    "scope": "Main 152 pages, plan 6 and notes 13. No overfull boxes, missing characters or unresolved references in final logs."
+    "scope": "Main 155 pages, plan 6 and notes 13. No overfull boxes, missing characters or unresolved references."
   },
   "visual_inspection": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
@@ -54,6 +58,6 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Both additive reduced limits, nonreduced limits and non-bisymmetric windows."
+    "Nonreduced or non-complete-intersection pencil limits, rank seven and other tensor classes."
   ]
 }

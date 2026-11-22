@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 61,
+  "version": 62,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -922,6 +922,16 @@
       "verification": [
         "computations/verify_polygon_multiplication.py"
       ]
+    },
+    {
+      "id": "ALL-REDUCED-APOLAR-SPECIALIZATIONS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "If both limiting apolar pencils cut reduced quartic complete intersections, every standard AS specialization has invertible balanced pencil data on the same reduced curve. At opposite rank eight with reduced apolars this gives a graph-and-pure-relation recognition criterion and ordered classification. A rank-seven AS specialization cannot preserve two reduced complete-intersection pencils.",
+      "proof": "sections/reduced_additive_limits.tex",
+      "verification": [
+        "computations/verify_additive_graph_limits.py",
+        "computations/verify_polygon_multiplication.py"
+      ]
     }
   ],
   "document_paths": {
@@ -985,7 +995,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "d5eae50a1413169da2c5ba4b866f608f1ffca3ce",
+  "reviewed_source_commit": "8a93985d34085b7c15dfe92cc5130364f50cfd2a",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -994,15 +1004,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "For two additive reducible reduced apolars, study the reduced special graph in the product. Separate coincident and disjoint singular centers, matched rational branches, and horizontal/vertical branches; use the at-most-eight mixed rank and the actual-versus-naive loss bound to exclude nongraph AS fibers.",
+    "immediate_next_action": "Study reducible quadrics in the remaining apolar kernels. Relate their ordered linear factors across the adjacent point correspondence and derive the normal form of a square in either kernel at a maximal isotropic marked zero. Use this to decide AS and the possible opposite ranks for double-plane inputs.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/polygon_apolar_limits.tex",
-      "sections/binary_product_obstruction.tex",
-      "sections/additive_pencil_boundary.tex"
+      "sections/marked_gram_smoothing.tex",
+      "sections/reduced_additive_limits.tex",
+      "sections/nonreduced_quartic_pencils.tex"
     ],
     "known_obstruction": "No uniform finite Koszul/Serre cutoff or effective global regularity criterion is proved; finite-dimensional B and seven-degree tests do not suffice. Other low-rank components and high-rank witness-free regions remain unclassified.",
-    "state_of_claim": "Integral-model limits and both-reduced models with a nodal polygon are fully classified within bisymmetric AS. Both additively singular or nonreduced models and other tensor classes remain open.",
+    "state_of_claim": "The entire both-reduced apolar rank-eight stratum in the bisymmetric window class has ordered graph recognition, and rank-seven AS limits must lose reduced complete-intersection structure on at least one side. Nonreduced kernel recognition and non-bisymmetric windows remain open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

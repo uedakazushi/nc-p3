@@ -252,13 +252,14 @@
     "coverage": "Dense open of reversible component, including additional special AS fibers, without imposing finite point correspondences.",
     "regularity": "All smooth genus-one data, integral nodal/cuspidal data and cyclic rational polygons with equal positive multidegrees, provided the pencil has no base point.",
     "isomorphism": "For L != M the two embedded apolar curves, their unique graph and the pencil recover ordered data.",
-    "residual": "Both reduced additive models without an integral side, nonreduced limiting models, opposite ranks below eight outside known charts, and other tensor classes.",
+    "residual": "Nonreduced or non-complete-intersection limiting pencils and other tensor classes.",
     "reduced_additive_boundary": "All positive-degree multiple-point cases are AS exactly for equal multidegrees; ordered recognition for distinct bundles, m=2,3,4 quotient dimensions 13-m.",
     "ribbon": "Smooth conic ribbon: all fibers AS and complete ordered recognition for distinct bundles, quotient dimension nine.",
     "reverse_recognition": "Complete for bisymmetric adjacent-six/opposite-eight smooth-apolar tensors: standard AS iff the first relation six-plane avoids the Segre, and all such AS tensors have a unique elliptic pencil presentation up to ordered curve isomorphism.",
     "nonreduced_boundary": "All positive-degree pencils on nonreduced quartic complete intersections are AS; unequal bundles give ordered scheme-theoretic reconstruction. See sections/nonreduced_quartic_pencils.tex.",
     "higher_rank": "All bisymmetric adjacent-six AS tensors lie in the elliptic closure. Ranks nine and ten are excluded without further assumptions. A single smooth rank-eight apolar quartic suffices for a complete pure-relation and evaluation-rank criterion and forces the other apolar to be isomorphic.",
     "integral_limit": "All AS specializations retaining an integral quartic are invertible-pencil inputs on it. Noninvertible conductor pencils have a common quotient of exponential growth. See sections/binary_product_obstruction.tex.",
-    "polygon_limits": "With two reduced limiting quadrics pencils and one nodal polygon, AS requires a common polygon with matching multidegrees. An additive opposite is excluded, including when the mixed multiplication loses one dimension."
+    "polygon_limits": "With two reduced limiting quadrics pencils and one nodal polygon, AS requires a common polygon with matching multidegrees. An additive opposite is excluded, including when the mixed multiplication loses one dimension.",
+    "all_reduced_limits": "Two reduced quartic pencils force the same reduced curve and balanced ordered data for every AS specialization, including additive-additive projections; rank seven is excluded. At rank eight graph support for matched positive multidegrees with no pure relation is necessary and sufficient."
   }
 }
