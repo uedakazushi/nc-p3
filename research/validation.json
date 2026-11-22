@@ -41,7 +41,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact first-letter translation identity, Pauli products and table equivariance, 48 simultaneous form isometries, dimension 16 and the full four-start central-cut certificates at all four interior residue roots."
+    "scope": "Exact first-letter translation identity, Pauli products and table equivariance, 48 simultaneous form isometries, dimension 16 and the full four-start central-cut certificates at all four interior residue roots.",
+    "reproduction": "Verified the four-position tensor identity, all 48 label actions, closure dimension 16, stabilizer label action and central profiles at all four simple residue roots."
   },
   "tex": {
     "result": "PASS",
@@ -53,13 +54,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript page 242 including the table matching equation and regularity corollary."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "baba17319bce166956ed07952731638893190cdd",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Use the 48 exact table tests to solve finite collision candidates and multiplier deck transformations. For interior regularity, the 101 disk (4,9) is settled. Continue testing the four degree-six insertion matrices and higher central cuts away from abef=0; closure dimension 16 is independently testable. Compare opposite-cut H at paired quartic roots n and sqrt(z)m/n after lambda inversion.",
@@ -67,7 +71,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "5729e217b641c219a241382e7196dc51bd12c2bb",
+    "commit": "e3dcc51e1d66a257ed59ecd85e4ff8024ac5d717",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
