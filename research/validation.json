@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact right-append projection in four character blocks at starts 0 and 1 through length six; all 22 projected irreducible factors tested over a split prime with both signs of i and s and all four starts through length thirteen."
+    "scope": "Exact right-append projection in four character blocks at starts 0 and 1 through length six; all 22 projected irreducible factors tested over a split prime with both signs of i and s and all four starts through length thirteen.",
+    "reproduction": "SymPy 1.14.0 and python-flint 0.9.0; integral univariate polynomial arithmetic on the elliptic function field and exact split-prime rank certificates."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected rendered paper pages 210 and 211 with the theorem and the complete degree-six certificate."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "be1fd91ea0b65abeb6d8badeb06072c19c6eb7e3",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Settle the four-quartic cut in lengths seven to thirteen on the ordinary rank-fourteen curve. Use the right-append recurrence from verify_rank_fourteen_central_cut.py. To avoid large rational pivots, dualize each character block over Q(i)[t], restricting scalars from the quadratic Y-cover, and take a polynomial kernel basis. Inspect maximal-minor ideals and certify any remaining orbits with an independent quartet or split primes. The 22 factors through length six are already AS regular.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "13f64d2323c4d76074686921dfb19c72ef0c7f5e",
+    "commit": "70536c9134a88bb014a0cae868367e5f8765802b",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
