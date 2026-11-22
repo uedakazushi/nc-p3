@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Computed normalized right/left null forms, the traceless adjoint map and two invariant differentials modulo 101² in étale surface coordinates. The two-by-two Jacobian determinant is 34 modulo 101 in both presentations."
+    "scope": "Computed normalized right/left null forms, the traceless adjoint map and two invariant differentials modulo 101² in étale surface coordinates. The two-by-two Jacobian determinant is 34 modulo 101 in both presentations.",
+    "reproduction": "SymPy 1.14.0 and python-flint 0.9.0. Verified the kernel identities, invariance under four nonscalar basis changes and projective scaling, both Hensel differential columns, and determinant 34 modulo 101 in both presentations."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Reviewed the two-way product criterion and the invariant Jacobian calculation on manuscript pages 234–235, including rendered page 235."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "816547ac04d4eee0d72909e5aecc56cd4a1f1863",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Use the degree-six insertion builder of verify_rank_fifteen_quadratic_dual.py on the two ordinary surfaces P(n)=0, targeting ranks 36,36,34,34 at each start. Use independent local minors and saturate ordinary denominators to isolate possible Koszul failure points; check higher cut ranks where degree six passes. For indexed equivalence compute the generic degree of (J2,J3) and use the pulled-back product comparison to decide residual coincidences between the sheets.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "87c3d79e00b009cdd69d7b543b62cf428d2ed1ad",
+    "commit": "1c44d4d06c7e351e89d7ce9f6056e883faec8287",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
