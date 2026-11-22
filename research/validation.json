@@ -64,7 +64,11 @@
     "scope": "The new argument uses current internal results. No independent novelty determination or external-source claim was added."
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "fa423173197217d3b7349e74b57075807d47c8eb",
+    "scope": "Fetched remote main after normal fast-forward pushes and read all 17 changed files since 2f2d327 byte-for-byte, including the resume point and the function-field computation.",
+    "research_hub_commit": "2a8963f70efb15b3d7f1b54e0296f1c7434b0dea",
+    "hub_scope": "Verified the updated nc-p3 row from fetched main after incorporating concurrent changes elsewhere in the hub."
   },
   "open_mathematics": [
     "Whole conductor families versus the seventh-degree obstruction, other rank-seven/singular rank-eight limits, and non-bisymmetric windows."
