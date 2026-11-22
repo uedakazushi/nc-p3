@@ -1,17 +1,21 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 135,
+  "version": 136,
   "reviewed_input": {
-    "source_commit": "ad5708b2709270779cdef630c34257cfc57bcf61"
+    "source_commit": "502209278887cb8523a74fe98fa2b31aba988f5e"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For both rank-fifteen presentations, outside a finite set of algebraic genus-five levels every ordinary window is standard Koszul left/right AS regular and free of rank 256 per start over four central quartics. No curve of failure dominates the level parameter."
+    "scope": "On both ordinary positive-fixed rank-fifteen surfaces all potential failures of the four central quartic criterion, hence of standard Koszul left/right AS regularity, form at most a finite set of algebraic points. Every smooth genus-five level has a certified generic point via at least one of its two simultaneous small-root infinity ends."
   },
   "checks": [
     {
       "command": "bash scripts/cloud_preflight.sh --tex",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_rank_fifteen_vertical_curves.py",
       "result": "PASS"
     },
     {
@@ -29,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked formal divisibility with variable c, change of uniformizer, sign descent, projective specialization, finite constructibility and projection to the level line."
+    "scope": "Checked the gauge equation including the numerical factor 2, reciprocal level identification, simple root lifting for every residual orbit, irreducibility of each smooth fiber and the dimension of the finite-type certificate complement."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Relative rational-function jets through degree thirteen at the eight trace ends, simultaneous units at both quadratic polynomials and equality of the K-sign related presentations, all four starts.",
-    "reproduction": "Exact Q(c) series with a common polynomial denominator at both primitive polynomials. Positive precision remained in all sixteen full degree-thirteen cut calculations, covering both trace signs, both presentations and all four starts."
+    "scope": "Exact periodic gauge and Q(y) central cuts at the two small-root infinity ends, 994/923 primitive pivot factors, 17/33 reciprocal candidates and 11/19 residual orbit representatives checked at split primes."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 258,
+      "nc-p3": 259,
       "plan_ja": 7,
       "notes_ja": 15
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Read the generic-fiber and finite-exception argument on rendered page 232 and extracted the relative proof on pages 231–232."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "070a29e3817c414a7de5a852916d492214af9157",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Determine the vertical exceptions. For each smooth genus-five level prove that at least one infinity end admits the finite central-cut certificate. The weighted infinity coefficients are rational in v=L+c and v,-1/v give the same c. Intersect reciprocal pivot-exception supports and check algebraic residual roots in a split prime. This would restrict the possible nonregular ordinary windows on the two sheets to finitely many points. Then locate or exclude individual points on the exceptional levels; the rational level ξ=9/16 has its 101 boundary and rational x residues certified.",
+    "Locate or exclude the isolated algebraic points on the two ordinary rank-fifteen surfaces. Start with the low-degree path rank jumps: use a homogeneous minor chart on (z,lambda,n) satisfying P(n)=0, saturate the ordinary denominators, and use a second chart before solving the zero-dimensional Fitting locus. Keep center and central-cut failures separate from path jumps. As an independent fixed-fiber test the 101 proof on ξ=9/16 still lacks higher-degree ordinary x residues.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
