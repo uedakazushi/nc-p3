@@ -41,7 +41,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "All rational Pauli projections modulo the quartic, projective inverse and five quadrics, 768 signed lifts, 192 template symmetries and the complete split residue fiber."
+    "scope": "All rational Pauli projections modulo the quartic, projective inverse and five quadrics, 768 signed lifts, 192 template symmetries and the complete split residue fiber.",
+    "reproduction": "Recomputed all Pauli projections modulo the quartic, the 192 signed transformations and all 192 lifted points at the simple residue; independently re-ran the previous Pauli and root exchange verifiers."
   },
   "tex": {
     "result": "PASS",
@@ -53,13 +54,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript page 247 covering the five quadratic equations, inverse parametrization, group calculation, and generic fiber count."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "7b9ec5a5e6da0ac8ec4f573dbf21073ea8333763",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Use the 192 transformations to propagate the all-degree coordinate-end certificates into the interior and compute the exceptional endpoint identifications. Determine the locus where the two generated products have dimension below 16, or recover the same lines intrinsically there. Continue the remaining interior regularity tests.",
@@ -67,7 +71,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "f651a578391512be9d84b6d2162a1d0e312e5bdb",
+    "commit": "4438cdcf71f7967ce1db2f73fbb1d69fe7247c07",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
