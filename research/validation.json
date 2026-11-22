@@ -19,10 +19,6 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_generic_levels.py",
-      "result": "PASS"
-    },
-    {
       "command": "python scripts/check_project.py",
       "result": "PASS"
     },
@@ -37,7 +33,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact periodic gauge and Q(y) central cuts at the two small-root infinity ends, 994/923 primitive pivot factors, 17/33 reciprocal candidates and 11/19 residual orbit representatives checked at split primes."
+    "scope": "Exact periodic gauge and Q(y) central cuts at the two small-root infinity ends, 994/923 primitive pivot factors, 17/33 reciprocal candidates and 11/19 residual orbit representatives checked at split primes.",
+    "reproduction": "Computed the two Q(y) infinity charts exactly, factored all pivot numerators, intersected reciprocal supports and verified the 30 remaining smooth orbits with simple split roots at 101, 103 or 107."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +46,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Read the periodic-gauge proof and the residual and constructibility arguments on pages 232–233, including rendered page 233."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "5b0152b130f235891a0dbc9aae0ce235aab8096b",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Locate or exclude the isolated algebraic points on the two ordinary rank-fifteen surfaces. Start with the low-degree path rank jumps: use a homogeneous minor chart on (z,lambda,n) satisfying P(n)=0, saturate the ordinary denominators, and use a second chart before solving the zero-dimensional Fitting locus. Keep center and central-cut failures separate from path jumps. As an independent fixed-fiber test the 101 proof on ξ=9/16 still lacks higher-degree ordinary x residues.",
@@ -63,7 +63,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "35300e3ddc21874c1c719fe471de06f681c251ae",
+    "commit": "1e73149d937a7f68babad5b4dd02c3f5fdf4efdd",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
