@@ -32,7 +32,8 @@
         "criterion": "For both starts, dimensions in degrees 3 and 21 are at most 20 and 2024.",
         "proof": "sections/bisymmetric_finite_path_test.tex"
       },
-      "binary_growth_test": "sections/binary_window_transfer.tex"
+      "binary_growth_test": "sections/binary_window_transfer.tex",
+      "binary_incidence": "sections/binary_incidence_sextic.tex"
     },
     {
       "id": "OPPOSITE-LOW",
