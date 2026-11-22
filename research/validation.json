@@ -19,10 +19,6 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_vertical_curves.py",
-      "result": "PASS"
-    },
-    {
       "command": "python scripts/check_project.py",
       "result": "PASS"
     },
@@ -37,7 +33,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact determinants of the four thick and thin block charts, both symmetric opposite-block identities, nondegeneracy of the monomial null lines, and character ranks for the first undecided Hilbert layer."
+    "scope": "Exact determinants of the four thick and thin block charts, both symmetric opposite-block identities, nondegeneracy of the monomial null lines, and character ranks for the first undecided Hilbert layer.",
+    "reproduction": "Symbolic thick-block minors and opposite-block identities over Q. Constructed all 256 sixth-degree insertion matrices on the eight geometric sheets above the nonsplit trace-2 residue at 101 in both presentations and checked their actual ranks."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +46,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Read the opposite-kernel and degree-six proof on pages 233–234, including rendered page 234."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "616f7911032a18cee672f7012695d8fb2fa83c00",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "On the ordinary P(n)=0 surfaces use the known constant path dimensions through five, not new degree-four or degree-five path tests. Form the degree-six relation-insertion matrices of sizes 56×54,56×54,56×51,56×51 for each start and saturate their rank-drop ideals (target ranks 36,36,34,34) by ordinary denominators. Their possible geometric support is finite. In parallel logically distinguish the quartic-center rank and four-cut obstructions: the degree-six Hilbert test alone need not decide Koszulity.",
@@ -63,7 +63,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "1e73149d937a7f68babad5b4dd02c3f5fdf4efdd",
+    "commit": "87c3d79e00b009cdd69d7b543b62cf428d2ed1ad",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
