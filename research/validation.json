@@ -19,6 +19,10 @@
       "result": "PASS"
     },
     {
+      "command": "python computations/verify_rank_fifteen_octic_residues.py",
+      "result": "PASS"
+    },
+    {
       "command": "python computations/verify_rank_fifteen_pencil_infinity.py",
       "result": "PASS"
     },
@@ -37,7 +41,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Four-start path projections and exact center minors over Q(i,√3)(t,Y), 34 split-number-field samples, all 48 rational residue orbits per level and both trace boundary fibers at 109."
+    "scope": "Four-start path projections and exact center minors over Q(i,√3)(t,Y), 34 split-number-field samples, all 48 rational residue orbits per level and both trace boundary fibers at 109.",
+    "reproduction": "SymPy 1.14.0 and python-flint 0.9.0. Exact Q(i,√3)(t,Y) path projections and center minors, 17 residual t factors per presentation with eight split choices, two 109-adic trace boundary fibers and 48 ordinary residue pairs checked."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +54,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Reviewed the new theorem and residual counts on rendered page 223 and extracted pages 223–224."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "4e52b8547ad001b52c411780aca59b5a0e2d24b4",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "On the genus-three octic compute four central sections, then quotient ranks through length thirteen modulo 109 for j=8,41, both colors and starts 0,1. Use integral dual kernels or two independent sparse minor charts; recheck higher-degree ordinary residue factors. For finite boundary disks only K=0, ±1, ±2 remain. The quartic center, K=infinity and both golden-ratio boundary disks are settled.",
@@ -63,7 +71,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "45ad7bbe84140b1fcda207a7519041c7178aef6a",
+    "commit": "aad6980360521b006a026a50389a939669421e10",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
