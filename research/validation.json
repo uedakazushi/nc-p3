@@ -19,6 +19,10 @@
       "result": "PASS"
     },
     {
+      "command": "python computations/verify_rank_fifteen_unit_residues.py",
+      "result": "PASS"
+    },
+    {
       "command": "python computations/verify_rank_fifteen_overlap_bound.py",
       "result": "PASS"
     },
@@ -37,7 +41,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Recorded the complete F3(z) overlap pivot divisor (degree 9835), joined it to the proven integral sixth chart, checked the 144-degree core and three residual polynomials, and replayed all four cuts at the supplemental charts and unit residue pairs."
+    "scope": "Recorded the complete F3(z) overlap pivot divisor (degree 9835), joined it to the proven integral sixth chart, checked the 144-degree core and three residual polynomials, and replayed all four cuts at the supplemental charts and unit residue pairs.",
+    "reproduction": "Reproduced the degree-9835 divisor, its exact 144-degree joint core, three aligned supplemental charts through degree thirteen, and all four finite-field unit pairs. The exact integral sixth divisor and all its supplemental checks also passed a fresh complete replay."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +54,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected pages 269 and 270 with the three residual polynomials, aligned word bases and four unit pairs."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "d4b68d621097daf824408db2d3cebdc8bdb18633",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Remove the depth bound on the integral-slope annulus. Record the mod-three numerators and denominators actually inverted in the Q(z) degree-seven cuts; extend their H-constant multiplication tables over F3(z) through degree thirteen with nine allowed dimension 24. Descend this exact chart and cover surviving finite residue fibers. The full positive-slope disk, the bounded-depth integral-slope annulus and the four prime-field unit residue pairs are settled.",
@@ -63,7 +71,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "6227bfe388b0d8617c376c09cb858d96e162f08a",
+    "commit": "ed44222f05cd3e2e9532788ecde3f8bf2057a159",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
