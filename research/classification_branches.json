@@ -112,7 +112,7 @@
       "adjacent_witness_restriction": "Any adjacent positive witness forces rho6. Thus rho3/4/5 has no invertible adjacent witnesses of either sign. Negative witnesses are entirely excluded from this residual by the three-form rigidity theorem.",
       "relative_geometry": "Relatively closed in the complete standard finite-Frobenius candidate locus, hence also in the AS subspace; cor:closed-low-residual. Nonemptiness on the AS locus remains open.",
       "boundary_restriction": "Disjoint from Zsym on AS. Only rho six remains; rho five is excluded by the five-coefficient normal form and growth quotient.",
-      "finite_incidence": "When all four adjacent correspondences are finite, the four-step shift is identity. On this AS sublocus, three coordinate four-spaces in the length-twenty algebra determine indexed isomorphism. At the reduced twenty-point control every square root is a sign translate. On the open of two rigid projections any all-four-finite AS extension has period dividing two, a four-dimensional cubic overlap and a unique invertible double-alternation kernel generator. A generic first relation space has no such extension."
+      "finite_incidence": "At rank six, if all four adjacent point schemes are finite then the four-step shift is the identity. Near the reduced symmetric twenty-point window, rank six in the reversible locus is exactly the symmetric locus."
     }
   ],
   "limits": [
@@ -235,5 +235,15 @@
     ]
   },
   "date": "2026-11-22",
-  "version": 45
+  "version": 45,
+  "finite_point_correspondences": {
+    "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
+    "proofs": [
+      "sections/finite_point_chart.tex",
+      "sections/finite_window_rigidity.tex",
+      "sections/reversible_component.tex"
+    ],
+    "reversible_component": "At the reduced twenty-point control every square root is a sign translate. On the open of two rigid projections any all-four-finite AS extension has period dividing two, a four-dimensional cubic overlap and a unique invertible double-alternation kernel generator. A generic first relation space has no such extension. At the twenty-point example the exceptional locus has a unique local component of dimension 44, with orbit quotient dimension 14 and geometric generic regularity at opposite rank 8 to 10 and minimal period two. The symmetric stratum is the smooth 39-dimensional singular locus near this point, transverse to a rank-six quadratic cone.",
+    "open": "The geometric generic opposite rank is between eight and ten. Special fibers and other components are not all classified."
+  }
 }

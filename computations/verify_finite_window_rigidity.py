@@ -69,6 +69,7 @@ def verify_flip_obstructions():
     for (i, j), value in zip(pairs, generator):
         coefficients[i, j] = coefficients[j, i] = value
     assert coefficients.det() != 0
+    return rel, coefficients
 
 
 def verify_generic_obstruction():

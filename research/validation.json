@@ -1,15 +1,19 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 50,
+  "version": 51,
   "reviewed_input": {
-    "source_commit": "8db4b107e0f227b14f093ae4657ce8ca97e2865f"
+    "source_commit": "9a2abb935767c4d0ab2943e4f3c5c8513853354d"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Rigidity of the entire square-root scheme, an open generic exclusion, period two and two flip obstructions."
+    "scope": "The unique 44-dimensional reversible component at the symmetric twenty points, its exact transverse quadratic singularity, geometric generic AS regularity, minimum period two and low opposite-rank ideals."
   },
   "checks": [
+    {
+      "command": "python computations/verify_reversible_component.py",
+      "result": "PASS"
+    },
     {
       "command": "python computations/verify_finite_window_rigidity.py",
       "result": "PASS"
@@ -29,19 +33,19 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked propagation from all pairs, compactness before removing degenerate roots, generic intersection of opens and the two independent flip symmetries. No independent referee review."
+    "scope": "Checked smooth descent of the Gram presentation, the residual quadratic and symmetric stratum, degreewise generic Koszul specialization, closedness of swap equivalence and the projective frame argument over a trait, and Nakayama for the two low-rank ideals. No external referee review."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact rational plane, support, projective frame, cubic and symmetric-kernel checks. A maximal minor modulo 101 certifies generic cubic rank 48 in characteristic zero."
+    "scope": "Rational derivative rank 35, obstruction rank 6, opposite skew block and Pfaffian identity, 21 minor quadrics, fifteen symmetrizer conditions and all ten large planes. Seven augmented tangent ranks modulo 101 certify the characteristic-zero inequalities for all conjugacy classes."
   },
   "tex": {
     "result": "PASS",
-    "scope": "Manuscript 119 pages; plan 5 and notes 12. No overfull boxes, unresolved references or missing characters."
+    "scope": "Japanese manuscript 122 pages, plan 6 and notes 12. No overfull boxes, missing characters or unresolved references in final logs."
   },
   "visual_inspection": {
     "result": "PASS",
-    "scope": "Inspected manuscript page 92 with the generic obstruction and the flip matrices."
+    "scope": "Inspected manuscript page 95 containing the general minimal period and the low opposite-rank ideals."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT",
@@ -51,6 +55,6 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Regularity and geometry of the exceptional reversible locus, the nonrigid and positive-dimensional branches, and global classification."
+    "Exact geometric generic opposite rank (8, 9 or 10) and AS regularity of exceptional closed fibers, other finite components, positive-dimensional point schemes and overall classification."
   ]
 }

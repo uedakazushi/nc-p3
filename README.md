@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-22 / v50。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v51。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -95,7 +95,7 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 
 **最優先は、二窓の全次数AS条件を実効化し、対称閉包外を含む網羅的な分類木を構築すること。**
 対称閉包内のAS対象は対称完全交叉チャートに尽きると証明した（`thm:symmetric-closure-as-exact`）。
-階数5を仮定すると、各係数空間の三次小行列式に共通因子が生じる。動く平面の条件で五次元の行列空間を一つの正規形に絞ると、反対二位置で同じ評価平面が現れ、四辺の関係が消える指数成長商が得られる。従って低階数で未分類なのは階数6の残余である。階数6で四辺の点対応が有限なら点列の四移動は恒等になる。有限枝では長さ20の座標環と三つの座標四空間から二窓と添字保持同型を復元できる（[証明](sections/finite_point_chart.tex)）。二十点例の第三空間は符号倍で尽き、有限枝でのAS延長は一意である。一般の第一窓は四辺有限なAS対象に延びない（[復元と三次障害](sections/finite_window_rigidity.tex)）。二窓のExt反復は四項の微分と経路の乗法から計算でき、指定基底で各窓の先頭語の重なりが四つなら、有限Frobenius候補を全次数で認証できる。
+階数5を仮定すると、各係数空間の三次小行列式に共通因子が生じる。動く平面の条件で五次元の行列空間を一つの正規形に絞ると、反対二位置で同じ評価平面が現れ、四辺の関係が消える指数成長商が得られる。従って低階数で未分類なのは階数6の残余である。階数6で四辺の点対応が有限なら点列の四移動は恒等になる。有限枝では長さ20の座標環と三つの座標四空間から二窓と添字保持同型を復元できる（[証明](sections/finite_point_chart.tex)）。二十点例の第三空間は符号倍で尽き、有限枝でのAS延長は一意である。一般の第一窓は四辺有限なAS対象に延びない（[復元と三次障害](sections/finite_window_rigidity.tex)）。この二十点を通る反転窓の成分は44次元で、基底変換による有理商は14次元となる。対称部分に横断する特異性は六変数二次錐で、幾何学的一般点の最小周期は2、第三階数は8以上10以下となる。一般点の全次数のAS正則性も示した（[成分の局所方程式](sections/reversible_component.tex)）。二窓のExt反復は四項の微分と経路の乗法から計算でき、指定基底で各窓の先頭語の重なりが四つなら、有限Frobenius候補を全次数で認証できる。
 二窓から作る56次元代数で、低次Extの消滅を逆Serre反復が保つ構造条件を探す。
 「全次数を証明してAS認証」「有限障害で排除」「未決定」を分け、有限検査の成功を全AS認証としない。
 正規形の枝、特殊値、枝間同型の条件を証明し、未分類の残余を明示する。
@@ -117,6 +117,7 @@ python3 computations/verify_period_witness.py
 python3 computations/verify_quartic_obstruction.py
 python3 computations/verify_finite_square_chart.py
 python3 computations/verify_finite_window_rigidity.py
+python3 computations/verify_reversible_component.py
 python3 computations/verify_rank_five_pencils.py
 python3 computations/verify_matched_pencils.py
 python3 computations/verify_incidence_cubics.py
