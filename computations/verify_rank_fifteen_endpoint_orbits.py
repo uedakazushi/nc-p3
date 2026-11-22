@@ -161,6 +161,14 @@ def verify():
         == 0
     )
     assert fiber(t, elliptic, gaussian) == 1
+    conjugate = [value.xreplace({sp.I: -sp.I}) for value in gaussian]
+    assert (
+        sp.expand(
+            fiber(t, gaussian, conjugate)
+            - (t + 2) * (t + 3) * (t - sp.Rational(1, 2)) * (t - sp.Rational(1, 3))
+        )
+        == 0
+    )
 
     for x, y, expected in (
         (2, 47, (65, 99)),
@@ -177,6 +185,15 @@ def verify():
         assert residue(elliptic_frame(nmod(x, p), nmod(y, p)), p) == expected
     for x, expected in ((2, (93, 9)), (3, (98, 9)), (67, (98, 9)), (50, (93, 9))):
         assert residue(gaussian_frame(nmod(x, 101), nmod(10, 101)), 101) == expected
+    for sign, rows in (
+        (1, ((2, 95), (3, 99), (36, 99), (54, 95))),
+        (-1, ((107, 95), (106, 99), (73, 99), (55, 95))),
+    ):
+        for x, cubic in rows:
+            values = gaussian_frame(nmod(x, 109), nmod(sign * 33, 109))
+            z, lam, a, b, e, f = values
+            assert z * (b * b + f * f) - 2 * a * e
+            assert residue(values, 109) == (cubic, 46 if sign == 1 else 63)
     print(
         "Both multiplier transports hold. Each normalized endpoint component has generic indexed fiber of size two."
     )

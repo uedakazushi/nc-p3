@@ -25,6 +25,12 @@ from verify_rank_fourteen_geometric_reduction import verify_central_profile
 class QuadraticChart(CurveElement):
     """Use the real and radical coordinates of the existing biquadratic field."""
 
+    precision = 1
+
+    @classmethod
+    def constant(cls, value):
+        return cls.lift(value)
+
     def inverse(self):
         a, imaginary, b, mixed = self.coordinates
         assert not imaginary and not mixed

@@ -191,21 +191,24 @@ def expand(presentation, Jet, component, sheet):
     ]
 
 
-def saturated_projection(rows, size, target, Jet):
+def saturated_projection(rows, size, target, Jet, *, select_pivot=None):
     pivots = []
     loss = 0
     while len(pivots) < size - target:
         rows = [row for row in rows if row]
         assert rows
-        pivot = next(
-            (
-                (j, k)
-                for j in sorted(range(len(rows)), key=lambda j: len(rows[j]))
-                for k in sorted(rows[j])
-                if rows[j][k].unit()
-            ),
-            None,
-        )
+        if select_pivot is not None:
+            pivot = select_pivot(rows)
+        else:
+            pivot = next(
+                (
+                    (j, k)
+                    for j in sorted(range(len(rows)), key=lambda j: len(rows[j]))
+                    for k in sorted(rows[j])
+                    if rows[j][k].unit()
+                ),
+                None,
+            )
         if pivot is None:
             loss += 1
             assert loss < Jet.precision

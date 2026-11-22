@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 141,
+  "version": 142,
   "reviewed_input": {
-    "source_commit": "3c3ae3aeed4038e21ae03a729ac5fc86c940fb08"
+    "source_commit": "0eb5ace135759c4c76150d1778c651b2bed7a483"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The two ordinary rank-fifteen presentations have exactly the same indexed-isomorphism image after replacing lambda by 1/(z lambda). Simultaneous inversion of z,lambda preserves the indexed algebra. On the normalized n=1 elliptic component and within each m=ik,n=i rational component, the generic indexed class occurs at exactly the two parameters related by simultaneous inversion. The elliptic and rational moduli image curves are distinct."
+    "scope": "Every ordinary rank-fifteen window represented by either sheet at n=1 or n=-1 is standard Koszul left/right AS regular, with paths free of rank 256 over four central quartics. On the elliptic endpoint 464 pivot factors reduce to 55 ordinary reciprocal orbits, all certified. The three normalized generic indexed endpoint images are distinct: one elliptic quotient of j=35152/9 and two rational curves."
   },
   "checks": [
     {
@@ -15,15 +15,11 @@
       "result": "PASS"
     },
     {
+      "command": "python computations/verify_rank_fifteen_coordinate_regularity.py",
+      "result": "PASS"
+    },
+    {
       "command": "python computations/verify_rank_fifteen_endpoint_orbits.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_rank_fifteen_word_symmetries.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_rank_fifteen_coordinate_ends.py",
       "result": "PASS"
     },
     {
@@ -37,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked that both transports preserve the anchor, trace scalings cancel in the new contraction, and the complete reduced fiber bounds the generic degree."
+    "scope": "Checked specialization of all pivot inverses, compatible center choices across starts, common reciprocal orbits, degrees of normalized parameter quotients and the sign-component comparison."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Two symbolic tensor transports, exact function-field trace fibers, split-fiber cubic and degree-five tensor contractions, including all conjugate ordinates.",
-    "reproduction": "Verified the two additional symbolic tensor transports, exact coordinate-curve trace gcds, all 12 split fibers for the oriented cubic and fifth-order contraction, and both preceding endpoint and symmetry checks."
+    "scope": "Degree-aware pivots in the exact elliptic function field, reciprocal comparison, both residue lifts above 55 ordinary orbits with four-center-cut profiles, and conjugate rational image separation at 109."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 265,
+      "nc-p3": 266,
       "plan_ja": 7,
       "notes_ja": 15
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected manuscript pages 238 and 239, including both tensor transports, the complete fibers and the fifth-degree contraction."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "0ac2fce55746d6351437e659fe5e3674aa21472d",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "For regularity use the proven reciprocal isomorphism: on the elliptic endpoint compare the pivot norm support for t and 1/t; on the rational component compare t and -1/t. Four-center sections may be chosen on independent charts. Compute central cuts through degree 13 with degree-aware sparse pivots and certify common remaining factors over both residue lifts. For generic indexed comparisons elsewhere, use the new multiplier transports and two independent trace contractions on the opposite cut; the two rational sign components still need comparison.",
+    "Finish the remaining m=ik,n=i rational coordinate endpoint with the identical degree-aware four-central-cut algorithm. Use GaussianChart, gaussian_frame, GAUSSIAN_BOUNDARY, reciprocal sign -1, and both square roots of -1 at each split-prime witness. Then any candidate isolated failure is interior to both frame charts. For special indexed collisions compare the complete normalized curves, retaining trace-zero points.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

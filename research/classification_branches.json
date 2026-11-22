@@ -265,7 +265,8 @@
       "rank_fifteen_adjoint_invariants": "sections/rank_fifteen_adjoint_invariants.tex",
       "rank_fifteen_word_symmetries": "sections/rank_fifteen_word_symmetries.tex",
       "rank_fifteen_coordinate_ends": "sections/rank_fifteen_coordinate_ends.tex",
-      "rank_fifteen_endpoint_orbits": "sections/rank_fifteen_endpoint_orbits.tex"
+      "rank_fifteen_endpoint_orbits": "sections/rank_fifteen_endpoint_orbits.tex",
+      "rank_fifteen_coordinate_regularity": "sections/rank_fifteen_coordinate_regularity.tex"
     },
     {
       "id": "UNRESTRICTED-SINGLY-SYMMETRIC-14",

@@ -77,7 +77,13 @@ def local_relations(Jet, k, sign_r, sign_w, color, *, level=None, parameter=None
     return out
 
 
-def local_central_sections(relations, Jet):
+def local_central_sections(
+    relations,
+    Jet,
+    *,
+    project=saturated_projection,
+    invariant_pairs=((1, 3, 5), (2, 7, 11)),
+):
     """Lift the five-dimensional center after saturating the actual path lattices."""
     unit = Jet.constant(1)
     widths = (1, 1, 4, 10, 20, 35)
@@ -90,7 +96,7 @@ def local_central_sections(relations, Jet):
         # field_paths visits four positions and their four characters at each length.
         n, h = counter // 16 + 1, counter % 4
         counter += 1
-        free, images, l = saturated_projection(rows, widths[n], dims[n][h], Jet)
+        free, images, l = project(rows, widths[n], dims[n][h], Jet)
         losses.append(l)
         result = {
             j: {free[i]: -v for i, v in row.items() if v}
@@ -104,9 +110,9 @@ def local_central_sections(relations, Jet):
 
     basis, image = field_paths(relations, unit, projection)
     cuts = [[] for p in range(4)]
-    for h, pairs in enumerate((((1, 3, 5), (2, 7, 11)), ((1, 0), (0, 1)))):
+    for h, pairs in enumerate((invariant_pairs, ((1, 0), (0, 1)))):
         rows, size = central_equations(basis, image, h)
-        free, images, l = saturated_projection(rows, size, 3 - h, Jet)
+        free, images, l = project(rows, size, 3 - h, Jet)
         losses.append(l)
         for weights in pairs:
             coords = [
