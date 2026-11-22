@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 104,
+  "version": 105,
   "reviewed_input": {
-    "source_commit": "7b58de1ab92ccf65da939010dd0dca916bcb5a11"
+    "source_commit": "6f7f449925fff911ff5dd899ddbb726f21016d40"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The thin pencil and the branch divisor of the recovered quartic select a unique unmarked character frame at both full-rank samples and on their neighborhoods. Standard windows on this open are index-preservingly isomorphic exactly when one of 32 monomial permutations passes an integral torus test, including coefficient zeroes."
+    "scope": "The simultaneous low-bit flip lifts to a monomial tensor automorphism exactly on two explicit first-matrix lines. Its square separates the genuine involutions from order-four lifts. A rational full-rank standard AS window on the positive line admits two distinct invertible Klein markings."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_unique_character_frames.py",
+      "command": "python computations/verify_flip_character_locus.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_two_block_recovery.py",
+      "command": "python computations/verify_unique_character_frames.py",
       "result": "PASS"
     },
     {
@@ -33,16 +33,16 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked the commuting projective involutions, intrinsic thin-axis comparison, marked sparsity in all high-bit patterns, and saturated integral kernel of the torus map."
+    "scope": "Checked the normalizing diagonal gauge, square of every possible lift, obstruction on the negative line, and the additional eigenframe on the positive line."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Computed distinct branch roots, reciprocal-branch exclusions, both Smith forms, all 32 self-comparisons, including the ramification sample with a zero coefficient."
+    "scope": "Verified the universal thin and thick transformations, signed coefficient identities, opposite rank sixteen, central dimensions, the degree-thirteen cut and invertible transformed blocks."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 222,
+      "nc-p3": 223,
       "plan_ja": 7,
       "notes_ja": 14
     },
@@ -58,7 +58,7 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Determine the first-edge reciprocal-branch divisor on the whole marked chart and resolve where alternative frames can really pass both thin-block comparisons. Independently diagnose the degree-six boundary via the degenerating rank-two curve.",
+    "Analyze the signed completion curves on the two fixed lines and isolate specializations with a low-degree growth defect despite having distinct determinant roots.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

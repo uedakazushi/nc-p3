@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-22 / v104。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v105。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -192,6 +192,8 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 
 薄い二色と四次成分の分岐因子で文字直線の分解が一意に決まる。二十点配置を計算せず、32置換と係数の積で印なし添字保持同型を判定できる。[証明と判定](sections/unique_character_frames.tex)
 
+四位置の同時文字交換が自己同型となるのは二直線で、平方の計算により別の文字分解が生じ得るのは正の直線に限られる。その上で二つの正則表示を持つ有理例を得た。[証明と判定](sections/flip_character_locus.tex)
+
 二窓から作る56次元代数で、低次Extの消滅を逆Serre反復が保つ構造条件を探す。
 「全次数を証明してAS認証」「有限障害で排除」「未決定」を分け、有限検査の成功を全AS認証としない。
 正規形の枝、特殊値、枝間同型の条件を証明し、未分類の残余を明示する。
@@ -266,6 +268,7 @@ python3 computations/verify_binary_incidence_sextic.py
 python3 computations/verify_companion_rank_two_sections.py
 python3 computations/verify_rank_two_block_recovery.py
 python3 computations/verify_unique_character_frames.py
+python3 computations/verify_flip_character_locus.py
 python3 computations/verify_klein_elliptic_center.py
 python3 computations/verify_klein_full_rank_configurations.py
 python3 computations/verify_rank_five_pencils.py
