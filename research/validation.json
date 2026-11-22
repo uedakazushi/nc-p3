@@ -19,7 +19,7 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_pencil_ramified_ends.py",
+      "command": "python computations/verify_rank_fifteen_octic_trace_disks.py",
       "result": "PASS"
     },
     {
@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Characteristic-109 path and center minors; two central cuts, sixteen split-sample quotient charts; full residual tests at 23,17,28,21 higher-degree factors; exact biquadratic-field jets at 32 trace-boundary starts to degree thirteen."
+    "scope": "Characteristic-109 path and center minors; two central cuts, sixteen split-sample quotient charts; full residual tests at 23,17,28,21 higher-degree factors; exact biquadratic-field jets at 32 trace-boundary starts to degree thirteen.",
+    "reproduction": "SymPy 1.14.0 and python-flint 0.9.0. Staged exact verification of sixteen quotient charts and all 89 higher-degree residual factors, 32 mixed-characteristic trace-disk starts, and independent equality checks of both integral presentations and four modular path/center charts. The exceptional split pivot for presentation 1, j=41, start 1 was recomputed at t=4."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Reviewed the all-points theorem, two-chart residue counts and local saturation proof on rendered page 227 and extracted pages 227–228."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "fb3cc9c69addcf7b2ae461474d0498401024178c",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "On the genus-five pencil work at c=3/4 (s=25/12) above 101. At the eight trace ±1 ends use n as uniformizer, K=k sqrt(1+(1+c²)n²), and r,w with first slopes ±(c+k), ±(c-k). Saturate the length-four and length-five path modules, then the central commutator kernel, before the central cut through length thirteen. Test the other-trace quadratic boundary at 101 over its residue extensions. Seek a uniform method over Q(c) and use the Kummer or plane-quartic model for ordinary geometric residues.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "1c0fc44cacab182457c230db9042bfb9c6d256aa",
+    "commit": "c12624db097c1f81715b954c0b31edbbf3770f77",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
