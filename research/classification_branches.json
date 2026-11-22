@@ -198,7 +198,8 @@
       "id": "KLEIN-TWO-DOUBLETS-SECOND-COMPLETION",
       "current_result": "The complete (2,2,1,1) Klein class of standard AS windows is covered by the bisymmetric chart and the closure of the single four-dimensional second-completion family. Singular cross blocks force bisymmetry for every AS tensor, including every thin zero pattern, and are effectively decided. All unequal completions with invertible cross blocks, even exceptional fibers or vanishing thin coefficients, lie in the same irreducible closure.",
       "current_proof": "sections/klein_doublet_boundary.tex",
-      "rational_regular_input": "The explicit rational matrices used for the twenty-point configuration are standard AS of minimal period four, with four central quartic parameters. See thm:klein-rational-period-four."
+      "rational_regular_input": "The explicit rational matrices used for the twenty-point configuration are standard AS of minimal period four, with four central quartic parameters. See thm:klein-rational-period-four.",
+      "generic_isomorphism": "Four rational coefficients modulo at most sixteen character reindexings; the three projective point configurations have automorphism group Klein four and are mutually inequivalent. See sections/klein_generic_isomorphisms.tex."
     }
   ],
   "presentation_components": {

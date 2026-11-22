@@ -7,7 +7,7 @@
   },
   "generation": {
     "result": "PASS",
-    "scope": "The complete (2,2,1,1) Klein class of standard AS windows is covered by the bisymmetric chart and the closure of the single four-dimensional second-completion family. Singular cross blocks force bisymmetry for every AS tensor, including every thin zero pattern, and are effectively decided. All unequal completions with invertible cross blocks, even exceptional fibers or vanishing thin coefficients, lie in the same irreducible closure."
+    "scope": "The complete (2,2,1,1) Klein class of standard AS windows is covered by the bisymmetric chart and the closure of the single four-dimensional second-completion family. Singular cross blocks force bisymmetry for every AS tensor, including every thin zero pattern, and are effectively decided. All unequal completions with invertible cross blocks, even exceptional fibers or vanishing thin coefficients, lie in the same irreducible closure. The explicit rational point is standard AS of minimal period four by the central quartic certificate."
   },
   "checks": [
     {
@@ -15,11 +15,31 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_klein_doublet_boundary.py",
+      "command": "python computations/verify_twenty_point_companion.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_cross_product_parameters.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_klein_companion_windows.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_klein_two_doublets.py",
       "result": "PASS"
     },
     {
       "command": "python computations/verify_klein_generic_isomorphisms.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_klein_doublet_boundary.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_klein_period_four_center.py",
       "result": "PASS"
     },
     {
@@ -28,10 +48,6 @@
     },
     {
       "command": "git diff --check",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_klein_period_four_center.py",
       "result": "PASS"
     }
   ],
@@ -60,10 +76,18 @@
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "295dfd702368f341c3cdadd251c3eff66f6754de",
+    "starting_remote_commit": "7c1b1cc3b2e23412b16d791ca86682aff1a5a80d",
+    "verification": "After normal fast-forward push and fresh fetch, HEAD matched FETCH_HEAD and all 20 changed source files matched the remote Git blobs byte for byte."
   },
   "open_mathematics": [
     "Lift the five central quartics of the certified rational period-four AS input to the second-completion parameters. Determine the center-rank strata and the parameter locus where four central quartics give the Artinian quotient (1+t+t^2+t^3)^4, then decide the exceptional closed fibers.",
     "Unrestricted nonsymmetric classes."
-  ]
+  ],
+  "hub_update": {
+    "result": "PASS",
+    "commit": "f3c91173d52fdf54915c7047130ca7113cf29f29",
+    "verification": "Updated only the nc-p3 README row after fetching intervening hub changes. Fetched HEAD and README bytes matched the saved version."
+  }
 }

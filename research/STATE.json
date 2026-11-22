@@ -1107,6 +1107,7 @@
     "read_first": [
       "research/plan_ja.tex",
       "sections/klein_doublet_boundary.tex",
+      "computations/verify_klein_period_four_center.py",
       "sections/klein_generic_isomorphisms.tex",
       "sections/klein_two_doublets.tex",
       "sections/klein_companion_windows.tex"
