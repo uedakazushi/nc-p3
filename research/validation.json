@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact fifth-order tensor contractions and normalized trace invariants, five eliminations over Q(i), and the two trace-zero comparison ratios."
+    "scope": "Exact fifth-order tensor contractions and normalized trace invariants, five eliminations over Q(i), and the two trace-zero comparison ratios.",
+    "reproduction": "Exact symbolic contractions, normalization in both function fields, five projected gcds of resultants over Q(i) and exact trace-zero ratios 64/375 and -64/81. The elliptic central certificate was reproduced in this run."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript page 240 with the finite exceptional-level table and the separate trace-zero argument."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "1af12bdfab90b38d03fa129ae599ad419230d273",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Complete the Gaussian coordinate-end cut as in the preceding checkpoint, then search for isolated failures on the surface with all four frame coordinates nonzero. For indexed comparisons on the coordinate ends, only the explicit U-polynomials in rank_fifteen_coordinate_collisions.tex remain; decide actual equivalences at their geometric roots via exact tensor basis changes or further polynomial invariants.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "84b7666e1955b669c7fea01516baa1c6a0ad536e",
+    "commit": "e7b8c61b2e0bc344b671713a6cd0a6387a62c9df",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
