@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 165,
+  "version": 166,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -1899,6 +1899,15 @@
       "verification": [
         "computations/verify_rank_fifteen_integral_slope.py"
       ]
+    },
+    {
+      "id": "RANK-FIFTEEN-MIXED-CHARACTERISTIC-OVERLAP-ANNULUS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "On the mixed-characteristic three-adic annulus of ordinary rank-fifteen windows with 0<v(y)<3v(x) and 5v(y)<=6v(3), all four starts are standard Koszul, left and right AS-regular and free of rank 256 over the four central quartics. Two-sided multiplication tables reach the target four-cut in every degree through vanishing at thirteen, using fifteen H-digits over F3(z) and restarting from the integral length-six lattices at five digits.",
+      "proof": "sections/rank_fifteen_overlap_annulus.tex",
+      "verification": [
+        "computations/verify_rank_fifteen_overlap_annulus.py"
+      ]
     }
   ],
   "document_paths": {
@@ -1962,7 +1971,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "0863c1bce9fe54825b299144994e71f680c43ca6",
+  "reviewed_source_commit": "bb70bf992ef99a03f3248c6797c6a79bb3c9f0c1",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -1971,15 +1980,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "On the small-trace disk at three, compute the two-sided overlap of the left and right multiplication maps on the saturated four-center quotient. Check the seventh profile (10,10,10,10) and the degree-nine ranks on the way to vanishing in degree thirteen.",
+    "immediate_next_action": "Remove the annulus bound 5v(y)<=6v(3) on the variable-trace disk. Run the same two-sided overlap over Q(z), checking exact vanishing before each H division and unit pivots at (3,z^2+z+2). Degree nine is the last stage requiring two divisions. If the full computation is slow, seed multiplication from length seven and test the residue overlap through length thirteen.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/rank_fifteen_overlap_annulus.tex",
       "sections/rank_fifteen_integral_slope.tex",
-      "sections/rank_fifteen_sixth_center_minors.tex",
       "sections/rank_fifteen_variable_zero_disk.tex"
     ],
     "known_obstruction": "Possible isolated interior failures of all-degree regularity on the (x,y) plane and uncovered general nonsymmetric windows.",
-    "state_of_claim": "Degree six is settled on the stated integral-slope charts. Higher cut degrees there and unrestricted classification are open.",
+    "state_of_claim": "All degrees on the annulus are certified. The rest of the three-adic trace disk and unrestricted classification remain open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

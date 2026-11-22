@@ -25,36 +25,44 @@ class CommonDenominatorJet:
     __slots__ = ("coeffs", "den")
     precision = 25
 
-    def __init__(self, coeffs, den=POLY_ONE, *, reduce=True):
+    poly_one = POLY_ONE
+    poly_zero = POLY_ZERO
+    coefficient = Coefficient
+    coefficient_zero = ZERO
+    signed = True
+
+    def __init__(self, coeffs, den=None, *, reduce=True):
+        if den is None:
+            den = self.poly_one
         if not den:
             raise ZeroDivisionError
         coeffs = coeffs[: self.precision]
         while coeffs and not coeffs[-1]:
             coeffs.pop()
         if not coeffs:
-            den = POLY_ONE
-        elif reduce and den != POLY_ONE:
+            den = self.poly_one
+        elif reduce and den != self.poly_one:
             common = den
             for coeff in reversed(coeffs):
-                if common == POLY_ONE:
+                if common == self.poly_one:
                     break
                 if coeff:
                     common = common.gcd(coeff)
-            if den.leading_coefficient() < 0:
+            if self.signed and den.leading_coefficient() < 0:
                 common = -common
-            if common != POLY_ONE:
+            if common != self.poly_one:
                 coeffs = [coeff // common for coeff in coeffs]
                 den = den // common
         self.coeffs, self.den = coeffs, den
 
     @classmethod
     def constant(cls, value):
-        value = Coefficient.constant(value)
+        value = cls.coefficient.constant(value)
         return cls([value.num], value.den, reduce=False)
 
     @classmethod
     def from_fractions(cls, coeffs):
-        den = POLY_ONE
+        den = cls.poly_one
         for coeff in coeffs:
             den = den * (coeff.den // den.gcd(coeff.den))
         return cls([coeff.num * (den // coeff.den) for coeff in coeffs], den)
@@ -78,8 +86,8 @@ class CommonDenominatorJet:
         if self.den == other.den:
             return cls(
                 [
-                    (left[i] if i < len(left) else POLY_ZERO)
-                    + (right[i] if i < len(right) else POLY_ZERO)
+                    (left[i] if i < len(left) else self.poly_zero)
+                    + (right[i] if i < len(right) else self.poly_zero)
                     for i in range(size)
                 ],
                 self.den,
@@ -88,8 +96,8 @@ class CommonDenominatorJet:
         a, b = other.den // common, self.den // common
         return cls(
             [
-                (left[i] * a if i < len(left) else POLY_ZERO)
-                + (right[i] * b if i < len(right) else POLY_ZERO)
+                (left[i] * a if i < len(left) else self.poly_zero)
+                + (right[i] * b if i < len(right) else self.poly_zero)
                 for i in range(size)
             ],
             self.den * a,
@@ -114,7 +122,7 @@ class CommonDenominatorJet:
         if len(other.coeffs) == 1 and other.coeffs[0] == other.den:
             return self
         size = min(self.precision, len(self.coeffs) + len(other.coeffs) - 1)
-        coeffs = [POLY_ZERO] * size
+        coeffs = [self.poly_zero] * size
         for i, a in enumerate(self.coeffs[:size]):
             if a:
                 for j, b in enumerate(other.coeffs[: size - i]):
@@ -136,13 +144,13 @@ class CommonDenominatorJet:
         assert self.unit()
         if len(self.coeffs) == 1:
             return type(self)([self.den], self.coeffs[0])
-        coeffs = [Coefficient(a, self.den) for a in self.coeffs[: self.precision]]
+        coeffs = [self.coefficient(a, self.den) for a in self.coeffs[: self.precision]]
         first = coeffs[0].inverse()
         values = [first]
         for n in range(1, self.precision):
             rest = sum(
                 (coeffs[k] * values[n - k] for k in range(1, min(len(coeffs), n + 1))),
-                ZERO,
+                self.coefficient_zero,
             )
             values.append(-first * rest)
         return type(self).from_fractions(values)

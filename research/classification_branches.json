@@ -289,7 +289,8 @@
       "rank_fifteen_saturated_center_products": "sections/rank_fifteen_saturated_center_products.tex",
       "rank_fifteen_gaussian_pencil": "sections/rank_fifteen_gaussian_pencil.tex",
       "rank_fifteen_sixth_center_minors": "sections/rank_fifteen_sixth_center_minors.tex",
-      "rank_fifteen_integral_slope": "sections/rank_fifteen_integral_slope.tex"
+      "rank_fifteen_integral_slope": "sections/rank_fifteen_integral_slope.tex",
+      "rank_fifteen_overlap_annulus": "sections/rank_fifteen_overlap_annulus.tex"
     },
     {
       "id": "UNRESTRICTED-SINGLY-SYMMETRIC-14",
