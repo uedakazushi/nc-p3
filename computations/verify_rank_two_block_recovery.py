@@ -48,6 +48,12 @@ def check():
                 if not any(v[4 * i + j] for i in range(2) for j in range(2, 4))
             ]
             assert len(thick) == 4
+            coords = sp.symbols("u:4")
+            general = sum((m * u for m, u in zip(thick, coords)), sp.zeros(4))
+            low = sp.hessian(general[:2, :2].det(), coords)
+            high = sp.hessian(general[2:, 2:].det(), coords)
+            operator = low.inv() * high
+            assert operator.trace() and operator.charpoly().discriminant()
             system = sp.Matrix.vstack(
                 *[
                     sp.kronecker_product(sp.eye(4), m.T).row_join(

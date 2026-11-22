@@ -226,7 +226,8 @@
         ],
         "exceptional_exchange_sheets": "sections/exceptional_exchange_sheets.tex"
       },
-      "intrinsic_block_recovery": "sections/rank_two_block_recovery.tex"
+      "intrinsic_block_recovery": "sections/rank_two_block_recovery.tex",
+      "unmarked_character_frames": "On both full-rank marked neighborhoods the two block determinant quadrics leave exactly three even-sign involutions per edge as character-frame candidates. A shared pair of axes fixes the neighboring choice, so at most three unlabeled decompositions survive around four positions."
     },
     {
       "id": "UNRESTRICTED-SINGLY-SYMMETRIC-14",

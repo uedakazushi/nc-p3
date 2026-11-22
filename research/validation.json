@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 102,
+  "version": 103,
   "reviewed_input": {
-    "source_commit": "039adbb4b3ab6d982db1f358820fbae3e38bc3e8"
+    "source_commit": "0f07785ce82734f7ee96845cf844e71d77f781a3"
   },
   "generation": {
     "result": "PASS",
-    "scope": "On marked neighborhoods of both a full-rank rational double root and a full-rank simple root, all four edge rank-two curves have geometrically integral components of degrees four and sixteen. The quartic span recovers the unordered two-letter blocks via a two-dimensional endomorphism algebra. The first edge recovers the unmarked invariant z+1/z."
+    "scope": "On both full-rank marked neighborhoods the two block determinant quadrics leave exactly three even-sign involutions per edge as character-frame candidates. A shared pair of axes fixes the neighboring choice, so at most three unlabeled decompositions survive around four positions."
   },
   "checks": [
     {
@@ -33,16 +33,16 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked specialization of the distinguished quartic and residual cycle by proper Chow addition, the two primitive idempotents, and invariance under reordering the two projective pairs."
+    "scope": "Checked the simultaneous stabilizer via trace, even signs, rulings, fixed-point pairs and matching of adjacent candidates."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Verified Frobenius component partitions at eight edges over F_1009 and rank thirty of all eight endomorphism systems over the rationals."
+    "scope": "Rechecked eight component-degree certificates, eight centralizers and eight separable characteristic polynomials with nonzero trace."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 220,
+      "nc-p3": 221,
       "plan_ja": 7,
       "notes_ja": 14
     },
@@ -58,7 +58,7 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Recover individual character lines and the remaining finite relabelings from each recovered block pair and the two determinant pencils. Test changes of the rank-two curve on the length-six boundary; continue AS tests on the ordinary Kummer complement.",
+    "Compute which of the three candidate character frames preserve the two thin pencils at each edge, determine their exact multiplicity and recover the remaining scale and finite relabelings. Continue residual AS work on the Kummer complement and rank-two degeneration on the degree-six boundary.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
