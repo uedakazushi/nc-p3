@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 124,
+  "version": 125,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -1516,6 +1516,16 @@
         "computations/verify_rank_fifteen_boundary_disks.py",
         "computations/verify_rank_fifteen_rational_residues.py"
       ]
+    },
+    {
+      "id": "RANK-FIFTEEN-ALL-RAMIFICATION-AND-PENCIL",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "Every ordinary window on both rank-15 ramification elliptic curves is standard Koszul left/right AS regular and 256-free over four central quartics. The regular slope open contains the entire collision and branch divisors. The two rank-drop covers carry a pencil with general genus five, two genus-three levels and elliptic ramification. Both genus-three levels have common octic Y²=t⁸+14t⁴+1 and a free shift with explicit genus-two quotient; the 32 split windows above K=3 and their generic curves are regular.",
+      "proof": "sections/rank_fifteen_all_ramification.tex",
+      "verification": [
+        "computations/verify_rank_fifteen_all_ramification.py",
+        "computations/verify_rank_fifteen_pencil.py"
+      ]
     }
   ],
   "document_paths": {
@@ -1579,7 +1589,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "931db595d10c89588af5b0efed45c8b5cd8e7a2d",
+  "reviewed_source_commit": "eac00f2b800902fcfa6181aeb3871f267964f874",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -1588,15 +1598,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Finish the F_101[t] dual Fitting supports in lengths 2 to 13 for starts 0 and 1 on both rank-15 ramification curves; retest the remaining ordinary irreducible factors of degree at least two. All boundary and degree-one disks are settled.",
+    "immediate_next_action": "Use the genus-three octic model on the two primitive-cube-root levels of the rank-15 surfaces. Substitute K=-(t²+1)²/D, H=Y/D, D=2t(t²-1), n=H/j, j⁴-j²+1=0 into the four relation spaces. Compute exact path and quartic center ranks over Q(j)(t,Y), or construct the univariate dual support modulo a prime splitting j (for example 109), then resolve residual or boundary disks. The complete ordinary rank-15 ramification curves and the rank-14 collision are settled.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/rank_fifteen_all_ramification.tex",
       "sections/rank_fifteen_boundary_disks.tex",
-      "sections/rank_fifteen_branch_center.tex",
-      "sections/rank_fifteen_covers.tex"
+      "sections/rank_fifteen_branch_center.tex"
     ],
-    "known_obstruction": "Only ordinary higher-degree residue factors of the dual Fitting support can still obstruct the rank-15 ramification theorem. The complete rank-15 surfaces and unrestricted classification remain open.",
-    "state_of_claim": "All boundary and degree-one residue disks are certified. A possible exceptional ordinary window must reduce only to ordinary higher-degree factors.",
+    "known_obstruction": "The genus-three octic has a multicyclotomic constant field in the original windows and an unclassified finite exceptional locus for the AS test. The general genus-five levels also remain.",
+    "state_of_claim": "The two complete ramification curves are certified. Pointwise regularity remains on the genus-three and general genus-five pencil levels of the rank-15 surfaces; unrestricted classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

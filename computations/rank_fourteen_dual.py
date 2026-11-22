@@ -31,7 +31,7 @@ proc kernelstep(matrix A, matrix Y, string label) {
 proc actmat(poly a,poly b,matrix Y){return(a*unitmat(nrows(Y))+b*Y);}
 proc part(matrix J,int first,int len){return(submat(J,first..(first+len-1),1..ncols(J)));}
 int k,m;
-poly cubic=2*(t-1)*(t+1)*(t+3);
+poly cubic=RADICAND;
 matrix M0h0[2][2]=0,cubic,1,0;
 """
 
@@ -57,8 +57,13 @@ def integral_rules(rules):
     return result
 
 
-def program(windows, sections, start, imaginary, prime=101):
-    lines = [f"ring S={prime},(t),(dp,C); number i={imaginary};", PRELUDE]
+def program(
+    windows, sections, start, imaginary, prime=101, radicand="2*(t-1)*(t+1)*(t+3)"
+):
+    lines = [
+        f"ring S={prime},(t),(dp,C); number i={imaginary};",
+        PRELUDE.replace("RADICAND", radicand),
+    ]
     emit = lines.append
 
     def action(n, h):
@@ -144,8 +149,10 @@ def parse_polynomial(expression, prime=101):
     )
 
 
-def fitting_support(windows, sections, start, imaginary, prime=101):
-    code = program(windows, sections, start, imaginary, prime)
+def fitting_support(
+    windows, sections, start, imaginary, prime=101, radicand="2*(t-1)*(t+1)*(t+3)"
+):
+    code = program(windows, sections, start, imaginary, prime, radicand)
     run = subprocess.run(
         [os.environ.get("SINGULAR_BIN", "Singular"), "-q"],
         input=code,

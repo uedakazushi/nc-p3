@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 124,
+  "version": 125,
   "reviewed_input": {
-    "source_commit": "931db595d10c89588af5b0efed45c8b5cd8e7a2d"
+    "source_commit": "eac00f2b800902fcfa6181aeb3871f267964f874"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Both rank-15 ramification curves are standard Koszul left/right AS regular and 256-free at every ordinary characteristic-zero point whose parameter reduces above 101 to a boundary point or to P1(F101). This includes all rational parameters. The two pole divisors admit regular weighted limits after a quadratic base change."
+    "scope": "Every ordinary window on both rank-15 ramification elliptic curves is standard Koszul left/right AS regular and 256-free over four central quartics. The regular slope open contains the entire collision and branch divisors. The two rank-drop covers carry a pencil with general genus five, two genus-three levels and elliptic ramification. Both genus-three levels have common octic Y²=t⁸+14t⁴+1 and a free shift with explicit genus-two quotient; the 32 split windows above K=3 and their generic curves are regular."
   },
   "checks": [
     {
@@ -15,15 +15,11 @@
       "result": "PASS"
     },
     {
+      "command": "python computations/verify_rank_fifteen_all_ramification.py",
+      "result": "PASS"
+    },
+    {
       "command": "python computations/verify_rank_fifteen_boundary_disks.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_rank_fifteen_rational_residues.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_rank_fifteen_branch_center.py",
       "result": "PASS"
     },
     {
@@ -37,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Audited Hensel uniformizers, exact divisibility, characterwise quotient ranks, the eight half-integral arrow rescalings and finite-field lifting."
+    "scope": "Reviewed specialization of the integral dual kernels, both sheets and the shift; checked the pencil degree, inertia, genera, rational inverses and the genus-two quotient."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Verified exact saturated series at the finite and infinite boundary, eight regular weighted limits, both sheets above six quadratic residual factors, and all 48 shift pairs for each cover at ordinary degree-one residues.",
-    "reproduction": "SymPy 1.14.0 and python-flint 0.9.0. Exact quadratic series, eight weighted reductions, six quadratic boundary factors and all 96 ordinary rational residues verified independently on both covers."
+    "scope": "Ran all four Singular dual Fitting programs and verified every higher-degree ordinary residue; confirmed the exact program inputs, the ramification criterion, multiquadratic pencil identities, the octic model and 32 genus-three windows."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 246,
+      "nc-p3": 248,
       "plan_ja": 7,
       "notes_ja": 15
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected rendered page 220, the end of the boundary proof with the four-start and degree-one reduction argument, and the page 219 extracted text."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "19816221148321d00f72d87be853984237672dad",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Finish the F_101[t] dual Fitting supports in lengths 2 to 13 for starts 0 and 1 on both rank-15 ramification curves; retest the remaining ordinary irreducible factors of degree at least two. All boundary and degree-one disks are settled.",
+    "Use the genus-three octic model on the two primitive-cube-root levels of the rank-15 surfaces. Substitute K=-(t²+1)²/D, H=Y/D, D=2t(t²-1), n=H/j, j⁴-j²+1=0 into the four relation spaces. Compute exact path and quartic center ranks over Q(j)(t,Y), or construct the univariate dual support modulo a prime splitting j (for example 109), then resolve residual or boundary disks. The complete ordinary rank-15 ramification curves and the rank-14 collision are settled.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
