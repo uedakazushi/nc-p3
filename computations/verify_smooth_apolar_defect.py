@@ -1,5 +1,5 @@
 """All three tangent defects on the smooth curve y^2=x^3-x over Q."""
-from itertools import product
+from itertools import combinations, product
 
 import sympy as sp
 
@@ -24,7 +24,72 @@ def coordinates(expressions):
     return sp.Matrix([[column.get(row, 0) for column in columns] for row in rows])
 
 
+
+def marked_jacobian(beta, metric):
+    """Differentiate the mixed Gram equations, fixing both marked axes."""
+    rows = []
+    pairs = list(combinations(range(4), 2))
+    for (i, k), (j, l) in product(pairs, repeat=2):
+        if i == 0 and j == 0:
+            continue
+        row = sp.zeros(1, 54)
+        for a, b, c, d, sign in [(i,j,k,l,1),(k,l,i,j,1),
+                                  (i,l,k,j,-1),(k,j,i,l,-1)]:
+            if a and b:
+                start = 6*(3*(a-1)+b-1)
+                row[:, start:start+6] += sign*beta[c,d].T*metric
+        rows.append(row)
+    return sp.Matrix.vstack(*rows)
+
+
+def marked_control(first, second, left, right, middle, pairing):
+    # Lift quotient bases to H^0(N), then discard the two pencil coordinates.
+    pool = [first, second] + middle
+    basis = [pool[i] for i in coordinates(pool).rref()[1]]
+    domain = [first]+left
+    basis_left = [domain[i] for i in coordinates(domain).rref()[1]]
+    values = [a*b for a, b in product(basis_left, right)]
+    data = coordinates(basis+values)
+    lifts, _ = data[:, :8].gauss_jordan_solve(data[:, 8:])
+    beta = {(i,j): lifts[2:,4*i+j] for i,j in product(range(4), repeat=2)}
+    metric = pairing(basis[2:], basis[2:])
+    assert metric.rank() == 6
+    jet = marked_jacobian(beta, metric)
+    u = sp.Matrix.hstack(*(beta[0,j] for j in (1,2,3)))
+    radical = (u.T*metric*u).nullspace()
+    ranks = []
+    for vector in radical:
+        r = u*vector
+        c = sp.Matrix(3, 3, lambda i,j: (r.T*metric*beta[i+1,j+1])[0])
+        ranks.append(c.rank())
+    return jet.rank(), ranks
+
+
+
+def constant_rank_pencils():
+    s, t = sp.symbols("s t")
+    common_kernel = sp.Matrix([[s, 0, 0], [t, s, 0], [0, t, 0]])
+    moving_kernels = sp.Matrix([[0, 0, s], [0, 0, t], [s, t, 0]])
+    pairs = list(combinations(range(3), 2))
+    for pencil, expected in [(common_kernel, 9), (common_kernel.T, 9), (moving_kernels, 8)]:
+        columns = []
+        for coefficient in [pencil.diff(s), pencil.diff(t)]:
+            for i, j in product(range(3), repeat=2):
+                h = sp.zeros(3)
+                h[i,j] = 1
+                values = [coefficient[a,b]*h[k,l] + h[a,b]*coefficient[k,l]
+                          - coefficient[a,l]*h[k,b] - h[a,l]*coefficient[k,b]
+                          for (a,k), (b,l) in product(pairs, repeat=2)]
+                columns.append(sp.Matrix(values))
+        jacobian = sp.Matrix.hstack(*columns)
+        assert jacobian.rank() == expected
+        if expected == 8:
+            assert jacobian.T.nullspace() == [sp.eye(9)[:, 0]]
+    print("constant-rank radical pencils: cofactor differential ranks 9, 9, 8")
+
+
 def main():
+    constant_rank_pencils()
     # L=4O, M=3O+P with P=(0,0); the second marked section is 1 in M.
     left = [1, x, y, x**2]
     right = [1, x, y, y/x]
@@ -61,7 +126,12 @@ def main():
         assert pairing(mixed, mixed).rank() == 6
         assert pairing([a*b for a,b in product(left, repeat=2)],
                        [a*b for a,b in product(right, repeat=2)]).rank() == 8
-        print("marked section", first, "tangent defect", defect, "Gram rank", q.rank())
+        jet_rank, radical_ranks = marked_control(first, second, left, right, middle, pairing)
+        assert jet_rank == 27
+        if defect == 1:
+            assert radical_ranks == [2]
+        print("marked section", first, "defect", defect, "Gram rank", q.rank(),
+              "mixed Jacobian rank", jet_rank, "radical form ranks", radical_ranks)
 
 
 if __name__ == "__main__":

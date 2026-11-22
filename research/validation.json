@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 56,
+  "version": 57,
   "reviewed_input": {
-    "source_commit": "b1786b9e8cffef97e02231d095e50d9ae42b641e"
+    "source_commit": "0bc5a6d483765cabe73f948f83a0396f63446ffb"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All nonreduced quartic pencil inputs, scheme-theoretic reconstruction, smooth-apolar tangent defect and finite-support recognition."
+    "scope": "Full smooth-apolar bisymmetric rank-eight AS recognition, all marked tangent defects, rank-ten exclusion and rank-nine necessary condition."
   },
   "checks": [
     {
@@ -33,23 +33,27 @@
     {
       "command": "git diff --check",
       "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_marked_opposite_rank.py",
+      "result": "PASS"
     }
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed pencil normal forms, socle derivations, Picard orbits, semicontinuity degree by degree, pencil duality, graph separation, and the Gram tangent rank calculation."
+    "scope": "Checked the rank-one marked-net dimension bound, constant-rank three-by-three pencils, the missing balanced-pencil minor, the defect-one fiber dimension bound and the closure-only argument independent of smoothness."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Eleven normal-form models over Q with nonzero residue weights and proper test-line cuts; all three tangent defects and both flattenings on the smooth elliptic curve y^2=x^3-x."
+    "scope": "Three exact smooth elliptic marked fibers with defects 2,1,0, both flattening ranks, relative Jacobian rank 27 and the radical matrices; exact cofactor differential ranks 9,9,8 and remaining coordinate. Separate nonreduced and marked-net checks in this run."
   },
   "tex": {
     "result": "PASS",
-    "scope": "Main 138 pages, plan 6 and notes 12. No overfull boxes, unresolved references or missing characters in the final logs."
+    "scope": "Main 142 pages, plan 6 and notes 13. Final logs contain no overfull boxes, missing characters or unresolved references."
   },
   "visual_inspection": {
     "result": "PASS",
-    "scope": "Rendered and inspected manuscript page 111 in the nonreduced classification proof."
+    "scope": "Inspected page 111 of the nonreduced quartic proof during this run."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT",
@@ -59,6 +63,6 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "All-nontransverse smooth-apolar windows outside the recognized component, other tensors without a pencil presentation, and global classification."
+    "Opposite-rank-nine bisymmetric windows with reducible quadrics, singular apolars, other components and global coverage."
   ]
 }
