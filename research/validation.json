@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 113,
+  "version": 114,
   "reviewed_input": {
-    "source_commit": "2c7e997c51c4aa7773fa5799472e2bc1a4bf1490"
+    "source_commit": "dbf281c8a37e39b54127e327f5a378c65c32760a"
   },
   "generation": {
     "result": "PASS",
-    "scope": "At (3,2), both positive coordinate endpoints, the four conjugate companion sheets and the sixteen geometric points on the two residual degree-eight orbits are standard Koszul two-sided AS regular in all degrees, with opposite flattening rank 16. Endpoint and companion regularity persists over a common open of slopes containing (3,2)."
+    "scope": "On both fixed curves at every ordinary slope, opposite rank is 16 on the negative curve and 16 minus two explicit quadric indicators on the positive curve. All rank-14 or rank-15 windows pass lengths four and five. Rank 14 occurs at exactly four points precisely when (lambda+1)^2(lambda*z+1)^2=16*lambda^2*z. Its two geometric components complete to elliptic curves of j-invariant 1728. All eight rank-15 points at (3,2), and all four rank-14 points at (36,-1/4), are standard Koszul two-sided AS regular in all degrees, with the same property on slope neighborhoods in the corresponding strata."
   },
   "checks": [
     {
@@ -15,51 +15,7 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_fixed_geometric_quartic_locus.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_opposite_fixed_determinants.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_fixed_quartic_ranks.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_fixed_exchange_isogeny.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_uniform_fixed_quartic_support.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_uniform_fixed_quartic_residuals.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_fixed_quintic_locus.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_varying_fixed_quintics.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_uniform_positive_quintics.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_uniform_quintic_companions.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_fixed_line_elliptic_curves.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_fixed_branch_regular.py",
+      "command": "python computations/verify_fixed_opposite_rank_drop.py",
       "result": "PASS"
     },
     {
@@ -77,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed integral specialization of curve coordinates and the constant path and center ranks, lifting the four central sections, the rank-256 graded freeness argument and openness for the six varying points."
+    "scope": "Checked coordinate endpoints and exchanges, the even and odd block eigenspaces, transverse simple residue roots, the two separate extra factors in the binary resultants, homogeneous admissibility and the elliptic parametrization."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact quartic elimination, including the four opposite-determinant sections and collisions; degree-five unit rank minors with 344 pivots and sixteen residual families of matrices; function-field lower bounds on the old sections; eight modular central certificates lifting to 22 geometric points, with all 32 central-quotient profiles checked through degree thirteen.",
-    "reproduction": "SymPy 1.14.0 and python-flint 0.9.0. The integer polynomial certificates use characteristic zero. Positive residual regularity uses residue characteristics 193 and 1009."
+    "scope": "Verified both signed symbolic block ranks and resultants, eight rank-15 and four rank-14 geometric points through three irreducible quartics and twelve Artinian central-quotient profiles. Classified all rank-14 fibers by exact homogeneous resultants and identified the two elliptic function fields."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 232,
+      "nc-p3": 234,
       "plan_ja": 7,
       "notes_ja": 15
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected the rendered main manuscript pages 205 and 206 for the two-sided fixed-curve quintic theorem and the all-degree central certificates."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "a9b0c3fa73af52bc3cf63d69ea85184f32560c5f",
-    "scope": "Re-fetched main and compared every changed source file byte for byte from the previous v107 readback (be1f0a5) through the v113 research commit."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Compute the exceptional divisor of quartic central equations on the (3,2) fixed curves away from the finite quartic defect, using the now constant length-four and length-five path dimensions. Obtain one rational frame of the five generic central sections and minors for the finite quotient by four combinations; test the residual closed points over their own fields as in the new certificates. For a separate length-six rank test, split paths into two triples and insert only the middle relation.",
+    "Use the explicit j=1728 model Y^2=2(t-1)(t+1)(t+3) to decide the finite possible nonregular locus on each of the two rank-14 components. Compute the quartic central kernel over this curve, project the bad minors for a central four-form Artinian quotient, and test the remaining closed points including poles of the first chart. On the rank-15 locus the analogous starting equations are the two block quadrics. Continue to the rank-16 complement after these smaller curves.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

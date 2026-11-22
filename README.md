@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-22 / v113。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v114。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -210,6 +210,8 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 
 倍率(3,2)の正の曲線で、端点二点、相方四点、八次閉点二組の全共役十六点について全次数のAS正則性を証明した。[証明と判定](sections/fixed_residual_regularity.tex)
 
+反対階数14が現れる倍率と四点を全通常倍率で決定した。二つの成分の完備化はともに j=1728 の楕円曲線で、具体的な倍率で階数14・15の全点の全次数正則性を証明した。[証明と判定](sections/fixed_opposite_rank_drop.tex)
+
 二窓から作る56次元代数で、低次Extの消滅を逆Serre反復が保つ構造条件を探す。
 「全次数を証明してAS認証」「有限障害で排除」「未決定」を分け、有限検査の成功を全AS認証としない。
 正規形の枝、特殊値、枝間同型の条件を証明し、未分類の残余を明示する。
@@ -293,6 +295,9 @@ python3 computations/verify_fixed_quintic_locus.py
 python3 computations/verify_varying_fixed_quintics.py
 python3 computations/verify_uniform_positive_quintics.py
 python3 computations/verify_fixed_residual_regularity.py
+python3 computations/verify_fixed_opposite_rank_drop.py
+python3 computations/verify_varying_opposite_rank.py
+python3 computations/verify_fixed_rank_fourteen.py
 python3 computations/verify_uniform_quintic_companions.py
 python3 computations/verify_uniform_fixed_quartic_residuals.py
 python3 computations/verify_opposite_fixed_determinants.py
