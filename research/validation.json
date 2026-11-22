@@ -15,11 +15,67 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_fixed_opposite_rank_drop.py",
+      "command": "python computations/verify_fixed_geometric_quartic_locus.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_opposite_fixed_determinants.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_fixed_quartic_ranks.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_fixed_exchange_isogeny.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_uniform_fixed_quartic_support.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_uniform_fixed_quartic_residuals.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_fixed_quintic_locus.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_varying_fixed_quintics.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_uniform_positive_quintics.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_uniform_quintic_companions.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_fixed_line_elliptic_curves.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_fixed_branch_regular.py",
       "result": "PASS"
     },
     {
       "command": "python computations/verify_fixed_residual_regularity.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_fixed_opposite_rank_drop.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_varying_opposite_rank.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_fixed_rank_fourteen.py",
       "result": "PASS"
     },
     {
@@ -37,7 +93,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Verified both signed symbolic block ranks and resultants, eight rank-15 and four rank-14 geometric points through three irreducible quartics and twelve Artinian central-quotient profiles. Classified all rank-14 fibers by exact homogeneous resultants and identified the two elliptic function fields."
+    "scope": "Exact quartic elimination, including the four opposite-determinant sections and collisions; degree-five unit rank minors with 344 pivots and sixteen residual families of matrices; function-field lower bounds on the old sections; eight modular central certificates lifting to 22 geometric points, with all 32 central-quotient profiles checked through degree thirteen. The opposite-rank calculation adds four-variable rank determinants, normalized binary homogeneous resultants and admissibility factors, the two genus-one function fields, and three new quartic residue certificates at 101 (12 central quotient profiles).",
+    "reproduction": "SymPy 1.14.0 and python-flint 0.9.0. The integer polynomial certificates use characteristic zero. Positive residual regularity uses residue characteristics 193 and 1009; opposite-rank-drop regularity uses 101."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +106,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected the rendered main manuscript pages 205 through 208 for the fixed-curve quintic theorem, central certificates, rank stratification, binary resultants and rank-drop regularity."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "02abea7ee290392de71f3ef4bdc567b99c8a0f8b",
+    "scope": "Re-fetched main and compared every changed source file byte for byte from the previous v107 readback (be1f0a5) through the v114 research commit."
   },
   "open_mathematics": [
     "Use the explicit j=1728 model Y^2=2(t-1)(t+1)(t+3) to decide the finite possible nonregular locus on each of the two rank-14 components. Compute the quartic central kernel over this curve, project the bad minors for a central four-form Artinian quotient, and test the remaining closed points including poles of the first chart. On the rank-15 locus the analogous starting equations are the two block quadrics. Continue to the rank-16 complement after these smaller curves.",
@@ -63,7 +123,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "b55de97c9dea9eb8a6738630d2eb4a7d9d3ceb2f",
+    "commit": "13db7a4bfc500dfe1bf1a2c3f476abd5993e8c18",
     "scope": "Updated only the nc-p3 row after fetching the research hub, then re-fetched and byte-compared its README."
   }
 }
