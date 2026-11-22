@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 68,
+  "version": 69,
   "reviewed_input": {
-    "source_commit": "92369ed8a5d76ee99389bf0d597c4d6dbbcac0ed"
+    "source_commit": "89060a170d108465894fde0e8ece3b66166e1283"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Complete classification of the three-axis companion family. Regularity is equivalent to Delta=sum(a_i^2 a_j^2) nonzero; the rank-ten torus gives a two-dimensional image and exactly two active axes give bisymmetric rank eight. Every unmarked indexed isomorphism class is specified by the unordered projective triple of coefficient squares, including the positive-dimensional point-scheme boundary."
+    "scope": "For Klein-graded singly symmetric windows with regular character spaces, having a simple fixed point forces the bisymmetric or the three-axis chart. If a character of H is absent, every regular window belongs to those charts or a two-plane-pair PBW chart, with an effective decision on all inputs. A rank-ten PBW example has skew point lines, outside the entire three-axis chart. Profile (3,1,1,1) forces full symmetry in AS."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_cross_product_parameters.py",
+      "command": "python computations/verify_klein_companion_windows.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_twenty_point_companion.py",
+      "command": "python computations/verify_cross_product_parameters.py",
       "result": "PASS"
     },
     {
@@ -33,15 +33,20 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed ternary-word reductions, generic degreewise flatness, the polynomial-module dimension squeeze, depth-two dual exactness, singular-root exclusion, and marked/unmarked orbit reconstruction on the finite, line and rank-eight boundaries."
+    "scope": "Reviewed simultaneous axis normalization, vanishing coefficients, matched PBW cubic overlaps for all four windows, star cube face factorization, skew-line separation and triangle ratios."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Symbolic flat identities, all four opposite blocks, signed quadratic normalizers and quartic Pfaffian over Q(a,b,c), plus explicit trisecant counts."
+    "scope": "Symbolic coefficient differences, exact opposite and adjacent ranks and all four quadratic echelon projections for the skew-line PBW example."
   },
   "tex": {
     "result": "PASS",
-    "scope": "Main 170 pages, plan 6 and notes 13, clean final logs."
+    "pages": {
+      "main": 173,
+      "plan": 6,
+      "notes": 13
+    },
+    "warnings": "No overfull boxes, missing glyphs or unresolved references."
   },
   "visual_inspection": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
@@ -53,7 +58,7 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Classify arbitrary Klein-four homogeneous singly symmetric windows with a marked simple fixed point. Separate adjoint and skew-adjoint axial triples by the flatness equations; handle vanishing coefficients and then determine what can happen when marked axes are not transverse.",
+    "Analyze the remaining all-present Klein profile (2,2,1,1), including zero thin entries. Determine which tensors with no simple fixed point are AS and distinguish their unmarked families.",
     "Unrestricted nonsymmetric classes."
   ]
 }

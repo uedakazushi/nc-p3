@@ -188,6 +188,11 @@
       "global_coverage": false,
       "current_result": "Complete classification of the three-axis companion family. Regularity is equivalent to Delta=sum(a_i^2 a_j^2) nonzero; the rank-ten torus gives a two-dimensional image and exactly two active axes give bisymmetric rank eight. Every unmarked indexed isomorphism class is specified by the unordered projective triple of coefficient squares, including the positive-dimensional point-scheme boundary.",
       "current_proof": "sections/cross_product_parameters.tex"
+    },
+    {
+      "id": "KLEIN-SINGLE-OPPOSITE",
+      "current_result": "For Klein-graded singly symmetric windows with regular character spaces, having a simple fixed point forces the bisymmetric or the three-axis chart. If a character of H is absent, every regular window belongs to those charts or a two-plane-pair PBW chart, with an effective decision on all inputs. A rank-ten PBW example has skew point lines, outside the entire three-axis chart. Profile (3,1,1,1) forces full symmetry in AS.",
+      "current_proof": "sections/klein_companion_windows.tex"
     }
   ],
   "presentation_components": {
