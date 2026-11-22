@@ -165,8 +165,8 @@ def relations():
     return tensor_relations(gamma, Jet.constant(0))
 
 
-def verify():
-    Jet.precision = 7
+def center_data(precision):
+    Jet.precision = precision
     windows = relations()
     order = iter(product(range(1, 6), range(4), range(4)))
     losses = []
@@ -182,7 +182,7 @@ def verify():
         return pivots
 
     basis, image = field_paths(windows, Jet.constant(1), reduce)
-    assert Jet.precision == 3
+    assert Jet.precision == precision - 4
     centers = [[] for _ in range(4)]
     for h, dimension in enumerate((3, 2, 0, 0)):
         rows, width = central_equations(basis, image, h)
@@ -199,6 +199,11 @@ def verify():
                                        if offset+j in vector}))
                 offset += len(words)
 
+    return windows, basis, image, centers
+
+
+def verify():
+    windows, basis, image, centers = center_data(7)
     for p, h in product(range(4), repeat=2):
         words = basis[p, 4, h]
         rows = [{j: center[w] for j, w in enumerate(words) if w in center}

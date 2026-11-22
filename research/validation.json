@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 160,
+  "version": 161,
   "reviewed_input": {
-    "source_commit": "96d2e8ed4c477e9d04e4a69661516bd6fd305f2a"
+    "source_commit": "51ba73dfe5abe41810811166b416b14bb7e3c140"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For every ordinary rank-fifteen window at residual characteristic three with 0 < val(y) < 3 val(x), all four sixth path spaces have character dimensions (20,20,22,22), and the quartic center has dimensions (3,2,0,0). On every pencil x^3=D y with val(D)>0 the sixth dimension is 84 and the quartic center has this character profile everywhere ordinary."
+    "scope": "On the whole variable-trace disk 0 < val(y) < 3 val(x) at three, the four chosen quartic center sections have no linear syzygies at any start. All sixteen products with terminal arrows are independent at each start, and their central quotient has degree-five character dimensions (10,10,10,10)."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_variable_zero_disk.py",
+      "command": "python computations/verify_rank_fifteen_first_center_products.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_x_zero.py",
+      "command": "python computations/verify_rank_fifteen_variable_zero_disk.py",
       "result": "PASS"
     },
     {
@@ -33,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked the local z-parameter, each H division as a rational-function identity, all sixth ranks and all quartic center ranks, and the three valuation cases for the pencil."
+    "scope": "Checked the choice of the four common central sections, the product character rule and both-sided generation in degree five, unit pivots and exact H divisibility at all four starts."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Seven-term jets over Q(z) with residue field F9. Computed all four center ranks, the evaluation ranks of four selected center sections at each start, and all sixteen sixth insertion ranks. The divisions by H are polynomial identities before residue evaluation.",
-    "reproduction": "Computed 7-term H-jets over Q(z), all 16 sixth ranks, all four center ranks and four-center evaluation in every start. Reran the ramified x-zero certificate through length 13."
+    "scope": "Nine-term H-jets over Q(z); every four-by-fourteen central product block loses four H orders and has rank four. Reran all uncut sixth, center and degree-four quotient ranks at seven-term precision."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 286,
+      "nc-p3": 287,
       "plan_ja": 8,
       "notes_ja": 16
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected manuscript page 260, including the root parameter, saturation proof, and pencil corollary."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "02f0321b9e8ec84474658be0ad5efc985fe3450b",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Over R=Z[z] localized at (3,z^2+z+2), continue the common four-section cut beyond length four at all starts in the small-trace, small-y disk. The four chosen central sections are independent at every start. Use the computed full degree-five/six bases to certify the ranks of their products by one/two letters, then continue the cut to length 13. If a pivot degenerates, isolate the first affected character and its initial coefficient. The complementary valuation sector and unrestricted classification remain open.",
+    "Compute the four-center quotient in degree six on the small-trace disk. Nine-term H-jets prove the degree-five products have full rank after four H divisions. In the first degree-six block (start 0, character 0), the direct product test exhausted the three remaining H coefficients before proving rank eight. Try higher precision (at least eleven input coefficients) or first saturate the degree-five product spaces and use their append maps. Continue toward length 13. No degree-six central-quotient failure or all-degree regularity follows from the precision limit.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
