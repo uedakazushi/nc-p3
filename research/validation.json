@@ -19,7 +19,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_pencil_trace_disks.py",
+      "command": "python computations/verify_rank_fifteen_pencil_linear_residues.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_rank_fifteen_pencil_ramified_ends.py",
       "result": "PASS"
     },
     {
@@ -37,7 +41,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Relative smooth-branch limits on 32 geometric residue/presentation choices over 109; eight node/embedding/presentation cases with two independent local divisors; 44 inverse orbits of rational x residues at 101 on ξ=9/16."
+    "scope": "Relative smooth-branch limits on 32 geometric residue/presentation choices over 109; eight node/embedding/presentation cases with two independent local divisors; 44 inverse orbits of rational x residues at 101 on ξ=9/16.",
+    "reproduction": "SymPy 1.14.0 and python-flint 0.9.0. Checked both relative principal divisors at each node, all smooth ramified specializations, the previous 24 branch and path-jump regression cases, and 44 inverse pairs with 104 Frobenius sheet orbits on the rational genus-five level."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +54,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Reviewed the horizontal-specialization conclusion and two-variable node proof on rendered page 230 and extracted pages 229–231."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "4ceff86da5c4531a3bb910921157b6fed5ef4d80",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "At the eight smooth trace ±1 points above each primitive c0, work over the relative base Q(c) with u=n. The quadratic Grassmann limits are constant in c. Compute the first saturated relations symbolically in c, verify unit pivots at c=c0, then try to lift the local center and four-cut through length thirteen. Excluding these eight germs would remove all horizontal failure components. For the fixed level c=3/4, ordinary reductions with x outside P¹(F101) remain; use the two quartic radicals over F101(x).",
@@ -63,7 +71,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "4b56240503be08f6b394b4ff6b31632971cdce4b",
+    "commit": "d056cf8466b6f6f21b6f3fc43f152d0e6ba1e92d",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
