@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 149,
+  "version": 150,
   "reviewed_input": {
-    "source_commit": "242cbd044b48626ddded76608f7014e76893b70d"
+    "source_commit": "c58a354187cb5fa341c3eb24f41aedb58d9414d8"
   },
   "generation": {
     "result": "PASS",
-    "scope": "An invertible fifteen-coefficient Pauli normal form and a group of 192 signed projective transformations enumerate all indexed-equivalent ordinary first-display parameters wherever the two products span 16. The generic indexed fiber consists of precisely 24 first-display tuples over 12 distinct multiplier pairs, and 48 tuples if both displays are counted."
+    "scope": "The full ordinary preimages of three further explicit irreducible curves in the (U,V) multiplier plane are standard Koszul left/right AS regular, with four-central-quartic freeness of rank 256 at all starts. These are exactly the additional curves obtained by Pauli orbit transport of coordinate ends and the certified octic level; finite nonordinary target exceptions are included."
   },
   "checks": [
     {
@@ -15,15 +15,11 @@
       "result": "PASS"
     },
     {
+      "command": "python computations/verify_rank_fifteen_regular_orbits.py",
+      "result": "PASS"
+    },
+    {
       "command": "python computations/verify_rank_fifteen_parameter_orbits.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_rank_fifteen_pauli_comparison.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_rank_fifteen_root_exchange.py",
       "result": "PASS"
     },
     {
@@ -37,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked independent conjugations, the four allowed characters per label permutation using two nonzero coefficient pairs, all eight radical choices per target, and genericity from a simple reduction."
+    "scope": "Checked all nonordinary target cases, scalar normalization, preservation of fully graded four-periodic centers, and the rank and center bounds needed to lift from the direct adjacent images."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "All rational Pauli projections modulo the quartic, projective inverse and five quadrics, 768 signed lifts, 192 template symmetries and the complete split residue fiber.",
-    "reproduction": "Recomputed all Pauli projections modulo the quartic, the 192 signed transformations and all 192 lifted points at the simple residue; independently re-ran the previous Pauli and root exchange verifiers."
+    "scope": "Twelve orbit labels and all three exact plane equations, finite enumeration of the boundary lifts, cyclic relation spaces and length-thirteen four-start central cuts over F_(17^16)."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 273,
+      "nc-p3": 275,
       "plan_ja": 8,
       "notes_ja": 16
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected manuscript page 247 covering the five quadratic equations, inverse parametrization, group calculation, and generic fiber count."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "7b9ec5a5e6da0ac8ec4f573dbf21073ea8333763",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Use the 192 transformations to propagate the all-degree coordinate-end certificates into the interior and compute the exceptional endpoint identifications. Determine the locus where the two generated products have dimension below 16, or recover the same lines intrinsically there. Continue the remaining interior regularity tests.",
+    "Study the remaining isolated interior regularity candidates away from the six explicit orbit curves and the branch. Use the paired Pauli tensor to work directly with normalized relations and to test the locus where dimension 16 fails; also resolve special coordinate-end equivalences using the explicit 192 actions.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

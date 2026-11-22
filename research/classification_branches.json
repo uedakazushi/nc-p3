@@ -273,7 +273,8 @@
       "rank_fifteen_root_exchange": "sections/rank_fifteen_root_exchange.tex",
       "rank_fifteen_branch_period": "sections/rank_fifteen_branch_period.tex",
       "rank_fifteen_small_residues": "sections/rank_fifteen_small_residues.tex",
-      "rank_fifteen_parameter_orbits": "sections/rank_fifteen_parameter_orbits.tex"
+      "rank_fifteen_parameter_orbits": "sections/rank_fifteen_parameter_orbits.tex",
+      "rank_fifteen_regular_orbits": "sections/rank_fifteen_regular_orbits.tex"
     },
     {
       "id": "UNRESTRICTED-SINGLY-SYMMETRIC-14",
