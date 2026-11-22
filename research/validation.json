@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact arithmetic over Q(i,sqrt(3)) with its ramified prime above three; four periodic saturated central cuts through length 13, and regression on the inert cubic trace."
+    "scope": "Exact arithmetic over Q(i,sqrt(3)) with its ramified prime above three; four periodic saturated central cuts through length 13, and regression on the inert cubic trace.",
+    "reproduction": "Recomputed the four ramified Gaussian-quadratic cuts and reran all four inert cubic cuts through length 13 at precision 25."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected rendered manuscript pages 259 and 260, including the conic and ramified saturation proof."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "fb303c238cd8861afd66599930fa7e2e46e08377",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Pursue a uniform small-y disk for traces reducing to zero at 3. At H=0 parametrize K=(z^2+z^-2)/2, P=z+1/z, Q=z-1/z, n0=(z^2-z^-2)/2. Compute the saturated generic minors over Q(z), beginning with the order-two fourth defect and then the sixth insertion and centers. The complementary valuation sector and unrestricted coverage are open.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "b1df30efc836d733be143aca36a7fdf6ad4ef6f2",
+    "commit": "92942e7e269969826ae8c967a6302a60e2edd756",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
