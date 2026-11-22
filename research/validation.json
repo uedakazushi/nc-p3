@@ -1,17 +1,21 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 67,
+  "version": 68,
   "reviewed_input": {
-    "source_commit": "7c1b1cc3b2e23412b16d791ca86682aff1a5a80d"
+    "source_commit": "92369ed8a5d76ee99389bf0d597c4d6dbbcac0ed"
   },
   "generation": {
     "result": "PASS",
-    "scope": "A rank-ten, minimally two-periodic standard AS window with a reduced twenty-point scheme realizes two distinct simultaneous Veronese embeddings and is genuinely singly symmetric. Four normal quadratic parameters, a polynomial-module basis lift, quadratic nullhomotopies and depth prove all-degree exactness from a conditional degree-six test."
+    "scope": "Complete classification of the three-axis companion family. Regularity is equivalent to Delta=sum(a_i^2 a_j^2) nonzero; the rank-ten torus gives a two-dimensional image and exactly two active axes give bisymmetric rank eight. Every unmarked indexed isomorphism class is specified by the unordered projective triple of coefficient squares, including the positive-dimensional point-scheme boundary."
   },
   "checks": [
     {
       "command": "bash scripts/cloud_preflight.sh --tex",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_cross_product_parameters.py",
       "result": "PASS"
     },
     {
@@ -29,15 +33,15 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed the polynomial-basis lift through degree six, normality homotopies, depth induction, period and finite Veronese comparison."
+    "scope": "Reviewed ternary-word reductions, generic degreewise flatness, the polynomial-module dimension squeeze, depth-two dual exactness, singular-root exclusion, and marked/unmarked orbit reconstruction on the finite, line and rank-eight boundaries."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact rational path dimensions, square-zero quotient, two Koszul rank lists at both starts, normality signs and elimination of maximal minors."
+    "scope": "Symbolic flat identities, all four opposite blocks, signed quadratic normalizers and quartic Pfaffian over Q(a,b,c), plus explicit trisecant counts."
   },
   "tex": {
     "result": "PASS",
-    "scope": "Main 166 pages, plan 6 and notes 13. No overfull boxes, missing characters or unresolved references."
+    "scope": "Main 170 pages, plan 6 and notes 13, clean final logs."
   },
   "visual_inspection": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
@@ -49,7 +53,7 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Vary the three axial coefficients in the marked cross-product example. Determine the full-rank diagonal homogeneous flat solutions, the admissible parameter region and indexed equivalences. Track the normal quadrics and the finite structural test including exceptional fibers.",
-    "General singly symmetric and nonsymmetric windows."
+    "Classify arbitrary Klein-four homogeneous singly symmetric windows with a marked simple fixed point. Separate adjoint and skew-adjoint axial triples by the flatness equations; handle vanishing coefficients and then determine what can happen when marked axes are not transverse.",
+    "Unrestricted nonsymmetric classes."
   ]
 }
