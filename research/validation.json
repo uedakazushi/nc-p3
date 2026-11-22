@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 101,
+  "version": 102,
   "reviewed_input": {
-    "source_commit": "09fe4f1cf1a4343f04a52e96cf8192d625f0a182"
+    "source_commit": "039adbb4b3ab6d982db1f358820fbae3e38bc3e8"
   },
   "generation": {
     "result": "PASS",
-    "scope": "At the rational singly symmetric second completion, three reduced rank-two hyperplane sections modulo 1009 force the geometrically irreducible component degrees four and sixteen. Neither orientation of a binary quotient is possible even locally on this edge throughout a characteristic-zero neighborhood."
+    "scope": "On marked neighborhoods of both a full-rank rational double root and a full-rank simple root, all four edge rank-two curves have geometrically integral components of degrees four and sixteen. The quartic span recovers the unordered two-letter blocks via a two-dimensional endomorphism algebra. The first edge recovers the unmarked invariant z+1/z."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_companion_rank_two_sections.py",
+      "command": "python computations/verify_rank_two_block_recovery.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_binary_incidence_sextic.py",
+      "command": "python computations/verify_companion_rank_two_sections.py",
       "result": "PASS"
     },
     {
@@ -33,11 +33,11 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed proper linear sections and their length, reduction of the finite coordinate rings, Frobenius orbit constraints across three cuts, diagonal quartic, and Chow specialization."
+    "scope": "Checked specialization of the distinguished quartic and residual cycle by proper Chow addition, the two primitive idempotents, and invariance under reordering the two projective pairs."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Computed three 240 by 126 section matrices and square-free Frobenius factors; enumerated all common component orbit types; checked all required finite ranks modulo 1009."
+    "scope": "Verified Frobenius component partitions at eight edges over F_1009 and rank thirty of all eight endomorphism systems over the rationals."
   },
   "tex": {
     "result": "PASS",
@@ -58,7 +58,7 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Test the same component-degree obstruction at all four edges of a genuine Kummer ramification window and a rank-sixteen simple-root window; relate the remaining degree-six and degree-seven defects to other quotients.",
+    "Recover individual character lines and the remaining finite relabelings from each recovered block pair and the two determinant pencils. Test changes of the rank-two curve on the length-six boundary; continue AS tests on the ordinary Kummer complement.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

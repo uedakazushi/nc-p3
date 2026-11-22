@@ -225,7 +225,8 @@
           "sections/single_zero_pairings.tex"
         ],
         "exceptional_exchange_sheets": "sections/exceptional_exchange_sheets.tex"
-      }
+      },
+      "intrinsic_block_recovery": "sections/rank_two_block_recovery.tex"
     },
     {
       "id": "UNRESTRICTED-SINGLY-SYMMETRIC-14",
