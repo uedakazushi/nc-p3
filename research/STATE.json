@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 66,
+  "version": 67,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -968,6 +968,15 @@
       "verification": [
         "computations/verify_single_opposite_block.py"
       ]
+    },
+    {
+      "id": "DISTINCT-VERONESE-REGULAR-COMPANION",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "A rank-ten, minimally two-periodic standard AS window with a reduced twenty-point scheme realizes two distinct simultaneous Veronese embeddings and is genuinely singly symmetric. Four normal quadratic parameters, a polynomial-module basis lift, quadratic nullhomotopies and depth prove all-degree exactness from a conditional degree-six test.",
+      "proof": "sections/twenty_point_companion.tex",
+      "verification": [
+        "computations/verify_twenty_point_companion.py"
+      ]
     }
   ],
   "document_paths": {
@@ -1031,7 +1040,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "213b792447b6d1b3ce58f091aff65fd17138e61d",
+  "reviewed_source_commit": "7c1b1cc3b2e23412b16d791ca86682aff1a5a80d",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -1040,16 +1049,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Use the intrinsic 10-column last Eagon-Northcott differential of a finite singly symmetric window. Classify distinct Veronese threefolds through its scheme of kernel lines, first for a reduced length-twenty scheme, and test whether a second representation has the required four-dimensional prolongation and AS property.",
+    "immediate_next_action": "Vary the three axial coefficients in the marked cross-product example. Determine the full-rank diagonal homogeneous flat solutions, the admissible parameter region and indexed equivalences. Track the normal quadrics and the finite structural test including exceptional fibers.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/one_opposite_symmetric_evaluations.tex",
-      "sections/finite_point_chart.tex",
-      "sections/finite_window_rigidity.tex",
-      "sections/transverse_factor_amalgam.tex"
+      "sections/twenty_point_companion.tex",
+      "computations/verify_twenty_point_companion.py",
+      "sections/one_opposite_symmetric_evaluations.tex"
     ],
     "known_obstruction": "No uniform finite Koszul/Serre cutoff or effective global regularity criterion is proved; finite-dimensional B and seven-degree tests do not suffice. Other low-rank components and high-rank witness-free regions remain unclassified.",
-    "state_of_claim": "All bisymmetric reversing AS inputs are decided. In the singly symmetric remainder the AS companion, four evaluation rank bounds, and the shared scheme with four-shift identity are proved; their sufficiency is open. The full classification remains incomplete.",
+    "state_of_claim": "A genuinely singly symmetric standard AS window with a finite reduced shared scheme and different odd Veronese representations exists. The family, special fibers, and exhaustive coverage of the singly symmetric and witness-free regions remain open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

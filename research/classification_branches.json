@@ -179,6 +179,13 @@
       "complete_indexed_isomorphism": "not supplied on the full chart",
       "source": "sections/quantum_ore.tex",
       "global_coverage": false
+    },
+    {
+      "id": "DISTINCT-VERONESE-COMPANION",
+      "scope": "Cross-product four-window in characteristic zero",
+      "regularity": "A rank-ten, minimally two-periodic standard AS window with a reduced twenty-point scheme realizes two distinct simultaneous Veronese embeddings and is genuinely singly symmetric. Four normal quadratic parameters, a polynomial-module basis lift, quadratic nullhomotopies and depth prove all-degree exactness from a conditional degree-six test.",
+      "source": "sections/twenty_point_companion.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {

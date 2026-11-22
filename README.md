@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-22 / v66。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v67。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -120,6 +120,8 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 
 一組だけの反対対称性を仮定しても、AS窓では四つの評価が全て階数3以上で、二つの窓は同じ点スキーム上の恒等四移動を与える。第三窓は第一窓の24元の線型系から復元できる。有限な場合は共通の最小解消から両奇位置の二乗像が決まり、それを含むVeronese三次元多様体の一意性で両対称性が従う。[片側対称の成長障害と相手窓](sections/one_opposite_symmetric_evaluations.tex)
 
+相異なる二つのVeronese三次元多様体に二乗像が入る被約二十点を構成した。対応する片側対称窓は反対階数10、最小周期2であり、全次数で標準AS正則となる。四つの正規二次式と多項式環上の自由性を使い、この例と同じ仮定の窓を次数6までの検査で認証できる。[二十点の相手窓と全次数証明](sections/twenty_point_companion.tex)
+
 二窓から作る56次元代数で、低次Extの消滅を逆Serre反復が保つ構造条件を探す。
 「全次数を証明してAS認証」「有限障害で排除」「未決定」を分け、有限検査の成功を全AS認証としない。
 正規形の枝、特殊値、枝間同型の条件を証明し、未分類の残余を明示する。
@@ -156,6 +158,7 @@ python3 computations/verify_square_apolar_ore.py
 python3 computations/verify_transverse_apolar_factors.py
 python3 computations/verify_factor_regular_windows.py
 python3 computations/verify_single_opposite_block.py
+python3 computations/verify_twenty_point_companion.py
 python3 computations/verify_rank_five_pencils.py
 python3 computations/verify_matched_pencils.py
 python3 computations/verify_incidence_cubics.py

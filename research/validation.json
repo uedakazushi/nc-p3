@@ -1,45 +1,21 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 66,
+  "version": 67,
   "reviewed_input": {
-    "source_commit": "213b792447b6d1b3ce58f091aff65fd17138e61d"
+    "source_commit": "7c1b1cc3b2e23412b16d791ca86682aff1a5a80d"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For singly opposite-symmetric standard AS windows all four evaluation ranks are at least three. A separated three-letter block gives exponential growth for a small odd evaluation. Both maximal-minor schemes coincide on the common even projective space, all four point correspondences are graphs, and four-shift is the identity without a finiteness assumption. The other half is canonically computed by the four-dimensional positive prolongation of the first window."
+    "scope": "A rank-ten, minimally two-periodic standard AS window with a reduced twenty-point scheme realizes two distinct simultaneous Veronese embeddings and is genuinely singly symmetric. Four normal quadratic parameters, a polynomial-module basis lift, quadratic nullhomotopies and depth prove all-degree exactness from a conditional degree-six test."
   },
   "checks": [
     {
-      "command": "bash scripts/cloud_preflight.sh --tex (project environment activated)",
+      "command": "bash scripts/cloud_preflight.sh --tex",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_single_opposite_block.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_factor_regular_windows.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_transverse_apolar_factors.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_square_apolar_ore.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_additive_graph_limits.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_polygon_multiplication.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_binary_product_obstruction.py",
+      "command": "python computations/verify_twenty_point_companion.py",
       "result": "PASS"
     },
     {
@@ -53,33 +29,27 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Verified the rectangular and separated-block quotients, small-column Segre intersection, scheme-theoretic kernel-line maps in both directions and prolongation recovery. Checked the expected-codimension determinantal resolution, its linear last differential, and the finite complete-intersection flip criterion."
+    "scope": "Reviewed the polynomial-basis lift through degree six, normality homotopies, depth induction, period and finite Veronese comparison."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact separated pencil block dimensions 4,4,7,16; companion cubic/quartic amalgam fixtures checked in the same run. Last differential has ranks 9 and 10 for evaluation ranks 3 and 4, with precisely the square kernel at rank 3."
+    "scope": "Exact rational path dimensions, square-zero quotient, two Koszul rank lists at both starts, normality signs and elimination of maximal minors."
   },
   "tex": {
     "result": "PASS",
-    "scope": "Main 165 pages, plan 6 and notes 13. No overfull boxes, missing characters or unresolved references in final logs."
+    "scope": "Main 166 pages, plan 6 and notes 13. No overfull boxes, missing characters or unresolved references."
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected rendered page 138 of the principal manuscript, including the intrinsic Veronese reconstruction."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
-    "result": "NOT_RUN_THIS_CHECKPOINT",
-    "scope": "The new argument uses current internal results. No independent novelty determination or external-source claim was added."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "c2a01f0aeed5383d4ddf219d7b96f34c6d024c36",
-    "scope": "Fetched main after ordinary fast-forward pushes and read all 22 files changed since 33ec573 byte for byte, including the proofs, exact checks and resume point.",
-    "research_hub_commit": "6272cfa3f7b492b129c5e4cc942a426cae10eb86",
-    "hub_scope": "Fetched the current hub, preserved concurrent changes, pushed just the nc-p3 row and verified the remote README byte for byte."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Use the intrinsic 10-column last Eagon-Northcott differential of a finite singly symmetric window. Classify distinct Veronese threefolds through its scheme of kernel lines, first for a reduced length-twenty scheme, and test whether a second representation has the required four-dimensional prolongation and AS property.",
-    "Other nonsymmetric windows and full classification."
+    "Vary the three axial coefficients in the marked cross-product example. Determine the full-rank diagonal homogeneous flat solutions, the admissible parameter region and indexed equivalences. Track the normal quadrics and the finite structural test including exceptional fibers.",
+    "General singly symmetric and nonsymmetric windows."
   ]
 }
