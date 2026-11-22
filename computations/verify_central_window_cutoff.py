@@ -33,7 +33,7 @@ def central(windows, sections):
     return True
 
 
-def quotient_dimensions(windows, sections, start):
+def quotient_dimensions(windows, sections, start, unit=Fraction(1)):
     dims, arrows = [1], []
     for n in range(1, 14):
         rows = []
@@ -50,7 +50,7 @@ def quotient_dimensions(windows, sections, start):
                         k = 4 * j + word[-1]
                         row[k] = row.get(k, 0) + c * v
                 rows.append({k: v for k, v in row.items() if v})
-        size, images = quotient_images(4 * dims[-1], rows)
+        size, images = quotient_images(4 * dims[-1], rows, unit)
         dims.append(size)
         arrows.append(images)
     return dims

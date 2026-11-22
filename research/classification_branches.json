@@ -229,7 +229,8 @@
       "intrinsic_block_recovery": "sections/rank_two_block_recovery.tex",
       "unmarked_character_frames": "The thin pencil and the branch divisor of the recovered quartic select a unique unmarked character frame at both full-rank samples and on their neighborhoods. Standard windows on this open are index-preservingly isomorphic exactly when one of 32 monomial permutations passes an integral torus test, including coefficient zeroes.",
       "unmarked_frame_isomorphism": "sections/unique_character_frames.tex",
-      "multiple_markings": "sections/flip_character_locus.tex"
+      "multiple_markings": "sections/flip_character_locus.tex",
+      "fixed_elliptic_curves": "sections/fixed_line_elliptic_curves.tex"
     },
     {
       "id": "UNRESTRICTED-SINGLY-SYMMETRIC-14",

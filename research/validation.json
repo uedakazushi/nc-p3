@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 105,
+  "version": 106,
   "reviewed_input": {
-    "source_commit": "6f7f449925fff911ff5dd899ddbb726f21016d40"
+    "source_commit": "fad9cae87eba9893744380395763c3542877b52b"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The simultaneous low-bit flip lifts to a monomial tensor automorphism exactly on two explicit first-matrix lines. Its square separates the genuine involutions from order-four lifts. A rational full-rank standard AS window on the positive line admits two distinct invertible Klein markings."
+    "scope": "For all ordinary slopes the two flip-fixed lines give smooth elliptic double covers with the same explicit j-invariant and eight admissible ramification windows. On a common slope open containing (3,2) all eight are full-rank standard Koszul AS-regular. Twelve explicit simple-root sections fail in length four."
   },
   "checks": [
     {
@@ -15,11 +15,19 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_flip_character_locus.py",
+      "command": "python computations/verify_fixed_line_elliptic_curves.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_unique_character_frames.py",
+      "command": "python computations/verify_fixed_branch_regular.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_central_window_cutoff.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_flip_character_locus.py",
       "result": "PASS"
     },
     {
@@ -33,16 +41,16 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked the normalizing diagonal gauge, square of every possible lift, obstruction on the negative line, and the additional eigenframe on the positive line."
+    "scope": "Reviewed the ordinary-slope localization, integral lifting of quartic centers, central freeness, and finite closed projection of the exceptional slope set."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Verified the universal thin and thick transformations, signed coefficient identities, opposite rank sixteen, central dimensions, the degree-thirteen cut and invertible transformed blocks."
+    "scope": "Verified both quartic discriminants and j-invariants, ramification-unit resultants, twelve length-four path obstructions, and all 32 modular Artinian quotient profiles at the split prime 307."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 223,
+      "nc-p3": 225,
       "plan_ja": 7,
       "notes_ja": 14
     },
@@ -58,7 +66,7 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Analyze the signed completion curves on the two fixed lines and isolate specializations with a low-degree growth defect despite having distinct determinant roots.",
+    "Determine the finite remaining exceptional set on a generic fixed elliptic curve: compute the degree-four rank-drop divisor over its function field, separating the twelve known sections and testing the residual points. Compare the resulting boundary with intrinsic block recovery at the double-marked window.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
