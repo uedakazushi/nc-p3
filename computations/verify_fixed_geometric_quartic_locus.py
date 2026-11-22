@@ -15,8 +15,8 @@ a, e, f = sp.symbols("a e f")
 z, l = sp.Integer(3), sp.Integer(2)
 
 
-def symbolic_blocks(sign):
-    A = sp.Matrix([[a, 1], [sign * z, sign * a]])
+def symbolic_blocks(sign, z=z, l=l, b=1):
+    A = sp.Matrix([[a, b], [sign * z * b, sign * a]])
     B = sp.Matrix([[e, f], [sign * z * f, sign * e]])
     w, _, rev = gram_twist(A, B, z, l)
     blocks = []
@@ -27,7 +27,7 @@ def symbolic_blocks(sign):
             pairs = [4 * (i ^ color) + i for i in range(4)] if side % 2 else indices
             rows = cut.extract(pairs, indices[:r]).T
             high = rows[:, 4 - r :]
-            assert not high.free_symbols and high.det() != 0
+            assert not (high.free_symbols & {a, e, f}) and high.det() != 0
             rows = high.inv() * rows
             kernel = sp.eye(4 - r).col_join(-rows[:, : 4 - r])
             groups.append((rows.tolist(), kernel))
@@ -57,7 +57,7 @@ def pivot_columns(rows):
     return [next(j for j in range(mat.ncols()) if mat[i, j]) for i in range(rank)]
 
 
-def choose_minor(matrix, snapshot, seed):
+def minor_indices(matrix, snapshot, seed):
     rng = random.Random(seed)
     rows = list(range(matrix.rows))
     cols = list(range(matrix.cols))
@@ -68,7 +68,7 @@ def choose_minor(matrix, snapshot, seed):
         cols.sort(key=lambda j: sum(v != 0 for v in matrix.col(j)))
     J = [cols[j] for j in pivot_columns([[snapshot[i][j] for j in cols] for i in rows])]
     I = [rows[i] for i in pivot_columns([[snapshot[i][j] for i in rows] for j in J])]
-    return matrix.extract(I, J)
+    return I, J
 
 
 def verify_rank(matrix, target, sign, N, D, curve, excluded, boundary):
@@ -76,7 +76,7 @@ def verify_rank(matrix, target, sign, N, D, curve, excluded, boundary):
     common = None
     minors = []
     for seed in range(8):
-        sub = choose_minor(matrix, snapshot, seed)
+        sub = matrix.extract(*minor_indices(matrix, snapshot, seed))
         assert sub.shape == (target, target)
         dm = sub.to_DM()
         poly = sp.Poly(dm.domain.to_sympy(dm.det()), a, e, f)

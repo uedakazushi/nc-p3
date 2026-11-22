@@ -1,0 +1,87 @@
+% !TeX root = ../papers/nc-p3.tex
+\section{全通常倍率での四次障害の決定}
+\label{sec:uniform-fixed-quartic}
+\begin{theorem}\label{thm:uniform-fixed-quartic}
+標数零の任意の通常倍率で、二本の固定直線の許容対根窓において、
+どこかの始点の長さ4の次元が35を超える必要十分条件は次のいずれかである。
+\begin{enumerate}
+\item 命題\ref{prop:fixed-line-defects}の十二表示の一つである。
+\item 正の直線上で $\det A+\det B=0$ となる。
+この条件は定理\ref{thm:opposite-fixed-dets}の四表示で尽きる。
+\end{enumerate}
+正の曲線では常に八点、負の曲線では $\lambda^2z\ne-1$ なら八点、
+$\lambda^2z=-1$ なら四点である。従って二位置移動の商では合計八点または六点である。
+これは各倍率の幾何点の台に関する主張である。
+\end{theorem}
+\begin{proof}
+$[a:b]$を第一行列の対角・非対角の比とし、
+$(N,D)^t=M_\sigma(a,b)^t$ を定理\ref{thm:fixed-exchange-isogeny}の行列で定める。
+許容点で $[e:f]=[N:D]$ なので、ただ一つの $u\ne0$ に対し $(e,f)=(Nu,Du)$ となる。
+この比の式は稠密開集合から延びる。両行列は可逆で $M_\sigma$ も可逆なので両辺に基点はない。
+$\Delta=a^2-zb^2$ と書く。$d=\det M_\sigma$ とすると
+$N^2-zD^2=-d\Delta$ であり、$\det B/\det A=-d u^2$ である。
+補完の二つの式は
+\[
+ \frac{\lambda(z+\sigma)\Delta}{D}
+ \bigl(Du-f_0-\sigma f_1(a^2-zD^2u^2)\bigr)
+ =
+ \frac{\lambda(z+\sigma)\Delta}{N}
+ \bigl(Nu-e_0-\sigma e_1(N^2u^2-zb^2)\bigr)
+ =G(a,b,u)
+\]
+と共通の多項式になる。$N,D$は同時に消えないため、片方が零でも $G=0$ が必要である。
+正で $u=1/(r(\lambda^2z-1))$ を代入すると $G$ は前節の
+二つの一次式 $b_\epsilon a-a_\epsilon b$ の積の単元倍となる。
+$r$の両根を取れば、無限遠を含めて反対行列式の軌跡が決定する。
+
+次に $b=1$ での第一座標の候補を、倍率と同時に消去する。
+前節の各始点・各文字次数の目標階数に対応する小行列式を一つ選ぶ。
+$e=Nu,f=Du$を入れ、通常倍率で単元の分母を払うと
+$T\in\mathbb Z[a,u,z,\lambda]$になる。
+\path{computations/verify_uniform_fixed_quartic_support.py} は全32行列について
+分数なしの消去で $T$ を計算し、各既約因子 $W$ について
+$u$ を含めば $\operatorname{Res}_u(G,W)$、含まなければ $W$ を因数分解する。
+いずれも非零で、倍率のみの因子は全て通常倍率の単元である。残りは次の表の積の因子に限る。
+\[
+\begin{array}{c|l}
+ - & a\Delta(a^2-\lambda^2z^2)(\lambda^2a^2-1)\\
+ + & a\Delta ND(a-\lambda z)(\lambda a-1) H_+(a)H_-(a)
+\end{array}
+\]
+ここで $H_\epsilon=\operatorname{Res}_r(r^2-z,b_\epsilon a-a_\epsilon)$。
+行列式の計算は四変数の整数多項式環内で行うので、表の制限は全ての通常倍率に
+同時に適用できる。負の直線では $a=0$ なら $D=0$ より $x=0$、
+$b=0$ なら $N=0$ より $y=0$ である。残る四つの第一座標の上の二根は
+前の表の非正則表示で尽くされる。
+
+正では $a=\lambda z$ または $1/\lambda$ のファイバーは同様に既知である。
+$a=0$ または $b=0$ 上の許容点での追加検算を述べる。$a=0,b=1$ なら
+$x=-zf^2\ne0$より $f=-1/(zf_1)$ かつ $e=Nf/D$。
+$a=1,b=0$ なら $y=e^2\ne0$ より $e=1/e_1$ かつ $f=De/N$ である。
+必要な分母が消えるとこれらの式を導く元の方程式に許容解はない。
+$ND=0$ は二位置移動でこのいずれかに帰着する。
+最後に $H_\epsilon=0$ で $abND\ne0$ とする。
+第一行列を前節の $A_\epsilon$ に規格化でき、$f_1,e_1$ はともに非零である。
+一つの根は既知の $B_\epsilon$。他の根は二次式の根の和から
+\[
+ f'=-1/(zf_1)-f_\epsilon,\qquad e'=1/e_1-e_\epsilon
+\]
+となる。
+
+\path{computations/verify_uniform_fixed_quartic_residuals.py} は
+二座標端とこの二つの相方に対して、全64個の目標階数の小行列式を
+$\mathbb Q[r,\lambda]$で検算する。分子の各非定数因子は通常倍率で逆にした因子、
+または当該表示の $xy\det A\det B(\det A+\det B)$ の分子・分母の因子に限られる。
+よって分母が定義された許容点では、反対行列式の場合を除いて目標階数に達する。
+必要性が従い、十分性は前の二命題の経路次元の下界による。
+
+点の個数は $t=\sqrt d\,u$ によって確認できる。正では $\sqrt d=r(\lambda^2z-1)$、
+負では $\sqrt d=r$ を取る。従来の表の $t$ はいずれも
+$\{r,-r,1/r,-1/r\}$ を走り、通常倍率ではこれらは相異なる。
+正では各一つであり、新しい四点は $t=\pm1$ の上に二つずつある。
+同じ $t$ の二つの第一座標の行列式は
+$-2r(r^2-1)(\lambda^2 r^2-1)$ で非零である。
+負では各 $t$ の二つの $a$ の差の平方が
+$(\lambda^2z+1)^2/\lambda^2$である。同じ $a,t$ は同じ窓を指定する。
+このため指定の倍率だけ負の四組が合流する。自由な二位置移動で点の個数は半減する。
+\end{proof}

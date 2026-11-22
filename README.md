@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-22 / v108。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v109。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -200,6 +200,8 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 
 倍率(3,2)の両固定曲線で長さ4の障害は全幾何点を通じて十六点で尽きる。新しい四点は全通常倍率で反対階数16の非正則表示に延びる。[証明と判定](sections/fixed_geometric_quartic_locus.tex)
 
+全通常倍率で二つの固定曲線上の長さ4の障害を決定した。一般の十六点は特別な倍率で十二点に合流する。[証明と判定](sections/uniform_fixed_quartic_support.tex)
+
 二窓から作る56次元代数で、低次Extの消滅を逆Serre反復が保つ構造条件を探す。
 「全次数を証明してAS認証」「有限障害で排除」「未決定」を分け、有限検査の成功を全AS認証としない。
 正規形の枝、特殊値、枝間同型の条件を証明し、未分類の残余を明示する。
@@ -278,6 +280,8 @@ python3 computations/verify_flip_character_locus.py
 python3 computations/verify_fixed_line_elliptic_curves.py
 python3 computations/verify_fixed_exchange_isogeny.py
 python3 computations/verify_fixed_geometric_quartic_locus.py
+python3 computations/verify_uniform_fixed_quartic_support.py
+python3 computations/verify_uniform_fixed_quartic_residuals.py
 python3 computations/verify_opposite_fixed_determinants.py
 python3 computations/verify_fixed_quartic_ranks.py
 python3 computations/verify_fixed_branch_regular.py

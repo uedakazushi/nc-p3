@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 108,
+  "version": 109,
   "reviewed_input": {
-    "source_commit": "be1f0a5659694a457770a8a29d9b887d7f41d3b2"
+    "source_commit": "f1347ef67017055215da1180a95fec31ca1851fc"
   },
   "generation": {
     "result": "PASS",
-    "scope": "At slopes (3,2), the entire geometric length-four defect on the two fixed elliptic curves consists of sixteen admissible points, eight modulo exchange. Four nonsplit points missed over F_101 extend to explicit opposite-determinant sections at every ordinary slope; they have opposite rank sixteen and dimensions at least 36,68 in lengths four and five at every start."
+    "scope": "For every ordinary slope the length-four defect on both fixed elliptic curves is exactly the twelve listed presentations plus the four positive opposite-determinant sections. The support has sixteen points unless lambda^2 z=-1, when four pairs coalesce and twelve remain; the two-position quotient has eight or six."
   },
   "checks": [
     {
@@ -15,19 +15,15 @@
       "result": "PASS"
     },
     {
+      "command": "python computations/verify_uniform_fixed_quartic_support.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_uniform_fixed_quartic_residuals.py",
+      "result": "PASS"
+    },
+    {
       "command": "python computations/verify_fixed_geometric_quartic_locus.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_opposite_fixed_determinants.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_fixed_quartic_ranks.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_fixed_exchange_isogeny.py",
       "result": "PASS"
     },
     {
@@ -41,16 +37,16 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Verified four-character rank bounds, geometric support including nonsplit and boundary points, exchange pairs and localization."
+    "scope": "Checked the homogeneous equation at both ends, the effect of two-position exchange, admissibility of normalized denominators, and the geometric support counts."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Recomputed maximal minors over Q, projected by resultants, saturated residuals with rational Groebner bases, and tested all endpoint completions. Four additional sections have exact generic path ranks 36 and 68."
+    "scope": "Certified 32 integer-polynomial maximal minors, all norm factors over the entire slope plane, and 64 more symbolic rank minors on residual positive sheets. Verified the homogeneous scale equation and all collisions."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 227,
+      "nc-p3": 229,
       "plan_ja": 7,
       "notes_ja": 14
     },
@@ -66,7 +62,7 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Test whether the exact sixteen-point quartic defect support persists at generic slopes, by bounding the divisors of the normalized rank minors before specialization; also look for length-five or higher obstructions off this support.",
+    "Determine the length-five jump set off the now-complete quartic defect. Use the two outer quadratic quotients around the middle letter, giving 120-by-100 insertion matrices in each character, with target rank 86. Begin at (3,2) and identify any genuinely new sections.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
