@@ -13,6 +13,10 @@ def sample_relations():
     u,v = sp.Matrix([[1,2],[3,5]]),sp.Matrix([[2,3],[5,7]])
     a = sp.Matrix([[2,1],[5,3]])
     w = gram(u,v,a,other_completion(a,*cross_blocks(u,v)))
+    return relations_from_gram(w)
+
+
+def relations_from_gram(w):
     flip = [4*j+i for i,j in product(K,repeat=2)]
     relations = []
     for matrix in (w,w.T):

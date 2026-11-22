@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 72,
+  "version": 73,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -1031,6 +1031,15 @@
       "verification": [
         "computations/verify_klein_period_four_center.py"
       ]
+    },
+    {
+      "id": "KLEIN-QUARTIC-CENTER-LIFT",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "On the rational two-dimensional slice v=4,w=6, the generic periodic quartic center has five generators as a vector space (character dimensions 3,2,0,0). A single Zariski-open neighborhood of the certified rational chart point b=2,c=3 consists entirely of standard regular closed fibers finite free of rank 256 per start over four central quartics. A finite constructible rank test recognizes this certificate on the whole second-completion closure.",
+      "proof": "sections/klein_quartic_center_lift.tex",
+      "verification": [
+        "computations/verify_klein_center_lift.py"
+      ]
     }
   ],
   "document_paths": {
@@ -1094,7 +1103,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "b21dbf665b9ab9b4e579accb9641680d80f09dac",
+  "reviewed_source_commit": "cafd8f7befc04d5ed2f711c33e795a2c51f00d67",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -1103,17 +1112,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Lift the five central quartics of the certified rational period-four AS input to the second-completion parameters. Determine the center-rank strata and the parameter locus where four central quartics give the Artinian quotient (1+t+t^2+t^3)^4, then decide the exceptional closed fibers.",
+    "immediate_next_action": "Complete the four-variable center lift, then analyze the local deformations outside the Klein-homogeneous and even-symmetric strata at the certified point.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/klein_quartic_center_lift.tex",
       "sections/klein_doublet_boundary.tex",
-      "computations/verify_klein_period_four_center.py",
-      "sections/klein_generic_isomorphisms.tex",
-      "sections/klein_two_doublets.tex",
-      "sections/klein_companion_windows.tex"
+      "sections/klein_generic_isomorphisms.tex"
     ],
     "known_obstruction": "No uniform finite Koszul/Serre cutoff or effective global regularity criterion is proved; finite-dimensional B and seven-degree tests do not suffice. Other low-rank components and high-rank witness-free regions remain unclassified.",
-    "state_of_claim": "All Klein-homogeneous AS windows with three regular character spaces are structurally covered; the individual closed-fiber AS conditions on the period-four closure and the unrestricted global classification remain incomplete.",
+    "state_of_claim": "Uniform closed-point AS regularity holds on an explicit nonempty open in the b,c plane. The global center strata and unrestricted classification are open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

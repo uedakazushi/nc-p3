@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 72,
+  "version": 73,
   "reviewed_input": {
-    "source_commit": "b21dbf665b9ab9b4e579accb9641680d80f09dac"
+    "source_commit": "cafd8f7befc04d5ed2f711c33e795a2c51f00d67"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The complete (2,2,1,1) Klein class of standard AS windows is covered by the bisymmetric chart and the closure of the single four-dimensional second-completion family. Singular cross blocks force bisymmetry for every AS tensor, including every thin zero pattern, and are effectively decided. All unequal completions with invertible cross blocks, even exceptional fibers or vanishing thin coefficients, lie in the same irreducible closure. The explicit rational point is standard AS of minimal period four by the central quartic certificate."
+    "scope": "On the rational two-dimensional slice v=4,w=6, the generic periodic quartic center has five generators as a vector space (character dimensions 3,2,0,0). A single Zariski-open neighborhood of the certified rational chart point b=2,c=3 consists entirely of standard regular closed fibers finite free of rank 256 per start over four central quartics. A finite constructible rank test recognizes this certificate on the whole second-completion closure."
   },
   "checks": [
     {
@@ -15,27 +15,7 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_twenty_point_companion.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_cross_product_parameters.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_klein_companion_windows.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_klein_two_doublets.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_klein_generic_isomorphisms.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_klein_doublet_boundary.py",
+      "command": "python computations/verify_klein_center_lift.py",
       "result": "PASS"
     },
     {
@@ -53,41 +33,35 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed both coordinate rank obstructions, the complementary projection patterns and the odd symmetry in the mixed case. Verified paired thin zeros and adjacent symmetry, irreducibility of the universal completion and limits at determinant ratio one. The special-fiber Hilbert lower bound and central polynomial-module upper bound agree in all degrees; verified depth-two dual exactness."
+    "scope": "Verified two-inverse graph bases, constant-rank base change for the centers, finite open quotient test, and the module dimension squeeze with left and right dual exactness."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exhaustive compatible supports with both singular determinant monomials zero, symbolic exceptional determinant, center equation and rational limits at the exceptional ratio. Exact rational quartic center dimensions (3,2,0,0) and four modular Artinian quotient rank tables through degree thirteen."
+    "scope": "Exact elimination over Q(b,c) in characters zero and one; all four central ranks at a rational point, independent Gram rows, and its four artinian quotient rank tables modulo 1009 through degree thirteen."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "main": 178,
+      "main": 180,
       "plan": 6,
       "notes": 13
     },
     "warnings": "No overfull boxes, missing glyphs or unresolved references."
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Rendered and inspected the singular-boundary argument and the final rational AS certificate on pages 151 and 152."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "295dfd702368f341c3cdadd251c3eff66f6754de",
-    "starting_remote_commit": "7c1b1cc3b2e23412b16d791ca86682aff1a5a80d",
-    "verification": "After normal fast-forward push and fresh fetch, HEAD matched FETCH_HEAD and all 20 changed source files matched the remote Git blobs byte for byte."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Lift the five central quartics of the certified rational period-four AS input to the second-completion parameters. Determine the center-rank strata and the parameter locus where four central quartics give the Artinian quotient (1+t+t^2+t^3)^4, then decide the exceptional closed fibers.",
+    "Complete the four-variable center lift, then analyze the local deformations outside the Klein-homogeneous and even-symmetric strata at the certified point.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
-    "result": "PASS",
-    "commit": "f3c91173d52fdf54915c7047130ca7113cf29f29",
-    "verification": "Updated only the nc-p3 README row after fetching intervening hub changes. Fetched HEAD and README bytes matched the saved version."
+    "result": "PENDING"
   }
 }
