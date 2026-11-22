@@ -18,7 +18,7 @@ from verify_rank_fourteen_central_cut import quotient_layers
 from verify_klein_center_lift import field_paths, central_equations
 
 
-def local_relations(Jet, k, sign_r, sign_w, color):
+def local_relations(Jet, k, sign_r, sign_w, color, *, level=None, parameter=None):
     def power(v, n):
         if not n:
             return Jet.constant(1)
@@ -26,8 +26,8 @@ def local_relations(Jet, k, sign_r, sign_w, color):
         square = half * half
         return square * v if n % 2 else square
 
-    n = Jet(fmpq_poly([0, 1]))
-    c = Jet.constant(fmpq(3, 4))
+    n = Jet(fmpq_poly([0, 1])) if parameter is None else parameter
+    c = Jet.constant(fmpq(3, 4)) if level is None else level
     L2 = 1 + c * c
 
     def sqrt(a, x):

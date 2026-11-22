@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 133,
+  "version": 134,
   "reviewed_input": {
-    "source_commit": "5168161009be30bd482d4da4ffc35c38f14b1d8a"
+    "source_commit": "32eff33129c28630f2e29edeeb6a269278181472"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For either rank-fifteen presentation, any nonregular ordinary curve dominating c can specialize on either primitive genus-three level only to the eight points above trace ±1. The two nodes at trace zero have regular ordinary neighborhoods in the total surface: local coordinates r+1,w-1 remove distinct Pluecker factors. Both simple branch values ±2 also have relative certificates."
+    "scope": "At all eight trace ±1 centers over both primitive fibers the relative path spaces in degrees four and five have bases and the character 0,1 quartic centers have local bases of dimensions 3,2 on ordinary generic arcs, allowing the level to vary. Four liftable quartics bound the cut in degrees four and five by 31,40 at every start in both presentations."
   },
   "checks": [
     {
@@ -15,15 +15,11 @@
       "result": "PASS"
     },
     {
+      "command": "python computations/verify_rank_fifteen_relative_trace_centers.py",
+      "result": "PASS"
+    },
+    {
       "command": "python computations/verify_rank_fifteen_horizontal_specialization.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_rank_fifteen_pencil_linear_residues.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_rank_fifteen_pencil_ramified_ends.py",
       "result": "PASS"
     },
     {
@@ -37,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed the valuative extension over the relative surface, selection of separate principal divisors at both nodes, and the distinction between horizontal bad curves and individual or vertical failures."
+    "scope": "Checked true Q(c)-divisibility before each division by the local parameter, invertibility at both primitive points, loss of precision and the generic dimension bounds used to lift the commuting sections."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Relative smooth-branch limits on 32 geometric residue/presentation choices over 109; eight node/embedding/presentation cases with two independent local divisors; 44 inverse orbits of rational x residues at 101 on ξ=9/16.",
-    "reproduction": "SymPy 1.14.0 and python-flint 0.9.0. Checked both relative principal divisors at each node, all smooth ramified specializations, the previous 24 branch and path-jump regression cases, and 44 inverse pairs with 104 Frobenius sheet orbits on the rational genus-five level."
+    "scope": "Exact variable-level rational-function jets at both conjugate primitive levels, two trace values, both relative signs and presentations, all four starts, four-cut bounds through degree five."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 256,
+      "nc-p3": 257,
       "plan_ja": 7,
       "notes_ja": 15
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Reviewed the horizontal-specialization conclusion and two-variable node proof on rendered page 230 and extracted pages 229–231."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "4ceff86da5c4531a3bb910921157b6fed5ef4d80",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "At the eight smooth trace ±1 points above each primitive c0, work over the relative base Q(c) with u=n. The quadratic Grassmann limits are constant in c. Compute the first saturated relations symbolically in c, verify unit pivots at c=c0, then try to lift the local center and four-cut through length thirteen. Excluding these eight germs would remove all horizontal failure components. For the fixed level c=3/4, ordinary reductions with x outside P¹(F101) remain; use the two quartic radicals over F101(x).",
+    "Extend the two-variable central-cut calculation on the eight trace ±1 centers through degree thirteen. Work over Q[c]_(c²-c+1)[[n]], pivot on units and check exact Q(c)-zeros for each division by n. The degree-five cut is certified at all starts. A common polynomial denominator for each truncated series accelerates the higher-precision calculation. Then combine with the horizontal-specialization theorem. Higher-degree x residues on ξ=9/16 are the separate fixed-level fallback.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

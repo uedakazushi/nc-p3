@@ -257,7 +257,8 @@
       "rank_fifteen_pencil_ramified_ends": "sections/rank_fifteen_pencil_ramified_ends.tex",
       "rank_fifteen_octic_all": "sections/rank_fifteen_octic_all.tex",
       "rank_fifteen_pencil_trace_disks": "sections/rank_fifteen_pencil_trace_disks.tex",
-      "rank_fifteen_horizontal_specialization": "sections/rank_fifteen_horizontal_specialization.tex"
+      "rank_fifteen_horizontal_specialization": "sections/rank_fifteen_horizontal_specialization.tex",
+      "rank_fifteen_relative_trace_centers": "sections/rank_fifteen_relative_trace_centers.tex"
     },
     {
       "id": "UNRESTRICTED-SINGLY-SYMMETRIC-14",

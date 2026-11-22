@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 133,
+  "version": 134,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -1610,6 +1610,15 @@
       "verification": [
         "computations/verify_rank_fifteen_pencil_linear_residues.py"
       ]
+    },
+    {
+      "id": "RANK-FIFTEEN-RELATIVE-TRACE-CENTERS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "At all eight trace ±1 centers over both primitive fibers the relative path spaces in degrees four and five have bases and the character 0,1 quartic centers have local bases of dimensions 3,2 on ordinary generic arcs, allowing the level to vary. Four liftable quartics bound the cut in degrees four and five by 31,40 at every start in both presentations.",
+      "proof": "sections/rank_fifteen_relative_trace_centers.tex",
+      "verification": [
+        "computations/verify_rank_fifteen_relative_trace_centers.py"
+      ]
     }
   ],
   "document_paths": {
@@ -1673,7 +1682,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "5168161009be30bd482d4da4ffc35c38f14b1d8a",
+  "reviewed_source_commit": "32eff33129c28630f2e29edeeb6a269278181472",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -1682,16 +1691,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "At the eight smooth trace ±1 points above each primitive c0, work over the relative base Q(c) with u=n. The quadratic Grassmann limits are constant in c. Compute the first saturated relations symbolically in c, verify unit pivots at c=c0, then try to lift the local center and four-cut through length thirteen. Excluding these eight germs would remove all horizontal failure components. For the fixed level c=3/4, ordinary reductions with x outside P¹(F101) remain; use the two quartic radicals over F101(x).",
+    "immediate_next_action": "Extend the two-variable central-cut calculation on the eight trace ±1 centers through degree thirteen. Work over Q[c]_(c²-c+1)[[n]], pivot on units and check exact Q(c)-zeros for each division by n. The degree-five cut is certified at all starts. A common polynomial denominator for each truncated series accelerates the higher-precision calculation. Then combine with the horizontal-specialization theorem. Higher-degree x residues on ξ=9/16 are the separate fixed-level fallback.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/rank_fifteen_relative_trace_centers.tex",
       "sections/rank_fifteen_horizontal_specialization.tex",
-      "sections/rank_fifteen_pencil_trace_disks.tex",
-      "sections/rank_fifteen_octic_all.tex",
-      "sections/rank_fifteen_pencil_ramified_ends.tex"
+      "sections/rank_fifteen_pencil_trace_disks.tex"
     ],
-    "known_obstruction": "The trace ±1 saturation along fixed levels is known, but excluding horizontal nongeneric curves requires identities in the varying level c. Ordinary higher-degree x residues remain open at ξ=9/16.",
-    "state_of_claim": "Two primitive fibers are entirely certified. Remaining horizontal failure components, if any, meet the eight trace ±1 points on each. Vertical failure loci and unrestricted windows remain open.",
+    "known_obstruction": "Relative centers and the first two cut ranks now lift. A degree-five cut does not exclude a horizontal nonregular germ. Prove the later cut ranks through length thirteen.",
+    "state_of_claim": "All remaining horizontal germs admit relative path and quartic-center charts with cut bounds through degree five. Higher-degree cut bounds and vertical failure loci remain open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
