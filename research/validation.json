@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 96,
+  "version": 97,
   "reviewed_input": {
-    "source_commit": "a30844067b030ab010e3f9a136e0fe3e61cfb43b"
+    "source_commit": "03ff2955ef209cddb151f0491b5845a3498c569a"
   },
   "generation": {
     "result": "PASS",
-    "scope": "At all four exceptional slopes the discriminant is a double smooth quadric. On its invertible chart standard Koszul left/right AS regularity holds exactly when both determinant quadratics are genuine. This includes the two-conic and four-line degenerations, using ruling obstructions and balanced polygon pencils."
+    "scope": "On each of the four extra exchange presentations, the entire non-AS locus is the chart intersection with eight explicit projective lines on the exceptional discriminant quadric. All simple-root windows on these presentations are standard AS. For any bisymmetric window with a reducible opposite quadric the two elementary rank obstructions are necessary and sufficient."
   },
   "checks": [
     {
@@ -15,15 +15,11 @@
       "result": "PASS"
     },
     {
+      "command": "python computations/verify_exceptional_exchange_sheets.py",
+      "result": "PASS"
+    },
+    {
       "command": "python computations/verify_exceptional_ramification.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_polygon_multiplication.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_kummer_exchange_quotient.py",
       "result": "PASS"
     },
     {
@@ -37,16 +33,16 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Verified the evaluation graph projections and the determinant contradiction, absence of decomposable relations, diagonal smooth and polygon models, specialization of multidegrees, and all slope exchanges."
+    "scope": "Reviewed reduction to pure relations and axis ranks for all reducible opposite quadrics, missing-zero coordinate cases, and equivalence under both changes of positive and negative slopes."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Verified double quadrics, eight divisibilities, opposite pencil minors, opposite determinant signs for the evaluation blocks, and a 256-entry gauge transformation. Rechecked the polygon degree enumeration."
+    "scope": "Verified all eight two-coordinate evaluation systems, their necessary linear constraints, the nonzero square-root witnesses, and ramification containment."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 213,
+      "nc-p3": 214,
       "plan_ja": 7,
       "notes_ja": 14
     },
@@ -62,7 +58,7 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Extend the explicit AS criterion from exceptional ramification to the full exceptional exchange sheets, including vanishing coefficient differences, then test the residual ordinary locus.",
+    "Seek a uniform short Hilbert or growth test for bisymmetric windows without reducible quadrics and use it to simplify the common AS decision. The other completion sheet at exceptional slopes and ordinary residual fibers remain.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

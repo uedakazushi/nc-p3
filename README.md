@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-22 / v96。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v97。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -178,6 +178,8 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 
 四つの例外倍率では判別面は滑らかな二次曲面の二重化となり、可逆窓は二つの式がともに真の二次式であるとき、かつそのときに限り標準AS正則となる。[証明と判定](sections/exceptional_ramification.tex)
 
+例外倍率の四つの交換表示全体で非正則集合は八直線に一致し、単根窓は全て正則となる。[証明と判定](sections/exceptional_exchange_sheets.tex)
+
 二窓から作る56次元代数で、低次Extの消滅を逆Serre反復が保つ構造条件を探す。
 「全次数を証明してAS認証」「有限障害で排除」「未決定」を分け、有限検査の成功を全AS認証としない。
 正規形の枝、特殊値、枝間同型の条件を証明し、未分類の残余を明示する。
@@ -245,6 +247,7 @@ python3 computations/verify_kummer_polar.py
 python3 computations/verify_paired_root_resolution.py
 python3 computations/verify_kummer_exchange_quotient.py
 python3 computations/verify_exceptional_ramification.py
+python3 computations/verify_exceptional_exchange_sheets.py
 python3 computations/verify_klein_elliptic_center.py
 python3 computations/verify_klein_full_rank_configurations.py
 python3 computations/verify_rank_five_pencils.py
