@@ -23,6 +23,10 @@
       "result": "PASS"
     },
     {
+      "command": "python computations/verify_rank_fourteen_center.py",
+      "result": "PASS"
+    },
+    {
       "command": "python scripts/check_project.py",
       "result": "PASS"
     },
@@ -37,7 +41,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Checked exact minors over both ramification function fields, 49 and 47 residual factors, their two split sheets and four starting positions, and finite morphism descent of the regular neighborhood."
+    "scope": "Checked exact minors over both ramification function fields, 49 and 47 residual factors, their two split sheets and four starting positions, and finite morphism descent of the regular neighborhood.",
+    "reproduction": "SymPy 1.14.0 and python-flint 0.9.0. Run computations/verify_rank_fifteen_branch_center.py for the exact minors and finite geometric fibers."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +54,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected the rendered manuscript page 218 with both counts, the recurrence and the collision-neighborhood corollary."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "aeddea37290d8323ee00a8b69af6cbbd6a776782",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Decide regularity in length 7 through 13 on both ordinary rank-15 ramification curves. Compute the degree-13 dual Fitting support at 101, specialize all residual ordinary roots and use weighted reductions or saturated local rows on the nonordinary residue disks.",
@@ -63,7 +71,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "277000dfe3c8b50002efc9700da805780a7b32c4",
+    "commit": "db947943317574355a2d46a0c2c24eb217187b43",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
