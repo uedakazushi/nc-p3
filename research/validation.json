@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "All 192 relative-invariant sign actions, both double-cover equations, the rational inverse and irreducibility tests; verified the partial transpose giving the shifted opposite."
+    "scope": "All 192 relative-invariant sign actions, both double-cover equations, the rational inverse and irreducibility tests; verified the partial transpose giving the shifted opposite.",
+    "reproduction": "Recomputed all 192 relative-invariant actions, the two quadratic identities, inverse parametrization, irreducibility checks, transpose sign and three pullback factorizations. Re-ran the Pauli parameter orbit verifier."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript pages 249 and 250 including the four invariant formulas, normal quotient, reflection and four certified plane curves."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "6f1b57d9b5f377d50adb3fd62ccb1419faee00e9",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Work on the remaining isolated regularity candidates in the two-coordinate (x,y) plane. Descend the six certified multiplier curves and compare their discriminants; study whether special indexed identifications outside the dimension-16 open identify different (x,p,q), especially at the coordinate-end exceptions.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "c740ff5863ab158ec4a24298ccdfe04d172e66eb",
+    "commit": "9711cdfe8f54311b5e5bdf0689208dc80f0c3973",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
