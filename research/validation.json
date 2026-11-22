@@ -48,7 +48,9 @@
     "scope": "The new argument uses current internal results. No independent novelty determination or external-source claim was added."
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "verified_commit": "65b44b3504c2dab1e823dcfa22c0406df978f989",
+    "scope": "Read back all 11 changed files since the v51 checkpoint and matched their contents byte-for-byte."
   },
   "open_mathematics": [
     "Tangential and triple intersections, nonreduced limits, and recognition of AS windows outside the elliptic pencil construction. No global classification or external novelty determination."
