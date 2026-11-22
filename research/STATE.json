@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 154,
+  "version": 155,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -1799,6 +1799,15 @@
       "verification": [
         "computations/verify_rank_fifteen_formal_boundary.py"
       ]
+    },
+    {
+      "id": "RANK-FIFTEEN-GEOMETRIC-RESIDUE-LINE-AT-THREE",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "Every characteristic-zero ordinary rank-fifteen window with integral x reducing to zero at 3 and unit y is standard Koszul left/right AS-regular and free of rank 256 over four quartics, with arbitrary residue field degree.",
+      "proof": "sections/rank_fifteen_residue_line.tex",
+      "verification": [
+        "computations/verify_rank_fifteen_residue_line.py"
+      ]
     }
   ],
   "document_paths": {
@@ -1862,7 +1871,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "b791f374586b80fb0dda5e680f8171f89d26a9a5",
+  "reviewed_source_commit": "bd36881b3e10feec7e7e889bfff2783f8a845895",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -1871,16 +1880,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Continue the interior regularity problem on the (x,y) plane, now including the four certified formal boundary points. Use Pauli translations to split the sixth insertion maps and compute explicit Fitting minors or universal central cuts away from the four known curves.",
+    "immediate_next_action": "Determine regularity away from the certified geometric residue line and four characteristic-zero curves. On the characteristic-zero p=0 curve compare the K=0 model at 3 with the valuations where y has a zero or a pole; off this curve use eigenspaces of simultaneous letter translation to reduce the degree-six Fitting matrices.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/rank_fifteen_residue_line.tex",
       "sections/rank_fifteen_formal_boundary.tex",
-      "sections/rank_fifteen_quotient_residues.tex",
-      "sections/rank_fifteen_global_invariants.tex",
-      "sections/rank_fifteen_regular_orbits.tex"
+      "sections/rank_fifteen_quotient_residues.tex"
     ],
     "known_obstruction": "Possible isolated interior failures of all-degree regularity on the (x,y) plane and uncovered general nonsymmetric windows.",
-    "state_of_claim": "The whole q=0 formal curve is regular; elsewhere possible isolated interior failures persist. The resulting four tensors lie outside the ordinary positive-fixed parameter image.",
+    "state_of_claim": "No residue-field degree restriction on the x=0 residue line at 3. Completeness of the interior regular locus and the unrestricted classification remain open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

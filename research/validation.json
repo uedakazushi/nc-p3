@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 154,
+  "version": 155,
   "reviewed_input": {
-    "source_commit": "b791f374586b80fb0dda5e680f8171f89d26a9a5"
+    "source_commit": "bd36881b3e10feec7e7e889bfff2783f8a845895"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The image of the ordinary rank-fifteen multiplier chart omits exactly four points of the normal Pauli quotient. All four missing tensors are distinct standard Koszul left/right AS-regular windows. The two points with p=q=0 have minimal period one, the other two period two. The entire formal q=0 nodal curve is regular."
+    "scope": "Every characteristic-zero ordinary rank-fifteen window with integral x reducing to zero at 3 and unit y is standard Koszul left/right AS-regular and free of rank 256 over four quartics, with arbitrary residue field degree."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_formal_boundary.py",
+      "command": "python computations/verify_rank_fifteen_residue_line.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_global_invariants.py",
+      "command": "python computations/verify_rank_fifteen_formal_boundary.py",
       "result": "PASS"
     },
     {
@@ -33,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked sufficiency of the ordinary tests at p=0 and q=0, the distinct holes, Frobenius duality, all-degree lifting from the irreducible formal family and the two minimal periods."
+    "scope": "Checked the characteristic-three rational parameter, full orbit coverage, specialization of the integral path kernels, and lifting to each characteristic-zero ordinary window."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact cubic discriminant, multiplier exclusions and reversed Pauli coefficients. At all four boundary tensors, checked dual Hilbert dimensions, six adjacent relations and four-start central cuts through length 13.",
-    "reproduction": "Recomputed all four boundary dual Hilbert sequences and four-start central cuts over the degree-four extension of F17, the exact discriminant and reflection identities, and the independent global scalar verifier."
+    "scope": "Exact generic path and center ranks over F9(s); univariate Fitting supports through length 13 at four starts; all six surviving orbits directly certified."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 280,
+      "nc-p3": 281,
       "plan_ja": 8,
       "notes_ja": 16
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected manuscript page 253, including the image proof, four boundary tensors, Frobenius duality and periodicity."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "c4f8e95e845d7e66bf6f551dd67de27cfb0c9678",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Continue the interior regularity problem on the (x,y) plane, now including the four certified formal boundary points. Use Pauli translations to split the sixth insertion maps and compute explicit Fitting minors or universal central cuts away from the four known curves.",
+    "Determine regularity away from the certified geometric residue line and four characteristic-zero curves. On the characteristic-zero p=0 curve compare the K=0 model at 3 with the valuations where y has a zero or a pole; off this curve use eigenspaces of simultaneous letter translation to reduce the degree-six Fitting matrices.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
