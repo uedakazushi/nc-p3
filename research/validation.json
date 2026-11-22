@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 92,
+  "version": 93,
   "reviewed_input": {
-    "source_commit": "bb0b1eb44509723b4aaab971c03358ccb9cc21d9"
+    "source_commit": "1ee0147a29b2ea374133944e13afef932cd6ba33"
   },
   "generation": {
     "result": "PASS",
-    "scope": "At every ordinary allowed pair (z,lambda), the genuine double-root discriminant compactifies to an integral Kummer quartic surface with exactly sixteen ordinary double points. Projection from a node gives a double plane branched in six tangents to a smooth conic. A rational rank-sixteen window and a single open of regular geometric fibers are certified on the ramification family."
+    "scope": "The companion of a marked ramification window is the projective polar map of its Kummer surface followed by an explicit symmetric polarity. It is an involution up to two-position shift. All sixteen trope conics are determined and no admissible window on them is standard AS."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_kummer_discriminant.py",
+      "command": "python computations/verify_kummer_polar.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_single_zero_pairings.py",
+      "command": "python computations/verify_kummer_discriminant.py",
       "result": "PASS"
     },
     {
@@ -33,17 +33,17 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Verified all singularities including the projection center, the double-plane function field and Abel involution, projection denominator behavior, and the transfer of the regular sample to a common open."
+    "scope": "Checked block exchange on thick and thin entries, dominance for each slope by the limiting tangent conics, uniqueness at double roots, and transfer of Hilbert defects via two-position shift."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Verified the six-line discriminant factorization, dual conic and Hessian identities, pairwise line separation, and all four central parameter cuts through length 13 at a genuine double root."
+    "scope": "Verified six polar cross products, preservation of the quartic, nondegenerate conic squares on sixteen planes, and their sixteen singular images."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 209,
-      "plan_ja": 6,
+      "nc-p3": 210,
+      "plan_ja": 7,
       "notes_ja": 14
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
@@ -58,7 +58,7 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Determine the Gauss correspondence between the two completed matrices, locate inadmissible or non-AS trope conics, and analyze the resolution over the simultaneous-zero nodes.",
+    "Resolve the paired-root graph at the eight invertible nodes and determine its behavior under the sign of the square root. Then determine the two-position shift on the resolved ramification surface and the AS locus away from its contact curves.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
