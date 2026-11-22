@@ -47,7 +47,7 @@ def initial_layers(jet, build_relations):
     return dims, left, right
 
 
-def overlap(n, start, h, dims, left, right, jet):
+def overlap_rows(n, start, h, dims, left, right):
     following = (start+1) % 4
     ends, beginnings = [], []
     width = 0
@@ -61,11 +61,21 @@ def overlap(n, start, h, dims, left, right, jet):
             row = {ends[b]+k: v for k, v in left[start, n-1, h^b, a][j].items()}
             row.update({beginnings[a]+k: -v for k, v in right[following, n-1, h^a, b][j].items()})
             rows.append(row)
-    free, projection, loss = saturated_projection(rows, width, DIMENSIONS[n][h], jet)
+    return ends, beginnings, width, rows
+
+
+def store_projection(n, start, h, dims, left, right, ends, beginnings, free, projection):
+    following = (start+1) % 4
     dims[start, n, h] = len(free)
     for a in range(4):
         right[start, n, h, a] = projection[ends[a]:ends[a]+dims[start, n-1, h^a]]
         left[start, n, h, a] = projection[beginnings[a]:beginnings[a]+dims[following, n-1, h^a]]
+
+
+def overlap(n, start, h, dims, left, right, jet):
+    ends, beginnings, width, rows = overlap_rows(n, start, h, dims, left, right)
+    free, projection, loss = saturated_projection(rows, width, DIMENSIONS[n][h], jet)
+    store_projection(n, start, h, dims, left, right, ends, beginnings, free, projection)
     return loss
 
 

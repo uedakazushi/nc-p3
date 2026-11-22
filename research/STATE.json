@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 167,
+  "version": 168,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -1917,6 +1917,15 @@
       "verification": [
         "computations/verify_rank_fifteen_horizontal_fibers.py"
       ]
+    },
+    {
+      "id": "RANK-FIFTEEN-FULL-THREE-ADIC-TRACE-DISK",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "Every ordinary rank-fifteen window on the entire three-adic disk 0<v(y)<3v(x) is standard Koszul, left/right AS-regular and free of rank 256 per start over four central quartics. The exact seventh quotient and two-sided residue bounds through thirteen leave potential excess only in degree nine. A three-residue-class Koszul/Euler lemma forces the missing Hilbert function and freeness. The same all-degree certificate covers integral slopes outside the zeros of an integer polynomial C with C(0) a 3-adic unit. All pencils x^3=Dy with D of positive valuation at some place over three are regular at every point, with their indexed genus-two classification for D nonzero and not 27.",
+      "proof": "sections/rank_fifteen_three_residue_classes.tex",
+      "verification": [
+        "computations/verify_rank_fifteen_overlap_bound.py"
+      ]
     }
   ],
   "document_paths": {
@@ -1980,7 +1989,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "7f02ab879665416e5dc69832f1d2017db761259b",
+  "reviewed_source_commit": "733bfbda4cb03f2190fb3d88fd450558a785ceec",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -1989,15 +1998,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Continue the integral two-sided product computation on the entire small-trace disk: prove the length-seven free lattices, then test length nine over Q(z) for the last H divisions. After degree seven a residue computation with three remaining digits suffices on v(y)<=2v(3). Retain the unrestricted objective and the finite unresolved horizontal levels.",
+    "immediate_next_action": "Make the finite residue-slope obstruction in characteristic three effective. On v(y)>0 with D=x^3/y a unit at three, record the polynomial denominators and unit pivots of the F3(z) overlap certificate, descend their zero set through the degree-24 trace map, and treat any whole bad residue fibers. Use the exact seventh integral lattices and the three-residue-class criterion when extending to unrestricted v(y). The unrestricted classification still includes isolated interior points and nonsymmetric branches.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/rank_fifteen_three_residue_classes.tex",
       "sections/rank_fifteen_horizontal_fibers.tex",
-      "sections/rank_fifteen_overlap_annulus.tex",
-      "sections/rank_fifteen_global_invariants.tex"
+      "sections/rank_fifteen_overlap_annulus.tex"
     ],
     "known_obstruction": "Possible isolated interior failures of all-degree regularity on the (x,y) plane and uncovered general nonsymmetric windows.",
-    "state_of_claim": "Horizontal indexed moduli and periods are determined. The possible isolated nonregular windows on finitely many algebraic levels remain open.",
+    "state_of_claim": "The positive-slope disk is complete at all degrees. Unit slopes at three, isolated interior failures and the unrestricted nonsymmetric branches remain open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
