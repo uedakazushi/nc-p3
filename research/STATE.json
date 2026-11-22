@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 142,
+  "version": 143,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -1691,6 +1691,15 @@
       "verification": [
         "computations/verify_rank_fifteen_coordinate_regularity.py"
       ]
+    },
+    {
+      "id": "RANK-FIFTEEN-ENDPOINT-COLLISION-LEVELS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "All additional indexed collisions on the union of the three normalized coordinate-end curves are confined to explicit finite levels U=zk². On the elliptic component the residual levels are -3,3,9 or U²-74U+169=0; within a rational sign they are -3,-1 or U²-42U+9=0; between rational signs only -3 or 9. Elliptic/rational intersections require both UE³+13UE²+259UE-529=0 and UR³-147UR²-61UR-49=0. Away from these conditions the quotient parameters classify endpoint windows within their union.",
+      "proof": "sections/rank_fifteen_coordinate_collisions.tex",
+      "verification": [
+        "computations/verify_rank_fifteen_coordinate_collisions.py"
+      ]
     }
   ],
   "document_paths": {
@@ -1754,7 +1763,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "0eb5ace135759c4c76150d1778c651b2bed7a483",
+  "reviewed_source_commit": "98a461da11d2e0149457b898cf68849b9f8d5c36",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -1763,16 +1772,16 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Finish the remaining m=ik,n=i rational coordinate endpoint with the identical degree-aware four-central-cut algorithm. Use GaussianChart, gaussian_frame, GAUSSIAN_BOUNDARY, reciprocal sign -1, and both square roots of -1 at each split-prime witness. Then any candidate isolated failure is interior to both frame charts. For special indexed collisions compare the complete normalized curves, retaining trace-zero points.",
+    "immediate_next_action": "Complete the Gaussian coordinate-end cut as in the preceding checkpoint, then search for isolated failures on the surface with all four frame coordinates nonzero. For indexed comparisons on the coordinate ends, only the explicit U-polynomials in rank_fifteen_coordinate_collisions.tex remain; decide actual equivalences at their geometric roots via exact tensor basis changes or further polynomial invariants.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/rank_fifteen_coordinate_collisions.tex",
       "sections/rank_fifteen_coordinate_regularity.tex",
       "sections/rank_fifteen_endpoint_orbits.tex",
-      "sections/rank_fifteen_coordinate_ends.tex",
-      "sections/rank_fifteen_vertical_curves.tex"
+      "sections/rank_fifteen_coordinate_ends.tex"
     ],
-    "known_obstruction": "All elliptic coordinate ends are settled. Four-center certificates on the remaining rational coordinate ends and at isolated interior points are still needed.",
-    "state_of_claim": "Every ordinary elliptic coordinate end is now certified in all degrees, including both signs and opposite presentations. Rational coordinate-end regularity in all degrees and other isolated surface cases remain open.",
+    "known_obstruction": "A finite list of endpoint levels still requires an exact positive or negative comparison. The rational endpoint regularity computation and the isolated interior Koszul problem remain.",
+    "state_of_claim": "The listed levels are necessary collision conditions. Positive isomorphisms at these finite candidates and the remaining all-degree surface problem are open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
