@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact Q(zeta_8) arithmetic with local testing at the selected factor of Z^4+1, length-13 overlaps and exact conic inversion."
+    "scope": "Exact Q(zeta_8) arithmetic with local testing at the selected factor of Z^4+1, length-13 overlaps and exact conic inversion.",
+    "reproduction": "Exact 17-digit Q(zeta_8) products through degree thirteen, checked at the chosen prime above 3 by lifting c^2=-2; exact conic inversion and the period-two fibers."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript page 276, including the cyclotomic unit test, distance formula and rational conic classification."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "1d243f49c1c59e570050387644a4ab2c155d54ac",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Continue exact higher-degree overlaps for the nonbranch and tangent unit-x charts to remove their depth bounds, and cover remaining unit-y residues on the x=1 line. For x=1 the only still possible exceptional levels are totally 3-adic units whose primitive minimal polynomial has no projective F3 root; all nonzero rational levels are settled. On the positive-y side, the vertical and Gaussian tubes are settled without depth restrictions.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "96ac1b6128549f484d32361edd9d82c39353d62d",
+    "commit": "e64f19aea9d3836614d318dce4b43e22e1776744",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
