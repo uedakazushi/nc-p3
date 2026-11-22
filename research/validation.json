@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 162,
+  "version": 163,
   "reviewed_input": {
-    "source_commit": "b75df320354df2074b36a84b36b60bc7ece1d146"
+    "source_commit": "850173faed0fb5bcee0bd85c1ff1861b25be9e5f"
   },
   "generation": {
     "result": "PASS",
-    "scope": "On the variable-trace disk at three, the four-center quotient in degree six has dimensions exactly 12 in characters zero and one, and between 10 and 12 in each remaining character, at every start. Its total dimension is between 44 and 48."
+    "scope": "All rank-fifteen points on x^3=(59319/10000)y are standard Koszul left/right AS-regular and free of rank 256 over four quartics. Their indexed classes form a genus-two curve minus four points; all have minimal period two. The one-step shift quotient is an elliptic curve minus three points."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_saturated_center_products.py",
+      "command": "python computations/verify_rank_fifteen_gaussian_pencil.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_first_center_products.py",
+      "command": "python computations/verify_rank_fifteen_saturated_center_products.py",
       "result": "PASS"
     },
     {
@@ -33,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked saturation preserves the evaluated fraction-field ideal, tracked precision of projection and degree-five rows separately, and bounded the rank from above by the number of length-two products."
+    "scope": "Checked all three valuation cases, the normalization maps, the four missing compactification points, the indexed period and the shift quotient."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Nine-term H-jets over Q(z). Append all four saturated degree-five product rows in each final-letter summand, then compute all sixteen residue ranks over F9.",
-    "reproduction": "Recomputed the saturated fifth products and all sixteen sixth residue ranks with nine-term rational-function jets. A separate sparse elimination over F9 gave the same sixteen ranks."
+    "scope": "Exact Q(i) jets through order 24 and the four central quotients through length 13. Verified the common slope, discriminants and both elliptic j invariants symbolically."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 288,
+      "nc-p3": 289,
       "plan_ja": 8,
       "notes_ja": 16
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected manuscript page 262, including the six-by-twelve residual blocks and their rank criteria."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "0983171b1f82f2a7b89b109dbaf972c9005e9564",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Resolve the two remaining degree-six characters (2 and 3) on the small-trace disk: the sixteen appended saturated degree-five rows have residue rank 10 in each but target rank 12. Increase from nine H terms, retain the kernel of those ten unit pivots, and examine its first nonzero map to the cokernel. Degree-six characters 0 and 1 are already exact at every start. Then propagate the cut through length 13. The complementary valuation sector and the unrestricted classification are open.",
+    "Return to the variable-trace sixth cut on 0 < val(y) < 3 val(x). Compute the two missing ranks in characters 2 and 3 using eleven H coefficients and the saturated degree-five product spaces. If the sixth quotient is exact, propagate the four-section quotient to degree seven and then thirteen. The Gaussian specialization now has an all-degree proof and needs no further fixed-slope tests.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

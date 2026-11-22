@@ -1,0 +1,88 @@
+% !TeX root = ../papers/nc-p3.tex
+\section{ガウス有理数の跡から得る全点正則な種数二の鉛筆切片}
+\label{sec:rank-fifteen-gaussian-pencil}
+\begin{theorem}\label{thm:rank-fifteen-gaussian-pencil}
+標数零の代数閉体上の階数15曲面で $D_0=59319/10000$ とおく。
+$x^3=D_0y$ の全点は標準Koszul左右AS正則で、各始点で四中心四次式の
+多項式環上自由階数256である。添字保持同型類の曲線は種数2の滑らかな完備曲線
+\[
+                 q^2=(1-s^2)^2-4s^6/D_0
+\]
+から $s=0,\infty$ 上の計四点を除いたもので、全点の最小周期は2である。
+\end{theorem}
+\begin{proof}
+$i^2=-1$、$z=1+i$ とし、定理\ref{thm:rank-fifteen-variable-zero-disk}の表示で
+$K=3i/4$, $n_0=5i/4$, $P_0=(3+i)/2$, $Q_0=(1+3i)/2$ を得る。
+$U=K^2=-9/16$ であり、$(U+3)^3/(U-1)^2=D_0$ である。
+$H^2=x(U-1)^2/(U+3)$ と取ると $H^6=y(U-1)^4$ を満たす。
+$\mathbb Z_{(3)}[i]$ では $2,z,P_0,Q_0,n_0$ は単元で、
+前出の平方根はこれらの定数項から一意に持ち上がる。
+
+3の上の付値を取る。$\nu(0)=+\infty$ とする。
+$\nu(y)>0$ では $\nu(H)=\nu(y)/6>0$ である。
+\path{computations/verify_rank_fifteen_gaussian_pencil.py} は
+$\mathbb Q(i)[H]/(H^{25})$ で四中心商を計算する。
+単元判定には定数項のノルムを3で還元し、$H$ 除算には実部・虚部の両定数項の
+有理数としての消滅を検査する。経路と四次中心で四桁を使った後、
+長さ1から13までの各段の最大損失は四始点とも
+$(0,0,0,2,4,2,2,2,2,2,2,2,0)$ である。従って四中心商は
+$(1+t+t^2+t^3)^4$ の係数を上界とし、長さ13で消える。
+定理\ref{thm:rank-fifteen-cubic-zero-disk}と同じ上下界および左右Koszul複体の
+議論で全次数の結論を得る。
+$\nu(y)=0$ なら $\nu(D_0)>0$ より $\nu(x)>0$ で、剰余直線の
+定理\ref{thm:rank-fifteen-residue-line}を適用する。$\nu(y)<0$ なら
+$\nu(y)<2\nu(x)$ なので定理\ref{thm:rank-fifteen-pole-cone}を使う。
+代数的な $y$ には数体の素点、超越的な $y$ にはGauss付値を選べる。
+
+一般に $D\ne0,27$ を固定し $a^2=1-27/D$ を一つ選ぶと、
+商の方程式から $s=p/(ax)$, $x=s^2$, $p=as^3$, $y=s^6/D$ となる。
+この逆写像により $s\ne0$ の二重被覆が添字保持パラメータを与える。
+$(1-x)^2-4x^3/D$ の判別式は $16(D-27)/D^2$、定数項は1なので、六次式には単根が六個ある。
+二重被覆は無限遠の二点で不分岐であり、種数は2である。
+通常表示の外の四点の $D$ は $27$ または $38\pm6\sqrt2$ なので $D_0$ 上では全て通常である。
+縮約不変量 $(x,p,q)$ が添字保持同型を分離する。
+一位置移動は $(s,q)\mapsto(-s,-q)$、二位置移動は恒等であり $s\ne0$ なので周期も従う。
+\end{proof}
+
+\begin{corollary}
+ある有限集合 $E\subset\overline{\mathbb Q}$ が存在し、$D\ne0,27$ かつ $D\notin E$ なら、
+$x^3=Dy$ の全点についても、定理の全次数の正則性・自由性および最小周期2の
+添字保持分類が成り立つ。曲線は上式の $D_0$ を $D$ に替えたものである。
+\end{corollary}
+\begin{proof}
+定理\ref{thm:rank-fifteen-vertical-curves}の両表示に残る有限集合を
+$D=x^3/y$ で写し、その像を $E$ とする。通常表示の外の四点も
+定理\ref{thm:rank-fifteen-formal-boundary}により正則である。
+これで各切片の全点を覆い、上で求めた逆写像と移動の式を適用できる。
+\end{proof}
+
+\begin{corollary}
+上記の切片で一位置移動も同一視した商は、
+楕円曲線 $Y^2=X(X-1)^2-4/D_0$ から無限遠点および $X=0$ 上の二点を除いた曲線である。
+\end{corollary}
+\begin{proof}
+$X=s^{-2}$、$Y=q/s^3$ が移動の不変体を生成する。
+一般の $D\ne0,27$ で、この三次曲線と $(s,q)\mapsto(-s,q)$ による
+もう一方の商 $q^2=(1-x)^2-4x^3/D$ はともに滑らかである。
+三次式の係数から計算した $j$ 不変量は順に
+$16D^2/(D-27)$、$D(D-24)^3/(D-27)$ となる。
+\end{proof}
+
+\begin{corollary}
+剰余標数3で $\alpha=\nu(3)$, $\beta=\nu(y)>0$, $\delta=\nu(x^3/y-D_0)$
+とする。$\delta>6\alpha$ かつ $6(\delta-5\alpha)\ge25\beta$ ならば、
+通常な階数15窓は同じ全次数の正則性と自由性を持つ。
+\end{corollary}
+\begin{proof}
+$D=x^3/y$、$S_0=i/4$ とする。$K=3S$ と置くと
+\[
+ \frac{D-27}{3^6}=G(S),\qquad G(S)=\left(\frac{S(S^2-1)}{9S^2-1}\right)^2 .
+\]
+$\bar S_0=i$ では分母は単元で $\bar G'(i)\ne0$ である。
+従って付値を延長して $S_0$ と同じ剰余の解を取れば
+$\nu(S-S_0)=\delta-6\alpha$ となる。$\delta=+\infty$ は定理に含まれる。
+$K-3i/4$ の付値は $\delta-5\alpha$ で、$K^2-1$ が単元なので $\nu(H)=\beta/6$ である。
+仮定より $K=3i/4+H^{25}T$ と整な $T$ で書ける。
+四次根と各平方根の定数根は単根なので $H^{25}$ を法として定理の計算と一致し、
+用いた全ての主元と各除算で必要な合同が保たれる。
+\end{proof}

@@ -28,7 +28,7 @@ DIMENSIONS = (
 )
 
 
-def gaussian_jets(radicand=-1, initial_precision=INITIAL_PRECISION):
+def gaussian_jets(radicand=-1, initial_precision=INITIAL_PRECISION, residue_prime=101):
     """Truncated quadratic-field power series with a run-local precision."""
 
     class Jet:
@@ -92,8 +92,8 @@ def gaussian_jets(radicand=-1, initial_precision=INITIAL_PRECISION):
             real = self.real[0]
             imag = self.imag[0] if self.imag else 0
             norm = real * real - radicand * imag * imag
-            assert int(norm.denominator) % 101
-            return bool(int(norm.numerator) % 101)
+            assert int(norm.denominator) % residue_prime
+            return bool(int(norm.numerator) % residue_prime)
 
         def inverse(self):
             assert self.unit()
