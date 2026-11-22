@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 47,
+  "version": 48,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -790,6 +790,15 @@
       "verification": [
         "computations/verify_matched_pencils.py"
       ]
+    },
+    {
+      "id": "AS-OPPOSITE-RANK-SHARP-SIX",
+      "status": "proved_with_symbolic_controls",
+      "statement": "At rho five, a rank-three evaluation has at most one point neighbor on either side and cannot have both. Each coefficient space must contain a hypersurface swept by planes of matrices of rank at most two. Hyperplanes and upper rank three are excluded, and a rank-four determinant quadratic forces the unique five-matrix form with diagonal blocks S and adj(S). Its matching opposite binary evaluation planes force exponential growth. Hence the AS lower bound is six, attained by the polynomial ring.",
+      "proof": "sections/rank_five_pencils.tex:thm:as-opposite-rank-sharp-six",
+      "verification": [
+        "computations/verify_rank_five_pencils.py"
+      ]
     }
   ],
   "document_paths": {
@@ -853,24 +862,25 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "e9b5a4576e24901736af8af305917166acc10b7f",
+  "reviewed_source_commit": "8d20f67ff5bad466715171539d72639d102ba787",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
   "cloud_codex_status": "Repository-side Cloud guidance and preflight added; actual Cloud environment publishing, TeX tools and Git push permissions are not verifiable from repository alone.",
   "resume_point": {
     "task_id": "Z4-AS-004",
-    "status": "active_rank_five_and_non_pbw_propagation",
+    "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "At rho five at least two edge correspondences have positive dimension. Stratify them by the three evaluation-rank pairs and use the full rectangular constant-rank pencil when a slot has rank two. Isolate triples of compatible zero pairs and moving coefficient flags in the five-dimensional coefficient space. Also seek Ext propagation beyond the finite PBW branch.",
+    "immediate_next_action": "On the remaining rank-six locus, start with all four adjacent correspondences finite. Determine whether the successive rank-three row planes force the four-step shift to act trivially, including on nonreduced schemes. Compare opposite determinantal projections with the length-twenty point schemes. Continue the positive-dimensional and high-rank branches separately.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/rank_five_pencils.tex",
       "sections/opposite_evaluation.tex",
       "sections/two_window_ext.tex",
       "research/classification_branches.json"
     ],
     "known_obstruction": "No uniform finite Koszul/Serre cutoff or effective global regularity criterion is proved; finite-dimensional B and seven-degree tests do not suffice. Other low-rank components and high-rank witness-free regions remain unclassified.",
-    "state_of_claim": "Standard AS requires 5<=rho<=16. Rho five, the residual rho six outside Zsym and higher-rank coverage are unresolved. The explicit Ext recurrence and PBW subcase do not give a universal cutoff.",
+    "state_of_claim": "Sharp AS lower bound rho>=6. Residual rank six, higher-rank coverage and the universal all-degree criterion remain open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

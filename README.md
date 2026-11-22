@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-22 / v47。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v48。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -61,7 +61,7 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 
 最上次数テンソルによる [Frobenius候補の復元](sections/frobenius_tensor.tex) と、
 第三の行列階数による全対象の二分岐を証明した。
-行列束の全場合分けにより階数2を除外し、有限Frobenius候補の階数範囲を3以上16以下へ絞った。AS対象では下界がさらに5になる。
+行列束の全場合分けにより階数2を除外し、有限Frobenius候補の階数範囲を3以上16以下へ絞った。AS対象の下界は6であり、可換多項式環が達成する。
 [枝台帳](research/classification_branches.json) の両枝の一般正規形・正則性判定は未完成。
 量子部分では階数6・8・10・12の全条件を求めた。さらに [量子部分の全indexed分類](sections/quantum_indexed.tex) として、
 全ての非零パラメータを三次元トーラスの明示的なS4作用へ還元した。特殊値も含み、階数6は二種類となる。
@@ -95,7 +95,7 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 
 **最優先は、二窓の全次数AS条件を実効化し、対称閉包外を含む網羅的な分類木を構築すること。**
 対称閉包内のAS対象は対称完全交叉チャートに尽きると証明した（`thm:symmetric-closure-as-exact`）。
-標準AS対象の反対位置切断階数は5以上である。階数4を仮定すると、点対応の定数平面は有限個の行列束の型から排除され、動く平面は滑らかな二次曲面を掃く。その表示では隣接切断が階数9となり、必要な階数6と矛盾する。階数5で点対応が有限の場合は両端の三次小行列式が張る次元の和が20以下となる。二窓のExt反復は四項の微分と経路の乗法から計算でき、指定基底で各窓の先頭語の重なりが四つなら、有限Frobenius候補を全次数で認証できる。
+階数5を仮定すると、各係数空間の三次小行列式に共通因子が生じる。動く平面の条件で五次元の行列空間を一つの正規形に絞ると、反対二位置で同じ評価平面が現れ、四辺の関係が消える指数成長商が得られる。従って低階数で未分類なのは階数6の残余である。二窓のExt反復は四項の微分と経路の乗法から計算でき、指定基底で各窓の先頭語の重なりが四つなら、有限Frobenius候補を全次数で認証できる。
 二窓から作る56次元代数で、低次Extの消滅を逆Serre反復が保つ構造条件を探す。
 「全次数を証明してAS認証」「有限障害で排除」「未決定」を分け、有限検査の成功を全AS認証としない。
 正規形の枝、特殊値、枝間同型の条件を証明し、未分類の残余を明示する。
@@ -115,6 +115,7 @@ python3 scripts/check_project.py
 python3 computations/verify_exterior_trace.py
 python3 computations/verify_period_witness.py
 python3 computations/verify_quartic_obstruction.py
+python3 computations/verify_rank_five_pencils.py
 python3 computations/verify_matched_pencils.py
 python3 computations/verify_incidence_cubics.py
 python3 computations/verify_two_window_ext.py --output research/two_window_ext_certificate.json
