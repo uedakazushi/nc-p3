@@ -19,7 +19,7 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_octic_residues.py",
+      "command": "python computations/verify_rank_fifteen_octic_path_jump.py",
       "result": "PASS"
     },
     {
@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact cyclotomic Pluecker coordinates and Taylor coefficients; finite-field center and four-start quartets on eight trace/sign/color representatives for both j. Exact characteristic-zero path dimensions on all sixteen ±1 branch/color choices."
+    "scope": "Exact cyclotomic Pluecker coordinates and Taylor coefficients; finite-field center and four-start quartets on eight trace/sign/color representatives for both j. Exact characteristic-zero path dimensions on all sixteen ±1 branch/color choices.",
+    "reproduction": "SymPy 1.14.0 and python-flint 0.9.0. Exact cyclotomic expansions, sixteen positive 109-adic trace/embedding/color checks and sixteen characteristic-zero path-jump checks at trace ±1."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Reviewed the theorem and proposition on rendered page 224 and the concluding proof on extracted page 225."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "8b0977053061c9c2ce1654ed730a0219ae46a136",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "On the genus-three octic certify higher-degree ordinary residues of the four-cut at 109 by intersecting two independent minor charts through degree thirteen and rechecking residual factors. At K=±1 use u=Y and saturate the integral degree-four relation lattice first: the raw quadratic limit misses three dimensions at degree four, and sixteen at degree five. These are the only unresolved finite boundary traces.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "aad6980360521b006a026a50389a939669421e10",
+    "commit": "dc870c5b2457092e79915ae656c91a7a755d7463",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
