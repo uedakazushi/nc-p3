@@ -19,10 +19,6 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_octic_path_jump.py",
-      "result": "PASS"
-    },
-    {
       "command": "python scripts/check_project.py",
       "result": "PASS"
     },
@@ -37,7 +33,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Verified the plane-quartic identity and every sheet of the c=3/4 trace-zero and trace-quadratic fibers, 48 four-start central-cut certificates across the two presentations."
+    "scope": "Verified the plane-quartic identity and every sheet of the c=3/4 trace-zero and trace-quadratic fibers, 48 four-start central-cut certificates across the two presentations.",
+    "reproduction": "SymPy 1.14.0 and python-flint 0.9.0. Exact elimination identity, three split trace values at primes 101 and 197, 48 residue/presentation choices with four-start quotients through degree thirteen."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +46,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Reviewed the three-quadrics model, plane quotient and 24-end theorem on rendered page 225 and the remaining proof on extracted page 226."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "ee3c82380f47e78e1bbd465415ffa8d46f368b29",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Complete the genus-three ordinary-residue four-cut via a pair of minor charts at 109, and saturate the four-cut at the remaining disks K=±1 using the uniformizer Y. On the general genus-five pencil, after the 24 unramified finite ends and the eight infinite ends, handle the 24 ramified ends above K=±1, ±s±1 using the three quadrics.",
@@ -63,7 +63,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "dc870c5b2457092e79915ae656c91a7a755d7463",
+    "commit": "3d90f7ed793044f116f909f89db9cf2aa85cdd54",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
