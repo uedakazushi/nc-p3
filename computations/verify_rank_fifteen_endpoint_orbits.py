@@ -27,9 +27,8 @@ def trace(M):
     return sum(row[i] for i, row in enumerate(M))
 
 
-def trace_blocks(frame):
+def gram_component(frame, unit):
     z, lam, a, b, e, f = frame
-    unit = z**0
     X = [[unit, 1 / lam], [1 / lam, z]]
     Y = [[unit, lam], [lam * z, unit]]
 
@@ -54,6 +53,13 @@ def trace_blocks(frame):
             z if k == 3 and (t ^ 1) == 1 else unit
         )
 
+    return component
+
+
+def trace_blocks(frame):
+    z = frame[0]
+    unit = z**0
+    component = gram_component(frame, unit)
     right = (unit, unit, -unit, -unit)
     left = (unit, unit, -unit, -1 / z)
     for i in range(4):
