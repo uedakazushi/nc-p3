@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact cubic discriminant, multiplier exclusions and reversed Pauli coefficients. At all four boundary tensors, checked dual Hilbert dimensions, six adjacent relations and four-start central cuts through length 13."
+    "scope": "Exact cubic discriminant, multiplier exclusions and reversed Pauli coefficients. At all four boundary tensors, checked dual Hilbert dimensions, six adjacent relations and four-start central cuts through length 13.",
+    "reproduction": "Recomputed all four boundary dual Hilbert sequences and four-start central cuts over the degree-four extension of F17, the exact discriminant and reflection identities, and the independent global scalar verifier."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript page 253, including the image proof, four boundary tensors, Frobenius duality and periodicity."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "c4f8e95e845d7e66bf6f551dd67de27cfb0c9678",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Continue the interior regularity problem on the (x,y) plane, now including the four certified formal boundary points. Use Pauli translations to split the sixth insertion maps and compute explicit Fitting minors or universal central cuts away from the four known curves.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "47689a05abceca6bd1af6f7bfb501196cea288f4",
+    "commit": "be64be884069acf3c7f7e1b5de861b1cb2a8ca4f",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
