@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 49,
+  "version": 50,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -808,6 +808,15 @@
       "verification": [
         "computations/verify_finite_square_chart.py"
       ]
+    },
+    {
+      "id": "FINITE-FIRST-WINDOW-RIGIDITY",
+      "status": "proof_and_exact_certificates",
+      "statement": "The complete projective square-root fiber at the symmetric twenty points consists of 2^19 reduced sign translates, including all possible degenerate candidates. The property persists on an open neighborhood. A general first relation space has no all-four-finite AS extension. With both projections rigid, any such AS extension has period dividing two, cubic wedge rank 20 and a unique invertible generator of the double alternation kernel.",
+      "proof": "sections/finite_window_rigidity.tex",
+      "verification": [
+        "computations/verify_finite_window_rigidity.py"
+      ]
     }
   ],
   "document_paths": {
@@ -871,7 +880,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "db640cc923be952bf8780d44e9c214f6183f8e34",
+  "reviewed_source_commit": "8db4b107e0f227b14f093ae4657ce8ca97e2865f",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -880,16 +889,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "For the reduced finite CI remove the known flag component generically rejected by the unit transporter and the small-support loci (any genuine ratio has every scalar fiber length <=10). Investigate other components of the rank-six multiplication locus whose kernel contains a unit and whose square admits a unit transporter; reconstruct candidate third windows and test cubic overlap/AS. Continue the positive-dimensional branch separately.",
+    "immediate_next_action": "Determine local components and regularity at the symmetric twenty-point first window of the double alternation rank locus. Study the projectivized rank-six symmetric matrix with both endpoint swaps and the cubic wedge rank condition. Work also on positive-dimensional point schemes outside this chart.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/finite_window_rigidity.tex",
       "sections/finite_point_chart.tex",
-      "sections/rank_five_pencils.tex",
-      "sections/two_window_ext.tex",
-      "research/classification_branches.json"
+      "sections/cut_serre_criterion.tex"
     ],
     "known_obstruction": "No uniform finite Koszul/Serre cutoff or effective global regularity criterion is proved; finite-dimensional B and seven-degree tests do not suffice. Other low-rank components and high-rank witness-free regions remain unclassified.",
-    "state_of_claim": "Sharp lower bound six and a complete indexed-isomorphism criterion on the finite-edge AS branch. The square-space equations restrict possible extensions; all solutions and AS coverage are open.",
+    "state_of_claim": "Complete reduced square-root fiber and unique finite-branch extension at the example; a dense open of first windows has no all-four-finite AS extension. The exceptional and nonrigid loci remain.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

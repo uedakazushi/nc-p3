@@ -112,7 +112,7 @@
       "adjacent_witness_restriction": "Any adjacent positive witness forces rho6. Thus rho3/4/5 has no invertible adjacent witnesses of either sign. Negative witnesses are entirely excluded from this residual by the three-form rigidity theorem.",
       "relative_geometry": "Relatively closed in the complete standard finite-Frobenius candidate locus, hence also in the AS subspace; cor:closed-low-residual. Nonemptiness on the AS locus remains open.",
       "boundary_restriction": "Disjoint from Zsym on AS. Only rho six remains; rho five is excluded by the five-coefficient normal form and growth quotient.",
-      "finite_incidence": "When all four adjacent correspondences are finite, the four-step shift is identity. On this AS sublocus, three coordinate four-spaces in the length-twenty algebra determine indexed isomorphism. The Fano scheme of normalized square roots restricts extension candidates; coverage/regularity of proposed inputs remain to be checked."
+      "finite_incidence": "When all four adjacent correspondences are finite, the four-step shift is identity. On this AS sublocus, three coordinate four-spaces in the length-twenty algebra determine indexed isomorphism. At the reduced twenty-point control every square root is a sign translate. On the open of two rigid projections any all-four-finite AS extension has period dividing two, a four-dimensional cubic overlap and a unique invertible double-alternation kernel generator. A generic first relation space has no such extension."
     }
   ],
   "limits": [

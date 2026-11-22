@@ -1,24 +1,22 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 49,
+  "version": 50,
   "reviewed_input": {
-    "source_commit": "db640cc923be952bf8780d44e9c214f6183f8e34"
+    "source_commit": "8db4b107e0f227b14f093ae4657ce8ca97e2865f"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Four-step shift on finite rank-six point schemes, finite-window reconstruction from a Frobenius algebra and three subspaces, and an exact ratio criterion for square roots."
+    "scope": "Rigidity of the entire square-root scheme, an open generic exclusion, period two and two flip obstructions."
   },
   "checks": [
     {
-      "command": "python computations/verify_finite_square_chart.py",
-      "result": "PASS",
-      "scope": "Checks the reduced twenty-point example, two flag components, a coordinate-support component, transporters, and a nonreduced square-recovery control."
+      "command": "python computations/verify_finite_window_rigidity.py",
+      "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_five_pencils.py",
-      "result": "PASS",
-      "scope": "Reruns the determinant, cubic gcd, binary plane, and projected relation checks for the sharp lower bound."
+      "command": "python computations/verify_finite_square_chart.py",
+      "result": "PASS"
     },
     {
       "command": "python scripts/check_project.py",
@@ -31,30 +29,28 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed the local splitting over nonreduced finite schemes, both directions of two-window reconstruction and the ratio criterion, and the rank-stratum tangent calculation. No independent referee review."
+    "scope": "Checked propagation from all pairs, compactness before removing degenerate roots, generic intersection of opens and the two independent flip symmetries. No independent referee review."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact rational checks in the two verification scripts listed above. The finite example has a reduced isolated normalized third space, two flag components with transporter dimensions one and zero, and a separate coordinate-support component."
+    "scope": "Exact rational plane, support, projective frame, cubic and symmetric-kernel checks. A maximal minor modulo 101 certifies generic cubic rank 48 in characteristic zero."
   },
   "tex": {
     "result": "PASS",
-    "scope": "Final Japanese manuscript 117 pages, plan 5 and notes 12. No overfull boxes, missing characters or unresolved references in final logs."
+    "scope": "Manuscript 119 pages; plan 5 and notes 12. No overfull boxes, unresolved references or missing characters."
   },
   "visual_inspection": {
     "result": "PASS",
-    "scope": "Rendered and inspected manuscript page 90, including the statement and tangent-space proof of Proposition 33.5."
+    "scope": "Inspected manuscript page 92 with the generic obstruction and the flip matrices."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT",
     "scope": "The new argument uses current internal results. No independent novelty determination or external-source claim was added."
   },
   "github_save": {
-    "result": "PASS",
-    "verified_commit": "86f4d0850fee1e382612e78339b26d95eb958eb8",
-    "scope": "Fetched GitHub main after the v49 push and compared all eleven changed files since v47 byte-for-byte with the working tree."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Enumeration of the remaining genuine normalized square roots and their AS extensions, rank-six positive-dimensional branches, higher-rank coverage and general effective AS recognition."
+    "Regularity and geometry of the exceptional reversible locus, the nonrigid and positive-dimensional branches, and global classification."
   ]
 }
