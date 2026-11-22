@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-22 / v137。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v138。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -258,6 +258,8 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 
 階数15の全通常窓で二次双対の完全対合と次元列14641を示した。孤立候補でもこの条件は成立する。[証明と判定](sections/rank_fifteen_quadratic_dual.tex)
 
+階数15の両表示で添字保持同型による像が各々二次元であることを証明した。二つの独立な不変量と、行列積を用いる同型の必要十分条件を得た。[証明と判定](sections/rank_fifteen_adjoint_invariants.tex)
+
 二窓から作る56次元代数で、低次Extの消滅を逆Serre反復が保つ構造条件を探す。
 「全次数を証明してAS認証」「有限障害で排除」「未決定」を分け、有限検査の成功を全AS認証としない。
 正規形の枝、特殊値、枝間同型の条件を証明し、未分類の残余を明示する。
@@ -370,6 +372,7 @@ python3 computations/verify_rank_fifteen_relative_trace_centers.py
 python3 computations/verify_rank_fifteen_generic_levels.py
 python3 computations/verify_rank_fifteen_vertical_curves.py
 python3 computations/verify_rank_fifteen_quadratic_dual.py
+python3 computations/verify_rank_fifteen_adjoint_invariants.py
 python3 computations/verify_rank_fifteen_pencil_linear_residues.py
 python3 computations/verify_rank_fifteen_rational_residues.py
 python3 computations/verify_varying_opposite_rank.py
