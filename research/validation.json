@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 161,
+  "version": 162,
   "reviewed_input": {
-    "source_commit": "51ba73dfe5abe41810811166b416b14bb7e3c140"
+    "source_commit": "b75df320354df2074b36a84b36b60bc7ece1d146"
   },
   "generation": {
     "result": "PASS",
-    "scope": "On the whole variable-trace disk 0 < val(y) < 3 val(x) at three, the four chosen quartic center sections have no linear syzygies at any start. All sixteen products with terminal arrows are independent at each start, and their central quotient has degree-five character dimensions (10,10,10,10)."
+    "scope": "On the variable-trace disk at three, the four-center quotient in degree six has dimensions exactly 12 in characters zero and one, and between 10 and 12 in each remaining character, at every start. Its total dimension is between 44 and 48."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_first_center_products.py",
+      "command": "python computations/verify_rank_fifteen_saturated_center_products.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_variable_zero_disk.py",
+      "command": "python computations/verify_rank_fifteen_first_center_products.py",
       "result": "PASS"
     },
     {
@@ -33,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked the choice of the four common central sections, the product character rule and both-sided generation in degree five, unit pivots and exact H divisibility at all four starts."
+    "scope": "Checked saturation preserves the evaluated fraction-field ideal, tracked precision of projection and degree-five rows separately, and bounded the rank from above by the number of length-two products."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Nine-term H-jets over Q(z); every four-by-fourteen central product block loses four H orders and has rank four. Reran all uncut sixth, center and degree-four quotient ranks at seven-term precision.",
-    "reproduction": "Recomputed all sixteen four-by-fourteen blocks over Q(z) at H precision nine and reran all sixteen uncut sixth blocks and degree-four cuts at precision seven."
+    "scope": "Nine-term H-jets over Q(z). Append all four saturated degree-five product rows in each final-letter summand, then compute all sixteen residue ranks over F9."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 287,
+      "nc-p3": 288,
       "plan_ja": 8,
       "notes_ja": 16
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected manuscript page 261, including the degree-five multiplication argument and its character dimensions."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "e649e91553307ca63b068524d1bb97e6516e178c",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Compute the four-center quotient in degree six on the small-trace disk. Nine-term H-jets prove the degree-five products have full rank after four H divisions. In the first degree-six block (start 0, character 0), the direct product test exhausted the three remaining H coefficients before proving rank eight. Try higher precision (at least eleven input coefficients) or first saturate the degree-five product spaces and use their append maps. Continue toward length 13. No degree-six central-quotient failure or all-degree regularity follows from the precision limit.",
+    "Resolve the two remaining degree-six characters (2 and 3) on the small-trace disk: the sixteen appended saturated degree-five rows have residue rank 10 in each but target rank 12. Increase from nine H terms, retain the kernel of those ten unit pivots, and examine its first nonzero map to the cokernel. Degree-six characters 0 and 1 are already exact at every start. Then propagate the cut through length 13. The complementary valuation sector and the unrestricted classification are open.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

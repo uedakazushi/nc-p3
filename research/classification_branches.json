@@ -285,7 +285,8 @@
       "rank_fifteen_cubic_zero_disk": "sections/rank_fifteen_cubic_zero_disk.tex",
       "rank_fifteen_x_zero": "sections/rank_fifteen_x_zero.tex",
       "rank_fifteen_variable_zero_disk": "sections/rank_fifteen_variable_zero_disk.tex",
-      "rank_fifteen_first_center_products": "sections/rank_fifteen_first_center_products.tex"
+      "rank_fifteen_first_center_products": "sections/rank_fifteen_first_center_products.tex",
+      "rank_fifteen_saturated_center_products": "sections/rank_fifteen_saturated_center_products.tex"
     },
     {
       "id": "UNRESTRICTED-SINGLY-SYMMETRIC-14",

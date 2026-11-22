@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 161,
+  "version": 162,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -1863,6 +1863,15 @@
       "verification": [
         "computations/verify_rank_fifteen_first_center_products.py"
       ]
+    },
+    {
+      "id": "RANK-FIFTEEN-VARIABLE-TRACE-SIXTH-CUT-TWO-CHARACTERS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "On the variable-trace disk at three, the four-center quotient in degree six has dimensions exactly 12 in characters zero and one, and between 10 and 12 in each remaining character, at every start. Its total dimension is between 44 and 48.",
+      "proof": "sections/rank_fifteen_saturated_center_products.tex",
+      "verification": [
+        "computations/verify_rank_fifteen_saturated_center_products.py"
+      ]
     }
   ],
   "document_paths": {
@@ -1926,7 +1935,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "51ba73dfe5abe41810811166b416b14bb7e3c140",
+  "reviewed_source_commit": "b75df320354df2074b36a84b36b60bc7ece1d146",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -1935,15 +1944,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Compute the four-center quotient in degree six on the small-trace disk. Nine-term H-jets prove the degree-five products have full rank after four H divisions. In the first degree-six block (start 0, character 0), the direct product test exhausted the three remaining H coefficients before proving rank eight. Try higher precision (at least eleven input coefficients) or first saturate the degree-five product spaces and use their append maps. Continue toward length 13. No degree-six central-quotient failure or all-degree regularity follows from the precision limit.",
+    "immediate_next_action": "Resolve the two remaining degree-six characters (2 and 3) on the small-trace disk: the sixteen appended saturated degree-five rows have residue rank 10 in each but target rank 12. Increase from nine H terms, eliminate the ten unit pivots, and compute the 2-by-2 minors of the remaining 6-by-12 block. A nonzero minor is necessary and sufficient for the desired dimension ten in that character. Degree-six characters 0 and 1 are already exact at every start. Then propagate the cut through length 13. The complementary valuation sector and the unrestricted classification are open.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/rank_fifteen_saturated_center_products.tex",
       "sections/rank_fifteen_first_center_products.tex",
-      "sections/rank_fifteen_variable_zero_disk.tex",
-      "sections/rank_fifteen_x_zero.tex"
+      "sections/rank_fifteen_variable_zero_disk.tex"
     ],
     "known_obstruction": "Possible isolated interior failures of all-degree regularity on the (x,y) plane and uncovered general nonsymmetric windows.",
-    "state_of_claim": "All-degree regularity on the two previously classified curves and the projective boundary is settled under their stated restrictions. On the whole small-trace disk the uncut sixth degree and the central quotient through degree five are settled. The higher cut and unrestricted classification remain open.",
+    "state_of_claim": "The uncut sixth degree is exactly 84. The four-center quotient is exact through degree five and in two sixth-degree characters. No full all-degree certificate is asserted for the entire disk.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
