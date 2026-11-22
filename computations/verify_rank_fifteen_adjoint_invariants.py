@@ -71,7 +71,7 @@ def lift_root(val, root):
     return root
 
 
-def invariants(x, c, color):
+def opposite_matrix(x, c, color):
     x = nmod(x, N)
     c = nmod(c, N)
     L = lift_root(1 + c * c, 5 * pow(4, -1, P) % P)
@@ -93,7 +93,11 @@ def invariants(x, c, color):
     S = sp.Matrix([[a, b], [z * b, a]])
     T = sp.Matrix([[e, f], [z * f, e]])
     _, opp, _ = gram_twist(S, T, z, l)
-    M = mat(16, 16, [int(q.p) * pow(int(q.q), -1, N) for q in opp])
+    return mat(16, 16, [int(q.p) * pow(int(q.q), -1, N) for q in opp])
+
+
+def invariants(x, c, color):
+    M = opposite_matrix(x, c, color)
     values = opposite_invariants(M)
     changes = []
     for i in range(4):
@@ -106,7 +110,7 @@ def invariants(x, c, color):
     return values
 
 
-def opposite_invariants(M):
+def traceless_map(M):
     right = kernel_form(M)
     left = kernel_form(M.transpose())
     cols = []
@@ -122,6 +126,11 @@ def opposite_invariants(M):
         )
     T = mat(15, 15, [v for col in cols for v in col]).transpose()
     assert modp(T).det()
+    return T
+
+
+def opposite_invariants(M):
+    T = traceless_map(M)
     S = inverse_mod_prime_squared(G) * T.transpose() * G * T
     assert int(trace(S)) % P
     return tuple(int(trace(S**m) / trace(S) ** m) for m in (2, 3))

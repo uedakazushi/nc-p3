@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 138,
+  "version": 139,
   "reviewed_input": {
-    "source_commit": "43685f0e2763589d81cb824143a45e1b0fbf9fff"
+    "source_commit": "45ce5ee812b4036dc98558479705222294fae9b3"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Each ordinary rank-fifteen presentation has a two-dimensional indexed-isomorphism image of standard regular windows. The projective opposite map on traceless 4×4 matrices gives independent rational trace invariants J2,J3 and a necessary and sufficient comparison using one conjugator, one scalar and the pulled-back matrix product. The two invariants alone are not proved complete."
+    "scope": "At identical ordinary parameters the two rank-fifteen sheets are opposite via explicit word reversal. A half-turn and alternating translations on the first sheet reduce the entire degree-six jump scheme to four Fitting tests at starts 0,1 and characters 0,2. A cubic contraction distinguishes the two anchored sheets generically at identical parameters, and both have generic minimal period exactly two."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_adjoint_invariants.py",
+      "command": "python computations/verify_rank_fifteen_word_symmetries.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_quadratic_dual.py",
+      "command": "python computations/verify_rank_fifteen_adjoint_invariants.py",
       "result": "PASS"
     },
     {
@@ -33,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked trace-kernel identifications, both directions of the conjugator/product criterion, nonzero Jacobian in characteristic zero and restriction to the regular open subset."
+    "scope": "Checked reversal of the path start, character permutations at length six, finite étale descent, and nonvanishing of the oriented invariant difference in characteristic zero."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Computed normalized right/left null forms, the traceless adjoint map and two invariant differentials modulo 101² in étale surface coordinates. The two-by-two Jacobian determinant is 34 modulo 101 in both presentations.",
-    "reproduction": "SymPy 1.14.0 and python-flint 0.9.0. Verified the kernel identities, invariance under four nonscalar basis changes and projective scaling, both Hensel differential columns, and determinant 34 modulo 101 in both presentations."
+    "scope": "Three exact four-position tensor identities, full cubic contractions after cyclic shift at the 101 split point, and the preceding invariant/regression tests."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 261,
+      "nc-p3": 262,
       "plan_ja": 7,
       "notes_ja": 15
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Reviewed the two-way product criterion and the invariant Jacobian calculation on manuscript pages 234–235, including rendered page 235."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "816547ac04d4eee0d72909e5aecc56cd4a1f1863",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Use the degree-six insertion builder of verify_rank_fifteen_quadratic_dual.py on the two ordinary surfaces P(n)=0, targeting ranks 36,36,34,34 at each start. Use independent local minors and saturate ordinary denominators to isolate possible Koszul failure points; check higher cut ranks where degree six passes. For indexed equivalence compute the generic degree of (J2,J3) and use the pulled-back product comparison to decide residual coincidences between the sheets.",
+    "Use first-sheet sixth_insertion at starts 0,1 and characters 0,2 only (ranks 36,34). On the explicit n=1 elliptic slice, z=t and lambda=(4t+Y)/(t(t+1)), Y²=-t³+14t²-t, a=2,e=0,b=(t+1)/(2t),f=4/(t+1). Test complementary minors and solve their remaining ordinary support. For the surface use two independent chart minors per block and saturate the ordinary denominators. Indexed comparisons may add the anchored cubic C to J2,J3.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
