@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 94,
+  "version": 95,
   "reviewed_input": {
-    "source_commit": "419fe4b4113c7d02fb9dcc3c35296dd951518d14"
+    "source_commit": "a5538d3f3d510dd67ca4d9e232a19badbac65a1d"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For ordinary slopes the signed discriminant double solid has sixteen ordinary double points. Over invertible first matrices its projective paired-root graph is a small resolution with eight exceptional lines of normal bundle O(-1) twice; the companion embeds each in the opposite contact conic. Reversing the sign interchanges the two local small resolutions."
+    "scope": "The block-exchange polarity acts without fixed points on the simultaneous minimal resolution of every ordinary Kummer ramification surface. The quotient by this marked two-position exchange is an Enriques surface."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_paired_root_resolution.py",
+      "command": "python computations/verify_kummer_exchange_quotient.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_kummer_polar.py",
+      "command": "python computations/verify_paired_root_resolution.py",
       "result": "PASS"
     },
     {
@@ -33,16 +33,16 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Verified the local rank-one matrix model, proper quasi-finite descent to the normal small resolution, normal bundles, and transpose flop."
+    "scope": "Reviewed the relative graph as the blowup, Euler and limiting-tangent conditions, smooth proper fixed locus over the connected base, and Enriques invariants of the quotient."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Checked both local-coordinate Jacobians, all eight bilinear graph determinants, all contact-plane and discriminant identities, and base-point-free degree-two embeddings."
+    "scope": "At (3,2) verified emptiness of the projective isotropic polar fixed-point candidates over F_1009 on all four strata."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 211,
+      "nc-p3": 212,
       "plan_ja": 7,
       "notes_ja": 14
     },
@@ -58,7 +58,7 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Determine whether the two-position exchange has fixed points on the resolved Kummer family, and use the exceptional slopes or the residual complement to refine the regularity test.",
+    "Determine regularity on the exceptional double-root slopes using the bisymmetric opposite pencils and evaluation ranks, and then return to the residual ordinary AS locus.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

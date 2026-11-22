@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-22 / v94。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v95。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -174,6 +174,8 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 
 符号付き判別被覆の可逆部分で、射影化した対根のグラフが八節点を小解消する。各例外直線の第二行列像は対応する接触二次曲線である。[証明と判定](sections/paired_root_resolution.tex)
 
+二行列交換は全ての通常倍率で解消Kummer曲面上に固定点を持たず、印を固定した二位置交換の商はEnriques曲面となる。[証明と判定](sections/kummer_exchange_quotient.tex)
+
 二窓から作る56次元代数で、低次Extの消滅を逆Serre反復が保つ構造条件を探す。
 「全次数を証明してAS認証」「有限障害で排除」「未決定」を分け、有限検査の成功を全AS認証としない。
 正規形の枝、特殊値、枝間同型の条件を証明し、未分類の残余を明示する。
@@ -239,6 +241,7 @@ python3 computations/verify_single_zero_pairings.py
 python3 computations/verify_kummer_discriminant.py
 python3 computations/verify_kummer_polar.py
 python3 computations/verify_paired_root_resolution.py
+python3 computations/verify_kummer_exchange_quotient.py
 python3 computations/verify_klein_elliptic_center.py
 python3 computations/verify_klein_full_rank_configurations.py
 python3 computations/verify_rank_five_pencils.py
