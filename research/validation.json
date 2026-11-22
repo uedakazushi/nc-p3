@@ -1,40 +1,49 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 48,
+  "version": 49,
   "reviewed_input": {
-    "source_commit": "8d20f67ff5bad466715171539d72639d102ba787"
+    "source_commit": "db640cc923be952bf8780d44e9c214f6183f8e34"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Exclude rank five and prove the sharp AS lower bound of six by the two low-rank divisors, normalized coefficient space, and repeated binary plane quotient."
+    "scope": "Four-step shift on finite rank-six point schemes, finite-window reconstruction from a Frobenius algebra and three subspaces, and an exact ratio criterion for square roots."
   },
   "checks": [
     {
-      "command": "python computations/verify_rank_five_pencils.py",
+      "command": "python computations/verify_finite_square_chart.py",
       "result": "PASS",
-      "scope": "Symbolic determinant, gcd of all cubic minors and opposite binary row-plane identities; exact rank-five control with independent checks of all four projected relation images."
+      "scope": "Checks the reduced twenty-point example, two flag components, a coordinate-support component, transporters, and a nonreduced square-recovery control."
     },
     {
-      "command": "bash scripts/cloud_preflight.sh --tex; git diff --check",
+      "command": "python computations/verify_rank_five_pencils.py",
+      "result": "PASS",
+      "scope": "Reruns the determinant, cubic gcd, binary plane, and projected relation checks for the sharp lower bound."
+    },
+    {
+      "command": "python scripts/check_project.py",
+      "result": "PASS"
+    },
+    {
+      "command": "git diff --check",
       "result": "PASS"
     }
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed rank-three neighbor uniqueness, both ways the moving small pencils arise, upper-rank-two and hyperplane exclusions, bundle integrality and the elementary Clifford representation cases. The quotient fixture checks the mechanism separately from the general proof."
+    "scope": "Reviewed the local splitting over nonreduced finite schemes, both directions of two-window reconstruction and the ratio criterion, and the rank-stratum tangent calculation. No independent referee review."
   },
   "mathematical_computation": {
-    "result": "NOT_RUN_THIS_CHECKPOINT",
-    "scope": "No new matrix, symbolic-family or repository-wide mathematical verification scripts were run. The new result is a structural proof and uses existing manuscript theorems; simple dimension and integer inequalities were checked in the proof review."
+    "result": "PASS",
+    "scope": "Exact rational checks in the two verification scripts listed above. The finite example has a reduced isolated normalized third space, two flag components with transporter dimensions one and zero, and a separate coordinate-support component."
   },
   "tex": {
     "result": "PASS",
-    "scope": "Main paper 113 pages, plan 5 and notes 12. No overfull boxes, missing characters or unresolved references in final logs."
+    "scope": "Final Japanese manuscript 117 pages, plan 5 and notes 12. No overfull boxes, missing characters or unresolved references in final logs."
   },
   "visual_inspection": {
     "result": "PASS",
-    "scope": "Rendered and inspected manuscript page 86 containing Proposition 32.5 and Theorem 32.6."
+    "scope": "Rendered and inspected manuscript page 90, including the statement and tangent-space proof of Proposition 33.5."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT",
@@ -44,6 +53,6 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Residual AS objects of rank six outside the known charts, higher-rank coverage and a general effective AS recognition theorem remain open."
+    "Enumeration of the remaining genuine normalized square roots and their AS extensions, rank-six positive-dimensional branches, higher-rank coverage and general effective AS recognition."
   ]
 }

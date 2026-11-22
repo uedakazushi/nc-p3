@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 48,
+  "version": 49,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -799,6 +799,15 @@
       "verification": [
         "computations/verify_rank_five_pencils.py"
       ]
+    },
+    {
+      "id": "FINITE-POINT-SQUARE-CHART",
+      "status": "proved_with_reduced_ci_control",
+      "statement": "At rho six all finite edge point schemes have identity four-step shift; three consecutive finite edges already give length-twenty four-periodic sequences. On the finite branch, three ordered four-spaces in the finite Gorenstein coordinate algebra determine indexed isomorphism up to units and algebra isomorphism. Opposite square spaces agree after unit normalization. A reduced symmetric CI has an isolated normalized third-space solution for a fixed first window. An equivalent ratio search lies in P(D/k) of dimension eighteen: a ten-by-ten multiplication matrix has rank six, its kernel recovers the next coordinate space up to a unique unit scaling class. A second control uses a nonreduced length-twenty ring. On the reduced example the multiplication rank locus has distinct five-dimensional components from the two coordinate flags and a six-coordinate support, with tangent rank 13 at their test points. The transporter rejects the opposite-flag component generically; the support component has no genuine ratios.",
+      "proof": "sections/finite_point_chart.tex",
+      "verification": [
+        "computations/verify_finite_square_chart.py"
+      ]
     }
   ],
   "document_paths": {
@@ -862,7 +871,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "8d20f67ff5bad466715171539d72639d102ba787",
+  "reviewed_source_commit": "db640cc923be952bf8780d44e9c214f6183f8e34",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -871,16 +880,16 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "On the remaining rank-six locus, start with all four adjacent correspondences finite. Determine whether the successive rank-three row planes force the four-step shift to act trivially, including on nonreduced schemes. Compare opposite determinantal projections with the length-twenty point schemes. Continue the positive-dimensional and high-rank branches separately.",
+    "immediate_next_action": "For the reduced finite CI remove the known flag component generically rejected by the unit transporter and the small-support loci (any genuine ratio has every scalar fiber length <=10). Investigate other components of the rank-six multiplication locus whose kernel contains a unit and whose square admits a unit transporter; reconstruct candidate third windows and test cubic overlap/AS. Continue the positive-dimensional branch separately.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/finite_point_chart.tex",
       "sections/rank_five_pencils.tex",
-      "sections/opposite_evaluation.tex",
       "sections/two_window_ext.tex",
       "research/classification_branches.json"
     ],
     "known_obstruction": "No uniform finite Koszul/Serre cutoff or effective global regularity criterion is proved; finite-dimensional B and seven-degree tests do not suffice. Other low-rank components and high-rank witness-free regions remain unclassified.",
-    "state_of_claim": "Sharp AS lower bound rho>=6. Residual rank six, higher-rank coverage and the universal all-degree criterion remain open.",
+    "state_of_claim": "Sharp lower bound six and a complete indexed-isomorphism criterion on the finite-edge AS branch. The square-space equations restrict possible extensions; all solutions and AS coverage are open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
