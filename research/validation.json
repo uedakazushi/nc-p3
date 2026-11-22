@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Checked every irreducible monic quadratic and cubic over F3, with explicit roots, square-root presentations and the degree-13 central quotient at all four starts."
+    "scope": "Checked every irreducible monic quadratic and cubic over F3, with explicit roots, square-root presentations and the degree-13 central quotient at all four starts.",
+    "reproduction": "Checked every irreducible quadratic and cubic in F3[y] in explicit extension fields, including four starting vertices through degree 13, and reran the four prime-field grid tests."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript pages 277 and 278 for the elliptic cover, theorem, corollary, and following section."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "313cfcc90340398fc27327d16a0b3467cfd03bbd",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "On xbar=1 and unit y, compute the pivot divisor on W^2=t-t^3 with v=t*(1-t^2)/(1+t^2)^2 and y=(v-v^3)^2. Descend its good locus along the genus-one cover, then check the remaining residue fibers. The eleven irreducible quadratic and cubic fibers have already been certified directly. In parallel use the full-order primary pole cuts to remove the six-digit depth bounds and address the remaining collision and outer sectors.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "e64f19aea9d3836614d318dce4b43e22e1776744",
+    "commit": "79d5d835b40be7f907a24801250cb342c2ee0f08",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
