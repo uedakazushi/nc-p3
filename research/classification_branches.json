@@ -212,6 +212,11 @@
       "id": "UNRESTRICTED-SINGLY-SYMMETRIC-14",
       "current_result": "With no Klein grading imposed, the singly symmetric rank-ten locus is smooth at the rational regular sample and has a fourteen-dimensional unmarked family, geometrically generically AS, with trivial projective indexed stabilizer and minimal period four. At this and the rank-sixteen sample the unrestricted normal tangents have dimensions (5,2,4,4) by character and all primary obstructions vanish. The extra alternating direction maps the opposite kernel isomorphically to its cokernel.",
       "current_proof": "sections/unrestricted_doublet_deformations.tex"
+    },
+    {
+      "id": "TWENTY-CONORMAL-FULL-COMPONENT",
+      "current_result": "Twenty moving complete-intersection points give twenty independent identities among the Schur equations on the first rank-six locus. Both regular rational samples are smooth points of the same actual 76-dimensional affine component. Its unmarked dimension is 15, with trivial generic projective stabilizer, full opposite rank, minimal period four and geometrically generic standard AS regularity. At the singly symmetric sample the rank-ten divisor is smooth, the opposite determinant vanishes to order six, and the entire complementary neighborhood has rank sixteen.",
+      "current_proof": "sections/twenty_conormal_component.tex"
     }
   ],
   "presentation_components": {

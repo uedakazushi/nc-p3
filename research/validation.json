@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 77,
+  "version": 78,
   "reviewed_input": {
-    "source_commit": "006d9bbf12707c7a971cee25de301c1981cffe56"
+    "source_commit": "c25fe829de234aff594c0d3e00d19c2aae1febc0"
   },
   "generation": {
     "result": "PASS",
-    "scope": "With no Klein grading imposed, the singly symmetric rank-ten locus is smooth at the rational regular sample and has a fourteen-dimensional unmarked family, geometrically generically AS, with trivial projective indexed stabilizer and minimal period four. At this and the rank-sixteen sample the unrestricted normal tangents have dimensions (5,2,4,4) by character and all primary obstructions vanish. The extra alternating direction maps the opposite kernel isomorphically to its cokernel."
+    "scope": "Twenty moving complete-intersection points give twenty independent identities among the Schur equations on the first rank-six locus. Both regular rational samples are smooth points of the same actual 76-dimensional affine component. Its unmarked dimension is 15, with trivial generic projective stabilizer, full opposite rank, minimal period four and geometrically generic standard AS regularity. At the singly symmetric sample the rank-ten divisor is smooth, the opposite determinant vanishes to order six, and the entire complementary neighborhood has rank sixteen."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_unrestricted_doublet_deformations.py",
+      "command": "python computations/verify_twenty_conormal_identities.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_klein_exceptional_pairings.py",
+      "command": "python computations/verify_unrestricted_doublet_deformations.py",
       "result": "PASS"
     },
     {
@@ -33,15 +33,15 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Verified Schur derivatives in both cuts, orbit-normal dimensions, smoothness of the even locus, specialization of finite stabilizers, second-order lifting and degreewise flatness over Artinian bases."
+    "scope": "Reviewed moving points on the first rank-six locus, complementary three-space construction of exact local syzygies, invertible twenty-minor, Jacobian criterion, common component and the sixth-order determinant divisor."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact rational Jacobians, orbit inclusion and rank, polarized pairwise obstruction image tests and opposite-kernel compression."
+    "scope": "All twenty graph quadruples have rank-three partial evaluations and independent conormal products at primes 12619 and 2657. The characteristic-zero unrestricted Jacobians have rank 180."
   },
   "tex": {
     "result": "PASS",
-    "main_pages": 186,
+    "main_pages": 188,
     "plan_pages": 6,
     "notes_pages": 14
   },
@@ -55,7 +55,7 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Compute higher obstructions or algebraize the fifteen unrestricted directions at the rational maximal-rank point. Complete the double-zero determinant fibers on the marked chart and analyze singular cross blocks.",
+    "Complete the identically zero determinant fibers on the marked chart. On the fifteen-dimensional component determine a finite closed-fiber regularity test, center behavior and the boundary where conormal products or evaluations drop rank.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

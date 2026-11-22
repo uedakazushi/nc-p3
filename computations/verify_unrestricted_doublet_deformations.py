@@ -109,11 +109,15 @@ def tangent(w, h, sign, project):
     return derivative, lifts, orbit_dim
 
 
-def rank_ten():
+def symmetric_example():
     u = sp.Matrix([[1, 2], [3, 5]])
     v = sp.Matrix([[2, 3], [5, 7]])
     a = sp.Matrix([[2, 1], [5, 3]])
-    w = gram(u, v, a, other_completion(a, *cross_blocks(u, v)))
+    return gram(u, v, a, other_completion(a, *cross_blocks(u, v)))
+
+
+def rank_ten():
+    w = symmetric_example()
     assert w == exchange(w)
     project, inv = normal_data(w)
     plus = [tangent(w, h, 1, project) for h in K]
