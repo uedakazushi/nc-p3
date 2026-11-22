@@ -200,7 +200,8 @@
       "current_proof": "sections/klein_doublet_boundary.tex",
       "rational_regular_input": "The explicit rational matrices used for the twenty-point configuration are standard AS of minimal period four, with four central quartic parameters. See thm:klein-rational-period-four.",
       "generic_isomorphism": "Four rational coefficients modulo at most sixteen character reindexings; the three projective point configurations have automorphism group Klein four and are mutually inequivalent. See sections/klein_generic_isomorphisms.tex.",
-      "center_lift": "On the rational two-dimensional slice v=4,w=6, the generic periodic quartic center has five generators as a vector space (character dimensions 3,2,0,0). A single Zariski-open neighborhood of the certified rational chart point b=2,c=3 consists entirely of standard regular closed fibers finite free of rank 256 per start over four central quartics. A finite constructible rank test recognizes this certificate on the whole second-completion closure."
+      "center_lift": "On the rational two-dimensional slice v=4,w=6, the generic periodic quartic center has five generators as a vector space (character dimensions 3,2,0,0). A single Zariski-open neighborhood of the certified rational chart point b=2,c=3 consists entirely of standard regular closed fibers finite free of rank 256 per start over four central quartics. A finite constructible rank test recognizes this certificate on the whole second-completion closure.",
+      "generic_center_and_PI": "Over four algebraically independent second-completion parameters, the periodic quartic center has dimensions (3,2,0,0). One dense open containing the original rational point consists entirely of AS closed fibers finite free over four central quartics. Every standard AS point anywhere in this closure satisfies the uniform standard identity s_512."
     }
   ],
   "presentation_components": {

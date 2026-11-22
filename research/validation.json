@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 73,
+  "version": 74,
   "reviewed_input": {
-    "source_commit": "cafd8f7befc04d5ed2f711c33e795a2c51f00d67"
+    "source_commit": "c3d4152975782e720ec8a3f77400d7c4d25132c6"
   },
   "generation": {
     "result": "PASS",
-    "scope": "On the rational two-dimensional slice v=4,w=6, the generic periodic quartic center has five generators as a vector space (character dimensions 3,2,0,0). A single Zariski-open neighborhood of the certified rational chart point b=2,c=3 consists entirely of standard regular closed fibers finite free of rank 256 per start over four central quartics. A finite constructible rank test recognizes this certificate on the whole second-completion closure."
+    "scope": "Over four algebraically independent second-completion parameters, the periodic quartic center has dimensions (3,2,0,0). One dense open containing the original rational point consists entirely of AS closed fibers finite free over four central quartics. Every standard AS point anywhere in this closure satisfies the uniform standard identity s_512."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_klein_center_lift.py",
+      "command": "python computations/verify_klein_generic_quartics.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_klein_period_four_center.py",
+      "command": "python computations/verify_klein_center_lift.py",
       "result": "PASS"
     },
     {
@@ -33,11 +33,11 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Verified two-inverse graph bases, constant-rank base change for the centers, finite open quotient test, and the module dimension squeeze with left and right dual exactness."
+    "scope": "Checked generic path and center ranks, specialization of the five-dimensional center bundle at the rational input, polynomial ranks per corner and matrix PI specialization on degreewise constant-rank neighborhoods."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact elimination over Q(b,c) in characters zero and one; all four central ranks at a rational point, independent Gram rows, and its four artinian quotient rank tables modulo 1009 through degree thirteen."
+    "scope": "Fraction-free elimination over Q(b,c,v,w) with exact polynomial gcds: degree-four commuting matrices of 36 and 40 columns have ranks 33 and 38."
   },
   "tex": {
     "result": "PASS",
@@ -58,7 +58,7 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Complete the four-variable center lift, then analyze the local deformations outside the Klein-homogeneous and even-symmetric strata at the certified point.",
+    "Study the general adjacent-rank-six deformations at the rational point: transverse opposite rank, character-free tangent directions and actual deformations of maximal opposite rank, including their regularity.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

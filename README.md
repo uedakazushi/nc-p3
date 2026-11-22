@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-22 / v73。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v74。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -134,6 +134,8 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 
 中心四次式を独立な二変数の有理関数体に持ち上げた。この断面の一つの開集合では、全ての閉点が四つの中心四次式により標準AS正則となる。第二補完の全閉包でこの自由表示を認識する有限判定も得た。[証明と判定](sections/klein_quartic_center_lift.tex)
 
+四変数全体で五つの中心四次式が持ち上がった。一つの稠密開集合の全閉点が正則であり、閉包内の全ての標準ASファイバーには共通の多項式恒等式が成立する。[証明と判定](sections/klein_generic_central_parameters.tex)
+
 二窓から作る56次元代数で、低次Extの消滅を逆Serre反復が保つ構造条件を探す。
 「全次数を証明してAS認証」「有限障害で排除」「未決定」を分け、有限検査の成功を全AS認証としない。
 正規形の枝、特殊値、枝間同型の条件を証明し、未分類の残余を明示する。
@@ -178,6 +180,7 @@ python3 computations/verify_klein_generic_isomorphisms.py
 python3 computations/verify_klein_doublet_boundary.py
 python3 computations/verify_klein_period_four_center.py
 python3 computations/verify_klein_center_lift.py
+python3 computations/verify_klein_generic_quartics.py
 python3 computations/verify_rank_five_pencils.py
 python3 computations/verify_matched_pencils.py
 python3 computations/verify_incidence_cubics.py
