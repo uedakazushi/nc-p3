@@ -245,6 +245,13 @@
       "sections/marked_opposite_rank.tex"
     ],
     "reversible_component": "At the reduced twenty-point control every square root is a sign translate. On the open of two rigid projections any all-four-finite AS extension has period dividing two, a four-dimensional cubic overlap and a unique invertible double-alternation kernel generator. A generic first relation space has no such extension. At the twenty-point example the exceptional locus has a unique local component of dimension 44, with orbit quotient dimension 14 and geometric generic regularity at opposite rank exactly eight and minimal period two. The symmetric stratum is the smooth 39-dimensional singular locus near this point, transverse to a rank-six quadratic cone.",
-    "open": "The marked net chart dominates the unirational quotient. Recognition of special AS fibers and other components remain open."
+    "open": "Outside the dense smooth elliptic chart, residual components and general AS criteria remain open. The elliptic construction also includes special infinite point correspondences."
+  },
+  "elliptic_reversible_chart": {
+    "proof": "sections/elliptic_reversible_pencil.tex",
+    "coverage": "Dense open of reversible component, including additional special AS fibers, without imposing finite point correspondences.",
+    "regularity": "All smooth genus-one data, integral nodal/cuspidal data and cyclic rational polygons with equal positive multidegrees, provided the pencil has no base point.",
+    "isomorphism": "For L != M the two embedded apolar curves, their unique graph and the pencil recover ordered data.",
+    "residual": "Unequal positive polygon multidegrees are excluded by an exponential quotient. Tangent/triple intersections, nonreduced limits and other components remain."
   }
 }

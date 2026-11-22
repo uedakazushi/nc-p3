@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 52,
+  "version": 53,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -835,6 +835,15 @@
       "verification": [
         "computations/verify_marked_opposite_rank.py"
       ]
+    },
+    {
+      "id": "ELLIPTIC-REVERSIBLE-PENCIL",
+      "status": "proved_all_stated_fibers",
+      "statement": "Alternating sections of two degree-four bundles L,M on a smooth genus-one curve modulo a basepoint-free central pencil in H^0(LM) give all-degree Koszul Frobenius duals. The AS chart covers a dense open of the reversible component. If L differs from M the rank is eight and the ordered curve, bundles and pencil are necessary and sufficient indexed-isomorphism data. The generic-base period-one pencil locus has dimension six. A cyclic-four quotient gives a positive-dimensional point correspondence with one genus-one normalization and four reduced isolated points. Integral nodal/cuspidal charts (moduli dimensions 13/12) and equal-positive-multidegree rational polygons of two to four components (dimensions 14-n) have all-fiber AS certification and geometric recognition for distinct bundles. Unequal positive polygon multidegrees always yield an exponential quotient from complementary support chains and never standard AS; their trace rank is eight except the (3,1)/(1,3) case of six. Equal multidegrees are necessary and sufficient within the positive cycle chart.",
+      "proof": "sections/elliptic_reversible_pencil.tex",
+      "verification": [
+        "computations/verify_elliptic_reversible_pencil.py"
+      ]
     }
   ],
   "document_paths": {
@@ -898,7 +907,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "3e14a00e9629d91d6f572f8ea0b7a155dbcbd9f4",
+  "reviewed_source_commit": "80729ccb50371a3c5fba0576ded43d53d85b6bb9",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -907,15 +916,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Use the two apolar pencils of the rank-eight marked chart to construct intrinsic genus-one data and certify whether the opposite elliptic quartics agree. Determine AS regularity for special closed fibers and continue other finite and positive-dimensional branches.",
+    "immediate_next_action": "Analyze remaining reduced genus-one quartic boundaries with nonnodal intersections (two tangent rational components or a planar triple point). Test degrees, all-degree Koszul certification, and recovery of the graph using sections supported on conductor subschemes. In parallel mathematical scope, isolate what can force a general rank-eight AS tensor into the apolar-pencil chart and address non-elliptic ranks.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/elliptic_reversible_pencil.tex",
       "sections/marked_opposite_rank.tex",
-      "sections/reversible_component.tex",
-      "sections/cut_serre_criterion.tex"
+      "sections/two_window_ext.tex"
     ],
     "known_obstruction": "No uniform finite Koszul/Serre cutoff or effective global regularity criterion is proved; finite-dimensional B and seven-degree tests do not suffice. Other low-rank components and high-rank witness-free regions remain unclassified.",
-    "state_of_claim": "Exact geometric generic rank eight, minimal period two, generic AS regularity and a unirational fourteen-dimensional quotient. Special closed fibers and other branches remain open.",
+    "state_of_claim": "Smooth elliptic data give an all-fiber AS chart dense in the 44-dimensional component, with complete ordered recognition for distinct bundles. Integral nodal and cuspidal boundaries are certified. On rational cycles with positive bundle degrees, equality of multidegrees is necessary and sufficient; unequal degrees give exponential growth. Other singular limits, components and global coverage remain unresolved.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

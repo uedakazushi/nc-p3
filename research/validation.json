@@ -1,15 +1,19 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 52,
+  "version": 53,
   "reviewed_input": {
-    "source_commit": "3e14a00e9629d91d6f572f8ea0b7a155dbcbd9f4"
+    "source_commit": "80729ccb50371a3c5fba0576ded43d53d85b6bb9"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Exact generic opposite rank eight and a marked ternary-net construction of the unirational component quotient."
+    "scope": "Smooth genus-one pencil chart with all-fiber AS regularity, ordered reconstruction, period test, positive-dimensional point example and reduced genus-one boundaries."
   },
   "checks": [
+    {
+      "command": "python computations/verify_elliptic_reversible_pencil.py",
+      "result": "PASS"
+    },
     {
       "command": "python computations/verify_marked_opposite_rank.py",
       "result": "PASS"
@@ -25,18 +29,19 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked cancellation of both residual trace terms, change of metrics, the marked tangent certificate and parameter equivalence. No external referee."
+    "scope": "Checked the evaluation-kernel filtration and both central nonzero divisors, Serre pairing, rank-eight graph uniqueness, dimension/density argument, cyclic-four point correspondence counts, normalization/conductor arguments, and polygon component support obstruction. No external referee review."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Symbolic polynomial identity in five indeterminates and exact coprimality certificate over Q at the marked reduced example."
+    "scope": "Rational smooth eight-point control checks Gale pairing, nonsingular apolar pencils with equal discriminant invariant and ranks 6 and 8. Nodal and cuspidal normalization models verify the same ranks. Enumerated all positive degree splits on cycles of length two to four and their complementary-chain obstruction. General assertions have written proofs."
   },
   "tex": {
     "result": "PASS",
-    "scope": "Main 124 pages, plan 6 and notes 12. No overfull boxes, missing characters or unresolved references in final logs."
+    "scope": "Japanese main 130 pages, plan 6 and notes 12. Final logs have no overfull boxes, missing characters or unresolved references."
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Rendered and inspected page 99 covering the all-degree argument and reconstruction theorem."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT",
@@ -46,6 +51,6 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Intrinsic geometry of the two apolar pencils, AS behavior of special fibers and global coverage."
+    "Tangential and triple intersections, nonreduced limits, and recognition of AS windows outside the elliptic pencil construction. No global classification or external novelty determination."
   ]
 }
