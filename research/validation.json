@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 144,
+  "version": 145,
   "reviewed_input": {
-    "source_commit": "6c49023cc2746017e8d9f8d7c335e519c20aec93"
+    "source_commit": "64256126ef70dcaa76c55ec369aebc5d9ec40a4c"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All ordinary rank-fifteen coordinate ends on both presentations are standard Koszul and left/right AS regular, with paths free of rank 256 over four central quartics. On the remaining rational components 593 pivot factors reduce to 12 ordinary negative-reciprocal orbits, all verified at both Gaussian lifts. Any isolated rank-fifteen failure is interior, with all four frame coordinates nonzero."
+    "scope": "Every first-sheet ordinary rank-fifteen tensor has a matched Pauli-line expansion with all 15 nontrivial components nonzero. On an explicit nonempty open the 16-dimensional space is recovered from two products, and indexed equivalence is completely decided by 48 linear permutations preserving the two commutator forms. The generic projective stabilizer has order 16. All ordinary windows above the 101-adic multiplier disk (4,9) are standard Koszul left/right AS regular."
   },
   "checks": [
     {
@@ -15,11 +15,15 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_coordinate_regularity.py",
+      "command": "python computations/verify_rank_fifteen_pauli_comparison.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_coordinate_collisions.py",
+      "command": "python computations/verify_rank_fifteen_word_symmetries.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_rank_fifteen_coordinate_regularity.py",
       "result": "PASS"
     },
     {
@@ -33,36 +37,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked all affine endpoint coverage, negative reciprocal signs, both embeddings of i and the common-open argument for the four starts."
+    "scope": "Checked input versus output phase permutation, completeness from the decomposable lines, lifting inner conjugations and scope of the 101-adic disk."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact Gaussian-function-field path, center and central-cut ranks; both residue signs above all 12 remaining orbits and all four degree-13 profiles.",
-    "reproduction": "Both endpoint curve computations independently reproduced, including all 464 and 593 pivot factors. Rational residual roots at 101, 109, 173 and 193 verified at both Gaussian signs and four starts through degree 13."
+    "scope": "Exact first-letter translation identity, Pauli products and table equivariance, 48 simultaneous form isometries, dimension 16 and the full four-start central-cut certificates at all four interior residue roots."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 267,
+      "nc-p3": 268,
       "plan_ja": 7,
-      "notes_ja": 15
+      "notes_ja": 16
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected manuscript page 241, including the full coordinate-end result and all 12 rational orbit degrees."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "d9e9aecbc81b3a2b17def2cfcc8d4cce72aada7e",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "The coordinate-end regularity problem is finished. Seek isolated failure at abef nonzero on the first surface only: investigate the four sixth matrices at starts 0,1 and characters 0,2 with two independent pivot charts; for higher degrees extend the reciprocal central-cut method to another interior curve. For indexed classification use the explicit finite exceptional levels on the endpoint curves and recover tensor basis changes from the opposite map T.",
+    "Use the 48 exact table tests to solve finite collision candidates and multiplier deck transformations. For interior regularity, the 101 disk (4,9) is settled. Continue testing the four degree-six insertion matrices and higher central cuts away from abef=0; closure dimension 16 is independently testable. Compare opposite-cut H at paired quartic roots n and sqrt(z)m/n after lambda inversion.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

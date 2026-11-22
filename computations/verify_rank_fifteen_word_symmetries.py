@@ -64,6 +64,11 @@ def prove_tensor_identities():
             (z * d, r * d, r, 1),
         ),
     )
+    verify(
+        original,
+        lambda i, j, k, t: (i ^ 1, j ^ 1, k ^ 1, t ^ 1),
+        ((r, r, 1, z), (1 / r, r, 1, 1), (1 / r, 1 / r, 1 / z, 1), (r, 1 / r, 1, 1)),
+    )
     perm = (0, 1, 3, 2)
     # Simultaneous inversion of r,w preserves the first presentation.
     verify(

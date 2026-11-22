@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-22 / v144。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v145。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -272,6 +272,8 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 
 階数15の両表示で、全座標端の全通常点が標準Koszul左右AS正則である。有理成分の残余12軌道も解決し、正則性の失敗候補は四座標がすべて非零の内部に限られる。[証明と判定](sections/rank_fifteen_all_coordinate_ends.tex)
 
+階数15の一般窓の添字保持同型を48置換の有限判定に還元し、射影安定化群の位数16を決定した。倍率が101で (4,9) に還元される全窓は正則である。[証明と判定](sections/rank_fifteen_pauli_comparison.tex)
+
 二窓から作る56次元代数で、低次Extの消滅を逆Serre反復が保つ構造条件を探す。
 「全次数を証明してAS認証」「有限障害で排除」「未決定」を分け、有限検査の成功を全AS認証としない。
 正規形の枝、特殊値、枝間同型の条件を証明し、未分類の残余を明示する。
@@ -389,6 +391,7 @@ python3 computations/verify_rank_fifteen_word_symmetries.py
 python3 computations/verify_rank_fifteen_coordinate_ends.py
 python3 computations/verify_rank_fifteen_endpoint_orbits.py
 python3 computations/verify_rank_fifteen_coordinate_regularity.py
+python3 computations/verify_rank_fifteen_pauli_comparison.py
 python3 computations/verify_rank_fifteen_coordinate_collisions.py
 python3 computations/verify_rank_fifteen_pencil_linear_residues.py
 python3 computations/verify_rank_fifteen_rational_residues.py
