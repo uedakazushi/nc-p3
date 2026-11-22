@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 109,
+  "version": 110,
   "reviewed_input": {
-    "source_commit": "f1347ef67017055215da1180a95fec31ca1851fc"
+    "source_commit": "929e1dc4710f525c52a6b27ba488706884b6228c"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For every ordinary slope the length-four defect on both fixed elliptic curves is exactly the twelve listed presentations plus the four positive opposite-determinant sections. The support has sixteen points unless lambda^2 z=-1, when four pairs coalesce and twelve remain; the two-position quotient has eight or six."
+    "scope": "At slopes (3,2), every admissible fixed-curve window passing the length-four test passes length five at every start. A 120-by-100 insertion matrix in each character tests the quintic dimension; the only remaining degree-eight candidate orbits in the geometric slice satisfy the expected ranks."
   },
   "checks": [
     {
@@ -15,15 +15,11 @@
       "result": "PASS"
     },
     {
+      "command": "python computations/verify_fixed_quintic_locus.py",
+      "result": "PASS"
+    },
+    {
       "command": "python computations/verify_uniform_fixed_quartic_support.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_uniform_fixed_quartic_residuals.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_fixed_geometric_quartic_locus.py",
       "result": "PASS"
     },
     {
@@ -37,11 +33,11 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked the homogeneous equation at both ends, the effect of two-position exchange, admissibility of normalized denominators, and the geometric support counts."
+    "scope": "Reviewed the two projected middle insertions, standard quintic character, two-position propagation and the number-field upper bounds."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Certified 32 integer-polynomial maximal minors, all norm factors over the entire slope plane, and 64 more symbolic rank minors on residual positive sheets. Verified the homogeneous scale equation and all collisions."
+    "scope": "Verified sixteen characteristic and starting-position insertion matrices, their maximal minors and residual ideals, and modular certificates on the two degree-eight fields."
   },
   "tex": {
     "result": "PASS",
@@ -62,7 +58,7 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Determine the length-five jump set off the now-complete quartic defect. Use the two outer quadratic quotients around the middle letter, giving 120-by-100 insertion matrices in each character, with target rank 86. Begin at (3,2) and identify any genuinely new sections.",
+    "Extend the length-five no-new-obstruction result to varying slopes using integer polynomial rank minors and the monomial flip at odd length. On the positive residual divisors test whether rank can drop on special slopes.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

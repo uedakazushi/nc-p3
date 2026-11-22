@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 109,
+  "version": 110,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -1370,6 +1370,15 @@
         "computations/verify_uniform_fixed_quartic_support.py",
         "computations/verify_uniform_fixed_quartic_residuals.py"
       ]
+    },
+    {
+      "id": "FIXED-QUINTIC-SLICE-NO-NEW-DEFECT",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "At slopes (3,2), every admissible fixed-curve window passing the length-four test passes length five at every start. A 120-by-100 insertion matrix in each character tests the quintic dimension; the only remaining degree-eight candidate orbits in the geometric slice satisfy the expected ranks.",
+      "proof": "sections/fixed_quintic_locus.tex",
+      "verification": [
+        "computations/verify_fixed_quintic_locus.py"
+      ]
     }
   ],
   "document_paths": {
@@ -1433,7 +1442,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "f1347ef67017055215da1180a95fec31ca1851fc",
+  "reviewed_source_commit": "929e1dc4710f525c52a6b27ba488706884b6228c",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -1442,15 +1451,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Determine the length-five jump set off the now-complete quartic defect. Use the two outer quadratic quotients around the middle letter, giving 120-by-100 insertion matrices in each character, with target rank 86. Begin at (3,2) and identify any genuinely new sections.",
+    "immediate_next_action": "Extend the length-five no-new-obstruction result to varying slopes using integer polynomial rank minors and the monomial flip at odd length. On the positive residual divisors test whether rank can drop on special slopes.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/fixed_quintic_locus.tex",
       "sections/uniform_fixed_quartic_support.tex",
-      "sections/fixed_geometric_quartic_locus.tex",
-      "sections/fixed_exchange_isogeny.tex"
+      "sections/fixed_geometric_quartic_locus.tex"
     ],
-    "known_obstruction": "Correct length-four dimensions on the complement do not decide length five or all-degree AS regularity.",
-    "state_of_claim": "The set-theoretic quartic defect is complete on both fixed curves at every ordinary slope. Higher degrees and unrestricted regularity remain open.",
+    "known_obstruction": "A fixed (3,2) quintic calculation does not exclude a generic defect specializing to a chart boundary or to the quartic locus.",
+    "state_of_claim": "The (3,2) geometric fiber has no first obstruction in length five. Uniformity of the quintic test and all-degree regularity remain separate obligations.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
