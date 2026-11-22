@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-22 / v106。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v107。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -196,6 +196,8 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 
 二つの固定直線上の楕円曲線の分岐八点を同時に正則と認証し、単根でも長さ4で非正則な十二表示を得た。[証明と判定](sections/fixed_line_elliptic_curves.tex)
 
+両楕円曲線上の二位置移動は位数2の平行移動で、明示した商曲線に長さ4の障害が降りる。[証明と判定](sections/fixed_exchange_isogeny.tex)
+
 二窓から作る56次元代数で、低次Extの消滅を逆Serre反復が保つ構造条件を探す。
 「全次数を証明してAS認証」「有限障害で排除」「未決定」を分け、有限検査の成功を全AS認証としない。
 正規形の枝、特殊値、枝間同型の条件を証明し、未分類の残余を明示する。
@@ -272,6 +274,8 @@ python3 computations/verify_rank_two_block_recovery.py
 python3 computations/verify_unique_character_frames.py
 python3 computations/verify_flip_character_locus.py
 python3 computations/verify_fixed_line_elliptic_curves.py
+python3 computations/verify_fixed_exchange_isogeny.py
+python3 computations/verify_fixed_quartic_ranks.py
 python3 computations/verify_fixed_branch_regular.py
 python3 computations/verify_klein_elliptic_center.py
 python3 computations/verify_klein_full_rank_configurations.py

@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 106,
+  "version": 107,
   "reviewed_input": {
-    "source_commit": "fad9cae87eba9893744380395763c3542877b52b"
+    "source_commit": "c51d4371961c1004d9d8dfe58879894e90601f14"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For all ordinary slopes the two flip-fixed lines give smooth elliptic double covers with the same explicit j-invariant and eight admissible ramification windows. On a common slope open containing (3,2) all eight are full-rank standard Koszul AS-regular. Twelve explicit simple-root sections fail in length four."
+    "scope": "On both fixed elliptic curves the actual two-position window shift is translation by nonzero two-torsion. A degree-two isogeny and explicit quotient equation reduce the length-four obstruction search. The twelve known generically distinct exclusions descend to six points. All 205 rational affine points on the indicated two split-prime charts have been tested at (3,2) mod 101."
   },
   "checks": [
     {
@@ -15,19 +15,15 @@
       "result": "PASS"
     },
     {
+      "command": "python computations/verify_fixed_exchange_isogeny.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_fixed_quartic_ranks.py",
+      "result": "PASS"
+    },
+    {
       "command": "python computations/verify_fixed_line_elliptic_curves.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_fixed_branch_regular.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_central_window_cutoff.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_flip_character_locus.py",
       "result": "PASS"
     },
     {
@@ -41,16 +37,16 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed the ordinary-slope localization, integral lifting of quartic centers, central freeness, and finite closed projection of the exceptional slope set."
+    "scope": "Derived the quotient function field and four character ranks, distinguished a position shift from an index-preserving isomorphism, and bounded the scope of the enumeration."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Verified both quartic discriminants and j-invariants, ramification-unit resultants, twelve length-four path obstructions, and all 32 modular Artinian quotient profiles at the split prime 307."
+    "scope": "Verified both discriminant-preserving Möbius maps, the signs of the actual matrix-exchange lifts, quotient equations, closure of the twelve sections under exchange, and all 205 affine finite-field test points."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 225,
+      "nc-p3": 226,
       "plan_ja": 7,
       "notes_ja": 14
     },
@@ -66,7 +62,7 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Determine the finite remaining exceptional set on a generic fixed elliptic curve: compute the degree-four rank-drop divisor over its function field, separating the twelve known sections and testing the residual points. Compare the resulting boundary with intrinsic block recovery at the double-marked window.",
+    "On the explicit exchange quotient V^2=R(U)H(U), compute the degeneracy ideals for the four outer-pair rank maps (targets 17,16,16,16). Saturate by the chart denominators and the six known excluded points; test any residual geometric zeros for longer path obstructions or central regularity.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
