@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 71,
+  "version": 72,
   "reviewed_input": {
-    "source_commit": "406bb1a596fef62d1378977974033e403404f31b"
+    "source_commit": "b21dbf665b9ab9b4e579accb9641680d80f09dac"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The generic configurations of the four-dimensional second sheet have precisely the intrinsic Klein group and are pairwise projectively inequivalent; the standard AS window has minimal period four. On the indicated open, four rational invariants up to sixteen character reindexings classify unmarked indexed isomorphisms between regular inputs."
+    "scope": "The complete (2,2,1,1) Klein class of standard AS windows is covered by the bisymmetric chart and the closure of the single four-dimensional second-completion family. Singular cross blocks force bisymmetry for every AS tensor, including every thin zero pattern, and are effectively decided. All unequal completions with invertible cross blocks, even exceptional fibers or vanishing thin coefficients, lie in the same irreducible closure."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_klein_generic_isomorphisms.py",
+      "command": "python computations/verify_klein_doublet_boundary.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_klein_two_doublets.py",
+      "command": "python computations/verify_klein_generic_isomorphisms.py",
       "result": "PASS"
     },
     {
@@ -29,27 +29,32 @@
     {
       "command": "git diff --check",
       "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_klein_period_four_center.py",
+      "result": "PASS"
     }
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked compact specialization of projective isomorphisms including singular-matrix exclusions, graph compatibility, character translations, and residual row/column scalings."
+    "scope": "Reviewed both coordinate rank obstructions, the complementary projection patterns and the odd symmetry in the mixed case. Verified paired thin zeros and adjacent symmetry, irreducibility of the universal completion and limits at determinant ratio one. The special-fiber Hilbert lower bound and central polynomial-module upper bound agree in all degrees; verified depth-two dual exactness."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Both odd point kernels and their reverses, all projective maps over the split prime by frames from 48 coplanar quadruples, and symbolic diagonal invariance of all four coefficients."
+    "scope": "Exhaustive compatible supports with both singular determinant monomials zero, symbolic exceptional determinant, center equation and rational limits at the exceptional ratio. Exact rational quartic center dimensions (3,2,0,0) and four modular Artinian quotient rank tables through degree thirteen."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "main": 176,
+      "main": 178,
       "plan": 6,
       "notes": 13
     },
     "warnings": "No overfull boxes, missing glyphs or unresolved references."
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Rendered and inspected the singular-boundary argument and the final rational AS certificate on pages 151 and 152."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
@@ -58,7 +63,7 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Decide AS regularity on individual closed fibers of the four-dimensional period-four family. Start with normal parameters or a certified PBW presentation; also handle the rank-deficient cross-block boundary and the zero thin entries.",
+    "Lift the five central quartics of the certified rational period-four AS input to the second-completion parameters. Determine the center-rank strata and the parameter locus where four central quartics give the Artinian quotient (1+t+t^2+t^3)^4, then decide the exceptional closed fibers.",
     "Unrestricted nonsymmetric classes."
   ]
 }

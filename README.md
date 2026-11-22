@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-22 / v71。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v72。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -130,6 +130,8 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 
 この四次元族は一般に最小周期4で、三つの二十点配置は互いに射影同値でない。各配置の射影自己同型群は四元群に一致し、明示した開集合では四つの有理不変量と十六通りの置換で印なし同型が決まる。[証明と判定](sections/klein_generic_isomorphisms.tex)
 
+次数次元2,2,1,1の全正則窓を、両対称枝と四次元族の閉包で被覆した。交差行列が退化すると正則性には両対称性が必要となる。薄い次数に零がある場合と、補完の解が無限にある例外値も含む。さらに具体的な有理係数の最小周期4の例で四つの中心四次式を構成し、全次数の正則性を証明した。[証明と判定](sections/klein_doublet_boundary.tex)
+
 二窓から作る56次元代数で、低次Extの消滅を逆Serre反復が保つ構造条件を探す。
 「全次数を証明してAS認証」「有限障害で排除」「未決定」を分け、有限検査の成功を全AS認証としない。
 正規形の枝、特殊値、枝間同型の条件を証明し、未分類の残余を明示する。
@@ -171,6 +173,8 @@ python3 computations/verify_cross_product_parameters.py
 python3 computations/verify_klein_companion_windows.py
 python3 computations/verify_klein_two_doublets.py
 python3 computations/verify_klein_generic_isomorphisms.py
+python3 computations/verify_klein_doublet_boundary.py
+python3 computations/verify_klein_period_four_center.py
 python3 computations/verify_rank_five_pencils.py
 python3 computations/verify_matched_pencils.py
 python3 computations/verify_incidence_cubics.py
