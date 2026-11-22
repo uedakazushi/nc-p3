@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Eleven-term H-jets over Q(z), exact divisibility by H squared and eight unit minors over F9. Independently tested the same ranks with coefficient-wise rational functions."
+    "scope": "Eleven-term H-jets over Q(z), exact divisibility by H squared and eight unit minors over F9. Independently tested the same ranks with coefficient-wise rational functions.",
+    "reproduction": "Verified eight rank-two minors with common-denominator Q(z) jets, reproduced the sixteen block ranks with coefficient-wise Q(z) jets, checked the center-coordinate chart at precisions seven, nine and eleven, and reran the degree-six residue-rank baseline."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript page 264 including the eight minor witnesses, H order four, and the pencil corollary."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "d349d807350217edcb8886eb80a9d74b4c65bbd2",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Propagate the variable-trace four-center cut to length seven. At precision 15 use common-denominator jets over Q(z) and all four starts, or compute the next relations after appending to the proved sixth quotient. The expected seventh profile is (10,10,10,10); continue toward vanishing in length 13. The two sixth-degree characters and the Gaussian genus-two pencil are settled.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "109ff61707135c6337bbe3acdf4cdeb16a55eb31",
+    "commit": "3319f8de13424ac6b9a5a8f4a338f22f53c04f2c",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
