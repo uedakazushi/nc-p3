@@ -92,13 +92,17 @@
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "950caa197a132b810d7909a71d8e18e3978519e2",
+    "scope": "Fetched main, matched the commit and compared all 28 changed paths against remote blobs since c4f2955."
   },
   "open_mathematics": [
     "Extend the generic Hilbert-rank obstruction to all eight zero-quadratics parametrizations, including reducible special fibers. Use the degree-16 test where the early Hilbert functions agree; determine the remaining degree-two corner-simple locus.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
-    "result": "PENDING"
+    "result": "PASS",
+    "commit": "58fba16350e256d26ead784e31626fb16ec7151b",
+    "scope": "Fetched the hub main and compared README.md byte for byte."
   }
 }
