@@ -215,7 +215,7 @@
     },
     {
       "id": "TWENTY-CONORMAL-FULL-COMPONENT",
-      "current_result": "The zero-pairing boundary contains an entire non-AS bilinear curve at (z,lambda)=(3,2), with generic degree-six path dimensions (92,84,85,84), and a non-AS two-parameter sublocus x=z-1 with degree-four dimensions (35,36,36,35).",
+      "current_result": "All eight simultaneous-zero bilinear charts, including both lines and their crossing in every reducible fiber, contain no standard AS window. Over each three-variable function field one starting position has degree-six dimension 92 instead of 84.",
       "current_proof": "sections/zero_pairing_defect.tex",
       "configuration_projection": {
         "result": "The generic recovery degree from one projected configuration is exactly two. The two finite-edge AS windows are the original orientation and its reversal; one ordered first edge determines the extension. At both rational samples the same classification holds. A pencil of quartics with twenty triple points recovers every normalized square root, including the exclusion of degenerate Grassmann candidates.",

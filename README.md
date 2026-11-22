@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-22 / v89。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v90。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -164,7 +164,7 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 
 四つの中心四次式で有限次元商が得られる全ての有限Frobenius候補について、経路長16までの必要十分なAS正則性判定を与えた。[証明と判定](sections/central_window_cutoff.tex)
 
-二つの行列式二次式が恒等的に消える境界で、双一次曲線全体と二変数部分をHilbert関数の超過によってAS分類から除外した。[証明と判定](sections/zero_pairing_defect.tex)
+二つの行列式二次式が恒等的に消える境界で、八表示の全点をAS分類から除外した。長さ6の一般経路次元92は、二直線に分かれる特殊ファイバーでも下界になる。[証明と判定](sections/zero_pairing_defect.tex)
 
 二窓から作る56次元代数で、低次Extの消滅を逆Serre反復が保つ構造条件を探す。
 「全次数を証明してAS認証」「有限障害で排除」「未決定」を分け、有限検査の成功を全AS認証としない。
@@ -226,6 +226,7 @@ python3 computations/verify_minimum_central_characters.py
 python3 computations/verify_central_nodes.py
 python3 computations/verify_central_window_cutoff.py
 python3 computations/verify_zero_pairing_defect.py
+python3 computations/verify_all_zero_pairing_defects.py
 python3 computations/verify_klein_elliptic_center.py
 python3 computations/verify_klein_full_rank_configurations.py
 python3 computations/verify_rank_five_pencils.py

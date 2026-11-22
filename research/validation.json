@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 89,
+  "version": 90,
   "reviewed_input": {
-    "source_commit": "3dd4e14878f3d1efc5b2151ec0ac405ec823f987"
+    "source_commit": "c43c5d157c6ac274b124062a3ed0badbf587b07d"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The zero-pairing boundary contains an entire non-AS bilinear curve at (z,lambda)=(3,2), with generic degree-six path dimensions (92,84,85,84), and a non-AS two-parameter sublocus x=z-1 with degree-four dimensions (35,36,36,35)."
+    "scope": "All eight simultaneous-zero bilinear charts, including both lines and their crossing in every reducible fiber, contain no standard AS window. Over each three-variable function field one starting position has degree-six dimension 92 instead of 84."
   },
   "checks": [
     {
@@ -15,11 +15,15 @@
       "result": "PASS"
     },
     {
+      "command": "python computations/verify_all_zero_pairing_defects.py",
+      "result": "PASS"
+    },
+    {
       "command": "python computations/verify_zero_pairing_defect.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_central_window_cutoff.py",
+      "command": "python computations/verify_klein_zero_quadratics.py",
       "result": "PASS"
     },
     {
@@ -29,51 +33,15 @@
     {
       "command": "git diff --check",
       "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_central_nodes.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_single_configuration_projection.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_configuration_quartic_pencil.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_configuration_intersections.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_quartic_euler_derivations.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_quartic_center_order.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_symmetric_center.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_minimum_central_characters.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_two_window_ext.py",
-      "result": "PASS"
     }
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked rational parameter inversion, the admissible graph closure, complete insertion of quadratic relations, and specialization of the path-dimension excess."
+    "scope": "Primitive irreducible total bilinear family, admissible pivots, all insertions of relations and semicontinuity on special reducible fibers."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact path quotients over rational function fields in one and two parameters, with independent exact specialization through length six."
+    "scope": "All eight independent exact Hilbert computations over Q(z,lambda,x), each with dimensions 1,4,10,20,35,56,92. Reproduced the earlier boundary and bilinear tests."
   },
   "tex": {
     "result": "PASS",
@@ -85,24 +53,18 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Rendered pages 176 and 178 in the v88 build preceding the final boundary section."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "950caa197a132b810d7909a71d8e18e3978519e2",
-    "scope": "Fetched main, matched the commit and compared all 28 changed paths against remote blobs since c4f2955."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Extend the generic Hilbert-rank obstruction to all eight zero-quadratics parametrizations, including reducible special fibers. Use the degree-16 test where the early Hilbert functions agree; determine the remaining degree-two corner-simple locus.",
-    "Unrestricted nonsymmetric classes."
+    "Solve the one-zero cases P=0 or Q=0 by eliminating the two complementary matrix entries; on the four exceptional slopes test length-seven paths and extend proven defects to admissible specializations. Study the remaining degree-two corner simples of the general center."
   ],
   "hub_update": {
-    "result": "PASS",
-    "commit": "58fba16350e256d26ead784e31626fb16ec7151b",
-    "scope": "Fetched the hub main and compared README.md byte for byte."
+    "result": "PENDING"
   }
 }
