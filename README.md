@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-22 / v79。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v80。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -146,6 +146,8 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 
 行列式二次式が両方とも消える八種類の基底を決定した。各ファイバーは一つの双一次式で定まり、全て楕円曲線族の閉包に入る。これで薄い成分と主ブロックが非退化な範囲の階数条件を覆った。[証明と判定](sections/klein_zero_quadratics.tex)
 
+十五次元成分では一位置の二十点配置だけで一般の窓が有限候補に絞られる。逆向きの窓も同じ配置を持つため復元次数は偶数である。階数10の点で偶位置の二つの平方根が重なる局所長さは2となる。[証明と判定](sections/single_configuration_projection.tex)
+
 二窓から作る56次元代数で、低次Extの消滅を逆Serre反復が保つ構造条件を探す。
 「全次数を証明してAS認証」「有限障害で排除」「未決定」を分け、有限検査の成功を全AS認証としない。
 正規形の枝、特殊値、枝間同型の条件を証明し、未分類の残余を明示する。
@@ -157,10 +159,10 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 ## 再現
 
 Python 3 と SymPy 1.14.0。LuaLaTeX・latexmk・luatexja・Harano Ajiフォントを用いる。
-すべてリポジトリのルートから実行する。
+楕円曲線の関数体と二十点配置の行列計算には python-flint 0.9.0 も使う。すべてリポジトリのルートから実行する。
 
 ~~~sh
-python3 -m pip install -r requirements.txt
+python3 -m pip install -r requirements-symbolic.txt
 python3 scripts/check_project.py
 python3 computations/verify_exterior_trace.py
 python3 computations/verify_period_witness.py
@@ -196,6 +198,7 @@ python3 computations/verify_klein_exceptional_pairings.py
 python3 computations/verify_unrestricted_doublet_deformations.py
 python3 computations/verify_twenty_conormal_identities.py
 python3 computations/verify_klein_zero_quadratics.py
+python3 computations/verify_single_configuration_projection.py
 python3 computations/verify_klein_elliptic_center.py
 python3 computations/verify_klein_full_rank_configurations.py
 python3 computations/verify_rank_five_pencils.py

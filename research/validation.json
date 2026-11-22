@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 79,
+  "version": 80,
   "reviewed_input": {
-    "source_commit": "44566b7c405b4f5754d0ec84431032ade4513d66"
+    "source_commit": "15bba1ec2e5b144119f3eda9eb86dc2dd60ebbd7"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The full nondegenerate Klein (2,2,1,1) rank chart, including all coefficient-zero determinant fibers, is covered by the elliptic closure and the four exceptional presentations. If both determinant quadratics vanish identically the normalized base has eight explicit types, each with one bilinear equation for the entire fiber; all lie in the elliptic closure."
+    "scope": "On the fifteen-dimensional unmarked component, one projected twenty-point configuration determines generically finitely many windows, of even function-field degree by reversal. The embedded first-edge and first-configuration images have dimensions 45 and 30. All four normalized square roots are isolated and reduced at the full-rank sample. At the symmetric sample the even root has exact local length two, and the odd roots are reduced."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_klein_zero_quadratics.py",
+      "command": "python computations/verify_single_configuration_projection.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_twenty_conormal_identities.py",
+      "command": "python computations/verify_klein_zero_quadratics.py",
       "result": "PASS"
     },
     {
@@ -29,24 +29,69 @@
     {
       "command": "git diff --check",
       "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_klein_center_lift.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_klein_generic_quartics.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_klein_elliptic_completion.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_klein_full_rank_configurations.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_klein_exceptional_pairings.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_klein_elliptic_center.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_unrestricted_doublet_deformations.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_twenty_conormal_identities.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_klein_two_doublets.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_klein_generic_isomorphisms.py",
+      "result": "PASS"
     }
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed primitiveness, irreducibility and specialization on the two root hypersurfaces; saturated vanishing systems and local linear solving on all components of each residual fiber."
+    "scope": "Reviewed the fixed-edge Jacobian and fixed-configuration incidences, reversal invariance and generic freeness on the fiber, characteristic-zero lower tangent bound at collision, and exact second-order obstruction."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Sixteen saturated Groebner systems over the rationals, eight unit ideals and eight parametrized residual fibers, coefficientwise bilinear proportionality and localized leading units."
+    "scope": "Exact first-edge tangents, ranks of 60 by 96 first-coordinate incidence matrices, all four square-root Jacobians, and the nonzero quadratic obstruction at the rank-ten root.",
+    "reproduction": "SymPy 1.14.0 and python-flint 0.9.0; computations over rational and function fields, with split primes 12619 and 2657 for fiber certificates."
   },
   "tex": {
     "result": "PASS",
-    "main_pages": 189,
-    "plan_pages": 6,
-    "notes_pages": 14
+    "pages": {
+      "nc-p3": 191,
+      "plan_ja": 6,
+      "notes_ja": 14
+    },
+    "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected rendered manuscript pages 160 and 164, including the new component proof and configuration recovery."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
@@ -55,7 +100,7 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "On the fifteen-dimensional component determine whether the first edge or its single projected twenty-point scheme fixes an extension up to finitely many choices. Determine regular closed fibers using quartic centers, and analyze cross-block and conormal boundaries.",
+    "Determine the exact generic degree over a single projected configuration. Normalize Q=A^2 and Q-perp, enumerate isolated Grassmann square roots up to coordinate signs, reject pairs by the cubic intersection, then recover the two-window extension. Determine the quartic center and effective regularity on the full component and the remaining singular rank charts.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
