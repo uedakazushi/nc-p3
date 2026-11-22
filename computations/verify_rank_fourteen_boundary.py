@@ -126,10 +126,11 @@ def leading(poly, t0):
     return order, int(poly(t0))
 
 
-def ramified_limit(tensor, t0):
+def ramified_coefficients(tensor, t0):
     coefficients = {}
     for word, value in tensor.items():
         vq, lc = leading(value.denominator, t0)
+        assert lc % 101
         pairs = [leading(g, t0) for g in value.coordinates]
         terms = []
         for sheet in range(2):
@@ -140,11 +141,18 @@ def ramified_limit(tensor, t0):
                     term[1] if term is not None and term[0] == v else 0 for term in pair
                 )
                 order = 2 * (v - vq) + sheet * (1 if t0 is not None else -3)
-                terms.append((order, QQ_I(a, b) / QQ_I(lc)))
+                terms.append((order, QQ_I(a, b) / QQ_I(lc), sheet))
         if terms:
             coefficients[word] = min(terms, key=lambda term: term[0])
-    minimum = min(order for order, c in coefficients.values())
-    return {word: c for word, (order, c) in coefficients.items() if order == minimum}
+    return coefficients
+
+
+def ramified_limit(tensor, t0):
+    coefficients = ramified_coefficients(tensor, t0)
+    minimum = min(order for order, c, sheet in coefficients.values())
+    return {
+        word: c for word, (order, c, sheet) in coefficients.items() if order == minimum
+    }
 
 
 def cubic_dimensions(rules):

@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 119,
+  "version": 120,
   "reviewed_input": {
-    "source_commit": "475379c442346a6a245a133a9c0a203276e8022a"
+    "source_commit": "079067616ed83e54d2d9ede21d714c4f7f06c281"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All 48 geometric boundary parameters of the projective rank-fourteen tensor in the homogeneous frame are classified: 32 give standard Koszul AS-regular windows of opposite rank 14, and 16 fail in degree two or three. Any exceptional ordinary characteristic-zero point specializes at every place over 101 to one of six base values: infinity, 1, -1, -3, 19, 80."
+    "scope": "All ordinary characteristic-zero windows on the two rank-fourteen components with any reduction at 101 outside t=19,80 are standard Koszul and AS regular, including all four ramification disks and infinity. A hypothetical bad closed point has primitive minimal polynomial of unchanged degree modulo 101, supported only at 19 and 80."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fourteen_boundary.py",
+      "command": "python computations/verify_rank_fourteen_ramified_disks.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fourteen_geometric_reduction.py",
+      "command": "python computations/verify_rank_fourteen_boundary.py",
       "result": "PASS"
     },
     {
@@ -33,12 +33,11 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed specialization of the raw tensor across singular frames, generic and residual dimension inequalities, all branches of the double cover and the distinction between failure of the fixed projective limit and failure in the generic fiber."
+    "scope": "Reviewed ramified base changes, diagonal action at the four generator positions, parity of leading terms and integral expansions before specializing at 101. Used degreewise lower bounds and the residual central quotient to lift all-degree regularity."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Evaluated all four choices in finite extensions of F101 above each of four quadratic factors; verified raw tensor ranks, centers and all four central quotient profiles. Computed exact projective initial tensors and degree-three paths over Q(i).",
-    "reproduction": "SymPy 1.14.0 and python-flint 0.9.0; integral univariate polynomial arithmetic on the elliptic function field and exact split-prime rank certificates."
+    "scope": "Verified exact valuations of all tensor entries at the four ramification points, integral unit denominators, 32 surviving entries at each, and all eight residual central cuts through degree thirteen at all four starts."
   },
   "tex": {
     "result": "PASS",
@@ -50,19 +49,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected the boundary classification, degree-three dimensions and ramified rank table on pages 213 and 214 of the 240-page manuscript."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "93311b3398995bf219a2bb1b9244127ae4d11581",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Resolve the six remaining 101-adic boundary values for ordinary characteristic-zero lifts. The projective tensor in the given homogeneous frame fails at the central points, so that failure alone gives no obstruction to nearby ordinary windows. Try a valuation-dependent change of generators on the four positions, or saturated Pluecker coordinates of the quadratic and quartic subspaces; compare initial ranks in characteristic zero and modulo 101. Alternatively recover the horizontal Fitting ideals by modular reconstruction over Q(i)[t].",
+    "Resolve the two unramified 101-adic disks t=19 and 80, lying above t^2+2t+5. In the unmodified homogeneous frame their rank-four projective limits fail degree two. Compare the saturated limiting six-dimensional relation spaces (Pluecker coordinates) rather than the image of the limiting tensor, or use a nondiagonal change of generators adapted to those rank-four tensors. The four ramified disks already admit the certified weights, and require no further tests. Another approach is modular reconstruction of the actual horizontal Fitting ideals constrained by the two allowed roots.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

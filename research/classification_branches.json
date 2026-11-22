@@ -243,7 +243,8 @@
       "uniform_rank_fourteen_center": "sections/rank_fourteen_center.tex",
       "rank_fourteen_central_cut": "sections/rank_fourteen_central_cut.tex",
       "rank_fourteen_geometric_reduction": "sections/rank_fourteen_geometric_reduction.tex",
-      "rank_fourteen_tensor_boundary": "sections/rank_fourteen_boundary.tex"
+      "rank_fourteen_tensor_boundary": "sections/rank_fourteen_boundary.tex",
+      "rank_fourteen_ramified_disks": "sections/rank_fourteen_ramified_disks.tex"
     },
     {
       "id": "UNRESTRICTED-SINGLY-SYMMETRIC-14",
