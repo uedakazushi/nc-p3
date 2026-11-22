@@ -12,7 +12,7 @@ from verify_rank_fourteen_geometric_reduction import Scalar, verify_central_prof
 P = 101
 
 
-def graded_profile(windows, unit):
+def graded_profile(windows, unit, invariant_pairs=((1, 3, 5), (2, 7, 11))):
     """Use centrality to impose the four quartics just at the initial position."""
     basis, image = field_paths(windows, unit)
     assert all(
@@ -23,7 +23,7 @@ def graded_profile(windows, unit):
     for h, d in enumerate((3, 2, 0, 0)):
         rows, width = central_equations(basis, image, h)
         assert width - len(echelon(rows)) == d
-    sections = central_sections(basis, image, unit, ((1, 3, 5), (2, 7, 11)))
+    sections = central_sections(basis, image, unit, invariant_pairs)
 
     def reduce(n, h, rows, size):
         piv = echelon(rows)

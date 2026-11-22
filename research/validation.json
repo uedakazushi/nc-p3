@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 152,
+  "version": 153,
   "reviewed_input": {
-    "source_commit": "d44dafef3034939d545eee152e687f925d636f0e"
+    "source_commit": "878a0a10f5f2ecfe77a893e57136521d8d1e2b47"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For every ordinary positive-fixed rank-fifteen window, three explicit scalars (x,p,q) are a necessary and sufficient indexed-isomorphism test, including every special parameter and both displays. Exact intrinsic trace, oriented-cubic and fifth contractions recover the three scalars with a denominator nonzero throughout. The shifted opposite fixes precisely U=9; the ordinary opposite fixes precisely ramification."
+    "scope": "On the regularity plane (x,y), every ordinary rank-fifteen characteristic-zero lift of every prime-field residue with y nonzero in characteristics 3, 5 and 7 is standard Koszul left/right AS regular, with rank-256 freeness over four central quartics. The 68 quotient residue points do not require prime-field multiplier or quartic-root residues."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_global_invariants.py",
+      "command": "python computations/verify_rank_fifteen_quotient_residues.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_rational_quotient.py",
+      "command": "python computations/verify_rank_fifteen_global_invariants.py",
       "result": "PASS"
     },
     {
@@ -33,12 +33,11 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked trace-dual Pauli eigenvalues, the signs of the first-factor transpose and oriented cubics, the everywhere nonzero cubic denominator and degree invariance of every ratio."
+    "scope": "Checked unit constants, lifting of inseparable residues, and freedom of choosing a formal representative of the same characteristic-zero regularity plane point."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact trace and spectral identities, odd fifth contraction and input-minus-output cubic identity modulo five quadrics, independent direct finite-field Gram contractions on four windows.",
-    "reproduction": "Verified all symbolic contractions modulo the five quadrics and checked the intrinsic formulas against direct Gram tensors at four residues. Re-ran the rational quotient verifier."
+    "scope": "All 68 prime-field plane points, cubic and quadratic root lifts, explicit cyclic adjacent relations and four-start central profiles through length thirteen."
   },
   "tex": {
     "result": "PASS",
@@ -50,19 +49,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected manuscript pages 251 and 252 including denominator control, fifth and cubic identities and the shifted-opposite locus."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "729fbc3139e5a7d3a5ea59090e7253b0a40e3e63",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "The positive-fixed ordinary rank-fifteen indexed comparison is settled uniformly. Focus on the remaining isolated all-degree regularity candidates in the (x,y) plane away from the four certified curves: use the normalized Pauli tensor for direct cyclic relations, quotient cuts and Fitting loci, or advance coverage of the unrestricted nonsymmetric branch.",
+    "Determine the remaining isolated all-degree regularity candidates in the (x,y) plane outside the four certified curves and the certified residue neighborhoods. Use the cubic v(x-4v)^2=y and direct tensor adjacent images to compute relative sixth insertion and later central-cut Fitting supports over curves or the plane. Indexed comparison on the ordinary positive-fixed rank-fifteen locus is complete.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

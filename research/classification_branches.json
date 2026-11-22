@@ -276,7 +276,8 @@
       "rank_fifteen_parameter_orbits": "sections/rank_fifteen_parameter_orbits.tex",
       "rank_fifteen_regular_orbits": "sections/rank_fifteen_regular_orbits.tex",
       "rank_fifteen_rational_quotient": "sections/rank_fifteen_rational_quotient.tex",
-      "rank_fifteen_global_invariants": "sections/rank_fifteen_global_invariants.tex"
+      "rank_fifteen_global_invariants": "sections/rank_fifteen_global_invariants.tex",
+      "rank_fifteen_quotient_residues": "sections/rank_fifteen_quotient_residues.tex"
     },
     {
       "id": "UNRESTRICTED-SINGLY-SYMMETRIC-14",
