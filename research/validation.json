@@ -41,7 +41,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact degree-four insertion ranks on sixteen rational charts, four rank-four adjacent images, all exceptional rank-fourteen roots and four-start cuts. Checked 33 reduced Fitting-chart factors for the rank-fourteen center at 101."
+    "scope": "Exact degree-four insertion ranks on sixteen rational charts, four rank-four adjacent images, all exceptional rank-fourteen roots and four-start cuts. Checked 33 reduced Fitting-chart factors for the rank-fourteen center at 101.",
+    "reproduction": "Verified sixteen characteristic-zero function-field charts, the rank-four tensors, all 384 exceptional root choices at 101, the quantum limit and all 52 ordinary center tests from 33 reduced minor factors."
   },
   "tex": {
     "result": "PASS",
@@ -53,13 +54,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected pages 256 and 257, including the boundary strata table, the degree-four obstruction and the equality-wall proof."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "ff15c3148a45822a7dfd7f6329390253ab6e3fa0",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "On the interior p=0 curve, resolve the characteristic-three H=0 disk by saturating the rank-nine degree-four jump. Use the normalized K=0 slice t=i s and a unit root n near H=0; track the extra quartic relation before testing centers. In the two-dimensional plane the complementary valuation sector val(y)>2 val(x) and other isolated candidates remain.",
@@ -67,7 +71,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "8f0e336b5c16c3e8c8d151e0d98990cd06b3006b",
+    "commit": "8e2c421dc7309340526e60c5e922cce9fb623b37",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
