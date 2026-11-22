@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-22 / v58。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v59。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -106,6 +106,8 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 
 隣接階数6・反対階数8で両反対核が滑らかな四次曲線を切る反転窓では、純テンソル関係の不在が標準AS正則性の必要十分条件となり、全AS点が楕円鉛筆の表示を持つ。印付き零点の接空間次元0・1・2を全て扱った。さらに両対称テンソルから得る標準AS反転窓は全て楕円鉛筆の閉包に属し、反対階数は8以下である。階数9・10は反対核の因子型によらず排除された。階数8のAS点では片側の反対核が滑らかなら他側も同じ滑らかな曲線を切り出す。[変形と判定式](sections/marked_gram_smoothing.tex)
 
+片側の極限モデルが整な節点・尖点四次曲線のときにも階数7のAS窓を排除した。非可逆な束の極限では他側はねじれ三次曲線と割線または接線になる。この候補の基点自由な全鉛筆で二次双対の有限Frobenius性と同型判定を得た。節点・尖点の各一例は六次まで標準次元で、七次で121となり標準値120を超える。残りの鉛筆のKoszul性は未決定である。[正規化模型と三次計算](sections/integral_apolar_limits.tex)
+
 二窓から作る56次元代数で、低次Extの消滅を逆Serre反復が保つ構造条件を探す。
 「全次数を証明してAS認証」「有限障害で排除」「未決定」を分け、有限検査の成功を全AS認証としない。
 正規形の枝、特殊値、枝間同型の条件を証明し、未分類の残余を明示する。
@@ -134,6 +136,7 @@ python3 computations/verify_additive_pencil.py
 python3 computations/verify_ribbon_trace.py
 python3 computations/verify_nonreduced_polarizations.py
 python3 computations/verify_smooth_apolar_defect.py
+python3 computations/verify_conductor_pencil.py
 python3 computations/verify_rank_five_pencils.py
 python3 computations/verify_matched_pencils.py
 python3 computations/verify_incidence_cubics.py

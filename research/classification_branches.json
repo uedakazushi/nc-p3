@@ -252,11 +252,12 @@
     "coverage": "Dense open of reversible component, including additional special AS fibers, without imposing finite point correspondences.",
     "regularity": "All smooth genus-one data, integral nodal/cuspidal data and cyclic rational polygons with equal positive multidegrees, provided the pencil has no base point.",
     "isomorphism": "For L != M the two embedded apolar curves, their unique graph and the pencil recover ordered data.",
-    "residual": "Degenerations with only singular models, especially opposite rank seven and rank-eight singular pairs, and non-bisymmetric components.",
+    "residual": "Koszulity of the conductor pencils, rank seven with no surviving integral model, other singular-only limits and non-bisymmetric components.",
     "reduced_additive_boundary": "All positive-degree multiple-point cases are AS exactly for equal multidegrees; ordered recognition for distinct bundles, m=2,3,4 quotient dimensions 13-m.",
     "ribbon": "Smooth conic ribbon: all fibers AS and complete ordered recognition for distinct bundles, quotient dimension nine.",
     "reverse_recognition": "Complete for bisymmetric adjacent-six/opposite-eight smooth-apolar tensors: standard AS iff the first relation six-plane avoids the Segre, and all such AS tensors have a unique elliptic pencil presentation up to ordered curve isomorphism.",
     "nonreduced_boundary": "All positive-degree pencils on nonreduced quartic complete intersections are AS; unequal bundles give ordered scheme-theoretic reconstruction. See sections/nonreduced_quartic_pencils.tex.",
-    "higher_rank": "All bisymmetric adjacent-six AS tensors lie in the elliptic closure. Ranks nine and ten are excluded without further assumptions. A single smooth rank-eight apolar quartic suffices for a complete pure-relation and evaluation-rank criterion and forces the other apolar to be isomorphic."
+    "higher_rank": "All bisymmetric adjacent-six AS tensors lie in the elliptic closure. Ranks nine and ten are excluded without further assumptions. A single smooth rank-eight apolar quartic suffices for a complete pure-relation and evaluation-rank criterion and forces the other apolar to be isomorphic.",
+    "integral_limit": "With an integral limiting quartic, rank seven is excluded. A noninvertible second sheaf yields the binary-cubic conductor model; all basepoint-free fibers have a quadratic Frobenius dual and ordered recognition, and explicit fibers exceed the AS Hilbert function in degree seven. See sections/integral_apolar_limits.tex."
   }
 }

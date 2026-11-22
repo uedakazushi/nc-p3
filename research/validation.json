@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 58,
+  "version": 59,
   "reviewed_input": {
-    "source_commit": "0d6e8af57d17449174a974b417df2cd4453ed3c3"
+    "source_commit": "45391cf30459f26510c3d6bb07e52336df4f784e"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All bisymmetric adjacent-six AS tensors are in the elliptic closure; unconditional rank-nine/ten exclusion and single-smooth-apolar recognition."
+    "scope": "Integral singular models, the two conductor alternatives, all-fiber Frobenius and ordered reconstruction, with exact degree-seven non-AS exclusions."
   },
   "checks": [
     {
@@ -37,23 +37,27 @@
     {
       "command": "python computations/verify_marked_opposite_rank.py",
       "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_conductor_pencil.py",
+      "result": "PASS"
     }
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed the rectangular zero growth obstruction, dependent-net dimension bounds, the maximal isotropic marked fiber and the two cases for the extreme exponents of the second section lattice on a smooth source."
+    "scope": "Reviewed specialization of dual section ideals, the conductor pencil product and lattice bounds, trace ranks on the two-component curve, the alternating cubic on the exceptional line, quartic and quintic rigidity, and the degree-seven growth obstruction."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Three exact smooth elliptic marked fibers with defects 2,1,0, both flattening ranks, relative Jacobian rank 27 and the radical matrices; exact cofactor differential ranks 9,9,8 and remaining coordinate. Separate nonreduced and marked-net checks in this run."
+    "scope": "Exact rational cubic hulls 12 and 13, window overlaps 4 and 4 and ranks 6/8 in both normalized conductor models. Both sample path quotients give dimensions 120 and 121 at the two starts in degree seven. Earlier marked, ribbon and nonreduced checks were also executed in this run."
   },
   "tex": {
     "result": "PASS",
-    "scope": "Main 144 pages, plan 6 and notes 13. Final logs have no overfull boxes, missing characters or unresolved references."
+    "scope": "Main 147 pages, plan 6 and notes 13. No overfull boxes, missing characters or unresolved references in final logs."
   },
   "visual_inspection": {
     "result": "PASS",
-    "scope": "Inspected page 111 of the nonreduced quartic proof during this run."
+    "scope": "Inspected rendered page 111 of v56 and page 120 of the v59 principal manuscript (conductor pencil Frobenius proof)."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT",
@@ -63,6 +67,6 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Rank-seven and singular-only rank-eight limits, regularity beyond the bisymmetric class and other classification branches."
+    "Whole conductor families versus the seventh-degree obstruction, other rank-seven/singular rank-eight limits, and non-bisymmetric windows."
   ]
 }

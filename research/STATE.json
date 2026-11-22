@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 58,
+  "version": 59,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -895,6 +895,15 @@
         "computations/verify_smooth_apolar_defect.py",
         "computations/verify_marked_opposite_rank.py"
       ]
+    },
+    {
+      "id": "INTEGRAL-APOLAR-CONDUCTOR-LIMIT",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "An AS limit retaining an integral nodal/cuspidal quartic pencil has opposite rank six or eight. Noninvertible second sheaves give precisely the necessary binary quartic hyperplane times binary cubics model, with twisted cubic plus secant/tangent on the opposite side. Every basepoint-free conductor pencil has a quadratic finite Frobenius dual, complete ordered recognition, and overlaps four on both sides. Explicit nodal and cuspidal pencils fail standard AS in degree seven (121 rather than 120) despite a correct Hilbert function through degree six. All-fiber Koszulity or its failure remains to be decided.",
+      "proof": "sections/integral_apolar_limits.tex",
+      "verification": [
+        "computations/verify_conductor_pencil.py"
+      ]
     }
   ],
   "document_paths": {
@@ -958,7 +967,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "0d6e8af57d17449174a974b417df2cd4453ed3c3",
+  "reviewed_source_commit": "45391cf30459f26510c3d6bb07e52336df4f784e",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -967,15 +976,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "For an integral nodal or cuspidal limiting source quartic, extend the other degree-four bundle as a rank-one torsion-free sheaf. In the noninvertible case test A (a hyperplane in binary quartics at the conductor) times all binary cubics modulo a pencil of binary septics, studying the two cubic overlaps and the opposite kernels. Determine whether rank seven or new singular rank-eight AS windows occur.",
+    "immediate_next_action": "On the nodal and cuspidal conductor pencil spaces in sections/integral_apolar_limits.tex, determine whether the B-start excess of one path in degree seven is universal. Work over the function field of the pencil or exhibit a structural syzygy, using the extra skew cubic on the exceptional line; exclude a full stratum or certify a surviving AS fiber. In parallel the remaining rank-seven problem has only reducible or nonreduced limiting curve pencils.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/marked_gram_smoothing.tex",
-      "sections/elliptic_reversible_pencil.tex",
-      "sections/nonreduced_quartic_pencils.tex"
+      "sections/integral_apolar_limits.tex",
+      "computations/verify_conductor_pencil.py",
+      "sections/marked_gram_smoothing.tex"
     ],
     "known_obstruction": "No uniform finite Koszul/Serre cutoff or effective global regularity criterion is proved; finite-dimensional B and seven-degree tests do not suffice. Other low-rank components and high-rank witness-free regions remain unclassified.",
-    "state_of_claim": "All bisymmetric AS tensors lie in the elliptic closure, of opposite rank at most eight. At rank eight with one smooth apolar, all AS points have unique smooth elliptic data and the other apolar is isomorphic. Positive-degree pencil inputs on (2,2) curves are covered. Singular-only degenerations, especially rank seven, and non-bisymmetric branches remain open.",
+    "state_of_claim": "All bisymmetric AS tensors are in the elliptic closure and have opposite rank at most eight. A surviving integral special quartic excludes rank seven; the new conductor model is uniformly finite Frobenius, with two certified non-AS degree-seven examples. Universal conductor regularity, rank seven with purely reducible/nonreduced models and non-bisymmetric windows remain open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
