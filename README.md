@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-22 / v85。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v86。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -158,6 +158,8 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 
 片側対称因子では全中心は二次超曲面の二重被覆で、四次分岐式を持つ。四次中心元の積写像の行列式がこの因子で一重に消える。[証明と判定](sections/symmetric_center_cover.tex)
 
+十五次元成分の一般窓で、射影中心には最小単純加群に対応する相異なる二十の特異点がある。各指標上の単純加群は二種類であり、滑らかな軌跡とAzumaya軌跡は一致する。[証明と判定](sections/minimum_central_characters.tex)
+
 二窓から作る56次元代数で、低次Extの消滅を逆Serre反復が保つ構造条件を探す。
 「全次数を証明してAS認証」「有限障害で排除」「未決定」を分け、有限検査の成功を全AS認証としない。
 正規形の枝、特殊値、枝間同型の条件を証明し、未分類の残余を明示する。
@@ -214,6 +216,7 @@ python3 computations/verify_configuration_intersections.py
 python3 computations/verify_quartic_euler_derivations.py
 python3 computations/verify_quartic_center_order.py
 python3 computations/verify_symmetric_center.py
+python3 computations/verify_minimum_central_characters.py
 python3 computations/verify_klein_elliptic_center.py
 python3 computations/verify_klein_full_rank_configurations.py
 python3 computations/verify_rank_five_pencils.py

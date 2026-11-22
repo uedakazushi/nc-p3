@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 85,
+  "version": 86,
   "reviewed_input": {
-    "source_commit": "398d3b88b3f356927beb40f2d46a374969c848b5"
+    "source_commit": "90a0af5d68b852d86b815ffd47e1b593251f4b88"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Near the rational point of the even-symmetric divisor the full center is a flat weighted (2,4) complete intersection. The determinant of Sym^2 Z4 -> Z8 cuts out the divisor with multiplicity one. On it the center is a double cover of a quadric branched in a quartic; off it the fifth quartic generator gives a quartic hypersurface. All fibers near the divisor are standard AS regular, geometrically normal central orders of PI degree 16."
+    "scope": "On the normal-center open the reduced trace identifies the order with its center dual and the Azumaya locus equals the smooth locus. Every simple over the punctured center has constant vertex dimension 1,2,3 or 4. Generically the twenty minimal simples give distinct singular points of the projective quartic center. Each such character supports exactly one additional simple, of total dimension eight or twelve."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_symmetric_center.py",
+      "command": "python computations/verify_minimum_central_characters.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_quartic_center_order.py",
+      "command": "python computations/verify_symmetric_center.py",
       "result": "PASS"
     },
     {
@@ -33,16 +33,16 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked unit pivot transfer of the transverse derivative, sign decomposition, the direct summand of the center, weighted presentation, and the proper plane section."
+    "scope": "Checked the graded Frobenius trace shift, separability over smooth central points, four-period Hilbert divisibility, integral tangent lift, rigidity after fixing degree scale, and primitive-idempotent rank sum."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Reversal eigenspaces and multiplication in paths through length nine; filtered central fibers through length sixteen; smooth conic with eight transverse branch points; nonzero transverse derivative over Z/1009^2."
+    "scope": "Rational first-order tangent across all four characters, paths and quartic center modulo 2657 squared, unique lifts of twenty four-cycles and pairwise distinct projective evaluations."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 199,
+      "nc-p3": 202,
       "plan_ja": 6,
       "notes_ja": 14
     },
@@ -58,7 +58,7 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Classify minimum-dimensional simple modules of the PI order over the punctured center and their central characters, and implement a finite AS test for central-finite boundary charts.",
+    "Determine the larger simple degree at the twenty separated singular characters, bound other singular strata, and give a terminating commutative-module AS test for the central-finite boundary.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

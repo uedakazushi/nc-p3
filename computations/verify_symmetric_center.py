@@ -21,13 +21,13 @@ from verify_unrestricted_doublet_deformations import (
 PRIME = 1009
 
 
-def unit_reduce(rows, modulus):
+def unit_reduce(rows, modulus, prime=PRIME):
     """Eliminate only unit pivots over Z/p or Z/p², retaining the residual rows."""
     table = rows.copy() % modulus
     pivots = []
     for j in range(table.shape[1]):
         i = len(pivots)
-        candidates = np.flatnonzero(table[i:, j] % PRIME)
+        candidates = np.flatnonzero(table[i:, j] % prime)
         if not len(candidates):
             continue
         k = i + candidates[0]
@@ -40,8 +40,8 @@ def unit_reduce(rows, modulus):
     return table, pivots
 
 
-def free_reduction(rows, modulus):
-    table, pivots = unit_reduce(rows, modulus)
+def free_reduction(rows, modulus, prime=PRIME):
+    table, pivots = unit_reduce(rows, modulus, prime)
     assert not table[len(pivots) :].any()
     free = [j for j in range(rows.shape[1]) if j not in pivots]
     quotient = np.zeros((len(free), rows.shape[1]), dtype=np.int64)
@@ -50,26 +50,28 @@ def free_reduction(rows, modulus):
     return quotient, free
 
 
-def graded_paths(relations, modulus, bound):
-    basis = {(i, 0, h): [()] if h == 0 else [] for i, h in product(K, repeat=2)}
+def graded_paths(relations, modulus, bound, prime=PRIME, characters=True):
+    grades = K if characters else (0,)
+    letters = list(K) if characters else [0] * 4
+    basis = {(i, 0, h): [()] if h == 0 else [] for i, h in product(K, grades)}
     prefix = {}
 
     @cache
     def image(i, word):
         if not word:
             return np.ones(1, dtype=np.int64)
-        key = (i, len(word), reduce(xor, word), word[0])
+        key = (i, len(word), reduce(xor, (letters[j] for j in word)), word[0])
         return prefix[key] @ image((i + 1) % 4, word[1:]) % modulus
 
     for n in range(1, bound + 1):
-        for i, h in product(K, repeat=2):
-            blocks = [basis[(i + 1) % 4, n - 1, h ^ j] for j in K]
+        for i, h in product(K, grades):
+            blocks = [basis[(i + 1) % 4, n - 1, h ^ letters[j]] for j in K]
             words = [(j,) + w for j, block in enumerate(blocks) for w in block]
             offset = np.cumsum([0] + list(map(len, blocks)))
             rows = []
             if n >= 2:
                 for rule, _ in relations[i]:
-                    grade = reduce(xor, next(iter(rule)))
+                    grade = reduce(xor, (letters[j] for j in next(iter(rule))))
                     for tail in basis[(i + 2) % 4, n - 2, grade ^ h]:
                         row = np.zeros(len(words), dtype=np.int64)
                         for (j, k), c in rule.items():
@@ -78,14 +80,15 @@ def graded_paths(relations, modulus, bound):
                             )
                         rows.append(row % modulus)
             table = np.array(rows, dtype=np.int64).reshape(len(rows), len(words))
-            proj, free = free_reduction(table, modulus)
+            proj, free = free_reduction(table, modulus, prime)
             basis[i, n, h] = [words[j] for j in free]
             for j in K:
                 prefix[i, n, h, j] = proj[:, offset[j] : offset[j + 1]]
     for i in K:
         for n in range(bound + 1):
             assert (
-                sum(len(basis[i, n, h]) for h in K) == (n + 1) * (n + 2) * (n + 3) // 6
+                sum(len(basis[i, n, h]) for h in grades)
+                == (n + 1) * (n + 2) * (n + 3) // 6
             )
     return basis, image
 
