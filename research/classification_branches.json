@@ -283,7 +283,8 @@
       "rank_twelve_quantum_limit": "sections/rank_twelve_quantum_limit.tex",
       "pauli_projective_boundary": "sections/pauli_projective_boundary.tex",
       "rank_fifteen_cubic_zero_disk": "sections/rank_fifteen_cubic_zero_disk.tex",
-      "rank_fifteen_x_zero": "sections/rank_fifteen_x_zero.tex"
+      "rank_fifteen_x_zero": "sections/rank_fifteen_x_zero.tex",
+      "rank_fifteen_variable_zero_disk": "sections/rank_fifteen_variable_zero_disk.tex"
     },
     {
       "id": "UNRESTRICTED-SINGLY-SYMMETRIC-14",

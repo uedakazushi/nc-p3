@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 159,
+  "version": 160,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -1845,6 +1845,15 @@
       "verification": [
         "computations/verify_rank_fifteen_x_zero.py"
       ]
+    },
+    {
+      "id": "RANK-FIFTEEN-VARIABLE-TRACE-FIRST-OBSTRUCTION",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "For every ordinary rank-fifteen window at residual characteristic three with 0 < val(y) < 3 val(x), all four sixth path spaces have character dimensions (20,20,22,22), and the quartic center has dimensions (3,2,0,0). On every pencil x^3=D y with val(D)>0 the sixth dimension is 84 and the quartic center has this character profile everywhere ordinary.",
+      "proof": "sections/rank_fifteen_variable_zero_disk.tex",
+      "verification": [
+        "computations/verify_rank_fifteen_variable_zero_disk.py"
+      ]
     }
   ],
   "document_paths": {
@@ -1908,7 +1917,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "2318337ebdbf0bb9f3745d2b657cc74d9f949bec",
+  "reviewed_source_commit": "96d2e8ed4c477e9d04e4a69661516bd6fd305f2a",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -1917,15 +1926,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Pursue a uniform small-y disk for traces reducing to zero at 3. At H=0 parametrize K=(z^2+z^-2)/2, P=z+1/z, Q=z-1/z, n0=(z^2-z^-2)/2. Compute the saturated generic minors over Q(z), beginning with the order-two fourth defect and then the sixth insertion and centers. The complementary valuation sector and unrestricted coverage are open.",
+    "immediate_next_action": "Over R=Z[z] localized at (3,z^2+z+2), continue the common four-section cut beyond length four at all starts in the small-trace, small-y disk. The four chosen central sections are independent at every start. Use the computed full degree-five/six bases to certify the ranks of their products by one/two letters, then continue the cut to length 13. If a pivot degenerates, isolate the first affected character and its initial coefficient. The complementary valuation sector and unrestricted classification remain open.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/rank_fifteen_variable_zero_disk.tex",
       "sections/rank_fifteen_x_zero.tex",
-      "sections/rank_fifteen_cubic_zero_disk.tex",
-      "sections/rank_fifteen_residue_line.tex"
+      "sections/rank_fifteen_cubic_zero_disk.tex"
     ],
     "known_obstruction": "Possible isolated interior failures of all-degree regularity on the (x,y) plane and uncovered general nonsymmetric windows.",
-    "state_of_claim": "The x=0 conic has complete indexed parameters, regularity and period. A uniform disk for variable trace and the unrestricted classification remain open.",
+    "state_of_claim": "The first possible excess in path degree six is excluded on all ordinary points of every pencil with a 3-adically positive slope parameter. Higher central cuts and unrestricted classification remain open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

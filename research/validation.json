@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 159,
+  "version": 160,
   "reviewed_input": {
-    "source_commit": "2318337ebdbf0bb9f3745d2b657cc74d9f949bec"
+    "source_commit": "96d2e8ed4c477e9d04e4a69661516bd6fd305f2a"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All rank-fifteen windows with x=0 are standard Koszul left/right AS-regular of minimal period two and free of rank 256 over four quartics. Their indexed classes form the punctured conic j in G_m minus plus/minus one. A transverse quantitative 3-adic tube is also certified."
+    "scope": "For every ordinary rank-fifteen window at residual characteristic three with 0 < val(y) < 3 val(x), all four sixth path spaces have character dimensions (20,20,22,22), and the quartic center has dimensions (3,2,0,0). On every pencil x^3=D y with val(D)>0 the sixth dimension is 84 and the quartic center has this character profile everywhere ordinary."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_x_zero.py",
+      "command": "python computations/verify_rank_fifteen_variable_zero_disk.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_cubic_zero_disk.py",
+      "command": "python computations/verify_rank_fifteen_x_zero.py",
       "result": "PASS"
     },
     {
@@ -33,12 +33,11 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked the ramified integral basis, univariate roots, all three valuation cases, the transverse tube and the conic parameter and fibers."
+    "scope": "Checked the local z-parameter, each H division as a rational-function identity, all sixth ranks and all quartic center ranks, and the three valuation cases for the pencil."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact arithmetic over Q(i,sqrt(3)) with its ramified prime above three; four periodic saturated central cuts through length 13, and regression on the inert cubic trace.",
-    "reproduction": "Recomputed the four ramified Gaussian-quadratic cuts and reran all four inert cubic cuts through length 13 at precision 25."
+    "scope": "Seven-term jets over Q(z) with residue field F9. Computed all four center ranks, the evaluation ranks of four selected center sections at each start, and all sixteen sixth insertion ranks. The divisions by H are polynomial identities before residue evaluation."
   },
   "tex": {
     "result": "PASS",
@@ -50,19 +49,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected rendered manuscript pages 259 and 260, including the conic and ramified saturation proof."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "fb303c238cd8861afd66599930fa7e2e46e08377",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Pursue a uniform small-y disk for traces reducing to zero at 3. At H=0 parametrize K=(z^2+z^-2)/2, P=z+1/z, Q=z-1/z, n0=(z^2-z^-2)/2. Compute the saturated generic minors over Q(z), beginning with the order-two fourth defect and then the sixth insertion and centers. The complementary valuation sector and unrestricted coverage are open.",
+    "Over R=Z[z] localized at (3,z^2+z+2), continue the common four-section cut beyond length four at all starts in the small-trace, small-y disk. The four chosen central sections are independent at every start. Use the computed full degree-five/six bases to certify the ranks of their products by one/two letters, then continue the cut to length 13. If a pivot degenerates, isolate the first affected character and its initial coefficient. The complementary valuation sector and unrestricted classification remain open.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
