@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact generic path and center ranks over F9(s); univariate Fitting supports through length 13 at four starts; all six surviving orbits directly certified."
+    "scope": "Exact generic path and center ranks over F9(s); univariate Fitting supports through length 13 at four starts; all six surviving orbits directly certified.",
+    "reproduction": "Recomputed the F9(s) centers, the four F3[s] Fitting supports through length 13 in Singular and all six residual orbit tests. Recomputed the four boundary tensor certificates."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected page 254, including the residue-line parameter, polynomial tensor, central dimensions and residual orbit calculation."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "7107e22efe47bd15490381b4474d2b1fa12db0cc",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Determine regularity away from the certified geometric residue line and four characteristic-zero curves. On the characteristic-zero p=0 curve compare the K=0 model at 3 with the valuations where y has a zero or a pole; off this curve use eigenspaces of simultaneous letter translation to reduce the degree-six Fitting matrices.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "be64be884069acf3c7f7e1b5de861b1cb2a8ca4f",
+    "commit": "a1a507b2f5f806bc1aa3ff1c8a4f71bae5cd9ff7",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
