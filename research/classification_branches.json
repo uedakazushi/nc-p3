@@ -196,8 +196,8 @@
     },
     {
       "id": "KLEIN-TWO-DOUBLETS-SECOND-COMPLETION",
-      "current_result": "In the remaining Klein profile (2,2,1,1), normalize both thin colors even in the presence of zero entries: the thick colors are rank-two completions of the same off-diagonal entries. On the invertible open the second completion is rational. Its geometrically generic point is standard AS of opposite rank ten, with unmarked indexed moduli image of dimension four and twenty reduced points with no collinear triples.",
-      "current_proof": "sections/klein_two_doublets.tex"
+      "current_result": "The generic configurations of the four-dimensional second sheet have precisely the intrinsic Klein group and are pairwise projectively inequivalent; the standard AS window has minimal period four. On the indicated open, four rational invariants up to sixteen character reindexings classify unmarked indexed isomorphisms between regular inputs.",
+      "current_proof": "sections/klein_generic_isomorphisms.tex"
     }
   ],
   "presentation_components": {
