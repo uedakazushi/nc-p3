@@ -1,17 +1,21 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 63,
+  "version": 64,
   "reviewed_input": {
-    "source_commit": "29aab3898a16d01a9c9c4dc92296988c02887555"
+    "source_commit": "c9ad36c3fd76434ff2806f007386632458d60bb0"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For a square in either opposite apolar kernel, the two axis evaluations must have rank three. The bisymmetric window is standard AS exactly for a ternary basepoint-free quadratic complete intersection. A two-periodic Ore presentation and the CI socle alternating form give opposite ranks six or eight only. In rank eight both kernel pencils coincide in aligned axes and explicit marked coefficient changes decide ordered isomorphism."
+    "scope": "All standard bisymmetric AS windows have opposite rank six or eight. Rank six is fully symmetrizable, and both rank-eight apolar pencils are quartic complete intersections. Factor partners are unique and opposite changes of coordinates are projectively equal in every rank. The transverse marked block has residual rank zero or two by PGL2 conjugation, while a radical line gives two coupled cubic forms and an alternating binary residual."
   },
   "checks": [
     {
       "command": "bash scripts/cloud_preflight.sh --tex (project environment activated)",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_transverse_apolar_factors.py",
       "result": "PASS"
     },
     {
@@ -41,15 +45,15 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked evaluation kernel functoriality, both alternating Ore overlaps, CI duality, cofactor signs, socle nonvanishing and rank-eight isomorphisms."
+    "scope": "Reviewed factor-partner uniqueness, six-pivot elimination with nonassociative products, degenerate metric cubics, radical-row and column pairing, binary skew residual and the low-rank projective dimension argument."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Symbolic complementary minor identities, Jacobian alternation on matrix bases, explicit equal kernel pencils of ranks six/eight and a pure polar failure, over Q."
+    "scope": "Transverse spin-factor fixtures with scalar, semisimple and unipotent transitions give 6,6,8,8,8. Exact radical-line fixtures with coincident or distinct identifications give 6,8,8,8."
   },
   "tex": {
     "result": "PASS",
-    "scope": "Main 157 pages, plan 6 and notes 13. No overfull boxes, missing characters or unresolved references."
+    "scope": "Main 160 pages, plan 6 and notes 13. No overfull boxes, missing characters or unresolved references."
   },
   "visual_inspection": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
@@ -62,7 +66,7 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "At a pair of distinct linear factors in an apolar kernel, use the reciprocal pair and the orthogonal three-planes to analyze the simple and one-dimensional-intersection cases. Determine whether their opposite matrices can have rank seven at a regular point, and identify the remaining rank-eight square-free nonreduced pencils.",
-    "General nonsymmetric windows and the full classification."
+    "For opposite rank eight and a square-free nonreduced apolar complete intersection, compare both ordered rank-two factor schemes and determine when both pencils describe the same nonreduced curve. Seek an effective regularity or graph recognition criterion via the transverse or radical-line marked models.",
+    "General nonsymmetric windows and full classification."
   ]
 }
