@@ -253,6 +253,8 @@
     "regularity": "All smooth genus-one data, integral nodal/cuspidal data and cyclic rational polygons with equal positive multidegrees, provided the pencil has no base point.",
     "isomorphism": "For L != M the two embedded apolar curves, their unique graph and the pencil recover ordered data.",
     "residual": "Nonreduced quartics, recognition of compatible graphs, and other components.",
-    "reduced_additive_boundary": "All positive-degree multiple-point cases are AS exactly for equal multidegrees; ordered recognition for distinct bundles, m=2,3,4 quotient dimensions 13-m."
+    "reduced_additive_boundary": "All positive-degree multiple-point cases are AS exactly for equal multidegrees; ordered recognition for distinct bundles, m=2,3,4 quotient dimensions 13-m.",
+    "ribbon": "Smooth conic ribbon: all fibers AS and complete ordered recognition for distinct bundles, quotient dimension nine.",
+    "reverse_recognition": "For bisymmetric adjacent-rank-six, opposite-rank-eight tensors with two smooth apolar quartics, graph support is sufficient, necessary for this chart, and forced by a simple adjacent zero or membership in the elliptic tensor closure."
   }
 }

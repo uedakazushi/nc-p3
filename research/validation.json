@@ -1,17 +1,21 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 54,
+  "version": 55,
   "reviewed_input": {
-    "source_commit": "2f2d327e2f07e08b4d047320d32cc5be34c03f3e"
+    "source_commit": "f67dacb67e0eb7abe385a40bcfcd1998b60c3b7e"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Positive multidegree AS criterion and graph reconstruction for additive reduced elliptic singularities, with the reduced CI curve-type exhaustion."
+    "scope": "Conic ribbon certification and graph descent, degree-64 smooth graph test and transverse-zero recognition with singular-commutator dimension bound."
   },
   "checks": [
     {
-      "command": "python computations/verify_additive_pencil.py",
+      "command": "python computations/verify_ribbon_trace.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_marked_opposite_rank.py",
       "result": "PASS"
     },
     {
@@ -25,15 +29,15 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked common-value and first-jet gluing, the quartic embeddings, complementary supports, moment equations for small components, and the genus/conductor classification. No external referee review."
+    "scope": "Checked restriction of evaluation kernels to P1, the two nilpotent graph comparisons, degree-64 determinant and infinitesimal graph separation, and rank-two/rank-one strata of independent marked nets. No independent referee."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Six exact rational marked multiple-point models; mixed multiplication, adjacent rank six, and opposite ranks six or eight."
+    "scope": "Exact section multiplication and socle functionals on the ribbon and all Gaussian monomials; reran the marked commutator identity."
   },
   "tex": {
     "result": "PASS",
-    "scope": "Main 132 pages, plan 6, notes 12. No overfull boxes, missing characters or unresolved references in the final logs."
+    "scope": "Manuscript 136 pages, plan 6 and notes 12. No overfull boxes, unresolved references or missing characters in final logs."
   },
   "visual_inspection": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
@@ -46,6 +50,6 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Nonreduced quartic pencil boundaries and recognition/coverage away from the elliptic chart."
+    "Other nonreduced quartics, and rank-eight tensors without a simple zero or graph certificate outside the known component."
   ]
 }
