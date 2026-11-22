@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-22 / v78。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v79。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -144,6 +144,8 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 
 二十点から階数方程式の間の独立な二十の恒等式を構成し、十五の接方向を全て実現する成分を証明した。一般点は反対階数16・最小周期4で自己同型は自明である。片側対称点の近くでは階数10の滑らかな因子の外は全て階数16となる。[証明と判定](sections/twenty_conormal_component.tex)
 
+行列式二次式が両方とも消える八種類の基底を決定した。各ファイバーは一つの双一次式で定まり、全て楕円曲線族の閉包に入る。これで薄い成分と主ブロックが非退化な範囲の階数条件を覆った。[証明と判定](sections/klein_zero_quadratics.tex)
+
 二窓から作る56次元代数で、低次Extの消滅を逆Serre反復が保つ構造条件を探す。
 「全次数を証明してAS認証」「有限障害で排除」「未決定」を分け、有限検査の成功を全AS認証としない。
 正規形の枝、特殊値、枝間同型の条件を証明し、未分類の残余を明示する。
@@ -193,6 +195,7 @@ python3 computations/verify_klein_elliptic_completion.py
 python3 computations/verify_klein_exceptional_pairings.py
 python3 computations/verify_unrestricted_doublet_deformations.py
 python3 computations/verify_twenty_conormal_identities.py
+python3 computations/verify_klein_zero_quadratics.py
 python3 computations/verify_klein_elliptic_center.py
 python3 computations/verify_klein_full_rank_configurations.py
 python3 computations/verify_rank_five_pencils.py

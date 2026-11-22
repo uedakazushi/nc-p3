@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 78,
+  "version": 79,
   "reviewed_input": {
-    "source_commit": "c25fe829de234aff594c0d3e00d19c2aae1febc0"
+    "source_commit": "44566b7c405b4f5754d0ec84431032ade4513d66"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Twenty moving complete-intersection points give twenty independent identities among the Schur equations on the first rank-six locus. Both regular rational samples are smooth points of the same actual 76-dimensional affine component. Its unmarked dimension is 15, with trivial generic projective stabilizer, full opposite rank, minimal period four and geometrically generic standard AS regularity. At the singly symmetric sample the rank-ten divisor is smooth, the opposite determinant vanishes to order six, and the entire complementary neighborhood has rank sixteen."
+    "scope": "The full nondegenerate Klein (2,2,1,1) rank chart, including all coefficient-zero determinant fibers, is covered by the elliptic closure and the four exceptional presentations. If both determinant quadratics vanish identically the normalized base has eight explicit types, each with one bilinear equation for the entire fiber; all lie in the elliptic closure."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_twenty_conormal_identities.py",
+      "command": "python computations/verify_klein_zero_quadratics.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_unrestricted_doublet_deformations.py",
+      "command": "python computations/verify_twenty_conormal_identities.py",
       "result": "PASS"
     },
     {
@@ -33,15 +33,15 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed moving points on the first rank-six locus, complementary three-space construction of exact local syzygies, invertible twenty-minor, Jacobian criterion, common component and the sixth-order determinant divisor."
+    "scope": "Reviewed primitiveness, irreducibility and specialization on the two root hypersurfaces; saturated vanishing systems and local linear solving on all components of each residual fiber."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "All twenty graph quadruples have rank-three partial evaluations and independent conormal products at primes 12619 and 2657. The characteristic-zero unrestricted Jacobians have rank 180."
+    "scope": "Sixteen saturated Groebner systems over the rationals, eight unit ideals and eight parametrized residual fibers, coefficientwise bilinear proportionality and localized leading units."
   },
   "tex": {
     "result": "PASS",
-    "main_pages": 188,
+    "main_pages": 189,
     "plan_pages": 6,
     "notes_pages": 14
   },
@@ -55,7 +55,7 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Complete the identically zero determinant fibers on the marked chart. On the fifteen-dimensional component determine a finite closed-fiber regularity test, center behavior and the boundary where conormal products or evaluations drop rank.",
+    "On the fifteen-dimensional component determine whether the first edge or its single projected twenty-point scheme fixes an extension up to finitely many choices. Determine regular closed fibers using quartic centers, and analyze cross-block and conormal boundaries.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

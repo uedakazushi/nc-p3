@@ -205,8 +205,8 @@
     },
     {
       "id": "KLEIN-ELLIPTIC-FULL-RANK",
-      "current_result": "On the nondegenerate thin chart with separable projective determinant quadratics (or both genuinely quadratic), every additional pairing is exactly one of four explicit sheets at lambda=+/-1,+/-1/z. Two are bisymmetric and the other two are Klein cocycle twists, giving an AS decision on all four. The quartic center lifts over the function field of an explicit elliptic parameter curve, yielding one open of regular closed fibers. Up to 32 affine character permutations decide unmarked indexed isomorphism on the generic full-rank chart.",
-      "current_proof": "sections/klein_second_pairings.tex"
+      "current_result": "The full nondegenerate Klein (2,2,1,1) rank chart, including all coefficient-zero determinant fibers, is covered by the elliptic closure and the four exceptional presentations. If both determinant quadratics vanish identically the normalized base has eight explicit types, each with one bilinear equation for the entire fiber; all lie in the elliptic closure.",
+      "current_proof": "sections/klein_zero_quadratics.tex"
     },
     {
       "id": "UNRESTRICTED-SINGLY-SYMMETRIC-14",
