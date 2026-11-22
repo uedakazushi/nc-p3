@@ -172,29 +172,35 @@ def certify(job, precision=11, limit=5):
         level=Jet.constant(Coefficient(C)),
         parameter=Jet([ZERO, ONE]),
     )
-    cuts = local_central_sections(relations, Jet)
-    center_precision = Jet.precision
+    check_cut(relations, Jet, job, limit)
+
+
+def check_cut(relations, series, job, limit):
+    cuts = local_central_sections(relations, series)
+    center_precision = series.precision
     for start in range(4):
-        Jet.precision = center_precision
+        series.precision = center_precision
         losses = []
 
         def project(n, h, rows, size):
-            free, images, loss = saturated_projection(rows, size, DIMENSIONS[n][h], Jet)
+            free, images, loss = saturated_projection(
+                rows, size, DIMENSIONS[n][h], series
+            )
             losses.append(loss)
             return free, images
 
         for n in quotient_layers(
-            relations, cuts, start, limit, Jet.constant(1), project
+            relations, cuts, start, limit, series.constant(1), project
         ):
-            Jet.precision -= max(losses)
+            series.precision -= max(losses)
             losses.clear()
-            assert Jet.precision > 0, (job, start, n)
+            assert series.precision > 0, (job, start, n)
         print(
             "Relative quartic center and cut",
             job,
             start,
             limit,
-            Jet.precision,
+            series.precision,
             flush=True,
         )
 

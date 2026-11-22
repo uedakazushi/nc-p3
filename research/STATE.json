@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 134,
+  "version": 135,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -1619,6 +1619,15 @@
       "verification": [
         "computations/verify_rank_fifteen_relative_trace_centers.py"
       ]
+    },
+    {
+      "id": "RANK-FIFTEEN-GENERIC-LEVELS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "For both rank-fifteen presentations, outside a finite set of algebraic genus-five levels every ordinary window is standard Koszul left/right AS regular and free of rank 256 per start over four central quartics. No curve of failure dominates the level parameter.",
+      "proof": "sections/rank_fifteen_generic_levels.tex",
+      "verification": [
+        "computations/verify_rank_fifteen_generic_levels.py"
+      ]
     }
   ],
   "document_paths": {
@@ -1682,7 +1691,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "32eff33129c28630f2e29edeeb6a269278181472",
+  "reviewed_source_commit": "ad5708b2709270779cdef630c34257cfc57bcf61",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -1691,15 +1700,16 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Extend the two-variable central-cut calculation on the eight trace ±1 centers through degree thirteen. Work over Q[c]_(c²-c+1)[[n]], pivot on units and check exact Q(c)-zeros for each division by n. The degree-five cut is certified at all starts. A common polynomial denominator for each truncated series accelerates the higher-precision calculation. Then combine with the horizontal-specialization theorem. Higher-degree x residues on ξ=9/16 are the separate fixed-level fallback.",
+    "immediate_next_action": "Determine the vertical exceptions. For each smooth genus-five level prove that at least one infinity end admits the finite central-cut certificate. The weighted infinity coefficients are rational in v=L+c and v,-1/v give the same c. Intersect reciprocal pivot-exception supports and check algebraic residual roots in a split prime. This would restrict the possible nonregular ordinary windows on the two sheets to finitely many points. Then locate or exclude individual points on the exceptional levels; the rational level ξ=9/16 has its 101 boundary and rational x residues certified.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/rank_fifteen_generic_levels.tex",
       "sections/rank_fifteen_relative_trace_centers.tex",
       "sections/rank_fifteen_horizontal_specialization.tex",
-      "sections/rank_fifteen_pencil_trace_disks.tex"
+      "sections/rank_fifteen_pencil_infinity.tex"
     ],
-    "known_obstruction": "Relative centers and the first two cut ranks now lift. A degree-five cut does not exclude a horizontal nonregular germ. Prove the later cut ranks through length thirteen.",
-    "state_of_claim": "All remaining horizontal germs admit relative path and quartic-center charts with cut bounds through degree five. Higher-degree cut bounds and vertical failure loci remain open.",
+    "known_obstruction": "The valuative argument gives finiteness of the exceptional level set, but does not list its members or certify every point of a prescribed rational genus-five level.",
+    "state_of_claim": "No horizontal failure components remain. General genus-five levels are certified in full. A finite set of possible exceptional levels is not explicitly determined. Unrestricted classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

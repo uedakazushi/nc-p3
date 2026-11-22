@@ -1,17 +1,21 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 134,
+  "version": 135,
   "reviewed_input": {
-    "source_commit": "32eff33129c28630f2e29edeeb6a269278181472"
+    "source_commit": "ad5708b2709270779cdef630c34257cfc57bcf61"
   },
   "generation": {
     "result": "PASS",
-    "scope": "At all eight trace ±1 centers over both primitive fibers the relative path spaces in degrees four and five have bases and the character 0,1 quartic centers have local bases of dimensions 3,2 on ordinary generic arcs, allowing the level to vary. Four liftable quartics bound the cut in degrees four and five by 31,40 at every start in both presentations."
+    "scope": "For both rank-fifteen presentations, outside a finite set of algebraic genus-five levels every ordinary window is standard Koszul left/right AS regular and free of rank 256 per start over four central quartics. No curve of failure dominates the level parameter."
   },
   "checks": [
     {
       "command": "bash scripts/cloud_preflight.sh --tex",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_rank_fifteen_generic_levels.py",
       "result": "PASS"
     },
     {
@@ -29,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked true Q(c)-divisibility before each division by the local parameter, invertibility at both primitive points, loss of precision and the generic dimension bounds used to lift the commuting sections."
+    "scope": "Checked formal divisibility with variable c, change of uniformizer, sign descent, projective specialization, finite constructibility and projection to the level line."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact variable-level rational-function jets at both conjugate primitive levels, two trace values, both relative signs and presentations, all four starts, four-cut bounds through degree five.",
-    "reproduction": "Exact Q(c)-coefficient jets. Ran all 32 trace, branch, presentation and start cases through the degree-five four-cut, including both primitive specializations by the irreducible unit test."
+    "scope": "Relative rational-function jets through degree thirteen at the eight trace ends, simultaneous units at both quadratic polynomials and equality of the K-sign related presentations, all four starts."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 257,
+      "nc-p3": 258,
       "plan_ja": 7,
       "notes_ja": 15
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Reviewed the relative division and precision accounting on rendered page 231 and extracted the proposition on pages 230–231."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "76c68aa6d43f1cbea207d969b5d5bea25facded3",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Extend the two-variable central-cut calculation on the eight trace ±1 centers through degree thirteen. Work over Q[c]_(c²-c+1)[[n]], pivot on units and check exact Q(c)-zeros for each division by n. The degree-five cut is certified at all starts. A common polynomial denominator for each truncated series accelerates the higher-precision calculation. Then combine with the horizontal-specialization theorem. Higher-degree x residues on ξ=9/16 are the separate fixed-level fallback.",
+    "Determine the vertical exceptions. For each smooth genus-five level prove that at least one infinity end admits the finite central-cut certificate. The weighted infinity coefficients are rational in v=L+c and v,-1/v give the same c. Intersect reciprocal pivot-exception supports and check algebraic residual roots in a split prime. This would restrict the possible nonregular ordinary windows on the two sheets to finitely many points. Then locate or exclude individual points on the exceptional levels; the rational level ξ=9/16 has its 101 boundary and rational x residues certified.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
