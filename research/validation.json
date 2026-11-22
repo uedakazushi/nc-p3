@@ -19,10 +19,6 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_horizontal_specialization.py",
-      "result": "PASS"
-    },
-    {
       "command": "python scripts/check_project.py",
       "result": "PASS"
     },
@@ -37,7 +33,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact variable-level rational-function jets at both conjugate primitive levels, two trace values, both relative signs and presentations, all four starts, four-cut bounds through degree five."
+    "scope": "Exact variable-level rational-function jets at both conjugate primitive levels, two trace values, both relative signs and presentations, all four starts, four-cut bounds through degree five.",
+    "reproduction": "Exact Q(c)-coefficient jets. Ran all 32 trace, branch, presentation and start cases through the degree-five four-cut, including both primitive specializations by the irreducible unit test."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +46,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Reviewed the relative division and precision accounting on rendered page 231 and extracted the proposition on pages 230–231."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "76c68aa6d43f1cbea207d969b5d5bea25facded3",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Extend the two-variable central-cut calculation on the eight trace ±1 centers through degree thirteen. Work over Q[c]_(c²-c+1)[[n]], pivot on units and check exact Q(c)-zeros for each division by n. The degree-five cut is certified at all starts. A common polynomial denominator for each truncated series accelerates the higher-precision calculation. Then combine with the horizontal-specialization theorem. Higher-degree x residues on ξ=9/16 are the separate fixed-level fallback.",
@@ -63,7 +63,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "d056cf8466b6f6f21b6f3fc43f152d0e6ba1e92d",
+    "commit": "da909e7465319f96c4198c3a5135b5ea96f60d45",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
