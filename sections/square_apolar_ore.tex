@@ -1,0 +1,151 @@
+% !TeX root = ../papers/nc-p3.tex
+\section{重平面を持つ反対核の全次数判定}
+\label{sec:square-apolar-ore}
+$E^*,F^*$を二つの点座標空間とし、隣接階数6の両対称テンソルを
+六次元非退化対称空間への全射$\beta:E^*\otimes F^*\to\mathcal H$で表す。
+$\beta_{xf}=\beta(x,f)$と書く。両対称条件は
+$\langle\beta_{xf},\beta_{yg}\rangle=\langle\beta_{xg},\beta_{yf}\rangle$である。
+$K_E,K_F$を反対切断の左右の対称二次核とする。
+
+\begin{lemma}[因子の相互対応]\label{lem:reciprocal-apolar-factors}
+両側の全ての非零文字で$\beta$の評価階数が3以上とする。
+$xx'\in K_E$を満たす射影因子の順序付き対のスキームと、
+$ff'\in K_F$に対する同様のスキームは因子交換と可換な同型を持つ。
+対応は$f=\ker\beta(x,-)$、$f'=\ker\beta(x',-)$である。
+相異なる因子の対が標準AS窓にあれば、$U_x=\operatorname{im}\beta(x,-)$と
+$U_{x'}$の交わりは高々一次元であり、一次元ならその生成元の関係行列は階数2である。
+\end{lemma}
+\begin{proof}
+$xx'\in K_E$は両対称性により$U_x\perp U_{x'}$と同値である。
+両方の次元が3以上なので互いに直交補である。
+$V_f=\operatorname{im}\beta(-,f)$も$U_x$と直交するため$V_f=U_{x'}$、
+同じく$V_{f'}=U_x$となる。従って$ff'\in K_F$で、逆は同じ構成である。
+族上でも単元である三次小行列式の近傍を取れば、他側の三本の独立な像の直交補は
+階数3の部分束で、評価像はそれに等しい。核直線の形成は基底変換と可換である。
+交わりの元と$\beta$を対合して得る関係は$x,x'$両行、$f,f'$両列で消える。
+従って二行二列行列の空間に入り、$\beta$の全射性からこの写像は単射である。
+その中の二次元部分には行列式零の非零元がある。階数1の関係は反転窓の次の位置で
+転置され、定理\ref{thm:no-consecutive-pure-relations}に反する。
+評価階数2以下も一文字と二文字への交互商で全関係が消えるためASではない。
+\end{proof}
+
+$x_0^2\in K_E$とする。$U_{x_0}$は等方なので階数3以下であり、
+標準ASの候補では相手の核$f_0$での評価とともに階数3でなければならない。
+この二つの階数だけを以後の正規形の仮定とする。
+両軸の像は同じ極大等方三平面$D$である。双曲分解$\mathcal H=D\oplus D^*$を取り、
+両文字空間の三次元の補空間を軸評価によって$D$と同定すると
+\begin{equation}\label{eq:double-plane-beta}
+ \beta((r,x),(s,y))=(r y+s x+h(x,y),\ C(x,y,-)).
+\end{equation}
+軸を一つ含む両対称式により$C_{aij}$は三添字で対称であり、
+全射性により三つの極形式$C_a=(C_{aij})$は独立である。
+残りの条件は$h_{ij}=h(e_i,e_j)$、$C_{ij}=C(e_i,e_j,-)$として
+\begin{equation}\label{eq:double-plane-flat}
+ h_{ij}\cdot C_{kl}+C_{ij}\cdot h_{kl}
+ =h_{il}\cdot C_{kj}+C_{il}\cdot h_{kj}
+\end{equation}
+で尽くされる。$I=\{S=S^{\mathsf t}:\sum S_{ij}C_{ij}=0\}$は
+三次元二次系である。ここで$S$は$D$上の座標を係数とする対称テンソルで、
+二次式としては$D^*$上で評価する。
+
+\begin{theorem}[重平面での正則性と反対階数]\label{thm:double-plane-ore}
+式\eqref{eq:double-plane-beta}の反転窓が標準Koszul AS正則である必要十分条件は、
+$I$の三式が射影平面上に共通零点を持たないことである。
+正則な場合の反対階数は6または8であり、階数8の両核は
+軸同定の適切な補空間において同じ重平面付き四次完全交叉鉛筆になる。
+\end{theorem}
+\begin{proof}
+$I$の共通射影零点$v$は$v v^{\mathsf t}\in\langle C_a\rangle$と同値で、
+六関係の中に純テンソルを与える。以下$I$は正則列とする。
+三文字$X_i$と三関係$r_a=\sum C_{aij}X_iX_j$の代数を$B$と書く。
+二次双対は$\operatorname{Sym}(D)/(I)$で、三つの二次式の可換完全交叉である。
+補題\ref{lem:ternary-clifford}のTate解消と完全対合の議論から$B$はKoszul AS三次元である。
+
+第四文字を$Z$、$h_i=\sum h^i_{kl}X_kX_l$とし、$h_i^{\rm op}$は積の順を逆にした式とする。
+六関係は$r_a$と$ZX_i=-X_iZ-h_i$で、奇位置では$h_i^{\rm op}$を使う。
+$Zr_a$を右に移動すると$r_a Z$のほかに
+$\sum C_{aij}(X_i h_j^{\rm op}-h_i X_j)$が残る。
+$X_iX_kX_l$の係数は式\eqref{eq:double-plane-flat}から
+\[
+ C_{ia}\cdot h_{lk}-h_{ik}\cdot C_{la}
+ = C_{ik}\cdot h_{la}-h_{ia}\cdot C_{lk}
+\]
+で、右辺は$r_bX_l,X_i r_b$の線型結合の係数である。転置した$h$でも同じ式が成立する。
+従って$Z$の交換則は偶奇二頂点で折り畳んだ$B$の上のOre拡大になる。
+実際、自己同型は両頂点を交換し各矢印を他頂点の負の矢印に移す。
+補正項は頂点では零、矢印では出発位置に従って$-h_i$または$-h_i^{\rm op}$であり、
+上の計算が歪導分の全ての定義関係への降下を与える。
+Ore基底は各位置で$B$の基底に右から$Z^m$を掛けたものとなる。
+$Z$の個数で濾過すれば随伴次数は符号自己同型による歪多項式拡大である。
+定理\ref{thm:algebraic-nine}の証明と同じ内部次数ごとのbar濾過と
+二次双対の完全対合の持ち上げから、元の窓も標準14641型Koszul AS正則となる。
+
+次に$h=h_s+h_a$を対称・交代部分に分ける。
+式\eqref{eq:double-plane-flat}は転置で保たれ各部分で成立する。
+体積形式を選び$h^a_{ij,\mathrm{alt}}=\sum_b\epsilon_{ijb}P_{ba}$と書く。
+左右補空間の取り直しで$h_{ij}$に$u_i e_j+v_j e_i$を足せる。
+その交代部分は$P$の歪対称部分を任意に変えるので$P=P^{\mathsf t}$にできる。
+順序付き補添字$(23),(31),(12)$で式\eqref{eq:double-plane-flat}の左辺と右辺の差を
+二小行列式の行列に並べると、交代部分の$(u,v)$成分は
+$\sum_a\epsilon_{uva}\sum_{ij}P_{ij}C_{aij}$である。
+従って$P\in I$になる。対称部分だけを残したテンソル$w_s$は
+四添字で完全対称であり、三つの極形式の独立性から隣接・反対階数がともに6である。
+
+反対行列では軸平方の行列成分が消える。軸と一文字の積からなる三行と、
+三文字の対称二乗の六列との長方形は極形式で、転置位置も同様である。
+よって反対階数は6に$I\times I$に残る対合の階数を足したものである。
+$w_s$の寄与はその上で零である。残る交代部分は$S,T$を対称行列として
+\[
+ 2\sum_{ijb a k l}\epsilon_{ijb}P_{ba}S_{ik}T_{jl}C_{akl}.
+\]
+これは三次式$\det(Pz,Sz,Tz)$に$C$を縮約したものの二倍であり、
+$P,S,T$に交代的である。$I$の基底を入れると行列式は
+その三二次式のJacobi行列式の八分の一で、完全交叉のsocleを生成する。
+実際、二次式のKoszul解消から文字のKoszul解消への比較写像は一次係数行列から作られ、
+最上次数でこの行列式となる。三次元多項式環上で有限長加群の
+$\operatorname{Ext}^3$は完全反変双対なので、剰余環から$k$への全射はこの最上次数で
+単射を与える。$C$は$I D$を消し、非零なので一次元のsocleに非零である。
+従って$P=0$なら反対階数6、$P\ne0$なら反対階数8で、残る核直線は$kP$である。
+
+$P\ne0$では、$w_s$については$I$の各元が軸と一次式の積を加えることで
+軸平方を法として一意な核元に持ち上がる。
+交代部分は軸の行列成分で零であり、上の行列式は一つの引数も$P$なら恒等的に零である。
+従って両核は同じ$\langle x_0^2,P+x_0\ell\rangle$となる。
+$P\ne0$は軸を含まない三文字の二次式なので二式は互いに素である。
+\end{proof}
+
+\begin{corollary}[階数8の順序付き同型判定]\label{cor:double-plane-isom}
+重平面チャートの階数8の標準窓の間で、指定した軸を保つ添字保持同型の存在は
+次の係数比較と同値である。$a,b,c\in k^\times$、可逆な三行行列$A,B,G$、
+二つの一次式$u,v$と歪対称写像$J:D^*\to D$が存在して
+\[
+\begin{aligned}
+ G&=bA=aB, & C'(Ax,By,-)&=cG^{-\mathsf t}C(x,y,-),\\
+ h'(Ax,By)&=G\big(h(x,y)+JC(x,y,-)\big)-u(x)By-v(y)Ax .
+\end{aligned}
+\]
+軸を指定しないときは標的鉛筆内の全ての重平面（高々二個）とその対応軸を試せばよい。
+\end{corollary}
+\begin{proof}
+反対階数8では定理\ref{thm:elliptic-pencil-reconstruction}の七次元上界により、
+反対二位置の基底変換は射影的に一致する。Gram因子分解の全射性・非退化性により
+テンソル直線を保つことはGram標的の相似変換が存在することと同値である。
+基底変換を$(r,x)\mapsto (ar+u(x),Ax)$、$(s,y)\mapsto(bs+v(y),By)$と書くと、
+軸での値から$G=bA=aB$で、相似変換は
+$(d,\xi)\mapsto(G(d+J\xi),cG^{-\mathsf t}\xi)$となる。
+残る値の比較が表示式であり、逆に全ての関係列を移す。
+独立な二平方を張る鉛筆にはその二つしか平方がなく、右軸は
+補題\ref{lem:reciprocal-apolar-factors}で決まる。
+\end{proof}
+
+\begin{corollary}[階数7に残る可約因子]\label{cor:rank-seven-distinct-factors}
+両対称の標準AS窓で反対階数が7ならば、両反対核の中に相異なる二平面の和があり、
+いずれの核にも重平面はない。各因子対の二軸の交わりは高々一次元である。
+\end{corollary}
+\begin{proof}
+楕円閉包で両反対鉛筆の極限を取る。系\ref{cor:all-reduced-apolar-recognition}から、
+少なくとも片側で二式の交叉は被約四次完全交叉ではない。共通因子を持つなら各式は可約で、
+非被約完全交叉なら定理\ref{thm:nonreduced-quartic-pencils}の平面対の議論で可約な元がある。
+その元は反対核に入る。前定理で平方の場合は消え、相手側と次元上界は
+補題\ref{lem:reciprocal-apolar-factors}による。
+\end{proof}

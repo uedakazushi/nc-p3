@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-22 / v62。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v63。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -112,6 +112,8 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 
 二側がともに被約四次完全交叉となる全てのAS特殊化で、二曲線は同じ曲線の等しい正の多重次数の鉛筆から得られる。従って階数8の被約反対核ではグラフと鉛筆で認識でき、階数7のAS極限では少なくとも片側の極限鉛筆が被約完全交叉でなくなる。[多重点グラフと統一定理](sections/reduced_additive_limits.tex)
 
+反対核に重平面がある両対称窓では、軸の評価階数と三変数の三二次式の共通零点で全次数のAS正則性を判定できる。正則な反対階数は6または8で、8では両核が同じ重平面付き鉛筆となり、順序付き同型を係数で判定できる。階数7に残るAS候補では両核に相異なる二平面の和が必要になる。[重平面のOre表示と因子対応](sections/square_apolar_ore.tex)
+
 二窓から作る56次元代数で、低次Extの消滅を逆Serre反復が保つ構造条件を探す。
 「全次数を証明してAS認証」「有限障害で排除」「未決定」を分け、有限検査の成功を全AS認証としない。
 正規形の枝、特殊値、枝間同型の条件を証明し、未分類の残余を明示する。
@@ -144,6 +146,7 @@ python3 computations/verify_conductor_pencil.py
 python3 computations/verify_binary_product_obstruction.py
 python3 computations/verify_polygon_multiplication.py
 python3 computations/verify_additive_graph_limits.py
+python3 computations/verify_square_apolar_ore.py
 python3 computations/verify_rank_five_pencils.py
 python3 computations/verify_matched_pencils.py
 python3 computations/verify_incidence_cubics.py

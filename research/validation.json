@@ -1,17 +1,21 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 62,
+  "version": 63,
   "reviewed_input": {
-    "source_commit": "8a93985d34085b7c15dfe92cc5130364f50cfd2a"
+    "source_commit": "29aab3898a16d01a9c9c4dc92296988c02887555"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Complete classification of both-reduced apolar specializations in the bisymmetric branch."
+    "scope": "For a square in either opposite apolar kernel, the two axis evaluations must have rank three. The bisymmetric window is standard AS exactly for a ternary basepoint-free quadratic complete intersection. A two-periodic Ore presentation and the CI socle alternating form give opposite ranks six or eight only. In rank eight both kernel pencils coincide in aligned axes and explicit marked coefficient changes decide ordered isomorphism."
   },
   "checks": [
     {
       "command": "bash scripts/cloud_preflight.sh --tex (project environment activated)",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_square_apolar_ore.py",
       "result": "PASS"
     },
     {
@@ -37,15 +41,15 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked graph support, disjoint-center derivatives, normalized Segre span, terminal branch growth, matching independence and scheme-level descent of the derivative gluing conditions."
+    "scope": "Checked evaluation kernel functoriality, both alternating Ore overlaps, CI duality, cofactor signs, socle nonvanishing and rank-eight isomorphisms."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact additive graph ranks seven, eight and nine over Q for aligned, misaligned, satellite and separated cases. Earlier binary and common-polygon checks also executed."
+    "scope": "Symbolic complementary minor identities, Jacobian alternation on matrix bases, explicit equal kernel pencils of ranks six/eight and a pure polar failure, over Q."
   },
   "tex": {
     "result": "PASS",
-    "scope": "Main 155 pages, plan 6 and notes 13. No overfull boxes, missing characters or unresolved references."
+    "scope": "Main 157 pages, plan 6 and notes 13. No overfull boxes, missing characters or unresolved references."
   },
   "visual_inspection": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
@@ -58,6 +62,7 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Nonreduced or non-complete-intersection pencil limits, rank seven and other tensor classes."
+    "At a pair of distinct linear factors in an apolar kernel, use the reciprocal pair and the orthogonal three-planes to analyze the simple and one-dimensional-intersection cases. Determine whether their opposite matrices can have rank seven at a regular point, and identify the remaining rank-eight square-free nonreduced pencils.",
+    "General nonsymmetric windows and the full classification."
   ]
 }
