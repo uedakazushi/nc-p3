@@ -19,10 +19,6 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_pencil_unramified.py",
-      "result": "PASS"
-    },
-    {
       "command": "python scripts/check_project.py",
       "result": "PASS"
     },
@@ -37,7 +33,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Identities over the quadratic boundary algebra over Q(c), exact derivative of every vanishing Pluecker block, and all 32 choices of presentation and residue with four-start central cuts at 101."
+    "scope": "Identities over the quadratic boundary algebra over Q(c), exact derivative of every vanishing Pluecker block, and all 32 choices of presentation and residue with four-start central cuts at 101.",
+    "reproduction": "SymPy 1.14.0 and python-flint 0.9.0. Exact divisibility over the quadratic boundary algebra, 32 four-start residue certificates at 101, and sixteen exact constant-limit path checks over Q(c)."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +46,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Reviewed the sixteen-end theorem and the constant-limit proposition on rendered page 226 and extracted page 227."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "972828872ea7c3827d76399bfee735d816371048",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Finish the genus-three four-cut over all ordinary reductions at 109 and saturate the two trace ±1 disks through length thirteen. On the genus-five pencil only the eight ends over K=±1 lack regular neighborhoods on a general level. For these use u=n, compute the locally saturated degree-four relations and compare against the genus-three trace-disk calculation.",
@@ -63,7 +63,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "3d90f7ed793044f116f909f89db9cf2aa85cdd54",
+    "commit": "1c0fc44cacab182457c230db9042bfb9c6d256aa",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
