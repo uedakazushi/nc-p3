@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 150,
+  "version": 151,
   "reviewed_input": {
-    "source_commit": "c58a354187cb5fa341c3eb24f41aedb58d9414d8"
+    "source_commit": "45ed985cf1ae53773c3236ad58fa4585634dd089"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The full ordinary preimages of three further explicit irreducible curves in the (U,V) multiplier plane are standard Koszul left/right AS regular, with four-central-quartic freeness of rank 256 at all starts. These are exactly the additional curves obtained by Pauli orbit transport of coordinate ends and the certified octic level; finite nonordinary target exceptions are included."
+    "scope": "The 192-action quotient of the formal rank-fifteen parameter surface is the normal rational surface p^2=x^3-27y, q^2=(1-x)^2-4y, y nonzero. The three regular functions (x,p,q) separate all template orbits, and exactly classify indexed windows on the dimension-16 open. Two explicit rational coordinates suffice generically. On all ordinary windows left/right regularity depends only on (x,y), including the exceptional fibers."
   },
   "checks": [
     {
@@ -15,7 +15,7 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_regular_orbits.py",
+      "command": "python computations/verify_rank_fifteen_rational_quotient.py",
       "result": "PASS"
     },
     {
@@ -33,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked all nonordinary target cases, scalar normalization, preservation of fully graded four-periodic centers, and the rank and center bounds needed to lift from the direct adjacent images."
+    "scope": "Checked degree 768, the two independent sign operations, finiteness at U=-3, normality of the quotient, separation of all finite group orbits, and the reflection order on the four arrows."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Twelve orbit labels and all three exact plane equations, finite enumeration of the boundary lifts, cyclic relation spaces and length-thirteen four-start central cuts over F_(17^16).",
-    "reproduction": "Recomputed three identities, all eight coordinate-end and eleven octic residual orbit certificates, and all 192 projective template actions."
+    "scope": "All 192 relative-invariant sign actions, both double-cover equations, the rational inverse and irreducibility tests; verified the partial transpose giving the shifted opposite."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 275,
+      "nc-p3": 277,
       "plan_ja": 8,
       "notes_ja": 16
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected manuscript pages 248 and 249 including the three curve equations, exceptional levels and normalized tensor verification."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "4c01046e137c8c7835a664f0a08716f78b82b49e",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Study the remaining isolated interior regularity candidates away from the six explicit orbit curves and the branch. Use the paired Pauli tensor to work directly with normalized relations and to test the locus where dimension 16 fails; also resolve special coordinate-end equivalences using the explicit 192 actions.",
+    "Work on the remaining isolated regularity candidates in the two-coordinate (x,y) plane. Descend the six certified multiplier curves and compare their discriminants; study whether special indexed identifications outside the dimension-16 open identify different (x,p,q), especially at the coordinate-end exceptions.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
