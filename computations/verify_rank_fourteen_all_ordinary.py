@@ -28,12 +28,12 @@ DIMENSIONS = (
 )
 
 
-def gaussian_jets():
-    """Represent truncated Q(i)[u] by two rational polynomials, in a run-local precision."""
+def gaussian_jets(radicand=-1, initial_precision=INITIAL_PRECISION):
+    """Truncated quadratic-field power series with a run-local precision."""
 
     class Jet:
         __slots__ = ("imag", "real")
-        precision = INITIAL_PRECISION
+        precision = initial_precision
 
         def __init__(self, real, imag=None):
             self.real = real
@@ -74,7 +74,7 @@ def gaussian_jets():
             real = self.real.mul_low(other.real, n)
             if self.imag and other.imag:
                 return Jet(
-                    real - self.imag.mul_low(other.imag, n),
+                    real + radicand * self.imag.mul_low(other.imag, n),
                     self.real.mul_low(other.imag, n) + self.imag.mul_low(other.real, n),
                 )
             if self.imag:
@@ -88,7 +88,7 @@ def gaussian_jets():
         def unit(self):
             real = self.real[0]
             imag = self.imag[0] if self.imag else 0
-            norm = real * real + imag * imag
+            norm = real * real - radicand * imag * imag
             assert int(norm.denominator) % 101
             return bool(int(norm.numerator) % 101)
 
@@ -102,7 +102,8 @@ def gaussian_jets():
                 return Jet(reciprocal(self.real))
             n = self.precision
             d = reciprocal(
-                self.real.mul_low(self.real, n) + self.imag.mul_low(self.imag, n)
+                self.real.mul_low(self.real, n)
+                - radicand * self.imag.mul_low(self.imag, n)
             )
             return Jet(self.real.mul_low(d, n), -self.imag.mul_low(d, n))
 
@@ -136,6 +137,10 @@ def integral_presentation():
     windows = relations()
     basis, image, _ = path_chart(windows)
     cuts = central_sections(basis, image)
+    return clear_presentation(windows, cuts)
+
+
+def clear_presentation(windows, cuts):
     integral_windows = [
         [(h, integral_rows([row])[0]) for h, row in side] for side in windows
     ]

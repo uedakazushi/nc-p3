@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 122,
+  "version": 123,
   "reviewed_input": {
-    "source_commit": "44e85899369d0266156b05dba29e79510da9bc7f"
+    "source_commit": "9f36e91db6174e1c2e87bcf8abe01449c112fbd9"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Two explicit finite flat biquadratic covers give every rank-15 window on the positive ordinary fixed locus. The generic monodromy is D4. There are eight distinct rank-15 points off the collision and branch divisors, four distinct rank-15 points on the branch, and precisely the four regular rank-14 points on the collision. Both reduced ramification curves have model y²=-t⁴+14t²-1, j=35152/9; all sixteen windows above K=2 and both generic branch windows are AS regular."
+    "scope": "On both elliptic rank-15 ramification curves the quartic center has character dimensions (3,2,0,0) at every ordinary point, and a common four-cut attains the standard profile through length six. All 5336 geometric points from the residual factors (2720 and 2616) are standard Koszul AS regular. The regular slope open for both entire finite covers contains the complete ordinary rank-14 collision divisor."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_covers.py",
+      "command": "python computations/verify_rank_fifteen_branch_center.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fourteen_all_ordinary.py",
+      "command": "python computations/verify_rank_fifteen_covers.py",
       "result": "PASS"
     },
     {
@@ -33,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed normalization at a+e or b+f, endpoint validity by resultants, discriminants and monodromy, and generic regularity on both reduced ramification curves."
+    "scope": "Checked selected minors versus their specializations, the shift involution for the four starts, both sheets at simple residue roots and the quartic-center lifting hypotheses."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Checked homogeneous completion and admissibility for both covers, the branch and overlap equations, irreducibility and inverse formulas for the elliptic model, and all four central-cut profiles at the sixteen split-prime windows.",
-    "reproduction": "SymPy 1.14.0 and python-flint 0.9.0. Run computations/verify_rank_fifteen_covers.py for the identities, ordinary endpoint checks and the sixteen finite-field profiles."
+    "scope": "Checked exact minors over both ramification function fields, 49 and 47 residual factors, their two split sheets and four starting positions, and finite morphism descent of the regular neighborhood."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 243,
+      "nc-p3": 245,
       "plan_ja": 7,
       "notes_ja": 15
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Reviewed the extracted new section and rendered page 216 containing the counts, proof and ramification statement."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "143a1a910528db0613297ff99b4f335573ce9ddd",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Determine the remaining exceptional fibers on the two rank-15 ramification curves using their common quartic model. Compute the four central sections and the generic Artinian quotient; find the bad residue factors over F101[t] and use local saturation where direct specialization loses rank. The full ordinary rank-14 stratum and the rank-15 fiber counts are settled.",
+    "Decide regularity in length 7 through 13 on both ordinary rank-15 ramification curves. Compute the degree-13 dual Fitting support at 101, specialize all residual ordinary roots and use weighted reductions or saturated local rows on the nonordinary residue disks.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

@@ -14,7 +14,7 @@ from verify_klein_center_lift import add_multiple, central_equations, echelon
 from verify_rank_fourteen_center import certify_residue, path_chart
 
 
-def central_sections(basis, image):
+def central_sections(basis, image, unit=one):
     sections = [[] for _ in range(4)]
     for h, selected in ((0, (0, 2)), (1, (0, 1))):
         rows, size = central_equations(basis, image, h)
@@ -23,7 +23,7 @@ def central_sections(basis, image):
         assert len(free) == 3 - h
         for index in selected:
             column = free[index]
-            vector = {column: one}
+            vector = {column: unit}
             vector.update(
                 {k: -row[column] for k, row in pivots.items() if column in row}
             )
@@ -53,11 +53,11 @@ def residue(value):
     )
 
 
-def independent_rows(rows):
+def independent_rows(rows, specialize=residue):
     """A split prime chooses rows; every resulting determinant is computed in characteristic zero."""
     pivots = {}
     for index in sorted(range(len(rows)), key=lambda j: (len(rows[j]), j)):
-        row = {j: v for j, value in rows[index].items() if (v := residue(value))}
+        row = {j: v for j, value in rows[index].items() if (v := specialize(value))}
         for j in sorted(pivots):
             if j in row:
                 factor = row[j]
@@ -74,10 +74,10 @@ def independent_rows(rows):
             yield rows[index].copy()
 
 
-def exact_projection(rows, size):
+def exact_projection(rows, size, unit=one, specialize=residue):
     pivots = {}
-    determinant = one
-    for row in independent_rows(rows):
+    determinant = unit
+    for row in independent_rows(rows, specialize):
         for j in sorted(pivots):
             if j in row:
                 add_multiple(row, pivots[j], -row[j])
@@ -93,7 +93,7 @@ def exact_projection(rows, size):
     free = [j for j in range(size) if j not in pivots]
     position = {j: k for k, j in enumerate(free)}
     projection = [
-        {position[j]: one}
+        {position[j]: unit}
         if j in position
         else {position[k]: -v for k, v in pivots[j].items() if k != j}
         for j in range(size)

@@ -25,6 +25,7 @@ class CurveElement:
     """(a + b*i + c*Y + d*i*Y)/q with primitive integral polynomial coordinates."""
 
     __slots__ = ("coordinates", "denominator")
+    radicand = CUBIC
 
     def __init__(self, coordinates, denominator=ONE):
         if not denominator:
@@ -64,7 +65,7 @@ class CurveElement:
         )
 
     def __neg__(self):
-        return CurveElement(tuple(-v for v in self.coordinates), self.denominator)
+        return type(self)(tuple(-v for v in self.coordinates), self.denominator)
 
     def __add__(self, other):
         other = self.lift(other)
@@ -73,13 +74,13 @@ class CurveElement:
         if not self:
             return other
         if self.denominator == other.denominator:
-            return CurveElement(
+            return type(self)(
                 tuple(a + b for a, b in zip(self.coordinates, other.coordinates)),
                 self.denominator,
             )
         common = self.denominator.gcd(other.denominator)
         left, right = self.denominator // common, other.denominator // common
-        return CurveElement(
+        return type(self)(
             tuple(
                 a * right + b * left
                 for a, b in zip(self.coordinates, other.coordinates)
@@ -98,14 +99,14 @@ class CurveElement:
     def __mul__(self, other):
         other = self.lift(other)
         if not self or not other:
-            return zero
+            return self.lift(0)
         a, b, c, d = self.coordinates
         e, f, g, h = other.coordinates
         x, y = gaussian_product(a, b, e, f)
         u, v = gaussian_product(c, d, g, h)
         m, n = gaussian_product(a + c, b + d, e + g, f + h)
-        return CurveElement(
-            (x + CUBIC * u, y + CUBIC * v, m - x - u, n - y - v),
+        return type(self)(
+            (x + self.radicand * u, y + self.radicand * v, m - x - u, n - y - v),
             self.denominator * other.denominator,
         )
 
@@ -113,7 +114,9 @@ class CurveElement:
 
     def quadratic_norm(self):
         a, b, c, d = self.coordinates
-        return a * a - b * b - CUBIC * (c * c - d * d), 2 * (a * b - CUBIC * c * d)
+        return a * a - b * b - self.radicand * (c * c - d * d), 2 * (
+            a * b - self.radicand * c * d
+        )
 
     def norm_numerator(self):
         x, y = self.quadratic_norm()
@@ -124,7 +127,7 @@ class CurveElement:
         x, y = self.quadratic_norm()
         m, n = gaussian_product(a, b, x, -y)
         u, v = gaussian_product(-c, -d, x, -y)
-        return CurveElement(
+        return type(self)(
             tuple(self.denominator * k for k in (m, n, u, v)), x * x + y * y
         )
 
@@ -138,7 +141,7 @@ class CurveElement:
         if exponent < 0:
             return self.inverse() ** (-exponent)
         if exponent == 0:
-            return one
+            return self.lift(1)
         half = self ** (exponent // 2)
         square = half * half
         return square * self if exponent % 2 else square
@@ -158,18 +161,22 @@ def relations():
     X, bb, ee, ff = frame(s, imaginary)
     values = {z: r * r, l: lam, a: r * X, b: bb, e: r * ee, f: ff}
 
+    return evaluate_relations(values, one)
+
+
+def evaluate_relations(values, unit):
     @cache
     def evaluate(expression):
         if expression in values:
             return values[expression]
         if expression.is_Rational:
-            return CurveElement.lift(int(expression.p)) / int(expression.q)
+            return unit.lift(int(expression.p)) / int(expression.q)
         if expression.is_Pow:
             return evaluate(expression.base) ** index(expression.exp)
         if expression.is_Add:
-            return sum(map(evaluate, expression.args), zero)
+            return sum(map(evaluate, expression.args), unit.lift(0))
         if expression.is_Mul:
-            result = one
+            result = unit
             for factor in expression.args:
                 result *= evaluate(factor)
             return result

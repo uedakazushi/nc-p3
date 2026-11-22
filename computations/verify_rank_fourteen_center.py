@@ -39,9 +39,9 @@ def path_chart(windows):
     return basis, image, extra
 
 
-def rank_minor(rows):
+def rank_minor(rows, unit=one):
     pivots = {}
-    determinant = one
+    determinant = unit
     for original in rows:
         row = original.copy()
         for j in sorted(pivots):
