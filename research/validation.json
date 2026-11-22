@@ -19,10 +19,6 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_octic_trace_disks.py",
-      "result": "PASS"
-    },
-    {
       "command": "python scripts/check_project.py",
       "result": "PASS"
     },
@@ -37,7 +33,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Rational jets to order 32; normalized path lattices, lifted commuting quartics and quotient profile to length 13 in all 32 starts. Rechecked both quadratic trace roots and all eight infinity ends at the same prime 101."
+    "scope": "Rational jets to order 32; normalized path lattices, lifted commuting quartics and quotient profile to length 13 in all 32 starts. Rechecked both quadratic trace roots and all eight infinity ends at the same prime 101.",
+    "reproduction": "SymPy 1.14.0 and python-flint 0.9.0. Exact rational series and locally constructed central quartics at trace ±1; 32 starting-point computations retained precision eight. Both remaining quadratic trace roots, all sheets and eight infinity ends checked in characteristic 101."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +46,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Reviewed the 56-end theorem and the lifted-center construction on rendered page 228 and extracted page 229."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "eaf28e1dd8e2532f960269e249c099931fd4537a",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "For the genus-five level c=3/4 at 101, use x=K+H, K=(x+1/x)/2, H=(x-1/x)/2. At ordinary x, (2xA)^2=(x²+2(s-1)x+1)(x²+2(s+1)x+1) and (2xB)^2 is obtained by replacing s by -s. Certify the 44 inverse pairs of rational ordinary x residues and then use the degree-four function field for geometric residues of higher degrees. On the general pencil use the solved genus-three fiber to restrict horizontal bad curves via the relative projective three-quadric model.",
@@ -63,7 +63,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "c12624db097c1f81715b954c0b31edbbf3770f77",
+    "commit": "4b56240503be08f6b394b4ff6b31632971cdce4b",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
