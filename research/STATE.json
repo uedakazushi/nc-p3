@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 57,
+  "version": 58,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -885,6 +885,16 @@
         "computations/verify_smooth_apolar_defect.py",
         "computations/verify_marked_opposite_rank.py"
       ]
+    },
+    {
+      "id": "ALL-BISYMMETRIC-AS-CLOSURE",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "Every bisymmetric standard AS tensor of adjacent rank six lies in the smooth elliptic pencil closure; opposite ranks nine and ten are excluded without any apolar or incidence hypothesis. At rank eight a single smooth apolar quartic suffices: standard AS iff there is neither a pure relation nor a two-dimensional kernel for any nonzero one-sided evaluation. In this case both curves are smooth and isomorphic. The lattice argument also works for specializations with a surviving smooth defining pencil before assuming constant opposite rank.",
+      "proof": "sections/marked_gram_smoothing.tex",
+      "verification": [
+        "computations/verify_smooth_apolar_defect.py",
+        "computations/verify_marked_opposite_rank.py"
+      ]
     }
   ],
   "document_paths": {
@@ -948,7 +958,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "0bc5a6d483765cabe73f948f83a0396f63446ffb",
+  "reviewed_source_commit": "0d6e8af57d17449174a974b417df2cd4453ed3c3",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -957,15 +967,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "At opposite rank nine in the bisymmetric class, use the unique apolar quadrics to identify exceptional axes at their linear factors. Bound the adjacent zero scheme over these axes and determine whether any standard AS window can be supported there. Examine singular rank-eight apolar windows without a pencil presentation independently.",
+    "immediate_next_action": "For an integral nodal or cuspidal limiting source quartic, extend the other degree-four bundle as a rank-one torsion-free sheaf. In the noninvertible case test A (a hyperplane in binary quartics at the conductor) times all binary cubics modulo a pencil of binary septics, studying the two cubic overlaps and the opposite kernels. Determine whether rank seven or new singular rank-eight AS windows occur.",
     "read_first": [
       "research/plan_ja.tex",
       "sections/marked_gram_smoothing.tex",
-      "sections/ribbon_and_graph_recognition.tex",
-      "sections/marked_opposite_rank.tex"
+      "sections/elliptic_reversible_pencil.tex",
+      "sections/nonreduced_quartic_pencils.tex"
     ],
     "known_obstruction": "No uniform finite Koszul/Serre cutoff or effective global regularity criterion is proved; finite-dimensional B and seven-degree tests do not suffice. Other low-rank components and high-rank witness-free regions remain unclassified.",
-    "state_of_claim": "All smooth rank-eight apolar bisymmetric AS windows are elliptic with ordered recognition, even with no simple zero. Every nonreduced (2,2) curve pencil input is certified. Opposite rank ten is impossible for bisymmetric AS; rank nine with a reducible apolar quadric, singular rank-eight windows and other components remain open.",
+    "state_of_claim": "All bisymmetric AS tensors lie in the elliptic closure, of opposite rank at most eight. At rank eight with one smooth apolar, all AS points have unique smooth elliptic data and the other apolar is isomorphic. Positive-degree pencil inputs on (2,2) curves are covered. Singular-only degenerations, especially rank seven, and non-bisymmetric branches remain open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

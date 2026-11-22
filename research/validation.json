@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 57,
+  "version": 58,
   "reviewed_input": {
-    "source_commit": "0bc5a6d483765cabe73f948f83a0396f63446ffb"
+    "source_commit": "0d6e8af57d17449174a974b417df2cd4453ed3c3"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Full smooth-apolar bisymmetric rank-eight AS recognition, all marked tangent defects, rank-ten exclusion and rank-nine necessary condition."
+    "scope": "All bisymmetric adjacent-six AS tensors are in the elliptic closure; unconditional rank-nine/ten exclusion and single-smooth-apolar recognition."
   },
   "checks": [
     {
@@ -41,7 +41,7 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked the rank-one marked-net dimension bound, constant-rank three-by-three pencils, the missing balanced-pencil minor, the defect-one fiber dimension bound and the closure-only argument independent of smoothness."
+    "scope": "Reviewed the rectangular zero growth obstruction, dependent-net dimension bounds, the maximal isotropic marked fiber and the two cases for the extreme exponents of the second section lattice on a smooth source."
   },
   "mathematical_computation": {
     "result": "PASS",
@@ -49,7 +49,7 @@
   },
   "tex": {
     "result": "PASS",
-    "scope": "Main 142 pages, plan 6 and notes 13. Final logs contain no overfull boxes, missing characters or unresolved references."
+    "scope": "Main 144 pages, plan 6 and notes 13. Final logs have no overfull boxes, missing characters or unresolved references."
   },
   "visual_inspection": {
     "result": "PASS",
@@ -63,6 +63,6 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Opposite-rank-nine bisymmetric windows with reducible quadrics, singular apolars, other components and global coverage."
+    "Rank-seven and singular-only rank-eight limits, regularity beyond the bisymmetric class and other classification branches."
   ]
 }
