@@ -99,6 +99,10 @@ def test_exception(item):
         cubic = 2 * (t - 1) * (t + 1) * (t + 3)
     unit = Scalar(field.one())
     windows = specialize(field, t, field(imaginary), cubic.sqrt())
+    return verify_central_profile(windows, unit)
+
+
+def verify_central_profile(windows, unit):
     for side in windows:
         assert (
             len(
@@ -164,7 +168,7 @@ def test_exception(item):
         cuts = sections(choices)
         if all(quotient_dimensions(rules, cuts, p, unit) == PROFILE for p in range(4)):
             return True
-    raise AssertionError((poly, imaginary))
+    raise AssertionError("no common central cut found")
 
 
 def denominator_factors(rules, prime):

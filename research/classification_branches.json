@@ -242,7 +242,8 @@
       "rank_fourteen_exchange_descent": "sections/rank_fourteen_descent.tex",
       "uniform_rank_fourteen_center": "sections/rank_fourteen_center.tex",
       "rank_fourteen_central_cut": "sections/rank_fourteen_central_cut.tex",
-      "rank_fourteen_geometric_reduction": "sections/rank_fourteen_geometric_reduction.tex"
+      "rank_fourteen_geometric_reduction": "sections/rank_fourteen_geometric_reduction.tex",
+      "rank_fourteen_tensor_boundary": "sections/rank_fourteen_boundary.tex"
     },
     {
       "id": "UNRESTRICTED-SINGLY-SYMMETRIC-14",

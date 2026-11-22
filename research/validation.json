@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 118,
+  "version": 119,
   "reviewed_input": {
-    "source_commit": "f792ac8413cbb4b873fc040d72dc098e946afd02"
+    "source_commit": "475379c442346a6a245a133a9c0a203276e8022a"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every characteristic-zero ordinary rank-fourteen window with ordinary geometric reduction in characteristic 101 is standard Koszul and AS regular in every degree, including arbitrarily large residue extensions. Every ordinary root-of-unity value of the rational parameter t is regular on both components, by an auxiliary calculation at 109."
+    "scope": "All 48 geometric boundary parameters of the projective rank-fourteen tensor in the homogeneous frame are classified: 32 give standard Koszul AS-regular windows of opposite rank 14, and 16 fail in degree two or three. Any exceptional ordinary characteristic-zero point specializes at every place over 101 to one of six base values: infinity, 1, -1, -3, 19, 80."
   },
   "checks": [
     {
@@ -15,15 +15,11 @@
       "result": "PASS"
     },
     {
+      "command": "python computations/verify_rank_fourteen_boundary.py",
+      "result": "PASS"
+    },
+    {
       "command": "python computations/verify_rank_fourteen_geometric_reduction.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_rank_fourteen_cyclotomic.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_rank_fourteen_central_cut.py",
       "result": "PASS"
     },
     {
@@ -37,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed saturated PID kernels, maximal-minor ideals via row and column bases, both eigenvalues after etale splitting, lifting central sections and reduction of cyclotomic conjugates."
+    "scope": "Reviewed specialization of the raw tensor across singular frames, generic and residual dimension inequalities, all branches of the double cover and the distinction between failure of the fixed projective limit and failure in the generic fiber."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Computed all dual path kernels and maximal-minor supports through length thirteen over F101[t] for both starts and signs, checked exceptional orbits in extension fields and repeated the generic calculation at 109 to cover the remaining cyclotomic orders.",
-    "reproduction": "SymPy 1.14.0, python-flint 0.9.0, Singular 4.4.1. All 192 character blocks at 101, 72 residual base factors counted separately by i, and another 96 character blocks at 109. The maximum excluded factor degree at 109 is 10."
+    "scope": "Evaluated all four choices in finite extensions of F101 above each of four quadratic factors; verified raw tensor ranks, centers and all four central quotient profiles. Computed exact projective initial tensors and degree-three paths over Q(i)."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 239,
+      "nc-p3": 240,
       "plan_ja": 7,
       "notes_ja": 15
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected pages 212 and 213 of the 239-page paper with the kernel calculation and the proof of the cyclotomic corollary."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "2c26f5a37a6cb23a92b3c38519fc526c86916506",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Settle the finite characteristic-zero exceptional locus of the rank-fourteen components. For a putative bad closed point, every reduction over 101 lies on the explicit nonordinary boundary or at infinity. Study the finitely many residue disks by saturating quadratic and central sections on the compactified curve (local uniformizers, leading minors in characteristic zero and modulo 101). In parallel methodologically, the exact dual path/Fitting recursion can be run over Q(i)[t] with modular reconstruction. Use the cyclotomic and degree-six results as proved inputs.",
+    "Resolve the six remaining 101-adic boundary values for ordinary characteristic-zero lifts. The projective tensor in the given homogeneous frame fails at the central points, so that failure alone gives no obstruction to nearby ordinary windows. Try a valuation-dependent change of generators on the four positions, or saturated Pluecker coordinates of the quadratic and quartic subspaces; compare initial ranks in characteristic zero and modulo 101. Alternatively recover the horizontal Fitting ideals by modular reconstruction over Q(i)[t].",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

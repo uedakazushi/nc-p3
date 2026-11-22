@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 118,
+  "version": 119,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -1461,6 +1461,15 @@
         "computations/rank_fourteen_dual.py",
         "computations/verify_rank_fourteen_cyclotomic.py"
       ]
+    },
+    {
+      "id": "RANK-FOURTEEN-PROJECTIVE-TENSOR-BOUNDARY",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "All 48 geometric boundary parameters of the projective rank-fourteen tensor in the homogeneous frame are classified: 32 give standard Koszul AS-regular windows of opposite rank 14, and 16 fail in degree two or three. Any exceptional ordinary characteristic-zero point specializes at every place over 101 to one of six base values: infinity, 1, -1, -3, 19, 80.",
+      "proof": "sections/rank_fourteen_boundary.tex",
+      "verification": [
+        "computations/verify_rank_fourteen_boundary.py"
+      ]
     }
   ],
   "document_paths": {
@@ -1524,7 +1533,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "f792ac8413cbb4b873fc040d72dc098e946afd02",
+  "reviewed_source_commit": "475379c442346a6a245a133a9c0a203276e8022a",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -1533,15 +1542,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Settle the finite characteristic-zero exceptional locus of the rank-fourteen components. For a putative bad closed point, every reduction over 101 lies on the explicit nonordinary boundary or at infinity. Study the finitely many residue disks by saturating quadratic and central sections on the compactified curve (local uniformizers, leading minors in characteristic zero and modulo 101). In parallel methodologically, the exact dual path/Fitting recursion can be run over Q(i)[t] with modular reconstruction. Use the cyclotomic and degree-six results as proved inputs.",
+    "immediate_next_action": "Resolve the six remaining 101-adic boundary values for ordinary characteristic-zero lifts. The projective tensor in the given homogeneous frame fails at the central points, so that failure alone gives no obstruction to nearby ordinary windows. Try a valuation-dependent change of generators on the four positions, or saturated Pluecker coordinates of the quadratic and quartic subspaces; compare initial ranks in characteristic zero and modulo 101. Alternatively recover the horizontal Fitting ideals by modular reconstruction over Q(i)[t].",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/rank_fourteen_boundary.tex",
       "sections/rank_fourteen_geometric_reduction.tex",
-      "sections/rank_fourteen_central_cut.tex",
       "sections/rank_fourteen_center.tex"
     ],
-    "known_obstruction": "The ordinary curve is not proper. A hypothetical horizontal exceptional point can specialize entirely to a nonordinary boundary over 101. The cyclotomic case is resolved at 109.",
-    "state_of_claim": "All ordinary geometric reductions at 101, and all ordinary cyclotomic parameters in characteristic zero, are settled. Characteristic-zero points with only boundary reductions and the unrestricted classification still require proof.",
+    "known_obstruction": "A nonregular projective limit in one frame does not decide nearby ordinary fibers. Six residue values remain over 101; any horizontal exceptional point meets only these.",
+    "state_of_claim": "The homogeneous compactification has a complete boundary table. Only ordinary characteristic-zero points reducing entirely to the six listed bases over 101 can evade the arithmetic criterion. Other strata of the full indexed classification remain open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
