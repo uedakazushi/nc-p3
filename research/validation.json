@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 90,
+  "version": 91,
   "reviewed_input": {
-    "source_commit": "c43c5d157c6ac274b124062a3ed0badbf587b07d"
+    "source_commit": "9a182498d6b2cee1766af4f3be07e5d79461851b"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All eight simultaneous-zero bilinear charts, including both lines and their crossing in every reducible fiber, contain no standard AS window. Over each three-variable function field one starting position has degree-six dimension 92 instead of 84."
+    "scope": "On the invertible two-doublet chart, a single identically zero determinant polynomial forces one of the four exceptional slopes. All 32 rational presentations there have first-row degree-seven dimension at least 128 instead of 120. Together with the simultaneous-zero result this removes every identically-zero polynomial case."
   },
   "checks": [
     {
@@ -15,15 +15,11 @@
       "result": "PASS"
     },
     {
+      "command": "python computations/verify_single_zero_pairings.py",
+      "result": "PASS"
+    },
+    {
       "command": "python computations/verify_all_zero_pairing_defects.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_zero_pairing_defect.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_klein_zero_quadratics.py",
       "result": "PASS"
     },
     {
@@ -37,16 +33,16 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Primitive irreducible total bilinear family, admissible pivots, all insertions of relations and semicontinuity on special reducible fibers."
+    "scope": "Checked normalization at a or b nonzero, units in both eliminations, each irreducible exceptional parametrization, the double-root denominators, and upward specialization of path dimension."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "All eight independent exact Hilbert computations over Q(z,lambda,x), each with dimensions 1,4,10,20,35,56,92. Reproduced the earlier boundary and bilinear tests."
+    "scope": "Eight ordinary-slope eliminations, 32 exceptional chart identities, and exact seventh-degree Hilbert ranks over three-variable rational function fields."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 206,
+      "nc-p3": 207,
       "plan_ja": 6,
       "notes_ja": 14
     },
@@ -62,7 +58,8 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Solve the one-zero cases P=0 or Q=0 by eliminating the two complementary matrix entries; on the four exceptional slopes test length-seven paths and extend proven defects to admissible specializations. Study the remaining degree-two corner simples of the general center."
+    "Identify the genuine double-root discriminant, its projective singularities, and an all-fiber regular open. Test its projective tangent planes against boundary exclusions.",
+    "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
     "result": "PENDING"
