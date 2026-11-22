@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact order-25 Q(sqrt(2)) jets; unit or exact H-divisibility checks at each pivot, four central equations and four-start central quotients through length 13."
+    "scope": "Exact order-25 Q(sqrt(2)) jets; unit or exact H-divisibility checks at each pivot, four central equations and four-start central quotients through length 13.",
+    "reproduction": "Recomputed exact order-25 jets at all four starts, with positive precision through length 13. Recomputed the rank-nine obstruction and the exceptional rank-fourteen certificates."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected page 258, including the saturated path and center calculations, per-length precision losses, and valuation covering proof."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "1aca58b6d0634d6a215e41b9c0d1115c25ba1627",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Move from the now complete fixed curve p=0 to the remaining isolated rank-fifteen interior candidates. Test x=0 using U=-3 and its small-y disk at 3, or resolve the complementary sector val(y)>2 val(x) through the rank-four degeneration. Use the p=0 saturation procedure when initial path ranks drop.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "8e2c421dc7309340526e60c5e922cce9fb623b37",
+    "commit": "b1df30efc836d733be143aca36a7fdf6ad4ef6f2",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
