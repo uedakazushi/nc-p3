@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 155,
+  "version": 156,
   "reviewed_input": {
-    "source_commit": "bd36881b3e10feec7e7e889bfff2783f8a845895"
+    "source_commit": "8a98a95cc132b0d31ed12b1c0958dc40b2d444c8"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every characteristic-zero ordinary rank-fifteen window with integral x reducing to zero at 3 and unit y is standard Koszul left/right AS-regular and free of rank 256 over four quartics, with arbitrary residue field degree."
+    "scope": "All 32 points a=b=0 of the projective Pauli equations give one rank-twelve quantum polynomial indexed algebra of minimal period one. Every characteristic-zero ordinary rank-fifteen lift with val(y)<min(0,2 val(x)) is regular at every odd or equicharacteristic-zero valuation."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_residue_line.py",
+      "command": "python computations/verify_rank_twelve_quantum_limit.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_formal_boundary.py",
+      "command": "python computations/verify_rank_fifteen_residue_line.py",
       "result": "PASS"
     },
     {
@@ -33,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked the characteristic-three rational parameter, full orbit coverage, specialization of the integral path kernels, and lifting to each characteristic-zero ordinary window."
+    "scope": "Checked both Newton regimes for D=x^3/y, the simple root choices, pole-cone transport, explicit quantum normal form and residue characteristic independence away from 2."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact generic path and center ranks over F9(s); univariate Fitting supports through length 13 at four starts; all six surviving orbits directly certified.",
-    "reproduction": "Recomputed the F9(s) centers, the four F3[s] Fitting supports through length 13 in Singular and all six residual orbit tests. Recomputed the four boundary tensor certificates."
+    "scope": "Exhausted the 32 projective points, computed the 24 tensor entries, six binomial relations at every start, periodic diagonal rescaling and all five central quartic multidegrees."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 281,
+      "nc-p3": 282,
       "plan_ja": 8,
       "notes_ja": 16
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected page 254, including the residue-line parameter, polynomial tensor, central dimensions and residual orbit calculation."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "7107e22efe47bd15490381b4474d2b1fa12db0cc",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Determine regularity away from the certified geometric residue line and four characteristic-zero curves. On the characteristic-zero p=0 curve compare the K=0 model at 3 with the valuations where y has a zero or a pole; off this curve use eigenspaces of simultaneous letter translation to reduce the degree-six Fitting matrices.",
+    "Analyze the equality wall val(y)=2 val(x)<0 via the limiting rank-fourteen U=1 chart and transport ordinary geometric residual certificates. On p=0 only y integral at odd places and vanishing at every place above 3 can still fail; analyze the saturated H=0 disk.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
