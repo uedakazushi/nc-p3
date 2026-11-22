@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Recorded all inversions, pivot contents and residual minors in the exact eleven-term rational-function calculation. Checked the orbit core over the rationals and the geometric residue fibers at each resultant prime and supplemental pivot schedules at the six remaining pairs."
+    "scope": "Recorded all inversions, pivot contents and residual minors in the exact eleven-term rational-function calculation. Checked the orbit core over the rationals and the geometric residue fibers at each resultant prime and supplemental pivot schedules at the six remaining pairs.",
+    "reproduction": "Reproduced the degree-205 chart divisor, the full resultant-prime list and its six residual fibers, then verified all sixteen supplemental projections on each of the two pivot schedules over Q(z)."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript pages 264 and 265, including the six residual fibers and the lifting argument."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "872faadc4c63e6642142fa60aea6e32156ad81c9",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "On the small-trace disk at three, compute the two-sided overlap of the left and right multiplication maps on the saturated four-center quotient. Check the seventh profile (10,10,10,10) and the degree-nine ranks on the way to vanishing in degree thirteen.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "3319f8de13424ac6b9a5a8f4a338f22f53c04f2c",
+    "commit": "11ec31372c6bde9e0cda9a48c52616b94bdfe32a",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
