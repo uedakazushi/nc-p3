@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 139,
+  "version": 140,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -1664,6 +1664,15 @@
       "verification": [
         "computations/verify_rank_fifteen_word_symmetries.py"
       ]
+    },
+    {
+      "id": "RANK-FIFTEEN-COORDINATE-ENDS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "Every ordinary rank-fifteen coordinate endpoint on either sheet has degree-six path dimension 84 at every start and quartic-center character dimensions (3,2,0,0). The endpoint loci reduce to n=1 on an elliptic curve and m=ik, n=i on a rational curve with their translates and conjugates. Complementary exact function-field charts and residue certificates cover all geometric points. For the 11 and 7 residual base factors, four-center cuts also certify standard Koszul left/right AS regularity in every degree.",
+      "proof": "sections/rank_fifteen_coordinate_ends.tex",
+      "verification": [
+        "computations/verify_rank_fifteen_coordinate_ends.py"
+      ]
     }
   ],
   "document_paths": {
@@ -1727,7 +1736,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "45ce5ee812b4036dc98558479705222294fae9b3",
+  "reviewed_source_commit": "9555e756b61ce519e06ec1c628eda413ae5090a1",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -1736,16 +1745,16 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Use first-sheet sixth_insertion at starts 0,1 and characters 0,2 only (ranks 36,34). On the explicit n=1 elliptic slice, z=t and lambda=(4t+Y)/(t(t+1)), Y²=-t³+14t²-t, a=2,e=0,b=(t+1)/(2t),f=4/(t+1). Test complementary minors and solve their remaining ordinary support. For the surface use two independent chart minors per block and saturate the ordinary denominators. Indexed comparisons may add the anchored cubic C to J2,J3.",
+    "immediate_next_action": "Eliminate the isolated whole-surface exceptions. First complete four-center cut charts through degree 13 on the n=1 elliptic curve and the n=i, m=ik rational curve. The field frames, both splitting signs, and certified specializations are in verify_rank_fifteen_coordinate_ends.py. Use independent center choices or sparse fraction-free minors if polynomial growth limits dense elimination. For the surface retain first-sheet starts 0,1 and characters 0,2 (ranks 36,34).",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/rank_fifteen_coordinate_ends.tex",
       "sections/rank_fifteen_word_symmetries.tex",
-      "sections/rank_fifteen_adjoint_invariants.tex",
       "sections/rank_fifteen_quadratic_dual.tex",
       "sections/rank_fifteen_vertical_curves.tex"
     ],
-    "known_obstruction": "The four remaining sixth-degree minors have not been eliminated on the surface. The opposite pairing is proved but does not decide indexed equivalence after changing parameters.",
-    "state_of_claim": "Koszul failure at corresponding parameters is identical on both sheets. Generic indexed windows at identical parameters are distinct. Isolated failures, generic map degrees and equivalences at other parameters remain open.",
+    "known_obstruction": "Sixth-degree failure is excluded on all coordinate ends. A later-degree failure at a remaining endpoint, or a sixth-degree failure away from the endpoints, is not yet excluded.",
+    "state_of_claim": "All coordinate ends have standard growth through degree six. Full regularity holds over the 18 residual factors. All-degree regularity of every coordinate end and of the entire surface remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
