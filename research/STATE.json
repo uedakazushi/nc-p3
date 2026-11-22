@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 151,
+  "version": 152,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -1772,6 +1772,15 @@
       "verification": [
         "computations/verify_rank_fifteen_rational_quotient.py"
       ]
+    },
+    {
+      "id": "RANK-FIFTEEN-UNIFORM-INDEXED-CLASSIFICATION",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "For every ordinary positive-fixed rank-fifteen window, three explicit scalars (x,p,q) are a necessary and sufficient indexed-isomorphism test, including every special parameter and both displays. Exact intrinsic trace, oriented-cubic and fifth contractions recover the three scalars with a denominator nonzero throughout. The shifted opposite fixes precisely U=9; the ordinary opposite fixes precisely ramification.",
+      "proof": "sections/rank_fifteen_global_invariants.tex",
+      "verification": [
+        "computations/verify_rank_fifteen_global_invariants.py"
+      ]
     }
   ],
   "document_paths": {
@@ -1835,7 +1844,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "45ed985cf1ae53773c3236ad58fa4585634dd089",
+  "reviewed_source_commit": "d44dafef3034939d545eee152e687f925d636f0e",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -1844,16 +1853,16 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Work on the isolated candidates off the four certified plane curves using the explicit (x,y) quotient. Check whether additional indexed equivalences at points with generated dimension below 16 identify different (x,p,q), beginning with the residual coordinate-end levels.",
+    "immediate_next_action": "The positive-fixed ordinary rank-fifteen indexed comparison is settled uniformly. Focus on the remaining isolated all-degree regularity candidates in the (x,y) plane away from the four certified curves: use the normalized Pauli tensor for direct cyclic relations, quotient cuts and Fitting loci, or advance coverage of the unrestricted nonsymmetric branch.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/rank_fifteen_global_invariants.tex",
       "sections/rank_fifteen_rational_quotient.tex",
       "sections/rank_fifteen_regular_orbits.tex",
-      "sections/rank_fifteen_parameter_orbits.tex",
-      "sections/rank_fifteen_root_exchange.tex"
+      "sections/rank_fifteen_quadratic_dual.tex"
     ],
-    "known_obstruction": "Interior regularity and indexed comparisons outside the dimension-16 open remain possible sources of exceptions.",
-    "state_of_claim": "The quotient separates all 192-action orbits. Necessity for all indexed isomorphisms is established on the dimension-16 open. Regularity descent is uniform on every ordinary positive rank-fifteen window.",
+    "known_obstruction": "Possible isolated interior failures of all-degree regularity on the (x,y) plane and uncovered general nonsymmetric windows.",
+    "state_of_claim": "Indexed equivalence within this entire rank-fifteen chart is decided. Its isolated interior regularity candidates and unrestricted coverage remain open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

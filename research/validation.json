@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 151,
+  "version": 152,
   "reviewed_input": {
-    "source_commit": "45ed985cf1ae53773c3236ad58fa4585634dd089"
+    "source_commit": "d44dafef3034939d545eee152e687f925d636f0e"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The 192-action quotient of the formal rank-fifteen parameter surface is the normal rational surface p^2=x^3-27y, q^2=(1-x)^2-4y, y nonzero. The three regular functions (x,p,q) separate all template orbits, and exactly classify indexed windows on the dimension-16 open. Two explicit rational coordinates suffice generically. On all ordinary windows left/right regularity depends only on (x,y), including the exceptional fibers."
+    "scope": "For every ordinary positive-fixed rank-fifteen window, three explicit scalars (x,p,q) are a necessary and sufficient indexed-isomorphism test, including every special parameter and both displays. Exact intrinsic trace, oriented-cubic and fifth contractions recover the three scalars with a denominator nonzero throughout. The shifted opposite fixes precisely U=9; the ordinary opposite fixes precisely ramification."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_rational_quotient.py",
+      "command": "python computations/verify_rank_fifteen_global_invariants.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_parameter_orbits.py",
+      "command": "python computations/verify_rank_fifteen_rational_quotient.py",
       "result": "PASS"
     },
     {
@@ -33,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked degree 768, the two independent sign operations, finiteness at U=-3, normality of the quotient, separation of all finite group orbits, and the reflection order on the four arrows."
+    "scope": "Checked trace-dual Pauli eigenvalues, the signs of the first-factor transpose and oriented cubics, the everywhere nonzero cubic denominator and degree invariance of every ratio."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "All 192 relative-invariant sign actions, both double-cover equations, the rational inverse and irreducibility tests; verified the partial transpose giving the shifted opposite.",
-    "reproduction": "Recomputed all 192 relative-invariant actions, the two quadratic identities, inverse parametrization, irreducibility checks, transpose sign and three pullback factorizations. Re-ran the Pauli parameter orbit verifier."
+    "scope": "Exact trace and spectral identities, odd fifth contraction and input-minus-output cubic identity modulo five quadrics, independent direct finite-field Gram contractions on four windows."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 277,
+      "nc-p3": 278,
       "plan_ja": 8,
       "notes_ja": 16
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected manuscript pages 249 and 250 including the four invariant formulas, normal quotient, reflection and four certified plane curves."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "6f1b57d9b5f377d50adb3fd62ccb1419faee00e9",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Work on the remaining isolated regularity candidates in the two-coordinate (x,y) plane. Descend the six certified multiplier curves and compare their discriminants; study whether special indexed identifications outside the dimension-16 open identify different (x,p,q), especially at the coordinate-end exceptions.",
+    "The positive-fixed ordinary rank-fifteen indexed comparison is settled uniformly. Focus on the remaining isolated all-degree regularity candidates in the (x,y) plane away from the four certified curves: use the normalized Pauli tensor for direct cyclic relations, quotient cuts and Fitting loci, or advance coverage of the unrestricted nonsymmetric branch.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
