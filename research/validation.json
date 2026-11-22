@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 168,
+  "version": 169,
   "reviewed_input": {
-    "source_commit": "733bfbda4cb03f2190fb3d88fd450558a785ceec"
+    "source_commit": "70e9fa14354689ab7c149ea268d0818ec528d3b9"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every ordinary rank-fifteen window on the entire three-adic disk 0<v(y)<3v(x) is standard Koszul, left/right AS-regular and free of rank 256 per start over four central quartics. The exact seventh quotient and two-sided residue bounds through thirteen leave potential excess only in degree nine. A three-residue-class Koszul/Euler lemma forces the missing Hilbert function and freeness. The same all-degree certificate covers integral slopes outside the zeros of an integer polynomial C with C(0) a 3-adic unit. All pencils x^3=Dy with D of positive valuation at some place over three are regular at every point, with their indexed genus-two classification for D nonzero and not 27."
+    "scope": "At residue characteristic three every ordinary window with integral D=x^3/y, v(y)>0 and 5v(y)<=6v(3) is standard Koszul left/right AS-regular, free of rank 256 per start. Descending the 9835-degree overlap pivot divisor together with the sixth lattice divisor leaves exactly three irreducible slope polynomials; every geometric root is covered by aligned central sections on supplemental charts. All four prime-field unit pairs (xbar,ybar) also lift to regular windows."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_overlap_bound.py",
+      "command": "python computations/verify_rank_fifteen_integral_annulus.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_overlap_annulus.py",
+      "command": "python computations/verify_rank_fifteen_overlap_bound.py",
       "result": "PASS"
     },
     {
@@ -33,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked the signs and residues in the four-vertex Euler identity, projective dimension at most two, homogeneous depth, degree-one syzygy and descent of each central free rank."
+    "scope": "Checked reduction of the same central sections by changing the last-start word basis, degree-24 fibers including conjugate roots, and integral lifting at four unit pairs."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Fifteen-term rational-function H-jets through length seven at all four starts, independently checked F9 two-sided residue bounds at lengths eight through thirteen, exact homological proof of the ninth-degree gap.",
-    "reproduction": "Verified all four degree-seven rational-function cuts at fifteen digits; independently replayed the residue multiplication through degree thirteen. Reviewed the depth and projective-dimension proof establishing exact dimension twenty in degree nine."
+    "scope": "Recorded the complete F3(z) overlap pivot divisor (degree 9835), joined it to the proven integral sixth chart, checked the 144-degree core and three residual polynomials, and replayed all four cuts at the supplemental charts and unit residue pairs."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 295,
+      "nc-p3": 296,
       "plan_ja": 8,
       "notes_ja": 16
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected manuscript pages 267 through 269, including the Koszul syzygy proof, the residue table and the slope descent."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "1a207fce65a579066307d8fec960398a538c446b",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Make the finite residue-slope obstruction in characteristic three effective. On v(y)>0 with D=x^3/y a unit at three, record the polynomial denominators and unit pivots of the F3(z) overlap certificate, descend their zero set through the degree-24 trace map, and treat any whole bad residue fibers. Use the exact seventh integral lattices and the three-residue-class criterion when extending to unrestricted v(y). The unrestricted classification still includes isolated interior points and nonsymmetric branches.",
+    "Remove the depth bound on the integral-slope annulus. Record the mod-three numerators and denominators actually inverted in the Q(z) degree-seven cuts; extend their H-constant multiplication tables over F3(z) through degree thirteen with nine allowed dimension 24. Descend this exact chart and cover surviving finite residue fibers. The full positive-slope disk, the bounded-depth integral-slope annulus and the four prime-field unit residue pairs are settled.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

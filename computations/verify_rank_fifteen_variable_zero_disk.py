@@ -14,6 +14,8 @@ from verify_rank_fourteen_all_ordinary import DIMENSIONS, saturated_projection
 F9 = fq_default_ctx(modulus=fmpz_mod_poly_ctx(3)([1, 0, 1]), var="i")
 BASE_POINT = 1 + F9.gen()
 ONE = fmpz_poly([1])
+FIXED_CENTER_WORDS = (("1313", "2222", "2323", "2332", "3131", "3223", "3232", "3322", "3333"),
+                      ("1312", "2223", "2232", "2322", "2333", "3130", "3222", "3233", "3323", "3332"))
 
 
 @cache
@@ -197,9 +199,7 @@ def center_data(precision, jet=Jet, build_relations=relations, *, fixed_sections
             # These free coordinates fix the same exact center sections when
             # the jet precision changes. All are in the last start's word basis.
             labels = tuple("".join(map(str, w)) for w in basis[3, 4, h])
-            expected = (("1313", "2222", "2323", "2332", "3131", "3223", "3232", "3322", "3333"),
-                        ("1312", "2223", "2232", "2322", "2333", "3130", "3222", "3233", "3323", "3332"))
-            assert labels == expected[h]
+            assert labels == FIXED_CENTER_WORDS[h]
             assert free == list(range(width-dimension, width))
         for col in (free[1:] if h == 0 else free):
             vector = {col: jet.constant(1)}

@@ -1,0 +1,78 @@
+% !TeX root = ../papers/nc-p3.tex
+\section{剰余傾き全体への混標数環帯の降下}
+\label{sec:rank-fifteen-integral-annulus}
+\begin{theorem}\label{thm:rank-fifteen-integral-annulus}
+標数零、剰余標数3の通常な階数15窓で $\nu(y)>0$, $D=x^3/y$ は整とする。
+$5\nu(y)\le6\nu(3)$ ならば、各始点で四中心四次式の多項式環上自由階数256であり、
+標準Koszul左右AS正則である。剰余傾き $\bar D$ は任意でよい。
+\end{theorem}
+\begin{proof}
+第\ref{sec:rank-fifteen-integral-slope}節の次数205の多項式を $F$ とする。
+第\ref{sec:rank-fifteen-overlap-annulus}節の $\mathbb F_3(z)$ 上の十五桁の計算で使った
+単元の定数係数の分子・分母に現れる全既約因子の積を $G$ とする。
+\path{computations/verify_rank_fifteen_integral_annulus.py} は各逆元と
+各主元を記録し、標数3の平方自由分解によって三乗因子に由来する零点も残す。
+$\deg G=9835$ となる。$\bar F G$ の零点のうち有限な傾きの点について、
+$z\mapsto iz,(z+1)/(z-1)$ による最大公約元の反復を行う。
+モニック化した最終多項式は次数144であり、$P/Q$ を同節の傾きの式として
+\[
+ \prod_g Q^{\deg g}g(P/Q),\qquad
+ g(T)=T+1,\quad T^2+2T+2,\quad T^3+2T^2+2T+2
+\]
+のモニック化と一致する。この三つは既約である。従ってこれらの六つの幾何根を除けば、
+$\bar F G$ が零にならない表示があり、所定の $D$ に持ち上げられる。
+$\bar F$ は六次までの標数零の自由格子、$G$ は十三次までの剰余計算を保証し、
+第\ref{sec:rank-fifteen-overlap-annulus}節の五桁からの再開が適用できる。
+
+三つの $g$ の順に、追加する $\bar z$ の既約多項式を
+\[
+ z^4+z^3+z^2+z+1,\qquad z^4+2z^3+2,\qquad z^3+2z+2
+\]
+と取る。これらは全て $\bar F$ と互いに素である。
+三つの表示で同時に単元となる主元で剰余の経路基底を取ると、
+最後の始点の四次の語基底がもとの計算と変わり得る。
+そこで六次の標数零証明で使った語の像を現在の基底で求め、
+その基底変更が単元主元だけでできることを検査する。
+中心方程式の最後の始点ではこれらの語を列に使い、文字 $0,1$ の
+最後の $3,2$ 個の自由座標を固定して単元主元で解く。
+この四中心式は標数零のものの還元である。その商の左右の積を長さ13まで
+再計算すると、各段の損失も上界も第\ref{sec:rank-fifteen-overlap-annulus}節に一致する。
+
+各追加表示は $Q$ と互いに素である。対応する $g(P/Q)=0$ と
+表示の既約性を検査しているので、Frobenius共役を取れば $g$ の全ての幾何根を覆う。
+$P-DQ$ の根を持ち上げ $\nu(H)=\nu(y)/6$ として同じ全次数判定を適用する。
+\end{proof}
+
+\begin{theorem}\label{thm:rank-fifteen-unit-residues}
+剰余標数3の付値で $(\bar x,\bar y)\in(\mathbb F_3^\times)^2$ となる
+通常な標数零の全窓も標準Koszul左右AS正則で、各始点の自由階数は256である。
+特に正則性座標が有理数で $x$ が3整、$y$ が3の単元なら全て認証される。
+\end{theorem}
+\begin{proof}
+\path{computations/verify_rank_fifteen_unit_residues.py} は四対
+$(1,1),(1,2),(2,1),(2,2)$ についてそれぞれ次数 $6,4,4,12$ の
+有限体で $K,H,n,P_+,P_-,Q_+,Q_-$ を与える。$U=K^2,V=H^2$ として
+両座標式、$n^4+(1-U)n^2+V=0$, $P_\pm^2=2(K+1\pm H)$,
+$Q_\pm^2=2(K-1\pm H)$ を検査する。各表示で未切断経路を長さ5まで計算し、
+四次中心の文字別次元が $(3,2,0,0)$ となることを確かめる。
+四つの中心四次式を課した後の全四始点の次元は長さ13の消滅まで
+$(1+t+t^2+t^3)^4$ の係数となる。
+
+指定された $x,y$ について $D=x^3/y$ とし、$(U+3)^3-D(U-1)^2=0$ の
+指定した剰余根を持ち上げる。$U+3$, $U-1$, $H$, $n$ は単元である。
+$V=x(U-1)^2/(U+3)$ として残りのモニックな根を順に選ぶ。
+代数閉包を取れば、根が重複する場合も指定された剰余根の上に根が存在する。
+未切断経路の上下界と中心の核次元の下界により、単元主元で中心式を持ち上げられる。
+四中心商の上界と同じ自由加群の比較で全次数の結論を得る。
+有理座標で $\bar x=0$ の場合は定理\ref{thm:rank-fifteen-residue-line}による。
+\end{proof}
+
+\begin{corollary}
+$x,y\in\mathbb Q$ で $x$ が3整とする。この範囲で未認証の点があるなら
+$x\ne0$, $\nu_3(y)>0$, $\nu_3(y)\ge3\nu_3(x)$ を同時に満たす。
+\end{corollary}
+\begin{proof}
+$x=0$ は定理\ref{thm:rank-fifteen-x-zero}、$\nu_3(y)<0$ は極の定理、
+$\nu_3(y)=0$ は上の単元剰余の定理である。
+残る正付値の場合も $\nu_3(y)<3\nu_3(x)$ なら定理\ref{thm:rank-fifteen-full-trace-disk}で尽くされる。
+\end{proof}

@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 168,
+  "version": 169,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -1926,6 +1926,16 @@
       "verification": [
         "computations/verify_rank_fifteen_overlap_bound.py"
       ]
+    },
+    {
+      "id": "RANK-FIFTEEN-INTEGRAL-ANNULUS-AND-UNIT-RESIDUES",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "At residue characteristic three every ordinary window with integral D=x^3/y, v(y)>0 and 5v(y)<=6v(3) is standard Koszul left/right AS-regular, free of rank 256 per start. Descending the 9835-degree overlap pivot divisor together with the sixth lattice divisor leaves exactly three irreducible slope polynomials; every geometric root is covered by aligned central sections on supplemental charts. All four prime-field unit pairs (xbar,ybar) also lift to regular windows.",
+      "proof": "sections/rank_fifteen_integral_annulus.tex",
+      "verification": [
+        "computations/verify_rank_fifteen_integral_annulus.py",
+        "computations/verify_rank_fifteen_unit_residues.py"
+      ]
     }
   ],
   "document_paths": {
@@ -1989,7 +1999,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "733bfbda4cb03f2190fb3d88fd450558a785ceec",
+  "reviewed_source_commit": "70e9fa14354689ab7c149ea268d0818ec528d3b9",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -1998,15 +2008,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Make the finite residue-slope obstruction in characteristic three effective. On v(y)>0 with D=x^3/y a unit at three, record the polynomial denominators and unit pivots of the F3(z) overlap certificate, descend their zero set through the degree-24 trace map, and treat any whole bad residue fibers. Use the exact seventh integral lattices and the three-residue-class criterion when extending to unrestricted v(y). The unrestricted classification still includes isolated interior points and nonsymmetric branches.",
+    "immediate_next_action": "Remove the depth bound on the integral-slope annulus. Record the mod-three numerators and denominators actually inverted in the Q(z) degree-seven cuts; extend their H-constant multiplication tables over F3(z) through degree thirteen with nine allowed dimension 24. Descend this exact chart and cover surviving finite residue fibers. The full positive-slope disk, the bounded-depth integral-slope annulus and the four prime-field unit residue pairs are settled.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/rank_fifteen_integral_annulus.tex",
       "sections/rank_fifteen_three_residue_classes.tex",
-      "sections/rank_fifteen_horizontal_fibers.tex",
-      "sections/rank_fifteen_overlap_annulus.tex"
+      "sections/rank_fifteen_integral_slope.tex"
     ],
     "known_obstruction": "Possible isolated interior failures of all-degree regularity on the (x,y) plane and uncovered general nonsymmetric windows.",
-    "state_of_claim": "The positive-slope disk is complete at all degrees. Unit slopes at three, isolated interior failures and the unrestricted nonsymmetric branches remain open.",
+    "state_of_claim": "All integral slopes are certified in the bounded-depth annulus and all prime-field unit pairs are certified. Effective all-depth coverage of unit slopes and the unrestricted classification remain open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

@@ -292,7 +292,8 @@
       "rank_fifteen_integral_slope": "sections/rank_fifteen_integral_slope.tex",
       "rank_fifteen_overlap_annulus": "sections/rank_fifteen_overlap_annulus.tex",
       "rank_fifteen_horizontal_fibers": "sections/rank_fifteen_horizontal_fibers.tex",
-      "rank_fifteen_three_residue_classes": "sections/rank_fifteen_three_residue_classes.tex"
+      "rank_fifteen_three_residue_classes": "sections/rank_fifteen_three_residue_classes.tex",
+      "rank_fifteen_integral_annulus": "sections/rank_fifteen_integral_annulus.tex"
     },
     {
       "id": "UNRESTRICTED-SINGLY-SYMMETRIC-14",

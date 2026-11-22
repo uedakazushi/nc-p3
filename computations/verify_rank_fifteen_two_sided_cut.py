@@ -7,8 +7,8 @@ from verify_rank_fifteen_variable_zero_disk import center_data
 from verify_rank_fourteen_all_ordinary import DIMENSIONS, saturated_projection
 
 
-def initial_layers(jet, build_relations):
-    _, basis, image, centers = center_data(15, jet, build_relations)
+def initial_layers(jet, build_relations, center_builder):
+    _, basis, image, centers = center_builder(15, jet, build_relations)
     precision = jet.precision
     assert precision == 11
     dims, left, right, words = {}, {}, {}, {}
@@ -79,8 +79,8 @@ def overlap(n, start, h, dims, left, right, jet):
     return loss
 
 
-def verify(jet, build_relations):
-    dims, left, right = initial_layers(jet, build_relations)
+def verify(jet, build_relations, *, center_builder=center_data):
+    dims, left, right = initial_layers(jet, build_relations, center_builder)
     for n in range(6, 14):
         losses = [overlap(n, p, h, dims, left, right, jet)
                   for p, h in product(range(4), repeat=2)]
