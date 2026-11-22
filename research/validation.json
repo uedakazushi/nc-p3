@@ -41,7 +41,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Two symbolic tensor transports, exact function-field trace fibers, split-fiber cubic and degree-five tensor contractions, including all conjugate ordinates."
+    "scope": "Two symbolic tensor transports, exact function-field trace fibers, split-fiber cubic and degree-five tensor contractions, including all conjugate ordinates.",
+    "reproduction": "Verified the two additional symbolic tensor transports, exact coordinate-curve trace gcds, all 12 split fibers for the oriented cubic and fifth-order contraction, and both preceding endpoint and symmetry checks."
   },
   "tex": {
     "result": "PASS",
@@ -53,13 +54,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript pages 238 and 239, including both tensor transports, the complete fibers and the fifth-degree contraction."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "0ac2fce55746d6351437e659fe5e3674aa21472d",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "For regularity use the proven reciprocal isomorphism: on the elliptic endpoint compare the pivot norm support for t and 1/t; on the rational component compare t and -1/t. Four-center sections may be chosen on independent charts. Compute central cuts through degree 13 with degree-aware sparse pivots and certify common remaining factors over both residue lifts. For generic indexed comparisons elsewhere, use the new multiplier transports and two independent trace contractions on the opposite cut; the two rational sign components still need comparison.",
@@ -67,7 +71,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "a6aaeead8750717d4949a11a09e280c8c5724d69",
+    "commit": "df8328faef3023c5904639528b0c0887618217f5",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
