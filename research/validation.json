@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact trace and spectral identities, odd fifth contraction and input-minus-output cubic identity modulo five quadrics, independent direct finite-field Gram contractions on four windows."
+    "scope": "Exact trace and spectral identities, odd fifth contraction and input-minus-output cubic identity modulo five quadrics, independent direct finite-field Gram contractions on four windows.",
+    "reproduction": "Verified all symbolic contractions modulo the five quadrics and checked the intrinsic formulas against direct Gram tensors at four residues. Re-ran the rational quotient verifier."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript pages 251 and 252 including denominator control, fifth and cubic identities and the shifted-opposite locus."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "729fbc3139e5a7d3a5ea59090e7253b0a40e3e63",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "The positive-fixed ordinary rank-fifteen indexed comparison is settled uniformly. Focus on the remaining isolated all-degree regularity candidates in the (x,y) plane away from the four certified curves: use the normalized Pauli tensor for direct cyclic relations, quotient cuts and Fitting loci, or advance coverage of the unrestricted nonsymmetric branch.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "9711cdfe8f54311b5e5bdf0689208dc80f0c3973",
+    "commit": "c63cbdf6ab558c6465d7575a7cb6dafb337f799d",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
