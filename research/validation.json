@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 80,
+  "version": 81,
   "reviewed_input": {
-    "source_commit": "15bba1ec2e5b144119f3eda9eb86dc2dd60ebbd7"
+    "source_commit": "c4f2955b6b444671eebb46b845e45649b3a84071"
   },
   "generation": {
     "result": "PASS",
-    "scope": "On the fifteen-dimensional unmarked component, one projected twenty-point configuration determines generically finitely many windows, of even function-field degree by reversal. The embedded first-edge and first-configuration images have dimensions 45 and 30. All four normalized square roots are isolated and reduced at the full-rank sample. At the symmetric sample the even root has exact local length two, and the odd roots are reduced."
+    "scope": "The generic recovery degree from one projected configuration is exactly two. The two finite-edge AS windows are the original orientation and its reversal; one ordered first edge determines the extension. At both rational samples the same classification holds. A pencil of quartics with twenty triple points recovers every normalized square root, including the exclusion of degenerate Grassmann candidates."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_single_configuration_projection.py",
+      "command": "python computations/verify_configuration_quartic_pencil.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_klein_zero_quadratics.py",
+      "command": "python computations/verify_single_configuration_projection.py",
       "result": "PASS"
     },
     {
@@ -29,91 +29,38 @@
     {
       "command": "git diff --check",
       "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_klein_center_lift.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_klein_generic_quartics.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_klein_elliptic_completion.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_klein_full_rank_configurations.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_klein_exceptional_pairings.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_klein_elliptic_center.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_unrestricted_doublet_deformations.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_twenty_conormal_identities.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_klein_two_doublets.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_klein_generic_isomorphisms.py",
-      "result": "PASS"
     }
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed the fixed-edge Jacobian and fixed-configuration incidences, reversal invariance and generic freeness on the fiber, characteristic-zero lower tangent bound at collision, and exact second-order obstruction. The differential to the first configuration is injective modulo projective orbits; its generic stabilizer is trivial."
+    "scope": "Reviewed nonvanishing for deficient square maps, polar-rank criterion, projective gcd specialization including infinity, determinant uniqueness, properness of the Grassmann fiber, and two-window uniqueness."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact first-edge tangents, ranks of 60 by 96 first-coordinate incidence matrices, all four square-root Jacobians, and the nonzero quadratic obstruction at the rank-ten root.",
-    "reproduction": "SymPy 1.14.0 and python-flint 0.9.0; computations over rational and function fields, with split primes 12619 and 2657 for fiber certificates."
+    "scope": "2-dimensional kernels in four 1100 by 715 polar systems; compressed seven-minors have gcd degree two with no common root at infinity. At the rank-ten even root the gcd is a square. Reversed cubic overlap checked at rank sixteen."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 191,
+      "nc-p3": 193,
       "plan_ja": 6,
       "notes_ja": 14
-    },
-    "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
+    }
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected rendered manuscript pages 160 and 164, including the new component proof and configuration recovery. Inspected the final degree bound on page 165."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "repository": "uedakazushi/nc-p3",
-    "branch": "main",
-    "source_commit": "e4dbe656b8f1202245bd59fa8a4838ee9c34033d",
-    "verified_from": "cafd8f7befc04d5ed2f711c33e795a2c51f00d67",
-    "changed_files_verified": 28,
-    "method": "Regular fast-forward push, fresh git fetch, comparison of all changed remote blobs to local files."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Determine the exact generic degree over a single projected configuration. Normalize Q=A^2 and Q-perp, enumerate isolated Grassmann square roots up to coordinate signs, reject pairs by the cubic intersection, then recover the two-window extension. Determine the quartic center and effective regularity on the full component and the remaining singular rank charts.",
+    "Use the pair of determinant quartics to study the double cover and its ramification at the odd-symmetric divisor; determine the intrinsic intersection scheme of the two Veronese images. Seek an effective closed-fiber AS criterion and quartic centers on the full component.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
-    "result": "PASS",
-    "repository": "uedakazushi/research-hub",
-    "branch": "main",
-    "commit": "ce912ae560d130c17d6eb528c8f5102bffec03b4",
-    "method": "Updated the nc-p3 row only, then fetched main and verified README bytes."
+    "result": "PENDING"
   }
 }

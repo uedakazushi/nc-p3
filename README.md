@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-22 / v80。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v81。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -148,6 +148,8 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 
 十五次元成分では一位置の二十点配置だけで一般の窓が有限候補に絞られ、この配置自身の一般射影安定群も自明である。逆向きの窓も同じ配置を持つため復元次数は偶数である。階数10の点で偶位置の二つの平方根が重なる局所長さは2となる。[証明と判定](sections/single_configuration_projection.tex)
 
+一つの二十点配置からの一般復元次数はちょうど2で、二つの向きが全候補である。二十個の三重点を持つ四次鉛筆から、退化解を含めて全平方根を決定した。[証明と判定](sections/configuration_quartic_pencil.tex)
+
 二窓から作る56次元代数で、低次Extの消滅を逆Serre反復が保つ構造条件を探す。
 「全次数を証明してAS認証」「有限障害で排除」「未決定」を分け、有限検査の成功を全AS認証としない。
 正規形の枝、特殊値、枝間同型の条件を証明し、未分類の残余を明示する。
@@ -199,6 +201,7 @@ python3 computations/verify_unrestricted_doublet_deformations.py
 python3 computations/verify_twenty_conormal_identities.py
 python3 computations/verify_klein_zero_quadratics.py
 python3 computations/verify_single_configuration_projection.py
+python3 computations/verify_configuration_quartic_pencil.py
 python3 computations/verify_klein_elliptic_center.py
 python3 computations/verify_klein_full_rank_configurations.py
 python3 computations/verify_rank_five_pencils.py
