@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-22 / v82。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v83。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -152,6 +152,8 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 
 偶奇それぞれの二つのVeronese像の交叉が二十点そのものであることを示した。鉛筆を一つ残すと四次の四元群拡大、Gale双対な二鉛筆の順序を忘れると八次の二面体拡大となる。奇対称因子で二つの向きは合流する。[証明と判定](sections/veronese_pencil_quotient.tex)
 
+四次の導分を計算し、十五次元成分の全方向に五つの中心四次式が延びることを証明した。一つの開集合の全幾何点が正則となり、閉包の全標準AS点は共通の多項式恒等式を持つ。[証明と判定](sections/quartic_euler_lifting.tex)
+
 二窓から作る56次元代数で、低次Extの消滅を逆Serre反復が保つ構造条件を探す。
 「全次数を証明してAS認証」「有限障害で排除」「未決定」を分け、有限検査の成功を全AS認証としない。
 正規形の枝、特殊値、枝間同型の条件を証明し、未分類の残余を明示する。
@@ -205,6 +207,7 @@ python3 computations/verify_klein_zero_quadratics.py
 python3 computations/verify_single_configuration_projection.py
 python3 computations/verify_configuration_quartic_pencil.py
 python3 computations/verify_configuration_intersections.py
+python3 computations/verify_quartic_euler_derivations.py
 python3 computations/verify_klein_elliptic_center.py
 python3 computations/verify_klein_full_rank_configurations.py
 python3 computations/verify_rank_five_pencils.py

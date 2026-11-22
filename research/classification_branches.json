@@ -215,8 +215,8 @@
     },
     {
       "id": "TWENTY-CONORMAL-FULL-COMPONENT",
-      "current_result": "The two Veronese images in each parity intersect scheme-theoretically in the twenty marked evaluations. A single determinant pencil determines four generic indexed windows with Klein Galois group, and the unordered Gale-dual pencil pair determines eight, with dihedral Galois group. The orientation double cover ramifies with index two along the odd-symmetric divisor, where only one finite-edge AS orientation remains.",
-      "current_proof": "sections/veronese_pencil_quotient.tex",
+      "current_result": "All five central quartics lift over the unrestricted fifteen-dimensional component. At the rational full-rank sample every degree-four derivation vanishing on the vertex idempotents is inner plus a central Euler multiple. A regular central element kills its own commutator obstruction. On one open neighborhood every geometric fiber is standard Koszul AS and each starting ideal is free of rank 256 over four central parameters. Every standard AS specialization on the closure satisfies a common polynomial identity.",
+      "current_proof": "sections/quartic_euler_lifting.tex",
       "configuration_projection": {
         "result": "The generic recovery degree from one projected configuration is exactly two. The two finite-edge AS windows are the original orientation and its reversal; one ordered first edge determines the extension. At both rational samples the same classification holds. A pencil of quartics with twenty triple points recovers every normalized square root, including the exclusion of degenerate Grassmann candidates.",
         "proof": "sections/configuration_quartic_pencil.tex"
