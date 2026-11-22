@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 147,
+  "version": 148,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -1736,6 +1736,15 @@
       "verification": [
         "computations/verify_rank_fifteen_branch_period.py"
       ]
+    },
+    {
+      "id": "RANK-FIFTEEN-SMALL-RESIDUE-PLANES",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "Every ordinary rank-fifteen lift of every prime-field ordinary multiplier pair in characteristic 7, 11, 13, 17 or 19 is standard Koszul left/right AS regular and free of rank 256 over four central quartics at each start. The 480 residue pairs reduce to 120 exact certificates of root degree at most four.",
+      "proof": "sections/rank_fifteen_small_residues.tex",
+      "verification": [
+        "computations/verify_rank_fifteen_small_residues.py"
+      ]
     }
   ],
   "document_paths": {
@@ -1799,7 +1808,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "16b22625a7f1e5f863327727e7c5c738a4f61e9a",
+  "reviewed_source_commit": "1c920e277a15282b3dea86f4871a5ff4354ce647",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -1808,16 +1817,16 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "For interior regularity choose one root over each remaining possible multiplier (all roots and both displays have equivalent left/right regularity). Test the four degree-six insertion matrices and higher central cuts, or determine the remaining exceptional indexed comparisons among the three coordinate-end curves. Ordinary fixed-multiplier indexed counts and rank-fifteen minimal periods are settled.",
+    "immediate_next_action": "Determine the remaining interior regularity locus outside the five certified prime-field tests. Use the Pauli table on the dimension-16 open to recover the multiplier and root from label squares and compare fibers over different multiplier orbits.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/rank_fifteen_small_residues.tex",
       "sections/rank_fifteen_branch_period.tex",
       "sections/rank_fifteen_root_exchange.tex",
-      "sections/rank_fifteen_coordinate_collisions.tex",
-      "sections/rank_fifteen_all_coordinate_ends.tex"
+      "sections/rank_fifteen_pauli_comparison.tex"
     ],
     "known_obstruction": "Unresolved interior regularity and indexed comparisons across different multiplier orbits. Other special endpoint levels remain.",
-    "state_of_claim": "Exact period two on the entire ordinary positive rank-fifteen stratum. Distinct-multiplier equivalences and interior regularity remain open.",
+    "state_of_claim": "All ordinary prime-field multiplier residues for these five primes are covered; exceptional interior algebraic points elsewhere remain possible.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 147,
+  "version": 148,
   "reviewed_input": {
-    "source_commit": "16b22625a7f1e5f863327727e7c5c738a4f61e9a"
+    "source_commit": "1c920e277a15282b3dea86f4871a5ff4354ce647"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every ordinary positive-fixed rank-fifteen window has exact minimal period two, including every point on the ramification divisor. The fifth trace contraction compared with its one-step rotation gives two equations whose elliptic norm numerators have only seven nonordinary factors in common."
+    "scope": "Every ordinary rank-fifteen lift of every prime-field ordinary multiplier pair in characteristic 7, 11, 13, 17 or 19 is standard Koszul left/right AS regular and free of rank 256 over four central quartics at each start. The 480 residue pairs reduce to 120 exact certificates of root degree at most four."
   },
   "checks": [
     {
@@ -15,11 +15,7 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_branch_period.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_rank_fifteen_coordinate_collisions.py",
+      "command": "python computations/verify_rank_fifteen_small_residues.py",
       "result": "PASS"
     },
     {
@@ -37,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked the cyclic transpose convention, common scalar weights, ordinary conjugate points for the norms, excluded t=0 and infinity and all seven common factors."
+    "scope": "Checked integral root extension even at repeated residual roots and transfer by reversal and indexed basis changes."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact elliptic function-field rotation, equality of second and third moments, two quintic contractions and polynomial gcd of their norm obstructions.",
-    "reproduction": "Recomputed the second and third cyclic moments, both elliptic fifth contractions, and the gcd of the two norm numerators. Re-ran the endpoint collision and root-exchange/resultant verifiers."
+    "scope": "Full enumeration, 120 representatives, four sixth insertion ranks and four-start central profiles through length 13."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 271,
+      "nc-p3": 272,
       "plan_ja": 8,
       "notes_ja": 16
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected manuscript pages 244 and 245, including the two simultaneous period equations, the seven boundary factors, and the conclusion."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "5de9b96c7a1f23ad3bbf557004b68f59047e6390",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "For interior regularity choose one root over each remaining possible multiplier (all roots and both displays have equivalent left/right regularity). Test the four degree-six insertion matrices and higher central cuts, or determine the remaining exceptional indexed comparisons among the three coordinate-end curves. Ordinary fixed-multiplier indexed counts and rank-fifteen minimal periods are settled.",
+    "Determine the remaining interior regularity locus outside the five certified prime-field tests. Use the Pauli table on the dimension-16 open to recover the multiplier and root from label squares and compare fibers over different multiplier orbits.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
