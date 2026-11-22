@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-22 / v170。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v171。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -324,6 +324,8 @@ x=0 の全窓を正則と証明し、添字保持同型類を穴あき二次曲�
 
 整な傾きで正付値の全領域を深さ制限なく認証し、有理座標の整傾き全点と傾きが極になる別の環帯も決定した。[証明と判定](sections/rank_fifteen_integral_depth.tex)
 
+極をもつ傾きの八重被覆で、単元の剰余座標 $x$ が1以外の環帯全体を認証した。[証明と判定](sections/rank_fifteen_pole_fibers.tex)
+
 二窓から作る56次元代数で、低次Extの消滅を逆Serre反復が保つ構造条件を探す。
 「全次数を証明してAS認証」「有限障害で排除」「未決定」を分け、有限検査の成功を全AS認証としない。
 正規形の枝、特殊値、枝間同型の条件を証明し、未分類の残余を明示する。
@@ -464,6 +466,7 @@ python3 computations/verify_rank_fifteen_integral_annulus.py
 python3 computations/verify_rank_fifteen_integral_depth.py
 python3 computations/verify_rank_fifteen_smith_slopes.py
 python3 computations/verify_rank_fifteen_pole_slope_annulus.py
+python3 computations/verify_rank_fifteen_pole_fibers.py
 python3 computations/verify_rank_fifteen_unit_residues.py
 python3 computations/verify_rank_fifteen_gaussian_pencil.py
 python3 computations/verify_rank_fourteen_wall_centers.py

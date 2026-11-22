@@ -54,9 +54,10 @@ def relations(jet, half, r, s):
     return tensor_relations(gamma, one*0)
 
 
-def initial_tables(jet, precision, half, r, s):
+def initial_tables(jet, precision, half, r, s, *, build=relations,
+                   uncut_losses=(0, 1, 1, 2, 2), fifth_loss=2):
     jet.precision = precision
-    windows = relations(jet, half, r, s)
+    windows = build(jet, half, r, s)
     normalization = []
     order = iter(product(range(1, 6), range(4), range(4)))
     losses = []
@@ -66,7 +67,7 @@ def initial_tables(jet, precision, half, r, s):
         pivots, loss = pivot_rows(rows, sum(UNCUT[n-1]), UNCUT[n][h], jet)
         losses.append(loss)
         if p == h == 3:
-            assert max(losses) == (0, 1, 1, 2, 2)[n-1]
+            assert max(losses) == uncut_losses[n-1]
             jet.precision -= max(losses)
             losses.clear()
         return pivots
@@ -92,8 +93,8 @@ def initial_tables(jet, precision, half, r, s):
                                        if j in projection[offset+i]}))
                 offset += len(paths)
     jet.precision -= 1
-    assert jet.precision == precision-7
-    tables = initial_products(jet, basis, image, centers, (0, 0, 0, 0, 0, 2))
+    assert jet.precision == precision-sum(uncut_losses)-1
+    tables = initial_products(jet, basis, image, centers, (0, 0, 0, 0, 0, fifth_loss))
     return tables, normalization
 
 

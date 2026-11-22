@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 170,
+  "version": 171,
   "reviewed_input": {
-    "source_commit": "b84f0e9530766477d039cfad977e279c920d39c9"
+    "source_commit": "6da17c1e6ec7ef02ae4fb0c9a95eaafcf78267d9"
   },
   "generation": {
     "result": "PASS",
-    "scope": "At residue characteristic three all ordinary rank-fifteen windows with positive v(y) and integral D=x^3/y are standard Koszul left/right AS-regular and free of rank 256 per start over four central quartics, at every depth and every geometric residue slope. The pivot divisor of degree 12017 leaves a degree-96 core; all remaining lifts match 200 complete H-Smith profiles. Every rational coordinate pair with 3-integral D is therefore regular. In the distinct pole-slope direction xbar=-1, the full annulus 0<2v(y)<=v(3) is also certified."
+    "scope": "For ordinary characteristic-zero rank-fifteen windows above three, every nonzero geometric x residue other than 1 on the pole-slope annulus is standard Koszul left/right AS-regular and free of rank 256 per start over four central quartics whenever 0<3v(y)<=2v(3)."
   },
   "checks": [
     {
@@ -15,15 +15,7 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_integral_depth.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_rank_fifteen_smith_slopes.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_rank_fifteen_pole_slope_annulus.py",
+      "command": "python computations/verify_rank_fifteen_pole_fibers.py",
       "result": "PASS"
     },
     {
@@ -37,17 +29,16 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed transfer of all Smith exponents over local domains, invariance under changing saturated word bases, the fixed central coordinates, trace descent and the conic parameter on the pole chart."
+    "scope": "Checked the eight conic charts, saturation through the sixth degree and transfer from formal word lattices to the specialized multiplication tables."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Degree-12017 chart and exact degree-96 core, three supplemental residue fields matching 200 complete pivot-order lists and all overlap ranks; exact five-degree lattices over Q(s) with matching center coordinates and an eight-digit restart over F3(s) for the independent pole chart.",
-    "reproduction": "Exact polynomial arithmetic over F3(z) gave a degree-12017 chart and degree-96 core. Independent Q(z) pivots through degree seven and residue overlaps gave a degree-12039 chart with the same exact core. Three supplemental residue charts reproduced all 200 pivot-order lists each. The pole chart matched exact Q(s) word lattices and central coordinates through degree five with the F3(s) tables; an eight-digit restart verified every remaining overlap through thirteen."
+    "scope": "Exact six-degree lattices over Q(s) with pivot divisor s^9-s; degree-121 residue divisor, degree-48 orbit core and the two cubic fibers over F3(s)."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 298,
+      "nc-p3": 299,
       "plan_ja": 8,
       "notes_ja": 16
     },
@@ -55,18 +46,16 @@
   },
   "visual_inspection": {
     "result": "PASS",
-    "scope": "Inspected manuscript pages 271 and 272, including the Smith transfer, degree-96 divisor, rational corollary and eight-digit restart in the pole direction."
+    "scope": "Inspected the rendered theorem, maps, polynomials and proof on manuscript page 273."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "fee8f266c46a5c6b9822320249ec7247254414da",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Continue on the remaining pole slopes D=x^3/y. For xbar=-1 and v(y)>0 use r^2=U-1, H=r^2 T, and the rational conic parameter in the pole-slope annulus verifier. Starting from the verified characteristic-zero central quotient through length five, lift the degree-six and higher pole-chart pivots to relax or remove the eight-digit restart bound. Also handle the ramified xbar=1 case where one leading root A+B or A-B vanishes, and unit-y residues outside the rational grid. The integral-slope positive-y region is settled at every depth; unrestricted nonsymmetric branches remain open.",
+    "Lift the higher two-sided pole-chart pivots over Q(s) for the full unit-x, xbar!=1 disk. At xbar=1 use h=r/(sqrt(1+r^2)+1), L=(lambda+1/lambda)/2, C=(lambda-1/lambda)/2 and B-A=h*L; the small square root is h*C. Start with 2v(x-1)>=v(y), including x=1, then treat the complementary valuation sectors.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
