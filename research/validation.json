@@ -41,7 +41,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact 256-entry Gram conjugacy, oriented contractions and exact quartic resultant over Q."
+    "scope": "Exact 256-entry Gram conjugacy, oriented contractions and exact quartic resultant over Q.",
+    "reproduction": "Recomputed all 256 rational-function identities and the full polynomial resultant over Q. Re-ran both the endpoint orbit and Pauli comparison verifiers with python-flint."
   },
   "tex": {
     "result": "PASS",
@@ -53,13 +54,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript pages 243 and 244 including the conjugacy, separation resultant and two exceptional endpoint fibers."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "9cfd0154dbdae29ef98559cc87e783406352670e",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "For interior regularity reduce each fixed multiplier to a single first-sheet root up to sign, root exchange and opposite algebra, and test the four degree-six insertion matrices and higher central cuts there. Indexed equivalence between distinct multiplier orbits and the other exceptional endpoint levels still require comparison, as does the period on the branch divisor.",
@@ -67,7 +71,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "e3dcc51e1d66a257ed59ecd85e4ff8024ac5d717",
+    "commit": "9e75ef188c5add52e00d4d5ee6a7373f712b3116",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
