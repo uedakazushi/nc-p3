@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Symbolic resultant, degree-six discriminant, rational inverse maps and shift involution. Exact gcds and squarefree normalizations on both exceptional levels."
+    "scope": "Symbolic resultant, degree-six discriminant, rational inverse maps and shift involution. Exact gcds and squarefree normalizations on both exceptional levels.",
+    "reproduction": "Exact SymPy resultant, discriminant, rational involution and squarefree factorizations at both singular levels. Rechecked the four-center degree bounds motivating the explicit y=3 disk."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript pages 266 and 267, the hyperelliptic model, the two nodes and the explicit disk on y=3."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "fb777a14845b02a3dcd273c852623b328887b48f",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Continue the integral two-sided product computation on the entire small-trace disk: prove the length-seven free lattices, then test length nine over Q(z) for the last H divisions. After degree seven a residue computation with three remaining digits suffices on v(y)<=2v(3). Retain the unrestricted objective and the finite unresolved horizontal levels.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "cfc123bce498cd0a9ef38ce5da71719bb49d0a74",
+    "commit": "b7c42ddb9f4e5ad6ec4e57f37eafd5c207435d52",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
