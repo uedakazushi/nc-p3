@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 153,
+  "version": 154,
   "reviewed_input": {
-    "source_commit": "878a0a10f5f2ecfe77a893e57136521d8d1e2b47"
+    "source_commit": "b791f374586b80fb0dda5e680f8171f89d26a9a5"
   },
   "generation": {
     "result": "PASS",
-    "scope": "On the regularity plane (x,y), every ordinary rank-fifteen characteristic-zero lift of every prime-field residue with y nonzero in characteristics 3, 5 and 7 is standard Koszul left/right AS regular, with rank-256 freeness over four central quartics. The 68 quotient residue points do not require prime-field multiplier or quartic-root residues."
+    "scope": "The image of the ordinary rank-fifteen multiplier chart omits exactly four points of the normal Pauli quotient. All four missing tensors are distinct standard Koszul left/right AS-regular windows. The two points with p=q=0 have minimal period one, the other two period two. The entire formal q=0 nodal curve is regular."
   },
   "checks": [
     {
@@ -15,7 +15,7 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_quotient_residues.py",
+      "command": "python computations/verify_rank_fifteen_formal_boundary.py",
       "result": "PASS"
     },
     {
@@ -33,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked unit constants, lifting of inseparable residues, and freedom of choosing a formal representative of the same characteristic-zero regularity plane point."
+    "scope": "Checked sufficiency of the ordinary tests at p=0 and q=0, the distinct holes, Frobenius duality, all-degree lifting from the irreducible formal family and the two minimal periods."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "All 68 prime-field plane points, cubic and quadratic root lifts, explicit cyclic adjacent relations and four-start central profiles through length thirteen.",
-    "reproduction": "Recomputed all 68 quotient-plane profiles, the four intrinsic contraction checks and one pre-existing characteristic-101 pencil sample with the default central pair."
+    "scope": "Exact cubic discriminant, multiplier exclusions and reversed Pauli coefficients. At all four boundary tensors, checked dual Hilbert dimensions, six adjacent relations and four-start central cuts through length 13."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 278,
+      "nc-p3": 280,
       "plan_ja": 8,
       "notes_ja": 16
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected manuscript page 252 including the integral cubic, all 68 residues, extension degrees and the alternative central pair at (0,2) in characteristic 7."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "9d8ae47f8dafd8b9611f6feb3e678609e91fd240",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Determine the remaining isolated all-degree regularity candidates in the (x,y) plane outside the four certified curves and the certified residue neighborhoods. Use the cubic v(x-4v)^2=y and direct tensor adjacent images to compute relative sixth insertion and later central-cut Fitting supports over curves or the plane. Indexed comparison on the ordinary positive-fixed rank-fifteen locus is complete.",
+    "Continue the interior regularity problem on the (x,y) plane, now including the four certified formal boundary points. Use Pauli translations to split the sixth insertion maps and compute explicit Fitting minors or universal central cuts away from the four known curves.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

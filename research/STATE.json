@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 153,
+  "version": 154,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -1790,6 +1790,15 @@
       "verification": [
         "computations/verify_rank_fifteen_quotient_residues.py"
       ]
+    },
+    {
+      "id": "RANK-FIFTEEN-FOUR-FORMAL-BOUNDARY-WINDOWS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "The image of the ordinary rank-fifteen multiplier chart omits exactly four points of the normal Pauli quotient. All four missing tensors are distinct standard Koszul left/right AS-regular windows. The two points with p=q=0 have minimal period one, the other two period two. The entire formal q=0 nodal curve is regular.",
+      "proof": "sections/rank_fifteen_formal_boundary.tex",
+      "verification": [
+        "computations/verify_rank_fifteen_formal_boundary.py"
+      ]
     }
   ],
   "document_paths": {
@@ -1853,7 +1862,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "878a0a10f5f2ecfe77a893e57136521d8d1e2b47",
+  "reviewed_source_commit": "b791f374586b80fb0dda5e680f8171f89d26a9a5",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -1862,16 +1871,16 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Determine the remaining isolated all-degree regularity candidates in the (x,y) plane outside the four certified curves and the certified residue neighborhoods. Use the cubic v(x-4v)^2=y and direct tensor adjacent images to compute relative sixth insertion and later central-cut Fitting supports over curves or the plane. Indexed comparison on the ordinary positive-fixed rank-fifteen locus is complete.",
+    "immediate_next_action": "Continue the interior regularity problem on the (x,y) plane, now including the four certified formal boundary points. Use Pauli translations to split the sixth insertion maps and compute explicit Fitting minors or universal central cuts away from the four known curves.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/rank_fifteen_formal_boundary.tex",
       "sections/rank_fifteen_quotient_residues.tex",
       "sections/rank_fifteen_global_invariants.tex",
-      "sections/rank_fifteen_rational_quotient.tex",
       "sections/rank_fifteen_regular_orbits.tex"
     ],
     "known_obstruction": "Possible isolated interior failures of all-degree regularity on the (x,y) plane and uncovered general nonsymmetric windows.",
-    "state_of_claim": "Uniform geometric classification of indexed equivalence on the ordinary chart stands. The new regularity result covers the three specified prime-field residue planes; possible isolated exceptions elsewhere remain.",
+    "state_of_claim": "The whole q=0 formal curve is regular; elsewhere possible isolated interior failures persist. The resulting four tensors lie outside the ordinary positive-fixed parameter image.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

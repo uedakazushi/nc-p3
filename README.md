@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-22 / v153。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v154。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -290,6 +290,8 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 
 階数15の正則性平面の剰余標数3,5,7の全68有理点（yが単元）で、全ての標数零の持上げを全次数正則と認証した。[証明と判定](sections/rank_fifteen_quotient_residues.tex)
 
+通常倍率の像が商曲面から欠く四点を決定し、全四点で正則窓を認証した。二点は最小周期1、他の二点は周期2である。[証明と判定](sections/rank_fifteen_formal_boundary.tex)
+
 二窓から作る56次元代数で、低次Extの消滅を逆Serre反復が保つ構造条件を探す。
 「全次数を証明してAS認証」「有限障害で排除」「未決定」を分け、有限検査の成功を全AS認証としない。
 正規形の枝、特殊値、枝間同型の条件を証明し、未分類の残余を明示する。
@@ -412,6 +414,7 @@ python3 computations/verify_rank_fifteen_root_exchange.py
 python3 computations/verify_rank_fifteen_parameter_orbits.py
 python3 computations/verify_rank_fifteen_rational_quotient.py
 python3 computations/verify_rank_fifteen_global_invariants.py
+python3 computations/verify_rank_fifteen_formal_boundary.py
 python3 computations/verify_rank_fifteen_quotient_residues.py
 python3 computations/verify_rank_fifteen_regular_orbits.py
 python3 computations/verify_rank_fifteen_small_residues.py
