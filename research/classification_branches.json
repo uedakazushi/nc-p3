@@ -215,8 +215,8 @@
     },
     {
       "id": "TWENTY-CONORMAL-FULL-COMPONENT",
-      "current_result": "The block-exchange polarity acts without fixed points on the simultaneous minimal resolution of every ordinary Kummer ramification surface. The quotient by this marked two-position exchange is an Enriques surface.",
-      "current_proof": "sections/kummer_exchange_quotient.tex",
+      "current_result": "At all four exceptional slopes the discriminant is a double smooth quadric. On its invertible chart standard Koszul left/right AS regularity holds exactly when both determinant quadratics are genuine. This includes the two-conic and four-line degenerations, using ruling obstructions and balanced polygon pencils.",
+      "current_proof": "sections/exceptional_ramification.tex",
       "configuration_projection": {
         "result": "The generic recovery degree from one projected configuration is exactly two. The two finite-edge AS windows are the original orientation and its reversal; one ordered first edge determines the extension. At both rational samples the same classification holds. A pencil of quartics with twenty triple points recovers every normalized square root, including the exclusion of degenerate Grassmann candidates.",
         "proof": "sections/configuration_quartic_pencil.tex"
