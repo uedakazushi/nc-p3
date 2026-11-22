@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 69,
+  "version": 70,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -995,6 +995,15 @@
       "verification": [
         "computations/verify_klein_companion_windows.py"
       ]
+    },
+    {
+      "id": "KLEIN-TWO-DOUBLETS-SECOND-COMPLETION",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "In the remaining Klein profile (2,2,1,1), normalize both thin colors even in the presence of zero entries: the thick colors are rank-two completions of the same off-diagonal entries. On the invertible open the second completion is rational. Its geometrically generic point is standard AS of opposite rank ten, with unmarked indexed moduli image of dimension four and twenty reduced points with no collinear triples.",
+      "proof": "sections/klein_two_doublets.tex",
+      "verification": [
+        "computations/verify_klein_two_doublets.py"
+      ]
     }
   ],
   "document_paths": {
@@ -1058,7 +1067,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "89060a170d108465894fde0e8ece3b66166e1283",
+  "reviewed_source_commit": "01a24acd394c8248d75bd42a6042e2f040130e80",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -1067,15 +1076,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Analyze the remaining all-present Klein profile (2,2,1,1), including zero thin entries. Determine which tensors with no simple fixed point are AS and distinguish their unmarked families.",
+    "immediate_next_action": "Determine intrinsic group and period on the four-dimensional generic second-completion locus, and develop an all-degree regularity test on its closed fibers. Analyze rank-one cross blocks and the zero thin-entry boundary.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/klein_two_doublets.tex",
       "sections/klein_companion_windows.tex",
-      "sections/cross_product_parameters.tex",
-      "sections/one_opposite_symmetric_evaluations.tex"
+      "sections/reversible_component.tex"
     ],
     "known_obstruction": "No uniform finite Koszul/Serre cutoff or effective global regularity criterion is proved; finite-dimensional B and seven-degree tests do not suffice. Other low-rank components and high-rank witness-free regions remain unclassified.",
-    "state_of_claim": "Regularity is decided on the missing-character and (3,1,1,1) loci. A new unmarked class beyond the three-axis chart is certified. Profile (2,2,1,1) and the unrestricted classification remain open.",
+    "state_of_claim": "Generic regularity and generic unmarked dimension four are proved. A uniform AS test on the whole two-doublet class and unrestricted coverage remain open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

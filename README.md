@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-22 / v69。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v70。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -126,6 +126,8 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 
 四元群で斉次な片側対称窓のうち、一つの文字次数が欠ける全入力で正則性を判定できた。反対階数10で点スキームにねじれ二直線を持つ例は三軸族の外にある。次数次元が3,1,1,1の場合は全対称性が必要となる。[証明と判定](sections/klein_companion_windows.tex)
 
+残る次数次元2,2,1,1では、二行列の非対角成分が一致する。第二の行列式解から、同型類の像が四次元の新しい族が得られた。幾何学的一般点は反対階数10の標準AS正則窓で、被約二十点のどの三点も共線でない。[証明と判定](sections/klein_two_doublets.tex)
+
 二窓から作る56次元代数で、低次Extの消滅を逆Serre反復が保つ構造条件を探す。
 「全次数を証明してAS認証」「有限障害で排除」「未決定」を分け、有限検査の成功を全AS認証としない。
 正規形の枝、特殊値、枝間同型の条件を証明し、未分類の残余を明示する。
@@ -165,6 +167,7 @@ python3 computations/verify_single_opposite_block.py
 python3 computations/verify_twenty_point_companion.py
 python3 computations/verify_cross_product_parameters.py
 python3 computations/verify_klein_companion_windows.py
+python3 computations/verify_klein_two_doublets.py
 python3 computations/verify_rank_five_pencils.py
 python3 computations/verify_matched_pencils.py
 python3 computations/verify_incidence_cubics.py

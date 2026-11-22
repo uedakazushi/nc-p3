@@ -193,6 +193,11 @@
       "id": "KLEIN-SINGLE-OPPOSITE",
       "current_result": "For Klein-graded singly symmetric windows with regular character spaces, having a simple fixed point forces the bisymmetric or the three-axis chart. If a character of H is absent, every regular window belongs to those charts or a two-plane-pair PBW chart, with an effective decision on all inputs. A rank-ten PBW example has skew point lines, outside the entire three-axis chart. Profile (3,1,1,1) forces full symmetry in AS.",
       "current_proof": "sections/klein_companion_windows.tex"
+    },
+    {
+      "id": "KLEIN-TWO-DOUBLETS-SECOND-COMPLETION",
+      "current_result": "In the remaining Klein profile (2,2,1,1), normalize both thin colors even in the presence of zero entries: the thick colors are rank-two completions of the same off-diagonal entries. On the invertible open the second completion is rational. Its geometrically generic point is standard AS of opposite rank ten, with unmarked indexed moduli image of dimension four and twenty reduced points with no collinear triples.",
+      "current_proof": "sections/klein_two_doublets.tex"
     }
   ],
   "presentation_components": {
