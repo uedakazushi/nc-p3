@@ -1,29 +1,21 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 59,
+  "version": 60,
   "reviewed_input": {
-    "source_commit": "45391cf30459f26510c3d6bb07e52336df4f784e"
+    "source_commit": "33ec573ca444e651eb42bcda2990dd4785618058"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Integral singular models, the two conductor alternatives, all-fiber Frobenius and ordered reconstruction, with exact degree-seven non-AS exclusions."
+    "scope": "Uniform conductor exclusion, integral apolar recognition, nonnegative multidegree criterion on cycles and elliptic multiple points."
   },
   "checks": [
     {
-      "command": "python computations/verify_nonreduced_polarizations.py",
+      "command": "bash scripts/cloud_preflight.sh --tex (project environment activated)",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_smooth_apolar_defect.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_elliptic_reversible_pencil.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_ribbon_trace.py",
+      "command": "python computations/verify_binary_product_obstruction.py",
       "result": "PASS"
     },
     {
@@ -33,44 +25,31 @@
     {
       "command": "git diff --check",
       "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_marked_opposite_rank.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_conductor_pencil.py",
-      "result": "PASS"
     }
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed specialization of dual section ideals, the conductor pencil product and lattice bounds, trace ranks on the two-component curve, the alternating cubic on the exceptional line, quartic and quintic rigidity, and the degree-seven growth obstruction."
+    "scope": "Checked direction of the quadratic quotient, the multihomogeneous diagonal ideal, conductor restrictions, complementary arcs and the exceptional triangle/triple-point multidegrees."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact rational cubic hulls 12 and 13, window overlaps 4 and 4 and ranks 6/8 in both normalized conductor models. Both sample path quotients give dimensions 120 and 121 at the two starts in degree seven. Earlier marked, ribbon and nonreduced checks were also executed in this run. An exact Q(u) path quotient excludes the full nodal pencil line W=<1,t^7+u*t^3>."
+    "scope": "Exact binary dual projections, semipositive distributions on two to eight components and the degree-17 comparison."
   },
   "tex": {
     "result": "PASS",
-    "scope": "Main 147 pages, plan 6 and notes 13. No overfull boxes, missing characters or unresolved references in final logs."
+    "scope": "Main 149 pages, plan 6 and notes 13. Checked final logs for overfull boxes, missing characters and unresolved references."
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected rendered page 111 of v56 and page 120 of the v59 principal manuscript (conductor pencil Frobenius proof)."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT",
     "scope": "The new argument uses current internal results. No independent novelty determination or external-source claim was added."
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "fa423173197217d3b7349e74b57075807d47c8eb",
-    "scope": "Fetched remote main after normal fast-forward pushes and read all 17 changed files since 2f2d327 byte-for-byte, including the resume point and the function-field computation.",
-    "research_hub_commit": "2a8963f70efb15b3d7f1b54e0296f1c7434b0dea",
-    "hub_scope": "Verified the updated nc-p3 row from fetched main after incorporating concurrent changes elsewhere in the hub."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Whole conductor families versus the seventh-degree obstruction, other rank-seven/singular rank-eight limits, and non-bisymmetric windows."
+    "Specialization of mixed multiplication on two reducible apolar models, other singular limits, non-bisymmetric components."
   ]
 }
