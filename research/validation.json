@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 127,
+  "version": 128,
   "reviewed_input": {
-    "source_commit": "bf692c3b3b36be24b4cc8ca759a54d6e515b84d5"
+    "source_commit": "a9397d0659355df82913b70d300e4ee172e82389"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All ordinary genus-three windows on the two levels and both rank-15 presentations have quartic center (3,2,0,0). All 7104 geometric windows from the 17 residual factors per presentation are standard Koszul AS regular. At 109 all ordinary degree-one parameter residues, all infinity disks, and both K²+K-1 boundary fibers lift to regular windows."
+    "scope": "On both primitive genus-three levels and both rank-fifteen presentations, every ordinary characteristic-zero window reducing to trace 0 or ±2 at 109 is standard Koszul left/right AS regular. At trace ±1 the unweighted Grassmann relation limits have path dimensions 20,38,72 in degrees 3,4,5 at every start."
   },
   "checks": [
     {
@@ -15,15 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_octic_center.py",
+      "command": "python computations/verify_rank_fifteen_octic_boundary.py",
       "result": "PASS"
     },
     {
       "command": "python computations/verify_rank_fifteen_octic_residues.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_rank_fifteen_pencil_infinity.py",
       "result": "PASS"
     },
     {
@@ -37,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked norm multiplicativity and the eight conjugate sheets; the 7104 count fixes one j per level; inspected liftability at both finite trace boundary fibers."
+    "scope": "Checked local parameter and unit pivot at each boundary point, Frobenius and shift coverage, and the path jumps over Q(zeta_24)."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Four-start path projections and exact center minors over Q(i,√3)(t,Y), 34 split-number-field samples, all 48 rational residue orbits per level and both trace boundary fibers at 109.",
-    "reproduction": "SymPy 1.14.0 and python-flint 0.9.0. Exact Q(i,√3)(t,Y) path projections and center minors, 17 residual t factors per presentation with eight split choices, two 109-adic trace boundary fibers and 48 ordinary residue pairs checked."
+    "scope": "Exact cyclotomic Pluecker coordinates and Taylor coefficients; finite-field center and four-start quartets on eight trace/sign/color representatives for both j. Exact characteristic-zero path dimensions on all sixteen ±1 branch/color choices."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 250,
+      "nc-p3": 251,
       "plan_ja": 7,
       "notes_ja": 15
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Reviewed the new theorem and residual counts on rendered page 223 and extracted pages 223–224."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "4e52b8547ad001b52c411780aca59b5a0e2d24b4",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "On the genus-three octic compute four central sections, then quotient ranks through length thirteen modulo 109 for j=8,41, both colors and starts 0,1. Use integral dual kernels or two independent sparse minor charts; recheck higher-degree ordinary residue factors. For finite boundary disks only K=0, ±1, ±2 remain. The quartic center, K=infinity and both golden-ratio boundary disks are settled.",
+    "On the genus-three octic certify higher-degree ordinary residues of the four-cut at 109 by intersecting two independent minor charts through degree thirteen and rechecking residual factors. At K=±1 use u=Y and saturate the integral degree-four relation lattice first: the raw quadratic limit misses three dimensions at degree four, and sixteen at degree five. These are the only unresolved finite boundary traces.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
