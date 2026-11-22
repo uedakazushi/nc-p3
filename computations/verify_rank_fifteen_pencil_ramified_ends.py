@@ -56,9 +56,9 @@ def phases(c, k, n, r, w, color):
     return zz, l, a, b, e, f
 
 
-def local_frame(p, c, k, n, eps, x, delta, color):
-    unit = nmod(1, p)
-    zero = nmod(0, p)
+def local_frame(c, k, n, eps, x, delta, color):
+    unit = c**0
+    zero = unit - unit
     r, w = (eps, x) if delta == 1 else (x, eps)
     dr, dw = (unit, zero) if delta == 1 else (zero, unit)
     zz, ll, a, b, e, f = phases(c, k, n, r, w, 0)
@@ -99,7 +99,6 @@ C, Q = sp.symbols("c q")
 @cache
 def vanishes(poly, delta, eps, sign, color):
     """Test the constant coefficient identically on the quadratic boundary divisor."""
-    s = C + 1 / C
     k, other = trace(C, delta, eps)
     n = sign * (C + delta * eps) / C
     r, w = (eps, Q) if delta == 1 else (Q, eps)
@@ -115,6 +114,32 @@ def vanishes(poly, delta, eps, sign, color):
     return sp.Poly(numerator, Q, domain=modulus.domain).rem(modulus).is_zero
 
 
+def relative_limit(c, k, x, delta, eps, sign, color, wrap):
+    """Extend each relation block across its smooth branch divisor."""
+    unit = c**0
+    zero = unit - unit
+    n = sign * (c + delta * eps) / c
+    frame, tangent = local_frame(c, k, n, eps * unit, x, delta, color)
+    windows = []
+    divisions = 0
+    for side in minors():
+        rules = []
+        for h, group in side:
+            pairs = {cols: value_grad(g, frame, tangent) for cols, g in group.items()}
+            leading = {cols: zero + v for cols, (v, _) in pairs.items() if v != zero}
+            if not leading:
+                assert all(vanishes(g, delta, eps, sign, color) for g in group.values())
+                leading = {
+                    cols: zero + v for cols, (_, v) in pairs.items() if v != zero
+                }
+                divisions += 1
+            assert leading
+            for row in grassmann_chart(leading, unit):
+                rules.append((h, {(a, a ^ h): wrap(v) for a, v in row.items()}))
+        windows.append(rules)
+    return windows, divisions
+
+
 def verify(job):
     delta, eps, color = job
     p = 101
@@ -125,26 +150,9 @@ def verify(job):
     count = 0
     jumps = 0
     for sign, rad in product((-1, 1), root):
-        n = sign * (c + delta * eps) / c
         x = T + nmod(rad, p)
-        frame, vel = local_frame(p, c, k, n, nmod(eps, p), x, delta, color)
-        ws = []
-        for side in minors():
-            rules = []
-            for h, group in side:
-                pair = {cols: value_grad(g, frame, vel) for cols, g in group.items()}
-                L = {cols: x for cols, (x, y) in pair.items() if x}
-                if not L:
-                    assert all(
-                        vanishes(poly, delta, eps, sign, color)
-                        for poly in group.values()
-                    )
-                    L = {cols: y for cols, (x, y) in pair.items() if y}
-                    jumps += 1
-                assert L
-                for row in grassmann_chart(L, nmod(1, p)):
-                    rules.append((h, {(a, a ^ h): v for a, v in row.items()}))
-            ws.append(rules)
+        ws, divisions = relative_limit(c, k, x, delta, eps, sign, color, lambda v: v)
+        jumps += divisions
         assert verify_central_profile(ws, nmod(1, p))
         count += 1
     assert count == 4 and jumps == 8

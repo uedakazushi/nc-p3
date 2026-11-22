@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 132,
+  "version": 133,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -1592,6 +1592,24 @@
       "verification": [
         "computations/verify_rank_fifteen_pencil_trace_disks.py"
       ]
+    },
+    {
+      "id": "RANK-FIFTEEN-HORIZONTAL-SPECIALIZATION",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "For either rank-fifteen presentation, any nonregular ordinary curve dominating c can specialize on either primitive genus-three level only to the eight points above trace ±1. The two nodes at trace zero have regular ordinary neighborhoods in the total surface: local coordinates r+1,w-1 remove distinct Pluecker factors. Both simple branch values ±2 also have relative certificates.",
+      "proof": "sections/rank_fifteen_horizontal_specialization.tex",
+      "verification": [
+        "computations/verify_rank_fifteen_horizontal_specialization.py"
+      ]
+    },
+    {
+      "id": "RANK-FIFTEEN-PENCIL-LINEAR-RESIDUES",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "At ξ=9/16 both presentations are standard Koszul left/right AS regular for all ordinary characteristic-zero windows reducing to a rational projective x=K+H at 101.",
+      "proof": "sections/rank_fifteen_pencil_trace_disks.tex",
+      "verification": [
+        "computations/verify_rank_fifteen_pencil_linear_residues.py"
+      ]
     }
   ],
   "document_paths": {
@@ -1655,7 +1673,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "b660feb0ecc3467872f669147e40ca284ee2c591",
+  "reviewed_source_commit": "5168161009be30bd482d4da4ffc35c38f14b1d8a",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -1664,15 +1682,16 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "For the genus-five level c=3/4 at 101, use x=K+H, K=(x+1/x)/2, H=(x-1/x)/2. At ordinary x, (2xA)^2=(x²+2(s-1)x+1)(x²+2(s+1)x+1) and (2xB)^2 is obtained by replacing s by -s. Certify the 44 inverse pairs of rational ordinary x residues and then use the degree-four function field for geometric residues of higher degrees. On the general pencil use the solved genus-three fiber to restrict horizontal bad curves via the relative projective three-quadric model.",
+    "immediate_next_action": "At the eight smooth trace ±1 points above each primitive c0, work over the relative base Q(c) with u=n. The quadratic Grassmann limits are constant in c. Compute the first saturated relations symbolically in c, verify unit pivots at c=c0, then try to lift the local center and four-cut through length thirteen. Excluding these eight germs would remove all horizontal failure components. For the fixed level c=3/4, ordinary reductions with x outside P¹(F101) remain; use the two quartic radicals over F101(x).",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/rank_fifteen_horizontal_specialization.tex",
       "sections/rank_fifteen_pencil_trace_disks.tex",
       "sections/rank_fifteen_octic_all.tex",
       "sections/rank_fifteen_pencil_ramified_ends.tex"
     ],
-    "known_obstruction": "Regularity on the 56 bad-reduction boundary disks at c=3/4 is settled; finite higher-degree ordinary residues in the biquadratic function field and variation in c remain open.",
-    "state_of_claim": "All nonordinary residue disks on ξ=9/16 at 101 are certified. Ordinary residue disks and the entire genus-five pencil still require work.",
+    "known_obstruction": "The trace ±1 saturation along fixed levels is known, but excluding horizontal nongeneric curves requires identities in the varying level c. Ordinary higher-degree x residues remain open at ξ=9/16.",
+    "state_of_claim": "Two primitive fibers are entirely certified. Remaining horizontal failure components, if any, meet the eight trace ±1 points on each. Vertical failure loci and unrestricted windows remain open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
