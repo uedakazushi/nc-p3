@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Full enumeration, 120 representatives, four sixth insertion ranks and four-start central profiles through length 13."
+    "scope": "Full enumeration, 120 representatives, four sixth insertion ranks and four-start central profiles through length 13.",
+    "reproduction": "Recomputed all 120 finite-field witnesses and the root-exchange and separation identities."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript page 246, including the complete root-degree table, all four cut profiles and the lifting argument."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "44fdc6c5c9e280dab62a6d358e9fca969e1a6d6f",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Determine the remaining interior regularity locus outside the five certified prime-field tests. Use the Pauli table on the dimension-16 open to recover the multiplier and root from label squares and compare fibers over different multiplier orbits.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "017073c30280f9fa96ff26edc32badabe7ef83bc",
+    "commit": "f651a578391512be9d84b6d2162a1d0e312e5bdb",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
