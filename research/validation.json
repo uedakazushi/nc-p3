@@ -73,7 +73,7 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed the fixed-edge Jacobian and fixed-configuration incidences, reversal invariance and generic freeness on the fiber, characteristic-zero lower tangent bound at collision, and exact second-order obstruction."
+    "scope": "Reviewed the fixed-edge Jacobian and fixed-configuration incidences, reversal invariance and generic freeness on the fiber, characteristic-zero lower tangent bound at collision, and exact second-order obstruction. The differential to the first configuration is injective modulo projective orbits; its generic stabilizer is trivial."
   },
   "mathematical_computation": {
     "result": "PASS",
@@ -91,7 +91,7 @@
   },
   "visual_inspection": {
     "result": "PASS",
-    "scope": "Inspected rendered manuscript pages 160 and 164, including the new component proof and configuration recovery."
+    "scope": "Inspected rendered manuscript pages 160 and 164, including the new component proof and configuration recovery. Inspected the final degree bound on page 165."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"

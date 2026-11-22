@@ -1100,7 +1100,7 @@
     {
       "id": "SINGLE-CONFIGURATION-GENERIC-FINITENESS",
       "status": "proved_under_stated_hypotheses",
-      "statement": "On the fifteen-dimensional unmarked component, one projected twenty-point configuration determines generically finitely many windows, of even function-field degree by reversal. The embedded first-edge and first-configuration images have dimensions 45 and 30. All four normalized square roots are isolated and reduced at the full-rank sample. At the symmetric sample the even root has exact local length two, and the odd roots are reduced.",
+      "statement": "On the fifteen-dimensional unmarked component, one projected twenty-point configuration determines generically finitely many windows, of even function-field degree by reversal. The embedded first-edge and first-configuration images have dimensions 45 and 30. All four normalized square roots are isolated and reduced at the full-rank sample. At the symmetric sample the even root has exact local length two, and the odd roots are reduced. The first projected configuration alone also has trivial generic projective stabilizer.",
       "proof": "sections/single_configuration_projection.tex",
       "verification": [
         "computations/verify_single_configuration_projection.py"
@@ -1177,7 +1177,7 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Determine the exact generic degree over a single projected configuration. Normalize Q=A^2 and Q-perp, enumerate isolated Grassmann square roots up to coordinate signs, reject pairs by the cubic intersection, then recover the two-window extension. Determine the quartic center and effective regularity on the full component and the remaining singular rank charts.",
+    "immediate_next_action": "Determine the exact generic degree over a single projected configuration. Normalize Q=A^2 and Q-perp, enumerate isolated Grassmann square roots up to coordinate signs, reject pairs by the cubic intersection, then recover the two-window extension. Determine the quartic center and effective regularity on the full component and the remaining singular rank charts. Use generic triviality of the first configuration stabilizer to count unmarked candidates directly after fixing its labels.",
     "read_first": [
       "research/plan_ja.tex",
       "sections/single_configuration_projection.tex",
