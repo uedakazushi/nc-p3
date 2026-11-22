@@ -100,7 +100,7 @@
     "result": "PASS",
     "repository": "uedakazushi/nc-p3",
     "branch": "main",
-    "source_commit": "f1b030013603d7cfcd2c76f05561d417ec7d6f5d",
+    "source_commit": "e4dbe656b8f1202245bd59fa8a4838ee9c34033d",
     "verified_from": "cafd8f7befc04d5ed2f711c33e795a2c51f00d67",
     "changed_files_verified": 28,
     "method": "Regular fast-forward push, fresh git fetch, comparison of all changed remote blobs to local files."
@@ -113,7 +113,7 @@
     "result": "PASS",
     "repository": "uedakazushi/research-hub",
     "branch": "main",
-    "commit": "8b1f1810183341364b4247b3ee4bcb931729c865",
+    "commit": "ce912ae560d130c17d6eb528c8f5102bffec03b4",
     "method": "Updated the nc-p3 row only, then fetched main and verified README bytes."
   }
 }
