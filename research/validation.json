@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 74,
+  "version": 75,
   "reviewed_input": {
-    "source_commit": "c3d4152975782e720ec8a3f77400d7c4d25132c6"
+    "source_commit": "80876607f0d356c640f28fa7f856e061bf0228ee"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Over four algebraically independent second-completion parameters, the periodic quartic center has dimensions (3,2,0,0). One dense open containing the original rational point consists entirely of AS closed fibers finite free over four central quartics. Every standard AS point anywhere in this closure satisfies the uniform standard identity s_512."
+    "scope": "Removing even symmetry produces a five-dimensional unmarked Klein-graded family whose final parameter lies on a genus-one double cover. The two neighboring rank constraints reduce to two quadratics with the same discriminant. The generic AS fibers have opposite rank sixteen, minimal period four and no exchange witnesses. An explicit rational fiber is certified by four central quartics, with four pairwise inequivalent reduced twenty-point configurations and Klein automorphism group at every position."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_klein_generic_quartics.py",
+      "command": "python computations/verify_klein_elliptic_completion.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_klein_center_lift.py",
+      "command": "python computations/verify_klein_generic_quartics.py",
       "result": "PASS"
     },
     {
@@ -29,20 +29,24 @@
     {
       "command": "git diff --check",
       "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_klein_full_rank_configurations.py",
+      "result": "PASS"
     }
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked generic path and center ranks, specialization of the five-dimensional center bundle at the rational input, polynomial ranks per corner and matrix PI specialization on degreewise constant-rank neighborhoods."
+    "scope": "Reviewed independent even-axis gauge, paired thin coefficient normalization, determinant quadratics, opposite scalar signs and the smooth branched cover, specialization from a regular point and polynomial rank squeeze at the full-rank rational fiber."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Fraction-free elimination over Q(b,c,v,w) with exact polynomial gcds: degree-four commuting matrices of 36 and 40 columns have ranks 33 and 38."
+    "scope": "Six-variable common-discriminant and quadratic-remainder identities, excluded pairing at a rational base, quartic separability, both adjacent ranks, full opposite determinant, rational quartic center and Artinian quotient at four starts. Prime 2657 checks all four schemes and projective map counts."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "main": 180,
+      "main": 183,
       "plan": 6,
       "notes": 13
     },
@@ -58,7 +62,7 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Study the general adjacent-rank-six deformations at the rational point: transverse opposite rank, character-free tangent directions and actual deformations of maximal opposite rank, including their regularity.",
+    "Decide the remaining root pairings and character reindexings on the elliptic chart, extend the central quartic certificate along its elliptic parameter, and determine the general deformations outside the marked Klein subgroup.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

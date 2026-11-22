@@ -7,22 +7,22 @@ from verify_klein_two_doublets import cross_blocks, gram, modular_points, other_
 P = 12619
 
 
-def normalize(v):
-    k = pow(next(x for x in v if x%P),-1,P)
-    return tuple(x*k%P for x in v)
+def normalize(v,prime=P):
+    k = pow(next(x for x in v if x%prime),-1,prime)
+    return tuple(x*k%prime for x in v)
 
 
-def kernel(rows):
+def kernel(rows,prime=P):
     for inds in combinations(range(rows.rows),3):
         m = rows[list(inds),:]
-        v = [(-1)**i*int(m[:,[j for j in range(4) if j!=i]].det())%P for i in range(4)]
+        v = [(-1)**i*int(m[:,[j for j in range(4) if j!=i]].det())%prime for i in range(4)]
         if any(v):
-            assert all(int(x)%P == 0 for x in rows*sp.Matrix(v))
-            return normalize(v)
+            assert all(int(x)%prime == 0 for x in rows*sp.Matrix(v))
+            return normalize(v,prime)
     raise ValueError('Expected a one-dimensional point kernel')
 
 
-def framed(points):
+def framed(points,prime=P):
     planes = set()
     for a,b,c in combinations(points,3):
         coeff = []
@@ -30,20 +30,20 @@ def framed(points):
             j,k,l = [n for n in range(4) if n!=i]
             det = (a[j]*(b[k]*c[l]-b[l]*c[k])-a[k]*(b[j]*c[l]-b[l]*c[j])
                    +a[l]*(b[j]*c[k]-b[k]*c[j]))
-            coeff.append((-1)**i*det%P)
+            coeff.append((-1)**i*det%prime)
         assert any(coeff)
-        inds = tuple(i for i,q in enumerate(points) if sum(x*y for x,y in zip(coeff,q))%P == 0)
+        inds = tuple(i for i,q in enumerate(points) if sum(x*y for x,y in zip(coeff,q))%prime == 0)
         if len(inds)>3:
             planes.add(inds)
     assert len(planes)==48 and all(len(pl)==4 for pl in planes)
     incidences = [sum(i in pl for pl in planes) for i in range(20)]
     assert Counter(incidences) == {8:4, 10:16}
     basis = sp.Matrix.hstack(*(sp.Matrix(q) for q,n in zip(points,incidences) if n==8))
-    inv = basis.inv_mod(P)
-    return [normalize(tuple(map(int,inv*sp.Matrix(q)))) for q in points]
+    inv = basis.inv_mod(prime)
+    return [normalize(tuple(map(int,inv*sp.Matrix(q))),prime) for q in points]
 
 
-def number_of_maps(source,target):
+def number_of_maps(source,target,prime=P):
     pivot = next(i for i,q in enumerate(source) if all(q))
     count = 0
     for perm in permutations(range(4)):
@@ -51,8 +51,8 @@ def number_of_maps(source,target):
         for target_pivot in target:
             if not all(target_pivot):
                 continue
-            d = [t*pow(v,-1,P)%P for t,v in zip(target_pivot,ordered[pivot])]
-            image = {normalize(tuple(z*y for z,y in zip(q,d))) for q in ordered}
+            d = [t*pow(v,-1,prime)%prime for t,v in zip(target_pivot,ordered[pivot])]
+            image = {normalize(tuple(z*y for z,y in zip(q,d)),prime) for q in ordered}
             count += image==set(target)
     return count
 

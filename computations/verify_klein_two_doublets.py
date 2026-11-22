@@ -84,14 +84,21 @@ def modular_points(w, prime):
             return []
         assert g.is_zero_dimensional
         last = variables[-1]
-        _,factors = sp.factor_list(g.polys[-1].as_expr(),last,modulus=prime)
+        eliminant = sp.Poly(g.polys[-1].as_expr(),last,modulus=prime)
+        coefficients = [int(c) for c in eliminant.all_coeffs()]
         answers = []
-        for f,_ in factors:
-            lin = sp.Poly(f,last,modulus=prime)
-            assert lin.degree() == 1
-            root = int(-lin.nth(0))*pow(int(lin.nth(1)),-1,prime)%prime
+        for root in range(prime):
+            value = 0
+            for c in coefficients:
+                value = (value*root+c)%prime
+            if value:
+                continue
+            factor = sp.Poly(last-root,last,modulus=prime)
+            while eliminant.degree() and eliminant.eval(root)==0:
+                eliminant = eliminant.exquo(factor)
             rest = [eq.subs(last,root) for eq in g]
             answers.extend(pt+(root,) for pt in triangular(rest,variables[:-1]))
+        assert eliminant.degree()==0  # All geometric roots were found over the prime field.
         return answers
     points = []
     for i in INDICES:

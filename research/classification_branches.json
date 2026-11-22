@@ -202,6 +202,11 @@
       "generic_isomorphism": "Four rational coefficients modulo at most sixteen character reindexings; the three projective point configurations have automorphism group Klein four and are mutually inequivalent. See sections/klein_generic_isomorphisms.tex.",
       "center_lift": "On the rational two-dimensional slice v=4,w=6, the generic periodic quartic center has five generators as a vector space (character dimensions 3,2,0,0). A single Zariski-open neighborhood of the certified rational chart point b=2,c=3 consists entirely of standard regular closed fibers finite free of rank 256 per start over four central quartics. A finite constructible rank test recognizes this certificate on the whole second-completion closure.",
       "generic_center_and_PI": "Over four algebraically independent second-completion parameters, the periodic quartic center has dimensions (3,2,0,0). One dense open containing the original rational point consists entirely of AS closed fibers finite free over four central quartics. Every standard AS point anywhere in this closure satisfies the uniform standard identity s_512."
+    },
+    {
+      "id": "KLEIN-ELLIPTIC-FULL-RANK",
+      "current_result": "Removing even symmetry produces a five-dimensional unmarked Klein-graded family whose final parameter lies on a genus-one double cover. The two neighboring rank constraints reduce to two quadratics with the same discriminant. The generic AS fibers have opposite rank sixteen, minimal period four and no exchange witnesses. An explicit rational fiber is certified by four central quartics, with four pairwise inequivalent reduced twenty-point configurations and Klein automorphism group at every position.",
+      "current_proof": "sections/klein_elliptic_completion.tex"
     }
   ],
   "presentation_components": {
