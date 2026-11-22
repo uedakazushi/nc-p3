@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Nine-term H-jets over Q(z). Append all four saturated degree-five product rows in each final-letter summand, then compute all sixteen residue ranks over F9."
+    "scope": "Nine-term H-jets over Q(z). Append all four saturated degree-five product rows in each final-letter summand, then compute all sixteen residue ranks over F9.",
+    "reproduction": "Recomputed the saturated fifth products and all sixteen sixth residue ranks with nine-term rational-function jets. A separate sparse elimination over F9 gave the same sixteen ranks."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript page 262, including the six-by-twelve residual blocks and their rank criteria."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "0983171b1f82f2a7b89b109dbaf972c9005e9564",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Resolve the two remaining degree-six characters (2 and 3) on the small-trace disk: the sixteen appended saturated degree-five rows have residue rank 10 in each but target rank 12. Increase from nine H terms, retain the kernel of those ten unit pivots, and examine its first nonzero map to the cokernel. Degree-six characters 0 and 1 are already exact at every start. Then propagate the cut through length 13. The complementary valuation sector and the unrestricted classification are open.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "d0750272fc4ba2cd129a69bd52e23f8560677743",
+    "commit": "861466cd96b09c266aa7594ec032045b50da6c38",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
