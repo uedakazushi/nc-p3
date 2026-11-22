@@ -53,6 +53,7 @@ class CentralFiber:
 
     def __init__(self, rules, quartics, parameters, prime):
         self.prime = prime
+        self.prefix = cache(self.prefix)
         self.basis = {(p, 0): [()] for p in K}
         self.unit = {(p, 0): nmod_mat([[1]], prime) for p in K}
         self.left = {}
@@ -71,7 +72,6 @@ class CentralFiber:
     def matrix(self, rows):
         return nmod_mat(rows, self.prime)
 
-    @cache
     def prefix(self, p, n, word):
         if not word:
             dim = len(self.basis[p, n])
@@ -165,7 +165,7 @@ class CentralFiber:
                 rows.append(row)
         return 256 - self.matrix(rows).rank()
 
-    def trace_rank(self):
+    def loop_operators(self, words):
         # All four spaces end at vertex zero; stabilized dimensions are 64.
         action = {}
         levels = [12, 11, 10, 9]
@@ -179,11 +179,15 @@ class CentralFiber:
                 mat = embed.inv() * mat
             action[i, j] = mat
         operators = []
-        for w in self.basis[0, 12]:
+        for w in words:
             op = self.prefix(0, 12, ())
             for k, j in enumerate(w):
                 op = op * action[k % 4, j]
             operators.append(op)
+        return operators
+
+    def trace_rank(self):
+        operators = self.loop_operators(self.basis[0, 12])
         a = self.matrix([op.entries() for op in operators])
         b = self.matrix([op.transpose().entries() for op in operators])
         return (a * b.transpose()).rank()

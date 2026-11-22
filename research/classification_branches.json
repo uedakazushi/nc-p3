@@ -215,8 +215,8 @@
     },
     {
       "id": "TWENTY-CONORMAL-FULL-COMPONENT",
-      "current_result": "On one open containing the rational full-rank sample, the full center is a geometrically integral normal quartic hypersurface on five quartic generators. The folded algebra is prime of PI degree 16, and its central quotient is a 4 by 4 matrix algebra over a degree-four central division algebra. All composable nonzero paths have nonzero product there. All standard AS specializations of the component satisfy the sharper standard identity s32.",
-      "current_proof": "sections/quartic_center_order.tex",
+      "current_result": "Near the rational point of the even-symmetric divisor the full center is a flat weighted (2,4) complete intersection. The determinant of Sym^2 Z4 -> Z8 cuts out the divisor with multiplicity one. On it the center is a double cover of a quadric branched in a quartic; off it the fifth quartic generator gives a quartic hypersurface. All fibers near the divisor are standard AS regular, geometrically normal central orders of PI degree 16.",
+      "current_proof": "sections/symmetric_center_cover.tex",
       "configuration_projection": {
         "result": "The generic recovery degree from one projected configuration is exactly two. The two finite-edge AS windows are the original orientation and its reversal; one ordered first edge determines the extension. At both rational samples the same classification holds. A pencil of quartics with twenty triple points recovers every normalized square root, including the exclusion of degenerate Grassmann candidates.",
         "proof": "sections/configuration_quartic_pencil.tex"

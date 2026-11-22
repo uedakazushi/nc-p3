@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 84,
+  "version": 85,
   "reviewed_input": {
-    "source_commit": "58fe489fdabf4b0a884a43b5e410fcd9ff5fb444"
+    "source_commit": "398d3b88b3f356927beb40f2d46a374969c848b5"
   },
   "generation": {
     "result": "PASS",
-    "scope": "On one open containing the rational full-rank sample, the full center is a geometrically integral normal quartic hypersurface on five quartic generators. The folded algebra is prime of PI degree 16, and its central quotient is a 4 by 4 matrix algebra over a degree-four central division algebra. All composable nonzero paths have nonzero product there. All standard AS specializations of the component satisfy the sharper standard identity s32."
+    "scope": "Near the rational point of the even-symmetric divisor the full center is a flat weighted (2,4) complete intersection. The determinant of Sym^2 Z4 -> Z8 cuts out the divisor with multiplicity one. On it the center is a double cover of a quadric branched in a quartic; off it the fifth quartic generator gives a quartic hypersurface. All fibers near the divisor are standard AS regular, geometrically normal central orders of PI degree 16."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_quartic_center_order.py",
+      "command": "python computations/verify_symmetric_center.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_quartic_euler_derivations.py",
+      "command": "python computations/verify_quartic_center_order.py",
       "result": "PASS"
     },
     {
@@ -33,19 +33,20 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed integral transfer on the finite filtered Rees components, saturation of four independent central powers, interpolation on the plane, trace semisimplicity, Morita ranks and the homogeneous right-ideal divisibility argument."
+    "scope": "Checked unit pivot transfer of the transverse derivative, sign decomposition, the direct summand of the center, weighted presentation, and the proper plane section."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Filtered paths through length 16 at the zero parameters and six nonzero parameter fibers modulo 1009. Center commutator kernel dimension four, corner trace rank 64, squarefree quartic, and a geometrically smooth projective plane section."
+    "scope": "Reversal eigenspaces and multiplication in paths through length nine; filtered central fibers through length sixteen; smooth conic with eight transverse branch points; nonzero transverse derivative over Z/1009^2."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 198,
+      "nc-p3": 199,
       "plan_ja": 6,
       "notes_ja": 14
-    }
+    },
+    "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
@@ -57,7 +58,7 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Determine how the quartic center degenerates at the symmetric divisor: compute the degree-eight center, test a double cover of a quadric, and stratify the non-Azumaya locus. Continue finite AS tests on the component boundary.",
+    "Classify minimum-dimensional simple modules of the PI order over the punctured center and their central characters, and implement a finite AS test for central-finite boundary charts.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

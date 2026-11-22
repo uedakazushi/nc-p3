@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-22 / v84。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v85。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -156,6 +156,8 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 
 全中心は五つの四次中心元で生成され、一つの四次関係を持つ正規な整超曲面である。十五次元成分の開集合でPI次数は16、各頂点の商は次数4の可除代数となる。[証明と判定](sections/quartic_center_order.tex)
 
+片側対称因子では全中心は二次超曲面の二重被覆で、四次分岐式を持つ。四次中心元の積写像の行列式がこの因子で一重に消える。[証明と判定](sections/symmetric_center_cover.tex)
+
 二窓から作る56次元代数で、低次Extの消滅を逆Serre反復が保つ構造条件を探す。
 「全次数を証明してAS認証」「有限障害で排除」「未決定」を分け、有限検査の成功を全AS認証としない。
 正規形の枝、特殊値、枝間同型の条件を証明し、未分類の残余を明示する。
@@ -167,7 +169,7 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 ## 再現
 
 Python 3 と SymPy 1.14.0。LuaLaTeX・latexmk・luatexja・Harano Ajiフォントを用いる。
-楕円曲線の関数体と二十点配置の行列計算には python-flint 0.9.0 も使う。すべてリポジトリのルートから実行する。
+楕円曲線の関数体と二十点配置の行列計算には python-flint 0.9.0、中心の法二乗計算には NumPy 2.3.5 も使う。すべてリポジトリのルートから実行する。
 
 ~~~sh
 python3 -m pip install -r requirements-symbolic.txt
@@ -211,6 +213,7 @@ python3 computations/verify_configuration_quartic_pencil.py
 python3 computations/verify_configuration_intersections.py
 python3 computations/verify_quartic_euler_derivations.py
 python3 computations/verify_quartic_center_order.py
+python3 computations/verify_symmetric_center.py
 python3 computations/verify_klein_elliptic_center.py
 python3 computations/verify_klein_full_rank_configurations.py
 python3 computations/verify_rank_five_pencils.py
