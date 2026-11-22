@@ -1,25 +1,17 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 51,
+  "version": 52,
   "reviewed_input": {
-    "source_commit": "9a2abb935767c4d0ab2943e4f3c5c8513853354d"
+    "source_commit": "3e14a00e9629d91d6f572f8ea0b7a155dbcbd9f4"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The unique 44-dimensional reversible component at the symmetric twenty points, its exact transverse quadratic singularity, geometric generic AS regularity, minimum period two and low opposite-rank ideals."
+    "scope": "Exact generic opposite rank eight and a marked ternary-net construction of the unirational component quotient."
   },
   "checks": [
     {
-      "command": "python computations/verify_reversible_component.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_finite_window_rigidity.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_finite_square_chart.py",
+      "command": "python computations/verify_marked_opposite_rank.py",
       "result": "PASS"
     },
     {
@@ -33,30 +25,27 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked smooth descent of the Gram presentation, the residual quadratic and symmetric stratum, degreewise generic Koszul specialization, closedness of swap equivalence and the projective frame argument over a trait, and Nakayama for the two low-rank ideals. No external referee review."
+    "scope": "Checked cancellation of both residual trace terms, change of metrics, the marked tangent certificate and parameter equivalence. No external referee."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Rational derivative rank 35, obstruction rank 6, opposite skew block and Pfaffian identity, 21 minor quadrics, fifteen symmetrizer conditions and all ten large planes. Seven augmented tangent ranks modulo 101 certify the characteristic-zero inequalities for all conjugacy classes."
+    "scope": "Symbolic polynomial identity in five indeterminates and exact coprimality certificate over Q at the marked reduced example."
   },
   "tex": {
     "result": "PASS",
-    "scope": "Japanese manuscript 122 pages, plan 6 and notes 12. No overfull boxes, missing characters or unresolved references in final logs."
+    "scope": "Main 124 pages, plan 6 and notes 12. No overfull boxes, missing characters or unresolved references in final logs."
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected manuscript page 95 containing the general minimal period and the low opposite-rank ideals."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT",
     "scope": "The new argument uses current internal results. No independent novelty determination or external-source claim was added."
   },
   "github_save": {
-    "result": "PASS",
-    "verified_commit": "62390eb987c913a08565640705fa904ef3a5e6ee",
-    "scope": "Fetched GitHub main and compared all 11 changed source and state files since the v49 receipt byte-for-byte with the working tree."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Exact geometric generic opposite rank (8, 9 or 10) and AS regularity of exceptional closed fibers, other finite components, positive-dimensional point schemes and overall classification."
+    "Intrinsic geometry of the two apolar pencils, AS behavior of special fibers and global coverage."
   ]
 }

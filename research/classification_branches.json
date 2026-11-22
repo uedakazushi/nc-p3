@@ -241,9 +241,10 @@
     "proofs": [
       "sections/finite_point_chart.tex",
       "sections/finite_window_rigidity.tex",
-      "sections/reversible_component.tex"
+      "sections/reversible_component.tex",
+      "sections/marked_opposite_rank.tex"
     ],
-    "reversible_component": "At the reduced twenty-point control every square root is a sign translate. On the open of two rigid projections any all-four-finite AS extension has period dividing two, a four-dimensional cubic overlap and a unique invertible double-alternation kernel generator. A generic first relation space has no such extension. At the twenty-point example the exceptional locus has a unique local component of dimension 44, with orbit quotient dimension 14 and geometric generic regularity at opposite rank 8 to 10 and minimal period two. The symmetric stratum is the smooth 39-dimensional singular locus near this point, transverse to a rank-six quadratic cone.",
-    "open": "The geometric generic opposite rank is between eight and ten. Special fibers and other components are not all classified."
+    "reversible_component": "At the reduced twenty-point control every square root is a sign translate. On the open of two rigid projections any all-four-finite AS extension has period dividing two, a four-dimensional cubic overlap and a unique invertible double-alternation kernel generator. A generic first relation space has no such extension. At the twenty-point example the exceptional locus has a unique local component of dimension 44, with orbit quotient dimension 14 and geometric generic regularity at opposite rank exactly eight and minimal period two. The symmetric stratum is the smooth 39-dimensional singular locus near this point, transverse to a rank-six quadratic cone.",
+    "open": "The marked net chart dominates the unirational quotient. Recognition of special AS fibers and other components remain open."
   }
 }
