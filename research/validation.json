@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 116,
+  "version": 117,
   "reviewed_input": {
-    "source_commit": "40382565eafc836b1f9e84282f5534c59e671ff0"
+    "source_commit": "1ab9d9dad87c0484f8e9053455f29dd7d1662f47"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The quartic center of both rank-fourteen elliptic components has character dimensions (3,2,0,0) at every ordinary geometric point. Exact commutator minors and a path-basis chart leave four rational irreducible base factors of degrees 8,8,20,34. All 280 geometric windows over them are AS regular in all degrees."
+    "scope": "On both ordinary rank-fourteen components a common four-quartic cut at each geometric point has the standard quotient profile through length six at all starts. The uncut sixth path dimension is 84. The 22 rational base factors of the cut certificate have total degree 1192; all 4768 geometric windows above them are standard Koszul and AS regular in every degree."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fourteen_center.py",
+      "command": "python computations/verify_rank_fourteen_central_cut.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fourteen_descent.py",
+      "command": "python computations/verify_rank_fourteen_center.py",
       "result": "PASS"
     },
     {
@@ -33,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed integral fraction arithmetic, fiberwise path basis by constant ranks, signed determinants of pivot submatrices, independent roots of the two quadratic extensions and central lifting at each residual orbit."
+    "scope": "Checked central exchange, specializations of selected exact minors, common cuts via irreducibility of the Grassmannian, lower and upper Hilbert bounds and all conjugates of each residual orbit."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Computed path projections and 224-row commutator minors over the elliptic function field; certified all four combinations over a simple residue root of each of four irreducible factors, including all 64 central quotient profiles.",
-    "reproduction": "SymPy 1.14.0 and python-flint 0.9.0; integral univariate polynomial arithmetic on the elliptic function field and exact split-prime rank certificates."
+    "scope": "Exact right-append projection in four character blocks at starts 0 and 1 through length six; all 22 projected irreducible factors tested over a split prime with both signs of i and s and all four starts through length thirteen."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 236,
+      "nc-p3": 237,
       "plan_ja": 7,
       "notes_ja": 15
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Rendered and inspected manuscript pages 209 and 210 including the table of the four central minor ranks and the residue-field proof."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "893d8326303820628e5ef6b43a18591d39d7e2c4",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Use the explicit quartic center basis on the complement of the four certified base factors. Pick two degree-zero character combinations and the two character-one forms, compute the character-graded Artinian quotient through degree thirteen over the elliptic function field, and certify candidate roots of the pivot minors with independent cuts or simple-prime certificates. If needed use degree-bounded or fraction-free row reduction to avoid coefficient growth. The four center-minor factors need no additional tests.",
+    "Settle the four-quartic cut in lengths seven to thirteen on the ordinary rank-fourteen curve. Use the right-append recurrence from verify_rank_fourteen_central_cut.py. To avoid large rational pivots, dualize each character block over Q(i)[t], restricting scalars from the quadratic Y-cover, and take a polynomial kernel basis. Inspect maximal-minor ideals and certify any remaining orbits with an independent quartet or split primes. The 22 factors through length six are already AS regular.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
