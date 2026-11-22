@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Computed path projections and 224-row commutator minors over the elliptic function field; certified all four combinations over a simple residue root of each of four irreducible factors, including all 64 central quotient profiles."
+    "scope": "Computed path projections and 224-row commutator minors over the elliptic function field; certified all four combinations over a simple residue root of each of four irreducible factors, including all 64 central quotient profiles.",
+    "reproduction": "SymPy 1.14.0 and python-flint 0.9.0; integral univariate polynomial arithmetic on the elliptic function field and exact split-prime rank certificates."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Rendered and inspected manuscript pages 209 and 210 including the table of the four central minor ranks and the residue-field proof."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "893d8326303820628e5ef6b43a18591d39d7e2c4",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Use the explicit quartic center basis on the complement of the four certified base factors. Pick two degree-zero character combinations and the two character-one forms, compute the character-graded Artinian quotient through degree thirteen over the elliptic function field, and certify candidate roots of the pivot minors with independent cuts or simple-prime certificates. If needed use degree-bounded or fraction-free row reduction to avoid coefficient growth. The four center-minor factors need no additional tests.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "b8432754552e118d296874a77866e24929cf27f5",
-    "scope": "Updated only the nc-p3 row after fetching the research hub, then re-fetched and byte-compared its README."
+    "commit": "13f64d2323c4d76074686921dfb19c72ef0c7f5e",
+    "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
