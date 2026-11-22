@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Degree-100 tangent divisor after orbit descent; all 308 Smith profiles on the five extra tangent fibers and the 212 exact characteristic-zero cuts through seven. The two factorizations were checked symbolically and the 20-digit collision calculation was reproduced in two independent representations of Q(i)."
+    "scope": "Degree-100 tangent divisor after orbit descent; all 308 Smith profiles on the five extra tangent fibers and the 212 exact characteristic-zero cuts through seven. The two factorizations were checked symbolically and the 20-digit collision calculation was reproduced in two independent representations of Q(i).",
+    "reproduction": "Over F3(z), the squarefree pivot divisor of degree 897 has a degree-100 invariant core. Five extra residue charts match all 308 complete pivot lists; exact Q(z) cuts match the first 212. The two collision identities passed symbolic verification, and independent Q(i) arithmetic with 20 digits verified every degree through thirteen."
   },
   "tex": {
     "result": "PASS",
@@ -50,13 +51,15 @@
   },
   "visual_inspection": {
     "result": "PASS",
-    "scope": "Inspected the tangent and Gaussian collision proofs on manuscript pages 274 and 275."
+    "scope": "Inspected the normalized tangent change, five supplemental residue polynomials and the Gaussian collision tube on manuscript pages 274 and 275."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "22fdd8169d931667486d64a1a67725ee421ea290",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Remove the depth restriction in the nonbranch and resolved tangent charts by exact higher two-sided cuts. On Jbar=1 the Gaussian tube v(J-1)>=9v(y) is settled; resolve the remaining ratios using L and H as local parameters. For 0<2v(x-1)<v(y) use H=a*b and z=1/b to make both a and b small. Unit residues outside the rational grid and unrestricted nonsymmetric branches also remain.",
@@ -64,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "654a6496916affb517eef820fdd5fa6c0cba384c",
+    "commit": "96ac1b6128549f484d32361edd9d82c39353d62d",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
