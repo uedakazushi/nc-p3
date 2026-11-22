@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-22 / v53。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v54。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -98,6 +98,8 @@ nonore_* という既存ファイル名・ラベルは参照の安定性のた�
 階数5を仮定すると、各係数空間の三次小行列式に共通因子が生じる。動く平面の条件で五次元の行列空間を一つの正規形に絞ると、反対二位置で同じ評価平面が現れ、四辺の関係が消える指数成長商が得られる。従って低階数で未分類なのは階数6の残余である。階数6で四辺の点対応が有限なら点列の四移動は恒等になる。有限枝では長さ20の座標環と三つの座標四空間から二窓と添字保持同型を復元できる（[証明](sections/finite_point_chart.tex)）。二十点例の第三空間は符号倍で尽き、有限枝でのAS延長は一意である。一般の第一窓は四辺有限なAS対象に延びない（[復元と三次障害](sections/finite_window_rigidity.tex)）。この二十点を通る反転窓の成分は44次元で、基底変換による有理商は14次元となる。対称部分に横断する特異性は六変数二次錐で、幾何学的一般点の最小周期は2、第三階数はちょうど8となる。印付きの二つの三行対称行列系から一般窓を構成でき、14次元の有理商は単有理的である（[構成と階数](sections/marked_opposite_rank.tex)）。一般点の全次数のAS正則性も示した（[成分の局所方程式](sections/reversible_component.tex)）。二窓のExt反復は四項の微分と経路の乗法から計算でき、指定基底で各窓の先頭語の重なりが四つなら、有限Frobenius候補を全次数で認証できる。
 
 滑らかな楕円曲線の二つの次数4の直線束と、その積の基点自由鉛筆から、14次元の商の稠密開部分を構成した。このチャートでは全ファイバーがAS正則で、異なる二束の場合は曲線・順序付き二束・鉛筆を復元できる。節点・尖点および同じ正の多重次数の環状境界でも全次数認証と同型判定が成立する。環状境界では異なる正の多重次数は指数成長商で排除できる。正次元の点対応を持つ一周期例の被約支持は楕円曲線を正規化とする曲線と四孤立点である。[証明と境界条件](sections/elliptic_reversible_pencil.tex)
+
+正の多重次数を持つ被約二二次式完全交叉では、二束の多重次数の一致が鉛筆構成の標準AS正則性の必要十分条件になる。接点・三重点・四枝の楕円多重点でも、異なる二束の同型は曲線データから判定できる。[多重点の証明](sections/additive_pencil_boundary.tex)
 二窓から作る56次元代数で、低次Extの消滅を逆Serre反復が保つ構造条件を探す。
 「全次数を証明してAS認証」「有限障害で排除」「未決定」を分け、有限検査の成功を全AS認証としない。
 正規形の枝、特殊値、枝間同型の条件を証明し、未分類の残余を明示する。
@@ -122,6 +124,7 @@ python3 computations/verify_finite_window_rigidity.py
 python3 computations/verify_reversible_component.py
 python3 computations/verify_marked_opposite_rank.py
 python3 computations/verify_elliptic_reversible_pencil.py
+python3 computations/verify_additive_pencil.py
 python3 computations/verify_rank_five_pencils.py
 python3 computations/verify_matched_pencils.py
 python3 computations/verify_incidence_cubics.py

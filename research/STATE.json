@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-22",
-  "version": 53,
+  "version": 54,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -844,6 +844,15 @@
       "verification": [
         "computations/verify_elliptic_reversible_pencil.py"
       ]
+    },
+    {
+      "id": "ADDITIVE-ELLIPTIC-BOUNDARIES",
+      "status": "proved_all_stated_fibers",
+      "statement": "For positive multidegrees on reduced elliptic multiple-point quartics with two, three or four rational branches, the pencil algebra is AS exactly for equal multidegrees. Distinct balanced bundles give rank eight and complete ordered curve-data recognition. The quotient dimensions are 11, 10 and 9. The conductor and genus formula exhaust reduced (2,2) complete-intersection input curves together with the earlier cases.",
+      "proof": "sections/additive_pencil_boundary.tex",
+      "verification": [
+        "computations/verify_additive_pencil.py"
+      ]
     }
   ],
   "document_paths": {
@@ -907,7 +916,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "80729ccb50371a3c5fba0576ded43d53d85b6bb9",
+  "reviewed_source_commit": "2f2d327e2f07e08b4d047320d32cc5be34c03f3e",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -916,15 +925,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Analyze remaining reduced genus-one quartic boundaries with nonnodal intersections (two tangent rational components or a planar triple point). Test degrees, all-degree Koszul certification, and recovery of the graph using sections supported on conductor subschemes. In parallel mathematical scope, isolate what can force a general rank-eight AS tensor into the apolar-pencil chart and address non-elliptic ranks.",
+    "immediate_next_action": "Analyze the genus-one ribbon on a smooth conic: all-degree Koszul via evaluation on the reduction, infinitesimal graph recognition, and smoothing. Investigate reverse recognition from smooth rank-eight apolar graph data.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/additive_pencil_boundary.tex",
       "sections/elliptic_reversible_pencil.tex",
-      "sections/marked_opposite_rank.tex",
-      "sections/two_window_ext.tex"
+      "sections/reversible_component.tex"
     ],
     "known_obstruction": "No uniform finite Koszul/Serre cutoff or effective global regularity criterion is proved; finite-dimensional B and seven-degree tests do not suffice. Other low-rank components and high-rank witness-free regions remain unclassified.",
-    "state_of_claim": "Smooth elliptic data give an all-fiber AS chart dense in the 44-dimensional component, with complete ordered recognition for distinct bundles. Integral nodal and cuspidal boundaries are certified. On rational cycles with positive bundle degrees, equality of multidegrees is necessary and sufficient; unequal degrees give exponential growth. Other singular limits, components and global coverage remain unresolved.",
+    "state_of_claim": "The positive-degree pencil construction is classified on all reduced complete-intersection quartic inputs, for distinct balanced bundles by their ordered curve data. Nonreduced pencils and non-elliptic AS windows remain.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

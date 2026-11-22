@@ -1,21 +1,17 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 53,
+  "version": 54,
   "reviewed_input": {
-    "source_commit": "80729ccb50371a3c5fba0576ded43d53d85b6bb9"
+    "source_commit": "2f2d327e2f07e08b4d047320d32cc5be34c03f3e"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Smooth genus-one pencil chart with all-fiber AS regularity, ordered reconstruction, period test, positive-dimensional point example and reduced genus-one boundaries."
+    "scope": "Positive multidegree AS criterion and graph reconstruction for additive reduced elliptic singularities, with the reduced CI curve-type exhaustion."
   },
   "checks": [
     {
-      "command": "python computations/verify_elliptic_reversible_pencil.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_marked_opposite_rank.py",
+      "command": "python computations/verify_additive_pencil.py",
       "result": "PASS"
     },
     {
@@ -29,30 +25,27 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked the evaluation-kernel filtration and both central nonzero divisors, Serre pairing, rank-eight graph uniqueness, dimension/density argument, cyclic-four point correspondence counts, normalization/conductor arguments, and polygon component support obstruction. No external referee review."
+    "scope": "Checked common-value and first-jet gluing, the quartic embeddings, complementary supports, moment equations for small components, and the genus/conductor classification. No external referee review."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Rational smooth eight-point control checks Gale pairing, nonsingular apolar pencils with equal discriminant invariant and ranks 6 and 8. Nodal and cuspidal normalization models verify the same ranks. Enumerated all positive degree splits on cycles of length two to four and their complementary-chain obstruction. General assertions have written proofs."
+    "scope": "Six exact rational marked multiple-point models; mixed multiplication, adjacent rank six, and opposite ranks six or eight."
   },
   "tex": {
     "result": "PASS",
-    "scope": "Japanese main 130 pages, plan 6 and notes 12. Final logs have no overfull boxes, missing characters or unresolved references."
+    "scope": "Main 132 pages, plan 6, notes 12. No overfull boxes, missing characters or unresolved references in the final logs."
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Rendered and inspected page 99 covering the all-degree argument and reconstruction theorem."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT",
     "scope": "The new argument uses current internal results. No independent novelty determination or external-source claim was added."
   },
   "github_save": {
-    "result": "PASS",
-    "verified_commit": "65b44b3504c2dab1e823dcfa22c0406df978f989",
-    "scope": "Read back all 11 changed files since the v51 checkpoint and matched their contents byte-for-byte."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Tangential and triple intersections, nonreduced limits, and recognition of AS windows outside the elliptic pencil construction. No global classification or external novelty determination."
+    "Nonreduced quartic pencil boundaries and recognition/coverage away from the elliptic chart."
   ]
 }

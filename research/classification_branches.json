@@ -252,6 +252,7 @@
     "coverage": "Dense open of reversible component, including additional special AS fibers, without imposing finite point correspondences.",
     "regularity": "All smooth genus-one data, integral nodal/cuspidal data and cyclic rational polygons with equal positive multidegrees, provided the pencil has no base point.",
     "isomorphism": "For L != M the two embedded apolar curves, their unique graph and the pencil recover ordered data.",
-    "residual": "Unequal positive polygon multidegrees are excluded by an exponential quotient. Tangent/triple intersections, nonreduced limits and other components remain."
+    "residual": "Nonreduced quartics, recognition of compatible graphs, and other components.",
+    "reduced_additive_boundary": "All positive-degree multiple-point cases are AS exactly for equal multidegrees; ordered recognition for distinct bundles, m=2,3,4 quotient dimensions 13-m."
   }
 }
