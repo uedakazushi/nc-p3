@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 146,
+  "version": 147,
   "reviewed_input": {
-    "source_commit": "361f9e80be979cc5eea041cf788211705f9721a2"
+    "source_commit": "16b22625a7f1e5f863327727e7c5c738a4f61e9a"
   },
   "generation": {
     "result": "PASS",
-    "scope": "At every ordinary fixed multiplier in the positive rank-fifteen locus the indexed fiber has exactly two classes off the branch divisor and exactly one on it. Every unramified window has minimal period two. The two quartic-root pairs are exchanged across sheets by explicit basis changes. This also resolves the elliptic U=3 and rational U=-1 endpoint collisions."
+    "scope": "Every ordinary positive-fixed rank-fifteen window has exact minimal period two, including every point on the ramification divisor. The fifth trace contraction compared with its one-step rotation gives two equations whose elliptic norm numerators have only seven nonordinary factors in common."
   },
   "checks": [
     {
@@ -15,15 +15,15 @@
       "result": "PASS"
     },
     {
+      "command": "python computations/verify_rank_fifteen_branch_period.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_rank_fifteen_coordinate_collisions.py",
+      "result": "PASS"
+    },
+    {
       "command": "python computations/verify_rank_fifteen_root_exchange.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_rank_fifteen_endpoint_orbits.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_rank_fifteen_pauli_comparison.py",
       "result": "PASS"
     },
     {
@@ -37,36 +37,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked the common denominators, transposition invariance of the trace cubic, branch identifications and necessity of the resultant away from ramification."
+    "scope": "Checked the cyclic transpose convention, common scalar weights, ordinary conjugate points for the norms, excluded t=0 and infinity and all seven common factors."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Exact 256-entry Gram conjugacy, oriented contractions and exact quartic resultant over Q.",
-    "reproduction": "Recomputed all 256 rational-function identities and the full polynomial resultant over Q. Re-ran both the endpoint orbit and Pauli comparison verifiers with python-flint."
+    "scope": "Exact elliptic function-field rotation, equality of second and third moments, two quintic contractions and polynomial gcd of their norm obstructions."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 270,
+      "nc-p3": 271,
       "plan_ja": 8,
       "notes_ja": 16
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected manuscript pages 243 and 244 including the conjugacy, separation resultant and two exceptional endpoint fibers."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "9cfd0154dbdae29ef98559cc87e783406352670e",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "For interior regularity reduce each fixed multiplier to a single first-sheet root up to sign, root exchange and opposite algebra, and test the four degree-six insertion matrices and higher central cuts there. Indexed equivalence between distinct multiplier orbits and the other exceptional endpoint levels still require comparison, as does the period on the branch divisor.",
+    "For interior regularity choose one root over each remaining possible multiplier (all roots and both displays have equivalent left/right regularity). Test the four degree-six insertion matrices and higher central cuts, or determine the remaining exceptional indexed comparisons among the three coordinate-end curves. Ordinary fixed-multiplier indexed counts and rank-fifteen minimal periods are settled.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

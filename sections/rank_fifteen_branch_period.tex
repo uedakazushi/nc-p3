@@ -1,0 +1,49 @@
+% !TeX root = ../papers/nc-p3.tex
+\section{階数15の分岐曲線上の最小周期}
+\label{sec:rank-fifteen-branch-period}
+\begin{theorem}\label{thm:rank-fifteen-branch-period}
+正の固定曲線の通常倍率上で、反対階数15の全ての窓の最小周期は2である。
+特に分岐上では各倍率に一つずつ現れる標準Koszul左右AS正則な添字保持同型類が、
+いずれも厳密に周期2を持つ。
+\end{theorem}
+\begin{proof}
+非分岐の場合は定理\ref{thm:rank-fifteen-root-exchange}による。
+分岐上では同じ倍率の窓は全て添字保持同型なので、第一表示の
+$Y^2=-t^4+14t^2-1$ の上で示せばよい。$H$ を四文字対に作用する十六次の行列として
+$H_{i,j,k,u}$ の順で成分を書く。一位置移動したテンソルは核形式による独立共役を除き
+$H^\rho_{i,j,k,u}=H_{u,i,j,k}$ である。実際、移動後の出力は旧入力で、
+その入力は旧出力の対の順序を逆にしたものである。
+節\ref{sec:rank-fifteen-adjoint-invariants}の同型条件により、周期1なら両行列は独立共役とスカラー倍で移り合う。
+
+$M_j=\operatorname{tr}(H^j)$ とし、節\ref{sec:rank-fifteen-endpoint-orbits}と
+同じ五重縮約 $D$ を $H$ に、$E$ を $H^\rho$ に対して取る。
+\path{computations/verify_rank_fifteen_branch_period.py} は楕円曲線の関数体で
+$j=2,3$ の双方について $\operatorname{tr}((H^\rho)^j)=M_j$ を確認する。
+具体的に、文字差 $h$ のブロックを $T_h[i,u]=H_{i,u\oplus h,i\oplus h,u}$ と置くと、
+移動後の成分は $T_h[u,i\oplus h]$ である。行列 $H$ は二文字の和 $c$ を保ち、
+$c$ での成分は $T_{x\oplus y}[x,y\oplus c]$ となる。よって四つの四次行列の
+二乗・三乗のトレースの和で $M_2,M_3$ を計算できる。
+周期1なら、あるスカラー $a\ne0$ について $E=a^5D$, $M_j=a^j M_j$ が同時に成立する。
+従って次の二式がともに消える必要がある。
+\[
+ M_2(D^2-E^2),\qquad M_3(D^3-E^3).
+\]
+これらのノルムの分子を整数多項式として取り、最大公約式の相異なる既約因子を求めると
+\[
+ t,\quad t-1,\quad t+1,\quad t^2+1,\quad
+ t^2-4t+1,\quad t^2+4t+1,\quad t^4+10t^2+1
+\]
+となる。どの通常点でも両方の共役点でGram分母は単元である。実際、$Y$ の符号変更は
+$w\mapsto1/w$、すなわち $\lambda\mapsto1/(z\lambda)$ で通常条件を保つ。
+従って上記のノルムの分子は元の二式の共通零点を落とさない。
+
+各因子を定理\ref{thm:rank-fifteen-covers}に続く分岐の表示で調べる。
+$U=(t-t^{-1})/2$, $V=(t+t^{-1})/4$ とすると $t=2V+U$ と $1/t=2V-U$ は
+通常点で有限であり $t=0,\infty$ は除かれる。
+$t=\pm1$ は $K=3$, $r=-1$, $z=1$ を与え、$t^2=-1$ なら $n=(K+1)V=0$ となる。
+$t^2\pm4t+1=0$ では $U^2=3$ より $K=-3$, $w=1$ となり $z\lambda^2=1$ である。
+最後の四次因子では $U^2=-3$, $K=0$ であり、$r+1/r=1$ と $w+1/w=-1$ から
+$w=-r$ または $w=-1/r$ を得る。従って $\lambda=-1$ または $z\lambda=-1$ である。
+全て通常域の外にあるので、一位置移動との同型は不可能である。
+二位置移動の同型と分岐上の全点正則性は既に証明されている。
+\end{proof}
