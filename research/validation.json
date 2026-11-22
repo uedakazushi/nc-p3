@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 91,
+  "version": 92,
   "reviewed_input": {
-    "source_commit": "9a182498d6b2cee1766af4f3be07e5d79461851b"
+    "source_commit": "bb0b1eb44509723b4aaab971c03358ccb9cc21d9"
   },
   "generation": {
     "result": "PASS",
-    "scope": "On the invertible two-doublet chart, a single identically zero determinant polynomial forces one of the four exceptional slopes. All 32 rational presentations there have first-row degree-seven dimension at least 128 instead of 120. Together with the simultaneous-zero result this removes every identically-zero polynomial case."
+    "scope": "At every ordinary allowed pair (z,lambda), the genuine double-root discriminant compactifies to an integral Kummer quartic surface with exactly sixteen ordinary double points. Projection from a node gives a double plane branched in six tangents to a smooth conic. A rational rank-sixteen window and a single open of regular geometric fibers are certified on the ramification family."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_single_zero_pairings.py",
+      "command": "python computations/verify_kummer_discriminant.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_all_zero_pairing_defects.py",
+      "command": "python computations/verify_single_zero_pairings.py",
       "result": "PASS"
     },
     {
@@ -33,16 +33,16 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked normalization at a or b nonzero, units in both eliminations, each irreducible exceptional parametrization, the double-root denominators, and upward specialization of path dimension."
+    "scope": "Verified all singularities including the projection center, the double-plane function field and Abel involution, projection denominator behavior, and the transfer of the regular sample to a common open."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Eight ordinary-slope eliminations, 32 exceptional chart identities, and exact seventh-degree Hilbert ranks over three-variable rational function fields."
+    "scope": "Verified the six-line discriminant factorization, dual conic and Hessian identities, pairwise line separation, and all four central parameter cuts through length 13 at a genuine double root."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 207,
+      "nc-p3": 209,
       "plan_ja": 6,
       "notes_ja": 14
     },
@@ -58,7 +58,7 @@
     "result": "PENDING"
   },
   "open_mathematics": [
-    "Identify the genuine double-root discriminant, its projective singularities, and an all-fiber regular open. Test its projective tangent planes against boundary exclusions.",
+    "Determine the Gauss correspondence between the two completed matrices, locate inadmissible or non-AS trope conics, and analyze the resolution over the simultaneous-zero nodes.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

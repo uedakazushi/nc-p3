@@ -215,8 +215,8 @@
     },
     {
       "id": "TWENTY-CONORMAL-FULL-COMPONENT",
-      "current_result": "On the invertible two-doublet chart, a single identically zero determinant polynomial forces one of the four exceptional slopes. All 32 rational presentations there have first-row degree-seven dimension at least 128 instead of 120. Together with the simultaneous-zero result this removes every identically-zero polynomial case.",
-      "current_proof": "sections/single_zero_pairings.tex",
+      "current_result": "At every ordinary allowed pair (z,lambda), the genuine double-root discriminant compactifies to an integral Kummer quartic surface with exactly sixteen ordinary double points. Projection from a node gives a double plane branched in six tangents to a smooth conic. A rational rank-sixteen window and a single open of regular geometric fibers are certified on the ramification family.",
+      "current_proof": "sections/kummer_ramification.tex",
       "configuration_projection": {
         "result": "The generic recovery degree from one projected configuration is exactly two. The two finite-edge AS windows are the original orientation and its reversal; one ordered first edge determines the extension. At both rational samples the same classification holds. A pencil of quartics with twenty triple points recovers every normalized square root, including the exclusion of degenerate Grassmann candidates.",
         "proof": "sections/configuration_quartic_pencil.tex"
