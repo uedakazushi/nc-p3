@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 164,
+  "version": 165,
   "reviewed_input": {
-    "source_commit": "02a6217c33d9bac7aedb5ff08b816b102efb7cf9"
+    "source_commit": "0863c1bce9fe54825b299144994e71f680c43ca6"
   },
   "generation": {
     "result": "PASS",
-    "scope": "At every start on the full small-trace, small-y disk at three, the sixth central quotient has dimensions (12,12,10,10), total 44. In both missing characters the six-by-twelve residual block is divisible by H^2 and has a minor of order exactly four with unit leading coefficient. Every ordinary point on every pencil with 3-adically positive D admits a four-quartic cut of sixth dimension 44."
+    "scope": "For characteristic-zero ordinary rank-fifteen windows with positive valuation of y and integral slope D=x^3/y, the uncut sixth dimension is 84 and a four-central-quartic cut has sixth dimension 44 at every start, in residue characteristic zero and in every odd residue characteristic. Six residual pairs from the first chart are all covered by supplemental pivot schedules."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_sixth_center_minors.py",
+      "command": "python computations/verify_rank_fifteen_integral_slope.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_saturated_center_products.py",
+      "command": "python computations/verify_rank_fifteen_sixth_center_minors.py",
       "result": "PASS"
     },
     {
@@ -33,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked the three available digits, the two exact H divisions, all eight nonzero minors and the upper rank bound. Reviewed the three valuation cases for the pencil statements."
+    "scope": "Checked the trace map, lifting of a good residue root, contents, both generators of the orbit descent and the prime support of every resultant."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Eleven-term H-jets over Q(z), exact divisibility by H squared and eight unit minors over F9. Independently tested the same ranks with coefficient-wise rational functions.",
-    "reproduction": "Verified eight rank-two minors with common-denominator Q(z) jets, reproduced the sixteen block ranks with coefficient-wise Q(z) jets, checked the center-coordinate chart at precisions seven, nine and eleven, and reran the degree-six residue-rank baseline."
+    "scope": "Recorded all inversions, pivot contents and residual minors in the exact eleven-term rational-function calculation. Checked the orbit core over the rationals and the geometric residue fibers at each resultant prime and supplemental pivot schedules at the six remaining pairs."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 290,
+      "nc-p3": 291,
       "plan_ja": 8,
       "notes_ja": 16
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected manuscript page 264 including the eight minor witnesses, H order four, and the pencil corollary."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "d349d807350217edcb8886eb80a9d74b4c65bbd2",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Propagate the variable-trace four-center cut to length seven. At precision 15 use common-denominator jets over Q(z) and all four starts, or compute the next relations after appending to the proved sixth quotient. The expected seventh profile is (10,10,10,10); continue toward vanishing in length 13. The two sixth-degree characters and the Gaussian genus-two pencil are settled.",
+    "On the small-trace disk at three, compute the two-sided overlap of the left and right multiplication maps on the saturated four-center quotient. Check the seventh profile (10,10,10,10) and the degree-nine ranks on the way to vanishing in degree thirteen.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

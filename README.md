@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-22 / v164。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-22 / v165。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -312,6 +312,8 @@ x=0 の全窓を正則と証明し、添字保持同型類を穴あき二次曲�
 
 可変跡円板で残る両文字の小行列式を確定し、全始点の六次中心商の次元44を証明した。[証明と判定](sections/rank_fifteen_sixth_center_minors.tex)
 
+整な傾きで六次経路84、六次中心商44となる範囲を確定した。剰余標数零と全ての奇素数で剰余傾きに例外はない。[証明と判定](sections/rank_fifteen_integral_slope.tex)
+
 二窓から作る56次元代数で、低次Extの消滅を逆Serre反復が保つ構造条件を探す。
 「全次数を証明してAS認証」「有限障害で排除」「未決定」を分け、有限検査の成功を全AS認証としない。
 正規形の枝、特殊値、枝間同型の条件を証明し、未分類の残余を明示する。
@@ -444,6 +446,7 @@ python3 computations/verify_rank_fifteen_variable_zero_disk.py
 python3 computations/verify_rank_fifteen_first_center_products.py
 python3 computations/verify_rank_fifteen_saturated_center_products.py
 python3 computations/verify_rank_fifteen_sixth_center_minors.py
+python3 computations/verify_rank_fifteen_integral_slope.py
 python3 computations/verify_rank_fifteen_gaussian_pencil.py
 python3 computations/verify_rank_fourteen_wall_centers.py
 python3 computations/verify_rank_fifteen_quotient_residues.py

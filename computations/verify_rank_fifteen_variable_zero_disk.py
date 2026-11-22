@@ -169,7 +169,7 @@ def trace_relations(one, half, z, h, precision):
     return tensor_relations(gamma, one*0)
 
 
-def center_data(precision, jet=Jet, build_relations=relations):
+def center_data(precision, jet=Jet, build_relations=relations, *, fixed_sections=True):
     jet.precision = precision
     windows = build_relations()
     order = iter(product(range(1, 6), range(4), range(4)))
@@ -193,7 +193,7 @@ def center_data(precision, jet=Jet, build_relations=relations):
         pivots, loss = pivot_rows(rows, width, dimension, jet)
         assert not loss
         free = [j for j in range(width) if j not in pivots]
-        if h in (0, 1):
+        if fixed_sections and h in (0, 1):
             # These free coordinates fix the same exact center sections when
             # the jet precision changes. All are in the last start's word basis.
             labels = tuple("".join(map(str, w)) for w in basis[3, 4, h])

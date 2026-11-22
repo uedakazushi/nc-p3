@@ -28,12 +28,12 @@ class TraceJet(CommonDenominatorJet):
         return bool(self.coeffs) and residue_nonzero(self.coeffs[0])
 
 
-def relations():
-    one = TraceJet.constant(1)
-    half = TraceJet([ONE], fmpz_poly([2]))
-    z = TraceJet([fmpz_poly([0, 1])])
-    h = TraceJet([fmpz_poly([]), ONE])
-    return trace_relations(one, half, z, h, TraceJet.precision)
+def relations(jet=TraceJet):
+    one = jet.constant(1)
+    half = jet([ONE], fmpz_poly([2]))
+    z = jet([fmpz_poly([0, 1])])
+    h = jet([fmpz_poly([]), ONE])
+    return trace_relations(one, half, z, h, jet.precision)
 
 
 def remove_unit_pivots(rows):
@@ -56,8 +56,8 @@ def remove_unit_pivots(rows):
         count += 1
 
 
-def unit_minor(residual):
-    zero = TraceJet.constant(0)
+def unit_minor(residual, jet):
+    zero = jet.constant(0)
     for (i, a), (j, b) in combinations(residual, 2):
         for k, l in combinations(sorted(a.keys() | b.keys()), 2):
             det = a.get(k, zero)*b.get(l, zero) - a.get(l, zero)*b.get(k, zero)
@@ -66,12 +66,14 @@ def unit_minor(residual):
     raise AssertionError("Missing rank-two unit minor")
 
 
-def verify():
-    windows, basis, image, centers = center_data(11, TraceJet, relations)
-    precision = TraceJet.precision
+def verify(jet=TraceJet, *, fixed_sections=True):
+    windows, basis, image, centers = center_data(
+        11, jet, lambda: relations(jet), fixed_sections=fixed_sections
+    )
+    precision = jet.precision
     assert precision == 7
     for start in range(4):
-        TraceJet.precision = precision
+        jet.precision = precision
         spaces = {}
         for h in range(4):
             rows = []
@@ -80,16 +82,16 @@ def verify():
                 for word, coefficient in center.items():
                     add_multiple(row, image(start, word+(g^h,)), coefficient)
                 rows.append(row)
-            pivots, loss = pivot_rows(rows, len(basis[start, 5, h]), 10, TraceJet)
+            pivots, loss = pivot_rows(rows, len(basis[start, 5, h]), 10, jet)
             assert loss == 4
             spaces[h] = list(pivots.values())
 
-        for h in (2, 3):
-            TraceJet.precision = precision
+        for h in range(4):
+            jet.precision = precision
             rows, width = sixth_insertion(windows, basis, image, start, h)
-            _, projection, loss = saturated_projection(rows, width, 22, TraceJet)
+            _, projection, loss = saturated_projection(rows, width, (20, 20, 22, 22)[h], jet)
             assert width == 56 and loss == 2
-            TraceJet.precision = precision-4
+            jet.precision = precision-4
             appended = []
             for last in range(4):
                 for row in spaces[h^last]:
@@ -97,15 +99,23 @@ def verify():
                     for j, coefficient in row.items():
                         add_multiple(result, projection[14*last+j], coefficient)
                     appended.append(result)
+            if not fixed_sections:
+                _, _, loss = saturated_projection(appended, (20, 20, 22, 22)[h],
+                                                  (12, 12, 10, 10)[h], jet)
+                assert loss == (0 if h < 2 else 2)
+                continue
             count, residual = remove_unit_pivots(appended)
+            if h < 2:
+                assert count == 8
+                continue
             assert count == 10 and len(residual) == 6
             # Each call checks exact vanishing over Q(z) before dropping H.
             for _ in range(2):
                 residual = [(i, {j: v.divide_by_parameter() for j, v in row.items()})
                             for i, row in residual]
-                TraceJet.precision -= 1
-            assert TraceJet.precision == 1
-            witness = unit_minor(residual)
+                jet.precision -= 1
+            assert jet.precision == 1
+            witness = unit_minor(residual, jet)
             print("Start", start, "character", h, "unit minor", witness, flush=True)
 
 
