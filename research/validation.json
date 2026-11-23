@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Computed the exact quadratic exceptional fiber gcd and specialized the universal center basis in F81. Recomputed all four finite-field quotients for both hyperplanes."
+    "scope": "Computed the exact quadratic exceptional fiber gcd and specialized the universal center basis in F81. Recomputed all four finite-field quotients for both hyperplanes.",
+    "reproduction": "Verified the exact quadratic fiber gcd and all four starts for the fixed, exchanged and weighted choices over the same F81 presentation, including the first failures at nine and ten."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript pages 297 to 299, including the exceptional fiber, fixed F81 presentation and three central four-planes."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "01cd59ae9211fbda7d6c139cde4e4aee2c8a816b",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Advance the simultaneous seven-degree cut for the four starts. Four fixed normalized center columns suffice through degree six throughout the nonbranch unit surface, but they can give 23 instead of 20 in degree nine: allow a second center hyperplane as well as alternative parameter representatives in higher degrees. Use twelve coefficient resultants or componentwise orbit intersections to bound bad fibers and certify the finite residue points. Continue the unrestricted nonsymmetric classification.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "2a76f605008147224b99f0382a2122a7f9ee966e",
+    "commit": "1ca90f0b88e8e47c781199de112bcaf5ebfcb88c",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
