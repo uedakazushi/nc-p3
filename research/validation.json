@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Computed the three nonprime quadratic residue lines, four exact central cuts on each, three invariant exceptional level divisors and all remaining Frobenius fibers. Verified the rational parametrization identities symbolically."
+    "scope": "Computed the three nonprime quadratic residue lines, four exact central cuts on each, three invariant exceptional level divisors and all remaining Frobenius fibers. Verified the rational parametrization identities symbolically.",
+    "reproduction": "Recomputed all three quadratic-residue lines, four central cuts per start, the complete exceptional fibers including coefficient conjugation, and the finite-field presentations through length thirteen. Reproduced the previous minus-one line after sharing the normalization and cut arithmetic."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript pages 291 to 293 including the three pivot-divisor rows and the explicit rational parametrization."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "18235725dfde01dcde5e71bfb0b44c506e56b641",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Certify the entire branch Y=(1-X)^2 in characteristic three for arbitrary geometric X outside 0,1. Take c^2=X and v=epsilon/c+j, j in F3; exactly one of the six signed roots vanishes. Renormalize the remaining 32 Walsh entries to remove their signs, compute the four cuts over F3(c) and intersect bad level divisors across the six presentations. Off the branch, the universal genus-two surface has the explicit radicial rational coordinates u,q. Use them to bound or eliminate the remaining bad locus. Also continue unrestricted nonsymmetric windows.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "3affad8d1cee4b6117ff623dea96d268af8469df",
+    "commit": "238faa1a7e16e6185c95ceca55e9ea55924133d3",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
