@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Recomputed the finite-field quotient directly at the distinct presentations of the F81 exceptional fiber and compared the complete character profiles through degree nine."
+    "scope": "Recomputed the finite-field quotient directly at the distinct presentations of the F81 exceptional fiber and compared the complete character profiles through degree nine.",
+    "reproduction": "The degree-seven and signed degree-eight verifiers passed end to end. Verified all forty-eight ninth-degree character profiles on the twelve presentations and the exchanged-four-plane certificate at the reference point."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript pages 300 to 302, including the twelve presentations, even and odd starting characters, and the exchanged column certificate."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "e6de63357b85a801f39001dd04cd9915fdf74b4f",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "For ninth-degree quotient upper bound 20 at start zero, use more than the fixed columns (1,2,4,5): their dimension is 23 on the entire six-presentation signed F81 test fiber. Use columns (1,2,3,5) there; test alternate and mixed center hyperplanes on the remaining signed exceptional fibers, and intersect the nonempty Grassmannian opens. Degree eight is globally certified for every ordinary characteristic-zero rank-fifteen window. Higher degrees and unrestricted nonsymmetric branches remain open.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "0e49aeac5b99fcb9254307b2372b0f75d57f7b30",
+    "commit": "1aa60692e5b5eef07c724b202ccad3aaba4f3e33",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
