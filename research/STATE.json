@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-23",
-  "version": 196,
+  "version": 197,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -2181,6 +2181,15 @@
       "verification": [
         "computations/verify_rank_fifteen_bivariate_seventh_cut.py"
       ]
+    },
+    {
+      "id": "RANK-FIFTEEN-ALL-ORDINARY-TRUNCATED-FREENESS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "All ordinary characteristic-zero rank-fifteen windows have a common quartet of central quartics giving truncated central freeness through seven at all starts. The uncut sixth and seventh dimensions are 84 and 120. The four-center quotient then has the simultaneous lower bounds 31,20,10,4 in lengths eight to eleven; an individual matching upper bound proves the uncut and quotient dimensions and central monomial independence in that degree.",
+      "proof": "sections/rank_fifteen_truncated_central_freeness.tex",
+      "verification": [
+        "computations/verify_rank_fifteen_truncated_central_freeness.py"
+      ]
     }
   ],
   "document_paths": {
@@ -2244,7 +2253,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "ea2891c7167b75a15789d4a2acb39c8d4e6e7bb4",
+  "reviewed_source_commit": "559da5c6e4df707b2fd6c3f424924b328d10766e",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -2253,15 +2262,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Every geometric unit pair admits a common four-center cut through seven. Next extend the four word recursions to degree eight (expected 31). Use numerator-tracked primitive polynomial rows or multiple four-planes before orbit elimination; nine and ten can depend on the plane. The twelve coefficient gcd at seven detected Y=X-1, removed with different pivot choices at starts 1 and 3. Specialize each residual irreducible X bound and test the common B roots; reuse the 13 resolved finite orbits. Continue the unrestricted nonsymmetric branch.",
+    "immediate_next_action": "Complete the degree-eight quotient upper bound 31, then the degree-nine, ten and eleven upper bounds 20, 10 and 4. For the characteristic-zero four-plane certified through seven these four lower bounds already hold simultaneously by truncated central generation. Only an upper-bound witness at a given degree is required. For the residue calculation extend right-word projections to eight and descend the exceptional sets; use different hyperplanes at degree nine and beyond if necessary. Continue the unrestricted nonsymmetric classification.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/rank_fifteen_truncated_central_freeness.tex",
       "sections/rank_fifteen_bivariate_seventh_cut.tex",
-      "sections/rank_fifteen_fixed_center_obstruction.tex",
-      "sections/rank_fifteen_bivariate_sixth_cut.tex"
+      "sections/rank_fifteen_integral_annulus.tex"
     ],
     "known_obstruction": "Possible isolated interior failures of all-degree regularity on the (x,y) plane and uncovered general nonsymmetric windows.",
-    "state_of_claim": "Every geometric unit pair now has a common certificate through length seven. Higher degrees on arbitrary pairs and the general nonsymmetric classification remain open.",
+    "state_of_claim": "All characteristic-zero ordinary rank-fifteen windows satisfy central freeness through length seven. Equality at higher degrees and the unrestricted nonsymmetric classification remain open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

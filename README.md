@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-23 / v196。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-23 / v197。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -370,6 +370,8 @@ x が負付値の等号境界を全幾何傾きで認証し、対角線近傍の
 
 全幾何単元対で七次四中心商が四始点とも40次元となること、および十三の剰余軌道で十三次までの証明書を得た。[証明と判定](sections/rank_fifteen_bivariate_seventh_cut.tex)
 
+標数零の全通常階数15窓で七次までの中心単項式基底を証明した。八次から十一次の商次元には下界31,20,10,4があり、各次数には上界の証明だけで足りる。[証明と判定](sections/rank_fifteen_truncated_central_freeness.tex)
+
 縦切片 $x=1$ の正付値領域を全て認証し、全有理水準で添字保持同型類と最小周期を決定した。[証明と判定](sections/rank_fifteen_vertical_one.tex)
 
 座標1の単元剰余を種数1の48重被覆で表し、縦切片の三次以下の全代数的水準を決定した。[証明と判定](sections/rank_fifteen_vertical_unit_levels.tex)
@@ -539,6 +541,7 @@ python3 computations/verify_rank_fifteen_bivariate_word_paths.py
 python3 computations/verify_rank_fifteen_bivariate_sixth_cut.py
 python3 computations/verify_rank_fifteen_fixed_center_obstruction.py
 python3 computations/verify_rank_fifteen_bivariate_seventh_cut.py
+python3 computations/verify_rank_fifteen_truncated_central_freeness.py
 python3 computations/verify_rank_fifteen_vertical_one.py
 python3 computations/verify_rank_fifteen_unit_residues.py
 python3 computations/verify_rank_fifteen_vertical_unit_levels.py

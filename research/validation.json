@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-23",
-  "version": 196,
+  "version": 197,
   "reviewed_input": {
-    "source_commit": "ea2891c7167b75a15789d4a2acb39c8d4e6e7bb4"
+    "source_commit": "559da5c6e4df707b2fd6c3f424924b328d10766e"
   },
   "generation": {
     "result": "PASS",
-    "scope": "On every characteristic-three geometric unit pair there is a common four-central-quartic quotient of dimension 40 at degree seven for all four starts. The apparent obstruction Y=X-1 is removed by a second elimination. Thirteen explicit cubic, quartic and sextic Frobenius orbits have full length-thirteen certificates, giving the standard Koszul two-sided AS and rank-256 conclusion on their characteristic-zero residue tubes."
+    "scope": "All ordinary characteristic-zero rank-fifteen windows have a common quartet of central quartics giving truncated central freeness through seven at all starts. The uncut sixth and seventh dimensions are 84 and 120. The four-center quotient then has the simultaneous lower bounds 31,20,10,4 in lengths eight to eleven; an individual matching upper bound proves the uncut and quotient dimensions and central monomial independence in that degree."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_bivariate_seventh_cut.py",
+      "command": "python computations/verify_rank_fifteen_truncated_central_freeness.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_fixed_center_obstruction.py",
+      "command": "python computations/verify_rank_fifteen_bivariate_seventh_cut.py",
       "result": "PASS"
     },
     {
@@ -33,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Reviewed scale tracking for primitive row pivots, chart localization, necessity of simultaneous vanishing of the twelve basis coefficients, the degree-70 horizontal bound, the curve denominator and all finite-field specializations."
+    "scope": "Checked the mixed-characteristic lifting of centers, the universal lower bound from the regular generic chart, the graded module generation surjection, descent over infinite fields and the residue-class-by-residue-class convolution."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Verified all four ordinary seventh-degree recursions, two primitive pivot recursions, residual resultants, the alternate curve gcd and full centered quotients on 13 Frobenius orbits.",
-    "reproduction": "Computed six exact rational-function word reductions, replayed affine elimination on both recorded factor unions and certified all thirteen residual Frobenius orbits through degree thirteen in finite fields of degrees 6, 8 and 12."
+    "scope": "Checked the truncated Hilbert series convolution for a polynomial algebra on four degree-four generators and the four simultaneous quotient dimension floors; the geometric upper bounds are from the verified degree-seven covering."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 327,
+      "nc-p3": 328,
       "plan_ja": 8,
       "notes_ja": 17
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected manuscript pages 297 to 299, including the covering proof, second pivot computation and table of thirteen Frobenius orbits."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "c3e21741b1b7092f27cea16ba7806da9ef66a72a",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Every geometric unit pair admits a common four-center cut through seven. Next extend the four word recursions to degree eight (expected 31). Use numerator-tracked primitive polynomial rows or multiple four-planes before orbit elimination; nine and ten can depend on the plane. The twelve coefficient gcd at seven detected Y=X-1, removed with different pivot choices at starts 1 and 3. Specialize each residual irreducible X bound and test the common B roots; reuse the 13 resolved finite orbits. Continue the unrestricted nonsymmetric branch.",
+    "Complete the degree-eight quotient upper bound 31, then the degree-nine, ten and eleven upper bounds 20, 10 and 4. For the characteristic-zero four-plane certified through seven these four lower bounds already hold simultaneously by truncated central generation. Only an upper-bound witness at a given degree is required. For the residue calculation extend right-word projections to eight and descend the exceptional sets; use different hyperplanes at degree nine and beyond if necessary. Continue the unrestricted nonsymmetric classification.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
