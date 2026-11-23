@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-23",
-  "version": 183,
+  "version": 184,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -2064,6 +2064,15 @@
       "verification": [
         "computations/verify_rank_fifteen_negative_unit_levels.py"
       ]
+    },
+    {
+      "id": "RANK-FIFTEEN-NEGATIVE-X-ALL-BOUNDARY-SLOPES",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "For nu(x)<0 the entire equality ray nu(y)=2nu(x) is certified at every geometric residue slope by the genus-one boundary. The previously proved lower pole cone therefore extends to the closed half-plane nu(y)<=2nu(x). In the strict cone the mixed-characteristic tube nu(g-w)>=21nu(w)>0 is also certified. The direct two-boundary Smith equality already fails in eight of the sixteen uncut length-four matrices.",
+      "proof": "sections/rank_fifteen_negative_x_boundary.tex",
+      "verification": [
+        "computations/verify_rank_fifteen_negative_x_boundary.py"
+      ]
     }
   ],
   "document_paths": {
@@ -2127,7 +2136,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "d4f6f95b75c49031956ec7f39651ea612d7dafbd",
+  "reviewed_source_commit": "fc9228e798cf7ec41c158cf4ac9cdb258657a6f4",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -2136,15 +2145,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "On xbar=-1 the signed cover of the unit y-line has degree 384 and genus 97. Compute a generic certificate for the four central cuts, descend its exceptional divisor over the y-line and test remaining high-degree factors. Every closed residue point of degree at most four is now certified. In parallel mathematical directions, on the remaining negative-x region use w=s-i, g=r/w and compute the w=0 Smith profiles on the genus-one degree-16 cover of lambda=-g^4/16 in the existing elliptic arithmetic W^2=t-t^3, g=2(1-i)W/(1+t^2), with K=1, n=-ig and H/n=g, and the unrestricted nonsymmetric branches.",
+    "immediate_next_action": "For negative nu(x) only the strict cone nu(y)>2nu(x) remains beyond the certified 21-digit neighborhood of g=w. In coordinates w=s-i, g=r/w subdivide first at g=m w, where nu(y)=nu(x) and the residue of y/x is m^4/4. Compute the 21-digit (or adaptive-precision) generic Q(i)(m) Smith lists and pivot divisor; compare the subdivided cones at (w,g)=(t,t^2) and (t^2,t), and align central word coordinates. The prior two uncut boundary profiles disagree with the diagonal at length four. On the separate xbar=-1 geometric unit-residue problem use the genus-97 cover for residue degrees beyond four. General other unit residues and unrestricted nonsymmetric windows are open.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/rank_fifteen_negative_x_boundary.tex",
       "sections/rank_fifteen_negative_unit_levels.tex",
-      "sections/rank_fifteen_nonunit_pole_strip.tex",
-      "sections/rank_fifteen_inner_collision_fan.tex"
+      "sections/rank_fifteen_outer_pole_fan.tex"
     ],
     "known_obstruction": "Possible isolated interior failures of all-degree regularity on the (x,y) plane and uncovered general nonsymmetric windows.",
-    "state_of_claim": "Nonzero y of algebraic degree at most four are certified for rational 3-integral x. Arbitrary high residue degrees at xbar=-1, other general unit residues, other negative-x slopes and nonsymmetric windows remain.",
+    "state_of_claim": "At negative x valuation the whole closed lower cone is certified. Part of the strict upper cone, arbitrary high-degree unit residues and the unrestricted nonsymmetric classification remain open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

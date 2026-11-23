@@ -88,10 +88,10 @@ def sparse_pivot(rows):
     return min(((j, k) for j, row in enumerate(rows) for k in row), key=score)
 
 
-def pivot_divisor():
+def pivot_divisor(build_windows=windows):
     Recorded.divisor = ONE
     Recorded.record.cache_clear()
-    relations = windows()
+    relations = build_windows()
 
     def project(rows, width, target, field):
         return saturated_projection(rows, width, target, field, select_pivot=sparse_pivot)

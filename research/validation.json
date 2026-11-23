@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-23",
-  "version": 183,
+  "version": 184,
   "reviewed_input": {
-    "source_commit": "d4f6f95b75c49031956ec7f39651ea612d7dafbd"
+    "source_commit": "fc9228e798cf7ec41c158cf4ac9cdb258657a6f4"
   },
   "generation": {
     "result": "PASS",
-    "scope": "At xbar=-1 all nonzero unit y residues of degrees at most four are certified. For rational 3-integral x every nonzero y in any number field with at least one place above 3 of residue degree at most four gives a regular ordinary rank-fifteen window, including every algebraic y of degree at most four. The four central quartics give rank 256 per start. For the remaining negative-x valuation cone, coordinates w=s-i, g=r/w are integral with a genus-one degree-16 Galois cover of the nonzero slope y/x^2 at w=0. On the full equality ray nu(y)=2nu(x)<0 all prime-field nonzero slopes give regular windows, in particular all rational points on this boundary."
+    "scope": "For nu(x)<0 the entire equality ray nu(y)=2nu(x) is certified at every geometric residue slope by the genus-one boundary. The previously proved lower pole cone therefore extends to the closed half-plane nu(y)<=2nu(x). In the strict cone the mixed-characteristic tube nu(g-w)>=21nu(w)>0 is also certified. The direct two-boundary Smith equality already fails in eight of the sixteen uncut length-four matrices."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_negative_unit_levels.py",
+      "command": "python computations/verify_rank_fifteen_negative_x_boundary.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_nonunit_pole_strip.py",
+      "command": "python computations/verify_rank_fifteen_negative_unit_levels.py",
       "result": "PASS"
     },
     {
@@ -33,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Verified the Artin-Schreier and simultaneous square-root splitting bounds over finite fields and the lifting at all conjugate y residues, and the negative-x pole coordinates, boundary radicals and the birational elliptic model W^2=t-t^3, the unit Jacobian and the full central cuts at both rational equality slopes."
+    "scope": "Checked slope lifting, the orbit descent under the eight conic transformations, and specialization of the 21-digit Gaussian diagonal calculation to its full valuation tube."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Enumerated the 3, 8 and 18 irreducible residue polynomials of degrees 2, 3 and 4 and verified the four central quotients at every one through degree 13.",
-    "reproduction": "Verified all 29 quadratic through quartic residue orbits through length 13 at all four starts, both nonzero prime-field equality slopes, and the rational identities for the genus-one boundary."
+    "scope": "Computed the genus-one generic cuts from all four starts through length 13, descended the pivot divisor, verified residual fibers, and compared the Gaussian diagonal to the known conic boundary."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 313,
+      "nc-p3": 314,
       "plan_ja": 8,
       "notes_ja": 17
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected manuscript pages 283 through 285 including the finite fields, the elliptic boundary, and the Jacobian lifting the two slopes."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "824b64811ce4209ca7a500bfe0515e5a92e613ab",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "On xbar=-1 the signed cover of the unit y-line has degree 384 and genus 97. Compute a generic certificate for the four central cuts, descend its exceptional divisor over the y-line and test remaining high-degree factors. Every closed residue point of degree at most four is now certified. In parallel mathematical directions, on the remaining negative-x region use w=s-i, g=r/w and compute the w=0 Smith profiles on the genus-one degree-16 cover of lambda=-g^4/16 in the existing elliptic arithmetic W^2=t-t^3, g=2(1-i)W/(1+t^2), with K=1, n=-ig and H/n=g, and the unrestricted nonsymmetric branches.",
+    "For negative nu(x) only the strict cone nu(y)>2nu(x) remains beyond the certified 21-digit neighborhood of g=w. In coordinates w=s-i, g=r/w subdivide first at g=m w, where nu(y)=nu(x) and the residue of y/x is m^4/4. Compute the 21-digit (or adaptive-precision) generic Q(i)(m) Smith lists and pivot divisor; compare the subdivided cones at (w,g)=(t,t^2) and (t^2,t), and align central word coordinates. The prior two uncut boundary profiles disagree with the diagonal at length four. On the separate xbar=-1 geometric unit-residue problem use the genus-97 cover for residue degrees beyond four. General other unit residues and unrestricted nonsymmetric windows are open.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
