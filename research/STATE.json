@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-23",
-  "version": 187,
+  "version": 188,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -2100,6 +2100,15 @@
       "verification": [
         "computations/verify_rank_fifteen_negative_x_fan.py"
       ]
+    },
+    {
+      "id": "RANK-FIFTEEN-QUADRATIC-RESIDUE-GRID-AND-GENUS-THIRTEEN-DESCENT",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "All ordinary rank-fifteen windows with x,y in any number field having a place over 3 of residue degree at most two (y nonzero) are standard Koszul left/right AS-regular with rank 256 over the four central quartics per start. This includes every multiquadratic number field. For arbitrary unit residue X other than 1 the genus-97 signed cover is the common splitting field of two quartics over a rational intermediate field. The Klein-homogeneous tensor descends to a genus-13 field of degree 16 over k(v).",
+      "proof": "sections/rank_fifteen_unit_quartic_towers.tex",
+      "verification": [
+        "computations/verify_rank_fifteen_unit_quartic_towers.py"
+      ]
     }
   ],
   "document_paths": {
@@ -2163,7 +2172,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "301acf965f347315def374c4c43cf764dee13119",
+  "reviewed_source_commit": "d318463ef952db72065f737dba69055a21e045ca",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -2172,15 +2181,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "The entire negative-x region and all rational (x,y), y nonzero, are certified. Return to general unit residues in residue characteristic 3. For X=xbar not 0 or 1 and c^2=X use v=1/K, H=c(K-v), ybar=X^3(v^3-v)^2. Study the six signed radicals and descend the four central cuts; in particular the genus-97 X=-1 line is not yet certified beyond the known low residue degrees. Also continue the unrestricted nonsymmetric classification independently.",
+    "immediate_next_action": "Compute the center and the four central quotient profiles over the explicit genus-13 descended tensor for X=-1, then for general X. Keep the Klein grading in the fourfold low-bit Walsh basis; determine how central characters change and treat vanishing denominators or center pivots separately. The quadratic residue grid is complete. Also continue the unrestricted nonsymmetric classification.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/rank_fifteen_unit_quartic_towers.tex",
       "sections/rank_fifteen_negative_x_fan.tex",
-      "sections/rank_fifteen_negative_x_fold.tex",
-      "sections/rank_fifteen_outer_pole_fan.tex"
+      "sections/rank_fifteen_nonunit_pole_strip.tex"
     ],
     "known_obstruction": "Possible isolated interior failures of all-degree regularity on the (x,y) plane and uncovered general nonsymmetric windows.",
-    "state_of_claim": "All rational pairs and all negative-x geometric verticals are certified. General unit residues and unrestricted nonsymmetric windows remain open.",
+    "state_of_claim": "The entire quadratic residue grid is certified. The four central cuts over the genus-13 function field and unrestricted nonsymmetric classes remain open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

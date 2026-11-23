@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-23",
-  "version": 187,
+  "version": 188,
   "reviewed_input": {
-    "source_commit": "301acf965f347315def374c4c43cf764dee13119"
+    "source_commit": "d318463ef952db72065f737dba69055a21e045ca"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every ordinary rank-fifteen characteristic-zero window with negative valuation of x above three is standard Koszul left/right AS-regular and free of rank 256 per start over the four central quartics, at every nonzero geometric y. Entire negative-x verticals have the stated conic indexed classification and period two. All rational pairs, and all rational x with y in a number field with a place above 3 of residue degree at most four, are regular."
+    "scope": "All ordinary rank-fifteen windows with x,y in any number field having a place over 3 of residue degree at most two (y nonzero) are standard Koszul left/right AS-regular with rank 256 over the four central quartics per start. This includes every multiquadratic number field. For arbitrary unit residue X other than 1 the genus-97 signed cover is the common splitting field of two quartics over a rational intermediate field. The Klein-homogeneous tensor descends to a genus-13 field of degree 16 over k(v)."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_negative_x_fan.py",
+      "command": "python computations/verify_rank_fifteen_unit_quartic_towers.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_negative_x_fold.py",
+      "command": "python computations/verify_rank_fifteen_negative_x_fan.py",
       "result": "PASS"
     },
     {
@@ -33,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked the folded nonbranch boundary, transfer at exceptional units, the three unimodular cone comparisons, and the conic indexed classification and period on every negative-x vertical."
+    "scope": "Checked independent branch characters, genera 97, 2 and 13, intermediate degrees, reconstruction of both quartic splitting fields, preservation of Klein support and the local lifting hypotheses."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Recomputed three Gaussian rational-function ray profiles, the necessary finite residue fibers, and three F9 cone diagonals with 308 ordered Smith lists and the center frames.",
-    "reproduction": "Computed the three exact Gaussian rational-function rays and their pivot divisors, checked the five exceptional unit residues, and compared all 308 ordered Smith lists and central frames in each of the three unimodular cones."
+    "scope": "Verified both quartics and their elliptic quotient symbolically in characteristic three, all 256 integer Walsh coefficient identities and both descent characters, and the four-start central quotient through length 13 on all 24 simultaneous Frobenius orbits of the remaining F9 residue pairs."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 317,
+      "nc-p3": 319,
       "plan_ja": 8,
       "notes_ja": 17
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected manuscript pages 287 to 289 including the three Gaussian ray certificates and the indexed conic classification."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "ff6b57d3067b217c7bc108b7678df925602900c5",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "The entire negative-x region and all rational (x,y), y nonzero, are certified. Return to general unit residues in residue characteristic 3. For X=xbar not 0 or 1 and c^2=X use v=1/K, H=c(K-v), ybar=X^3(v^3-v)^2. Study the six signed radicals and descend the four central cuts; in particular the genus-97 X=-1 line is not yet certified beyond the known low residue degrees. Also continue the unrestricted nonsymmetric classification independently.",
+    "Compute the center and the four central quotient profiles over the explicit genus-13 descended tensor for X=-1, then for general X. Keep the Klein grading in the fourfold low-bit Walsh basis; determine how central characters change and treat vanishing denominators or center pivots separately. The quadratic residue grid is complete. Also continue the unrestricted nonsymmetric classification.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
