@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-23",
-  "version": 197,
+  "version": 198,
   "reviewed_input": {
-    "source_commit": "559da5c6e4df707b2fd6c3f424924b328d10766e"
+    "source_commit": "ce9490560bf103cc4a3e9179c8ef3aebc364bc75"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All ordinary characteristic-zero rank-fifteen windows have a common quartet of central quartics giving truncated central freeness through seven at all starts. The uncut sixth and seventh dimensions are 84 and 120. The four-center quotient then has the simultaneous lower bounds 31,20,10,4 in lengths eight to eleven; an individual matching upper bound proves the uncut and quotient dimensions and central monomial independence in that degree."
+    "scope": "Every ordinary characteristic-zero rank-fifteen window has a common quartet of central quartics with central monomial basis through degree eight at all four starts. The eighth uncut and quotient dimensions are 165 and 31. A signed six-lift calculation preserves the indexed class via p-bar=c^3; the four start-wise open conditions intersect in the central Grassmannian."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_truncated_central_freeness.py",
+      "command": "python computations/verify_rank_fifteen_oriented_eighth_cut.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_bivariate_seventh_cut.py",
+      "command": "python computations/verify_rank_fifteen_truncated_central_freeness.py",
       "result": "PASS"
     },
     {
@@ -33,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked the mixed-characteristic lifting of centers, the universal lower bound from the regular generic chart, the graded module generation surjection, descent over infinite fields and the residue-class-by-residue-class convolution."
+    "scope": "Checked signed lifting of both indexed invariants, the primitive pivot degree, separability of all six v lifts, the finite residue profiles and the intersection of nonempty open four-plane conditions for different starts."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Checked the truncated Hilbert series convolution for a polynomial algebra on four degree-four generators and the four simultaneous quotient dimension floors; the geometric upper bounds are from the verified degree-seven covering.",
-    "reproduction": "Checked the Hilbert convolution, the four complementary lower bounds, graded generation, lifting and ground-field descent, using the verified residue-surface upper bound through length seven."
+    "scope": "Verified the rational-pivot degree formula on primitive rows, the first-start octic profile, the six coefficient simultaneous-vanishing test and the degree-33 bound; resolved all eight residual Frobenius orbits."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 328,
+      "nc-p3": 329,
       "plan_ja": 8,
       "notes_ja": 17
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected manuscript pages 298 to 300, including the mixed-characteristic lifting argument, truncated central freeness and the degree-eight through eleven lower bounds."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "13df28e6acdb46017d8d50a6616e09cc4b1316d1",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Complete the degree-eight quotient upper bound 31, then the degree-nine, ten and eleven upper bounds 20, 10 and 4. For the characteristic-zero four-plane certified through seven these four lower bounds already hold simultaneously by truncated central generation. Only an upper-bound witness at a given degree is required. For the residue calculation extend right-word projections to eight and descend the exceptional sets; use different hyperplanes at degree nine and beyond if necessary. Continue the unrestricted nonsymmetric classification.",
+    "Every ordinary characteristic-zero rank-fifteen window has a common central monomial basis through eight, with uncut dimension 165. Next certify the ninth-degree quotient upper bound 20 at start zero for each signed root c (p-bar=c^3), keeping the six v lifts. The irreducible Grassmannian gives simultaneous starts and compatibility with earlier degrees; different degrees can use different witnesses. At degree nine the fixed columns can fail in an individual presentation, so use exchanged or mixed columns on bad fibers. Continue the unrestricted nonsymmetric classification.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

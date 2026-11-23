@@ -68,14 +68,28 @@ def eliminate(row, scale, pivot, column):
     return reduced, scale * fraction(content, left)
 
 
-def primitive_echelon(rows):
+def pivot_degree(value, scale, rational_order):
+    degree = value.total_degree()
+    if rational_order:
+        # scale = a/b is reduced. Exactly gcd(value,b) cancels in a*value/b.
+        degree += (
+            scale.n.total_degree()
+            + scale.d.total_degree()
+            - 2 * value.gcd(scale.d).total_degree()
+        )
+    return degree
+
+
+def primitive_echelon(rows, *, rational_order=False):
     # scale times the primitive polynomial row is the actual rational row.
     pending = [clear_denominators(r) for r in rows if r]
     pivots = []
     while pending:
-        _, _, j, i = min(
-            (len(row), value.total_degree(), column, index)
-            for index, (row, _) in enumerate(pending)
+        width = min(len(row) for row, _ in pending)
+        _, j, i = min(
+            (pivot_degree(value, scale, rational_order), column, index)
+            for index, (row, scale) in enumerate(pending)
+            if len(row) == width
             for column, value in row.items()
         )
         pivot, scale = pending.pop(i)
@@ -144,18 +158,22 @@ def fiber(coefficients, modulus):
     return {tuple(map(int, b.to_list())) for b, _ in roots}
 
 
-def finite_certificate(pair):
+def finite_certificate(pair, *, signed_root=False):
     modulus, b_coordinates = pair
     degree = len(modulus) - 1
     for multiple in (1, 2, 3, 4, 6, 12):
         extension = fq_default_ctx(3, degree * multiple, "a")
         ring = fq_default_poly_ctx(extension)
-        x = ring(list(modulus)).roots()[0][0]
+        parameter = ring(list(modulus)).roots()[0][0]
+        x = parameter**2 if signed_root else parameter
         if not x.is_square():
             continue
-        b = sum((z * x**i for i, z in enumerate(b_coordinates)), extension.zero())
+        b = sum(
+            (z * parameter**i for i, z in enumerate(b_coordinates)), extension.zero()
+        )
         y = x**3 * b
-        coordinates = split_unit_coordinates(ring.gen(), x, y, x.sqrt())
+        c = parameter if signed_root else x.sqrt()
+        coordinates = split_unit_coordinates(ring.gen(), x, y, c)
         if coordinates is not None:
             verify_unit_point(extension, x, y, coordinates, ((0, 1, 0), (0, 0, 1)))
             print(
@@ -169,11 +187,15 @@ def finite_certificate(pair):
     raise AssertionError(pair)
 
 
-def horizontal_bound(coefficients):
+def horizontal_bound(coefficients, *, signed_root=False):
     # Removing units before elimination cuts down degrees and multiplicities.
+    horizontal = X**2 if signed_root else X
+    units = (X, X - 1, B, horizontal**3 * B - (1 - horizontal) ** 2)
+    if signed_root:
+        units += (X + 1,)
     reduced = []
     for p in coefficients:
-        for unit_factor in (X, X - 1, B, X**3 * B - (1 - X) ** 2):
+        for unit_factor in units:
             while not p % unit_factor:
                 p = p // unit_factor
         reduced.append(p)
@@ -186,7 +208,7 @@ def horizontal_bound(coefficients):
         for (j, k), z in r.to_dict().items():
             assert k == 0
             univariate[j] = int(z)
-        for f in (t, t - 1):
+        for f in (t, t - 1, t + 1) if signed_root else (t, t - 1):
             while not univariate % f:
                 univariate = univariate // f
         bound = univariate if bound is None else bound.gcd(univariate)
