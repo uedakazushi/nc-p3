@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Verified all four ordinary seventh-degree recursions, two primitive pivot recursions, residual resultants, the alternate curve gcd and full centered quotients on 13 Frobenius orbits."
+    "scope": "Verified all four ordinary seventh-degree recursions, two primitive pivot recursions, residual resultants, the alternate curve gcd and full centered quotients on 13 Frobenius orbits.",
+    "reproduction": "Computed six exact rational-function word reductions, replayed affine elimination on both recorded factor unions and certified all thirteen residual Frobenius orbits through degree thirteen in finite fields of degrees 6, 8 and 12."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript pages 297 to 299, including the covering proof, second pivot computation and table of thirteen Frobenius orbits."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "c3e21741b1b7092f27cea16ba7806da9ef66a72a",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Every geometric unit pair admits a common four-center cut through seven. Next extend the four word recursions to degree eight (expected 31). Use numerator-tracked primitive polynomial rows or multiple four-planes before orbit elimination; nine and ten can depend on the plane. The twelve coefficient gcd at seven detected Y=X-1, removed with different pivot choices at starts 1 and 3. Specialize each residual irreducible X bound and test the common B roots; reuse the 13 resolved finite orbits. Continue the unrestricted nonsymmetric branch.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "1ca90f0b88e8e47c781199de112bcaf5ebfcb88c",
+    "commit": "969643b37333c66555e7992a8b3affba4213af4c",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
