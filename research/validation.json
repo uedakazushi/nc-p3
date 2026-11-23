@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Recomputed three Gaussian rational-function ray profiles, the necessary finite residue fibers, and three F9 cone diagonals with 308 ordered Smith lists and the center frames."
+    "scope": "Recomputed three Gaussian rational-function ray profiles, the necessary finite residue fibers, and three F9 cone diagonals with 308 ordered Smith lists and the center frames.",
+    "reproduction": "Computed the three exact Gaussian rational-function rays and their pivot divisors, checked the five exceptional unit residues, and compared all 308 ordered Smith lists and central frames in each of the three unimodular cones."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript pages 287 to 289 including the three Gaussian ray certificates and the indexed conic classification."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "ff6b57d3067b217c7bc108b7678df925602900c5",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "The entire negative-x region and all rational (x,y), y nonzero, are certified. Return to general unit residues in residue characteristic 3. For X=xbar not 0 or 1 and c^2=X use v=1/K, H=c(K-v), ybar=X^3(v^3-v)^2. Study the six signed radicals and descend the four central cuts; in particular the genus-97 X=-1 line is not yet certified beyond the known low residue degrees. Also continue the unrestricted nonsymmetric classification independently.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "3c01906723fbce22f53c92b91abe0689d4a7d559",
+    "commit": "34b269daf6c243617a1999ceea1214b24eace674",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
