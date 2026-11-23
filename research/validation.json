@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Verified every pivot order in 308 matrices on each of three cones, the common central normalizations and the full exact 48-digit second-ray certificate."
+    "scope": "Verified every pivot order in 308 matrices on each of three cones, the common central normalizations and the full exact 48-digit second-ray certificate.",
+    "reproduction": "Computed all 308 ordered Smith lists on each weighted diagonal and on the two boundary charts, checked aligned centers, and compared the exact 48-digit generic second ray with its specialized lists."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript pages 277 and 278 with the two-parameter lemma, both interior rays, and three cone checks."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "4893784dd850c00f7cbcc3c3a3b62809b001c802",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "At the inner collision above J=1 choose the real branch z=1+delta with 2 nu(delta)=nu(J-1) and 4 nu(H)=nu(y). Certify deep directions using z=1+m H^2 and the unit-slope direction z=1+mH, then resolve their intermediate directions, checking central normalizations separately on each ray. The nonunit pole sectors and unrestricted nonsymmetric classification remain.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "c5d1bc1b639fd59cd303e9f6f4a66dce1105e5ed",
+    "commit": "4ba155d8dd00fd132e391e8cc73597fa6e63b994",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
