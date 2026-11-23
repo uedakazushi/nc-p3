@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Checked the exact 31-digit unit ray, its sole pivot divisor m, and every one of the 308 Smith comparisons on the 47-digit diagonal r=t^2, s=t."
+    "scope": "Checked the exact 31-digit unit ray, its sole pivot divisor m, and every one of the 308 Smith comparisons on the 47-digit diagonal r=t^2, s=t.",
+    "reproduction": "Recomputed the exact 31-digit Q(m) ray, its sole pivot divisor m and the 47-digit diagonal, including all 308 ordered Smith lists and the center frames."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript pages 280 through 282 including the endpoint model and cone theorem."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "96ebbf758890849dc032f2231a62411bd61a0fcc",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Resolve the remaining 0<3nu(x)<nu(y)<5nu(x) strip, equivalent to 0<nu(r)<nu(s). At its s=0 edge rationalize K=sqrt(1+r^2) by a=2q/(1+q^2), r=2a/(1-a^2); then sqrt(2(K+1))=2(1+q^2)/(1-q^2). Compute the generic s-adic boundary Smith lists and compare against the r=m s ray and the r=t,s=t^2 diagonal. Check all central word coordinates and subdivide if necessary. Nonintegral x, general unit residues, and nonsymmetric branches remain.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "cf30c755c902bc98e944987aa6c8050dfa227dba",
+    "commit": "19b56ce9dd8be024c2eabdb5028b4d37e34ea07c",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
