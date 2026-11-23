@@ -1,0 +1,19 @@
+% !TeX root = ../papers/nc-p3.tex
+\section{九次で固定四列の全表示が失敗する剰余点}
+\label{sec:rank-fifteen-ninth-orbit-obstruction}
+\begin{proposition}
+第\ref{sec:rank-fifteen-fixed-center-obstruction}節の $\mathbb F_{81}$ の点で
+$X=a^3+a^2+2$, $B=X+1$, $c_0=a^2+2$, $v_0=a^3+a^2+a$ とする。
+$c=\pm c_0$ とした全十二表示のいずれでも、第1,2,4,5列による九次商は四始点とも23次元である。
+一方、$v=v_0$ で第4列を第3列に替えた四中心では九次が20次元となり、十三次で消える。
+\end{proposition}
+\begin{proof}
+$v$ の全ての選択は $v=\pm v_0+j$ ($j\in\mathbb F_3$) である。
+いずれも $(v^3-v)^2=B$ を満たし、$B\ne0$ なので相異なる。
+\path{computations/verify_rank_fifteen_ninth_orbit_obstruction.py} は各 $K=1/v$, $H=c(K-v)$ で
+同じ普遍的な四列を特殊化し、有限体上で経路の関係行列を初めから消去する。
+両方の $c$ の符号で各表示の八次までは所定の次元である。九次の文字別次元は
+始点0,2で $(6,6,6,5)$、始点1,3で $(5,6,6,6)$ となる。従ってこのファイバー全体で、表示や消去主元の
+選び直しだけで、指定四列の八次証明書を九次へ延長することはできない。
+交換後の四列の主張は第\ref{sec:rank-fifteen-fixed-center-obstruction}節の直接計算による。
+\end{proof}

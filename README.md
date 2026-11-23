@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-23 / v198。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-23 / v199。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -374,6 +374,8 @@ x が負付値の等号境界を全幾何傾きで認証し、対角線近傍の
 
 符号付き六表示で始点を保ち、全通常階数15窓の四始点で八次の未切断165次元・四中心商31次元を証明した。[証明と判定](sections/rank_fifteen_oriented_eighth_cut.tex)
 
+九次では固定四列の商が両符号の全十二表示・四始点で23次元となる。中心四平面の交換が必要な点を特定した。[証明と判定](sections/rank_fifteen_ninth_orbit_obstruction.tex)
+
 縦切片 $x=1$ の正付値領域を全て認証し、全有理水準で添字保持同型類と最小周期を決定した。[証明と判定](sections/rank_fifteen_vertical_one.tex)
 
 座標1の単元剰余を種数1の48重被覆で表し、縦切片の三次以下の全代数的水準を決定した。[証明と判定](sections/rank_fifteen_vertical_unit_levels.tex)
@@ -545,6 +547,7 @@ python3 computations/verify_rank_fifteen_fixed_center_obstruction.py
 python3 computations/verify_rank_fifteen_bivariate_seventh_cut.py
 python3 computations/verify_rank_fifteen_truncated_central_freeness.py
 python3 computations/verify_rank_fifteen_oriented_eighth_cut.py
+python3 computations/verify_rank_fifteen_ninth_orbit_obstruction.py
 python3 computations/verify_rank_fifteen_vertical_one.py
 python3 computations/verify_rank_fifteen_unit_residues.py
 python3 computations/verify_rank_fifteen_vertical_unit_levels.py

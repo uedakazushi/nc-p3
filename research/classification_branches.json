@@ -322,7 +322,8 @@
       "rank_fifteen_fixed_center_obstruction": "sections/rank_fifteen_fixed_center_obstruction.tex",
       "rank_fifteen_bivariate_seventh_cut": "sections/rank_fifteen_bivariate_seventh_cut.tex",
       "rank_fifteen_truncated_central_freeness": "sections/rank_fifteen_truncated_central_freeness.tex",
-      "rank_fifteen_oriented_eighth_cut": "sections/rank_fifteen_oriented_eighth_cut.tex"
+      "rank_fifteen_oriented_eighth_cut": "sections/rank_fifteen_oriented_eighth_cut.tex",
+      "rank_fifteen_ninth_orbit_obstruction": "sections/rank_fifteen_ninth_orbit_obstruction.tex"
     },
     {
       "id": "UNRESTRICTED-SINGLY-SYMMETRIC-14",

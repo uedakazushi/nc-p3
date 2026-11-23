@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-23",
-  "version": 198,
+  "version": 199,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -2199,6 +2199,15 @@
       "verification": [
         "computations/verify_rank_fifteen_oriented_eighth_cut.py"
       ]
+    },
+    {
+      "id": "RANK-FIFTEEN-NINTH-ORBIT-OBSTRUCTION",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "At the F81 presentation with X=a^3+a^2+2 and B=X+1, the fixed central columns (1,2,4,5) give ninth-degree dimension 23 for every one of the 12 presentations and every start, including both signs of c. The exchanged columns (1,2,3,5) give the expected dimensions through thirteen at the reference presentation.",
+      "proof": "sections/rank_fifteen_ninth_orbit_obstruction.tex",
+      "verification": [
+        "computations/verify_rank_fifteen_ninth_orbit_obstruction.py"
+      ]
     }
   ],
   "document_paths": {
@@ -2262,7 +2271,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "ce9490560bf103cc4a3e9179c8ef3aebc364bc75",
+  "reviewed_source_commit": "270742e02cb96eac30c9368f05572e3921c2b66a",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -2271,15 +2280,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Every ordinary characteristic-zero rank-fifteen window has a common central monomial basis through eight, with uncut dimension 165. Next certify the ninth-degree quotient upper bound 20 at start zero for each signed root c (p-bar=c^3), keeping the six v lifts. The irreducible Grassmannian gives simultaneous starts and compatibility with earlier degrees; different degrees can use different witnesses. At degree nine the fixed columns can fail in an individual presentation, so use exchanged or mixed columns on bad fibers. Continue the unrestricted nonsymmetric classification.",
+    "immediate_next_action": "For ninth-degree quotient upper bound 20 at start zero, use more than the fixed columns (1,2,4,5): their dimension is 23 at all four starts on both signed F81 fibers, across all twelve presentations. Use columns (1,2,3,5) there; test alternate and mixed center hyperplanes on the remaining signed exceptional fibers, and intersect the nonempty Grassmannian opens. Degree eight is globally certified for every ordinary characteristic-zero rank-fifteen window. Higher degrees and unrestricted nonsymmetric branches remain open.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/rank_fifteen_ninth_orbit_obstruction.tex",
       "sections/rank_fifteen_oriented_eighth_cut.tex",
-      "sections/rank_fifteen_truncated_central_freeness.tex",
-      "sections/rank_fifteen_global_invariants.tex"
+      "sections/rank_fifteen_fixed_center_obstruction.tex"
     ],
     "known_obstruction": "Possible isolated interior failures of all-degree regularity on the (x,y) plane and uncovered general nonsymmetric windows.",
-    "state_of_claim": "Central freeness is proved through eight on all ordinary rank-fifteen windows in characteristic zero. The higher-degree and unrestricted nonsymmetric classification obligations remain open.",
+    "state_of_claim": "The eighth-degree global classification test is closed on ordinary rank fifteen; the fixed ninth-degree test has a verified full-fiber obstruction. A universal ninth upper bound with varying central four-planes and the unrestricted nonsymmetric classification remain open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
