@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Computed the 36-entry diagonal gauge and its integral exponent matrix, solved the five-dimensional center and four central cuts over the genus-two field at X=-1, descended a degree-8801 pivot divisor to eight exceptional levels and verified the exceptional sextic directly."
+    "scope": "Computed the 36-entry diagonal gauge and its integral exponent matrix, solved the five-dimensional center and four central cuts over the genus-two field at X=-1, descended a degree-8801 pivot divisor to eight exceptional levels and verified the exceptional sextic directly.",
+    "reproduction": "Verified the 36-entry gauge and the genus-two radicand, five-dimensional center, all four central cuts through degree thirteen, the 8801-degree pivot divisor, the degree-156 invariant part and the direct sextic-fiber calculation."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript pages 290 to 292 including the diagonal normalization, exceptional sextic, and indexed vertical classes."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "f5e332067963fdbdd3a5c0e4a6dae33c4c1cdca8",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Use the 36-entry Walsh tensor and its degree-two normalization for the remaining unit residues X outside F3. For X=+i or -i, take c in F9 with c^2=X: d^2=-1 again, so the same genus-two arithmetic works after scaling the joint radical by (-ic)^3. Descend the actual excluded v-polynomial to complete Y-fibers and handle their finite exceptional orbits. Next handle nonsquare X in F9 and a variable geometric X. Unrestricted nonsymmetric windows remain open.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "ac026813e3530064e41e8ac3f8c5d89271f40038",
+    "commit": "3affad8d1cee4b6117ff623dea96d268af8469df",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
