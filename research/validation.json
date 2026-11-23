@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-23",
-  "version": 177,
+  "version": 178,
   "reviewed_input": {
-    "source_commit": "a410411678df60c30d9d01389d8f0eb77f673cfb"
+    "source_commit": "f09a4f21da4244f43b6fb250b24431a366917c64"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All ordinary characteristic-zero rank-fifteen windows with 0<4 nu(x-1)=nu(y) at a prime above 3 are standard Koszul, left/right AS-regular and free of rank 256 per start over four central quartics. The entire open outer sector 0<2 nu(x-1)<nu(y) has integral path coordinates with two positive-valuation parameters w,u and H=uw."
+    "scope": "Every ordinary characteristic-zero rank-fifteen window on the entire outer sector 0<2 nu(x-1)<nu(y) is standard Koszul left/right AS-regular and free of rank 256 over four central quartics at each start. A simultaneous two-parameter Smith lemma lifts all 308 eliminations on three unimodular cones; the two internal rays are covered at every residue and depth."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_outer_pole.py",
+      "command": "python computations/verify_rank_fifteen_outer_pole_fan.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_unit_pole_depth.py",
+      "command": "python computations/verify_rank_fifteen_outer_pole.py",
       "result": "PASS"
     },
     {
@@ -33,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked the unramified Jacobian of the scaled slope map and the four fourth-root presentations for every residual slope."
+    "scope": "Checked the two height-one orders in the regular Henselian local ring, the unit diagonal pivots and the exact chart substitutions at both old boundary rays."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Ran two 32-digit characteristic-zero eliminations over Q(m), with prime divisors m-1 and m^2+m+2, and checked their leading-denominator divisors.",
-    "reproduction": "Computed both 32-digit Q(m) charts through degree thirteen, checked their reduced divisors and the invertible Jacobian of the scaled invariant."
+    "scope": "Verified every pivot order in 308 matrices on each of three cones, the common central normalizations and the full exact 48-digit second-ray certificate."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 306,
+      "nc-p3": 307,
       "plan_ja": 8,
       "notes_ja": 16
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected manuscript pages 276 and 277 with the two local variables, the scaled invariant, and both characteristic-zero pivot charts."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "2a2bcbf9a58da983d21f6d949818b0bc68dba593",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "In the outer chart w,u compare Smith lists on the boundary rays (1,0),(1,1),(1,2),(0,1) with their neighboring weighted diagonals, and certify every residual unit on u=m w^2. Then handle the intermediate collision above J=1, the nonunit pole charts, and unrestricted nonsymmetric windows.",
+    "At the inner collision above J=1 choose the real branch z=1+delta with 2 nu(delta)=nu(J-1) and 4 nu(H)=nu(y). Certify deep directions using z=1+m H^2 and the unit-slope direction z=1+mH, then resolve their intermediate directions, checking central normalizations separately on each ray. The nonunit pole sectors and unrestricted nonsymmetric classification remain.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
