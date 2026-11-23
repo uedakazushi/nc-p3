@@ -1,0 +1,94 @@
+% !TeX root = ../papers/nc-p3.tex
+\section{非単元座標の残る帯と3整な有理点}
+\label{sec:rank-fifteen-nonunit-pole-strip}
+\begin{theorem}\label{thm:rank-fifteen-nonunit-pole-strip}
+剰余標数3の標数零の通常な階数15窓で $\nu(x)>0$ なら、任意の $y\ne0$ について
+標準Koszul左右AS正則であり、各始点で四中心四次式上自由階数256である。
+\end{theorem}
+\begin{proof}
+$x=0$ は既知である。$\nu(y)<0$ は極の定理、$\nu(y)=0$ は
+定理\ref{thm:rank-fifteen-residue-line}に含まれる。$\nu(y)>0$ で
+$\nu(y)\le3\nu(x)$ なら定理\ref{thm:rank-fifteen-integral-depth}、
+$\nu(y)\ge5\nu(x)$ なら前節が適用できる。
+
+残る $3\nu(x)<\nu(y)<5\nu(x)$ は円錐曲線の座標で $0<\nu(r)<\nu(s)$ である。
+$r=S$, $s=ST$ と置くと $S,T$ は正付値である。$S=0$ の辺は前節の $r=ms$ で、
+一般元 $m$ は $T^{-1}$ である。$T=0$ の辺は $s=0$ で $r$ は一般元となる。
+この第二の辺の関数体を有限拡大して
+\[
+ v=\frac{2z}{1+z^2},\qquad r=\frac{2v}{1-v^2},\qquad
+ K=\frac{1+v^2}{1-v^2},\qquad E=\frac{1+z^2}{1-z^2}
+\]
+とすれば $K^2=1+r^2$, $2(K+1)=4E^2$, $2/(K+1)=E^{-2}$ である。
+$z=0$ では $r\sim4z$ であり、$s=0$ では円錐曲線の $A,B$ は $1,0$ である。
+従って前節と同じ平方根の枝を $s$ に関する展開で選べる。
+具体的には $P_\pm$ の定数項は $2E$、$Q_\pm/r$ の定数項は $E^{-1},-E^{-1}$ である。
+
+\path{computations/verify_rank_fifteen_nonunit_pole_strip.py} は
+$\mathbb Q(z)$ 上で $s$ の十五桁を取り、$3,z^3+2z^2+1$ の上で単元となる主元を選ぶ。
+未切断経路は $(0,0,0,2,2)$、四次中心は全て零、四次の積は零、五次の積は四桁を使う。
+長さ6から13の最大損失は $(2,2,0,2,0,0,0,0)$ である。
+全ての $s$ 除算の前に定数係数の消滅を有理関数体上で確認する。
+これは高さ一の辺の一般指数を求める計算なので、$z$ の全剰余値への特殊化を必要としない。
+
+対角線 $r=t,s=t^2$ を標数零で四十五桁まで展開する。未切断経路は
+$(0,1,1,6,6)$、四次中心は $(0,1,1,1)$、五次の積は十桁を使い、
+長さ6から13では $(6,5,1,5,1,0,1,0)$ 桁を使う。
+両辺と対角線で中心の自由座標とそれを指定する語基底が一致し、全308組の行列で
+両辺の指数の項別の和が対角線の指数になる。従って
+補題\ref{lem:rank-fifteen-two-parameter-smith}により、残る帯の全点で
+十三次までの中心商の上界と全次数の正則性・自由性が得られる。
+\end{proof}
+
+\begin{corollary}
+$x,y\in\mathbb Q$, $\nu_3(x)\ge0$, $y\ne0$ の通常な階数15窓は全て
+標準Koszul左右AS正則で、各始点で四中心四次式上自由階数256である。
+\end{corollary}
+\begin{proof}
+正付値は本節、単元は定理\ref{thm:rank-fifteen-inner-collision-fan}とその系による。
+\end{proof}
+
+\begin{corollary}
+3の上のある付値で $\bar a=0$ となる縦切片 $x=a$ は、非零の全幾何水準で分類できる。
+$a\ne3,3/4$ では系\ref{cor:rank-fifteen-unit-vertical-conics}と同じ $T$ による表示、
+分岐水準での二類とその他の四類、最小周期2という結論が成り立つ。
+$a=3,3/4$ では規格化テンソルの縦切片は $T_+T_-=0$ の二直線から $y=0$ を除いたもので、
+水準 $y=a^3/27$ にただ一つの最小周期1の点があり、他の非零水準は最小周期2の四類である。
+\end{corollary}
+\begin{proof}
+本節の定理が任意の $y$ への付値の延長で適用できる。
+通常表示外の四点のうち $4a^2-12a+7=0$ の二点は $\bar a=0$ に入らない。
+残り二点とその周期は定理\ref{thm:rank-fifteen-formal-boundary}で決まっている。
+$f(a)\ne0$ では既述の円錐曲線の計算を使う。
+$f(a)=0$ では $p=q=0$ が二直線の交点であり、それ以外の非零水準では
+$p,q$ がいずれも非零で四つの符号が相異なる点を与える。
+\end{proof}
+
+\begin{lemma}\label{lem:rank-fifteen-negative-unit-cover}
+次の単元剰余 $\bar x=-1$ において、符号を選んだ倍率の関数体は、
+幾何学的剰余体上の $\bar y$ 直線の次数384のGalois被覆を与える。
+正規化した被覆曲線の種数は97で、分岐値は $0,1,\infty$ の三つである。
+\end{lemma}
+\begin{proof}
+標数3で $v=1/K$, $i^2=-1$, $H=i(K-v)$ と取れば
+$\bar y=-(v-v^3)^2$ である。$n\pm H/n$, $P_\pm$, $Q_\pm$ の
+六根は $v$ 直線上の平方類としてそれぞれ
+\[
+ (1-v^2)(1\pm2iv),\qquad
+ v(1+v)\{1\pm i(1-v)\},\qquad
+ v(1-v)\{1\pm i(1+v)\}
+\]
+を開平して得る。初めの二根の和の半分が $n$ となり、差の半分との積は $H$ である。
+六つの三次式はそれぞれに固有な零点を $\mathbb F_9\setminus\mathbb F_3$ に一つずつ持つ。
+従って平方類は独立で、$v$ 直線への次数は64である。奇数付値の点の和集合は
+$\mathbb P^1(\mathbb F_9)$ の十点で、幾何学的な各慣性指数は2である。
+Riemann--Hurwitz公式は $2g-2=-128+10\cdot32=192$ を与える。
+
+六つの変換 $v\mapsto\epsilon v+b$ ($\epsilon=\pm1$, $b\in\mathbb F_3$) は
+$\bar y$ を保つ。検証コードは各平方類の奇数付値を十点の指示ベクトルで表し、
+各変換後の六ベクトルを加えても $\mathbb F_2$ 階数が6であることを確認する。
+幾何学的な有理関数体ではこの付値の偶奇が平方類を決めるので、
+六変換が全て開平拡大に持ち上がる。$v$ から $\bar y$ への写像は有限非零の
+$\bar y$ 上で非分岐である。九つの有限分岐点のうち $v\in\mathbb F_3$ は
+$\bar y=0$ に、残る六点は $\bar y=1$ に写り、無限遠も分岐する。
+\end{proof}

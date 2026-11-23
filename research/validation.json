@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-23",
-  "version": 181,
+  "version": 182,
   "reviewed_input": {
-    "source_commit": "1dd47144e9e8097d9fe8f52e00b4e8e744abe722"
+    "source_commit": "d64f33ade6ffc1a060e46efa3abe97533abe424d"
   },
   "generation": {
     "result": "PASS",
-    "scope": "On every ordinary characteristic-zero rank-fifteen window in residue characteristic three with 0<5nu(x)<=nu(y), the algebra is standard Koszul left/right AS-regular and free of rank 256 per start over four central quartics. The nonunit pole admits small conic parameters r,s on the whole sector 0<3nu(x)<nu(y)."
+    "scope": "Every ordinary rank-fifteen window in characteristic zero with positive valuation of x above 3 is standard Koszul and left/right AS-regular, free of rank 256 per start for every nonzero geometric y. In particular every rational ordinary pair with 3-integral x and nonzero rational y is regular. Entire verticals reducing to 0 have the stated conic classification, with the two split fibers x=3,3/4 and their period-one nodes. The xbar=-1 signed unit-residue cover is Galois of degree 384, genus 97, branched at 0, 1 and infinity."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_nonunit_pole.py",
+      "command": "python computations/verify_rank_fifteen_nonunit_pole_strip.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_inner_collision_fan.py",
+      "command": "python computations/verify_rank_fifteen_nonunit_pole.py",
       "result": "PASS"
     },
     {
@@ -33,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked the analytic coordinates at the conic endpoint s=0, the invertible Jacobian of y/x^5 and the two-parameter Smith transfer in the strict cone."
+    "scope": "Checked the rationalization of both boundary square roots and the two-parameter comparison, the conic classification on all xbar=0 fibers, the two period-one exceptions, and the ten inertia points and all six lifted transformations of the new unit cover."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Checked the exact 31-digit unit ray, its sole pivot divisor m, and every one of the 308 Smith comparisons on the 47-digit diagonal r=t^2, s=t.",
-    "reproduction": "Recomputed the exact 31-digit Q(m) ray, its sole pivot divisor m and the 47-digit diagonal, including all 308 ordered Smith lists and the center frames."
+    "scope": "Computed the generic s=0 boundary to 15 exact digits and the 45-digit diagonal r=t,s=t^2. Compared the 308 complete ordered pivot lists and the central coordinate frames."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 310,
+      "nc-p3": 311,
       "plan_ja": 8,
       "notes_ja": 17
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected manuscript pages 280 through 282 including the endpoint model and cone theorem."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "96ebbf758890849dc032f2231a62411bd61a0fcc",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Resolve the remaining 0<3nu(x)<nu(y)<5nu(x) strip, equivalent to 0<nu(r)<nu(s). At its s=0 edge rationalize K=sqrt(1+r^2) by a=2q/(1+q^2), r=2a/(1-a^2); then sqrt(2(K+1))=2(1+q^2)/(1-q^2). Compute the generic s-adic boundary Smith lists and compare against the r=m s ray and the r=t,s=t^2 diagonal. Check all central word coordinates and subdivide if necessary. Nonintegral x, general unit residues, and nonsymmetric branches remain.",
+    "On the rank-fifteen plane move to unit y with xbar=-1 and arbitrary residue y, beyond the prime-field grid. Put v=1/K and choose i^2=-1; then H=i(K-v), ybar=-(v-v^3)^2, and the signed radicands factor into products of v, 1+v, 1-v and 1 +/- i(1 +/- v). The six independent Kummer classes and the full degree-384 genus-97 cover are established. Compute the four central cuts and descend a pivot divisor over this cover, exploiting sign symmetries or a smaller quotient if possible. The unit levels with ybar=1 or -1 are already certified. Also treat nu(x)<0 outside the previously certified pole cone nu(y)<2nu(x) and the unrestricted nonsymmetric branches.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

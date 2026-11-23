@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-23",
-  "version": 181,
+  "version": 182,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -2046,6 +2046,15 @@
       "verification": [
         "computations/verify_rank_fifteen_nonunit_pole.py"
       ]
+    },
+    {
+      "id": "RANK-FIFTEEN-ALL-POSITIVE-X-VERTICALS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "Every ordinary rank-fifteen window in characteristic zero with positive valuation of x above 3 is standard Koszul and left/right AS-regular, free of rank 256 per start for every nonzero geometric y. In particular every rational ordinary pair with 3-integral x and nonzero rational y is regular. Entire verticals reducing to 0 have the stated conic classification, with the two split fibers x=3,3/4 and their period-one nodes. The xbar=-1 signed unit-residue cover is Galois of degree 384, genus 97, branched at 0, 1 and infinity.",
+      "proof": "sections/rank_fifteen_nonunit_pole_strip.tex",
+      "verification": [
+        "computations/verify_rank_fifteen_nonunit_pole_strip.py"
+      ]
     }
   ],
   "document_paths": {
@@ -2109,7 +2118,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "1dd47144e9e8097d9fe8f52e00b4e8e744abe722",
+  "reviewed_source_commit": "d64f33ade6ffc1a060e46efa3abe97533abe424d",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -2118,15 +2127,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Resolve the remaining 0<3nu(x)<nu(y)<5nu(x) strip, equivalent to 0<nu(r)<nu(s). At its s=0 edge rationalize K=sqrt(1+r^2) by a=2q/(1+q^2), r=2a/(1-a^2); then sqrt(2(K+1))=2(1+q^2)/(1-q^2). Compute the generic s-adic boundary Smith lists and compare against the r=m s ray and the r=t,s=t^2 diagonal. Check all central word coordinates and subdivide if necessary. Nonintegral x, general unit residues, and nonsymmetric branches remain.",
+    "immediate_next_action": "On the rank-fifteen plane move to unit y with xbar=-1 and arbitrary residue y, beyond the prime-field grid. Put v=1/K and choose i^2=-1; then H=i(K-v), ybar=-(v-v^3)^2, and the signed radicands factor into products of v, 1+v, 1-v and 1 +/- i(1 +/- v). The six independent Kummer classes and the full degree-384 genus-97 cover are established. Compute the four central cuts and descend a pivot divisor over this cover, exploiting sign symmetries or a smaller quotient if possible. The unit levels with ybar=1 or -1 are already certified. Also treat nu(x)<0 outside the previously certified pole cone nu(y)<2nu(x) and the unrestricted nonsymmetric branches.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/rank_fifteen_nonunit_pole_strip.tex",
       "sections/rank_fifteen_nonunit_pole.tex",
-      "sections/rank_fifteen_inner_collision_fan.tex",
-      "sections/rank_fifteen_unit_pole_depth.tex"
+      "sections/rank_fifteen_inner_collision_fan.tex"
     ],
     "known_obstruction": "Possible isolated interior failures of all-degree regularity on the (x,y) plane and uncovered general nonsymmetric windows.",
-    "state_of_claim": "The deep nonunit pole is certified. At positive valuation of x the remaining pole strip is 3nu(x)<nu(y)<5nu(x); nonintegral x, other general unit residues and the unrestricted classification remain.",
+    "state_of_claim": "Positive-x verticals and all rational 3-integral x are certified. General unit residues away from xbar=0,1, negative x valuations, and unrestricted nonsymmetric windows still remain.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
