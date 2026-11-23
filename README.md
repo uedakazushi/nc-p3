@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-23 / v188。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-23 / v189。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -354,6 +354,8 @@ x が負付値の等号境界を全幾何傾きで認証し、対角線近傍の
 
 3上の剰余次数が2以下の素点を持つ数体で全座標を認証した。一般単元の四窓は種数13の関数体に降下する。[証明と判定](sections/rank_fifteen_unit_quartic_towers.tex)
 
+全ての有理数 x の通常な階数15窓を任意の非零の幾何水準で認証した。剰余が −1 の縦切片は全て添字保持同型まで分類した。[証明と判定](sections/rank_fifteen_genus_two_unit_line.tex)
+
 縦切片 $x=1$ の正付値領域を全て認証し、全有理水準で添字保持同型類と最小周期を決定した。[証明と判定](sections/rank_fifteen_vertical_one.tex)
 
 座標1の単元剰余を種数1の48重被覆で表し、縦切片の三次以下の全代数的水準を決定した。[証明と判定](sections/rank_fifteen_vertical_unit_levels.tex)
@@ -515,6 +517,7 @@ python3 computations/verify_rank_fifteen_negative_x_arcs.py
 python3 computations/verify_rank_fifteen_negative_x_fold.py
 python3 computations/verify_rank_fifteen_negative_x_fan.py
 python3 computations/verify_rank_fifteen_unit_quartic_towers.py
+python3 computations/verify_rank_fifteen_genus_two_unit_line.py
 python3 computations/verify_rank_fifteen_vertical_one.py
 python3 computations/verify_rank_fifteen_unit_residues.py
 python3 computations/verify_rank_fifteen_vertical_unit_levels.py

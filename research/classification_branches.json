@@ -312,7 +312,8 @@
       "rank_fifteen_negative_x_arcs": "sections/rank_fifteen_negative_x_arcs.tex",
       "rank_fifteen_negative_x_fold": "sections/rank_fifteen_negative_x_fold.tex",
       "rank_fifteen_negative_x_fan": "sections/rank_fifteen_negative_x_fan.tex",
-      "rank_fifteen_unit_quartic_towers": "sections/rank_fifteen_unit_quartic_towers.tex"
+      "rank_fifteen_unit_quartic_towers": "sections/rank_fifteen_unit_quartic_towers.tex",
+      "rank_fifteen_genus_two_unit_line": "sections/rank_fifteen_genus_two_unit_line.tex"
     },
     {
       "id": "UNRESTRICTED-SINGLY-SYMMETRIC-14",

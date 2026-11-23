@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-23",
-  "version": 188,
+  "version": 189,
   "reviewed_input": {
-    "source_commit": "d318463ef952db72065f737dba69055a21e045ca"
+    "source_commit": "87ce0615a92163f5787259c1842e6de13516fbd2"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All ordinary rank-fifteen windows with x,y in any number field having a place over 3 of residue degree at most two (y nonzero) are standard Koszul left/right AS-regular with rank 256 over the four central quartics per start. This includes every multiquadratic number field. For arbitrary unit residue X other than 1 the genus-97 signed cover is the common splitting field of two quartics over a rational intermediate field. The Klein-homogeneous tensor descends to a genus-13 field of degree 16 over k(v)."
+    "scope": "For every rational x, every ordinary characteristic-zero rank-fifteen window at every nonzero geometric level y is standard Koszul left/right AS-regular with rank 256 per start over the four central quartics. All verticals reducing to -1 at three have the conic indexed classification at every level, with period two. A 36-entry Klein-homogeneous tensor over the genus-two double cover of k(v) realizes each general unit residue X other than 1 geometrically."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_unit_quartic_towers.py",
+      "command": "python computations/verify_rank_fifteen_genus_two_unit_line.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_negative_x_fan.py",
+      "command": "python computations/verify_rank_fifteen_unit_quartic_towers.py",
       "result": "PASS"
     },
     {
@@ -33,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked independent branch characters, genera 97, 2 and 13, intermediate degrees, reconstruction of both quartic splitting fields, preservation of Klein support and the local lifting hypotheses."
+    "scope": "Checked the torus normalization, the genus-two field, center-character change, all six affine lifts of a level, the remaining sextic, and unit lifting for every geometric level."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Verified both quartics and their elliptic quotient symbolically in characteristic three, all 256 integer Walsh coefficient identities and both descent characters, and the four-start central quotient through length 13 on all 24 simultaneous Frobenius orbits of the remaining F9 residue pairs.",
-    "reproduction": "Checked all characteristic-three identities, all 256 entries after changing the four arrow bases, and all four central cuts on 24 simultaneous Frobenius orbits, covering the 48 remaining quadratic residue pairs."
+    "scope": "Computed the 36-entry diagonal gauge and its integral exponent matrix, solved the five-dimensional center and four central cuts over the genus-two field at X=-1, descended a degree-8801 pivot divisor to eight exceptional levels and verified the exceptional sextic directly."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 319,
+      "nc-p3": 320,
       "plan_ja": 8,
       "notes_ja": 17
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected manuscript pages 288 to 290 including both quartics, the elliptic quotient, the genus-thirteen tensor and the lifting theorem."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "6d25d2d32408c52e60a28baa634174cd6b430a72",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Compute the center and the four central quotient profiles over the explicit genus-13 descended tensor for X=-1, then for general X. Keep the Klein grading in the fourfold low-bit Walsh basis; determine how central characters change and treat vanishing denominators or center pivots separately. The quadratic residue grid is complete. Also continue the unrestricted nonsymmetric classification.",
+    "Use the 36-entry Walsh tensor and its degree-two normalization for the remaining unit residues X outside F3. For X=+i or -i, take c in F9 with c^2=X: d^2=-1 again, so the same genus-two arithmetic works after scaling the joint radical by (-ic)^3. Descend the actual excluded v-polynomial to complete Y-fibers and handle their finite exceptional orbits. Next handle nonsquare X in F9 and a variable geometric X. Unrestricted nonsymmetric windows remain open.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
