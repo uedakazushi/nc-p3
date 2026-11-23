@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Ran two 32-digit characteristic-zero eliminations over Q(m), with prime divisors m-1 and m^2+m+2, and checked their leading-denominator divisors."
+    "scope": "Ran two 32-digit characteristic-zero eliminations over Q(m), with prime divisors m-1 and m^2+m+2, and checked their leading-denominator divisors.",
+    "reproduction": "Computed both 32-digit Q(m) charts through degree thirteen, checked their reduced divisors and the invertible Jacobian of the scaled invariant."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript pages 276 and 277 with the two local variables, the scaled invariant, and both characteristic-zero pivot charts."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "2a2bcbf9a58da983d21f6d949818b0bc68dba593",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "In the outer chart w,u compare Smith lists on the boundary rays (1,0),(1,1),(1,2),(0,1) with their neighboring weighted diagonals, and certify every residual unit on u=m w^2. Then handle the intermediate collision above J=1, the nonunit pole charts, and unrestricted nonsymmetric windows.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "982129ad7037bb162f6335ae518cc394217308d3",
+    "commit": "c5d1bc1b639fd59cd303e9f6f4a66dce1105e5ed",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
