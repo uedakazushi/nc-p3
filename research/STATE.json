@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-23",
-  "version": 193,
+  "version": 194,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -2154,6 +2154,15 @@
       "verification": [
         "computations/verify_rank_fifteen_bivariate_word_paths.py"
       ]
+    },
+    {
+      "id": "RANK-FIFTEEN-GEOMETRIC-UNIT-SIXTH-CUT",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "On the entire nonbranch characteristic-three unit surface, every four-dimensional subspace of the five quartic central sections has central quotient dimensions 31 and 40 at degrees four and five for every start. Every geometric unit pair admits four common sections with quotient dimension 44 at degree six for all starts. The simultaneous bad-fiber bound for the fixed four sections is X^136 (X-1)^9 (X^2+X+2), and its possible nontrivial roots already have all-degree certificates.",
+      "proof": "sections/rank_fifteen_bivariate_sixth_cut.tex",
+      "verification": [
+        "computations/verify_rank_fifteen_bivariate_sixth_cut.py"
+      ]
     }
   ],
   "document_paths": {
@@ -2217,7 +2226,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "dd0208a43d9b29dbfaa0362ba1f12e5054469fd3",
+  "reviewed_source_commit": "adb52d55b63ce610f4444d18b0f33a6da790c2f6",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -2226,15 +2235,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "The two-parameter elimination over F3(K,H) now gives globally valid uncut path projections through five and a fixed basis for the entire quartic center on every nonbranch unit residue; its five generators have character zero. Use these projections to evaluate the center at each start, multiply all generators by arrows, and continue the four-cut quotient through thirteen in the scaled word basis. For higher degrees control polynomial growth via primitive polynomial rows or two-sided path overlaps; intersect independent charts at the level of ideals, since a gcd alone misses isolated points on a surface. The entire branch and all F9 x or ratio lines are already certified. Unrestricted nonsymmetric windows remain open.",
+    "immediate_next_action": "Every geometric unit pair now has a single presentation and four quartics giving the correct dimensions through degree six at all starts. Extend the descended right-word quotient to degrees seven through thirteen. For simultaneous descent write the union of pivot factors in the 12-element free basis c^i v^j over F3[X,B], X=c^2, B=(v^3-v)^2; eliminate B between the coefficients, not by a surface gcd. If large bivariate intermediate pivots dominate, reuse primitive polynomial rows, degree-six word projections or a second choice of four sections before elimination. Keep the unrestricted nonsymmetric classification active.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/rank_fifteen_bivariate_sixth_cut.tex",
       "sections/rank_fifteen_bivariate_word_paths.tex",
-      "sections/rank_fifteen_quadratic_parabolic_pencils.tex",
-      "sections/rank_fifteen_genus_two_unit_line.tex"
+      "sections/rank_fifteen_quadratic_verticals.tex"
     ],
     "known_obstruction": "Possible isolated interior failures of all-degree regularity on the (x,y) plane and uncovered general nonsymmetric windows.",
-    "state_of_claim": "Uncut paths through five and all quartic center sections are uniform on the entire nonbranch geometric unit surface. The arbitrary-residue higher central quotient and unrestricted nonsymmetric windows remain open.",
+    "state_of_claim": "Universal center evaluation and the existence of four-center quotients through degree six are proved. Higher degrees at arbitrary unit pairs and the unrestricted nonsymmetric classification are open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

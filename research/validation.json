@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-23",
-  "version": 193,
+  "version": 194,
   "reviewed_input": {
-    "source_commit": "dd0208a43d9b29dbfaa0362ba1f12e5054469fd3"
+    "source_commit": "adb52d55b63ce610f4444d18b0f33a6da790c2f6"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For every characteristic-three signed unit presentation with KH(K^2-1)((K^2-1)^2-4H^2)((K+1)^2-H^2)((K-1)^2-H^2) nonzero, all four uncut path windows through degree five have the standard dimensions and the full quartic center has Klein dimensions (5,0,0,0) in the Walsh gauge. The same five central free columns work throughout the entire geometric nonbranch unit surface. The bivariate rank certificate inverts only the ten polynomials already excluded from the open chart."
+    "scope": "On the entire nonbranch characteristic-three unit surface, every four-dimensional subspace of the five quartic central sections has central quotient dimensions 31 and 40 at degrees four and five for every start. Every geometric unit pair admits four common sections with quotient dimension 44 at degree six for all starts. The simultaneous bad-fiber bound for the fixed four sections is X^136 (X-1)^9 (X^2+X+2), and its possible nontrivial roots already have all-degree certificates."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_bivariate_word_paths.py",
+      "command": "python computations/verify_rank_fifteen_bivariate_sixth_cut.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_quadratic_parabolic_pencils.py",
+      "command": "python computations/verify_rank_fifteen_bivariate_word_paths.py",
       "result": "PASS"
     },
     {
@@ -33,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked the parity exponents in prepended words and relation rows, all four character dimensions at each start, monic rational-function reduction, and specialization of doubled central equations."
+    "scope": "Checked word-basis parity when appending arrows, compatibility with centrality at length five, rank of all twenty center evaluation maps, separability of all twelve parameter lifts, and the common resultant condition."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Verified all bivariate path and central ranks in F3(K,H) and both signs of the joint radical. The degree-zero-character center matrix has rank 39 in 44 columns; each remaining doubled matrix has rank 64, using only the ten input chart factors.",
-    "reproduction": "Recomputed uncut path projections through five, rank 39 in the 44-column central equation, and full rank 64 for each other character. Matched all path dimensions against independently assembled full-word relation matrices, and checked the common rational-function backend in characteristics zero and three."
+    "scope": "Checked the twenty evaluation maps by localized maximal minors, computed all four right-word quotients to degree six over F3(K,H), and descended the degree-(55,44) excluded polynomial using the 12-member free basis and exact resultants."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 325,
+      "nc-p3": 326,
       "plan_ja": 8,
       "notes_ja": 17
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected manuscript pages 295 to 297 including the two-variable open locus, graded dimensions and doubled central equations."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "4ddf9fb3c1bb49b649d05aec0b64dd16ab6a2af5",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "The two-parameter elimination over F3(K,H) now gives globally valid uncut path projections through five and a fixed basis for the entire quartic center on every nonbranch unit residue; its five generators have character zero. Use these projections to evaluate the center at each start, multiply all generators by arrows, and continue the four-cut quotient through thirteen in the scaled word basis. For higher degrees control polynomial growth via primitive polynomial rows or two-sided path overlaps; intersect independent charts at the level of ideals, since a gcd alone misses isolated points on a surface. The entire branch and all F9 x or ratio lines are already certified. Unrestricted nonsymmetric windows remain open.",
+    "Every geometric unit pair now has a single presentation and four quartics giving the correct dimensions through degree six at all starts. Extend the descended right-word quotient to degrees seven through thirteen. For simultaneous descent write the union of pivot factors in the 12-element free basis c^i v^j over F3[X,B], X=c^2, B=(v^3-v)^2; eliminate B between the coefficients, not by a surface gcd. If large bivariate intermediate pivots dominate, reuse primitive polynomial rows, degree-six word projections or a second choice of four sections before elimination. Keep the unrestricted nonsymmetric classification active.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
