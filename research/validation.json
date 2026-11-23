@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Verified 37 and 21 Gaussian digits, four starts through length 13, 308 ordered comparisons per arc, and the three individual differing center indices."
+    "scope": "Verified 37 and 21 Gaussian digits, four starts through length 13, 308 ordered comparisons per arc, and the three individual differing center indices.",
+    "reproduction": "Recomputed both Gaussian Taylor expansions and four central cuts through length 13; matched all 308 lists against the conic and balanced-ray calculations and isolated the three 0-to-1 indices."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript pages 285 to 287 including the two curve neighborhoods and the character-one quartic center comparison."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "5aeed1385bddd3affc7cd5196023ba3c82cf7dd4",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "For negative x valuation the equality boundary is complete. In the remaining strict cone start with the generic g=m w ray over Q(i)(m), compute its unit pivot divisor, then treat the rays g=m w^2 and w=m g^2 or refine according to the generic exponents. The m=1 probes on the three rays are certified. At (w,g)=(t^2,t) the only mismatch with the balanced diagonal is three 0-to-1 indices in the character-one quartic center despite identical maximal losses. At (t,t^2) four of the sixteen uncut length-four matrices already disagree with the proposed edge sum. Check the center frame before passing to the four cuts. Arbitrary unit residue levels at xbar=-1 beyond degree four (genus-97 cover), other general units, and unrestricted nonsymmetric branches remain open.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "c016c0d2e93aeede1349c1890c9c25c21e0179bf",
+    "commit": "7ec51cb5d06dcea3388e62431d1d51c192b9aae7",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
