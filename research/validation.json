@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-23",
-  "version": 178,
+  "version": 179,
   "reviewed_input": {
-    "source_commit": "f09a4f21da4244f43b6fb250b24431a366917c64"
+    "source_commit": "4b833d037ac65022cbea7ca35f78125f75fc5797"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every ordinary characteristic-zero rank-fifteen window on the entire outer sector 0<2 nu(x-1)<nu(y) is standard Koszul left/right AS-regular and free of rank 256 over four central quartics at each start. A simultaneous two-parameter Smith lemma lifts all 308 eliminations on three unimodular cones; the two internal rays are covered at every residue and depth."
+    "scope": "Above the unit pole collision Jbar=1, all windows with nu(J-1)>=nu(y) or 2 nu(J-1)=nu(y) are standard Koszul left/right AS-regular and free of rank 256 per start. Thus all ordinary rational unit-x points with x not congruent to 1 modulo 9 work for every nonzero rational y. For every rational unit x all odd valuations of y and nu_3(y)=2 work as well."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_outer_pole_fan.py",
+      "command": "python computations/verify_rank_fifteen_inner_collision.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_outer_pole.py",
+      "command": "python computations/verify_rank_fifteen_outer_pole_fan.py",
       "result": "PASS"
     },
     {
@@ -33,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked the two height-one orders in the regular Henselian local ring, the unit diagonal pivots and the exact chart substitutions at both old boundary rays."
+    "scope": "Checked selection of z congruent to 1, the valuation of z-1, its sign under inversion, and the integral-valued rational corollary."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Verified every pivot order in 308 matrices on each of three cones, the common central normalizations and the full exact 48-digit second-ray certificate.",
-    "reproduction": "Computed all 308 ordered Smith lists on each weighted diagonal and on the two boundary charts, checked aligned centers, and compared the exact 48-digit generic second ray with its specialized lists."
+    "scope": "Checked the exact 16- and 15-digit central cuts, the signed common roots of the degree-20 divisor and three simultaneous residue presentations."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 307,
+      "nc-p3": 308,
       "plan_ja": 8,
       "notes_ja": 16
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected manuscript pages 277 and 278 with the two-parameter lemma, both interior rays, and three cone checks."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "4893784dd850c00f7cbcc3c3a3b62809b001c802",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "At the inner collision above J=1 choose the real branch z=1+delta with 2 nu(delta)=nu(J-1) and 4 nu(H)=nu(y). Certify deep directions using z=1+m H^2 and the unit-slope direction z=1+mH, then resolve their intermediate directions, checking central normalizations separately on each ray. The nonunit pole sectors and unrestricted nonsymmetric classification remain.",
+    "Resolve the two remaining inner collision intervals 0<2nu(J-1)<nu(y) and nu(y)<2nu(J-1)<2nu(y). On the real chart delta=z-1, compare slopes of (H,delta) with adjacent rays after fixing common central coordinate functionals in characters 0 and 1. On the u=m w^2 outer ray and the entire x=1 vertical no residual fibers remain. Continue the nonunit pole directions and unrestricted nonsymmetric classification.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

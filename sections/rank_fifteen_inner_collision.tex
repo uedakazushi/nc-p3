@@ -1,0 +1,60 @@
+% !TeX root = ../papers/nc-p3.tex
+\section{内側衝突の実数係数の表示}
+\label{sec:rank-fifteen-inner-collision}
+\begin{theorem}\label{thm:rank-fifteen-inner-collision}
+剰余標数3の付値で $\bar x=1$, $\nu(y)>0$, $J=(x-1)^2/(4y)$, $\bar J=1$ とする。
+通常な標数零の階数15窓で
+\[
+       \nu(J-1)\ge\nu(y) \qquad\text{または}\qquad
+       2\nu(J-1)=\nu(y)
+\]
+なら、標準Koszul左右AS正則で、各始点で四中心四次式上自由階数256である。
+第一の場合は $J=1$ を含む。
+\end{theorem}
+\begin{proof}
+補題\ref{lem:rank-fifteen-ramified-pole}の二つの $h^2$ の選択で
+$(x-1)/h^2$ の剰余は符号を替えられる。ここでその剰余を $-1$ とすれば
+$1-2L^2\equiv-1$、すなわち $L^2\equiv1$ である。
+$L\equiv1$ を選び、$C^2=L^2-1$ として $z=L+C$ と置けば $z\equiv1$ となる。
+定理\ref{thm:rank-fifteen-collision-tube}の二因子の恒等式より
+$J-1$ は $L^2 C^2$ の単元倍である。
+$C=(z-1)(z+1)/(2z)$ より $\delta=z-1$ は
+$2\nu(\delta)=\nu(J-1)$ を満たす。$C$ の符号を替えると $z\mapsto1/z$ となり、
+$\delta\mapsto-\delta/(1+\delta)$ である。$\nu(y)=4\nu(H)$ は両方の表示で共通である。
+
+$\nu(\delta)\ge2\nu(H)$ では $z=1+mH^2$ と書け、$m$ は整である。
+\path{computations/verify_rank_fifteen_inner_collision.py} は
+$\mathbb Q(m)$ 上の十六桁で全ての $H$ 除算前の定数項の消滅を確認する。
+未切断経路の最大損失は $(0,2,2,3,2)$、四次中心の各文字で $(1,0,0,0)$、
+四次と五次の積表はともに損失零である。
+長さ6から13では $(2,0,1,0,1,0,1,0)$ 桁を使い一桁を残す。
+主元の定数分子・分母の剰余の平方自由な積は $m-1$ である。
+$\bar m=1$ なら $z\mapsto1/z$ により $\bar m=-1$ を選べるので全ての整な $m$ を覆う。
+
+$\nu(\delta)=\nu(H)$ では $z=1+mH$ と書き、$m$ は単元である。
+十五桁の基準表示では四次中心も全て単元主元で取れ、他の損失は上記と同じである。
+主元の平方自由な積の次数は20である。その零点集合と $m\mapsto-m$ による像の共通部分は、
+$m=0$ と次の三式の根およびそれらの符号反転で尽くされる。
+\[
+           m^2+m+2,\qquad m^2+1,\qquad m^3+2m^2+1 .
+\]
+この三つの剰余拡大で同時に単元の主元を使う別の $\mathbb Q(m)$ 上の計算で、
+同じ十五桁から十三次の消滅までを検証する。符号の選択により全ての単元剰余に適用できる。
+両方の場合に各始点の中心商の上界と一般の下界が一致し、
+第\ref{sec:rank-fifteen-overlap-annulus}節の全次数判定が従う。
+\end{proof}
+
+\begin{corollary}
+$x,y\in\mathbb Q$, $\nu_3(x)=0$, $y\ne0$ の通常な階数15窓を考える。
+$x\not\equiv1\pmod9$ なら全ての $y$ で上記の正則性と自由性が成り立つ。
+$x$ によらず、$\nu_3(y)=2$ または $\nu_3(y)$ が奇数のときにも成り立つ。
+\end{corollary}
+\begin{proof}
+$\nu_3(y)\le0$ は極の定理と素体単元の定理で決まる。
+$\nu_3(y)>0$ のとき、第\ref{sec:rank-fifteen-unit-pole-depth}節と
+定理\ref{thm:rank-fifteen-outer-pole-fan}により、残り得るのは
+$\bar x=1$, $\bar J=1$, $\nu_3(y)=2\nu_3(x-1)$ の場合に限る。
+従って奇数の付値は含まれない。$\nu_3(y)=2$ なら
+$\nu_3(J-1)$ は1または2以上であり、本節の定理の二条件で尽くされる。
+$\bar x=1$ かつ $x\not\equiv1\pmod9$ の場合も $\nu_3(x-1)=1$ なので同じ結論になる。
+\end{proof}

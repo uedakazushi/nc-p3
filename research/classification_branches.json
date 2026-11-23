@@ -302,7 +302,8 @@
       "rank_fifteen_unit_pole_depth": "sections/rank_fifteen_unit_pole_depth.tex",
       "rank_fifteen_vertical_all_levels": "sections/rank_fifteen_vertical_all_levels.tex",
       "rank_fifteen_outer_pole": "sections/rank_fifteen_outer_pole.tex",
-      "rank_fifteen_outer_pole_fan": "sections/rank_fifteen_outer_pole_fan.tex"
+      "rank_fifteen_outer_pole_fan": "sections/rank_fifteen_outer_pole_fan.tex",
+      "rank_fifteen_inner_collision": "sections/rank_fifteen_inner_collision.tex"
     },
     {
       "id": "UNRESTRICTED-SINGLY-SYMMETRIC-14",
