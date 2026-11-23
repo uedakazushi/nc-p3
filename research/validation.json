@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Compared all 308 conic Smith lists and all 292 tangent lists through twelve with characteristic-zero lattices; lifted the unit degree-thirteen cuts on the tangent charts."
+    "scope": "Compared all 308 conic Smith lists and all 292 tangent lists through twelve with characteristic-zero lattices; lifted the unit degree-thirteen cuts on the tangent charts.",
+    "reproduction": "Compared exact 17-digit characteristic-zero lattices and residue Smith lists; verified the 121- and 897-degree divisors and all aligned supplemental charts."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript pages 275 and 276 with the all-depth theorem, Smith comparison, and rational corollary."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "be3ea30fa04aa0f05422245d9748c62396d034b7",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Compute the excluded pivot divisor on the elliptic residue cover W^2=t-t^3 at xbar=1, descend its good locus along y=(v-v^3)^2, and certify remaining fibers. At positive valuation of y with unit x the outstanding sectors have xbar=1 and either 0<2 nu(x-1)<nu(y), or 0<nu(J-1)<9 nu(y) outside the other known charts. Also address the pole charts with nonunit x and nu(D)<0.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "79d5d835b40be7f907a24801250cb342c2ee0f08",
+    "commit": "54244369bdf241f606d81d1402859e91576d9167",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
