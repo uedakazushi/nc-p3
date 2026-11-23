@@ -1,0 +1,48 @@
+% !TeX root = ../papers/nc-p3.tex
+\section{非単元座標の極の円錐曲線表示と深い領域}
+\label{sec:rank-fifteen-nonunit-pole}
+\begin{lemma}
+剰余標数3で $0<3\nu(x)<\nu(y)$ とする。付値を延長すると
+\[
+   x=(4+r^2)T^2,\qquad y=r^4T^6,\qquad
+   T=\frac{2s(1-s^2)}{(1+s^2)^2}
+\]
+において $\nu(s)=\nu(x)/2>0$, $\nu(r)=(\nu(y)-3\nu(x))/4>0$ の表示が取れる。
+この原点で経路係数は $\mathbb Z_{(3)}$ 上の $(r,s)$ の整な形式級数である。
+\end{lemma}
+\begin{proof}
+$d^2=y/x^3$ は正付値なので、第\ref{sec:rank-fifteen-smith-slopes}節の
+$(4+de)^3=e^2$ の単純根から $r^2=de$ を取る。
+$T^2=x/(4+r^2)$ は正付値で、上の $s\mapsto T$ は原点で微分2の単元を持つ。
+従ってHensel化で小さい $s$ を選べる。$A=(1-s^2)/(1+s^2)$,
+$B=2s/(1+s^2)$ は $A\equiv1$, $B\equiv0$ である。
+$K=\sqrt{1+r^2}\equiv1$、$P_\pm$ の定数項を2、
+$Q_\pm/r$ の定数項を $1,-1$ と選べば、全ての平方根で根の和が単元となる。
+これで補題の整な表示と付値式を得る。
+\end{proof}
+
+\begin{theorem}\label{thm:rank-fifteen-nonunit-pole}
+剰余標数3の標数零の通常な階数15窓で $0<5\nu(x)\le\nu(y)$ とする。
+この窓は標準Koszul左右AS正則で、各始点で四中心四次式上自由階数256である。
+\end{theorem}
+\begin{proof}
+まず等号の場合には $r=ms$ と書け、$m$ は単元である。$v=s^2$, $L=4(1-v)^2/(1+v)^4$ とすれば
+$T^2=vL$ であり、$x=v(4+m^2v)L$、
+$\Lambda=y/x^5=m^4/((4+m^2v)^5L^2)$ となる。
+$v=0$ で $x_v=16$, $x_m=0$, $\Lambda=m^4/16384$ なので、
+$\bar m^4=16384\bar\Lambda$ のどの根でもヤコビ行列は可逆である。
+
+\path{computations/verify_rank_fifteen_nonunit_pole.py} は $\mathbb Q(m)$ 上で
+三十一桁を使い、未切断経路で $(0,1,1,4,4)$、四次中心で $(0,1,1,1)$、
+五次の積表で六桁を消費する。長さ6から13では $(4,3,1,3,1,0,1,0)$ 桁で
+最後の一桁を残して十三次の消滅を得る。除算前の定数項は有理関数として零である。
+使用した主元の定数分子・分母の剰余の平方自由な積は正確に $m$ である。
+従って $m$ が単元である全ての表示でこの計算が使える。
+次に $\nu(y)>5\nu(x)$ では $\nu(r)>\nu(s)>0$ なので $r=ST$, $s=T$ と置けば
+$S,T$ はともに正付値である。$S=0$ の辺の一般指数は第\ref{sec:rank-fifteen-unit-pole-depth}節の非分岐極、
+$T=0$ の辺は今回の $r=ms$ の有理関数体上の指数である。対角線 $r=t^2,s=t$ では
+四十七桁を使い、全308組の各行列で昇順の指数が辺の指数の項別和となる。
+両辺と対角線で中心座標を指定する語基底と自由列も一致する。
+補題\ref{lem:rank-fifteen-two-parameter-smith}によりこの開いた錐の全点で
+十三次までの消去が使える。どちらの場合も中心商の上界が一般の下界に達し、全次数の判定が従う。
+\end{proof}

@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-23",
-  "version": 180,
+  "version": 181,
   "reviewed_input": {
-    "source_commit": "bfdef12f4af6978013dd87a07a18d738ac43c580"
+    "source_commit": "1dd47144e9e8097d9fe8f52e00b4e8e744abe722"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every ordinary characteristic-zero rank-fifteen window with a unit x and positive valuation of y in residue characteristic three is standard Koszul and left/right AS-regular, free of rank 256 per start over four central quartics. Consequently for all rational unit x and every nonzero rational y the same conclusion holds."
+    "scope": "On every ordinary characteristic-zero rank-fifteen window in residue characteristic three with 0<5nu(x)<=nu(y), the algebra is standard Koszul left/right AS-regular and free of rank 256 per start over four central quartics. The nonunit pole admits small conic parameters r,s on the whole sector 0<3nu(x)<nu(y)."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_inner_collision_fan.py",
+      "command": "python computations/verify_rank_fifteen_nonunit_pole.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_inner_collision.py",
+      "command": "python computations/verify_rank_fifteen_inner_collision_fan.py",
       "result": "PASS"
     },
     {
@@ -33,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked the three unimodular charts for (H,z-1), the nonconstant generic boundary coordinate at each ray and exact unit changes of the central word bases before lifting. Checked the complete conic fibers for every a reducing to 1, their two branch levels, and exclusion of the four nonordinary points."
+    "scope": "Checked the analytic coordinates at the conic endpoint s=0, the invertible Jacobian of y/x^5 and the two-parameter Smith transfer in the strict cone."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Checked all 924 paired Smith lists, both 30-digit signed charts and the change of central normalization between vertices two and three.",
-    "reproduction": "Compared all 924 Smith lists from the exact boundary and diagonal runs; also checked the complementary signed unit charts and independently recomputed the shallow comparison over the generic residue field."
+    "scope": "Checked the exact 31-digit unit ray, its sole pivot divisor m, and every one of the 308 Smith comparisons on the 47-digit diagonal r=t^2, s=t."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 309,
+      "nc-p3": 310,
       "plan_ja": 8,
       "notes_ja": 17
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected manuscript pages 279 and 280 with the three remaining collision cones and the conic classification for every a reducing to 1."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "46e9cff3cf7dd803d52e53dec161e8aa270a6278",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "For nu(x)>0 and nu(y)>3nu(x), use x=(4+r^2)(AB)^2, y=r^4(AB)^6 near s=0 in the nonbranch conic A=(1-s^2)/(1+s^2), B=2s/(1+s^2). Then nu(s)=nu(x)/2 and nu(r)=(nu(y)-3nu(x))/4. Certify r=m s by exact two-sided elimination, resolve all residual m, and compare neighboring slopes using simultaneous Smith elimination. Also retain negative-valuation x, general unit residues and the unrestricted nonsymmetric classification.",
+    "Resolve the remaining 0<3nu(x)<nu(y)<5nu(x) strip, equivalent to 0<nu(r)<nu(s). At its s=0 edge rationalize K=sqrt(1+r^2) by a=2q/(1+q^2), r=2a/(1-a^2); then sqrt(2(K+1))=2(1+q^2)/(1-q^2). Compute the generic s-adic boundary Smith lists and compare against the r=m s ray and the r=t,s=t^2 diagonal. Check all central word coordinates and subdivide if necessary. Nonintegral x, general unit residues, and nonsymmetric branches remain.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
