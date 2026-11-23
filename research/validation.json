@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Verified the rational-pivot degree formula on primitive rows, the first-start octic profile, the six coefficient simultaneous-vanishing test and the degree-33 bound; resolved all eight residual Frobenius orbits."
+    "scope": "Verified the rational-pivot degree formula on primitive rows, the first-start octic profile, the six coefficient simultaneous-vanishing test and the degree-33 bound; resolved all eight residual Frobenius orbits.",
+    "reproduction": "Verified the primitive-row octic recurrence, degree-33 signed resultant bound, all eight finite residue orbits, both lifting identities and the truncated Hilbert dimension bounds."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript pages 299 to 301, including the signed invariants, six-cover elimination, Grassmannian argument and the degree-twelve lower bound."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "f4cad0fea435b843f081d4c8f7649cffd4915210",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Every ordinary characteristic-zero rank-fifteen window has a common central monomial basis through eight, with uncut dimension 165. Next certify the ninth-degree quotient upper bound 20 at start zero for each signed root c (p-bar=c^3), keeping the six v lifts. The irreducible Grassmannian gives simultaneous starts and compatibility with earlier degrees; different degrees can use different witnesses. At degree nine the fixed columns can fail in an individual presentation, so use exchanged or mixed columns on bad fibers. Continue the unrestricted nonsymmetric classification.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "98aaaea2457b7168fde44f99cd7d8f980a3f36c9",
+    "commit": "0e49aeac5b99fcb9254307b2372b0f75d57f7b30",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
