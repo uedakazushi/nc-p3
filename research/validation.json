@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Recomputed the 32-entry branch gauge and both four-start central quotient certificates, including the degree-7 branch divisor, degree-4438 pencil divisor, the complete exceptional fibers, and direct checks at both cubic and both quartic residual polynomials."
+    "scope": "Recomputed the 32-entry branch gauge and both four-start central quotient certificates, including the degree-7 branch divisor, degree-4438 pencil divisor, the complete exceptional fibers, and direct checks at both cubic and both quartic residual polynomials.",
+    "reproduction": "Verified the degree-7 and degree-4438 divisors over two rational fields, all four quotient layers through length thirteen and the four remaining residue orbits. Replayed the previous quadratic-grid exceptional presentations after sharing their split-representative calculation."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript pages 293 to 295, including the 32-entry branch reduction, ratio pencil and rational-parabola corollary."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "ba0e3a579077d30f03c9f8490f40f946c7e7fbdc",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Use the uniform rational pencil parameter R=Y/(1-X)^2 and q=v-a b, b=(q-q^3)/(r-a), r^2=R, a^3=r. Both prime-field unit ratios have been certified at arbitrary X, including the entire branch using a 32-entry rational tensor. For R outside F3, descend the remaining bad locus over the rational two-parameter surface; for a concrete extension take the three remaining conjugacy orbits in F9, compute the six-lift gcd in 1/X and resolve residual fibers. Distinguish positive-dimensional residual conditions from the finite open characteristic-zero exceptions. Continue the unrestricted nonsymmetric structure problem as well.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "238faa1a7e16e6185c95ceca55e9ea55924133d3",
+    "commit": "8b750042f06c1f1ee86fb67f6cc500e64cf67c73",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
