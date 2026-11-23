@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-23",
-  "version": 182,
+  "version": 183,
   "reviewed_input": {
-    "source_commit": "d64f33ade6ffc1a060e46efa3abe97533abe424d"
+    "source_commit": "d4f6f95b75c49031956ec7f39651ea612d7dafbd"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every ordinary rank-fifteen window in characteristic zero with positive valuation of x above 3 is standard Koszul and left/right AS-regular, free of rank 256 per start for every nonzero geometric y. In particular every rational ordinary pair with 3-integral x and nonzero rational y is regular. Entire verticals reducing to 0 have the stated conic classification, with the two split fibers x=3,3/4 and their period-one nodes. The xbar=-1 signed unit-residue cover is Galois of degree 384, genus 97, branched at 0, 1 and infinity."
+    "scope": "At xbar=-1 all nonzero unit y residues of degrees at most four are certified. For rational 3-integral x every nonzero y in any number field with at least one place above 3 of residue degree at most four gives a regular ordinary rank-fifteen window, including every algebraic y of degree at most four. The four central quartics give rank 256 per start. For the remaining negative-x valuation cone, coordinates w=s-i, g=r/w are integral with a genus-one degree-16 Galois cover of the nonzero slope y/x^2 at w=0. On the full equality ray nu(y)=2nu(x)<0 all prime-field nonzero slopes give regular windows, in particular all rational points on this boundary."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_nonunit_pole_strip.py",
+      "command": "python computations/verify_rank_fifteen_negative_unit_levels.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_nonunit_pole.py",
+      "command": "python computations/verify_rank_fifteen_nonunit_pole_strip.py",
       "result": "PASS"
     },
     {
@@ -33,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked the rationalization of both boundary square roots and the two-parameter comparison, the conic classification on all xbar=0 fibers, the two period-one exceptions, and the ten inertia points and all six lifted transformations of the new unit cover."
+    "scope": "Verified the Artin-Schreier and simultaneous square-root splitting bounds over finite fields and the lifting at all conjugate y residues, and the negative-x pole coordinates, boundary radicals and the birational elliptic model W^2=t-t^3, the unit Jacobian and the full central cuts at both rational equality slopes."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Computed the generic s=0 boundary to 15 exact digits and the 45-digit diagonal r=t,s=t^2. Compared the 308 complete ordered pivot lists and the central coordinate frames.",
-    "reproduction": "Verified the 15-digit characteristic-zero rational-function boundary, independently matched its 308 matrices and center coordinates over F3(z) and a cubic residue field, and reran the exact 31-digit ray and 45-digit diagonal. Checked the six Kummer classes and all six lifts on the signed cover."
+    "scope": "Enumerated the 3, 8 and 18 irreducible residue polynomials of degrees 2, 3 and 4 and verified the four central quotients at every one through degree 13."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 311,
+      "nc-p3": 313,
       "plan_ja": 8,
       "notes_ja": 17
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected manuscript pages 281 to 283 including both the nonunit strip and the genus-97 cover."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "b19d5c115bab180197a53c57d7e28d471e0bbd01",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "On the rank-fifteen plane move to unit y with xbar=-1 and arbitrary residue y, beyond the prime-field grid. Put v=1/K and choose i^2=-1; then H=i(K-v), ybar=-(v-v^3)^2, and the signed radicands factor into products of v, 1+v, 1-v and 1 +/- i(1 +/- v). The six independent Kummer classes and the full degree-384 genus-97 cover are established. Compute the four central cuts and descend a pivot divisor over this cover, exploiting sign symmetries or a smaller quotient if possible. The unit levels with ybar=1 or -1 are already certified. Also treat nu(x)<0 outside the previously certified pole cone nu(y)<2nu(x) and the unrestricted nonsymmetric branches.",
+    "On xbar=-1 the signed cover of the unit y-line has degree 384 and genus 97. Compute a generic certificate for the four central cuts, descend its exceptional divisor over the y-line and test remaining high-degree factors. Every closed residue point of degree at most four is now certified. In parallel mathematical directions, on the remaining negative-x region use w=s-i, g=r/w and compute the w=0 Smith profiles on the genus-one degree-16 cover of lambda=-g^4/16 in the existing elliptic arithmetic W^2=t-t^3, g=2(1-i)W/(1+t^2), with K=1, n=-ig and H/n=g, and the unrestricted nonsymmetric branches.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

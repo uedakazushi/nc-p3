@@ -1,0 +1,111 @@
+% !TeX root = ../papers/nc-p3.tex
+\section{種数97の被覆の低次数閉点と数体上の水準}
+\label{sec:rank-fifteen-negative-unit-levels}
+\begin{theorem}\label{thm:rank-fifteen-negative-unit-levels}
+剰余標数3の付値で $\bar x=-1$ とする。$y$ が単元で $\bar y$ の
+$\mathbb F_3$ 上の次数が高々4なら、標数零の通常な階数15窓は
+標準Koszul左右AS正則で、各始点は四中心四次式上自由階数256である。
+\end{theorem}
+\begin{proof}
+一次は定理\ref{thm:rank-fifteen-unit-residues}で得た。
+二次、三次、四次の各閉点の次数を $d$ とし、$\bar y$ の根を
+$\mathbb F_{3^d}$ に取る。$c^2=-\bar y$ と $i^2=-1$ は
+$\mathbb F_{3^{2d}}$ で解ける。$v-v^3=c$ の三根は互いに
+$\mathbb F_3$ の定数だけ異なるので、$3^{2d}$ 乗のFrobeniusは
+これらに平行移動として作用する。従って $v$ の全根は
+$\mathbb F_{3^{6d}}$ にあり、前節の六つの平方根は全て
+$\mathbb F_{3^{12d}}$ に取れる。
+
+\path{computations/verify_rank_fifteen_negative_unit_levels.py} は素体上のモニックな
+既約式を列挙する。各次数の個数は順に $3,8,18$ である。それぞれの一根に対して
+$K=1/v$, $H=i(K-v)$ とし、二つの平方根 $\sqrt{K^2-1\pm2H}$ の和の半分を $n$ に取る。
+両座標式と $n,P_\pm,Q_\pm$ の方程式を照合した上で四始点の経路次元を五次まで、
+中心の文字次元を四次で求める。四本の中心式を課して十三次まで消去すると、
+各始点の次元が $(1+t+t^2+t^3)^4$ の係数となる。
+これらの計算はFrobenius共役にも成り立つ。指定した剰余表示をモニックな式で
+持ち上げる定理\ref{thm:rank-fifteen-unit-residues}の証明が適用できる。
+\end{proof}
+
+\begin{corollary}
+$x\in\mathbb Q$ が3整とし、数体 $L$ が3の上に剰余次数4以下の素点を少なくとも一つ持つとする。
+このとき任意の $y\in L^\times$ に対する通常な階数15窓は全て上の正則性と自由性を持つ。
+特に $[\mathbb Q(y):\mathbb Q]\le4$ なら常に成り立つ。
+\end{corollary}
+\begin{proof}
+その素点の付値を窓の係数体に延長する。$\bar x=0,1$ の全水準は既に認証した。
+残る $\bar x=-1$ では $\nu(y)>0$ は定理\ref{thm:rank-fifteen-inner-collision-fan}、
+$\nu(y)<0$ は極の定理、$\nu(y)=0$ は上の定理が覆う。
+\end{proof}
+
+\begin{lemma}\label{lem:rank-fifteen-negative-x-coordinates}
+$\nu(x)<0$, $\nu(y)\ge2\nu(x)$ とする。付値を延長し $i^2=-1$ とすると、
+円錐曲線の一つの極 $s=i+w$ の近くで $r=gw$ と書け、
+\[
+    \nu(w)=-\nu(x)/4>0,\qquad \nu(g)=(\nu(y)-2\nu(x))/4\ge0 .
+\]
+$w=0$ の辺の一般点で $K=1$, $n=-ig$, $H/n=g$ であり、
+$P_\pm^2=4\mp2ig^2$, $(Q_\pm/g)^2=\mp2i$ である。
+$\nu(g)>0$ の場合は、全倍率の係数を $(w,g)$ の原点で整に選べる。
+\end{lemma}
+\begin{proof}
+$\nu(y)>3\nu(x)$ なので、$d^2=y/x^3$ を用いる既述の単純根から
+$x=(4+r^2)T^2$, $y=r^4T^6$、$\nu(r)>0$ の表示を取る。
+$\nu(T)=\nu(x)/2<0$ である。$(1+s^2)^2=2s(1-s^2)/T$ はモニックで、
+剰余式は $(s-i)^2(s+i)^2$ となる。$i$ に還元される根では右辺の分子は単元なので
+$2\nu(w)=-\nu(T)$ であり、$g=r/w$ の式も従う。
+$L=2i+w$ とすると
+\[
+   n=g(1-s^2)/L,\qquad H/n=2gs/L,\qquad K^2=1+g^2 w^2 .
+\]
+$K\equiv1$ を選ぶ。$w=0$ での値を代入し、$H=n(H/n)$ と
+$2(K-1)=2g^2w^2/(K+1)$ を使うと所定の根号を得る。
+原点では $P_\pm^2$ と $(Q_\pm/g)^2$ は全て単元である。
+平方根の定数項を有限拡大上で選べばHensel化で各平方根が得られる。
+\end{proof}
+
+\begin{corollary}
+この辺で単元の傾き $\lambda=\overline{y/x^2}$ に対する符号付きの表示は、
+幾何学的剰余体上で種数1、次数16のGalois被覆を持つ。分岐値は $0,1,\infty$ である。
+\end{corollary}
+\begin{proof}
+$y/x^2=H^2/(4+r^2)^2$ より $w=0$ で $\lambda=-g^4/16$ となる。
+$g$ 直線へは $4-2ig^2$ と $4+2ig^2$ を開平すればよく、
+それぞれが相異なる二つの単根を持ち、互いに根を共有しないため次数は4である。
+無限遠の極は偶数位数で、幾何学的な四つの有限分岐点の慣性指数は2である。
+従ってRiemann--Hurwitz公式は $2g_{\rm curve}-2=-8+4\cdot2=0$ を与える。
+$g\mapsto ig$ が二つの被開平式を交換するため、$\lambda$ 直線上の四変換は全て持ち上がる。
+四つの有限分岐点では $g^4=-4$、従って標数3で $\lambda=1/4=1$ であり、
+四乗写像は零と無限遠にも分岐する。
+
+計算には既存の楕円関数体 $W^2=t-t^3$ がそのまま使える。実際
+$A=(1-t^2)/(1+t^2)$, $B=2t/(1+t^2)$ とし、
+\[
+ P_+=2(A-B),\quad P_-=2(A+B),\quad
+ g=2(1-i)W/(1+t^2),\quad \lambda=4(t-t^3)^2/(1+t^2)^4
+\]
+と置く。二乗すれば辺の式に一致し、一般点で $A,B$ は $P_\pm$ から、
+$t=B/(1+A)$ と $W$ は $A,B,g$ から戻るので双有理である。
+$(Q_+/g,Q_-/g)$ の定数には $(1-i,1+i)$ が取れる。
+\end{proof}
+
+\begin{theorem}\label{thm:rank-fifteen-negative-x-prime-slopes}
+$\nu(x)<0$, $\nu(y)=2\nu(x)$ で $\lambda=\overline{y/x^2}=\pm1$ なら、
+通常な階数15窓は標準Koszul左右AS正則で、各始点は四中心四次式上自由階数256である。
+従ってこの境界の有理座標は全て正則である。
+\end{theorem}
+\begin{proof}
+所定の $x,y$ に対し、$g^4=-16\lambda$ の指定した剰余根を選べることを確認する。
+$z^4=1/x$, $w=zu$, $s=i+w$, $L=2i+w$ とおく。
+前出の $H$ を用い、次の二式を $u,g$ について解く。
+\[
+  1=\frac{u^4L^4}{(4+g^2w^2)4s^2(1-s^2)^2},\qquad
+  y/x^2=H^2/(4+g^2w^2)^2 .
+\]
+$z=0$ では右辺は $-u^4/4$, $-g^4/16$ で、各未知数は単元、
+ヤコビ行列の行列式も単元である。Hensel化で所定の剰余根が持ち上がる。
+二つの傾きで $\mathbb F_{3^8}$ に $g,P_\pm$ を取り、$K=1$, $n=-ig$, $H/n=g$ から
+四つのテンソルを作る。コードは両方で経路長5までの一般次元、四次中心の
+文字次元 $(3,2,0,0)$、および全四始点で十三次までの標準中心商を直接検証する。
+$P_\pm$ の一方が零に還元される傾きでも、モニックな平方根は所定の剰余根の上に持ち上がる。
+四次中心の持上げと中心商の上界から、既述の全次数判定を適用できる。
+\end{proof}
