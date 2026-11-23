@@ -1,0 +1,37 @@
+% !TeX root = ../papers/nc-p3.tex
+\section{円錐曲線の極の平方座標と負付値の閉領域}
+\label{sec:rank-fifteen-negative-x-fold}
+\begin{theorem}\label{thm:rank-fifteen-negative-x-fold}
+剰余標数3の付値で $10\nu(y)\le19\nu(x)<0$ となる標数零の通常な階数15窓は
+標準Koszul左右AS正則であり、各始点で四中心四次式上自由階数256である。
+\end{theorem}
+\begin{proof}
+$\nu(y)\le2\nu(x)$ は定理\ref{thm:rank-fifteen-negative-x-boundary}と既知の極領域による。
+残る範囲では $s=i+w$, $r=gw$ の表示で $w,g$ はいずれも正付値である。
+$B=2s/(1+s^2)$, $A=(1-s^2)/(1+s^2)$ として
+\[
+ h=1/B,\qquad z=h^2,\qquad u=rB,\qquad v=A/B
+\]
+と置く。$u/g$ と $h/w$ は単元であり、$v^2=z-1$, $v\equiv-i$ である。
+倍率は $n=vu$, $H/n=u$, $K^2=1+zu^2$, $H=vu^2$ を満たす。
+$AB=v/z$ より正則性座標は
+\[
+ x=(4+zu^2)(z-1)/z^2,\qquad y=u^4(z-1)^3/z^4
+\]
+となる。従って $h$ の符号を使わず、変数 $z,u$ だけで倍率を展開できる。
+
+$K\equiv1$ とし、$P_\pm^2=2(K+1\pm vu^2)$ の根の定数項を2、
+$(Q_\pm/u)^2=2z/(K+1)\pm2v$ の根の定数項を $1\mp i$ とする。
+全て単純根である。$z=0$ の値と比べると $v$ と $Q_\pm/u$ の差は $(z)$ に、
+$K$ と $P_\pm$ の差は $(zu^2)$ に入る。従って四次テンソルを与える各係数の差は
+$(zu)$ に入る。これは整な局所環のイデアルの包含である。
+
+\path{computations/verify_rank_fifteen_negative_x_fold.py} は $z=0$ で
+$\mathbb Q(i)$ 上の $u$ の二十一桁を使う。未切断経路の損失は $(0,1,1,3,2)$、
+四次中心は $(0,1,2,2)$、五次の積は二桁、六次から十三次は $(4,1,1,1,1,0,1,0)$
+であり、還元可能な単元主元だけで最後の一桁が残る。
+全308行列の指数と中心の自由語座標は前節の $w=g^2$ のものと一致する。
+仮定は $\nu(w)\ge10\nu(g)$、従って $\nu(z)\ge20\nu(u)$ に等しい。
+このときテンソルの差は $(u^{21})$ に入り、同じ桁数の消去をそのまま持ち上げられる。
+経路、四次中心、十三次での中心商の消滅から既述の全次数の判定が従う。
+\end{proof}

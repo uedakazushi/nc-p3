@@ -57,9 +57,9 @@ def bad_slopes(divisor):
     return core.degree(), tuple(sorted(fibers))
 
 
-def negative_x_relations(field, half, w, g):
+def negative_x_relations(field, half, w, g, *, imaginary_unit=None):
     one = field.constant(1)
-    i = field(fmpq_poly([]), fmpq_poly([1]))
+    i = field(fmpq_poly([]), fmpq_poly([1])) if imaginary_unit is None else imaginary_unit
     s = i+w
     scale = (2*i+w).inverse()
     a, b = (1-s*s)*scale, 2*s*scale

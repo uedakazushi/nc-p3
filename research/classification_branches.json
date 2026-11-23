@@ -309,7 +309,8 @@
       "rank_fifteen_nonunit_pole_strip": "sections/rank_fifteen_nonunit_pole_strip.tex",
       "rank_fifteen_negative_unit_levels": "sections/rank_fifteen_negative_unit_levels.tex",
       "rank_fifteen_negative_x_boundary": "sections/rank_fifteen_negative_x_boundary.tex",
-      "rank_fifteen_negative_x_arcs": "sections/rank_fifteen_negative_x_arcs.tex"
+      "rank_fifteen_negative_x_arcs": "sections/rank_fifteen_negative_x_arcs.tex",
+      "rank_fifteen_negative_x_fold": "sections/rank_fifteen_negative_x_fold.tex"
     },
     {
       "id": "UNRESTRICTED-SINGLY-SYMMETRIC-14",
