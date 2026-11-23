@@ -56,7 +56,7 @@ def relations(jet, half, r, s):
 
 def initial_tables(jet, precision, half, r, s, *, build=relations,
                    uncut_losses=(0, 1, 1, 2, 2), center_losses=(0, 1, 1, 1),
-                   fourth_loss=0, fifth_loss=2):
+                   fourth_loss=0, fifth_loss=2, center_frame=None):
     jet.precision = precision
     windows = build(jet, half, r, s)
     normalization = []
@@ -76,11 +76,12 @@ def initial_tables(jet, precision, half, r, s, *, build=relations,
     basis, image = field_paths(windows, jet.constant(1), reduce)
     centers = [[] for _ in range(4)]
     for h, dimension in enumerate((3, 2, 0, 0)):
-        rows, width = central_equations(basis, image, h)
-        free, projection, loss = saturated_projection(rows, width, dimension, jet)
+        frame, select = (basis, None) if center_frame is None else center_frame(h, basis, image, jet)
+        rows, width = central_equations(frame, image, h)
+        free, projection, loss = saturated_projection(rows, width, dimension, jet, select_pivot=select)
         offset = 0
         for p in range(4):
-            words = basis[p, 4, h]
+            words = frame[p, 4, h]
             coordinates = tuple(col-offset for col in free if offset <= col < offset+len(words))
             if coordinates:
                 normalization.append((h, p, tuple(words), coordinates))
@@ -89,7 +90,7 @@ def initial_tables(jet, precision, half, r, s, *, build=relations,
         for j in range(1 if h == 0 else 0, dimension):
             offset = 0
             for p in range(4):
-                paths = basis[p, 4, h]
+                paths = frame[p, 4, h]
                 centers[p].append((h, {word: projection[offset+i][j] for i, word in enumerate(paths)
                                        if j in projection[offset+i]}))
                 offset += len(paths)

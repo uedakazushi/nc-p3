@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-23",
-  "version": 179,
+  "version": 180,
   "reviewed_input": {
-    "source_commit": "4b833d037ac65022cbea7ca35f78125f75fc5797"
+    "source_commit": "bfdef12f4af6978013dd87a07a18d738ac43c580"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Above the unit pole collision Jbar=1, all windows with nu(J-1)>=nu(y) or 2 nu(J-1)=nu(y) are standard Koszul left/right AS-regular and free of rank 256 per start. Thus all ordinary rational unit-x points with x not congruent to 1 modulo 9 work for every nonzero rational y. For every rational unit x all odd valuations of y and nu_3(y)=2 work as well."
+    "scope": "Every ordinary characteristic-zero rank-fifteen window with a unit x and positive valuation of y in residue characteristic three is standard Koszul and left/right AS-regular, free of rank 256 per start over four central quartics. Consequently for all rational unit x and every nonzero rational y the same conclusion holds."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_inner_collision.py",
+      "command": "python computations/verify_rank_fifteen_inner_collision_fan.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_outer_pole_fan.py",
+      "command": "python computations/verify_rank_fifteen_inner_collision.py",
       "result": "PASS"
     },
     {
@@ -33,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked selection of z congruent to 1, the valuation of z-1, its sign under inversion, and the integral-valued rational corollary."
+    "scope": "Checked the three unimodular charts for (H,z-1), the nonconstant generic boundary coordinate at each ray and exact unit changes of the central word bases before lifting. Checked the complete conic fibers for every a reducing to 1, their two branch levels, and exclusion of the four nonordinary points."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Checked the exact 16- and 15-digit central cuts, the signed common roots of the degree-20 divisor and three simultaneous residue presentations.",
-    "reproduction": "Recomputed the two Q(m) collision slopes and the simultaneous three-residue chart; intersected the degree-20 pivot divisor with its reflection and certified all remaining signed roots."
+    "scope": "Checked all 924 paired Smith lists, both 30-digit signed charts and the change of central normalization between vertices two and three."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 308,
+      "nc-p3": 309,
       "plan_ja": 8,
-      "notes_ja": 16
+      "notes_ja": 17
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected manuscript pages 278 and 279 with both inner-collision charts, the signed residual polynomials and the rational corollary."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "93a2538c83215f3af9664a43b14e7ce381bd8a1e",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Resolve the two remaining inner collision intervals 0<2nu(J-1)<nu(y) and nu(y)<2nu(J-1)<2nu(y). On the real chart delta=z-1, compare slopes of (H,delta) with adjacent rays after fixing common central coordinate functionals in characters 0 and 1. On the u=m w^2 outer ray and the entire x=1 vertical no residual fibers remain. Continue the nonunit pole directions and unrestricted nonsymmetric classification.",
+    "For nu(x)>0 and nu(y)>3nu(x), use x=(4+r^2)(AB)^2, y=r^4(AB)^6 near s=0 in the nonbranch conic A=(1-s^2)/(1+s^2), B=2s/(1+s^2). Then nu(s)=nu(x)/2 and nu(r)=(nu(y)-3nu(x))/4. Certify r=m s by exact two-sided elimination, resolve all residual m, and compare neighboring slopes using simultaneous Smith elimination. Also retain negative-valuation x, general unit residues and the unrestricted nonsymmetric classification.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
