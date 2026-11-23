@@ -299,7 +299,8 @@
       "rank_fifteen_ramified_pole": "sections/rank_fifteen_ramified_pole.tex",
       "rank_fifteen_vertical_one": "sections/rank_fifteen_vertical_one.tex",
       "rank_fifteen_vertical_unit_levels": "sections/rank_fifteen_vertical_unit_levels.tex",
-      "rank_fifteen_unit_pole_depth": "sections/rank_fifteen_unit_pole_depth.tex"
+      "rank_fifteen_unit_pole_depth": "sections/rank_fifteen_unit_pole_depth.tex",
+      "rank_fifteen_vertical_all_levels": "sections/rank_fifteen_vertical_all_levels.tex"
     },
     {
       "id": "UNRESTRICTED-SINGLY-SYMMETRIC-14",
@@ -370,7 +371,7 @@
       }
     ]
   },
-  "date": "2026-11-22",
+  "date": "2026-11-23",
   "version": 45,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",

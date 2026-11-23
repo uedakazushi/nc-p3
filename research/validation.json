@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
-  "date": "2026-11-22",
-  "version": 175,
+  "date": "2026-11-23",
+  "version": 176,
   "reviewed_input": {
-    "source_commit": "4b1db482da8db8b76ca55cd98d2796a19599d91b"
+    "source_commit": "dabcbee33f846429ddeab04dce934021f50cc825"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For every positive valuation of y in residue characteristic three, ordinary characteristic-zero rank-fifteen windows with unit x are standard Koszul and left/right AS-regular and free of rank 256 per start over four central quartics if xbar differs from 1, or if 2 nu(x-1) >= nu(y) and the residue of J=(x-1)^2/(4y) differs from 1. In particular every rational unit x congruent to -1 modulo 3 works for all nonzero rational y, and every rational unit x works for nu_3(y)=1."
+    "scope": "On the entire ordinary characteristic-zero rank-fifteen vertical x=1, all windows are standard Koszul left/right AS-regular and free of rank 256 per start over four central quartics. Over every nonzero y there are four indexed isomorphism classes, except for two at 1/27, all of minimum period two. More generally every unit y over every residue field at xbar=1 is certified."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_unit_pole_depth.py",
+      "command": "python computations/verify_rank_fifteen_vertical_all_levels.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_ramified_pole.py",
+      "command": "python computations/verify_rank_fifteen_vertical_unit_levels.py",
       "result": "PASS"
     },
     {
@@ -33,12 +33,11 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked localization divisors of degrees 121 and 897, alignment of central pivot coordinates, the Smith transfer and the degree-thirteen unit cuts."
+    "scope": "Checked specialization of all inverted norms and the separable degree-24 map, every exceptional fiber and all four starts, and the assembly with the pole and positive-depth charts."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Compared all 308 conic Smith lists and all 292 tangent lists through twelve with characteristic-zero lattices; lifted the unit degree-thirteen cuts on the tangent charts.",
-    "reproduction": "Compared exact 17-digit characteristic-zero lattices and residue Smith lists; verified the 121- and 897-degree divisors and all aligned supplemental charts."
+    "scope": "Computed the elliptic pivot divisor of degree 204451, the degree-784 invariant core, all complete degree-24 fibers, and the last exceptional sextic directly over F_(3^6)."
   },
   "tex": {
     "result": "PASS",
@@ -50,19 +49,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected manuscript pages 275 and 276 with the all-depth theorem, Smith comparison, and rational corollary."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "be3ea30fa04aa0f05422245d9748c62396d034b7",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Compute the excluded pivot divisor on the elliptic residue cover W^2=t-t^3 at xbar=1, descend its good locus along y=(v-v^3)^2, and certify remaining fibers. At positive valuation of y with unit x the outstanding sectors have xbar=1 and either 0<2 nu(x-1)<nu(y), or 0<nu(J-1)<9 nu(y) outside the other known charts. Also address the pole charts with nonunit x and nu(D)<0.",
+    "Resolve the outer pole sector 0<2 nu(x-1)<nu(y) using independent small parameters w and u, with H=uw and w^2=(1-2AB)/2. Test the balanced direction u=mw in characteristic zero and compare the two edge Smith lists with weighted diagonal lists. For the inner sector only intermediate collisions 0<nu(J-1)<9nu(y) remain outside known charts. Continue the nonunit pole and nonsymmetric obligations.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
