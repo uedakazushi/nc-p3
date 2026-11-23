@@ -1,5 +1,6 @@
 """All quadratic horizontal residues at arbitrary geometric levels in characteristic three."""
 
+import gc
 from itertools import product
 from math import gcd, lcm
 
@@ -38,22 +39,18 @@ def rational_surface():
     ).is_zero
 
 
-def field_model(s):
-    field = fq_default_ctx(3, 4, "a")
-    ring = fq_default_poly_ctx(field)
+def coefficient_field(ring, radicand=None):
+    """Reduced rational functions with an optional quadratic extension."""
     one, zero, t = ring.one(), ring.zero(), ring.gen()
-    i = (-field.one()).sqrt()
-    x = s + i
-    c = x.sqrt()
-    d = 1 / c**3 - 1 / c
-    D = t**3 - t
-    F = D**2 - ring([d * d])
+    F = zero if radicand is None else radicand
 
     class Curve:
         __slots__ = ("coordinates", "denominator")
         divisor = one
 
         def __init__(self, a, b=zero, den=one):
+            if b and radicand is None:
+                raise ValueError("A rational function has only its constant coordinate")
             if not den:
                 raise ZeroDivisionError
             if not a and not b:
@@ -86,7 +83,7 @@ def field_model(s):
             )
 
         def __neg__(self):
-            return Curve(*(-x for x in self.coordinates), self.denominator)
+            return type(self)(*(-x for x in self.coordinates), self.denominator)
 
         def __add__(self, other):
             other = self.constant(other)
@@ -99,7 +96,7 @@ def field_model(s):
             g = self.denominator.gcd(other.denominator)
             den1 = self.denominator // g
             den2 = other.denominator // g
-            return Curve(
+            return type(self)(
                 a * den2 + u * den1, b * den2 + v * den1, self.denominator * den2
             )
 
@@ -115,7 +112,7 @@ def field_model(s):
             other = self.constant(other)
             a, b = self.coordinates
             u, v = other.coordinates
-            return Curve(
+            return type(self)(
                 a * u + b * v * F, a * v + b * u, self.denominator * other.denominator
             )
 
@@ -128,13 +125,13 @@ def field_model(s):
                 raise ZeroDivisionError
             f = norm
             while f.degree() > 0:
-                g = f.gcd(Curve.divisor)
+                g = f.gcd(type(self).divisor)
                 if g.degree() == 0:
                     for z, e in f.factor_squarefree()[1]:
-                        Curve.divisor *= z
+                        type(self).divisor *= z
                     break
                 f = f // g
-            return Curve(a * self.denominator, -b * self.denominator, norm)
+            return type(self)(a * self.denominator, -b * self.denominator, norm)
 
         def __truediv__(self, other):
             return self * self.constant(other).inverse()
@@ -149,6 +146,20 @@ def field_model(s):
                 return self.constant(1)
             square = self ** (e // 2)
             return square * square * self if e % 2 else square * square
+
+    return Curve
+
+
+def field_model(s):
+    field = fq_default_ctx(3, 4, "a")
+    ring = fq_default_poly_ctx(field)
+    one, zero, t = ring.one(), ring.zero(), ring.gen()
+    i = (-field.one()).sqrt()
+    x = s + i
+    c = x.sqrt()
+    d = 1 / c**3 - 1 / c
+    D = t**3 - t
+    Curve = coefficient_field(ring, D**2 - ring([d * d]))
 
     return (
         Curve,
@@ -269,6 +280,9 @@ def verify_line(s):
         degrees = (3240, 3964, 3281, 2317) if s == 1 else (3321, 3604, 3290, 2843)
         divisor = central_divisor(windows, curve.constant(1), curve, degrees)
         expected = (12491, 54, 72, 3) if s == 1 else (12756, 48, 48, 2)
+        del curve, windows
+        # The native context must outlive garbage collection of the coefficient class.
+        gc.collect()
         stable, prime_stable, levels = descend(ring, divisor)
         assert (divisor.degree(), stable, prime_stable, len(levels)) == expected
         assert all(len(g) == 5 for g in levels)

@@ -220,6 +220,7 @@ def get_centers(w, unit):
                 )
                 offset += len(words)
             cuts.append(parts)
+    image.cache_clear()
     return cuts
 
 
@@ -263,10 +264,10 @@ def verify_sextic():
     raise AssertionError("No split sextic presentation")
 
 
-def central_divisor(windows, unit, recorder, degrees):
+def central_divisor(windows, unit, recorder, degrees, selected=(1, 2, 3, 4)):
     centers = get_centers(windows, unit)
     common = recorder.divisor
-    cuts = [[(0, centers[j][p]) for j in (1, 2, 3, 4)] for p in range(4)]
+    cuts = [[(0, centers[j][p]) for j in selected] for p in range(4)]
     divisor = common
     for start, expected in enumerate(degrees):
         recorder.divisor = common
