@@ -298,7 +298,8 @@
       "rank_fifteen_pole_fibers": "sections/rank_fifteen_pole_fibers.tex",
       "rank_fifteen_ramified_pole": "sections/rank_fifteen_ramified_pole.tex",
       "rank_fifteen_vertical_one": "sections/rank_fifteen_vertical_one.tex",
-      "rank_fifteen_vertical_unit_levels": "sections/rank_fifteen_vertical_unit_levels.tex"
+      "rank_fifteen_vertical_unit_levels": "sections/rank_fifteen_vertical_unit_levels.tex",
+      "rank_fifteen_unit_pole_depth": "sections/rank_fifteen_unit_pole_depth.tex"
     },
     {
       "id": "UNRESTRICTED-SINGLY-SYMMETRIC-14",

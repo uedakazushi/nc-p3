@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "version": 174,
+  "version": 175,
   "reviewed_input": {
-    "source_commit": "b67fb63988072434d1ae95509124cd54a3d1f3b4"
+    "source_commit": "4b1db482da8db8b76ca55cd98d2796a19599d91b"
   },
   "generation": {
     "result": "PASS",
-    "scope": "At xbar=1 all nonzero y residues of degrees at most three over F3 are certified for ordinary characteristic-zero rank-fifteen windows. Their signed multiplier lifts are given by a degree-48 genus-one Galois cover over the geometric residue field. On x=1 every nonzero algebraic level of degree at most three is standard Koszul left/right AS-regular, free of rank 256 per start, with four distinct minimum-period-two indexed classes (two at 1/27). The same holds whenever the reduced primitive homogeneous minimal polynomial has a closed zero of degree at most three."
+    "scope": "For every positive valuation of y in residue characteristic three, ordinary characteristic-zero rank-fifteen windows with unit x are standard Koszul and left/right AS-regular and free of rank 256 per start over four central quartics if xbar differs from 1, or if 2 nu(x-1) >= nu(y) and the residue of J=(x-1)^2/(4y) differs from 1. In particular every rational unit x congruent to -1 modulo 3 works for all nonzero rational y, and every rational unit x works for nu_3(y)=1."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_vertical_unit_levels.py",
+      "command": "python computations/verify_rank_fifteen_unit_pole_depth.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_unit_residues.py",
+      "command": "python computations/verify_rank_fifteen_ramified_pole.py",
       "result": "PASS"
     },
     {
@@ -33,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked the elliptic cover, its four inertia groups, the Artin-Schreier quotient and the Hensel transfer to all conjugate residue roots."
+    "scope": "Checked localization divisors of degrees 121 and 897, alignment of central pivot coordinates, the Smith transfer and the degree-thirteen unit cuts."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Checked every irreducible monic quadratic and cubic over F3, with explicit roots, square-root presentations and the degree-13 central quotient at all four starts.",
-    "reproduction": "Checked every irreducible quadratic and cubic in F3[y] in explicit extension fields, including four starting vertices through degree 13, and reran the four prime-field grid tests."
+    "scope": "Compared all 308 conic Smith lists and all 292 tangent lists through twelve with characteristic-zero lattices; lifted the unit degree-thirteen cuts on the tangent charts."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 304,
+      "nc-p3": 305,
       "plan_ja": 8,
       "notes_ja": 16
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected manuscript pages 277 and 278 for the elliptic cover, theorem, corollary, and following section."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "313cfcc90340398fc27327d16a0b3467cfd03bbd",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "On xbar=1 and unit y, compute the pivot divisor on W^2=t-t^3 with v=t*(1-t^2)/(1+t^2)^2 and y=(v-v^3)^2. Descend its good locus along the genus-one cover, then check the remaining residue fibers. The eleven irreducible quadratic and cubic fibers have already been certified directly. In parallel use the full-order primary pole cuts to remove the six-digit depth bounds and address the remaining collision and outer sectors.",
+    "Compute the excluded pivot divisor on the elliptic residue cover W^2=t-t^3 at xbar=1, descend its good locus along y=(v-v^3)^2, and certify remaining fibers. At positive valuation of y with unit x the outstanding sectors have xbar=1 and either 0<2 nu(x-1)<nu(y), or 0<nu(J-1)<9 nu(y) outside the other known charts. Also address the pole charts with nonunit x and nu(D)<0.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
