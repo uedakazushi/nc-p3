@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Checked the exact 16- and 15-digit central cuts, the signed common roots of the degree-20 divisor and three simultaneous residue presentations."
+    "scope": "Checked the exact 16- and 15-digit central cuts, the signed common roots of the degree-20 divisor and three simultaneous residue presentations.",
+    "reproduction": "Recomputed the two Q(m) collision slopes and the simultaneous three-residue chart; intersected the degree-20 pivot divisor with its reflection and certified all remaining signed roots."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript pages 278 and 279 with both inner-collision charts, the signed residual polynomials and the rational corollary."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "93a2538c83215f3af9664a43b14e7ce381bd8a1e",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Resolve the two remaining inner collision intervals 0<2nu(J-1)<nu(y) and nu(y)<2nu(J-1)<2nu(y). On the real chart delta=z-1, compare slopes of (H,delta) with adjacent rays after fixing common central coordinate functionals in characters 0 and 1. On the u=m w^2 outer ray and the entire x=1 vertical no residual fibers remain. Continue the nonunit pole directions and unrestricted nonsymmetric classification.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "4ba155d8dd00fd132e391e8cc73597fa6e63b994",
+    "commit": "9e3697d5023620edc4d62221eda932e172dc82d2",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
