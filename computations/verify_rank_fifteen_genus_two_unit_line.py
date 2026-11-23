@@ -133,8 +133,12 @@ def negative_unit_model():
     v = GenusTwo.constant(T)
     i = GenusTwo((ZERO, ONE, ZERO, ZERO))
     root = GenusTwo((ZERO, ZERO, ONE, ZERO))
-    k, h = 1 / v, i * (1 / v - v)
-    a, b = GenusTwo.constant(1), (k - 1) / 2
+    return unit_model(v, i, i, root)
+
+
+def unit_model(v, i, c, root):
+    k, h = 1 / v, c * (1 / v - v)
+    a, b = type(v).constant(1), (k - 1) / 2
     squares = (
         (k * k - 1 + 2 * h) / 4,
         (k * k - 1 - 2 * h) / 4,
@@ -143,12 +147,12 @@ def negative_unit_model():
         (k - 1 + h) / 2,
         (k - 1 - h) / 2,
     )
-    radical = root * (v**3 - v) ** 2 / v**6
+    radical = (-i * c) ** 3 * root * (v**3 - v) ** 2 / v**6
     assert radical**2 == prod(squares)
     return normal_windows((a, b, a + b), squares, radical)
 
 
-def pivots(rows):
+def pivots(rows, unit):
     rows = [r.copy() for r in rows if r]
     echelon = []
     while rows:
@@ -166,13 +170,13 @@ def pivots(rows):
         for i in list(row):
             if i in out:
                 add_multiple(row, out[i], -row[i])
-        row[k] = GenusTwo.constant(1)
+        row[k] = unit
         out[k] = row
     return out
 
 
 def images(rows, size, unit):
-    piv = pivots(rows)
+    piv = pivots(rows, unit)
     free = [j for j in range(size) if j not in piv]
     col = {j: k for k, j in enumerate(free)}
     return free, [
@@ -184,7 +188,7 @@ def images(rows, size, unit):
 
 
 def get_centers(w, unit):
-    basis, image = field_paths(w, unit, pivots)
+    basis, image = field_paths(w, unit, lambda rows: pivots(rows, unit))
     assert all(
         sum(len(basis[p, n, h]) for h in range(4)) == d
         for p in range(4)
@@ -194,7 +198,6 @@ def get_centers(w, unit):
     for h, dim in enumerate((5, 0, 0, 0)):
         rows, size = central_equations(basis, image, h)
         free, proj = images(rows, size, unit)
-        print("center", h, len(free), "divisor", Recorded.divisor.degree(), flush=True)
         assert len(free) == dim
         if h:
             continue
@@ -255,18 +258,15 @@ def verify_sextic():
     raise AssertionError("No split sextic presentation")
 
 
-def verify():
-    Recorded.record.cache_clear()
-    Recorded.divisor = ONE
-    windows = negative_unit_model()
-    unit = GenusTwo.constant(1)
+def central_divisor(windows, unit, recorder, degrees):
     centers = get_centers(windows, unit)
-    common = Recorded.divisor
+    common = recorder.divisor
     cuts = [[(0, centers[j][p]) for j in (1, 2, 3, 4)] for p in range(4)]
     divisor = common
-    for start, expected in enumerate((1049, 2866, 1642, 3847)):
-        Recorded.divisor = common
-        Recorded.record.cache_clear()
+    for start, expected in enumerate(degrees):
+        recorder.divisor = common
+        if recorder is Recorded:
+            Recorded.record.cache_clear()
         for degree in quotient_layers(
             windows,
             cuts,
@@ -276,11 +276,20 @@ def verify():
             lambda n, h, rows, size: images(rows, size, unit),
         ):
             pass
-        assert degree == 13 and Recorded.divisor.degree() == expected
-        divisor *= Recorded.divisor // divisor.gcd(Recorded.divisor)
+        assert degree == 13 and recorder.divisor.degree() == expected
+        divisor *= recorder.divisor // divisor.gcd(recorder.divisor)
         print(
             "Certified start", start, "with pivot divisor degree", expected, flush=True
         )
+    return divisor
+
+
+def verify():
+    Recorded.record.cache_clear()
+    Recorded.divisor = ONE
+    divisor = central_divisor(
+        negative_unit_model(), GenusTwo.constant(1), Recorded, (1049, 2866, 1642, 3847)
+    )
     assert divisor.degree() == 8801
     stable, exceptions = full_fibers(divisor)
     assert stable == 156 and len(exceptions) == 8

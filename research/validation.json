@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-23",
-  "version": 189,
+  "version": 190,
   "reviewed_input": {
-    "source_commit": "87ce0615a92163f5787259c1842e6de13516fbd2"
+    "source_commit": "d42e436c27a86d887c4b56f01bf2d3e1ca08c615"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For every rational x, every ordinary characteristic-zero rank-fifteen window at every nonzero geometric level y is standard Koszul left/right AS-regular with rank 256 per start over the four central quartics. All verticals reducing to -1 at three have the conic indexed classification at every level, with period two. A 36-entry Klein-homogeneous tensor over the genus-two double cover of k(v) realizes each general unit residue X other than 1 geometrically."
+    "scope": "All ordinary characteristic-zero rank-fifteen windows at every geometric nonzero y are standard Koszul left/right AS-regular, free of rank 256 per start over four central quartics, if x belongs to a number field having any place over 3 of residue degree at most two. Every geometric unit horizontal residue X in F9 is certified at every vertical level. The two-parameter unit tensor away from the branch has an explicit purely inseparable rational parametrization of degree three."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_genus_two_unit_line.py",
+      "command": "python computations/verify_rank_fifteen_quadratic_verticals.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_unit_quartic_towers.py",
+      "command": "python computations/verify_rank_fifteen_genus_two_unit_line.py",
       "result": "PASS"
     },
     {
@@ -33,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked the torus normalization, the genus-two field, center-character change, all six affine lifts of a level, the remaining sextic, and unit lifting for every geometric level."
+    "scope": "Checked descent through six affine representatives, norms to F81(v), Frobenius saturation to the prime field, the four central cuts through degree 13, and the degree-three rational parametrization."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Computed the 36-entry diagonal gauge and its integral exponent matrix, solved the five-dimensional center and four central cuts over the genus-two field at X=-1, descended a degree-8801 pivot divisor to eight exceptional levels and verified the exceptional sextic directly.",
-    "reproduction": "Verified the 36-entry gauge and the genus-two radicand, five-dimensional center, all four central cuts through degree thirteen, the 8801-degree pivot divisor, the degree-156 invariant part and the direct sextic-fiber calculation."
+    "scope": "Computed the three nonprime quadratic residue lines, four exact central cuts on each, three invariant exceptional level divisors and all remaining Frobenius fibers. Verified the rational parametrization identities symbolically."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 320,
+      "nc-p3": 321,
       "plan_ja": 8,
       "notes_ja": 17
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected manuscript pages 290 to 292 including the diagonal normalization, exceptional sextic, and indexed vertical classes."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "f5e332067963fdbdd3a5c0e4a6dae33c4c1cdca8",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Use the 36-entry Walsh tensor and its degree-two normalization for the remaining unit residues X outside F3. For X=+i or -i, take c in F9 with c^2=X: d^2=-1 again, so the same genus-two arithmetic works after scaling the joint radical by (-ic)^3. Descend the actual excluded v-polynomial to complete Y-fibers and handle their finite exceptional orbits. Next handle nonsquare X in F9 and a variable geometric X. Unrestricted nonsymmetric windows remain open.",
+    "Certify the entire branch Y=(1-X)^2 in characteristic three for arbitrary geometric X outside 0,1. Take c^2=X and v=epsilon/c+j, j in F3; exactly one of the six signed roots vanishes. Renormalize the remaining 32 Walsh entries to remove their signs, compute the four cuts over F3(c) and intersect bad level divisors across the six presentations. Off the branch, the universal genus-two surface has the explicit radicial rational coordinates u,q. Use them to bound or eliminate the remaining bad locus. Also continue unrestricted nonsymmetric windows.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
