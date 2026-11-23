@@ -25,7 +25,7 @@ from verify_rank_fifteen_vertical_all_levels import (
 
 
 @cache
-def normalize_support():
+def normalize_support(zero_root=None):
     a, b, p, m, q, n, r, l = sp.symbols("a b p m q n r l")
     atoms = (a, b, a + b, p, m, q, n, r, l)
     gamma = pattern(
@@ -64,9 +64,11 @@ def normalize_support():
                 for sign in (1, -1)
                 if value == sign * atom
             ]
+            if zero_root is not None and entry[0] == 3 + zero_root:
+                continue
             words.append(word)
             entries.append(entry)
-    assert len(words) == 36
+    assert len(words) == (36 if zero_root is None else 32)
     incidence = sp.Matrix(
         [[int(w[t] == j) for t, j in product(range(4), repeat=2)] for w in words]
     )
@@ -88,14 +90,17 @@ def normalize_support():
                 sign *= factor
         assert len(set(p % 2 for p in powers[3:])) == 1
         normal[word] = sign, tuple(powers)
-    assert normal[0, 2, 3, 1][1][3:] == (-1, 1, -1, 1, 1, -1)
+    if zero_root is None:
+        assert normal[0, 2, 3, 1][1][3:] == (-1, 1, -1, 1, 1, -1)
+    else:
+        assert all(all(e % 2 == 0 for e in powers[3:]) for _, powers in normal.values())
     return normal
 
 
-def normal_windows(base, squares, radical):
+def normal_windows(base, squares, radical, zero_root=None):
     """Only the six squares and their joint square root enter the coefficients."""
     tensor = {}
-    for word, (sign, powers) in normalize_support().items():
+    for word, (sign, powers) in normalize_support(zero_root).items():
         odd = powers[3] % 2
         value = sign * prod(x**p for x, p in zip(base, powers[:3], strict=True))
         tensor[word] = (

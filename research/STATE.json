@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-23",
-  "version": 190,
+  "version": 191,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -2127,6 +2127,15 @@
       "verification": [
         "computations/verify_rank_fifteen_quadratic_verticals.py"
       ]
+    },
+    {
+      "id": "RANK-FIFTEEN-PRIME-PARABOLIC-PENCILS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "Every ordinary characteristic-zero rank-fifteen window with nonzero unit residues X other than 1 and Y/(1-X)^2=1 or -1 is standard Koszul left/right AS-regular, free of rank 256 per start over four central quartics. This covers the entire three-adic residue tube of the geometric branch, and all ordinary windows on every parabola y=lambda(1-x)^2, lambda nonzero rational, with arbitrary geometric x and y nonzero. Any other fixed nonzero geometric residue ratio besides 1 has a rational one-parameter window presentation.",
+      "proof": "sections/rank_fifteen_prime_parabolic_pencils.tex",
+      "verification": [
+        "computations/verify_rank_fifteen_prime_parabolic_pencils.py"
+      ]
     }
   ],
   "document_paths": {
@@ -2190,7 +2199,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "d42e436c27a86d887c4b56f01bf2d3e1ca08c615",
+  "reviewed_source_commit": "9aafd15a9f1a502ee42cc9a918d4b336a4eb7d98",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -2199,15 +2208,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Certify the entire branch Y=(1-X)^2 in characteristic three for arbitrary geometric X outside 0,1. Take c^2=X and v=epsilon/c+j, j in F3; exactly one of the six signed roots vanishes. Renormalize the remaining 32 Walsh entries to remove their signs, compute the four cuts over F3(c) and intersect bad level divisors across the six presentations. Off the branch, the universal genus-two surface has the explicit radicial rational coordinates u,q. Use them to bound or eliminate the remaining bad locus. Also continue unrestricted nonsymmetric windows.",
+    "immediate_next_action": "Use the uniform rational pencil parameter R=Y/(1-X)^2 and q=v-a b, b=(q-q^3)/(r-a), r^2=R, a^3=r. Both prime-field unit ratios have been certified at arbitrary X, including the entire branch using a 32-entry rational tensor. For R outside F3, descend the remaining bad locus over the rational two-parameter surface; for a concrete extension take the three remaining conjugacy orbits in F9, compute the six-lift gcd in 1/X and resolve residual fibers. Distinguish positive-dimensional residual conditions from the finite open characteristic-zero exceptions. Continue the unrestricted nonsymmetric structure problem as well.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/rank_fifteen_prime_parabolic_pencils.tex",
       "sections/rank_fifteen_quadratic_verticals.tex",
-      "sections/rank_fifteen_genus_two_unit_line.tex",
-      "sections/rank_fifteen_unit_quartic_towers.tex"
+      "sections/rank_fifteen_genus_two_unit_line.tex"
     ],
     "known_obstruction": "Possible isolated interior failures of all-degree regularity on the (x,y) plane and uncovered general nonsymmetric windows.",
-    "state_of_claim": "All geometric verticals over quadratic residues are certified; general residues outside F9 and unrestricted nonsymmetric windows remain open.",
+    "state_of_claim": "All prime-field unit ratios and all quadratic x-residue verticals are certified. General unit ratios and unrestricted nonsymmetric windows remain open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-23",
-  "version": 190,
+  "version": 191,
   "reviewed_input": {
-    "source_commit": "d42e436c27a86d887c4b56f01bf2d3e1ca08c615"
+    "source_commit": "9aafd15a9f1a502ee42cc9a918d4b336a4eb7d98"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All ordinary characteristic-zero rank-fifteen windows at every geometric nonzero y are standard Koszul left/right AS-regular, free of rank 256 per start over four central quartics, if x belongs to a number field having any place over 3 of residue degree at most two. Every geometric unit horizontal residue X in F9 is certified at every vertical level. The two-parameter unit tensor away from the branch has an explicit purely inseparable rational parametrization of degree three."
+    "scope": "Every ordinary characteristic-zero rank-fifteen window with nonzero unit residues X other than 1 and Y/(1-X)^2=1 or -1 is standard Koszul left/right AS-regular, free of rank 256 per start over four central quartics. This covers the entire three-adic residue tube of the geometric branch, and all ordinary windows on every parabola y=lambda(1-x)^2, lambda nonzero rational, with arbitrary geometric x and y nonzero. Any other fixed nonzero geometric residue ratio besides 1 has a rational one-parameter window presentation."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_quadratic_verticals.py",
+      "command": "python computations/verify_rank_fifteen_prime_parabolic_pencils.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_genus_two_unit_line.py",
+      "command": "python computations/verify_rank_fifteen_quadratic_verticals.py",
       "result": "PASS"
     },
     {
@@ -33,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked descent through six affine representatives, norms to F81(v), Frobenius saturation to the prime field, the four central cuts through degree 13, and the degree-three rational parametrization."
+    "scope": "Checked that deleted root entries have even remaining exponents, the rational parameter of a general fixed ratio, six equivalent q representatives, and the valuation argument for all rational parabolas."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Computed the three nonprime quadratic residue lines, four exact central cuts on each, three invariant exceptional level divisors and all remaining Frobenius fibers. Verified the rational parametrization identities symbolically.",
-    "reproduction": "Recomputed all three quadratic-residue lines, four central cuts per start, the complete exceptional fibers including coefficient conjugation, and the finite-field presentations through length thirteen. Reproduced the previous minus-one line after sharing the normalization and cut arithmetic."
+    "scope": "Recomputed the 32-entry branch gauge and both four-start central quotient certificates, including the degree-7 branch divisor, degree-4438 pencil divisor, the complete exceptional fibers, and direct checks at both cubic and both quartic residual polynomials."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 321,
+      "nc-p3": 322,
       "plan_ja": 8,
       "notes_ja": 17
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected manuscript pages 291 to 293 including the three pivot-divisor rows and the explicit rational parametrization."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "18235725dfde01dcde5e71bfb0b44c506e56b641",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Certify the entire branch Y=(1-X)^2 in characteristic three for arbitrary geometric X outside 0,1. Take c^2=X and v=epsilon/c+j, j in F3; exactly one of the six signed roots vanishes. Renormalize the remaining 32 Walsh entries to remove their signs, compute the four cuts over F3(c) and intersect bad level divisors across the six presentations. Off the branch, the universal genus-two surface has the explicit radicial rational coordinates u,q. Use them to bound or eliminate the remaining bad locus. Also continue unrestricted nonsymmetric windows.",
+    "Use the uniform rational pencil parameter R=Y/(1-X)^2 and q=v-a b, b=(q-q^3)/(r-a), r^2=R, a^3=r. Both prime-field unit ratios have been certified at arbitrary X, including the entire branch using a 32-entry rational tensor. For R outside F3, descend the remaining bad locus over the rational two-parameter surface; for a concrete extension take the three remaining conjugacy orbits in F9, compute the six-lift gcd in 1/X and resolve residual fibers. Distinguish positive-dimensional residual conditions from the finite open characteristic-zero exceptions. Continue the unrestricted nonsymmetric structure problem as well.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

@@ -186,6 +186,20 @@ def descend(ring, div):
     return core.degree(), stable, levels
 
 
+def split_unit_coordinates(t, x, y, c):
+    for v, _ in ((t**3 - t) ** 2 - y / x**3).roots():
+        k, h = 1 / v, c * (1 / v - v)
+        sq = [k * k - 1 + s * 2 * h for s in (1, -1)] + [
+            2 * (k + delta + s * h) for delta, s in product((1, -1), repeat=2)
+        ]
+        if not all(r.is_square() for r in sq):
+            continue
+        a, b, p, u, q, r = [z.sqrt() for z in sq]
+        coords = tuple(map(encode, (k, h, (a + b) / 2, p, u, q, r)))
+        return coords
+    return None
+
+
 def certify(g, s=0):
     d = len(g) - 1
     if d <= 2:
@@ -208,17 +222,9 @@ def certify(g, s=0):
                 seen.add(encode(r))
                 r = r**9
             y = -(x**3) * y0
-            for v, _ in ((t**3 - t) ** 2 - y / x**3).roots():
-                k, h = 1 / v, c * (1 / v - v)
-                sq = [k * k - 1 + s * 2 * h for s in (1, -1)] + [
-                    2 * (k + delta + s * h) for delta, s in product((1, -1), repeat=2)
-                ]
-                if not all(r.is_square() for r in sq):
-                    continue
-                a, b, p, u, q, r = [z.sqrt() for z in sq]
-                coords = tuple(map(encode, (k, h, (a + b) / 2, p, u, q, r)))
+            coords = split_unit_coordinates(t, x, y, c)
+            if coords is not None:
                 points.append((y, coords))
-                break
         if len(points) != gcd(d, 2):
             continue
         for y, coords in points:
