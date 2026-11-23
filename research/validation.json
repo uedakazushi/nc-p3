@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Checked the truncated Hilbert series convolution for a polynomial algebra on four degree-four generators and the four simultaneous quotient dimension floors; the geometric upper bounds are from the verified degree-seven covering."
+    "scope": "Checked the truncated Hilbert series convolution for a polynomial algebra on four degree-four generators and the four simultaneous quotient dimension floors; the geometric upper bounds are from the verified degree-seven covering.",
+    "reproduction": "Checked the Hilbert convolution, the four complementary lower bounds, graded generation, lifting and ground-field descent, using the verified residue-surface upper bound through length seven."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript pages 298 to 300, including the mixed-characteristic lifting argument, truncated central freeness and the degree-eight through eleven lower bounds."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "13df28e6acdb46017d8d50a6616e09cc4b1316d1",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Complete the degree-eight quotient upper bound 31, then the degree-nine, ten and eleven upper bounds 20, 10 and 4. For the characteristic-zero four-plane certified through seven these four lower bounds already hold simultaneously by truncated central generation. Only an upper-bound witness at a given degree is required. For the residue calculation extend right-word projections to eight and descend the exceptional sets; use different hyperplanes at degree nine and beyond if necessary. Continue the unrestricted nonsymmetric classification.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "969643b37333c66555e7992a8b3affba4213af4c",
+    "commit": "98aaaea2457b7168fde44f99cd7d8f980a3f36c9",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
