@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-23",
-  "version": 195,
+  "version": 196,
   "reviewed_input": {
-    "source_commit": "271bf37cff9279935eb67f6032f45518c3e2ebec"
+    "source_commit": "ea2891c7167b75a15789d4a2acb39c8d4e6e7bb4"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every nonbranch geometric unit pair in characteristic three admits a presentation with the same four normalized central columns (1,2,4,5) through degree six. In an explicit F81 presentation they give dimension 23 instead of 20 at degree nine at all starts. Replacing column 4 by column 3 in that very presentation restores every expected cut dimension through thirteen."
+    "scope": "On every characteristic-three geometric unit pair there is a common four-central-quartic quotient of dimension 40 at degree seven for all four starts. The apparent obstruction Y=X-1 is removed by a second elimination. Thirteen explicit cubic, quartic and sextic Frobenius orbits have full length-thirteen certificates, giving the standard Koszul two-sided AS and rank-256 conclusion on their characteristic-zero residue tubes."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_fixed_center_obstruction.py",
+      "command": "python computations/verify_rank_fifteen_bivariate_seventh_cut.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_bivariate_sixth_cut.py",
+      "command": "python computations/verify_rank_fifteen_fixed_center_obstruction.py",
       "result": "PASS"
     },
     {
@@ -33,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked the exact specialized exceptional fiber, the field presentation, Frobenius conjugation, all four ninth-degree character profiles, and the alternative central hyperplane to length thirteen."
+    "scope": "Reviewed scale tracking for primitive row pivots, chart localization, necessity of simultaneous vanishing of the twelve basis coefficients, the degree-70 horizontal bound, the curve denominator and all finite-field specializations."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Computed the exact quadratic exceptional fiber gcd and specialized the universal center basis in F81. Recomputed all four finite-field quotients for both hyperplanes.",
-    "reproduction": "Verified the exact quadratic fiber gcd and all four starts for the fixed, exchanged and weighted choices over the same F81 presentation, including the first failures at nine and ten."
+    "scope": "Verified all four ordinary seventh-degree recursions, two primitive pivot recursions, residual resultants, the alternate curve gcd and full centered quotients on 13 Frobenius orbits."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 326,
+      "nc-p3": 327,
       "plan_ja": 8,
       "notes_ja": 17
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected manuscript pages 297 to 299, including the exceptional fiber, fixed F81 presentation and three central four-planes."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "01cd59ae9211fbda7d6c139cde4e4aee2c8a816b",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Advance the simultaneous seven-degree cut for the four starts. Four fixed normalized center columns suffice through degree six throughout the nonbranch unit surface, but they can give 23 instead of 20 in degree nine: allow a second center hyperplane as well as alternative parameter representatives in higher degrees. Use twelve coefficient resultants or componentwise orbit intersections to bound bad fibers and certify the finite residue points. Continue the unrestricted nonsymmetric classification.",
+    "Every geometric unit pair admits a common four-center cut through seven. Next extend the four word recursions to degree eight (expected 31). Use numerator-tracked primitive polynomial rows or multiple four-planes before orbit elimination; nine and ten can depend on the plane. The twelve coefficient gcd at seven detected Y=X-1, removed with different pivot choices at starts 1 and 3. Specialize each residual irreducible X bound and test the common B roots; reuse the 13 resolved finite orbits. Continue the unrestricted nonsymmetric branch.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
