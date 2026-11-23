@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Recomputed all three nonprime ratio pencils over F81(q), the four central cuts and three complete exceptional level lists. Verified all remaining degree-4, 6 and 8 fibers and the word parity formula in every cyclic tensor component."
+    "scope": "Recomputed all three nonprime ratio pencils over F81(q), the four central cuts and three complete exceptional level lists. Verified all remaining degree-4, 6 and 8 fibers and the word parity formula in every cyclic tensor component.",
+    "reproduction": "Verified all three F81(q) computations through length thirteen with clean process exits, all nine finite exceptional polynomials, all cyclic descent parities and the previous prime-ratio pencil. Fixed the lifetime of the native coefficient context during garbage collection."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript pages 294 to 296 including quadratic-residue pencil degrees, the arithmetic exclusion and the word-scaling formula."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "546745e2dfdd0af2cb522dbba591b1ded6bc9723",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Use the proved word parity descent on the universal 36-entry tensor. Over the direct bivariate rational field k(K,H), multiply normalized homogeneous words using the recorded associator for omega(g,h)=g_low*h_high to compute the generic path and character-zero central-cut pivot loci, compare independent presentations, and descend their common exceptional set. On any still-exceptional algebraic pair both x and lambda=y/(1-x)^2 have 3-integral unit minimal polynomials coprime modulo 3 to T^9-T. The entire F9 ratio pencil and F9 x verticals are certified. Continue unrestricted nonsymmetric coverage independently.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "8b750042f06c1f1ee86fb67f6cc500e64cf67c73",
+    "commit": "9aed68e05acc5ec0ec87bb5c4f21cc82cd53d3ec",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
