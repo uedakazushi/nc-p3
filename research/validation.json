@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Verified both quartics and their elliptic quotient symbolically in characteristic three, all 256 integer Walsh coefficient identities and both descent characters, and the four-start central quotient through length 13 on all 24 simultaneous Frobenius orbits of the remaining F9 residue pairs."
+    "scope": "Verified both quartics and their elliptic quotient symbolically in characteristic three, all 256 integer Walsh coefficient identities and both descent characters, and the four-start central quotient through length 13 on all 24 simultaneous Frobenius orbits of the remaining F9 residue pairs.",
+    "reproduction": "Checked all characteristic-three identities, all 256 entries after changing the four arrow bases, and all four central cuts on 24 simultaneous Frobenius orbits, covering the 48 remaining quadratic residue pairs."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript pages 288 to 290 including both quartics, the elliptic quotient, the genus-thirteen tensor and the lifting theorem."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "6d25d2d32408c52e60a28baa634174cd6b430a72",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Compute the center and the four central quotient profiles over the explicit genus-13 descended tensor for X=-1, then for general X. Keep the Klein grading in the fourfold low-bit Walsh basis; determine how central characters change and treat vanishing denominators or center pivots separately. The quadratic residue grid is complete. Also continue the unrestricted nonsymmetric classification.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "34b269daf6c243617a1999ceea1214b24eace674",
+    "commit": "ac026813e3530064e41e8ac3f8c5d89271f40038",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
