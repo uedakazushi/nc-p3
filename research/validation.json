@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Checked all 924 paired Smith lists, both 30-digit signed charts and the change of central normalization between vertices two and three."
+    "scope": "Checked all 924 paired Smith lists, both 30-digit signed charts and the change of central normalization between vertices two and three.",
+    "reproduction": "Compared all 924 Smith lists from the exact boundary and diagonal runs; also checked the complementary signed unit charts and independently recomputed the shallow comparison over the generic residue field."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript pages 279 and 280 with the three remaining collision cones and the conic classification for every a reducing to 1."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "46e9cff3cf7dd803d52e53dec161e8aa270a6278",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "For nu(x)>0 and nu(y)>3nu(x), use x=(4+r^2)(AB)^2, y=r^4(AB)^6 near s=0 in the nonbranch conic A=(1-s^2)/(1+s^2), B=2s/(1+s^2). Then nu(s)=nu(x)/2 and nu(r)=(nu(y)-3nu(x))/4. Certify r=m s by exact two-sided elimination, resolve all residual m, and compare neighboring slopes using simultaneous Smith elimination. Also retain negative-valuation x, general unit residues and the unrestricted nonsymmetric classification.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "9e3697d5023620edc4d62221eda932e172dc82d2",
+    "commit": "cf30c755c902bc98e944987aa6c8050dfa227dba",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
