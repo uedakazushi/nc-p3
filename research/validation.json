@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Computed the genus-one generic cuts from all four starts through length 13, descended the pivot divisor, verified residual fibers, and compared the Gaussian diagonal to the known conic boundary."
+    "scope": "Computed the genus-one generic cuts from all four starts through length 13, descended the pivot divisor, verified residual fibers, and compared the Gaussian diagonal to the known conic boundary.",
+    "reproduction": "Recomputed the degree-118054 elliptic pivot divisor and its degree-840 orbit core, verified all 23 closed residue fibers through degree 13, certified the 21-digit diagonal, and identified the eight uncut length-four discrepancies."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript pages 284 through 286 with the full negative-x boundary and 21-digit diagonal proof."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "fe2ed7fbe64486c4a8d074697db4b82137292d7e",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "For negative nu(x) only the strict cone nu(y)>2nu(x) remains beyond the certified 21-digit neighborhood of g=w. In coordinates w=s-i, g=r/w subdivide first at g=m w, where nu(y)=nu(x) and the residue of y/x is m^4/4. Compute the 21-digit (or adaptive-precision) generic Q(i)(m) Smith lists and pivot divisor; compare the subdivided cones at (w,g)=(t,t^2) and (t^2,t), and align central word coordinates. The prior two uncut boundary profiles disagree with the diagonal at length four. On the separate xbar=-1 geometric unit-residue problem use the genus-97 cover for residue degrees beyond four. General other unit residues and unrestricted nonsymmetric windows are open.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "c38091cadfc4f06e62aa010f87eebaa764b5c3c9",
+    "commit": "c016c0d2e93aeede1349c1890c9c25c21e0179bf",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
