@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Computed the generic s=0 boundary to 15 exact digits and the 45-digit diagonal r=t,s=t^2. Compared the 308 complete ordered pivot lists and the central coordinate frames."
+    "scope": "Computed the generic s=0 boundary to 15 exact digits and the 45-digit diagonal r=t,s=t^2. Compared the 308 complete ordered pivot lists and the central coordinate frames.",
+    "reproduction": "Verified the 15-digit characteristic-zero rational-function boundary, independently matched its 308 matrices and center coordinates over F3(z) and a cubic residue field, and reran the exact 31-digit ray and 45-digit diagonal. Checked the six Kummer classes and all six lifts on the signed cover."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript pages 281 to 283 including both the nonunit strip and the genus-97 cover."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "b19d5c115bab180197a53c57d7e28d471e0bbd01",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "On the rank-fifteen plane move to unit y with xbar=-1 and arbitrary residue y, beyond the prime-field grid. Put v=1/K and choose i^2=-1; then H=i(K-v), ybar=-(v-v^3)^2, and the signed radicands factor into products of v, 1+v, 1-v and 1 +/- i(1 +/- v). The six independent Kummer classes and the full degree-384 genus-97 cover are established. Compute the four central cuts and descend a pivot divisor over this cover, exploiting sign symmetries or a smaller quotient if possible. The unit levels with ybar=1 or -1 are already certified. Also treat nu(x)<0 outside the previously certified pole cone nu(y)<2nu(x) and the unrestricted nonsymmetric branches.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "19b56ce9dd8be024c2eabdb5028b4d37e34ea07c",
+    "commit": "b98b52a9df6ab9bef979d899ee747f511842d3d3",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
