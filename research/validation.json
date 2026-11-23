@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Verified all bivariate path and central ranks in F3(K,H) and both signs of the joint radical. The degree-zero-character center matrix has rank 39 in 44 columns; each remaining doubled matrix has rank 64, using only the ten input chart factors."
+    "scope": "Verified all bivariate path and central ranks in F3(K,H) and both signs of the joint radical. The degree-zero-character center matrix has rank 39 in 44 columns; each remaining doubled matrix has rank 64, using only the ten input chart factors.",
+    "reproduction": "Recomputed uncut path projections through five, rank 39 in the 44-column central equation, and full rank 64 for each other character. Matched all path dimensions against independently assembled full-word relation matrices, and checked the common rational-function backend in characteristics zero and three."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript pages 295 to 297 including the two-variable open locus, graded dimensions and doubled central equations."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "4ddf9fb3c1bb49b649d05aec0b64dd16ab6a2af5",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "The two-parameter elimination over F3(K,H) now gives globally valid uncut path projections through five and a fixed basis for the entire quartic center on every nonbranch unit residue; its five generators have character zero. Use these projections to evaluate the center at each start, multiply all generators by arrows, and continue the four-cut quotient through thirteen in the scaled word basis. For higher degrees control polynomial growth via primitive polynomial rows or two-sided path overlaps; intersect independent charts at the level of ideals, since a gcd alone misses isolated points on a surface. The entire branch and all F9 x or ratio lines are already certified. Unrestricted nonsymmetric windows remain open.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "9aed68e05acc5ec0ec87bb5c4f21cc82cd53d3ec",
+    "commit": "875efbef754b2d4375b6f8bcd1ca1b10c761a3f1",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
