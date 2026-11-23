@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Enumerated the 3, 8 and 18 irreducible residue polynomials of degrees 2, 3 and 4 and verified the four central quotients at every one through degree 13."
+    "scope": "Enumerated the 3, 8 and 18 irreducible residue polynomials of degrees 2, 3 and 4 and verified the four central quotients at every one through degree 13.",
+    "reproduction": "Verified all 29 quadratic through quartic residue orbits through length 13 at all four starts, both nonzero prime-field equality slopes, and the rational identities for the genus-one boundary."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript pages 283 through 285 including the finite fields, the elliptic boundary, and the Jacobian lifting the two slopes."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "824b64811ce4209ca7a500bfe0515e5a92e613ab",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "On xbar=-1 the signed cover of the unit y-line has degree 384 and genus 97. Compute a generic certificate for the four central cuts, descend its exceptional divisor over the y-line and test remaining high-degree factors. Every closed residue point of degree at most four is now certified. In parallel mathematical directions, on the remaining negative-x region use w=s-i, g=r/w and compute the w=0 Smith profiles on the genus-one degree-16 cover of lambda=-g^4/16 in the existing elliptic arithmetic W^2=t-t^3, g=2(1-i)W/(1+t^2), with K=1, n=-ig and H/n=g, and the unrestricted nonsymmetric branches.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "b98b52a9df6ab9bef979d899ee747f511842d3d3",
+    "commit": "c38091cadfc4f06e62aa010f87eebaa764b5c3c9",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
