@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-23",
-  "version": 194,
+  "version": 195,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -2163,6 +2163,15 @@
       "verification": [
         "computations/verify_rank_fifteen_bivariate_sixth_cut.py"
       ]
+    },
+    {
+      "id": "RANK-FIFTEEN-FIXED-CENTER-OBSTRUCTION",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "Every nonbranch geometric unit pair in characteristic three admits a presentation with the same four normalized central columns (1,2,4,5) through degree six. In an explicit F81 presentation they give dimension 23 instead of 20 at degree nine at all starts. Replacing column 4 by column 3 in that very presentation restores every expected cut dimension through thirteen. An explicit independent four-plane first fails in degree ten, with dimension 16 instead of 10 at all four starts.",
+      "proof": "sections/rank_fifteen_fixed_center_obstruction.tex",
+      "verification": [
+        "computations/verify_rank_fifteen_fixed_center_obstruction.py"
+      ]
     }
   ],
   "document_paths": {
@@ -2226,7 +2235,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "adb52d55b63ce610f4444d18b0f33a6da790c2f6",
+  "reviewed_source_commit": "271bf37cff9279935eb67f6032f45518c3e2ebec",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -2235,15 +2244,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Every geometric unit pair now has a single presentation and four quartics giving the correct dimensions through degree six at all starts. Extend the descended right-word quotient to degrees seven through thirteen. For simultaneous descent write the union of pivot factors in the 12-element free basis c^i v^j over F3[X,B], X=c^2, B=(v^3-v)^2; eliminate B between the coefficients, not by a surface gcd. If large bivariate intermediate pivots dominate, reuse primitive polynomial rows, degree-six word projections or a second choice of four sections before elimination. Keep the unrestricted nonsymmetric classification active.",
+    "immediate_next_action": "Advance the simultaneous seven-degree cut for the four starts. Four fixed normalized center columns suffice through degree six throughout the nonbranch unit surface, but they can give 23 instead of 20 in degree nine: allow a second center hyperplane as well as alternative parameter representatives in higher degrees. Use twelve coefficient resultants or componentwise orbit intersections to bound bad fibers and certify the finite residue points. Continue the unrestricted nonsymmetric classification.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/rank_fifteen_fixed_center_obstruction.tex",
       "sections/rank_fifteen_bivariate_sixth_cut.tex",
-      "sections/rank_fifteen_bivariate_word_paths.tex",
-      "sections/rank_fifteen_quadratic_verticals.tex"
+      "sections/rank_fifteen_bivariate_word_paths.tex"
     ],
     "known_obstruction": "Possible isolated interior failures of all-degree regularity on the (x,y) plane and uncovered general nonsymmetric windows.",
-    "state_of_claim": "Universal center evaluation and the existence of four-center quotients through degree six are proved. Higher degrees at arbitrary unit pairs and the unrestricted nonsymmetric classification are open.",
+    "state_of_claim": "The fixed four columns suffice through degree six in some presentation at every nonbranch pair; higher-degree ranks can depend on the four-plane. Seven and higher at general pairs and unrestricted nonsymmetric classification remain open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-23",
-  "version": 194,
+  "version": 195,
   "reviewed_input": {
-    "source_commit": "adb52d55b63ce610f4444d18b0f33a6da790c2f6"
+    "source_commit": "271bf37cff9279935eb67f6032f45518c3e2ebec"
   },
   "generation": {
     "result": "PASS",
-    "scope": "On the entire nonbranch characteristic-three unit surface, every four-dimensional subspace of the five quartic central sections has central quotient dimensions 31 and 40 at degrees four and five for every start. Every geometric unit pair admits four common sections with quotient dimension 44 at degree six for all starts. The simultaneous bad-fiber bound for the fixed four sections is X^136 (X-1)^9 (X^2+X+2), and its possible nontrivial roots already have all-degree certificates."
+    "scope": "Every nonbranch geometric unit pair in characteristic three admits a presentation with the same four normalized central columns (1,2,4,5) through degree six. In an explicit F81 presentation they give dimension 23 instead of 20 at degree nine at all starts. Replacing column 4 by column 3 in that very presentation restores every expected cut dimension through thirteen."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_bivariate_sixth_cut.py",
+      "command": "python computations/verify_rank_fifteen_fixed_center_obstruction.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_bivariate_word_paths.py",
+      "command": "python computations/verify_rank_fifteen_bivariate_sixth_cut.py",
       "result": "PASS"
     },
     {
@@ -33,12 +33,11 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked word-basis parity when appending arrows, compatibility with centrality at length five, rank of all twenty center evaluation maps, separability of all twelve parameter lifts, and the common resultant condition."
+    "scope": "Checked the exact specialized exceptional fiber, the field presentation, Frobenius conjugation, all four ninth-degree character profiles, and the alternative central hyperplane to length thirteen."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Checked the twenty evaluation maps by localized maximal minors, computed all four right-word quotients to degree six over F3(K,H), and descended the degree-(55,44) excluded polynomial using the 12-member free basis and exact resultants.",
-    "reproduction": "Verified all twenty maps using localized maximal minors, all four rational-function quotient profiles through length six, and the two exact resultant bounds on the complete residue fibers."
+    "scope": "Computed the exact quadratic exceptional fiber gcd and specialized the universal center basis in F81. Recomputed all four finite-field quotients for both hyperplanes."
   },
   "tex": {
     "result": "PASS",
@@ -50,19 +49,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected manuscript pages 296 to 298 including the twenty center evaluation maps, degree-six quotient and twelve-representative affine elimination."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "2dd45755302056ef3269b977a27751fd4ec0e5c1",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Every geometric unit pair now has a single presentation and four quartics giving the correct dimensions through degree six at all starts. Extend the descended right-word quotient to degrees seven through thirteen. For simultaneous descent write the union of pivot factors in the 12-element free basis c^i v^j over F3[X,B], X=c^2, B=(v^3-v)^2; eliminate B between the coefficients, not by a surface gcd. If large bivariate intermediate pivots dominate, reuse primitive polynomial rows, degree-six word projections or a second choice of four sections before elimination. Keep the unrestricted nonsymmetric classification active.",
+    "Advance the simultaneous seven-degree cut for the four starts. Four fixed normalized center columns suffice through degree six throughout the nonbranch unit surface, but they can give 23 instead of 20 in degree nine: allow a second center hyperplane as well as alternative parameter representatives in higher degrees. Use twelve coefficient resultants or componentwise orbit intersections to bound bad fibers and certify the finite residue points. Continue the unrestricted nonsymmetric classification.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

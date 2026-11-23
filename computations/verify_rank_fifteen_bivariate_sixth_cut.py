@@ -6,7 +6,7 @@ from itertools import accumulate, combinations, permutations, product
 from operator import xor
 from math import prod
 
-from flint import nmod_mpoly_ctx, nmod_poly
+from flint import fmpz_mod_poly_ctx, fq_default_ctx, fq_default_poly_ctx, nmod_mpoly_ctx, nmod_poly
 import sympy as sp
 
 from verify_klein_center_lift import add_multiple
@@ -45,7 +45,7 @@ def sections(basis, pivs, selected):
     return out
 
 
-def quotient(cuts, start, limit):
+def quotient_profile(cuts, start, limit, one, entries, power, reduce_rows):
     basis = {(0, h): [()] if h == 0 else [] for h in range(4)}
     arrows = {}
     ell = lambda w: word_parity(start, w)
@@ -53,7 +53,7 @@ def quotient(cuts, start, limit):
     @cache
     def image(w):
         if not w:
-            return {0: field.one}
+            return {0: one}
         a = w[-1]
         pre = w[:-1]
         h = reduce(xor, pre, 0)
@@ -61,7 +61,7 @@ def quotient(cuts, start, limit):
         for j, x in image(pre).items():
             nr = basis[len(pre), h][j]
             e = ell(w) - ell(pre) + ell(nr) - ell(nr + (a,))
-            add_multiple(out, arrows[len(pre), h, a][j], x * adjust(e))
+            add_multiple(out, arrows[len(pre), h, a][j], x * power(e))
         return out
 
     for n in range(1, limit + 1):
@@ -79,9 +79,9 @@ def quotient(cuts, start, limit):
                             b = a ^ g
                             tw = (a, b, k, k ^ g)
                             tw = tw[-p:] + tw[:-p]
-                            if tw not in tensor:
+                            if tw not in entries:
                                 continue
-                            exponent, entry = tensor[tw]
+                            exponent, entry = entries[tw]
                             for idx, z in arrows[n - 2, h ^ g, a][j].items():
                                 nr = basis[n - 1, h ^ b][idx]
                                 e = (
@@ -93,7 +93,7 @@ def quotient(cuts, start, limit):
                                 if shift is None:
                                     shift = e % 2
                                 col = off[b] + idx
-                                row[col] = row.get(col, 0) + entry * z * adjust(
+                                row[col] = row.get(col, 0) + entry * z * power(
                                     e - shift
                                 )
                         rows.append({j: z for j, z in row.items() if z})
@@ -107,14 +107,14 @@ def quotient(cuts, start, limit):
                             nr = basis[3, b][j]
                             e = ell(w) - ell(pre) + ell(nr) - ell(nr + (b,))
                             col = off[b] + j
-                            row[col] = row.get(col, 0) + x * z * adjust(e)
+                            row[col] = row.get(col, 0) + x * z * power(e)
                     rows.append({j: z for j, z in row.items() if z})
-            piv = echelon(rows)
+            piv = reduce_rows(rows)
             free = [j for j in range(len(words)) if j not in piv]
             ids = {j: k for k, j in enumerate(free)}
             basis[n, h] = [words[j] for j in free]
             proj = [
-                {ids[j]: field.one}
+                {ids[j]: one}
                 if j in ids
                 else {ids[k]: -z for k, z in piv[j].items() if k != j}
                 for j in range(len(words))
@@ -122,13 +122,18 @@ def quotient(cuts, start, limit):
             for a in range(4):
                 arrows[n - 1, h ^ a, a] = proj[off[a] : off[a + 1]]
         dims = [len(basis[n, h]) for h in range(4)]
+        yield n, dims
+    image.cache_clear()
+
+
+def quotient(cuts, start, limit):
+    for n, dims in quotient_profile(cuts, start, limit, field.one, tensor, adjust, echelon):
         assert sum(dims) == (1, 4, 10, 20, 31, 40, 44, 40, 31, 20, 10, 4, 1, 0)[n], (
             n,
             dims,
         )
         print("cut", start, n, dims, len(factors), flush=True)
         yield n, set(factors)
-    image.cache_clear()
 
 
 allowed = [parameter_k.n, parameter_h.n, (parameter_k - 1).n, (parameter_k + 1).n] + [
@@ -292,12 +297,16 @@ def reduced_power(n):
     )
 
 
-def horizontal_bound(polynomial):
+def orbit_coefficients(polynomial):
     coefficients = [[base.constant(0) for j in range(6)] for i in range(2)]
     for (j, i), a in polynomial.to_dict().items():
         for e, r in enumerate(reduced_power(j)):
             coefficients[i % 2][e] += int(a) * X ** (i // 2) * r
-    nonzero = [r for row in coefficients for r in row if r]
+    return [r for row in coefficients for r in row if r]
+
+
+def horizontal_bound(polynomial):
+    nonzero = orbit_coefficients(polynomial)
     # Every bad pair kills every coefficient. Any subset of pairwise resultants
     # therefore gives a necessary horizontal condition, including at a degree drop.
     bound = None
@@ -317,6 +326,20 @@ def horizontal_bound(polynomial):
     return bound * pow(int(bound.leading_coefficient()), -1, 3)
 
 
+def sixth_fiber(polynomial):
+    f = fq_default_ctx(modulus=fmpz_mod_poly_ctx(3)([2, 1, 1]), var="t")
+    x = f.gen()
+    ring = fq_default_poly_ctx(f)
+    common = ring.zero()
+    for coefficient in orbit_coefficients(polynomial):
+        values = [f.zero() for _ in range(coefficient.degrees()[1] + 1)]
+        for (i, j), z in coefficient.to_dict().items():
+            values[j] += int(z) * x**i
+        common = common.gcd(ring(values))
+    assert common == ring.gen() - (x + 1)
+    print("The simultaneous exceptional fiber is B = X + 1.", flush=True)
+
+
 def verify_orbits(results):
     t = nmod_poly([0, 1], 3)
     for n, degree, expected in (
@@ -328,6 +351,8 @@ def verify_orbits(results):
         bound = horizontal_bound(polynomial)
         assert bound == expected
         print("Length", n, "horizontal bound factors", bound.factor()[1], flush=True)
+        if n == 6:
+            sixth_fiber(polynomial)
 
 
 if __name__ == "__main__":

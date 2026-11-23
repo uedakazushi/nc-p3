@@ -318,7 +318,8 @@
       "rank_fifteen_prime_parabolic_pencils": "sections/rank_fifteen_prime_parabolic_pencils.tex",
       "rank_fifteen_quadratic_parabolic_pencils": "sections/rank_fifteen_quadratic_parabolic_pencils.tex",
       "rank_fifteen_bivariate_word_paths": "sections/rank_fifteen_bivariate_word_paths.tex",
-      "rank_fifteen_bivariate_sixth_cut": "sections/rank_fifteen_bivariate_sixth_cut.tex"
+      "rank_fifteen_bivariate_sixth_cut": "sections/rank_fifteen_bivariate_sixth_cut.tex",
+      "rank_fifteen_fixed_center_obstruction": "sections/rank_fifteen_fixed_center_obstruction.tex"
     },
     {
       "id": "UNRESTRICTED-SINGLY-SYMMETRIC-14",
