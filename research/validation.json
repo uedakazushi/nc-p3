@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Checked the twenty evaluation maps by localized maximal minors, computed all four right-word quotients to degree six over F3(K,H), and descended the degree-(55,44) excluded polynomial using the 12-member free basis and exact resultants."
+    "scope": "Checked the twenty evaluation maps by localized maximal minors, computed all four right-word quotients to degree six over F3(K,H), and descended the degree-(55,44) excluded polynomial using the 12-member free basis and exact resultants.",
+    "reproduction": "Verified all twenty maps using localized maximal minors, all four rational-function quotient profiles through length six, and the two exact resultant bounds on the complete residue fibers."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript pages 296 to 298 including the twenty center evaluation maps, degree-six quotient and twelve-representative affine elimination."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "2dd45755302056ef3269b977a27751fd4ec0e5c1",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Every geometric unit pair now has a single presentation and four quartics giving the correct dimensions through degree six at all starts. Extend the descended right-word quotient to degrees seven through thirteen. For simultaneous descent write the union of pivot factors in the 12-element free basis c^i v^j over F3[X,B], X=c^2, B=(v^3-v)^2; eliminate B between the coefficients, not by a surface gcd. If large bivariate intermediate pivots dominate, reuse primitive polynomial rows, degree-six word projections or a second choice of four sections before elimination. Keep the unrestricted nonsymmetric classification active.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "875efbef754b2d4375b6f8bcd1ca1b10c761a3f1",
+    "commit": "2a76f605008147224b99f0382a2122a7f9ee966e",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
