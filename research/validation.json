@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-23",
-  "version": 192,
+  "version": 193,
   "reviewed_input": {
-    "source_commit": "c8a7c900f80f92a19d902c4c31333fdc3814cef3"
+    "source_commit": "dd0208a43d9b29dbfaa0362ba1f12e5054469fd3"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every ordinary rank-fifteen window on every nonzero geometric level of y=lambda(1-x)^2 is standard Koszul left/right AS-regular and free of rank 256 over four central quartics per start if lambda lies in any number field having a place above three of residue degree at most two. All F9 residual ratios are certified at arbitrary geometric X. The explicit word-parity formula descends all graded path, character-zero central, and corresponding central quotient rank calculations to the bivariate rational field without the joint radical."
+    "scope": "For every characteristic-three signed unit presentation with KH(K^2-1)((K^2-1)^2-4H^2)((K+1)^2-H^2)((K-1)^2-H^2) nonzero, all four uncut path windows through degree five have the standard dimensions and the full quartic center has Klein dimensions (5,0,0,0) in the Walsh gauge. The same five central free columns work throughout the entire geometric nonbranch unit surface. The bivariate rank certificate inverts only the ten polynomials already excluded from the open chart."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_quadratic_parabolic_pencils.py",
+      "command": "python computations/verify_rank_fifteen_bivariate_word_paths.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_prime_parabolic_pencils.py",
+      "command": "python computations/verify_rank_fifteen_quadratic_parabolic_pencils.py",
       "result": "PASS"
     },
     {
@@ -33,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked the field of the reciprocal horizontal coordinate, all Galois orbits and norm divisors, the minimal-polynomial obstruction, and concatenation and central commutator parity."
+    "scope": "Checked the parity exponents in prepended words and relation rows, all four character dimensions at each start, monic rational-function reduction, and specialization of doubled central equations."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Recomputed all three nonprime ratio pencils over F81(q), the four central cuts and three complete exceptional level lists. Verified all remaining degree-4, 6 and 8 fibers and the word parity formula in every cyclic tensor component.",
-    "reproduction": "Verified all three F81(q) computations through length thirteen with clean process exits, all nine finite exceptional polynomials, all cyclic descent parities and the previous prime-ratio pencil. Fixed the lifetime of the native coefficient context during garbage collection."
+    "scope": "Verified all bivariate path and central ranks in F3(K,H) and both signs of the joint radical. The degree-zero-character center matrix has rank 39 in 44 columns; each remaining doubled matrix has rank 64, using only the ten input chart factors."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 324,
+      "nc-p3": 325,
       "plan_ja": 8,
       "notes_ja": 17
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected manuscript pages 294 to 296 including quadratic-residue pencil degrees, the arithmetic exclusion and the word-scaling formula."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "546745e2dfdd0af2cb522dbba591b1ded6bc9723",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Use the proved word parity descent on the universal 36-entry tensor. Over the direct bivariate rational field k(K,H), multiply normalized homogeneous words using the recorded associator for omega(g,h)=g_low*h_high to compute the generic path and character-zero central-cut pivot loci, compare independent presentations, and descend their common exceptional set. On any still-exceptional algebraic pair both x and lambda=y/(1-x)^2 have 3-integral unit minimal polynomials coprime modulo 3 to T^9-T. The entire F9 ratio pencil and F9 x verticals are certified. Continue unrestricted nonsymmetric coverage independently.",
+    "The two-parameter elimination over F3(K,H) now gives globally valid uncut path projections through five and a fixed basis for the entire quartic center on every nonbranch unit residue; its five generators have character zero. Use these projections to evaluate the center at each start, multiply all generators by arrows, and continue the four-cut quotient through thirteen in the scaled word basis. For higher degrees control polynomial growth via primitive polynomial rows or two-sided path overlaps; intersect independent charts at the level of ideals, since a gcd alone misses isolated points on a surface. The entire branch and all F9 x or ratio lines are already certified. Unrestricted nonsymmetric windows remain open.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {

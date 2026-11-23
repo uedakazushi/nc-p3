@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-23",
-  "version": 192,
+  "version": 193,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -2145,6 +2145,15 @@
       "verification": [
         "computations/verify_rank_fifteen_quadratic_parabolic_pencils.py"
       ]
+    },
+    {
+      "id": "RANK-FIFTEEN-UNIVERSAL-BIVARIATE-PATHS-AND-CENTER",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "For every characteristic-three signed unit presentation with KH(K^2-1)((K^2-1)^2-4H^2)((K+1)^2-H^2)((K-1)^2-H^2) nonzero, all four uncut path windows through degree five have the standard dimensions and the full quartic center has Klein dimensions (5,0,0,0) in the Walsh gauge. The same five central free columns work throughout the entire geometric nonbranch unit surface. The bivariate rank certificate inverts only the ten polynomials already excluded from the open chart.",
+      "proof": "sections/rank_fifteen_bivariate_word_paths.tex",
+      "verification": [
+        "computations/verify_rank_fifteen_bivariate_word_paths.py"
+      ]
     }
   ],
   "document_paths": {
@@ -2208,7 +2217,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "c8a7c900f80f92a19d902c4c31333fdc3814cef3",
+  "reviewed_source_commit": "dd0208a43d9b29dbfaa0362ba1f12e5054469fd3",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -2217,15 +2226,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Use the proved word parity descent on the universal 36-entry tensor. Over the direct bivariate rational field k(K,H), multiply normalized homogeneous words using the recorded associator for omega(g,h)=g_low*h_high to compute the generic path and character-zero central-cut pivot loci, compare independent presentations, and descend their common exceptional set. On any still-exceptional algebraic pair both x and lambda=y/(1-x)^2 have 3-integral unit minimal polynomials coprime modulo 3 to T^9-T. The entire F9 ratio pencil and F9 x verticals are certified. Continue unrestricted nonsymmetric coverage independently.",
+    "immediate_next_action": "The two-parameter elimination over F3(K,H) now gives globally valid uncut path projections through five and a fixed basis for the entire quartic center on every nonbranch unit residue; its five generators have character zero. Use these projections to evaluate the center at each start, multiply all generators by arrows, and continue the four-cut quotient through thirteen in the scaled word basis. For higher degrees control polynomial growth via primitive polynomial rows or two-sided path overlaps; intersect independent charts at the level of ideals, since a gcd alone misses isolated points on a surface. The entire branch and all F9 x or ratio lines are already certified. Unrestricted nonsymmetric windows remain open.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/rank_fifteen_bivariate_word_paths.tex",
       "sections/rank_fifteen_quadratic_parabolic_pencils.tex",
-      "sections/rank_fifteen_prime_parabolic_pencils.tex",
-      "sections/rank_fifteen_quadratic_verticals.tex"
+      "sections/rank_fifteen_genus_two_unit_line.tex"
     ],
     "known_obstruction": "Possible isolated interior failures of all-degree regularity on the (x,y) plane and uncovered general nonsymmetric windows.",
-    "state_of_claim": "All F9 x residues and F9 ratio pencils are certified at arbitrary geometric levels. The universal bivariate nonprime residue problem and unrestricted nonsymmetric windows remain open.",
+    "state_of_claim": "Uncut paths through five and all quartic center sections are uniform on the entire nonbranch geometric unit surface. The arbitrary-residue higher central quotient and unrestricted nonsymmetric windows remain open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

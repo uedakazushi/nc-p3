@@ -1,7 +1,10 @@
 """Certify every quadratic residual ratio Y/(1-X)^2 at arbitrary X."""
 
 import gc
+from functools import cache
 from math import gcd, lcm
+from itertools import combinations, product
+from verify_rank_fifteen_genus_two_unit_line import normalize_support
 from flint import fq_default_ctx, fq_default_poly_ctx
 from verify_rank_fifteen_genus_two_unit_line import central_divisor, unit_model
 from verify_rank_fifteen_quadratic_verticals import (
@@ -98,21 +101,21 @@ def check(g, s):
     raise AssertionError((g, s))
 
 
+def beta(g, h):
+    return (g & 1) * (h >> 1)
+
+
+@cache
+def word_parity(p, word):
+    local = sum((p + j) % 4 == 2 and a == 3 for j, a in enumerate(word))
+    return (local + sum(beta(a, b) for a, b in combinations(word, 2))) % 2
+
+
 def check_descent_parity():
-    from itertools import combinations, product
-    from verify_rank_fifteen_genus_two_unit_line import normalize_support
-
-    def beta(g, h):
-        return (g & 1) * (h >> 1)
-
-    def parity(p, word):
-        local = sum((p + j) % 4 == 2 and a == 3 for j, a in enumerate(word))
-        return (local + sum(beta(a, b) for a, b in combinations(word, 2))) % 2
-
     for word, (_, powers) in normalize_support().items():
         for p in range(4):
             shifted = word[p:] + word[:p]
-            assert parity(p, shifted) == powers[3] % 2
+            assert word_parity(p, shifted) == powers[3] % 2
     for g, h, k in product(range(4), repeat=3):
         difference = beta(h, k) + beta(g, h ^ k) - beta(g, h) - beta(g ^ h, k)
         assert difference % 2 == 0 and (0 not in (g, h, k) or difference == 0)

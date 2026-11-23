@@ -5,12 +5,27 @@ finite-field evaluations, or interpolation are used. Independent field contexts
 can coexist; the default field is QQ(u,v).
 """
 from functools import lru_cache
-from flint import fmpq_mpoly_ctx, fmpq
+from flint import fmpq_mpoly_ctx, fmpq, nmod_mpoly_ctx
 import sympy as s
 
 
-def rational_function_field(names=('u', 'v')):
-    ctx = fmpq_mpoly_ctx.get(tuple(names))
+def rational_function_field(names=('u', 'v'), *, prime=None):
+    if prime is None:
+        ctx = fmpq_mpoly_ctx.get(tuple(names))
+    else:
+        if not s.isprime(prime):
+            raise ValueError("The coefficient modulus must be prime")
+        ctx = nmod_mpoly_ctx.get(tuple(names), prime)
+
+    def scalar(value):
+        value = fmpq(value)
+        if prime is None:
+            return value
+        denominator = int(value.denominator) % prime
+        if denominator == 0:
+            raise ZeroDivisionError
+        return int(value.numerator) * pow(denominator, -1, prime) % prime
+
     variables = s.symbols(tuple(names))
     unit = ctx.constant(1)
 
@@ -35,7 +50,7 @@ def rational_function_field(names=('u', 'v')):
         def coerce(other):
             if isinstance(other, Element):
                 return other
-            return Element(ctx.constant(fmpq(other)))
+            return Element(ctx.constant(scalar(other)))
 
         def __bool__(self):
             return bool(self.n)
@@ -78,6 +93,11 @@ def rational_function_field(names=('u', 'v')):
         def __rtruediv__(self, other):
             return self.coerce(other) / self
 
+        def __pow__(self, exponent):
+            if exponent < 0:
+                return Element(self.d**(-exponent), self.n**(-exponent))
+            return Element(self.n**exponent, self.d**exponent)
+
         def __repr__(self):
             return f'({self.n})/({self.d})'
 
@@ -96,7 +116,7 @@ def rational_function_field(names=('u', 'v')):
         def from_sympy(expression):
             numerator, denominator = s.fraction(s.cancel(expression))
             def polynomial(value):
-                return ctx.from_dict({monomial: fmpq(int(coefficient.p), int(coefficient.q))
+                return ctx.from_dict({monomial: scalar(fmpq(int(coefficient.p), int(coefficient.q)))
                     for monomial, coefficient in s.Poly(value, *variables).terms()})
             return Element(polynomial(numerator), polynomial(denominator))
 
