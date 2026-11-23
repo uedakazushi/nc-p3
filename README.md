@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-23 / v176。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-23 / v177。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -330,6 +330,8 @@ x=0 の全窓を正則と証明し、添字保持同型類を穴あき二次曲�
 
 単元座標の非分岐極と非衝突の接方向で、正付値の深さの制限を外した。[証明と判定](sections/rank_fifteen_unit_pole_depth.tex)
 
+外側の極を二変数で表示し、4ν(x−1)=ν(y)>0 の全点を標数零で決定した。[証明と判定](sections/rank_fifteen_outer_pole.tex)
+
 縦切片 $x=1$ の正付値領域を全て認証し、全有理水準で添字保持同型類と最小周期を決定した。[証明と判定](sections/rank_fifteen_vertical_one.tex)
 
 座標1の単元剰余を種数1の48重被覆で表し、縦切片の三次以下の全代数的水準を決定した。[証明と判定](sections/rank_fifteen_vertical_unit_levels.tex)
@@ -479,6 +481,7 @@ python3 computations/verify_rank_fifteen_pole_slope_annulus.py
 python3 computations/verify_rank_fifteen_pole_fibers.py
 python3 computations/verify_rank_fifteen_ramified_pole.py
 python3 computations/verify_rank_fifteen_unit_pole_depth.py
+python3 computations/verify_rank_fifteen_outer_pole.py
 python3 computations/verify_rank_fifteen_vertical_one.py
 python3 computations/verify_rank_fifteen_unit_residues.py
 python3 computations/verify_rank_fifteen_vertical_unit_levels.py

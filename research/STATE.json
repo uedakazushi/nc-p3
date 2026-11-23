@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-23",
-  "version": 176,
+  "version": 177,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -2001,6 +2001,15 @@
       "verification": [
         "computations/verify_rank_fifteen_vertical_all_levels.py"
       ]
+    },
+    {
+      "id": "RANK-FIFTEEN-OUTER-BALANCED-RAY",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "All ordinary characteristic-zero rank-fifteen windows with 0<4 nu(x-1)=nu(y) at a prime above 3 are standard Koszul, left/right AS-regular and free of rank 256 per start over four central quartics. The entire open outer sector 0<2 nu(x-1)<nu(y) has integral path coordinates with two positive-valuation parameters w,u and H=uw.",
+      "proof": "sections/rank_fifteen_outer_pole.tex",
+      "verification": [
+        "computations/verify_rank_fifteen_outer_pole.py"
+      ]
     }
   ],
   "document_paths": {
@@ -2064,7 +2073,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "dabcbee33f846429ddeab04dce934021f50cc825",
+  "reviewed_source_commit": "a410411678df60c30d9d01389d8f0eb77f673cfb",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -2073,15 +2082,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Resolve the outer pole sector 0<2 nu(x-1)<nu(y) using independent small parameters w and u, with H=uw and w^2=(1-2AB)/2. Test the balanced direction u=mw in characteristic zero and compare the two edge Smith lists with weighted diagonal lists. For the inner sector only intermediate collisions 0<nu(J-1)<9nu(y) remain outside known charts. Continue the nonunit pole and nonsymmetric obligations.",
+    "immediate_next_action": "In the outer chart w,u compare Smith lists on the boundary rays (1,0),(1,1),(1,2),(0,1) with their neighboring weighted diagonals, and certify every residual unit on u=m w^2. Then handle the intermediate collision above J=1, the nonunit pole charts, and unrestricted nonsymmetric windows.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/rank_fifteen_vertical_all_levels.tex",
-      "sections/rank_fifteen_vertical_unit_levels.tex",
-      "sections/rank_fifteen_unit_pole_depth.tex"
+      "sections/rank_fifteen_outer_pole.tex",
+      "sections/rank_fifteen_unit_pole_depth.tex",
+      "sections/rank_fifteen_ramified_pole.tex"
     ],
     "known_obstruction": "Possible isolated interior failures of all-degree regularity on the (x,y) plane and uncovered general nonsymmetric windows.",
-    "state_of_claim": "The full ordinary x=1 vertical is classified in every characteristic-zero algebraically closed field. Other plane loci and unrestricted nonsymmetric windows remain.",
+    "state_of_claim": "The balanced outer ray is certified at every depth. Other outer slopes, intermediate inner collisions, the nonunit pole directions and nonsymmetric cases remain.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-23",
-  "version": 176,
+  "version": 177,
   "reviewed_input": {
-    "source_commit": "dabcbee33f846429ddeab04dce934021f50cc825"
+    "source_commit": "a410411678df60c30d9d01389d8f0eb77f673cfb"
   },
   "generation": {
     "result": "PASS",
-    "scope": "On the entire ordinary characteristic-zero rank-fifteen vertical x=1, all windows are standard Koszul left/right AS-regular and free of rank 256 per start over four central quartics. Over every nonzero y there are four indexed isomorphism classes, except for two at 1/27, all of minimum period two. More generally every unit y over every residue field at xbar=1 is certified."
+    "scope": "All ordinary characteristic-zero rank-fifteen windows with 0<4 nu(x-1)=nu(y) at a prime above 3 are standard Koszul, left/right AS-regular and free of rank 256 per start over four central quartics. The entire open outer sector 0<2 nu(x-1)<nu(y) has integral path coordinates with two positive-valuation parameters w,u and H=uw."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_vertical_all_levels.py",
+      "command": "python computations/verify_rank_fifteen_outer_pole.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_vertical_unit_levels.py",
+      "command": "python computations/verify_rank_fifteen_unit_pole_depth.py",
       "result": "PASS"
     },
     {
@@ -33,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked specialization of all inverted norms and the separable degree-24 map, every exceptional fiber and all four starts, and the assembly with the pole and positive-depth charts."
+    "scope": "Checked the unramified Jacobian of the scaled slope map and the four fourth-root presentations for every residual slope."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Computed the elliptic pivot divisor of degree 204451, the degree-784 invariant core, all complete degree-24 fibers, and the last exceptional sextic directly over F_(3^6).",
-    "reproduction": "Recomputed all four elliptic function-field cuts, the squarefree norm divisor of degree 204451, its degree-784 core and all four complete fibers; checked the last sextic directly in F_729."
+    "scope": "Ran two 32-digit characteristic-zero eliminations over Q(m), with prime divisors m-1 and m^2+m+2, and checked their leading-denominator divisors."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 305,
+      "nc-p3": 306,
       "plan_ja": 8,
       "notes_ja": 16
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected manuscript page 279 with the global elliptic norm certificate and the full vertical classification."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "7b02c4dc0161849e55d0ece9eabcadbb39923ffa",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "Resolve the outer pole sector 0<2 nu(x-1)<nu(y) using independent small parameters w and u, with H=uw and w^2=(1-2AB)/2. Test the balanced direction u=mw in characteristic zero and compare the two edge Smith lists with weighted diagonal lists. For the inner sector only intermediate collisions 0<nu(J-1)<9nu(y) remain outside known charts. Continue the nonunit pole and nonsymmetric obligations.",
+    "In the outer chart w,u compare Smith lists on the boundary rays (1,0),(1,1),(1,2),(0,1) with their neighboring weighted diagonals, and certify every residual unit on u=m w^2. Then handle the intermediate collision above J=1, the nonunit pole charts, and unrestricted nonsymmetric windows.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
