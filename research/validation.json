@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Computed the elliptic pivot divisor of degree 204451, the degree-784 invariant core, all complete degree-24 fibers, and the last exceptional sextic directly over F_(3^6)."
+    "scope": "Computed the elliptic pivot divisor of degree 204451, the degree-784 invariant core, all complete degree-24 fibers, and the last exceptional sextic directly over F_(3^6).",
+    "reproduction": "Recomputed all four elliptic function-field cuts, the squarefree norm divisor of degree 204451, its degree-784 core and all four complete fibers; checked the last sextic directly in F_729."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected manuscript page 279 with the global elliptic norm certificate and the full vertical classification."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "7b02c4dc0161849e55d0ece9eabcadbb39923ffa",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Resolve the outer pole sector 0<2 nu(x-1)<nu(y) using independent small parameters w and u, with H=uw and w^2=(1-2AB)/2. Test the balanced direction u=mw in characteristic zero and compare the two edge Smith lists with weighted diagonal lists. For the inner sector only intermediate collisions 0<nu(J-1)<9nu(y) remain outside known charts. Continue the nonunit pole and nonsymmetric obligations.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "54244369bdf241f606d81d1402859e91576d9167",
+    "commit": "982129ad7037bb162f6335ae518cc394217308d3",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
