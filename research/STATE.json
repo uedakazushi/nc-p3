@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-23",
-  "version": 184,
+  "version": 185,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -2073,6 +2073,15 @@
       "verification": [
         "computations/verify_rank_fifteen_negative_x_boundary.py"
       ]
+    },
+    {
+      "id": "RANK-FIFTEEN-NEGATIVE-X-TWO-ARC-TUBES",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "In the negative-x cone with w and g both of positive valuation, nu(g-w^2)>=37nu(w) and nu(w-g^2)>=21nu(g) are regular neighborhoods with the four-center rank 256 at every start. Their 308 exact Smith lists show 254 matches with the proposed edge sum on the first arc, and 307 on the second. The sole second-arc difference is three orders 0 to 1 in the character-one quartic center.",
+      "proof": "sections/rank_fifteen_negative_x_arcs.tex",
+      "verification": [
+        "computations/verify_rank_fifteen_negative_x_arcs.py"
+      ]
     }
   ],
   "document_paths": {
@@ -2136,7 +2145,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "fc9228e798cf7ec41c158cf4ac9cdb258657a6f4",
+  "reviewed_source_commit": "b7783ddb176c7d156879361e260fb8be89bb3b32",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -2145,15 +2154,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "For negative nu(x) only the strict cone nu(y)>2nu(x) remains beyond the certified 21-digit neighborhood of g=w. In coordinates w=s-i, g=r/w subdivide first at g=m w, where nu(y)=nu(x) and the residue of y/x is m^4/4. Compute the 21-digit (or adaptive-precision) generic Q(i)(m) Smith lists and pivot divisor; compare the subdivided cones at (w,g)=(t,t^2) and (t^2,t), and align central word coordinates. The prior two uncut boundary profiles disagree with the diagonal at length four. On the separate xbar=-1 geometric unit-residue problem use the genus-97 cover for residue degrees beyond four. General other unit residues and unrestricted nonsymmetric windows are open.",
+    "immediate_next_action": "For negative x valuation the equality boundary is complete. In the remaining strict cone start with the generic g=m w ray over Q(i)(m), compute its unit pivot divisor, then treat the rays g=m w^2 and w=m g^2 or refine according to the generic exponents. The m=1 probes on the three rays are certified. At (w,g)=(t^2,t) the only mismatch with the balanced diagonal is three 0-to-1 indices in the character-one quartic center despite identical maximal losses. At (t,t^2) four of the sixteen uncut length-four matrices already disagree with the proposed edge sum. Check the center frame before passing to the four cuts. Arbitrary unit residue levels at xbar=-1 beyond degree four (genus-97 cover), other general units, and unrestricted nonsymmetric branches remain open.",
     "read_first": [
       "research/plan_ja.tex",
+      "sections/rank_fifteen_negative_x_arcs.tex",
       "sections/rank_fifteen_negative_x_boundary.tex",
-      "sections/rank_fifteen_negative_unit_levels.tex",
-      "sections/rank_fifteen_outer_pole_fan.tex"
+      "sections/rank_fifteen_negative_unit_levels.tex"
     ],
     "known_obstruction": "Possible isolated interior failures of all-degree regularity on the (x,y) plane and uncovered general nonsymmetric windows.",
-    "state_of_claim": "At negative x valuation the whole closed lower cone is certified. Part of the strict upper cone, arbitrary high-degree unit residues and the unrestricted nonsymmetric classification remain open.",
+    "state_of_claim": "Two further neighborhoods of the open negative-x cone are certified. The remaining negative-x cone, arbitrary other unit residues and the unrestricted nonsymmetric branches remain open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

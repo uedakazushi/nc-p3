@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
   "date": "2026-11-23",
-  "version": 184,
+  "version": 185,
   "reviewed_input": {
-    "source_commit": "fc9228e798cf7ec41c158cf4ac9cdb258657a6f4"
+    "source_commit": "b7783ddb176c7d156879361e260fb8be89bb3b32"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For nu(x)<0 the entire equality ray nu(y)=2nu(x) is certified at every geometric residue slope by the genus-one boundary. The previously proved lower pole cone therefore extends to the closed half-plane nu(y)<=2nu(x). In the strict cone the mixed-characteristic tube nu(g-w)>=21nu(w)>0 is also certified. The direct two-boundary Smith equality already fails in eight of the sixteen uncut length-four matrices."
+    "scope": "In the negative-x cone with w and g both of positive valuation, nu(g-w^2)>=37nu(w) and nu(w-g^2)>=21nu(g) are regular neighborhoods with the four-center rank 256 at every start. Their 308 exact Smith lists show 254 matches with the proposed edge sum on the first arc, and 307 on the second. The sole second-arc difference is three orders 0 to 1 in the character-one quartic center."
   },
   "checks": [
     {
@@ -15,11 +15,11 @@
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_negative_x_boundary.py",
+      "command": "python computations/verify_rank_fifteen_negative_x_arcs.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_negative_unit_levels.py",
+      "command": "python computations/verify_rank_fifteen_negative_x_boundary.py",
       "result": "PASS"
     },
     {
@@ -33,36 +33,32 @@
   ],
   "proof_review": {
     "result": "TARGETED",
-    "scope": "Checked slope lifting, the orbit descent under the eight conic transformations, and specialization of the 21-digit Gaussian diagonal calculation to its full valuation tube."
+    "scope": "Verified the integral perturbation bounds and invariant slopes, and compared complete ordered Smith lists instead of degree maxima."
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Computed the genus-one generic cuts from all four starts through length 13, descended the pivot divisor, verified residual fibers, and compared the Gaussian diagonal to the known conic boundary.",
-    "reproduction": "Recomputed the degree-118054 elliptic pivot divisor and its degree-840 orbit core, verified all 23 closed residue fibers through degree 13, certified the 21-digit diagonal, and identified the eight uncut length-four discrepancies."
+    "scope": "Verified 37 and 21 Gaussian digits, four starts through length 13, 308 ordered comparisons per arc, and the three individual differing center indices."
   },
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 314,
+      "nc-p3": 315,
       "plan_ja": 8,
       "notes_ja": 17
     },
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected manuscript pages 284 through 286 with the full negative-x boundary and 21-digit diagonal proof."
+    "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PASS",
-    "source_commit": "fe2ed7fbe64486c4a8d074697db4b82137292d7e",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
+    "result": "PENDING"
   },
   "open_mathematics": [
-    "For negative nu(x) only the strict cone nu(y)>2nu(x) remains beyond the certified 21-digit neighborhood of g=w. In coordinates w=s-i, g=r/w subdivide first at g=m w, where nu(y)=nu(x) and the residue of y/x is m^4/4. Compute the 21-digit (or adaptive-precision) generic Q(i)(m) Smith lists and pivot divisor; compare the subdivided cones at (w,g)=(t,t^2) and (t^2,t), and align central word coordinates. The prior two uncut boundary profiles disagree with the diagonal at length four. On the separate xbar=-1 geometric unit-residue problem use the genus-97 cover for residue degrees beyond four. General other unit residues and unrestricted nonsymmetric windows are open.",
+    "For negative x valuation the equality boundary is complete. In the remaining strict cone start with the generic g=m w ray over Q(i)(m), compute its unit pivot divisor, then treat the rays g=m w^2 and w=m g^2 or refine according to the generic exponents. The m=1 probes on the three rays are certified. At (w,g)=(t^2,t) the only mismatch with the balanced diagonal is three 0-to-1 indices in the character-one quartic center despite identical maximal losses. At (t,t^2) four of the sixteen uncut length-four matrices already disagree with the proposed edge sum. Check the center frame before passing to the four cuts. Arbitrary unit residue levels at xbar=-1 beyond degree four (genus-97 cover), other general units, and unrestricted nonsymmetric branches remain open.",
     "Unrestricted nonsymmetric classes."
   ],
   "hub_update": {
