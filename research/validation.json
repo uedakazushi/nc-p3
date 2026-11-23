@@ -37,7 +37,8 @@
   },
   "mathematical_computation": {
     "result": "PASS",
-    "scope": "Verified the rational coordinate identities, all coefficients on the limiting axis, and 308 complete Smith lists and the center frames against the previously certified quadratic arc."
+    "scope": "Verified the rational coordinate identities, all coefficients on the limiting axis, and 308 complete Smith lists and the center frames against the previously certified quadratic arc.",
+    "reproduction": "Recomputed the 21-digit pole axis over Q(i), both quartic center characters and every ordered Smith list through degree thirteen."
   },
   "tex": {
     "result": "PASS",
@@ -49,13 +50,16 @@
     "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
   },
   "visual_inspection": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
+    "result": "PASS",
+    "scope": "Inspected pages 286 to 288, including the exact coordinate expressions and the closed-sector criterion."
   },
   "literature_review": {
     "result": "NOT_RUN_THIS_CHECKPOINT"
   },
   "github_save": {
-    "result": "PENDING"
+    "result": "PASS",
+    "source_commit": "1b4020e512a6f8c452742ab49207b7d774e510cb",
+    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
   },
   "open_mathematics": [
     "Use the folded coordinates z=(1/B)^2 and u=rB. The negative-x family depends only on z,u, x=(4+zu^2)(z-1)/z^2 and y=u^4(z-1)^3/z^4. Compute the generic rays z=m u^d for d=1,2,3 over Q(i)(m) and descend the pivot divisors, including at m=0 on the deep side. Compare adjacent cones with the two-parameter Smith lemma and match central word bases. The old g=mw ray is the d=2 ray. The all-depth closed sector 10nu(y)<=19nu(x)<0 is certified. The remaining general units and nonsymmetric branches are still open.",
@@ -63,7 +67,7 @@
   ],
   "hub_update": {
     "result": "PASS",
-    "commit": "7ec51cb5d06dcea3388e62431d1d51c192b9aae7",
+    "commit": "3c01906723fbce22f53c92b91abe0689d4a7d559",
     "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
   }
 }
