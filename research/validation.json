@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 226,
+  "version": 227,
   "date": "2026-11-25",
   "reviewed_input": {
-    "source_commit": "0147d0ad9b0f5646c5ae0e49907d039eec7b4873"
+    "source_commit": "2c86540cb9e73faacc1d36117395737f0d889d71"
   },
   "generation": {
     "result": "PASS",
-    "scope": "On the nine-dimensional half-period frame chart the central quadratic quotient is independent of all three weights. For each frame its standard quotient Hilbert series and vanishing two-sided socles are equivalent to regularity with a regular central polarization at every admissible weight; one good weight suffices. An explicit rational frame and every lift of its good residue in characteristic 53 satisfy this criterion for every nonzero weight, with no valuation restriction on the weights."
+    "scope": "Every nonzero weight at every frame with nonzero diagonal entries of its Gram matrix and its inverse is standard Koszul and AS regular, including tangent coordinate pencils. This finite all-degree criterion covers all closed points of a dense open of the nine-dimensional component. The quadratic dual of the common central quotient is the alternating product of graph subspaces in k^4 plus M2. A Koszul filtration from complementary matrix pencils proves regularity in every degree."
   },
   "checks": [
     {
-      "command": "python computations/verify_half_period_weight_fibers.py",
+      "command": "python computations/verify_half_period_semisimple.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine the common central quotient for general frames, including special frame positions. Use the constant relation subspaces from the two rulings and the four rank-one forms; general closed-point AS membership and unrestricted component coverage remain open."
+    "Analyze frames with isotropic coordinate vectors, where rank-one generators have shorter scalar support, and test whether the semisimple model detects exclusions. Global covering and AS membership outside known charts remain open."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 385,
+      "nc-p3": 387,
       "plan_ja": 9,
       "notes_ja": 18
     },

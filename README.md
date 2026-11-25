@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-25 / v226。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-25 / v227。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -28,7 +28,7 @@ Walsh基底を持つ隣接階数6の四窓は、符号付き平方行列 $N$ の
 
 この枝の階数12は一つの量子窓、階数14は二点除去直線、階数15は境界四点を含む有理曲面の開集合である。階数14の周期1は一点、階数15の周期1は二点である。[テンソルからの認識](sections/walsh_symmetric_windows.tex)・[階数14の同型曲線](sections/walsh_rank_fourteen_orbits.tex)・[階数15の全点分類](sections/rank_fifteen_all_ordinary.tex)
 
-Walsh三次元族は既知の十五次元成分に含まれる。その一般点からはWalsh族の外に次元9の一枝と次元5の三枝の周期2変形が出る。後の三枝はモノドロミーで置換され、大域的な五次元成分は一つである。十五次元成分では、53で指定の窓に還元される持上げが全て正則であり、代数的な最小周期4の正則閉点が稠密にある。[良い還元の判定と証明](sections/unrestricted_good_reduction.tex) 九次元成分の一般窓は滑らかな二次曲面、四直線枠と三自由重みで分類できる。[枠の復元と八固定点](sections/half_period_frame.tex) 九次元成分の三つの重みを変えても中心商は一定で、有理例では全非零重みが正則である。[重み全域の判定](sections/half_period_weight_fibers.tex) 五次元成分の稠密開部分では、二倍率と二つの二次式を満たす平面からテンソルを復元できる。[平面からの復元](sections/half_period_two_quadrics.tex)・[二成分の正規化と安定化群](sections/half_period_components.tex) [成分の同定と四つの周期層](sections/walsh_full_component.tex)
+Walsh三次元族は既知の十五次元成分に含まれる。その一般点からはWalsh族の外に次元9の一枝と次元5の三枝の周期2変形が出る。後の三枝はモノドロミーで置換され、大域的な五次元成分は一つである。十五次元成分では、53で指定の窓に還元される持上げが全て正則であり、代数的な最小周期4の正則閉点が稠密にある。[良い還元の判定と証明](sections/unrestricted_good_reduction.tex) 九次元成分の一般窓は滑らかな二次曲面、四直線枠と三自由重みで分類できる。[枠の復元と八固定点](sections/half_period_frame.tex) 九次元成分の三つの重みを変えても中心商は一定で、有理例では全非零重みが正則である。[重み全域の判定](sections/half_period_weight_fibers.tex) さらにGram行列と逆行列の対角が全て非零なら、九次元成分のこの開集合の全閉点が正則である。[双対の線型フィルトレーション](sections/half_period_semisimple.tex) 五次元成分の稠密開部分では、二倍率と二つの二次式を満たす平面からテンソルを復元できる。[平面からの復元](sections/half_period_two_quadrics.tex)・[二成分の正規化と安定化群](sections/half_period_components.tex) [成分の同定と四つの周期層](sections/walsh_full_component.tex)
 
 非恒等の平面グラフを基底に持つOre窓では、指定点を忘れた同型類も決定した。[正規形と平坦特殊化](sections/plane_graph_ore_windows.tex)・[検算](computations/verify_plane_graph_ore.py)
 
