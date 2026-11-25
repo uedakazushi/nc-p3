@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 207,
+  "version": 208,
   "date": "2026-11-25",
   "reviewed_input": {
-    "source_commit": "add576a831bb7d04c617e73e29b0842c4052bbe7"
+    "source_commit": "0e28459976e252276535bc8ad5b961cc55d00e88"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every maximal-tangent finite AS window whose ternary relations cut out the graph on a reduced plane cubic lies in one of four geometric strata: smooth elliptic, integral nodal, transverse line-conic, or triangle. Each has two base types and all finite corrections are classified up to indexed isomorphism, including exceptional periods. Dimensions per order are 9,8,7,6 and the latter three strata smooth to the corresponding elliptic family. The tangent conic-line, concurrent lines, vertex permutations and pointwise fixed reduced components are excluded."
+    "scope": "Complete classification of the intrinsic locus of standard AS indexed windows with four finite edges and a tangent space of dimension three. No graph hypothesis on the recovered base remains: growth forces all ternary contractions to have rank at least two, giving a plane or cubic graph; every nonreduced cubic graph and the plane are excluded. The maximal point is unique; four curve types, each in two orders, have dimensions 9,8,7,6, with casewise exact regularity, isomorphism, periods and flat specializations to the boundary."
   },
   "checks": [
     {
-      "command": "python computations/verify_singular_tangent_smoothing.py",
+      "command": "python computations/verify_thick_ternary_exclusion.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Study nonreduced ternary graphs scheme-theoretically. At a triple point compare the derivative of the canonical three-tensor map with the cube of the tangent map. If a supporting line is fixed pointwise, use the normal linear form cutting it out to constrain the ternary relations and the binary quadratic/cubic restrictions of the mixed cochains. Also address finite edges without maximal tangent points and the independent ordinary rank-15 central-cut exceptional loci."
+    "Turn to finite windows without a maximal tangent point. For a planar local Artin complete intersection, use the first nonzero graded relation space and its binary Wronskian to choose an intrinsic finite set of tangent flags. Try normalizing the algebra ideal and the three coordinate spaces simultaneously in a truncated polynomial algebra to eliminate continuous isomorphism searches. General AS tests, positive-dimensional edges and the ordinary rank-15 exceptional four-cut locus remain separate outstanding tasks."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 351,
+      "nc-p3": 353,
       "plan_ja": 9,
       "notes_ja": 17
     },

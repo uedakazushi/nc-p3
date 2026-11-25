@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-25 / v207。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-25 / v208。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -13,17 +13,16 @@ Codexは公表しやすさ、分類の巨大さ、局所問題の難しさを理
 分類の枝数・族数・原稿量に上限を設けず、有限検査を通った候補の列挙や、未決定のAS条件を残した一般方程式への還元を完成扱いしない。
 既存の有効な定理・証明・族・反例・計算資産は、完全分類の道具と検証入力として保持する。
 
-四辺の点スキームが有限で、各局所環が曲線状なら、三つの四次元空間から添字保持同型と最小周期を判定できる。非曲線状の場合も各局所点環の自己同型群の単位成分は可解である。[証明](sections/curvilinear_window_orbits.tex)・[再現計算](computations/verify_curvilinear_window_orbits.py)
+四辺の点対応が有限で、ある点の接空間が三次元なら、その点は一意であり、この枝の添字保持同型類は次の四種類で尽きる。各行に一般最小周期2の型と4の型がある。[全被覆の証明](sections/maximal_tangent_classification.tex)・[三生成基底の復元](sections/maximal_tangent_ore.tex)
 
-有限四辺に接空間が三次元の点があれば、三生成部分を内在的に復元できる。四生成の有限Frobenius候補が標準AS正則となる必要十分条件は、その三生成基底が三次元の標準二次Koszul AS正則代数になることである。[Ore表示と同型条件](sections/maximal_tangent_ore.tex)・[検算](computations/verify_maximal_tangent_ore.py)
+| 三生成基底の点曲線 | 各型の同型類の次元 | 正規表示・特殊値での同型と周期 |
+| --- | ---: | --- |
+| 滑らかな平面三次曲線 | 9 | [位数2・4の平行移動と次数12の因子](sections/elliptic_tangent_windows.tex) |
+| 節点三次曲線 | 8 | [節点評価と平滑化](sections/singular_tangent_smoothing.tex) |
+| 横断する直線と二次曲線 | 7 | [二成分の評価と倍率・反転](sections/reduced_ternary_point_graphs.tex) |
+| 非共点三直線 | 6 | [九係数の量子基底表示](sections/quantum_tangent_windows.tex) |
 
-この三生成部分が量子多項式環の場合、有限四辺の全対象は交換係数 $-1$ と原始四乗根の二型になる。各型の六次元族について零係数・二重点を含めて同型と周期を判定し、一般最小周期は順に2と4である。[分類と特殊化](sections/quantum_tangent_windows.tex)・[再現計算](computations/verify_quantum_tangent_windows.py)
-
-三生成部分の点スキームが滑らかな平面三次曲線の場合も有限枝を分類した。位数2または4の平行移動と次数12の因子が同型を決め、二族の次元はともに9である。[証明と正規表示](sections/elliptic_tangent_windows.tex)・[全パラメータの階数検算](computations/verify_elliptic_tangent_windows.py)
-
-節点三次曲線の三生成基底では八次元の二族を得る。尖点三次曲線と平面グラフは除外される。節点基底と量子基底の有限窓は、対応する位数の楕円枝から全係数を含めて平滑化できる。[証明](sections/singular_tangent_smoothing.tex)・[再現計算](computations/verify_singular_tangent_smoothing.py)
-
-この三生成基底の被約な三次曲線グラフは、滑らかな三次曲線、節点三次曲線、横断する直線と二次曲線、非共点三直線の四種類で尽きる。各々に位数2と4の型があり、同型類の次元は順に9、8、7、6である。[被覆と横断二成分の同型・周期](sections/reduced_ternary_point_graphs.tex)
+後の三種類は対応する楕円族の特殊化である。三次元接点を持たない有限四辺では、局所環が全て曲線状なら三つの四次元空間から同型と周期を判定できる。[曲線状の判定](sections/curvilinear_window_orbits.tex)
 
 ## 最初に読む
 

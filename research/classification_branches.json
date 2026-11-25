@@ -37,7 +37,7 @@
       "finite_edge_maximal_tangent": {
         "predicate": "All four edges finite, with a local point of tangent dimension three",
         "structure": "At most two intrinsic marks, each giving a ternary AS3 base and a linear parameter modulo graded base automorphisms.",
-        "proof": "sections/maximal_tangent_ore.tex",
+        "proof": "sections/maximal_tangent_classification.tex",
         "quantum_base": {
           "coverage": "Exhaustive for a marked ternary quantum polynomial base. The mark on each resulting object is unique.",
           "types": [
@@ -112,7 +112,9 @@
           ],
           "proof": "sections/reduced_ternary_point_graphs.tex",
           "specializations": "Each of the latter three strata is in the closure of the smooth family of matching order. No global component claim."
-        }
+        },
+        "coverage": "Complete for all standard AS four-finite-edge windows with at least one tangent space of dimension three. The marked point is unique. The complement has local embedding dimension at most two throughout.",
+        "unresolved_globally": "Windows without such a point, positive-dimensional edges and global irreducible components."
       }
     },
     {
