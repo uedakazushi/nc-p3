@@ -33,7 +33,30 @@
         "proof": "sections/bisymmetric_finite_path_test.tex"
       },
       "binary_growth_test": "sections/binary_window_transfer.tex",
-      "binary_incidence": "sections/binary_incidence_sextic.tex"
+      "binary_incidence": "sections/binary_incidence_sextic.tex",
+      "finite_edge_maximal_tangent": {
+        "predicate": "All four edges finite, with a local point of tangent dimension three",
+        "structure": "At most two intrinsic marks, each giving a ternary AS3 base and a linear parameter modulo graded base automorphisms.",
+        "proof": "sections/maximal_tangent_ore.tex",
+        "quantum_base": {
+          "coverage": "Exhaustive for a marked ternary quantum polynomial base. The mark on each resulting object is unique.",
+          "types": [
+            "cyclic q=-1",
+            "cyclic q a primitive fourth root (inverse roots equivalent)"
+          ],
+          "parameters": "Nine coefficients subject to row and vertex nonvanishing. Integral torus weights and coordinate permutations decide indexed isomorphism at every coefficient.",
+          "dimensions": [
+            6,
+            6
+          ],
+          "generic_periods": [
+            2,
+            4
+          ],
+          "proof": "sections/quantum_tangent_windows.tex",
+          "checks": "computations/verify_quantum_tangent_windows.py"
+        }
+      }
     },
     {
       "id": "OPPOSITE-LOW",

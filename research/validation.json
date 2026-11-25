@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 203,
+  "version": 204,
   "date": "2026-11-25",
   "reviewed_input": {
-    "source_commit": "c53e70fc9e807e6725a12b7b0166e54b5481c07a"
+    "source_commit": "8ded3c9b52c7bb59533dfb4fe1943e5b7fcf8abd"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All four-finite-edge Frobenius candidates with an embedding-dimension-three local point have a canonical four-periodic marked point and a free indexed Ore presentation over a ternary quadratic graded algebra. The candidate is standard AS if and only if its base is Koszul AS3 of polynomial Hilbert series. For each such base a stabilized subquotient of its 18-dimensional space of quadratic corrections computes all marked extensions, indexed isomorphism and shift; unmarked comparison tries at most two points."
+    "scope": "On the finite-four-edge locus with a maximal tangent point and a quantum polynomial ternary base, there are exactly two base types. Each gives an irreducible six-dimensional family of indexed classes. Nine explicit coefficients, row and vertex tests, torus weights and finite permutations decide every exceptional case, local length and period. Generic minimal periods are two and four. All nine-parameter presentations, including positive-dimensional edge specializations, are standard AS."
   },
   "checks": [
     {
-      "command": "python computations/verify_maximal_tangent_ore.py",
+      "command": "python computations/verify_quantum_tangent_windows.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "For a ternary quantum polynomial base, decompose the linear parameter space into multidegrees and compute which commutation parameters can give a finite edge. Determine all resonances, the finite-edge inequalities, unmarked indexed isomorphisms and period strata. For other AS3 bases evaluate the same linear relation; embedding-dimension-two points and the unrestricted non-Ore locus are open. For the ordinary rank-15 curve resolve the residual four-cut rank locus beyond the existing length-13 branch test."
+    "For a ternary AS3 base with smooth elliptic point graph evaluate the Ore recurrence at a triple of consecutive points. Compare the two contraction planes using the ternary potential and test the resulting fourth-power obstruction. Determine the section versus gauge quotient, admissible shift and normal forms. Retain embedding-dimension-two and unrestricted windows, and the ordinary rank-15 four-cut rank locus, as separate open tasks."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 341,
+      "nc-p3": 343,
       "plan_ja": 9,
       "notes_ja": 17
     },

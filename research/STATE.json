@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-25",
-  "version": 203,
+  "version": 204,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -2255,6 +2255,15 @@
         "computations/verify_maximal_tangent_ore.py",
         "computations/ternary_ore_parameters.py"
       ]
+    },
+    {
+      "id": "QUANTUM-BASE-MAXIMAL-TANGENT",
+      "status": "complete_within_stated_branch",
+      "statement": "On the finite-four-edge locus with a maximal tangent point and a quantum polynomial ternary base, there are exactly two base types. Each gives an irreducible six-dimensional family of indexed classes. Nine explicit coefficients, row and vertex tests, torus weights and finite permutations decide every exceptional case, local length and period. Generic minimal periods are two and four. All nine-parameter presentations, including positive-dimensional edge specializations, are standard AS.",
+      "proof": "sections/quantum_tangent_windows.tex",
+      "verification": [
+        "computations/verify_quantum_tangent_windows.py"
+      ]
     }
   ],
   "document_paths": {
@@ -2318,7 +2327,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "c53e70fc9e807e6725a12b7b0166e54b5481c07a",
+  "reviewed_source_commit": "8ded3c9b52c7bb59533dfb4fe1943e5b7fcf8abd",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -2327,16 +2336,16 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "For a ternary quantum polynomial base, decompose the linear parameter space into multidegrees and compute which commutation parameters can give a finite edge. Determine all resonances, the finite-edge inequalities, unmarked indexed isomorphisms and period strata. For other AS3 bases evaluate the same linear relation; embedding-dimension-two points and the unrestricted non-Ore locus are open. For the ordinary rank-15 curve resolve the residual four-cut rank locus beyond the existing length-13 branch test.",
+    "immediate_next_action": "For a ternary AS3 base with smooth elliptic point graph evaluate the Ore recurrence at a triple of consecutive points. Compare the two contraction planes using the ternary potential and test the resulting fourth-power obstruction. Determine the section versus gauge quotient, admissible shift and normal forms. Retain embedding-dimension-two and unrestricted windows, and the ordinary rank-15 four-cut rank locus, as separate open tasks.",
     "read_first": [
       "research/plan_ja.tex",
       "sections/maximal_tangent_ore.tex",
-      "computations/ternary_ore_parameters.py",
-      "sections/quantum_ore.tex",
+      "sections/quantum_tangent_windows.tex",
+      "sections/elliptic_ore_family.tex",
       "sections/three_center_pencil.tex"
     ],
     "known_obstruction": "Possible isolated interior failures of all-degree regularity on the (x,y) plane and uncovered general nonsymmetric windows.",
-    "state_of_claim": "All four-finite-edge Frobenius candidates with an embedding-dimension-three local point have a canonical four-periodic marked point and a free indexed Ore presentation over a ternary quadratic graded algebra. The candidate is standard AS if and only if its base is Koszul AS3 of polynomial Hilbert series. For each such base a stabilized subquotient of its 18-dimensional space of quadratic corrections computes all marked extensions, indexed isomorphism and shift; unmarked comparison tries at most two points. Full classification remains open.",
+    "state_of_claim": "On the finite-four-edge locus with a maximal tangent point and a quantum polynomial ternary base, there are exactly two base types. Each gives an irreducible six-dimensional family of indexed classes. Nine explicit coefficients, row and vertex tests, torus weights and finite permutations decide every exceptional case, local length and period. Generic minimal periods are two and four. All nine-parameter presentations, including positive-dimensional edge specializations, are standard AS. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
