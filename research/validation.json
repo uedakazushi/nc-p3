@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 237,
+  "version": 238,
   "date": "2026-11-25",
   "reviewed_input": {
-    "source_commit": "18a7fb6a899fb8dd4e57ae98d07784d7a3053514"
+    "source_commit": "7aa00ff24c0805346e7a68e56827c30ece9a8da5"
   },
   "generation": {
     "result": "PASS",
-    "scope": "With two pairs of distinct nonunit quantum faces, every window in the attraction fiber is an explicit ordinary graded Ore extension of period one. The face-pair product sign determines whether all four coefficients are free or a cubic overlap requires the mixed and opposite-square coefficients to have zero product. Supports, one ratio, and a group of order four or two give all special isomorphisms and degenerations."
+    "scope": "When all edge projections have zero-dimensional fibers and any one edge is a smooth quadric graph, all edges are compatible quadric graphs. The entire standard branch is an affine line minus one point with parameter m squared plus inverse m squared. Clifford traces prove regularity exactly away from the two excluded values m=plus or minus one, all indexed periods are one, and every class is polystable, has no quantum orbit limit and has no regular normal linear sequence."
   },
   "checks": [
     {
-      "command": "python computations/verify_quantum_double_pair.py",
+      "command": "python computations/verify_smooth_quadric_graphs.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze nonquantum backgrounds through a smooth quadric graph on all adjacent edges: recover the quadratic kernel and its transport, and classify the symplectic commutator branch. Continue the remaining global coverage and AS problem."
+    "Determine all orbits specializing to the new closed smooth-quadric classes by computing the four nonzero transverse weight lines and their quadratic obstructions as functions of m. Investigate the remaining smooth-quadric edges with positive-dimensional neighboring fibers."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 405,
+      "nc-p3": 408,
       "plan_ja": 9,
       "notes_ja": 19
     },

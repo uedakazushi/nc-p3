@@ -495,6 +495,13 @@
       "current_result": "For every finite-Frobenius window admitting a finite left module presentation over four positive weighted iterated Ore parameters, regularity is equivalent to a right-quotient Hilbert test and the left linear complex through the sum of the four weights. No centrality, normality or right-module finiteness of the parameters is needed. The finite test itself certifies finiteness, freeness and both AS conditions on success.",
       "current_proof": "sections/onesided_parameter_cutoff.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SMOOTH-QUADRIC-GRAPHS",
+      "scope": "At least one smooth quadric graph and point fibers at all four projections in each direction.",
+      "current_result": "When all edge projections have zero-dimensional fibers and any one edge is a smooth quadric graph, all edges are compatible quadric graphs. The entire standard branch is an affine line minus one point with parameter m squared plus inverse m squared. Clifford traces prove regularity exactly away from the two excluded values m=plus or minus one, all indexed periods are one, and every class is polystable, has no quantum orbit limit and has no regular normal linear sequence.",
+      "current_proof": "sections/smooth_quadric_graphs.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -552,7 +559,7 @@
     ]
   },
   "date": "2026-11-23",
-  "version": 237,
+  "version": 238,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
