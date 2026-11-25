@@ -45,7 +45,7 @@ def sections(basis, pivs, selected):
     return out
 
 
-def quotient_profile(cuts, start, limit, one, entries, power, reduce_rows):
+def quotient_profile(cuts, start, limit, one, entries, power, reduce_rows, *, inspect_degree=None):
     basis = {(0, h): [()] if h == 0 else [] for h in range(4)}
     arrows = {}
     ell = lambda w: word_parity(start, w)
@@ -122,6 +122,8 @@ def quotient_profile(cuts, start, limit, one, entries, power, reduce_rows):
             for a in range(4):
                 arrows[n - 1, h ^ a, a] = proj[off[a] : off[a + 1]]
         dims = [len(basis[n, h]) for h in range(4)]
+        if inspect_degree is not None:
+            inspect_degree(n, basis, image)
         yield n, dims
     image.cache_clear()
 

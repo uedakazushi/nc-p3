@@ -1,25 +1,30 @@
 {
   "schema_version": 2,
-  "date": "2026-11-23",
-  "version": 199,
+  "version": 200,
+  "date": "2026-11-25",
   "reviewed_input": {
-    "source_commit": "270742e02cb96eac30c9368f05572e3921c2b66a"
+    "source_commit": "47d3a58c6ff5bc8a1d5f0b925db80de01e7f17b6"
   },
   "generation": {
     "result": "PASS",
-    "scope": "At the F81 presentation with X=a^3+a^2+2 and B=X+1, the fixed central columns (1,2,4,5) give ninth-degree dimension 23 for every one of the 12 presentations and every start, including both signs of c. The exchanged columns (1,2,3,5) give the expected dimensions through thirteen at the reference presentation."
+    "scope": "At the specified F81 presentation, the hyperplanes (z1,z2,z5,z4+s*z3) have the expected quotient profile at all four starts through degree 13 exactly off three geometric slopes. For a standard AS window finite over five central quartics, the bad four-planes form the support of a degree-64 determinant from one corner."
   },
   "checks": [
+    {
+      "command": "python computations/verify_rank_fifteen_center_pencil.py",
+      "result": "PASS",
+      "scope": "16 degree-16 determinants over F81, 17 distinct evaluations each, three-cut dimensions at all four starts, injective simultaneous right-arrow maps in degrees 0 through 8."
+    },
     {
       "command": "bash scripts/cloud_preflight.sh --tex",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_ninth_orbit_obstruction.py",
+      "command": "latexmk papers/nc-p3.tex",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_oriented_eighth_cut.py",
+      "command": "latexmk research/notes_ja.tex",
       "result": "PASS"
     },
     {
@@ -31,43 +36,7 @@
       "result": "PASS"
     }
   ],
-  "proof_review": {
-    "result": "TARGETED",
-    "scope": "Checked that the six translations and signs of v exhaust the signed fiber, that the specialized matrices use the identical universal four columns, and that a single exchanged column repairs the reference presentation."
-  },
-  "mathematical_computation": {
-    "result": "PASS",
-    "scope": "Recomputed the finite-field quotient directly at the distinct presentations of the F81 exceptional fiber and compared the complete character profiles through degree nine.",
-    "reproduction": "The degree-seven and signed degree-eight verifiers passed end to end. Verified all forty-eight ninth-degree character profiles on the twelve presentations and the exchanged-four-plane certificate at the reference point."
-  },
-  "tex": {
-    "result": "PASS",
-    "pages": {
-      "nc-p3": 330,
-      "plan_ja": 8,
-      "notes_ja": 17
-    },
-    "engine": "LuaHBTeX; no overfull boxes, missing glyphs or undefined references"
-  },
-  "visual_inspection": {
-    "result": "PASS",
-    "scope": "Inspected manuscript pages 300 to 302, including the twelve presentations, even and odd starting characters, and the exchanged column certificate."
-  },
-  "literature_review": {
-    "result": "NOT_RUN_THIS_CHECKPOINT"
-  },
-  "github_save": {
-    "result": "PASS",
-    "source_commit": "e6de63357b85a801f39001dd04cd9915fdf74b4f",
-    "scope": "Re-fetched main and checked every changed source file byte for byte since the v115 readback at 4038256."
-  },
   "open_mathematics": [
-    "For ninth-degree quotient upper bound 20 at start zero, use more than the fixed columns (1,2,4,5): their dimension is 23 on the entire six-presentation signed F81 test fiber. Use columns (1,2,3,5) there; test alternate and mixed center hyperplanes on the remaining signed exceptional fibers, and intersect the nonempty Grassmannian opens. Degree eight is globally certified for every ordinary characteristic-zero rank-fifteen window. Higher degrees and unrestricted nonsymmetric branches remain open.",
-    "Unrestricted nonsymmetric classes."
-  ],
-  "hub_update": {
-    "result": "PASS",
-    "commit": "1aa60692e5b5eef07c724b202ccad3aaba4f3e33",
-    "scope": "Updated only the nc-p3 row after fetching the hub; re-fetched main and compared its README."
-  }
+    "Compute the quotient by all five central quartics through its first zero degree at start zero over F3(K,H); descend its exclusion factors over the six signed presentations and test residual fibers. A zero degree there proves module finiteness, enabling the one-corner four-plane test. In parallel recover the degree-nine four-column pivot locus and use varying hyperplanes there. General nonsymmetric windows remain uncovered."
+  ]
 }
