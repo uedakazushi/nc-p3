@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-25",
-  "version": 201,
+  "version": 202,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -2236,6 +2236,15 @@
         "computations/verify_finite_square_chart.py",
         "computations/verify_tangent_pencil_window.py"
       ]
+    },
+    {
+      "id": "FINITE-EDGE-SOLVABLE-ORBITS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "For standard AS windows with all four edges finite and curvilinear local factors, labelled Gaussian pivot data and integral Laurent invariants, modulo equal-length permutations, decide indexed isomorphism and minimal shift period even at nonreduced points. For every finite edge of this four-finite-edge branch the local complete intersection has embedding dimension at most three and its connected automorphism group is solvable. For a fixed point algebra the remaining connected orbit problem is therefore triangular.",
+      "proof": "sections/curvilinear_window_orbits.tex",
+      "verification": [
+        "computations/verify_curvilinear_window_orbits.py"
+      ]
     }
   ],
   "document_paths": {
@@ -2299,7 +2308,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "b4d80501ad2f40fb983baf1860472a76cbbdb475",
+  "reviewed_source_commit": "7fea1ee27b1a2b6c451f2315e4b689a84232927c",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -2308,16 +2317,16 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Use the new length-13 equivalence on the positive fixed rank-15 curve to determine the parameter locus of negative answers: compute the generic exchanged-cut profile in characteristic three, carry its pivot divisors to the (X,B) plane, and specialize the remaining fibers with a different hyperplane. The original columns (1,2,4,5) cannot prove the degree-nine target anywhere at start zero on the characteristic-three unit chart. For finite edges, discard cycles of local length below three; for higher local length use the contraction kernels and the four-cycle of nonreduced points in sections/periodic_pbw_graph.tex to test periodic PBW membership, then identify the remaining non-PBW normal forms for the unrestricted branch.",
+    "immediate_next_action": "Use a square in a symmetric web to study a noncurvilinear finite-edge chart. Eliminate the three linear equations at the diagonal ordered pair and identify which ternary nets give length eight. Determine the remaining web coefficients and their equivalence and when the other edge points collide. In parallel research directions retain the ordinary rank-15, four-cut length-13 criterion: characteristic-three exchanged-cut dimensions through seven do not decide its degree-nine bound.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/three_center_pencil.tex",
-      "computations/verify_rank_fifteen_full_center_cut.py",
-      "sections/rank_fifteen_global_invariants.tex",
-      "sections/periodic_pbw_graph.tex"
+      "sections/finite_point_chart.tex",
+      "sections/curvilinear_window_orbits.tex",
+      "sections/periodic_pbw_graph.tex",
+      "sections/three_center_pencil.tex"
     ],
     "known_obstruction": "Possible isolated interior failures of all-degree regularity on the (x,y) plane and uncovered general nonsymmetric windows.",
-    "state_of_claim": "On the ordinary rank-15 branch of the positive fixed curve, every folded algebra in characteristic zero is finite over its quartic center algebra. The full quartic-center quotient vanishes at length 13 at every start, without assuming regularity. The four generic central cuts give a necessary and sufficient length-13 decision for standard Koszul AS regularity on this branch; indexed isomorphism is decided by (x,p,q). Unconditional regularity throughout that parameter plane and coverage of all nonsymmetric windows remain open.",
+    "state_of_claim": "For standard AS windows with all four edges finite and curvilinear local factors, labelled Gaussian pivot data and integral Laurent invariants, modulo equal-length permutations, decide indexed isomorphism and minimal shift period even at nonreduced points. For every finite edge of this four-finite-edge branch the local complete intersection has embedding dimension at most three and its connected automorphism group is solvable. For a fixed point algebra the remaining connected orbit problem is therefore triangular. General AS membership and global coverage remain open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

@@ -1,19 +1,18 @@
 {
   "schema_version": 2,
-  "version": 201,
+  "version": 202,
   "date": "2026-11-25",
   "reviewed_input": {
-    "source_commit": "b4d80501ad2f40fb983baf1860472a76cbbdb475"
+    "source_commit": "7fea1ee27b1a2b6c451f2315e4b689a84232927c"
   },
   "generation": {
     "result": "PASS",
-    "scope": "On the ordinary rank-15 branch of the positive fixed curve, every folded algebra in characteristic zero is finite over its quartic center algebra. The full quartic-center quotient vanishes at length 13 at every start, without assuming regularity. The four generic central cuts give a necessary and sufficient length-13 decision for standard Koszul AS regularity on this branch; indexed isomorphism is decided by (x,p,q)."
+    "scope": "For standard AS windows with all four edges finite and curvilinear local factors, labelled Gaussian pivot data and integral Laurent invariants, modulo equal-length permutations, decide indexed isomorphism and minimal shift period even at nonreduced points. For every finite edge of this four-finite-edge branch the local complete intersection has embedding dimension at most three and its connected automorphism group is solvable. For a fixed point algebra the remaining connected orbit problem is therefore triangular."
   },
   "checks": [
     {
-      "command": "python computations/verify_rank_fifteen_center_pencil.py",
-      "result": "PASS",
-      "scope": "16 degree-16 determinants over F81, 17 distinct evaluations each, three-cut dimensions at all four starts, injective simultaneous right-arrow maps in degrees 0 through 8."
+      "command": "python computations/verify_curvilinear_window_orbits.py",
+      "result": "PASS"
     },
     {
       "command": "bash scripts/cloud_preflight.sh --tex",
@@ -34,34 +33,19 @@
     {
       "command": "git diff --check",
       "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_finite_square_chart.py",
-      "result": "PASS",
-      "scope": "Rank six for each of the twenty bilinear edge Jacobians over Q; the general PBW obstruction uses the graph and tangent-space proofs."
-    },
-    {
-      "command": "python computations/verify_rank_fifteen_full_center_cut.py",
-      "result": "PASS",
-      "scope": "Both generic profiles, bidegree (177,140), all twelve presentation coefficients, degree-22 horizontal gcd, two residual orbits with full four-cut profiles through 13."
-    },
-    {
-      "command": "python computations/verify_tangent_pencil_window.py",
-      "result": "PASS",
-      "scope": "Exact rational Groebner bases verify two finite symmetric charts with different periodic PBW outcomes."
     }
   ],
   "open_mathematics": [
-    "Use the new length-13 equivalence on the positive fixed rank-15 curve to determine the parameter locus of negative answers: compute the generic exchanged-cut profile in characteristic three, carry its pivot divisors to the (X,B) plane, and specialize the remaining fibers with a different hyperplane. The original columns (1,2,4,5) cannot prove the degree-nine target anywhere at start zero on the characteristic-three unit chart. For finite edges, discard cycles of local length below three; for higher local length use the contraction kernels and the four-cycle of nonreduced points in sections/periodic_pbw_graph.tex to test periodic PBW membership, then identify the remaining non-PBW normal forms for the unrestricted branch."
+    "Use a square in a symmetric web to study a noncurvilinear finite-edge chart. Eliminate the three linear equations at the diagonal ordered pair and identify which ternary nets give length eight. Determine the remaining web coefficients and their equivalence and when the other edge points collide. In parallel research directions retain the ordinary rank-15, four-cut length-13 criterion: characteristic-three exchanged-cut dimensions through seven do not decide its degree-nine bound."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 336,
+      "nc-p3": 338,
       "plan_ja": 8,
       "notes_ja": 17
     },
-    "scope": "LuaLaTeX built the three documents. Text extraction from the final manuscript located the new rank-fifteen theorem and the double-point example."
+    "scope": "LuaLaTeX built the manuscript, plan and research notes."
   },
   "hub_update": {
     "result": "BLOCKED",
