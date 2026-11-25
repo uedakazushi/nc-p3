@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-25 / v232。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-25 / v233。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -36,6 +36,8 @@ Walsh三次元族を含む十五次元成分と、そこから出る周期2の�
 - 十五次元成分が量子多項式族と交わるのは反対階数12の一同型類だけである。この点へ退化する全窓は正則で同成分に属し、十八座標の台とトーラス・偶置換で分類できる。対角量子Ore枝の所属も量子背景で決まる。[共通部分の証明](sections/quantum_component_intersection.tex)・[Ore枝の判定](sections/quantum_ore_component_incidence.tex)・[全台の同型・周期・退化](sections/quantum_attraction_fiber.tex)
 
 量子点への退化は、四つの向き付き三角積でも判定できる。四値が相異なればその量子点だけが残る。一対だけが非単位の重複値なら、三係数の台と一つの比で全同型類が決まる。三面が一致する場合は九係数表示のうち平方係数の積が消える三平面で尽くされ、周期は全て1である。[相異なる場合と一対重複](sections/quantum_face_resonance.tex)・[三面一致の場合と九係数表示の正則性](sections/quantum_triple_face.tex)
+
+可換点を含む任意の量子点への退化は、文字の置換を除いて三種類の余指標で尽くされる。各表で重み19までの線型復元を行うと、全次数で正則な窓を生成し、障害のある入力を棄却できる。特殊値の同型・周期・同じファイバー内の退化も有限判定できる。[三表と復元手順](sections/quantum_universal_chambers.tex)・[厳密検算](computations/verify_quantum_weight_recursion.py)
 
 非恒等の平面グラフを基底に持つOre窓では、指定点を忘れた同型類も決定した。[正規形と平坦特殊化](sections/plane_graph_ore_windows.tex)・[検算](computations/verify_plane_graph_ore.py)
 

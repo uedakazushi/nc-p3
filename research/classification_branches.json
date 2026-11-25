@@ -227,7 +227,8 @@
       "attraction_fibers": {
         "four_distinct_or_single_nonunit_pair": "sections/quantum_face_resonance.tex",
         "three_equal": "sections/quantum_triple_face.tex",
-        "opposite_rank_twelve": "sections/quantum_attraction_fiber.tex"
+        "opposite_rank_twelve": "sections/quantum_attraction_fiber.tex",
+        "all_quantum_backgrounds": "sections/quantum_universal_chambers.tex"
       }
     },
     {
@@ -534,7 +535,7 @@
     ]
   },
   "date": "2026-11-23",
-  "version": 232,
+  "version": 233,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
