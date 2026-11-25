@@ -6,7 +6,7 @@ from itertools import accumulate, combinations, permutations, product
 from operator import xor
 from math import prod
 
-from flint import fmpz_mod_poly_ctx, fq_default_ctx, fq_default_poly_ctx, nmod_mpoly_ctx, nmod_poly
+from flint import fmpz_mod_poly_ctx, fq_default_ctx, fq_default_poly_ctx, nmod_mpoly, nmod_mpoly_ctx, nmod_poly
 import sympy as sp
 
 from verify_klein_center_lift import add_multiple
@@ -251,12 +251,22 @@ K, H = sp.symbols("K H")
 
 
 def pullback(source):
-    p = sp.Poly(source.replace("^", "**"), K, H, modulus=3)
-    degree = p.total_degree()
-    return sum(
-        (int(a) % 3) * v ** (degree - i - j) * (c * (1 - v * v)) ** j
-        for (i, j), a in p.terms()
-    )
+    polynomial = nmod_mpoly(source.replace("**", "^"), parameter_k.n.context())
+    degree = int(polynomial.total_degree())
+    t = nmod_poly([0, 1], 3)
+    by_h = {}
+    for (i, j), value in polynomial.to_dict().items():
+        i, j = int(i), int(j)
+        if j not in by_h:
+            by_h[j] = nmod_poly([], 3)
+        by_h[j][degree-i-j] = int(value)
+    # Clear v**degree in f(1/v, c*(1-v**2)/v), grouped by the power of c.
+    terms = {}
+    for j, coefficient in by_h.items():
+        for i, value in enumerate(coefficient * (1-t*t)**j):
+            if value:
+                terms[i, j] = int(value)
+    return cover.from_dict(terms)
 
 
 def exceptional_product(factor_set):

@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-25 / v214。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-25 / v215。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -23,6 +23,8 @@ Codexは公表しやすさ、分類の巨大さ、局所問題の難しさを理
 | 非共点三直線 | 6 | [九係数の量子基底表示](sections/quantum_tangent_windows.tex) |
 
 後の三種類は対応する楕円族の特殊化である。三次元接点を持たない全ての有限四辺でも、局所点環と三つの四次元空間から添字保持同型と周期を判定できる。埋込み次元2の局所環では、最初の二元関係から高々六つの直線を選び、局所環の定義イデアルと三空間を同時に正規化する。[同型の完全不変量](sections/planar_point_flags.tex)
+
+正の固定曲線から得られる通常階数15窓は全点で左右AS正則であり、各始点で四つの中心四次式上自由階数256を持つ。境界四点を含む規格化族の添字保持同型類は一つの有理曲面の開集合に対応し、周期1は二点、他は周期2である。[全点の証明](sections/rank_fifteen_all_ordinary.tex)・[例外曲線の検算](computations/verify_rank_fifteen_signed_curve.py)
 
 五中心商の長さ7以下の語の乗法表から四中心商を計算し、二変数の関数体で十三次の消滅を確認した。[乗法表と例外条件](sections/rank_fifteen_center_border.tex)・[二変数計算](computations/verify_rank_fifteen_bivariate_border.py)
 

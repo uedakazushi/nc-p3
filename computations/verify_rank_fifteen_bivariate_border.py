@@ -68,7 +68,7 @@ def reduce_words(rows, n):
     return result, residuals
 
 
-def independent_sources(rows):
+def independent_sources(rows, *, capture=None):
     pending = [(i, *clear_denominators(row)) for i, row in enumerate(rows) if row]
     selected = []
     while pending:
@@ -80,7 +80,11 @@ def independent_sources(rows):
             for w, z in r.items()
         )
         source, pivot, scale = pending.pop(index)
-        record((scale * fraction(pivot[column])).n)
+        value = scale * fraction(pivot[column])
+        if capture is None:
+            record(value.n)
+        else:
+            capture(value)
         selected.append(rows[source])
         for i, (idx, row, multiplier) in enumerate(pending):
             if column in row:

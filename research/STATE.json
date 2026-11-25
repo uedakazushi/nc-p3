@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-25",
-  "version": 214,
+  "version": 215,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -2359,6 +2359,16 @@
         "computations/verify_rank_fifteen_bivariate_border.py",
         "computations/verify_rank_fifteen_center_border.py"
       ]
+    },
+    {
+      "id": "RANK-FIFTEEN-ALL-ORDINARY",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "Every ordinary positive fixed rank-fifteen window is standard quadratic Koszul and two-sided AS-regular, free of rank 256 per start over four common central quartics. The signed sextic curve and all 100 remaining closed orbits on it and three off it are certified. Including the four formal boundary points, indexed classes form the surface y != 0, p^2=x^3-27y, q^2=(1-x)^2-4y. Exactly two points have least period one and the others have period two.",
+      "proof": "sections/rank_fifteen_all_ordinary.tex",
+      "verification": [
+        "computations/verify_rank_fifteen_all_ordinary.py",
+        "computations/verify_rank_fifteen_signed_curve.py"
+      ]
     }
   ],
   "document_paths": {
@@ -2422,7 +2432,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "fefe74abba8bd835f1b274e62f1bac0119e448b8",
+  "reviewed_source_commit": "3a610c120674833388315f05f9e27c153a392abb",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -2431,15 +2441,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Descend actual maximal minors of the original propagated rows (only one odd character is needed) instead of every elimination pivot. Handle the common signed residual curve via its sextic function field, then certify the remaining closed fibers and apply all-degree central lifting. General windows outside the Pauli ranks remain open.",
+    "immediate_next_action": "Recover the normalized Pauli surface directly from the two adjacent rank-six conditions and the opposite rank-fifteen condition on a tensor admitting a Walsh symmetry basis. Determine the other possible opposite ranks in that symmetry class and continue coverage outside it.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/rank_fifteen_center_border.tex",
-      "sections/rank_fifteen_ninth_character.tex",
-      "sections/three_center_pencil.tex"
+      "sections/rank_fifteen_all_ordinary.tex",
+      "sections/rank_fifteen_formal_boundary.tex",
+      "sections/rank_fifteen_covers.tex"
     ],
-    "known_obstruction": "Possible isolated interior failures of all-degree regularity on the (x,y) plane and uncovered general nonsymmetric windows.",
-    "state_of_claim": "When the five-center quotient vanishes in length eight, its normal words through seven give a single lifted arrow table for every four-center direction. Quadratic residuals on those words determine every higher quotient exactly. On the ordinary Hilbert stratum all central-direction minors through thirteen have degree at most 21. The two-variable residue-field quotient by columns two through five has the full target profile through thirteen at start zero with an explicit localization at 171 irreducible pivot factors. Full classification remains open.",
+    "known_obstruction": "General windows can lack a recognized symmetry or Ore mark. All-degree AS membership is open for such candidates, including finite locally planar cases.",
+    "state_of_claim": "Every ordinary positive fixed rank-fifteen window is standard quadratic Koszul and two-sided AS-regular, free of rank 256 per start over four common central quartics. The signed sextic curve and all 100 remaining closed orbits on it and three off it are certified. Including the four formal boundary points, indexed classes form the surface y != 0, p^2=x^3-27y, q^2=(1-x)^2-4y. Exactly two points have least period one and the others have period two. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

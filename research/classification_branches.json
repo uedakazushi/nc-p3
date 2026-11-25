@@ -405,7 +405,8 @@
       "rank_fifteen_bivariate_seventh_cut": "sections/rank_fifteen_bivariate_seventh_cut.tex",
       "rank_fifteen_truncated_central_freeness": "sections/rank_fifteen_truncated_central_freeness.tex",
       "rank_fifteen_oriented_eighth_cut": "sections/rank_fifteen_oriented_eighth_cut.tex",
-      "rank_fifteen_ninth_orbit_obstruction": "sections/rank_fifteen_ninth_orbit_obstruction.tex"
+      "rank_fifteen_ninth_orbit_obstruction": "sections/rank_fifteen_ninth_orbit_obstruction.tex",
+      "rank_fifteen_all_ordinary": "sections/rank_fifteen_all_ordinary.tex"
     },
     {
       "id": "UNRESTRICTED-SINGLY-SYMMETRIC-14",
@@ -445,6 +446,11 @@
       "id": "FIVE-CENTER-ARROW-TABLE",
       "current_result": "When the five-center quotient vanishes in length eight, its normal words through seven give a single lifted arrow table for every four-center direction. Quadratic residuals on those words determine every higher quotient exactly. On the ordinary Hilbert stratum all central-direction minors through thirteen have degree at most 21. The two-variable residue-field quotient by columns two through five has the full target profile through thirteen at start zero with an explicit localization at 171 irreducible pivot factors.",
       "current_proof": "sections/rank_fifteen_center_border.tex"
+    },
+    {
+      "id": "RANK-FIFTEEN-ALL-ORDINARY",
+      "current_result": "Every ordinary positive fixed rank-fifteen window is standard quadratic Koszul and two-sided AS-regular, free of rank 256 per start over four common central quartics. The signed sextic curve and all 100 remaining closed orbits on it and three off it are certified. Including the four formal boundary points, indexed classes form the surface y != 0, p^2=x^3-27y, q^2=(1-x)^2-4y. Exactly two points have least period one and the others have period two.",
+      "current_proof": "sections/rank_fifteen_all_ordinary.tex"
     }
   ],
   "presentation_components": {
@@ -502,7 +508,7 @@
     ]
   },
   "date": "2026-11-23",
-  "version": 45,
+  "version": 215,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

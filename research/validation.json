@@ -1,21 +1,21 @@
 {
   "schema_version": 2,
-  "version": 214,
+  "version": 215,
   "date": "2026-11-25",
   "reviewed_input": {
-    "source_commit": "fefe74abba8bd835f1b274e62f1bac0119e448b8"
+    "source_commit": "3a610c120674833388315f05f9e27c153a392abb"
   },
   "generation": {
     "result": "PASS",
-    "scope": "When the five-center quotient vanishes in length eight, its normal words through seven give a single lifted arrow table for every four-center direction. Quadratic residuals on those words determine every higher quotient exactly. On the ordinary Hilbert stratum all central-direction minors through thirteen have degree at most 21. The two-variable residue-field quotient by columns two through five has the full target profile through thirteen at start zero with an explicit localization at 171 irreducible pivot factors."
+    "scope": "Every ordinary positive fixed rank-fifteen window is standard quadratic Koszul and two-sided AS-regular, free of rank 256 per start over four common central quartics. The signed sextic curve and all 100 remaining closed orbits on it and three off it are certified. Including the four formal boundary points, indexed classes form the surface y != 0, p^2=x^3-27y, q^2=(1-x)^2-4y. Exactly two points have least period one and the others have period two."
   },
   "checks": [
     {
-      "command": "python computations/verify_rank_fifteen_bivariate_border.py",
+      "command": "python computations/verify_rank_fifteen_all_ordinary.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_rank_fifteen_center_border.py",
+      "command": "python computations/verify_rank_fifteen_signed_curve.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Descend actual maximal minors of the original propagated rows (only one odd character is needed) instead of every elimination pivot. Handle the common signed residual curve via its sextic function field, then certify the remaining closed fibers and apply all-degree central lifting. General windows outside the Pauli ranks remain open."
+    "Recover the normalized Pauli surface directly from the two adjacent rank-six conditions and the opposite rank-fifteen condition on a tensor admitting a Walsh symmetry basis. Determine the other possible opposite ranks in that symmetry class and continue coverage outside it."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 363,
+      "nc-p3": 365,
       "plan_ja": 9,
       "notes_ja": 17
     },
