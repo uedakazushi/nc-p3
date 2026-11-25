@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 250,
+  "version": 251,
   "date": "2026-11-25",
   "reviewed_input": {
-    "source_commit": "3b0f79418d62b7e50f47f4d3750289f580cea34c"
+    "source_commit": "1b58ab5973d7dce9198dbc50b1da0560fac208bb"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For every finite four-edge Frobenius window of every opposite rank, the canonical four-step map on its length-twenty point scheme is the identity including all nilpotents. Each fixed closed point gives a nonzero three-by-three determinantal cubic separating the opposite local socle. At a reduced mark both opposite contractions are invertible between their three supports, and every relation uniquely removes a mixed point-coordinate letter."
+    "scope": "At any reduced point of a finite Frobenius point graph, the entire four-tensor has a canonical traceless presentation by four triples of three-by-three matrices. Both adjacent rank-six conditions reduce to one commutator equation linear in two of the triples. All marked basis changes, the opposite rank and the common-plane condition at rank eight are explicit. The complete kernel of point evaluation has a three-letter presentation by eight cubic commutators per position, with no higher defining relations."
   },
   "checks": [
     {
-      "command": "python computations/verify_finite_cubic_separators.py",
+      "command": "python computations/verify_marked_point_commutators.py",
       "result": "PASS"
     },
     {
@@ -36,14 +36,14 @@
     }
   ],
   "open_mathematics": [
-    "Exploit a reduced four-periodic point to express the complete quartic tensor by two invertible opposite pairings and four ternary maps and solve their compatibility and regularity; address schemes with exclusively nonreduced marks separately."
+    "Use the rank drop of the opposite two-point contraction on a smooth nondegenerate curve to obtain a degree-(2,2) divisor on its square and restrictions on the canonical monodromy; also solve remaining matrix commutator branches for finite graphs."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 432,
+      "nc-p3": 434,
       "plan_ja": 10,
-      "notes_ja": 19
+      "notes_ja": 20
     },
     "scope": "LuaLaTeX built the manuscript, plan and research notes."
   },

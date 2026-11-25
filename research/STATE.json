@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-25",
-  "version": 250,
+  "version": 251,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -2684,6 +2684,15 @@
       "verification": [
         "computations/verify_finite_cubic_separators.py"
       ]
+    },
+    {
+      "id": "MARKED-POINT-COMMUTATORS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "At any reduced point of a finite Frobenius point graph, the entire four-tensor has a canonical traceless presentation by four triples of three-by-three matrices. Both adjacent rank-six conditions reduce to one commutator equation linear in two of the triples. All marked basis changes, the opposite rank and the common-plane condition at rank eight are explicit. The complete kernel of point evaluation has a three-letter presentation by eight cubic commutators per position, with no higher defining relations.",
+      "proof": "sections/marked_point_commutators.tex",
+      "verification": [
+        "computations/verify_marked_point_commutators.py"
+      ]
     }
   ],
   "document_paths": {
@@ -2747,7 +2756,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "3b0f79418d62b7e50f47f4d3750289f580cea34c",
+  "reviewed_source_commit": "1b58ab5973d7dce9198dbc50b1da0560fac208bb",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -2756,14 +2765,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Exploit a reduced four-periodic point to express the complete quartic tensor by two invertible opposite pairings and four ternary maps and solve their compatibility and regularity; address schemes with exclusively nonreduced marks separately.",
+    "immediate_next_action": "Use the rank drop of the opposite two-point contraction on a smooth nondegenerate curve to obtain a degree-(2,2) divisor on its square and restrictions on the canonical monodromy; also solve remaining matrix commutator branches for finite graphs.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/finite_cubic_separators.tex",
-      "sections/ternary_point_subalgebras.tex"
+      "sections/marked_point_commutators.tex",
+      "sections/finite_cubic_separators.tex"
     ],
     "known_obstruction": "General windows can lack a recognized symmetry or Ore mark. All-degree AS membership is open for such candidates, including finite locally planar cases.",
-    "state_of_claim": "For every finite four-edge Frobenius window of every opposite rank, the canonical four-step map on its length-twenty point scheme is the identity including all nilpotents. Each fixed closed point gives a nonzero three-by-three determinantal cubic separating the opposite local socle. At a reduced mark both opposite contractions are invertible between their three supports, and every relation uniquely removes a mixed point-coordinate letter. Full classification remains open.",
+    "state_of_claim": "At any reduced point of a finite Frobenius point graph, the entire four-tensor has a canonical traceless presentation by four triples of three-by-three matrices. Both adjacent rank-six conditions reduce to one commutator equation linear in two of the triples. All marked basis changes, the opposite rank and the common-plane condition at rank eight are explicit. The complete kernel of point evaluation has a three-letter presentation by eight cubic commutators per position, with no higher defining relations. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
