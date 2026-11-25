@@ -533,6 +533,12 @@
       "current_result": "For a one-dimensional point graph containing a smooth elliptic quartic and with point projection fibers, regularity is equivalent to an invertible two-by-two tensor in the quartic product kernel of the two quadratic section ideals at each position. Every accepted algebra is free on both sides over the induced two-variable polynomial-type indexed subalgebra. The entire branch admits a finite atlas of pairs of six-planes in eight-space over elliptic polarization data, with a finite residual group and period tests.",
       "current_proof": "sections/elliptic_point_quartic.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SEPTIC-POINT-GRAPH",
+      "current_result": "A finite-Frobenius point graph window with three coherently commuting letters is automatically Koszul and AS regular and free on both sides over their polynomial algebra. Any graph of maximal degree seven is a pure genus-five curve. In the smooth integral case it is exactly the alternating kernel window of two canonical projections at an ordered pair differing by exact four-torsion. Finite Frobenius and graph tests suffice, with isomorphism by curve isomorphisms of the ordered pair and period one exactly when the two points can be exchanged. Nonemptiness of its parameter locus is not asserted.",
+      "current_proof": "sections/septic_point_curves.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -590,7 +596,7 @@
     ]
   },
   "date": "2026-11-23",
-  "version": 244,
+  "version": 245,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

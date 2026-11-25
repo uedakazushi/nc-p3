@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 244,
+  "version": 245,
   "date": "2026-11-25",
   "reviewed_input": {
-    "source_commit": "289fca6f825476d9f484a515c0f37cc65707fd48"
+    "source_commit": "156b327bc73193c571f5aa380670752ea5df9833"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For a one-dimensional point graph containing a smooth elliptic quartic and with point projection fibers, regularity is equivalent to an invertible two-by-two tensor in the quartic product kernel of the two quadratic section ideals at each position. Every accepted algebra is free on both sides over the induced two-variable polynomial-type indexed subalgebra. The entire branch admits a finite atlas of pairs of six-planes in eight-space over elliptic polarization data, with a finite residual group and period tests."
+    "scope": "A finite-Frobenius point graph window with three coherently commuting letters is automatically Koszul and AS regular and free on both sides over their polynomial algebra. Any graph of maximal degree seven is a pure genus-five curve. In the smooth integral case it is exactly the alternating kernel window of two canonical projections at an ordered pair differing by exact four-torsion. Finite Frobenius and graph tests suffice, with isomorphism by curve isomorphisms of the ordered pair and period one exactly when the two points can be exchanged. Nonemptiness of its parameter locus is not asserted."
   },
   "checks": [
     {
-      "command": "python computations/verify_elliptic_point_quartic.py",
+      "command": "python computations/verify_septic_point_curves.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Refine the remaining curve possibilities through the residual degree-three case of the five-biform linkage and the geometry of its two embeddings. Handle singular genus-one components and nonisolated projection fibers independently."
+    "Resolve the smooth septic finite rank conditions by expressing the canonical net in the common three letters and the two distinguished projections; test whether the surviving parameters give bielliptic curves or are empty. Extend the elliptic test to singular and reducible quartics."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 420,
+      "nc-p3": 422,
       "plan_ja": 10,
       "notes_ja": 19
     },
