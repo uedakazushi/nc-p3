@@ -1,21 +1,17 @@
 {
   "schema_version": 2,
-  "version": 209,
+  "version": 210,
   "date": "2026-11-25",
   "reviewed_input": {
-    "source_commit": "7cd70848b6975c7788a3517ecdff94497e7088a1"
+    "source_commit": "82280f48d5bd029c4c3e3b577445e4383f5d8906"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For the entire four-finite-edge AS locus, indexed isomorphism and the minimal period are decided by explicit invariants. Each planar local complete intersection supplies at most six intrinsic cotangent lines from its lowest binary relations. Lifting the ideal and the three coordinate spaces to a truncated algebra makes the remaining action triangular without choosing any algebra isomorphism between inputs. Maximal tangent points are handled by the classified branch."
+    "scope": "The intrinsic rank-three marked Ore criterion works also for positive-dimensional edges. For a smooth elliptic ternary point graph the mark is unique. Outside translations of orders two and four, the correction space vanishes except for the inversion linear part, where it has dimension two for every admissible curve. All these positive-edge windows have period one."
   },
   "checks": [
     {
-      "command": "python computations/verify_finite_planar_window_orbits.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_curvilinear_window_orbits.py",
+      "command": "python computations/verify_elliptic_fixed_ore.py",
       "result": "PASS"
     },
     {
@@ -40,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Remove the global finiteness assumption from the Ore-recognition argument at a marked rank-three point sequence. For smooth elliptic ternary point graphs determine the positive-dimensional-edge extensions by meromorphic generator changes at fixed points, the shift on their principal parts and two-window recognition. Nongraphical four-generator windows and general finite-edge AS membership remain unresolved."
+    "Determine the recurrent corrections for projective-plane ternary graphs from their fixed divisors, then return to all-degree AS membership for the bivariate rank-fifteen plane and general finite-edge windows of tangent dimension at most two."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 354,
+      "nc-p3": 357,
       "plan_ja": 9,
       "notes_ja": 17
     },

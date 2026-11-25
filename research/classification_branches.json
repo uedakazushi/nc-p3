@@ -420,6 +420,11 @@
         "result": "The generic recovery degree from one projected configuration is exactly two. The two finite-edge AS windows are the original orientation and its reversal; one ordered first edge determines the extension. At both rational samples the same classification holds. A pencil of quartics with twenty triple points recovers every normalized square root, including the exclusion of degenerate Grassmann candidates.",
         "proof": "sections/configuration_quartic_pencil.tex"
       }
+    },
+    {
+      "id": "SMOOTH-ELLIPTIC-ORE-ALL-EDGES",
+      "current_result": "The intrinsic rank-three marked Ore criterion works also for positive-dimensional edges. For a smooth elliptic ternary point graph the mark is unique. Outside translations of orders two and four, the correction space vanishes except for the inversion linear part, where it has dimension two for every admissible curve. All these positive-edge windows have period one.",
+      "current_proof": "sections/elliptic_ore_recognition.tex"
     }
   ],
   "presentation_components": {

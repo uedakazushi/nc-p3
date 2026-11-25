@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-25",
-  "version": 209,
+  "version": 210,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -2313,6 +2313,15 @@
         "computations/verify_finite_planar_window_orbits.py",
         "computations/verify_curvilinear_window_orbits.py"
       ]
+    },
+    {
+      "id": "SMOOTH-ELLIPTIC-ORE-ALL-EDGES",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "The intrinsic rank-three marked Ore criterion works also for positive-dimensional edges. For a smooth elliptic ternary point graph the mark is unique. Outside translations of orders two and four, the correction space vanishes except for the inversion linear part, where it has dimension two for every admissible curve. All these positive-edge windows have period one.",
+      "proof": "sections/elliptic_ore_recognition.tex",
+      "verification": [
+        "computations/verify_elliptic_fixed_ore.py"
+      ]
     }
   ],
   "document_paths": {
@@ -2376,7 +2385,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "7cd70848b6975c7788a3517ecdff94497e7088a1",
+  "reviewed_source_commit": "82280f48d5bd029c4c3e3b577445e4383f5d8906",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -2385,15 +2394,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Remove the global finiteness assumption from the Ore-recognition argument at a marked rank-three point sequence. For smooth elliptic ternary point graphs determine the positive-dimensional-edge extensions by meromorphic generator changes at fixed points, the shift on their principal parts and two-window recognition. Nongraphical four-generator windows and general finite-edge AS membership remain unresolved.",
+    "immediate_next_action": "Determine the recurrent corrections for projective-plane ternary graphs from their fixed divisors, then return to all-degree AS membership for the bivariate rank-fifteen plane and general finite-edge windows of tangent dimension at most two.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/maximal_tangent_ore.tex",
-      "sections/elliptic_tangent_windows.tex",
-      "sections/planar_point_flags.tex"
+      "sections/elliptic_ore_recognition.tex",
+      "sections/singular_tangent_smoothing.tex",
+      "sections/rank_fifteen_truncated_central_freeness.tex"
     ],
     "known_obstruction": "Possible isolated interior failures of all-degree regularity on the (x,y) plane and uncovered general nonsymmetric windows.",
-    "state_of_claim": "For the entire four-finite-edge AS locus, indexed isomorphism and the minimal period are decided by explicit invariants. Each planar local complete intersection supplies at most six intrinsic cotangent lines from its lowest binary relations. Lifting the ideal and the three coordinate spaces to a truncated algebra makes the remaining action triangular without choosing any algebra isomorphism between inputs. Maximal tangent points are handled by the classified branch. Full classification remains open.",
+    "state_of_claim": "The intrinsic rank-three marked Ore criterion works also for positive-dimensional edges. For a smooth elliptic ternary point graph the mark is unique. Outside translations of orders two and four, the correction space vanishes except for the inversion linear part, where it has dimension two for every admissible curve. All these positive-edge windows have period one. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
