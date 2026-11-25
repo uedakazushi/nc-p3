@@ -430,6 +430,11 @@
       "id": "PLANE-GRAPH-ORE-ALL-EDGES",
       "current_result": "For a plane-graph ternary base the marked correction space is the fifteen-dimensional Euler quotient for the identity, zero for nonidentity without a fixed line, and the three binary quadratics with scalar shift for a fixed line. All have period one. For all nonidentity plane-graph bases the unmarked classes are determined by projective conjugacy in the no-line case, or by the multiplier up to inversion, the quadratic rank and the incidence with the center of a transvection. All transvection classes are flat limits of homologies.",
       "current_proof": "sections/plane_graph_ore_windows.tex"
+    },
+    {
+      "id": "RANK-FIFTEEN-CUBIC-PENCILS",
+      "current_result": "Every ordinary positive fixed rank-fifteen window on y=lambda*x^3 is standard Koszul and two-sided AS-regular and is free of rank 256 per start over four central quartics when lambda lies in a number field with a place above three of residue degree at most two. This holds for the full eight residual tubes, at every geometric horizontal coordinate. The indexed invariant curve of this pencil has genus two except at lambda=1/27; the shift quotient has genus one and the reduced exceptional curve is rational with exactly two period-one classes.",
+      "current_proof": "sections/rank_fifteen_cubic_pencils.tex"
     }
   ],
   "presentation_components": {

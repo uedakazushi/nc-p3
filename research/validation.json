@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 211,
+  "version": 212,
   "date": "2026-11-25",
   "reviewed_input": {
-    "source_commit": "234b9bd106fe246a7511bdef934f95da827d4d77"
+    "source_commit": "fff348e8f2737c9468a4541ec6fc62d4177ccd6f"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For a plane-graph ternary base the marked correction space is the fifteen-dimensional Euler quotient for the identity, zero for nonidentity without a fixed line, and the three binary quadratics with scalar shift for a fixed line. All have period one. For all nonidentity plane-graph bases the unmarked classes are determined by projective conjugacy in the no-line case, or by the multiplier up to inversion, the quadratic rank and the incidence with the center of a transvection. All transvection classes are flat limits of homologies."
+    "scope": "Every ordinary positive fixed rank-fifteen window on y=lambda*x^3 is standard Koszul and two-sided AS-regular and is free of rank 256 per start over four central quartics when lambda lies in a number field with a place above three of residue degree at most two. This holds for the full eight residual tubes, at every geometric horizontal coordinate. The indexed invariant curve of this pencil has genus two except at lambda=1/27; the shift quotient has genus one and the reduced exceptional curve is rational with exactly two period-one classes."
   },
   "checks": [
     {
-      "command": "python computations/verify_plane_graph_ore.py",
+      "command": "python computations/verify_rank_fifteen_cubic_pencils.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Return to rank-fifteen AS membership. Use the full five-center quotient and graded relations over the polynomial ring in five variables to reduce the remaining high-degree ranks for ordinary bivariate inputs. Uncovered general finite and positive-dimensional windows still require a coverage proof."
+    "Use Pauli translations on odd-length character spaces to move the good ninth character of the fixed four-center cut to all four characters. Intersect the four open subsets of the character-zero center Grassmannian and certify exceptional signed fibers, then apply the remaining high-degree tests. General non-Ore windows and the full AS locus remain open."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 359,
+      "nc-p3": 360,
       "plan_ja": 9,
       "notes_ja": 17
     },

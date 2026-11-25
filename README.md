@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-25 / v211。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-25 / v212。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -23,6 +23,8 @@ Codexは公表しやすさ、分類の巨大さ、局所問題の難しさを理
 | 非共点三直線 | 6 | [九係数の量子基底表示](sections/quantum_tangent_windows.tex) |
 
 後の三種類は対応する楕円族の特殊化である。三次元接点を持たない全ての有限四辺でも、局所点環と三つの四次元空間から添字保持同型と周期を判定できる。埋込み次元2の局所環では、最初の二元関係から高々六つの直線を選び、局所環の定義イデアルと三空間を同時に正規化する。[同型の完全不変量](sections/planar_point_flags.tex)
+
+通常階数15では、三次曲線束 $y=\lambda x^3$ の任意の非零有理倍率で、特殊点を含む全通常点の正則性を証明した。[全次数の証明と種数2の同型曲線](sections/rank_fifteen_cubic_pencils.tex)・[再現計算](computations/verify_rank_fifteen_cubic_pencils.py)
 
 非恒等の平面グラフを基底に持つOre窓では、指定点を忘れた同型類も決定した。[正規形と平坦特殊化](sections/plane_graph_ore_windows.tex)・[検算](computations/verify_plane_graph_ore.py)
 
