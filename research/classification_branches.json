@@ -521,6 +521,12 @@
       "current_result": "All standard windows with a regular normal linear plane quotient are classified by explicit special-value forms for every projective Jordan type, including the nonsemisimple cases and ordinary Lie central extensions. At most two plane marks occur outside the commutative point; factoring three quadrics and recomputing the alternate normal form completely decides unmarked isomorphism. Together with the two quadric classifications this exhausts the entire surface case with zero-dimensional projection fibers.",
       "current_proof": "sections/plane_quotient_normal_forms.tex",
       "global_coverage": false
+    },
+    {
+      "id": "POINT-GRAPH-CURVE-DEGREE",
+      "current_result": "For every finite-Frobenius point graph with one-dimensional image and point projection fibers, the total curve degree is at most seven including multiplicities. The third Picard difference vanishes and the degree of each component is constant across positions. The unique smooth elliptic quartic, when present, has second difference killed by twelve. A disjoint isolated residual to a smooth curve has length 18-4d+2g.",
+      "current_proof": "sections/point_graph_curves.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -578,7 +584,7 @@
     ]
   },
   "date": "2026-11-23",
-  "version": 242,
+  "version": 243,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
