@@ -539,6 +539,12 @@
       "current_result": "A finite-Frobenius point graph window with three coherently commuting letters is automatically Koszul and AS regular and free on both sides over their polynomial algebra. Any graph of maximal degree seven is a pure genus-five curve. In the smooth integral case it is exactly the alternating kernel window of two canonical projections at an ordered pair differing by exact four-torsion. Finite Frobenius and graph tests suffice, with isomorphism by curve isomorphisms of the ordered pair and period one exactly when the two points can be exchanged. Nonemptiness of its parameter locus is not asserted.",
       "current_proof": "sections/septic_point_curves.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SEPTIC-BIELLIPTIC-NORMAL-FORMS",
+      "current_result": "All smooth septic point graphs with point fibers are explicitly classified by eight coefficients of three canonical quadrics, subject only to smooth complete intersection. The residual action is a three-dimensional effective torus and a swap. All are bielliptic, their isomorphism classes have dimension five, generic period two, and all period-one specializations are decided by changing the sign of the mixed coefficient and testing that action. Two smooth examples and their full finite Frobenius ranks are checked.",
+      "current_proof": "sections/septic_bielliptic_forms.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -596,7 +602,7 @@
     ]
   },
   "date": "2026-11-23",
-  "version": 245,
+  "version": 246,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

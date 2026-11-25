@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 245,
+  "version": 246,
   "date": "2026-11-25",
   "reviewed_input": {
-    "source_commit": "156b327bc73193c571f5aa380670752ea5df9833"
+    "source_commit": "8a3fbfb56ccc365d43840a166fd4e3c7c0b543a6"
   },
   "generation": {
     "result": "PASS",
-    "scope": "A finite-Frobenius point graph window with three coherently commuting letters is automatically Koszul and AS regular and free on both sides over their polynomial algebra. Any graph of maximal degree seven is a pure genus-five curve. In the smooth integral case it is exactly the alternating kernel window of two canonical projections at an ordered pair differing by exact four-torsion. Finite Frobenius and graph tests suffice, with isomorphism by curve isomorphisms of the ordered pair and period one exactly when the two points can be exchanged. Nonemptiness of its parameter locus is not asserted."
+    "scope": "All smooth septic point graphs with point fibers are explicitly classified by eight coefficients of three canonical quadrics, subject only to smooth complete intersection. The residual action is a three-dimensional effective torus and a swap. All are bielliptic, their isomorphism classes have dimension five, generic period two, and all period-one specializations are decided by changing the sign of the mixed coefficient and testing that action. Two smooth examples and their full finite Frobenius ranks are checked."
   },
   "checks": [
     {
-      "command": "python computations/verify_septic_point_curves.py",
+      "command": "python computations/verify_septic_bielliptic_forms.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Resolve the smooth septic finite rank conditions by expressing the canonical net in the common three letters and the two distinguished projections; test whether the surviving parameters give bielliptic curves or are empty. Extend the elliptic test to singular and reducible quartics."
+    "Pass from smooth to singular or reducible genus-one quartic curves and from integral smooth septics to singular Gorenstein components; also continue the general finite-point and positive-fiber coverage problem."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 422,
+      "nc-p3": 425,
       "plan_ja": 10,
       "notes_ja": 19
     },
