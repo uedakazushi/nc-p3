@@ -1,21 +1,17 @@
 {
   "schema_version": 2,
-  "version": 215,
+  "version": 216,
   "date": "2026-11-25",
   "reviewed_input": {
-    "source_commit": "3a610c120674833388315f05f9e27c153a392abb"
+    "source_commit": "59ce78f455bc46153aeb5f2d4e50f5b14fc533d6"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every ordinary positive fixed rank-fifteen window is standard quadratic Koszul and two-sided AS-regular, free of rank 256 per start over four common central quartics. The signed sextic curve and all 100 remaining closed orbits on it and three off it are certified. Including the four formal boundary points, indexed classes form the surface y != 0, p^2=x^3-27y, q^2=(1-x)^2-4y. Exactly two points have least period one and the others have period two."
+    "scope": "For tensors admitting the specified Walsh symmetry bases, the two adjacent rank-six conditions reduce to signed row and column sums of a three-by-three matrix of squares after excluding exponential growth. Every opposite-rank-fifteen candidate is exactly a normalized regular Pauli window. Opposite ranks eleven and thirteen are impossible for standard objects. At ranks twelve and fourteen three nonzero blocks on each side are necessary and sufficient for regularity. Rank twelve has one quantum class; rank fourteen includes a single additional orbit of normalized presentations at H squared equal to four, certified by four-start central cuts."
   },
   "checks": [
     {
-      "command": "python computations/verify_rank_fifteen_all_ordinary.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_rank_fifteen_signed_curve.py",
+      "command": "python computations/verify_walsh_symmetric_windows.py",
       "result": "PASS"
     },
     {
@@ -40,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Recover the normalized Pauli surface directly from the two adjacent rank-six conditions and the opposite rank-fifteen condition on a tensor admitting a Walsh symmetry basis. Determine the other possible opposite ranks in that symmetry class and continue coverage outside it."
+    "Determine unmarked parameter identifications and periods on the full Walsh rank-fourteen curve using its intrinsic two-dimensional opposite kernel pencils. Analyze the rank-sixteen and low-rank Walsh strata, and extend coverage beyond tensors with this symmetry."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 365,
+      "nc-p3": 366,
       "plan_ja": 9,
       "notes_ja": 17
     },

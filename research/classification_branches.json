@@ -451,6 +451,11 @@
       "id": "RANK-FIFTEEN-ALL-ORDINARY",
       "current_result": "Every ordinary positive fixed rank-fifteen window is standard quadratic Koszul and two-sided AS-regular, free of rank 256 per start over four common central quartics. The signed sextic curve and all 100 remaining closed orbits on it and three off it are certified. Including the four formal boundary points, indexed classes form the surface y != 0, p^2=x^3-27y, q^2=(1-x)^2-4y. Exactly two points have least period one and the others have period two.",
       "current_proof": "sections/rank_fifteen_all_ordinary.tex"
+    },
+    {
+      "id": "WALSH-ADJACENT-RANK-SIX",
+      "current_result": "For tensors admitting the specified Walsh symmetry bases, the two adjacent rank-six conditions reduce to signed row and column sums of a three-by-three matrix of squares after excluding exponential growth. Every opposite-rank-fifteen candidate is exactly a normalized regular Pauli window. Opposite ranks eleven and thirteen are impossible for standard objects. At ranks twelve and fourteen three nonzero blocks on each side are necessary and sufficient for regularity. Rank twelve has one quantum class; rank fourteen includes a single additional orbit of normalized presentations at H squared equal to four, certified by four-start central cuts.",
+      "current_proof": "sections/walsh_symmetric_windows.tex"
     }
   ],
   "presentation_components": {
@@ -508,7 +513,7 @@
     ]
   },
   "date": "2026-11-23",
-  "version": 215,
+  "version": 216,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
