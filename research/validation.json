@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 233,
+  "version": 234,
   "date": "2026-11-25",
   "reviewed_input": {
-    "source_commit": "99a7895d007ba09d4e66c41cee053d60d2dcb8ae"
+    "source_commit": "1bdc03fb507c454c3f013f4ea1609b67b9da535b"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All windows specializing to any quantum polynomial orbit, including degenerate triangle multiplicities and nonabelian stabilizers, admit three universal cocharacter charts up to relabeling. A bounded Schur recursion through weights at most nineteen reconstructs each window from transverse tangent parameters or rejects an obstructed input. All accepted windows are regular in every degree. The explicit stabilizer action gives finite isomorphism, period and within-fiber orbit-closure tests."
+    "scope": "Every standard indexed window with a regular normal linear sequence has exact period one. Marked classes correspond to central homogenizations of PBW deformations of ternary standard Koszul AS algebras, with an explicit three-condition test and affine change-of-lifts rule. For a smooth plane cubic quotient the normal sequence is intrinsically unique, yielding the full unmarked test. Over a fixed smooth elliptic Sklyanin quotient all special classes form a split point and a finite quotient of weighted projective space P(1,1,1,2,2,2), of dimension five."
   },
   "checks": [
     {
-      "command": "python computations/verify_quantum_weight_recursion.py",
+      "command": "python computations/verify_regular_normal_linear.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Resolve the simultaneous resonances at two equal pairs of nonunit quantum faces into explicit orbit families: compare the positive-weight relations with an ordinary Ore extension and compute the cubic obstruction. Determine structural coverage outside all quantum-limit fibers."
+    "Extend intrinsic recognition of normal linear sequences to singular cubic quotients and to tensors without a supplied mark; determine overlap with other branches. Resolve the simultaneous two-pair quantum obstructions and the remaining windows without a quantum or normal-line description."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 398,
+      "nc-p3": 400,
       "plan_ja": 9,
       "notes_ja": 18
     },

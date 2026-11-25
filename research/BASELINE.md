@@ -176,3 +176,7 @@ D. Plaumann, B. Sturmfels, C. Vinzant, *Quartic curves and their bitangents*, Jo
 ## 三面一致の九係数表示に使う三生成基底
 
 Iyudu–Shkarin, *Three dimensional Sklyanin algebras and Gröbner bases* の三生成Sklyanin代数のKoszul性とHilbert級数判定を使用する。三係数が非零で三乗が全て等しくない場合だけを適用し、左右の完全対合と例外の指数成長は[適用箇所](../sections/quantum_triple_face.tex)で直接証明した。今回のプロキシ環境では外部本文を再取得できなかった。
+
+## 正則正規一次直線列と中心斉次化
+
+Braverman–Gaitsgory, *Poincaré–Birkhoff–Witt theorem for quadratic algebras of Koszul type* のPBW条件を[正規一次直線列の分類](../sections/regular_normal_linear.tex)で三生成Koszul商に適用する。関係の符号は本文で固定し、滑らかなSklyanin商には四テンソルによる独立な正則性証明も与えた。今回外部原文の再取得は行っていない。
