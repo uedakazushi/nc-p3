@@ -14,8 +14,8 @@ def chart(matrix):
     """Use the earliest independent rows as pivots for the column space."""
     matrix = sp.Matrix(matrix)
     pivots = matrix.T.rref()[1]
-    if len(pivots) != 4:
-        raise ValueError("each coordinate space must be four-dimensional")
+    if len(pivots) != matrix.cols:
+        raise ValueError("subspace matrix must have independent columns")
     return pivots, matrix * matrix[list(pivots), :].inv()
 
 
@@ -64,13 +64,17 @@ def unipotent_chart(lengths, inputs):
         )
     if not lengths or min(lengths) < 1:
         raise ValueError("local lengths must be positive")
+    return triangular_chart(inputs, jet_generators(lengths))
+
+
+def triangular_chart(inputs, generators):
+    """Normalize a tuple of subspaces under a lower unitriangular group."""
     pivots, planes = map(list, zip(*(chart(a) for a in inputs)))
-    generators = jet_generators(lengths)
     for side, rows in enumerate(pivots):
-        for r in range(sum(lengths)):
+        for r in range(planes[side].rows):
             if r in rows:
                 continue
-            for j in reversed(range(4)):
+            for j in reversed(range(len(rows))):
                 if rows[j] >= r or not generators:
                     continue
                 b = planes[side]

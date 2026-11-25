@@ -1,17 +1,21 @@
 {
   "schema_version": 2,
-  "version": 208,
+  "version": 209,
   "date": "2026-11-25",
   "reviewed_input": {
-    "source_commit": "0e28459976e252276535bc8ad5b961cc55d00e88"
+    "source_commit": "7cd70848b6975c7788a3517ecdff94497e7088a1"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Complete classification of the intrinsic locus of standard AS indexed windows with four finite edges and a tangent space of dimension three. No graph hypothesis on the recovered base remains: growth forces all ternary contractions to have rank at least two, giving a plane or cubic graph; every nonreduced cubic graph and the plane are excluded. The maximal point is unique; four curve types, each in two orders, have dimensions 9,8,7,6, with casewise exact regularity, isomorphism, periods and flat specializations to the boundary."
+    "scope": "For the entire four-finite-edge AS locus, indexed isomorphism and the minimal period are decided by explicit invariants. Each planar local complete intersection supplies at most six intrinsic cotangent lines from its lowest binary relations. Lifting the ideal and the three coordinate spaces to a truncated algebra makes the remaining action triangular without choosing any algebra isomorphism between inputs. Maximal tangent points are handled by the classified branch."
   },
   "checks": [
     {
-      "command": "python computations/verify_thick_ternary_exclusion.py",
+      "command": "python computations/verify_finite_planar_window_orbits.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_curvilinear_window_orbits.py",
       "result": "PASS"
     },
     {
@@ -36,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Turn to finite windows without a maximal tangent point. For a planar local Artin complete intersection, use the first nonzero graded relation space and its binary Wronskian to choose an intrinsic finite set of tangent flags. Try normalizing the algebra ideal and the three coordinate spaces simultaneously in a truncated polynomial algebra to eliminate continuous isomorphism searches. General AS tests, positive-dimensional edges and the ordinary rank-15 exceptional four-cut locus remain separate outstanding tasks."
+    "Remove the global finiteness assumption from the Ore-recognition argument at a marked rank-three point sequence. For smooth elliptic ternary point graphs determine the positive-dimensional-edge extensions by meromorphic generator changes at fixed points, the shift on their principal parts and two-window recognition. Nongraphical four-generator windows and general finite-edge AS membership remain unresolved."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 353,
+      "nc-p3": 354,
       "plan_ja": 9,
       "notes_ja": 17
     },
