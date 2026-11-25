@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 224,
+  "version": 225,
   "date": "2026-11-25",
   "reviewed_input": {
-    "source_commit": "c5204503da82e5beedb61900a53b0d0748f2ef1e"
+    "source_commit": "ecd5a1ad410bb10bd9671f6eb81289491dd05b0b"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All adjacent-rank-six characteristic-zero lifts of any standard regular residue window are regular in all degrees. Every odd-characteristic Walsh residue with three colors per side and rank-two signed squares is such a residue. One unrestricted 76-coordinate 53-adic ball gives a Zariski-dense set of algebraic closed regular windows on the fifteen-dimensional component, even at exact period four and trivial projective stabilizer."
+    "scope": "The nine-dimensional half-period component is generically classified by a smooth ruled quadric, an unordered four-line frame and four nonzero weights of sum one, modulo simultaneous projective similarity preserving the ruling order. Eight fixed point modules give a complete intersection of three quadrics; the polarization is a central quadratic section. On the five-dimensional component both half-period lifts generically act without fixed point modules, excluding any nonzero quadratic section normalizing by an invertible half-shift."
   },
   "checks": [
     {
-      "command": "python computations/verify_unrestricted_good_reduction.py",
+      "command": "python computations/verify_half_period_frame.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine which half-period lifts fix point modules on the twenty-point locus and use evaluation to constrain normal quadratic sections. General closed-point AS membership and unrestricted component coverage are open."
+    "Decide regularity across the three weight parameters by factoring out the central polarization; the quadratic quotient depends on the frame alone. Establish a finite certificate for regular frames and control special ones."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 381,
+      "nc-p3": 383,
       "plan_ja": 9,
       "notes_ja": 18
     },

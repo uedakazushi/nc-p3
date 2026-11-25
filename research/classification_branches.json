@@ -424,7 +424,8 @@
       "walsh_incidence": "sections/walsh_full_component.tex",
       "half_period_components": "sections/half_period_components.tex",
       "half_period_two_quadrics": "sections/half_period_two_quadrics.tex",
-      "unrestricted_good_reduction": "sections/unrestricted_good_reduction.tex"
+      "unrestricted_good_reduction": "sections/unrestricted_good_reduction.tex",
+      "half_period_frame": "sections/half_period_frame.tex"
     },
     {
       "id": "SMOOTH-ELLIPTIC-ORE-ALL-EDGES",
@@ -523,7 +524,7 @@
     ]
   },
   "date": "2026-11-23",
-  "version": 224,
+  "version": 225,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
