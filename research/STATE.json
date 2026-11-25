@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-25",
-  "version": 228,
+  "version": 229,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -2486,6 +2486,15 @@
       "verification": [
         "computations/verify_quantum_component_intersection.py"
       ]
+    },
+    {
+      "id": "QUANTUM-ORE-COMPONENT-INCIDENCE",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "At the unique quantum boundary of the fifteen-dimensional component the five-quartic-center scheme is smooth of affine dimension 76; its three normal tangent directions in the unrestricted rank locus are exactly the quantum parameters. Every adjacent-rank-six tensor with this one-parameter quantum limit belongs to that component and is regular. For the entire diagonal quantum Ore chart membership is equivalent to the unique quantum background; all nine coefficients of the primitive-fourth-root indexed ternary extension belong, and the minus-one family is disjoint. Laurent pole corrections explicitly reconstruct five quartic central sections.",
+      "proof": "sections/quantum_ore_component_incidence.tex",
+      "verification": [
+        "computations/verify_quantum_ore_incidence.py"
+      ]
     }
   ],
   "document_paths": {
@@ -2549,7 +2558,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "94f8a843d9b984269e13415c1a57604bb548987e",
+  "reviewed_source_commit": "fc290af0ce1931b4afd898aac4f90ac3b414cad5",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -2558,14 +2567,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Apply division-degree rigidity to other domain branches, including Ore extensions with computable quotient division rings; continue the all-degree analysis of isotropic half-period frames and the unrestricted component coverage.",
+    "immediate_next_action": "Describe the invariant quotient of the smooth central branch at the quantum point using its torus character lattice, identify its orbit degenerations, and continue covering unrestricted windows with no quantum limit.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/quantum_component_intersection.tex",
+      "sections/quantum_ore_component_incidence.tex",
       "sections/walsh_full_component.tex"
     ],
     "known_obstruction": "General windows can lack a recognized symmetry or Ore mark. All-degree AS membership is open for such candidates, including finite locally planar cases.",
-    "state_of_claim": "The fifteen-dimensional component meets the entire quantum polynomial indexed family in exactly one class, its opposite-rank-twelve Walsh boundary. At any standard specialization with domain corner, the corner PI degree is exactly four: a discrete valuation with central uniformizer and residue characteristic zero preserves division degree. A quantum corner has PI degree equal to the order of the group of triangle parameters; among the 56 primitive fourth-root triples only one permutation orbit has the required five quartic central sections. Full classification remains open.",
+    "state_of_claim": "At the unique quantum boundary of the fifteen-dimensional component the five-quartic-center scheme is smooth of affine dimension 76; its three normal tangent directions in the unrestricted rank locus are exactly the quantum parameters. Every adjacent-rank-six tensor with this one-parameter quantum limit belongs to that component and is regular. For the entire diagonal quantum Ore chart membership is equivalent to the unique quantum background; all nine coefficients of the primitive-fourth-root indexed ternary extension belong, and the minus-one family is disjoint. Laurent pole corrections explicitly reconstruct five quartic central sections. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

@@ -428,7 +428,8 @@
       "half_period_frame": "sections/half_period_frame.tex",
       "half_period_weight_fibers": "sections/half_period_weight_fibers.tex",
       "half_period_semisimple": "sections/half_period_semisimple.tex",
-      "quantum_component_intersection": "sections/quantum_component_intersection.tex"
+      "quantum_component_intersection": "sections/quantum_component_intersection.tex",
+      "quantum_ore_component_incidence": "sections/quantum_ore_component_incidence.tex"
     },
     {
       "id": "SMOOTH-ELLIPTIC-ORE-ALL-EDGES",
@@ -527,7 +528,7 @@
     ]
   },
   "date": "2026-11-23",
-  "version": 228,
+  "version": 229,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

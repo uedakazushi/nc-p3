@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 228,
+  "version": 229,
   "date": "2026-11-25",
   "reviewed_input": {
-    "source_commit": "94f8a843d9b984269e13415c1a57604bb548987e"
+    "source_commit": "fc290af0ce1931b4afd898aac4f90ac3b414cad5"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The fifteen-dimensional component meets the entire quantum polynomial indexed family in exactly one class, its opposite-rank-twelve Walsh boundary. At any standard specialization with domain corner, the corner PI degree is exactly four: a discrete valuation with central uniformizer and residue characteristic zero preserves division degree. A quantum corner has PI degree equal to the order of the group of triangle parameters; among the 56 primitive fourth-root triples only one permutation orbit has the required five quartic central sections."
+    "scope": "At the unique quantum boundary of the fifteen-dimensional component the five-quartic-center scheme is smooth of affine dimension 76; its three normal tangent directions in the unrestricted rank locus are exactly the quantum parameters. Every adjacent-rank-six tensor with this one-parameter quantum limit belongs to that component and is regular. For the entire diagonal quantum Ore chart membership is equivalent to the unique quantum background; all nine coefficients of the primitive-fourth-root indexed ternary extension belong, and the minus-one family is disjoint. Laurent pole corrections explicitly reconstruct five quartic central sections."
   },
   "checks": [
     {
-      "command": "python computations/verify_quantum_component_intersection.py",
+      "command": "python computations/verify_quantum_ore_incidence.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Apply division-degree rigidity to other domain branches, including Ore extensions with computable quotient division rings; continue the all-degree analysis of isotropic half-period frames and the unrestricted component coverage."
+    "Describe the invariant quotient of the smooth central branch at the quantum point using its torus character lattice, identify its orbit degenerations, and continue covering unrestricted windows with no quantum limit."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 388,
+      "nc-p3": 391,
       "plan_ja": 9,
       "notes_ja": 18
     },
