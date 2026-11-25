@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-25",
-  "version": 227,
+  "version": 228,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -2477,6 +2477,15 @@
       "verification": [
         "computations/verify_half_period_semisimple.py"
       ]
+    },
+    {
+      "id": "QUANTUM-FIFTEEN-COMPONENT-INTERSECTION",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "The fifteen-dimensional component meets the entire quantum polynomial indexed family in exactly one class, its opposite-rank-twelve Walsh boundary. At any standard specialization with domain corner, the corner PI degree is exactly four: a discrete valuation with central uniformizer and residue characteristic zero preserves division degree. A quantum corner has PI degree equal to the order of the group of triangle parameters; among the 56 primitive fourth-root triples only one permutation orbit has the required five quartic central sections.",
+      "proof": "sections/quantum_component_intersection.tex",
+      "verification": [
+        "computations/verify_quantum_component_intersection.py"
+      ]
     }
   ],
   "document_paths": {
@@ -2540,7 +2549,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "2c86540cb9e73faacc1d36117395737f0d889d71",
+  "reviewed_source_commit": "94f8a843d9b984269e13415c1a57604bb548987e",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -2549,14 +2558,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Analyze frames with isotropic coordinate vectors, where rank-one generators have shorter scalar support, and test whether the semisimple model detects exclusions. Global covering and AS membership outside known charts remain open.",
+    "immediate_next_action": "Apply division-degree rigidity to other domain branches, including Ore extensions with computable quotient division rings; continue the all-degree analysis of isotropic half-period frames and the unrestricted component coverage.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/half_period_semisimple.tex",
+      "sections/quantum_component_intersection.tex",
       "sections/walsh_full_component.tex"
     ],
     "known_obstruction": "General windows can lack a recognized symmetry or Ore mark. All-degree AS membership is open for such candidates, including finite locally planar cases.",
-    "state_of_claim": "Every nonzero weight at every frame with nonzero diagonal entries of its Gram matrix and its inverse is standard Koszul and AS regular, including tangent coordinate pencils. This finite all-degree criterion covers all closed points of a dense open of the nine-dimensional component. The quadratic dual of the common central quotient is the alternating product of graph subspaces in k^4 plus M2. A Koszul filtration from complementary matrix pencils proves regularity in every degree. Full classification remains open.",
+    "state_of_claim": "The fifteen-dimensional component meets the entire quantum polynomial indexed family in exactly one class, its opposite-rank-twelve Walsh boundary. At any standard specialization with domain corner, the corner PI degree is exactly four: a discrete valuation with central uniformizer and residue characteristic zero preserves division degree. A quantum corner has PI degree equal to the order of the group of triangle parameters; among the 56 primitive fourth-root triples only one permutation orbit has the required five quartic central sections. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
