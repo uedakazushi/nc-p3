@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 222,
+  "version": 223,
   "date": "2026-11-25",
   "reviewed_input": {
-    "source_commit": "cf949f2daefe2859f298d5f52be0fb55409bbef0"
+    "source_commit": "6c0204c247a338732f4bf9e164feda37a199b998"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The four half-period germs through a general Walsh point belong to exactly two global fixed-locus components, of dimensions nine and five. The three smooth five-dimensional branches have full S3 monodromy and generic stabilizer C2. The nine-dimensional component is generically free and its normalization has three nearby five-dimensional double loci. Both cuts of an order-four half-turn have symmetric rank four and alternating rank two; the alternating determinant pencils recover finite vertex frames."
+    "scope": "A generically finite reconstruction of the five-dimensional order-four half-period component uses two multipliers and a plane on a smooth intersection of two quadrics in projective five-space. Projection onto the plane reconstructs the two symmetric Schur blocks, while the two alternating pencils recover the remaining entries. The chart meets the regular Walsh locus. AS regularity at arbitrary closed points of this chart remains open."
   },
   "checks": [
     {
-      "command": "python computations/verify_half_period_components.py",
+      "command": "python computations/verify_half_period_two_quadrics.py",
       "result": "PASS"
     },
     {
@@ -36,14 +36,14 @@
     }
   ],
   "open_mathematics": [
-    "Parametrize the five-dimensional order-four half-period component by its two determinant pencils and symmetric extension matrices. Resolve the simultaneous Schur equations and investigate AS membership outside the Walsh locus."
+    "Prove an all-degree lifting criterion for unrestricted characteristic-zero adjacent-rank-six windows with regular reduction, and apply it on the fifteen-dimensional component."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 377,
+      "nc-p3": 379,
       "plan_ja": 9,
-      "notes_ja": 17
+      "notes_ja": 18
     },
     "scope": "LuaLaTeX built the manuscript, plan and research notes."
   },
