@@ -545,6 +545,12 @@
       "current_result": "All smooth septic point graphs with point fibers are explicitly classified by eight coefficients of three canonical quadrics, subject only to smooth complete intersection. The residual action is a three-dimensional effective torus and a swap. All are bielliptic, their isomorphism classes have dimension five, generic period two, and all period-one specializations are decided by changing the sign of the mixed coefficient and testing that action. Two smooth examples and their full finite Frobenius ranks are checked.",
       "current_proof": "sections/septic_bielliptic_forms.tex",
       "global_coverage": false
+    },
+    {
+      "id": "GENUS-ONE-POINT-MARKS",
+      "current_result": "For any finite orbit of genus-one quartic complete-intersection subcurves of a one-dimensional point graph, including nonreduced marks, regularity is equivalent to invertible quartic product relations between consecutive permuted marks. This covers every reduced quartic complete-intersection mark, even when distinct marks share components; all marks are then enumerable and unmarked isomorphism and periods reduce to the finite list of comparisons.",
+      "current_proof": "sections/genus_one_point_marks.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -602,7 +608,7 @@
     ]
   },
   "date": "2026-11-23",
-  "version": 246,
+  "version": 247,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
