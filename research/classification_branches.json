@@ -515,6 +515,12 @@
       "current_result": "All standard windows admitting an integral quadric cone quotient are classified by a dual-number spin matrix: three scalar-leading cases, a projective conjugacy family, and one alternating trace-zero case. All have exact period one and only the alternating case has the bare cone as its entire point graph. Every plane component with point projection fibers supplies a regular normal linear sequence. This covers every surface component in the finite-projection branch by a smooth quadric quotient, a cone quotient, or a normal linear plane quotient.",
       "current_proof": "sections/quadric_cone_quotients.tex",
       "global_coverage": false
+    },
+    {
+      "id": "PLANE-QUOTIENT-NORMAL-FORMS",
+      "current_result": "All standard windows with a regular normal linear plane quotient are classified by explicit special-value forms for every projective Jordan type, including the nonsemisimple cases and ordinary Lie central extensions. At most two plane marks occur outside the commutative point; factoring three quadrics and recomputing the alternate normal form completely decides unmarked isomorphism. Together with the two quadric classifications this exhausts the entire surface case with zero-dimensional projection fibers.",
+      "current_proof": "sections/plane_quotient_normal_forms.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -572,7 +578,7 @@
     ]
   },
   "date": "2026-11-23",
-  "version": 241,
+  "version": 242,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

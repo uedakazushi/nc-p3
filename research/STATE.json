@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-25",
-  "version": 241,
+  "version": 242,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -2603,6 +2603,15 @@
       "verification": [
         "computations/verify_quadric_cone_quotients.py"
       ]
+    },
+    {
+      "id": "PLANE-QUOTIENT-NORMAL-FORMS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "All standard windows with a regular normal linear plane quotient are classified by explicit special-value forms for every projective Jordan type, including the nonsemisimple cases and ordinary Lie central extensions. At most two plane marks occur outside the commutative point; factoring three quadrics and recomputing the alternate normal form completely decides unmarked isomorphism. Together with the two quadric classifications this exhausts the entire surface case with zero-dimensional projection fibers.",
+      "proof": "sections/plane_quotient_normal_forms.tex",
+      "verification": [
+        "computations/verify_plane_quotient_jordan.py"
+      ]
     }
   ],
   "document_paths": {
@@ -2666,7 +2675,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "a5deddc94c42b386bc937f577d382001f56dcfbd",
+  "reviewed_source_commit": "2fbbf8f838ebad553cb1684fe270bba7b76c7326",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -2675,14 +2684,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Resolve the normal linear plane-quotient classification by projective Jordan type, compare all possible plane markings. Move to quasi-finite curve components, where Koszul evaluation and the curve section algebra give the next all-degree tests.",
+    "immediate_next_action": "Analyze the remaining point-fiber curve branch through the exact evaluated four-term complex: bound degrees, compute the polarization recurrence, and recover quadratic syzygies of elliptic quartic component quotients. Continue independent branches with positive-dimensional fibers.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/quadric_cone_quotients.tex",
-      "sections/smooth_quadric_quotients.tex"
+      "sections/plane_quotient_normal_forms.tex",
+      "sections/quadric_cone_quotients.tex"
     ],
     "known_obstruction": "General windows can lack a recognized symmetry or Ore mark. All-degree AS membership is open for such candidates, including finite locally planar cases.",
-    "state_of_claim": "All standard windows admitting an integral quadric cone quotient are classified by a dual-number spin matrix: three scalar-leading cases, a projective conjugacy family, and one alternating trace-zero case. All have exact period one and only the alternating case has the bare cone as its entire point graph. Every plane component with point projection fibers supplies a regular normal linear sequence. This covers every surface component in the finite-projection branch by a smooth quadric quotient, a cone quotient, or a normal linear plane quotient. Full classification remains open.",
+    "state_of_claim": "All standard windows with a regular normal linear plane quotient are classified by explicit special-value forms for every projective Jordan type, including the nonsemisimple cases and ordinary Lie central extensions. At most two plane marks occur outside the commutative point; factoring three quadrics and recomputing the alternate normal form completely decides unmarked isomorphism. Together with the two quadric classifications this exhausts the entire surface case with zero-dimensional projection fibers. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
