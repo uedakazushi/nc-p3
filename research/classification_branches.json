@@ -587,6 +587,12 @@
       "current_result": "No finite-Frobenius window has point graph a smooth nonhyperelliptic sextic of genus three with point projection fibers. The determinantal cubic forces its length-two rank drop onto a trisecant, yielding a fixed-point-free automorphism and a Jacobian identity. These force the Fermat plane quartic and one of thirty polarization sequences. Exact good reduction bounds every cubic overlap by two.",
       "current_proof": "sections/nonhyperelliptic_sextic_exclusion.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SMOOTH-SEXTIC-EXCLUSION",
+      "current_result": "A finite Frobenius candidate with all four point correspondences graphs cannot have point scheme the disjoint union of a smooth integral sextic and a finite scheme. In the remaining hyperelliptic genus-three case two ruling pencils express the cubic quotient as a space of dimension at most eighteen, incompatible with the required twenty.",
+      "current_proof": "sections/smooth_sextic_exclusion.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -644,7 +650,7 @@
     ]
   },
   "date": "2026-11-23",
-  "version": 253,
+  "version": 254,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

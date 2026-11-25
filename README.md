@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-25 / v253。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-25 / v254。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -74,6 +74,8 @@ Walsh三次元族を含む十五次元成分と、そこから出る周期2の�
 曲線上の反対二点縮約の階数低下は、曲線の平方上で両側次数2の因子になる。楕円四次の偏極二階差は6で消え、滑らかな七次枝の標準四移動は二重被覆の対合そのものである。[曲線上の階数低下因子](sections/opposite_curve_divisor.tex)
 
 非超楕円・種数3の滑らかな六次点グラフは存在しない。三割線とJacobian作用からFermat平面四次曲線に限定し、残る30本の偏極列を三次の厳密階数で全て排除した。[非超楕円六次の排除](sections/nonhyperelliptic_sextic_exclusion.tex)
+
+滑らかな整六次曲線と孤立残余から成る点グラフは全て排除される。超楕円の場合は二つの鉛筆を用いて三次商の次元を18以下と評価する。[六次曲線の排除](sections/smooth_sextic_exclusion.tex)
 
 非恒等の平面グラフを基底に持つOre窓では、指定点を忘れた同型類も決定した。[正規形と平坦特殊化](sections/plane_graph_ore_windows.tex)・[検算](computations/verify_plane_graph_ore.py)
 

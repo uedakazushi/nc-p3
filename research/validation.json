@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 253,
+  "version": 254,
   "date": "2026-11-25",
   "reviewed_input": {
-    "source_commit": "0ac0015f5166d4848d1b79a667d05b575a98f342"
+    "source_commit": "c3c4f2160fc05026c41f9a033a313aa4826e1460"
   },
   "generation": {
     "result": "PASS",
-    "scope": "No finite-Frobenius window has point graph a smooth nonhyperelliptic sextic of genus three with point projection fibers. The determinantal cubic forces its length-two rank drop onto a trisecant, yielding a fixed-point-free automorphism and a Jacobian identity. These force the Fermat plane quartic and one of thirty polarization sequences. Exact good reduction bounds every cubic overlap by two."
+    "scope": "A finite Frobenius candidate with all four point correspondences graphs cannot have point scheme the disjoint union of a smooth integral sextic and a finite scheme. In the remaining hyperelliptic genus-three case two ruling pencils express the cubic quotient as a space of dimension at most eighteen, incompatible with the required twenty."
   },
   "checks": [
     {
-      "command": "python computations/verify_nonhyperelliptic_sextic.py",
+      "command": "python computations/verify_smooth_sextic_exclusion.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Work on the hyperelliptic sextic via its intrinsic ruling and two binary pencils; include degree-six genus and isolated residual constraints, then address the remaining smooth quintics and reducible point schemes."
+    "Determine the genus-two quintic ruling constraints, including scroll cones, and the incomplete elliptic quintic case. General finite point graphs of higher opposite rank and reducible or embedded curves remain open."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 438,
+      "nc-p3": 439,
       "plan_ja": 10,
       "notes_ja": 20
     },
