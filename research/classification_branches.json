@@ -551,6 +551,12 @@
       "current_result": "For any finite orbit of genus-one quartic complete-intersection subcurves of a one-dimensional point graph, including nonreduced marks, regularity is equivalent to invertible quartic product relations between consecutive permuted marks. This covers every reduced quartic complete-intersection mark, even when distinct marks share components; all marks are then enumerable and unmarked isomorphism and periods reduce to the finite list of comparisons.",
       "current_proof": "sections/genus_one_point_marks.tex",
       "global_coverage": false
+    },
+    {
+      "id": "RECURRENT-POINT-CORRESPONDENCES",
+      "current_result": "Across positive-dimensional fibers as well as point graphs, the mixed-endpoint four-step determinantal correspondence has only simple cycles in every finite strongly connected subsystem, with at most four consecutive cyclic components. Every recurrent irreducible sequence of dominant correspondences is birational in both directions and has generic return multiplicity one. Different dominant returns of matched lengths agree at every intermediate point.",
+      "current_proof": "sections/recurrent_point_correspondences.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -608,7 +614,7 @@
     ]
   },
   "date": "2026-11-23",
-  "version": 247,
+  "version": 248,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
