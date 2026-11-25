@@ -563,6 +563,12 @@
       "current_result": "For any point-fiber window, a cubic slice with all three supports of dimension three produces a ternary subalgebra over which the window is left and right free. Regularity is equivalent to rank-one avoidance in its three ternary nets. For all finite four-edge Frobenius candidates the quadratic relation spaces automatically avoid rank one, by length-ten planar residuals. Consequently opposite rank below six is empty and every finite candidate of opposite rank six or seven is standard AS, with previously finite indexed isomorphism and period tests.",
       "current_proof": "sections/ternary_point_subalgebras.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FINITE-CUBIC-SEPARATORS",
+      "current_result": "For every finite four-edge Frobenius window of every opposite rank, the canonical four-step map on its length-twenty point scheme is the identity including all nilpotents. Each fixed closed point gives a nonzero three-by-three determinantal cubic separating the opposite local socle. At a reduced mark both opposite contractions are invertible between their three supports, and every relation uniquely removes a mixed point-coordinate letter.",
+      "current_proof": "sections/finite_cubic_separators.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -620,7 +626,7 @@
     ]
   },
   "date": "2026-11-23",
-  "version": 249,
+  "version": 250,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
