@@ -1,21 +1,17 @@
 {
   "schema_version": 2,
-  "version": 236,
+  "version": 237,
   "date": "2026-11-25",
   "reviewed_input": {
-    "source_commit": "192f0ad31275b07451298dc1ef8013d6f295b3f0"
+    "source_commit": "18a7fb6a899fb8dd4e57ae98d07784d7a3053514"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For every finite-Frobenius window admitting a finite left module presentation over four positive weighted iterated Ore parameters, regularity is equivalent to a right-quotient Hilbert test and the left linear complex through the sum of the four weights. No centrality, normality or right-module finiteness of the parameters is needed. The finite test itself certifies finiteness, freeness and both AS conditions on success."
+    "scope": "With two pairs of distinct nonunit quantum faces, every window in the attraction fiber is an explicit ordinary graded Ore extension of period one. The face-pair product sign determines whether all four coefficients are free or a cubic overlap requires the mixed and opposite-square coefficients to have zero product. Supports, one ratio, and a group of order four or two give all special isomorphisms and degenerations."
   },
   "checks": [
     {
-      "command": "python computations/verify_quantum_parameter_cutoff.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_central_window_cutoff.py",
+      "command": "python computations/verify_quantum_double_pair.py",
       "result": "PASS"
     },
     {
@@ -40,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Resolve the two-pair simultaneous quantum obstructions with graded Ore presentations. Investigate finite point-scheme evaluations in the remaining branch without quantum limits, regular normal lines or one-sided parameter certificates."
+    "Analyze nonquantum backgrounds through a smooth quadric graph on all adjacent edges: recover the quadratic kernel and its transport, and classify the symplectic commutator branch. Continue the remaining global coverage and AS problem."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 403,
+      "nc-p3": 405,
       "plan_ja": 9,
       "notes_ja": 19
     },

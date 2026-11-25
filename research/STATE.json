@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-25",
-  "version": 236,
+  "version": 237,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -2558,6 +2558,15 @@
       "verification": [
         "computations/verify_quantum_parameter_cutoff.py"
       ]
+    },
+    {
+      "id": "QUANTUM-DOUBLE-PAIR",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "With two pairs of distinct nonunit quantum faces, every window in the attraction fiber is an explicit ordinary graded Ore extension of period one. The face-pair product sign determines whether all four coefficients are free or a cubic overlap requires the mixed and opposite-square coefficients to have zero product. Supports, one ratio, and a group of order four or two give all special isomorphisms and degenerations.",
+      "proof": "sections/quantum_double_pair.tex",
+      "verification": [
+        "computations/verify_quantum_double_pair.py"
+      ]
     }
   ],
   "document_paths": {
@@ -2621,7 +2630,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "192f0ad31275b07451298dc1ef8013d6f295b3f0",
+  "reviewed_source_commit": "18a7fb6a899fb8dd4e57ae98d07784d7a3053514",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -2630,14 +2639,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Resolve the two-pair simultaneous quantum obstructions with graded Ore presentations. Investigate finite point-scheme evaluations in the remaining branch without quantum limits, regular normal lines or one-sided parameter certificates.",
+    "immediate_next_action": "Analyze nonquantum backgrounds through a smooth quadric graph on all adjacent edges: recover the quadratic kernel and its transport, and classify the symplectic commutator branch. Continue the remaining global coverage and AS problem.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/onesided_parameter_cutoff.tex",
-      "sections/quantum_universal_chambers.tex"
+      "sections/quantum_double_pair.tex",
+      "sections/normal_line_recognition.tex"
     ],
     "known_obstruction": "General windows can lack a recognized symmetry or Ore mark. All-degree AS membership is open for such candidates, including finite locally planar cases.",
-    "state_of_claim": "For every finite-Frobenius window admitting a finite left module presentation over four positive weighted iterated Ore parameters, regularity is equivalent to a right-quotient Hilbert test and the left linear complex through the sum of the four weights. No centrality, normality or right-module finiteness of the parameters is needed. The finite test itself certifies finiteness, freeness and both AS conditions on success. Full classification remains open.",
+    "state_of_claim": "With two pairs of distinct nonunit quantum faces, every window in the attraction fiber is an explicit ordinary graded Ore extension of period one. The face-pair product sign determines whether all four coefficients are free or a cubic overlap requires the mixed and opposite-square coefficients to have zero product. Supports, one ratio, and a group of order four or two give all special isomorphisms and degenerations. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
