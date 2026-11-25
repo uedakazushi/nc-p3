@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-25",
-  "version": 212,
+  "version": 213,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -2340,6 +2340,15 @@
       "verification": [
         "computations/verify_rank_fifteen_cubic_pencils.py"
       ]
+    },
+    {
+      "id": "RANK-FIFTEEN-NINTH-CHARACTER",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "Every ordinary positive fixed rank-fifteen window has a common four-center cut with a central monomial basis through degree nine at all starts. The ninth uncut and cut dimensions are 220 and 20. An upper bound of five for one odd-length character is enough: Walsh translations act transitively on the characters and preserve the zero-character center, so four open Grassmannian conditions intersect. A signed bivariate descent and eleven finite exceptional fibers verify the bound on the whole ordinary locus.",
+      "proof": "sections/rank_fifteen_ninth_character.tex",
+      "verification": [
+        "computations/verify_rank_fifteen_ninth_character.py"
+      ]
     }
   ],
   "document_paths": {
@@ -2403,7 +2412,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "fff348e8f2737c9468a4541ec6fc62d4177ccd6f",
+  "reviewed_source_commit": "04688b7f3d3b8cadb75342d270c62cebd0797d4f",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -2412,16 +2421,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Use Pauli translations on odd-length character spaces to move the good ninth character of the fixed four-center cut to all four characters. Intersect the four open subsets of the character-zero center Grassmannian and certify exceptional signed fibers, then apply the remaining high-degree tests. General non-Ore windows and the full AS locus remain open.",
+    "immediate_next_action": "Lift five-center quotient word multiplication through length eight to a free module over one central parameter. Use the quadratic residual relations on length-seven generators to propagate minors through thirteen, descend the exceptional signed pairs, and test all residual points. The whole ordinary rank-fifteen plane and general four-window coverage remain open.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/rank_fifteen_cubic_pencils.tex",
-      "sections/rank_fifteen_pauli_comparison.tex",
-      "sections/rank_fifteen_oriented_eighth_cut.tex",
-      "sections/three_center_pencil.tex"
+      "sections/rank_fifteen_ninth_character.tex",
+      "sections/three_center_pencil.tex",
+      "sections/rank_fifteen_bivariate_sixth_cut.tex"
     ],
     "known_obstruction": "Possible isolated interior failures of all-degree regularity on the (x,y) plane and uncovered general nonsymmetric windows.",
-    "state_of_claim": "Every ordinary positive fixed rank-fifteen window on y=lambda*x^3 is standard Koszul and two-sided AS-regular and is free of rank 256 per start over four central quartics when lambda lies in a number field with a place above three of residue degree at most two. This holds for the full eight residual tubes, at every geometric horizontal coordinate. The indexed invariant curve of this pencil has genus two except at lambda=1/27; the shift quotient has genus one and the reduced exceptional curve is rational with exactly two period-one classes. Full classification remains open.",
+    "state_of_claim": "Every ordinary positive fixed rank-fifteen window has a common four-center cut with a central monomial basis through degree nine at all starts. The ninth uncut and cut dimensions are 220 and 20. An upper bound of five for one odd-length character is enough: Walsh translations act transitively on the characters and preserve the zero-character center, so four open Grassmannian conditions intersect. A signed bivariate descent and eleven finite exceptional fibers verify the bound on the whole ordinary locus. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

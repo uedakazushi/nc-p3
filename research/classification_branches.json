@@ -435,6 +435,11 @@
       "id": "RANK-FIFTEEN-CUBIC-PENCILS",
       "current_result": "Every ordinary positive fixed rank-fifteen window on y=lambda*x^3 is standard Koszul and two-sided AS-regular and is free of rank 256 per start over four central quartics when lambda lies in a number field with a place above three of residue degree at most two. This holds for the full eight residual tubes, at every geometric horizontal coordinate. The indexed invariant curve of this pencil has genus two except at lambda=1/27; the shift quotient has genus one and the reduced exceptional curve is rational with exactly two period-one classes.",
       "current_proof": "sections/rank_fifteen_cubic_pencils.tex"
+    },
+    {
+      "id": "RANK-FIFTEEN-NINTH-CHARACTER",
+      "current_result": "Every ordinary positive fixed rank-fifteen window has a common four-center cut with a central monomial basis through degree nine at all starts. The ninth uncut and cut dimensions are 220 and 20. An upper bound of five for one odd-length character is enough: Walsh translations act transitively on the characters and preserve the zero-character center, so four open Grassmannian conditions intersect. A signed bivariate descent and eleven finite exceptional fibers verify the bound on the whole ordinary locus.",
+      "current_proof": "sections/rank_fifteen_ninth_character.tex"
     }
   ],
   "presentation_components": {

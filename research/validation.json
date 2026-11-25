@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 212,
+  "version": 213,
   "date": "2026-11-25",
   "reviewed_input": {
-    "source_commit": "fff348e8f2737c9468a4541ec6fc62d4177ccd6f"
+    "source_commit": "04688b7f3d3b8cadb75342d270c62cebd0797d4f"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every ordinary positive fixed rank-fifteen window on y=lambda*x^3 is standard Koszul and two-sided AS-regular and is free of rank 256 per start over four central quartics when lambda lies in a number field with a place above three of residue degree at most two. This holds for the full eight residual tubes, at every geometric horizontal coordinate. The indexed invariant curve of this pencil has genus two except at lambda=1/27; the shift quotient has genus one and the reduced exceptional curve is rational with exactly two period-one classes."
+    "scope": "Every ordinary positive fixed rank-fifteen window has a common four-center cut with a central monomial basis through degree nine at all starts. The ninth uncut and cut dimensions are 220 and 20. An upper bound of five for one odd-length character is enough: Walsh translations act transitively on the characters and preserve the zero-character center, so four open Grassmannian conditions intersect. A signed bivariate descent and eleven finite exceptional fibers verify the bound on the whole ordinary locus."
   },
   "checks": [
     {
-      "command": "python computations/verify_rank_fifteen_cubic_pencils.py",
+      "command": "python computations/verify_rank_fifteen_ninth_character.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Use Pauli translations on odd-length character spaces to move the good ninth character of the fixed four-center cut to all four characters. Intersect the four open subsets of the character-zero center Grassmannian and certify exceptional signed fibers, then apply the remaining high-degree tests. General non-Ore windows and the full AS locus remain open."
+    "Lift five-center quotient word multiplication through length eight to a free module over one central parameter. Use the quadratic residual relations on length-seven generators to propagate minors through thirteen, descend the exceptional signed pairs, and test all residual points. The whole ordinary rank-fifteen plane and general four-window coverage remain open."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 360,
+      "nc-p3": 361,
       "plan_ja": 9,
       "notes_ja": 17
     },
