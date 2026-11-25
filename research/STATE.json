@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-25",
-  "version": 219,
+  "version": 220,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -2405,6 +2405,15 @@
       "verification": [
         "computations/verify_walsh_normal_quadrics.py"
       ]
+    },
+    {
+      "id": "WALSH-FULL-COMPONENT-PERIOD-GERMS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "The entire Walsh presentation family belongs to the known fifteen-dimensional unrestricted component. A smooth shared ordinary rank-fifteen point has twenty transverse points and twenty independent conormal identities. The local unmarked quotient at a general Walsh point has three trivial transverse coordinates and twelve one-dimensional nontrivial characters. Four distinct reduced period-two germs leave the Walsh family, of dimensions nine, five, five, five; their geometric generic points are standard AS and the remaining general deformation has period four.",
+      "proof": "sections/walsh_full_component.tex",
+      "verification": [
+        "computations/verify_walsh_full_component.py"
+      ]
     }
   ],
   "document_paths": {
@@ -2468,7 +2477,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "43da7839d38c1a1b1dfc318c2271f4d59d7bf229",
+  "reviewed_source_commit": "f1b9a80f2a57050b6ca01ee56aa10d61ead12360",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -2477,14 +2486,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Classify special unmarked Walsh orbits and periods beyond the principal stabilizer stratum. Use balanced tensor representatives and the three Schmidt spectra to obtain finite candidates at every point, then return to unrestricted windows outside Walsh symmetry.",
+    "immediate_next_action": "Finish the unmarked filter for special symmetric points. Extend the positive-dimensional-edge and the non-Walsh period-two deformation analyses, retaining the distinction between generic AS and all closed fibers in the full fifteen-dimensional component.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/walsh_normal_quadrics.tex",
-      "sections/walsh_presentation_space.tex"
+      "sections/walsh_full_component.tex",
+      "sections/twenty_conormal_component.tex",
+      "sections/walsh_normal_quadrics.tex"
     ],
     "known_obstruction": "General windows can lack a recognized symmetry or Ore mark. All-degree AS membership is open for such candidates, including finite locally planar cases.",
-    "state_of_claim": "An adjacent-rank-six Walsh tensor is standard quadratic Koszul two-sided AS-regular exactly when three colors survive on each cut and the signed three-by-three square matrix N has rank two. Every rank-one point has at least 36 paths of length four. At every rank-two point, sparse cases included, the transfer of the missing words is an orientation-reversing split-quaternion isometry. It supplies four normal quadratics whose central squares give freeness of rank 256 per start. Full classification remains open.",
+    "state_of_claim": "The entire Walsh presentation family belongs to the known fifteen-dimensional unrestricted component. A smooth shared ordinary rank-fifteen point has twenty transverse points and twenty independent conormal identities. The local unmarked quotient at a general Walsh point has three trivial transverse coordinates and twelve one-dimensional nontrivial characters. Four distinct reduced period-two germs leave the Walsh family, of dimensions nine, five, five, five; their geometric generic points are standard AS and the remaining general deformation has period four. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
