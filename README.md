@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-25 / v216。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-25 / v217。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -23,6 +23,8 @@ Codexは公表しやすさ、分類の巨大さ、局所問題の難しさを理
 | 非共点三直線 | 6 | [九係数の量子基底表示](sections/quantum_tangent_windows.tex) |
 
 後の三種類は対応する楕円族の特殊化である。三次元接点を持たない全ての有限四辺でも、局所点環と三つの四次元空間から添字保持同型と周期を判定できる。埋込み次元2の局所環では、最初の二元関係から高々六つの直線を選び、局所環の定義イデアルと三空間を同時に正規化する。[同型の完全不変量](sections/planar_point_flags.tex)
+
+Walsh対称な階数14の正則窓の添字保持同型類は、原点が唯一の周期1点である二点除去直線をなす。[基底を忘れた同型と周期の証明](sections/walsh_rank_fourteen_orbits.tex)・[単項式による検算](computations/verify_walsh_rank_fourteen_orbits.py)
 
 Walsh基底を持つ四窓では、隣接二切断が階数6なら反対階数15の全候補がこの正則な曲面に入る。階数12と14の正則性は両側の非零文字ブロック数で決まり、階数11と13は除外される。[テンソルからの認識と証明](sections/walsh_symmetric_windows.tex)・[記号計算と境界の検算](computations/verify_walsh_symmetric_windows.py)
 

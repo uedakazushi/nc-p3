@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 216,
+  "version": 217,
   "date": "2026-11-25",
   "reviewed_input": {
-    "source_commit": "59ce78f455bc46153aeb5f2d4e50f5b14fc533d6"
+    "source_commit": "0f78314f8ea5a7a690d153fa38856f74dc3ab1a9"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For tensors admitting the specified Walsh symmetry bases, the two adjacent rank-six conditions reduce to signed row and column sums of a three-by-three matrix of squares after excluding exponential growth. Every opposite-rank-fifteen candidate is exactly a normalized regular Pauli window. Opposite ranks eleven and thirteen are impossible for standard objects. At ranks twelve and fourteen three nonzero blocks on each side are necessary and sufficient for regularity. Rank twelve has one quantum class; rank fourteen includes a single additional orbit of normalized presentations at H squared equal to four, certified by four-start central cuts."
+    "scope": "Unmarked regular Walsh rank-fourteen windows are classified by z on the affine line with the two points -1 and 1 removed. The opposite kernel pencils and their matched trace forms recover four intrinsic lines at every vertex, also at the ramification level. One shift sends z to -z; z=0 alone has period one and all other points have period two."
   },
   "checks": [
     {
-      "command": "python computations/verify_walsh_symmetric_windows.py",
+      "command": "python computations/verify_walsh_rank_fourteen_orbits.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine unmarked parameter identifications and periods on the full Walsh rank-fourteen curve using its intrinsic two-dimensional opposite kernel pencils. Analyze the rank-sixteen and low-rank Walsh strata, and extend coverage beyond tensors with this symmetry."
+    "Determine the irreducible parameter space and full-rank generic AS locus of tensors with a Walsh basis, its dimension after forgetting bases, and the incidence of the classified lower ranks. Continue AS coverage outside this symmetry class."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 366,
+      "nc-p3": 368,
       "plan_ja": 9,
       "notes_ja": 17
     },
