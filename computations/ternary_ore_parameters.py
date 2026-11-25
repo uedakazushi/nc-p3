@@ -25,7 +25,8 @@ def intersection(left, right):
     return span(left * kernel(left.row_join(-right))[: left.cols, :])
 
 
-def parameters(relations):
+def presentation_pencil(relations):
+    """Compute left and right mixed cubic constraints in quadratic quotient coordinates."""
     identity = sp.eye(3)
     cubic = sp.kronecker_product(relations, identity).row_join(
         sp.kronecker_product(identity, relations)
@@ -45,6 +46,12 @@ def parameters(relations):
             )
     left, right = sp.Matrix.hstack(*left), sp.Matrix.hstack(*right)
     assert left.rank() == right.rank() == 15
+    return left, right, q2, lift
+
+
+def parameters(relations):
+    left, right, q2, _ = presentation_pencil(relations)
+    identity = sp.eye(3)
     translations = []
     for j in range(3):
         for op in [
@@ -71,5 +78,7 @@ def parameters(relations):
     indices = a.rref()[1]
     shift = b[:, list(indices)] * a[:, list(indices)].inv()
     shift = shift.applyfunc(sp.cancel)
-    assert (shift * a - b).applyfunc(sp.cancel).is_zero_matrix and shift.rank() == shift.rows
+    assert (shift * a - b).applyfunc(
+        sp.cancel
+    ).is_zero_matrix and shift.rank() == shift.rows
     return dimensions, shifts.cols, shift

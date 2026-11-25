@@ -1,25 +1,17 @@
 {
   "schema_version": 2,
-  "version": 205,
+  "version": 206,
   "date": "2026-11-25",
   "reviewed_input": {
-    "source_commit": "f4bf8a3dfc47cec50a41c58f6147ee7f4bfb7f1b"
+    "source_commit": "0a89b58f10879f5f20f74ccbc004f4c79e013022"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Classifies every finite-edge maximal-tangent AS window whose ternary point scheme is a smooth plane cubic graph. The translation has exact order two or four. Every smooth base and every nonzero class in its nine-dimensional correction space is regular with finite edges. An effective divisor of degree twelve together with the polarized cubic and translation decides unmarked indexed isomorphism and all periods. The two irreducible nine-dimensional families have generic periods two and four. The previously known elliptic nine-parameter Ore family is dense in the first."
+    "scope": "In the maximal-tangent finite window branch, a plane graph or an irreducible cuspidal cubic graph is impossible. An integral nodal graph gives exactly two types, each a projective eight-space with a linear codimension-two subspace removed, modulo a finite group. Generic periods are two and four. Every finite window with one of the quantum, transverse line-conic cyclic or nodal boundary bases in the theorem is a flat specialization from the smooth elliptic family of matching order, with all mixed coefficients lifted."
   },
   "checks": [
     {
-      "command": "python computations/verify_elliptic_tangent_windows.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_quantum_tangent_windows.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_maximal_tangent_ore.py",
+      "command": "python computations/verify_singular_tangent_smoothing.py",
       "result": "PASS"
     },
     {
@@ -44,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "At the boundary of the smooth elliptic base compute the ternary recurrence and the values of mixed corrections at the fixed singular points. Prove the nodal cases and whether a quantum-base window can be smoothed by lifting all its correction eigenvectors. Exclude cuspidal and projective-plane bases where justified. The unrestricted finite edges without a maximal tangent point, positive-dimensional windows and ordinary rank-15 exceptional locus still require work."
+    "For the reduced reducible ternary graph use the two contraction planes to rule out a pointwise fixed component, and compute the canonical fourth shift on the components. Test whether triangles with permutations and transverse conic-line graphs add further finite classes, then handle the concurrent, tangent and nonreduced graphs. Independently retain the unrestricted finite-edge branches without a maximal tangent point and the ordinary rank-15 four-cut pole locus."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 346,
+      "nc-p3": 349,
       "plan_ja": 9,
       "notes_ja": 17
     },

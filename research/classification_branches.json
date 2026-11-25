@@ -73,6 +73,24 @@
           ],
           "proof": "sections/elliptic_tangent_windows.tex",
           "checks": "computations/verify_elliptic_tangent_windows.py"
+        },
+        "integral_singular_base": {
+          "coverage": "Nodal and cuspidal cubic point graphs and the plane graph",
+          "excluded": [
+            "cuspidal cubic",
+            "projective-plane graph"
+          ],
+          "nodal_parameters": "Order two or four times scaling on the normalization. Nonzero projection at the node is the finite-edge condition; projectivize and compare under six normalization automorphisms.",
+          "dimensions": [
+            8,
+            8
+          ],
+          "generic_periods": [
+            2,
+            4
+          ],
+          "specializations": "All nodal and quantum finite windows, and the stated transverse line-conic cyclic cases, are in the closure of the smooth elliptic family of the same order.",
+          "proof": "sections/singular_tangent_smoothing.tex"
         }
       }
     },
