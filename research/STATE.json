@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-25",
-  "version": 238,
+  "version": 239,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -2576,6 +2576,15 @@
       "verification": [
         "computations/verify_smooth_quadric_graphs.py"
       ]
+    },
+    {
+      "id": "QUADRIC-ATTRACTION-FIBERS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "The entire attraction fiber over every closed smooth-quadric window is finite on geometric orbits. Four explicit linear tensor planes yield exactly five classes generally (three of period one and two of period two), and three period-one classes at m squared equal to minus one. The support poset decides every within-fiber degeneration. All special parameters are verified by unit Laurent minors.",
+      "proof": "sections/quadric_attraction_fibers.tex",
+      "verification": [
+        "computations/verify_quadric_attraction.py"
+      ]
     }
   ],
   "document_paths": {
@@ -2639,7 +2648,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "7aa00ff24c0805346e7a68e56827c30ece9a8da5",
+  "reviewed_source_commit": "85607ac2a195d252513ee65d4f9ef7414ee249d2",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -2648,14 +2657,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Determine all orbits specializing to the new closed smooth-quadric classes by computing the four nonzero transverse weight lines and their quadratic obstructions as functions of m. Investigate the remaining smooth-quadric edges with positive-dimensional neighboring fibers.",
+    "immediate_next_action": "Classify the two-parameter bicharacter twists of the closed quadric curve and their transverse deformations, including root parameters, then determine the local components passing through these nonquantum orbits.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/smooth_quadric_graphs.tex",
-      "sections/quantum_universal_chambers.tex"
+      "sections/quadric_attraction_fibers.tex",
+      "sections/smooth_quadric_graphs.tex"
     ],
     "known_obstruction": "General windows can lack a recognized symmetry or Ore mark. All-degree AS membership is open for such candidates, including finite locally planar cases.",
-    "state_of_claim": "When all edge projections have zero-dimensional fibers and any one edge is a smooth quadric graph, all edges are compatible quadric graphs. The entire standard branch is an affine line minus one point with parameter m squared plus inverse m squared. Clifford traces prove regularity exactly away from the two excluded values m=plus or minus one, all indexed periods are one, and every class is polystable, has no quantum orbit limit and has no regular normal linear sequence. Full classification remains open.",
+    "state_of_claim": "The entire attraction fiber over every closed smooth-quadric window is finite on geometric orbits. Four explicit linear tensor planes yield exactly five classes generally (three of period one and two of period two), and three period-one classes at m squared equal to minus one. The support poset decides every within-fiber degeneration. All special parameters are verified by unit Laurent minors. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
