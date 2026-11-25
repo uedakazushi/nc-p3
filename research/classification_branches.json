@@ -557,6 +557,12 @@
       "current_result": "Across positive-dimensional fibers as well as point graphs, the mixed-endpoint four-step determinantal correspondence has only simple cycles in every finite strongly connected subsystem, with at most four consecutive cyclic components. Every recurrent irreducible sequence of dominant correspondences is birational in both directions and has generic return multiplicity one. Different dominant returns of matched lengths agree at every intermediate point.",
       "current_proof": "sections/recurrent_point_correspondences.tex",
       "global_coverage": false
+    },
+    {
+      "id": "TERNARY-POINT-SUBALGEBRAS",
+      "current_result": "For any point-fiber window, a cubic slice with all three supports of dimension three produces a ternary subalgebra over which the window is left and right free. Regularity is equivalent to rank-one avoidance in its three ternary nets. For all finite four-edge Frobenius candidates the quadratic relation spaces automatically avoid rank one, by length-ten planar residuals. Consequently opposite rank below six is empty and every finite candidate of opposite rank six or seven is standard AS, with previously finite indexed isomorphism and period tests.",
+      "current_proof": "sections/ternary_point_subalgebras.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -614,7 +620,7 @@
     ]
   },
   "date": "2026-11-23",
-  "version": 248,
+  "version": 249,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

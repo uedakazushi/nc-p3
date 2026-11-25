@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 248,
+  "version": 249,
   "date": "2026-11-25",
   "reviewed_input": {
-    "source_commit": "883fd4a68f24023f265f9e1bd27f868740ff4ee0"
+    "source_commit": "47462752673433ba2c4c36de6844864222616dc4"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Across positive-dimensional fibers as well as point graphs, the mixed-endpoint four-step determinantal correspondence has only simple cycles in every finite strongly connected subsystem, with at most four consecutive cyclic components. Every recurrent irreducible sequence of dominant correspondences is birational in both directions and has generic return multiplicity one. Different dominant returns of matched lengths agree at every intermediate point."
+    "scope": "For any point-fiber window, a cubic slice with all three supports of dimension three produces a ternary subalgebra over which the window is left and right free. Regularity is equivalent to rank-one avoidance in its three ternary nets. For all finite four-edge Frobenius candidates the quadratic relation spaces automatically avoid rank one, by length-ten planar residuals. Consequently opposite rank below six is empty and every finite candidate of opposite rank six or seven is standard AS, with previously finite indexed isomorphism and period tests."
   },
   "checks": [
     {
-      "command": "python computations/verify_recurrent_point_correspondences.py",
+      "command": "python computations/verify_ternary_point_subalgebras.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Use a cubic slice with all three supports of dimension three to construct a ternary subalgebra and transfer all-degree regularity to a finite ternary test, targeting in particular the finite point graph of opposite rank six or seven."
+    "For remaining finite graphs all cubic slices have middle support four unless already certified. Examine their three-by-three determinant cubics on the opposite twenty-point scheme, scheme-theoretic four-step periodicity, and resulting regularity or rank constraints."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 428,
+      "nc-p3": 431,
       "plan_ja": 10,
       "notes_ja": 19
     },
