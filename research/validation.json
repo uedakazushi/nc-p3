@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 218,
+  "version": 219,
   "date": "2026-11-25",
   "reviewed_input": {
-    "source_commit": "522317e0edd973121cd761dacff25e232ca82f21"
+    "source_commit": "43da7839d38c1a1b1dfc318c2271f4d59d7bf229"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The normalized three-color Walsh presentation space is an irreducible threefold. Its geometric generic point is standard, has opposite rank sixteen and period two. The generic unmarked quotient is the simultaneous S3 quotient of the double cover of the signed row-column plane branched at the six off-diagonal hyperplanes. All regular lower ranks specialize from this generic point. Every three-color candidate has a Frobenius quadratic dual with Hilbert vector 14641, given by killing the four missing-color words. Its letter annihilators are principal, and every regular Walsh window has period dividing two."
+    "scope": "An adjacent-rank-six Walsh tensor is standard quadratic Koszul two-sided AS-regular exactly when three colors survive on each cut and the signed three-by-three square matrix N has rank two. Every rank-one point has at least 36 paths of length four. At every rank-two point, sparse cases included, the transfer of the missing words is an orientation-reversing split-quaternion isometry. It supplies four normal quadratics whose central squares give freeness of rank 256 per start."
   },
   "checks": [
     {
-      "command": "python computations/verify_walsh_presentation_space.py",
+      "command": "python computations/verify_walsh_normal_quadrics.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze the four missing-color quadratics and the rank of the signed matrix N. Detect the rank-one failure at degree four and determine the induced commutation on the rank-two stratum. AS membership at all closed Walsh rank-sixteen points and the coverage outside Walsh bases remain open."
+    "Classify special unmarked Walsh orbits and periods beyond the principal stabilizer stratum. Use balanced tensor representatives and the three Schmidt spectra to obtain finite candidates at every point, then return to unrestricted windows outside Walsh symmetry."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 370,
+      "nc-p3": 372,
       "plan_ja": 9,
       "notes_ja": 17
     },

@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-25 / v218。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-25 / v219。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -23,6 +23,8 @@ Codexは公表しやすさ、分類の巨大さ、局所問題の難しさを理
 | 非共点三直線 | 6 | [九係数の量子基底表示](sections/quantum_tangent_windows.tex) |
 
 後の三種類は対応する楕円族の特殊化である。三次元接点を持たない全ての有限四辺でも、局所点環と三つの四次元空間から添字保持同型と周期を判定できる。埋込み次元2の局所環では、最初の二元関係から高々六つの直線を選び、局所環の定義イデアルと三空間を同時に正規化する。[同型の完全不変量](sections/planar_point_flags.tex)
+
+Walsh基底を持つ隣接階数6の全候補では、各側に三色が残り符号付き平方行列が階数2となることが、標準Koszul左右AS正則性の必要十分条件である。階数16の特殊値を含む。四つの正規二次式の二乗上で各始点が自由階数256になる。[全点の判定と証明](sections/walsh_normal_quadrics.tex)・[検算](computations/verify_walsh_normal_quadrics.py)
 
 Walsh表示の既約三次元族では、幾何学的一般点は階数16、周期2の標準正則窓である。一般の添字保持同型商は六平面で分岐する二重被覆の三文字置換商になる。全三色候補の二次双対は欠色の四語を零にしたFrobenius窓である。[一般商と全点の双対](sections/walsh_presentation_space.tex)・[検算](computations/verify_walsh_presentation_space.py)
 
