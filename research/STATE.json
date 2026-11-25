@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-25",
-  "version": 240,
+  "version": 241,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -2594,6 +2594,15 @@
       "verification": [
         "computations/verify_smooth_quadric_quotients.py"
       ]
+    },
+    {
+      "id": "QUADRIC-CONE-QUOTIENTS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "All standard windows admitting an integral quadric cone quotient are classified by a dual-number spin matrix: three scalar-leading cases, a projective conjugacy family, and one alternating trace-zero case. All have exact period one and only the alternating case has the bare cone as its entire point graph. Every plane component with point projection fibers supplies a regular normal linear sequence. This covers every surface component in the finite-projection branch by a smooth quadric quotient, a cone quotient, or a normal linear plane quotient.",
+      "proof": "sections/quadric_cone_quotients.tex",
+      "verification": [
+        "computations/verify_quadric_cone_quotients.py"
+      ]
     }
   ],
   "document_paths": {
@@ -2657,7 +2666,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "6d395134d025dabcd76465b8499a64c5e26db421",
+  "reviewed_source_commit": "a5deddc94c42b386bc937f577d382001f56dcfbd",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -2666,14 +2675,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Classify the irreducible rank-three quadric cone quotients via the even Clifford algebra over the dual numbers. Recognize plane components and complete the surface branch with point projection fibers.",
+    "immediate_next_action": "Resolve the normal linear plane-quotient classification by projective Jordan type, compare all possible plane markings. Move to quasi-finite curve components, where Koszul evaluation and the curve section algebra give the next all-degree tests.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/smooth_quadric_quotients.tex",
-      "sections/quadric_attraction_fibers.tex"
+      "sections/quadric_cone_quotients.tex",
+      "sections/smooth_quadric_quotients.tex"
     ],
     "known_obstruction": "General windows can lack a recognized symmetry or Ore mark. All-degree AS membership is open for such candidates, including finite locally planar cases.",
-    "state_of_claim": "All standard windows admitting a compatible quotient onto a smooth commutative quadric are classified, including additional lines and nonreduced point schemes. Two invertible two-by-two spin blocks give the complete list, with two curves meeting at one point, the scalar class and two Jordan types. Every finite-Frobenius candidate on this branch is regular of period one. With zero-dimensional edge projection fibers, any proper surface factor has total degree at most two. Full classification remains open.",
+    "state_of_claim": "All standard windows admitting an integral quadric cone quotient are classified by a dual-number spin matrix: three scalar-leading cases, a projective conjugacy family, and one alternating trace-zero case. All have exact period one and only the alternating case has the bare cone as its entire point graph. Every plane component with point projection fibers supplies a regular normal linear sequence. This covers every surface component in the finite-projection branch by a smooth quadric quotient, a cone quotient, or a normal linear plane quotient. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

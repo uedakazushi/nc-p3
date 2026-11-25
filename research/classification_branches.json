@@ -509,6 +509,12 @@
       "current_result": "All standard windows admitting a compatible quotient onto a smooth commutative quadric are classified, including additional lines and nonreduced point schemes. Two invertible two-by-two spin blocks give the complete list, with two curves meeting at one point, the scalar class and two Jordan types. Every finite-Frobenius candidate on this branch is regular of period one. With zero-dimensional edge projection fibers, any proper surface factor has total degree at most two.",
       "current_proof": "sections/smooth_quadric_quotients.tex",
       "global_coverage": false
+    },
+    {
+      "id": "QUADRIC-CONE-QUOTIENTS",
+      "current_result": "All standard windows admitting an integral quadric cone quotient are classified by a dual-number spin matrix: three scalar-leading cases, a projective conjugacy family, and one alternating trace-zero case. All have exact period one and only the alternating case has the bare cone as its entire point graph. Every plane component with point projection fibers supplies a regular normal linear sequence. This covers every surface component in the finite-projection branch by a smooth quadric quotient, a cone quotient, or a normal linear plane quotient.",
+      "current_proof": "sections/quadric_cone_quotients.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -566,7 +572,7 @@
     ]
   },
   "date": "2026-11-23",
-  "version": 240,
+  "version": 241,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

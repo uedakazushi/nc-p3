@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 240,
+  "version": 241,
   "date": "2026-11-25",
   "reviewed_input": {
-    "source_commit": "6d395134d025dabcd76465b8499a64c5e26db421"
+    "source_commit": "a5deddc94c42b386bc937f577d382001f56dcfbd"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All standard windows admitting a compatible quotient onto a smooth commutative quadric are classified, including additional lines and nonreduced point schemes. Two invertible two-by-two spin blocks give the complete list, with two curves meeting at one point, the scalar class and two Jordan types. Every finite-Frobenius candidate on this branch is regular of period one. With zero-dimensional edge projection fibers, any proper surface factor has total degree at most two."
+    "scope": "All standard windows admitting an integral quadric cone quotient are classified by a dual-number spin matrix: three scalar-leading cases, a projective conjugacy family, and one alternating trace-zero case. All have exact period one and only the alternating case has the bare cone as its entire point graph. Every plane component with point projection fibers supplies a regular normal linear sequence. This covers every surface component in the finite-projection branch by a smooth quadric quotient, a cone quotient, or a normal linear plane quotient."
   },
   "checks": [
     {
-      "command": "python computations/verify_smooth_quadric_quotients.py",
+      "command": "python computations/verify_quadric_cone_quotients.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Classify the irreducible rank-three quadric cone quotients via the even Clifford algebra over the dual numbers. Recognize plane components and complete the surface branch with point projection fibers."
+    "Resolve the normal linear plane-quotient classification by projective Jordan type, compare all possible plane markings. Move to quasi-finite curve components, where Koszul evaluation and the curve section algebra give the next all-degree tests."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 412,
+      "nc-p3": 414,
       "plan_ja": 9,
       "notes_ja": 19
     },
