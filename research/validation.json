@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
-  "version": 200,
+  "version": 201,
   "date": "2026-11-25",
   "reviewed_input": {
-    "source_commit": "47d3a58c6ff5bc8a1d5f0b925db80de01e7f17b6"
+    "source_commit": "b4d80501ad2f40fb983baf1860472a76cbbdb475"
   },
   "generation": {
     "result": "PASS",
-    "scope": "At the specified F81 presentation, the hyperplanes (z1,z2,z5,z4+s*z3) have the expected quotient profile at all four starts through degree 13 exactly off three geometric slopes. For a standard AS window finite over five central quartics, the bad four-planes form the support of a degree-64 determinant from one corner."
+    "scope": "On the ordinary rank-15 branch of the positive fixed curve, every folded algebra in characteristic zero is finite over its quartic center algebra. The full quartic-center quotient vanishes at length 13 at every start, without assuming regularity. The four generic central cuts give a necessary and sufficient length-13 decision for standard Koszul AS regularity on this branch; indexed isomorphism is decided by (x,p,q)."
   },
   "checks": [
     {
@@ -34,9 +34,37 @@
     {
       "command": "git diff --check",
       "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_finite_square_chart.py",
+      "result": "PASS",
+      "scope": "Rank six for each of the twenty bilinear edge Jacobians over Q; the general PBW obstruction uses the graph and tangent-space proofs."
+    },
+    {
+      "command": "python computations/verify_rank_fifteen_full_center_cut.py",
+      "result": "PASS",
+      "scope": "Both generic profiles, bidegree (177,140), all twelve presentation coefficients, degree-22 horizontal gcd, two residual orbits with full four-cut profiles through 13."
+    },
+    {
+      "command": "python computations/verify_tangent_pencil_window.py",
+      "result": "PASS",
+      "scope": "Exact rational Groebner bases verify two finite symmetric charts with different periodic PBW outcomes."
     }
   ],
   "open_mathematics": [
-    "Compute the quotient by all five central quartics through its first zero degree at start zero over F3(K,H); descend its exclusion factors over the six signed presentations and test residual fibers. A zero degree there proves module finiteness, enabling the one-corner four-plane test. In parallel recover the degree-nine four-column pivot locus and use varying hyperplanes there. General nonsymmetric windows remain uncovered."
-  ]
+    "Use the new length-13 equivalence on the positive fixed rank-15 curve to determine the parameter locus of negative answers: compute the generic exchanged-cut profile in characteristic three, carry its pivot divisors to the (X,B) plane, and specialize the remaining fibers with a different hyperplane. The original columns (1,2,4,5) cannot prove the degree-nine target anywhere at start zero on the characteristic-three unit chart. For finite edges, discard cycles of local length below three; for higher local length use the contraction kernels and the four-cycle of nonreduced points in sections/periodic_pbw_graph.tex to test periodic PBW membership, then identify the remaining non-PBW normal forms for the unrestricted branch."
+  ],
+  "tex": {
+    "result": "PASS",
+    "pages": {
+      "nc-p3": 336,
+      "plan_ja": 8,
+      "notes_ja": 17
+    },
+    "scope": "LuaLaTeX built the three documents. Text extraction from the final manuscript located the new rank-fifteen theorem and the double-point example."
+  },
+  "hub_update": {
+    "result": "BLOCKED",
+    "scope": "The Git HTTPS proxy returned Repository not found for uedakazushi/research-hub; no hub update was made."
+  }
 }

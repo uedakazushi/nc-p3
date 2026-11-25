@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-25 / v200。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-25 / v201。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -375,7 +375,7 @@ x が負付値の等号境界を全幾何傾きで認証し、対角線近傍の
 符号付き六表示で始点を保ち、全通常階数15窓の四始点で八次の未切断165次元・四中心商31次元を証明した。[証明と判定](sections/rank_fifteen_oriented_eighth_cut.tex)
 
 九次では固定四列の商が両符号の全十二表示・四始点で23次元となる。中心四平面の交換が必要な点を特定した。[証明と判定](sections/rank_fifteen_ninth_orbit_obstruction.tex)
-同じ剰余表示では、三中心を共有する鉛筆の例外値はちょうど三つである。五つの中心四次式の上で有限な標準AS窓では、悪い四平面を一つの隅の次数64の行列式で記述できる。[三中心商の証明](sections/three_center_pencil.tex)
+同じ剰余表示では、三中心を共有する鉛筆の例外値はちょうど三つである。五つの中心四次式の上で有限な標準AS窓では、悪い四平面を一つの隅の次数64の行列式で記述できる。正の固定曲線の通常階数15窓は全て四次中心上で有限であり、四中心商の長さ13までの階数条件がAS正則性の必要十分条件となる。[証明と適用範囲](sections/three_center_pencil.tex)
 
 縦切片 $x=1$ の正付値領域を全て認証し、全有理水準で添字保持同型類と最小周期を決定した。[証明と判定](sections/rank_fifteen_vertical_one.tex)
 
@@ -403,6 +403,7 @@ python3 computations/verify_exterior_trace.py
 python3 computations/verify_period_witness.py
 python3 computations/verify_quartic_obstruction.py
 python3 computations/verify_finite_square_chart.py
+python3 computations/verify_tangent_pencil_window.py
 python3 computations/verify_finite_window_rigidity.py
 python3 computations/verify_reversible_component.py
 python3 computations/verify_marked_opposite_rank.py
@@ -550,6 +551,7 @@ python3 computations/verify_rank_fifteen_truncated_central_freeness.py
 python3 computations/verify_rank_fifteen_oriented_eighth_cut.py
 python3 computations/verify_rank_fifteen_ninth_orbit_obstruction.py
 python3 computations/verify_rank_fifteen_center_pencil.py
+python3 computations/verify_rank_fifteen_full_center_cut.py
 python3 computations/verify_rank_fifteen_vertical_one.py
 python3 computations/verify_rank_fifteen_unit_residues.py
 python3 computations/verify_rank_fifteen_vertical_unit_levels.py
@@ -691,6 +693,8 @@ python3 computations/verify_negative_witness_rigidity.py --output research/negat
 # Optional exact eight-variable rank; exclusion theorem no longer depends on it
 python3 computations/verify_trivial_extension_bitor.py --field eight --frame ternary --point-quotient --last-only --composition-check structural --output research/trivial_extension_bitor_eight_certificate.json
 ```
+
+四周期左辞書順の二次PBW表示は、位置ごとに番号を付け直すと正規な二文字が $i\le j$ の一種類に限られる。四辺が有限なら、局所長3以上の点からなる四周期点列が必要である。対称チャートの共通順序基底での三角形表示は、二段の平方条件で判定できる。[証明と被約二十点の例](sections/periodic_pbw_graph.tex)
 
 任意の有限Frobenius標準四窓も、一辺切断した32次元四層代数のtrivial extensionとして表せる。
 四切断の戻り辺一回Torは内部次数7以下を覆い、最大の次元列は120,1040,2400,1600となる。

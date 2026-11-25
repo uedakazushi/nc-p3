@@ -92,6 +92,15 @@ def main():
     xx, yy = products(x, x, True), products(y, y, True)
     xy = products(x, y)
     assert xx.rank() == yy.rank() == xy.rank() == 10
+    # Gradients of the six bilinear equations annihilate the two radial
+    # directions at a zero, so their affine rank equals the projective rank.
+    relations = [r.reshape(4, 4) for r in xy.nullspace()]
+    for i in range(x.rows):
+        gradients = [
+            (r*y.row(i).T).T.row_join(x.row(i)*r) for r in relations
+        ]
+        assert sp.Matrix.vstack(*gradients).rank() == 6
+    print("PASS all 20 edge Jacobians have rank six")
     for linear, square in ((x, xx), (y, yy)):
         assert products(linear, square).rank() == 20
     trace, = products(xx, yy).T.nullspace()
