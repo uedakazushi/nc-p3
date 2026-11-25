@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 239,
+  "version": 240,
   "date": "2026-11-25",
   "reviewed_input": {
-    "source_commit": "85607ac2a195d252513ee65d4f9ef7414ee249d2"
+    "source_commit": "6d395134d025dabcd76465b8499a64c5e26db421"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The entire attraction fiber over every closed smooth-quadric window is finite on geometric orbits. Four explicit linear tensor planes yield exactly five classes generally (three of period one and two of period two), and three period-one classes at m squared equal to minus one. The support poset decides every within-fiber degeneration. All special parameters are verified by unit Laurent minors."
+    "scope": "All standard windows admitting a compatible quotient onto a smooth commutative quadric are classified, including additional lines and nonreduced point schemes. Two invertible two-by-two spin blocks give the complete list, with two curves meeting at one point, the scalar class and two Jordan types. Every finite-Frobenius candidate on this branch is regular of period one. With zero-dimensional edge projection fibers, any proper surface factor has total degree at most two."
   },
   "checks": [
     {
-      "command": "python computations/verify_quadric_attraction.py",
+      "command": "python computations/verify_smooth_quadric_quotients.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Classify the two-parameter bicharacter twists of the closed quadric curve and their transverse deformations, including root parameters, then determine the local components passing through these nonquantum orbits."
+    "Classify the irreducible rank-three quadric cone quotients via the even Clifford algebra over the dual numbers. Recognize plane components and complete the surface branch with point projection fibers."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 410,
+      "nc-p3": 412,
       "plan_ja": 9,
       "notes_ja": 19
     },

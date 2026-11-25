@@ -503,6 +503,12 @@
       "current_proof": "sections/smooth_quadric_graphs.tex",
       "global_coverage": false,
       "all_attraction_fibers": "sections/quadric_attraction_fibers.tex"
+    },
+    {
+      "id": "SMOOTH-QUADRIC-QUOTIENTS",
+      "current_result": "All standard windows admitting a compatible quotient onto a smooth commutative quadric are classified, including additional lines and nonreduced point schemes. Two invertible two-by-two spin blocks give the complete list, with two curves meeting at one point, the scalar class and two Jordan types. Every finite-Frobenius candidate on this branch is regular of period one. With zero-dimensional edge projection fibers, any proper surface factor has total degree at most two.",
+      "current_proof": "sections/smooth_quadric_quotients.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -560,7 +566,7 @@
     ]
   },
   "date": "2026-11-23",
-  "version": 239,
+  "version": 240,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
