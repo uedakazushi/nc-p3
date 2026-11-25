@@ -91,6 +91,27 @@
           ],
           "specializations": "All nodal and quantum finite windows, and the stated transverse line-conic cyclic cases, are in the closure of the smooth elliptic family of the same order.",
           "proof": "sections/singular_tangent_smoothing.tex"
+        },
+        "reduced_cubic_graph_coverage": {
+          "scope": "Every ternary AS3 base whose point correspondence is a reduced plane cubic graph",
+          "types": [
+            "smooth cubic",
+            "integral nodal cubic",
+            "transverse conic and line",
+            "nonconcurrent triangle"
+          ],
+          "dimensions_per_order": [
+            9,
+            8,
+            7,
+            6
+          ],
+          "orders": [
+            2,
+            4
+          ],
+          "proof": "sections/reduced_ternary_point_graphs.tex",
+          "specializations": "Each of the latter three strata is in the closure of the smooth family of matching order. No global component claim."
         }
       }
     },

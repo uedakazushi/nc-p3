@@ -28,6 +28,29 @@ def main():
                 # The 3-dimensional gauge is exactly L_v - mu R_v.
                 assert eig.cols == dim + 3
                 spaces.append(eig)
+            if h == 1:
+                weights = (1, 0, 2)
+                quadratic_weights = [
+                    next(
+                        weights[r // 3] + weights[r % 3] for r in range(9) if lift[r, a]
+                    )
+                    for a in range(6)
+                ]
+                for weight in (-1, 3):
+                    cols = [
+                        i
+                        for i in range(18)
+                        if quadratic_weights[i % 6] - weights[i // 6] == weight
+                    ]
+                    eigendims = tuple(
+                        len(cols) - (left + mu * right)[:, cols].rank()
+                        for mu in expected
+                    )
+                    assert eigendims == (
+                        (1, 1)
+                        if zeta == -1
+                        else ((1, 0, 1) if weight == -1 else (1, 1, 0))
+                    )
             assert left.row_join(right).rank() == 18
             all_eigen = sp.Matrix.hstack(*spaces)
             for j in range(h, 3):

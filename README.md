@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-25 / v206。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-25 / v207。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -22,6 +22,8 @@ Codexは公表しやすさ、分類の巨大さ、局所問題の難しさを理
 三生成部分の点スキームが滑らかな平面三次曲線の場合も有限枝を分類した。位数2または4の平行移動と次数12の因子が同型を決め、二族の次元はともに9である。[証明と正規表示](sections/elliptic_tangent_windows.tex)・[全パラメータの階数検算](computations/verify_elliptic_tangent_windows.py)
 
 節点三次曲線の三生成基底では八次元の二族を得る。尖点三次曲線と平面グラフは除外される。節点基底と量子基底の有限窓は、対応する位数の楕円枝から全係数を含めて平滑化できる。[証明](sections/singular_tangent_smoothing.tex)・[再現計算](computations/verify_singular_tangent_smoothing.py)
+
+この三生成基底の被約な三次曲線グラフは、滑らかな三次曲線、節点三次曲線、横断する直線と二次曲線、非共点三直線の四種類で尽きる。各々に位数2と4の型があり、同型類の次元は順に9、8、7、6である。[被覆と横断二成分の同型・周期](sections/reduced_ternary_point_graphs.tex)
 
 ## 最初に読む
 

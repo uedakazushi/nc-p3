@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
-  "version": 206,
+  "version": 207,
   "date": "2026-11-25",
   "reviewed_input": {
-    "source_commit": "0a89b58f10879f5f20f74ccbc004f4c79e013022"
+    "source_commit": "add576a831bb7d04c617e73e29b0842c4052bbe7"
   },
   "generation": {
     "result": "PASS",
-    "scope": "In the maximal-tangent finite window branch, a plane graph or an irreducible cuspidal cubic graph is impossible. An integral nodal graph gives exactly two types, each a projective eight-space with a linear codimension-two subspace removed, modulo a finite group. Generic periods are two and four. Every finite window with one of the quantum, transverse line-conic cyclic or nodal boundary bases in the theorem is a flat specialization from the smooth elliptic family of matching order, with all mixed coefficients lifted."
+    "scope": "Every maximal-tangent finite AS window whose ternary relations cut out the graph on a reduced plane cubic lies in one of four geometric strata: smooth elliptic, integral nodal, transverse line-conic, or triangle. Each has two base types and all finite corrections are classified up to indexed isomorphism, including exceptional periods. Dimensions per order are 9,8,7,6 and the latter three strata smooth to the corresponding elliptic family. The tangent conic-line, concurrent lines, vertex permutations and pointwise fixed reduced components are excluded."
   },
   "checks": [
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "For the reduced reducible ternary graph use the two contraction planes to rule out a pointwise fixed component, and compute the canonical fourth shift on the components. Test whether triangles with permutations and transverse conic-line graphs add further finite classes, then handle the concurrent, tangent and nonreduced graphs. Independently retain the unrestricted finite-edge branches without a maximal tangent point and the ordinary rank-15 four-cut pole locus."
+    "Study nonreduced ternary graphs scheme-theoretically. At a triple point compare the derivative of the canonical three-tensor map with the cube of the tangent map. If a supporting line is fixed pointwise, use the normal linear form cutting it out to constrain the ternary relations and the binary quadratic/cubic restrictions of the mixed cochains. Also address finite edges without maximal tangent points and the independent ordinary rank-15 central-cut exceptional loci."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 349,
+      "nc-p3": 351,
       "plan_ja": 9,
       "notes_ja": 17
     },
