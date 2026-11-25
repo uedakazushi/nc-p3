@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-25",
-  "version": 225,
+  "version": 226,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -2459,6 +2459,15 @@
       "verification": [
         "computations/verify_half_period_frame.py"
       ]
+    },
+    {
+      "id": "HALF-PERIOD-WEIGHT-FIBERS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "On the nine-dimensional half-period frame chart the central quadratic quotient is independent of all three weights. For each frame its standard quotient Hilbert series and vanishing two-sided socles are equivalent to regularity with a regular central polarization at every admissible weight; one good weight suffices. An explicit rational frame and every lift of its good residue in characteristic 53 satisfy this criterion for every nonzero weight, with no valuation restriction on the weights.",
+      "proof": "sections/half_period_weight_fibers.tex",
+      "verification": [
+        "computations/verify_half_period_weight_fibers.py"
+      ]
     }
   ],
   "document_paths": {
@@ -2522,7 +2531,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "ecd5a1ad410bb10bd9671f6eb81289491dd05b0b",
+  "reviewed_source_commit": "0147d0ad9b0f5646c5ae0e49907d039eec7b4873",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -2531,14 +2540,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Decide regularity across the three weight parameters by factoring out the central polarization; the quadratic quotient depends on the frame alone. Establish a finite certificate for regular frames and control special ones.",
+    "immediate_next_action": "Determine the common central quotient for general frames, including special frame positions. Use the constant relation subspaces from the two rulings and the four rank-one forms; general closed-point AS membership and unrestricted component coverage remain open.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/half_period_frame.tex",
+      "sections/half_period_weight_fibers.tex",
       "sections/walsh_full_component.tex"
     ],
     "known_obstruction": "General windows can lack a recognized symmetry or Ore mark. All-degree AS membership is open for such candidates, including finite locally planar cases.",
-    "state_of_claim": "The nine-dimensional half-period component is generically classified by a smooth ruled quadric, an unordered four-line frame and four nonzero weights of sum one, modulo simultaneous projective similarity preserving the ruling order. Eight fixed point modules give a complete intersection of three quadrics; the polarization is a central quadratic section. On the five-dimensional component both half-period lifts generically act without fixed point modules, excluding any nonzero quadratic section normalizing by an invertible half-shift. Full classification remains open.",
+    "state_of_claim": "On the nine-dimensional half-period frame chart the central quadratic quotient is independent of all three weights. For each frame its standard quotient Hilbert series and vanishing two-sided socles are equivalent to regularity with a regular central polarization at every admissible weight; one good weight suffices. An explicit rational frame and every lift of its good residue in characteristic 53 satisfy this criterion for every nonzero weight, with no valuation restriction on the weights. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
