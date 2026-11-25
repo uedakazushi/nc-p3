@@ -55,6 +55,24 @@
           ],
           "proof": "sections/quantum_tangent_windows.tex",
           "checks": "computations/verify_quantum_tangent_windows.py"
+        },
+        "smooth_cubic_base": {
+          "coverage": "Exhaustive when the three-generator base relations cut out the graph of an automorphism of a smooth plane cubic.",
+          "types": [
+            "translation of exact order two",
+            "translation of exact order four"
+          ],
+          "parameters": "Polarized elliptic curve, translation, and divisor in the projective eight-space cut out by the ternary linear recurrence. Every nonzero correction works.",
+          "dimensions": [
+            9,
+            9
+          ],
+          "generic_periods": [
+            2,
+            4
+          ],
+          "proof": "sections/elliptic_tangent_windows.tex",
+          "checks": "computations/verify_elliptic_tangent_windows.py"
         }
       }
     },

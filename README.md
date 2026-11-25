@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-25 / v204。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-25 / v205。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -18,6 +18,8 @@ Codexは公表しやすさ、分類の巨大さ、局所問題の難しさを理
 有限四辺に接空間が三次元の点があれば、三生成部分を内在的に復元できる。四生成の有限Frobenius候補が標準AS正則となる必要十分条件は、その三生成基底が三次元の標準二次Koszul AS正則代数になることである。[Ore表示と同型条件](sections/maximal_tangent_ore.tex)・[検算](computations/verify_maximal_tangent_ore.py)
 
 この三生成部分が量子多項式環の場合、有限四辺の全対象は交換係数 $-1$ と原始四乗根の二型になる。各型の六次元族について零係数・二重点を含めて同型と周期を判定し、一般最小周期は順に2と4である。[分類と特殊化](sections/quantum_tangent_windows.tex)・[再現計算](computations/verify_quantum_tangent_windows.py)
+
+三生成部分の点スキームが滑らかな平面三次曲線の場合も有限枝を分類した。位数2または4の平行移動と次数12の因子が同型を決め、二族の次元はともに9である。[証明と正規表示](sections/elliptic_tangent_windows.tex)・[全パラメータの階数検算](computations/verify_elliptic_tangent_windows.py)
 
 ## 最初に読む
 

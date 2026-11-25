@@ -70,5 +70,6 @@ def parameters(relations):
     a, b = [proj * m[list(pivots), :] for m in (first, second)]
     indices = a.rref()[1]
     shift = b[:, list(indices)] * a[:, list(indices)].inv()
-    assert shift * a == b and shift.rank() == shift.rows
+    shift = shift.applyfunc(sp.cancel)
+    assert (shift * a - b).applyfunc(sp.cancel).is_zero_matrix and shift.rank() == shift.rows
     return dimensions, shifts.cols, shift

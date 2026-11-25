@@ -1,17 +1,25 @@
 {
   "schema_version": 2,
-  "version": 204,
+  "version": 205,
   "date": "2026-11-25",
   "reviewed_input": {
-    "source_commit": "8ded3c9b52c7bb59533dfb4fe1943e5b7fcf8abd"
+    "source_commit": "f4bf8a3dfc47cec50a41c58f6147ee7f4bfb7f1b"
   },
   "generation": {
     "result": "PASS",
-    "scope": "On the finite-four-edge locus with a maximal tangent point and a quantum polynomial ternary base, there are exactly two base types. Each gives an irreducible six-dimensional family of indexed classes. Nine explicit coefficients, row and vertex tests, torus weights and finite permutations decide every exceptional case, local length and period. Generic minimal periods are two and four. All nine-parameter presentations, including positive-dimensional edge specializations, are standard AS."
+    "scope": "Classifies every finite-edge maximal-tangent AS window whose ternary point scheme is a smooth plane cubic graph. The translation has exact order two or four. Every smooth base and every nonzero class in its nine-dimensional correction space is regular with finite edges. An effective divisor of degree twelve together with the polarized cubic and translation decides unmarked indexed isomorphism and all periods. The two irreducible nine-dimensional families have generic periods two and four. The previously known elliptic nine-parameter Ore family is dense in the first."
   },
   "checks": [
     {
+      "command": "python computations/verify_elliptic_tangent_windows.py",
+      "result": "PASS"
+    },
+    {
       "command": "python computations/verify_quantum_tangent_windows.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_maximal_tangent_ore.py",
       "result": "PASS"
     },
     {
@@ -36,12 +44,12 @@
     }
   ],
   "open_mathematics": [
-    "For a ternary AS3 base with smooth elliptic point graph evaluate the Ore recurrence at a triple of consecutive points. Compare the two contraction planes using the ternary potential and test the resulting fourth-power obstruction. Determine the section versus gauge quotient, admissible shift and normal forms. Retain embedding-dimension-two and unrestricted windows, and the ordinary rank-15 four-cut rank locus, as separate open tasks."
+    "At the boundary of the smooth elliptic base compute the ternary recurrence and the values of mixed corrections at the fixed singular points. Prove the nodal cases and whether a quantum-base window can be smoothed by lifting all its correction eigenvectors. Exclude cuspidal and projective-plane bases where justified. The unrestricted finite edges without a maximal tangent point, positive-dimensional windows and ordinary rank-15 exceptional locus still require work."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 343,
+      "nc-p3": 346,
       "plan_ja": 9,
       "notes_ja": 17
     },
