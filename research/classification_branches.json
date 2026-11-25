@@ -527,6 +527,12 @@
       "current_result": "For every finite-Frobenius point graph with one-dimensional image and point projection fibers, the total curve degree is at most seven including multiplicities. The third Picard difference vanishes and the degree of each component is constant across positions. The unique smooth elliptic quartic, when present, has second difference killed by twelve. A disjoint isolated residual to a smooth curve has length 18-4d+2g.",
       "current_proof": "sections/point_graph_curves.tex",
       "global_coverage": false
+    },
+    {
+      "id": "ELLIPTIC-POINT-QUARTIC-AS",
+      "current_result": "For a one-dimensional point graph containing a smooth elliptic quartic and with point projection fibers, regularity is equivalent to an invertible two-by-two tensor in the quartic product kernel of the two quadratic section ideals at each position. Every accepted algebra is free on both sides over the induced two-variable polynomial-type indexed subalgebra. The entire branch admits a finite atlas of pairs of six-planes in eight-space over elliptic polarization data, with a finite residual group and period tests.",
+      "current_proof": "sections/elliptic_point_quartic.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -584,7 +590,7 @@
     ]
   },
   "date": "2026-11-23",
-  "version": 243,
+  "version": 244,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 243,
+  "version": 244,
   "date": "2026-11-25",
   "reviewed_input": {
-    "source_commit": "5e088e7338df066b53c16e4f8012a75b921f2b38"
+    "source_commit": "289fca6f825476d9f484a515c0f37cc65707fd48"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For every finite-Frobenius point graph with one-dimensional image and point projection fibers, the total curve degree is at most seven including multiplicities. The third Picard difference vanishes and the degree of each component is constant across positions. The unique smooth elliptic quartic, when present, has second difference killed by twelve. A disjoint isolated residual to a smooth curve has length 18-4d+2g."
+    "scope": "For a one-dimensional point graph containing a smooth elliptic quartic and with point projection fibers, regularity is equivalent to an invertible two-by-two tensor in the quartic product kernel of the two quadratic section ideals at each position. Every accepted algebra is free on both sides over the induced two-variable polynomial-type indexed subalgebra. The entire branch admits a finite atlas of pairs of six-planes in eight-space over elliptic polarization data, with a finite residual group and period tests."
   },
   "checks": [
     {
-      "command": "python computations/verify_point_graph_curves.py",
+      "command": "python computations/verify_elliptic_point_quartic.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Recover the resolution of each elliptic quartic quotient by evaluation on its curve and determine regularity from the two quadrics in its kernel; other curve types and positive-dimensional fibers remain."
+    "Refine the remaining curve possibilities through the residual degree-three case of the five-biform linkage and the geometry of its two embeddings. Handle singular genus-one components and nonisolated projection fibers independently."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 418,
+      "nc-p3": 420,
       "plan_ja": 10,
       "notes_ja": 19
     },
