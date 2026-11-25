@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-25",
-  "version": 252,
+  "version": 253,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -2702,6 +2702,15 @@
       "verification": [
         "computations/verify_opposite_curve_divisor.py"
       ]
+    },
+    {
+      "id": "NONHYPERELLIPTIC-SEXTIC-EXCLUSION",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "No finite-Frobenius window has point graph a smooth nonhyperelliptic sextic of genus three with point projection fibers. The determinantal cubic forces its length-two rank drop onto a trisecant, yielding a fixed-point-free automorphism and a Jacobian identity. These force the Fermat plane quartic and one of thirty polarization sequences. Exact good reduction bounds every cubic overlap by two.",
+      "proof": "sections/nonhyperelliptic_sextic_exclusion.tex",
+      "verification": [
+        "computations/verify_nonhyperelliptic_sextic.py"
+      ]
     }
   ],
   "document_paths": {
@@ -2765,7 +2774,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "adfabc36c4ee2e32ea9bac9acfa122096293836c",
+  "reviewed_source_commit": "0ac0015f5166d4848d1b79a667d05b575a98f342",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -2774,14 +2783,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Use the opposite determinant cubic surfaces through smooth sextic curves of genus three, their rank-one singularities and the structured linear system; continue the remaining finite commutator and positive-fiber branches.",
+    "immediate_next_action": "Work on the hyperelliptic sextic via its intrinsic ruling and two binary pencils; include degree-six genus and isolated residual constraints, then address the remaining smooth quintics and reducible point schemes.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/opposite_curve_divisor.tex",
-      "sections/septic_bielliptic_forms.tex"
+      "sections/nonhyperelliptic_sextic_exclusion.tex",
+      "sections/opposite_curve_divisor.tex"
     ],
     "known_obstruction": "General windows can lack a recognized symmetry or Ore mark. All-degree AS membership is open for such candidates, including finite locally planar cases.",
-    "state_of_claim": "On every invariant smooth nondegenerate curve component the opposite two-point contraction has a finite flat rank-drop divisor of bidegree (2,2), with class the diagonal plus the inverse four-step graph twisted by the inverse polarization second difference on both factors. Small fixed loci force zero second difference in genus at least two; the bielliptic exceptional divisor and all elliptic translation cases are explicit. Elliptic quartic second differences are six-torsion. On every smooth septic the canonical four-step map is the bielliptic deck involution and the divisor is the nonzero two-torsion displacement on its elliptic quotient. Full classification remains open.",
+    "state_of_claim": "No finite-Frobenius window has point graph a smooth nonhyperelliptic sextic of genus three with point projection fibers. The determinantal cubic forces its length-two rank drop onto a trisecant, yielding a fixed-point-free automorphism and a Jacobian identity. These force the Fermat plane quartic and one of thirty polarization sequences. Exact good reduction bounds every cubic overlap by two. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

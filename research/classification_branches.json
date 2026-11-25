@@ -581,6 +581,12 @@
       "current_result": "On every invariant smooth nondegenerate curve component the opposite two-point contraction has a finite flat rank-drop divisor of bidegree (2,2), with class the diagonal plus the inverse four-step graph twisted by the inverse polarization second difference on both factors. Small fixed loci force zero second difference in genus at least two; the bielliptic exceptional divisor and all elliptic translation cases are explicit. Elliptic quartic second differences are six-torsion. On every smooth septic the canonical four-step map is the bielliptic deck involution and the divisor is the nonzero two-torsion displacement on its elliptic quotient.",
       "current_proof": "sections/opposite_curve_divisor.tex",
       "global_coverage": false
+    },
+    {
+      "id": "NONHYPERELLIPTIC-SEXTIC-EXCLUSION",
+      "current_result": "No finite-Frobenius window has point graph a smooth nonhyperelliptic sextic of genus three with point projection fibers. The determinantal cubic forces its length-two rank drop onto a trisecant, yielding a fixed-point-free automorphism and a Jacobian identity. These force the Fermat plane quartic and one of thirty polarization sequences. Exact good reduction bounds every cubic overlap by two.",
+      "current_proof": "sections/nonhyperelliptic_sextic_exclusion.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -638,7 +644,7 @@
     ]
   },
   "date": "2026-11-23",
-  "version": 252,
+  "version": 253,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
