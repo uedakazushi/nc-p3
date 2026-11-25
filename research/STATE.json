@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-25",
-  "version": 230,
+  "version": 231,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -2504,6 +2504,15 @@
       "verification": [
         "computations/verify_quantum_attraction_fiber.py"
       ]
+    },
+    {
+      "id": "QUANTUM-FACE-RESONANCE",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "For every quantum background with four distinct oriented face parameters the entire attraction fiber is its single indexed orbit. With exactly one repeated nonunit face pair, every window over it has an explicit three-coefficient PBW normal form changing only one relation. Support and one scalar ratio classify all special values, up to reversal of the support when the repeated value is minus one. Every window in these fibers is regular and has exact period one.",
+      "proof": "sections/quantum_face_resonance.tex",
+      "verification": [
+        "computations/verify_quantum_face_resonance.py"
+      ]
     }
   ],
   "document_paths": {
@@ -2567,7 +2576,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "320b22a286223509a75de559aa07ac3272c083e7",
+  "reviewed_source_commit": "50547c35c8913a9e0e19d5d5c330282de753fca7",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -2576,14 +2585,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Investigate windows with other quantum limits or without a quantum degeneration, especially the geometry and AS membership of the remaining isotropic half-period frames.",
+    "immediate_next_action": "Complete the description of quantum attraction fibers at higher face multiplicities, especially triple faces and simultaneous corrections, and continue covering windows without a quantum orbit limit.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/quantum_attraction_fiber.tex",
+      "sections/quantum_face_resonance.tex",
       "sections/walsh_full_component.tex"
     ],
     "known_obstruction": "General windows can lack a recognized symmetry or Ore mark. All-degree AS membership is open for such candidates, including finite locally planar cases.",
-    "state_of_claim": "All windows whose orbit closure contains the primitive rank-twelve quantum boundary are classified by the nullcone on 18 explicit weight lines modulo the diagonal torus and A4. The full marked fiber has 48 maximal supports in four permutation orbits, with unmarked generic dimensions 8,6,6,6 and exact period four there. Torus lattice invariants and the explicit rotation phases decide indexed isomorphism, periods and orbit closure at every support and all special values. Full classification remains open.",
+    "state_of_claim": "For every quantum background with four distinct oriented face parameters the entire attraction fiber is its single indexed orbit. With exactly one repeated nonunit face pair, every window over it has an explicit three-coefficient PBW normal form changing only one relation. Support and one scalar ratio classify all special values, up to reversal of the support when the repeated value is minus one. Every window in these fibers is regular and has exact period one. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

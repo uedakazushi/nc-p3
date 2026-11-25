@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 230,
+  "version": 231,
   "date": "2026-11-25",
   "reviewed_input": {
-    "source_commit": "320b22a286223509a75de559aa07ac3272c083e7"
+    "source_commit": "50547c35c8913a9e0e19d5d5c330282de753fca7"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All windows whose orbit closure contains the primitive rank-twelve quantum boundary are classified by the nullcone on 18 explicit weight lines modulo the diagonal torus and A4. The full marked fiber has 48 maximal supports in four permutation orbits, with unmarked generic dimensions 8,6,6,6 and exact period four there. Torus lattice invariants and the explicit rotation phases decide indexed isomorphism, periods and orbit closure at every support and all special values."
+    "scope": "For every quantum background with four distinct oriented face parameters the entire attraction fiber is its single indexed orbit. With exactly one repeated nonunit face pair, every window over it has an explicit three-coefficient PBW normal form changing only one relation. Support and one scalar ratio classify all special values, up to reversal of the support when the repeated value is minus one. Every window in these fibers is regular and has exact period one."
   },
   "checks": [
     {
-      "command": "python computations/verify_quantum_attraction_fiber.py",
+      "command": "python computations/verify_quantum_face_resonance.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Investigate windows with other quantum limits or without a quantum degeneration, especially the geometry and AS membership of the remaining isotropic half-period frames."
+    "Complete the description of quantum attraction fibers at higher face multiplicities, especially triple faces and simultaneous corrections, and continue covering windows without a quantum orbit limit."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 392,
+      "nc-p3": 394,
       "plan_ja": 9,
       "notes_ja": 18
     },
