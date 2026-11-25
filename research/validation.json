@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 229,
+  "version": 230,
   "date": "2026-11-25",
   "reviewed_input": {
-    "source_commit": "fc290af0ce1931b4afd898aac4f90ac3b414cad5"
+    "source_commit": "320b22a286223509a75de559aa07ac3272c083e7"
   },
   "generation": {
     "result": "PASS",
-    "scope": "At the unique quantum boundary of the fifteen-dimensional component the five-quartic-center scheme is smooth of affine dimension 76; its three normal tangent directions in the unrestricted rank locus are exactly the quantum parameters. Every adjacent-rank-six tensor with this one-parameter quantum limit belongs to that component and is regular. For the entire diagonal quantum Ore chart membership is equivalent to the unique quantum background; all nine coefficients of the primitive-fourth-root indexed ternary extension belong, and the minus-one family is disjoint. Laurent pole corrections explicitly reconstruct five quartic central sections."
+    "scope": "All windows whose orbit closure contains the primitive rank-twelve quantum boundary are classified by the nullcone on 18 explicit weight lines modulo the diagonal torus and A4. The full marked fiber has 48 maximal supports in four permutation orbits, with unmarked generic dimensions 8,6,6,6 and exact period four there. Torus lattice invariants and the explicit rotation phases decide indexed isomorphism, periods and orbit closure at every support and all special values."
   },
   "checks": [
     {
-      "command": "python computations/verify_quantum_ore_incidence.py",
+      "command": "python computations/verify_quantum_attraction_fiber.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Describe the invariant quotient of the smooth central branch at the quantum point using its torus character lattice, identify its orbit degenerations, and continue covering unrestricted windows with no quantum limit."
+    "Investigate windows with other quantum limits or without a quantum degeneration, especially the geometry and AS membership of the remaining isotropic half-period frames."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 391,
+      "nc-p3": 392,
       "plan_ja": 9,
       "notes_ja": 18
     },

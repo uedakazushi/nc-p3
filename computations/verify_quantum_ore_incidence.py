@@ -13,7 +13,7 @@ Y = (0,0,0,1)
 WORDS = list(product(K,repeat=4))
 
 
-def tangent():
+def tangent_equations():
     prime,root = 97,22
     assert root*root % prime == prime-1
     q = commutators((1,3,1))
@@ -33,7 +33,12 @@ def tangent():
         for u,v in product(range(a),range(b)):
             rows.append([left[4*i+j,u]*right[4*k+l,v]
                          for word in WORDS for i,j,k,l in [order(*word)]])
-    assert nmod_mat(rows,prime).rank()==177
+    return rows,values
+
+
+def tangent():
+    rows,_ = tangent_equations()
+    assert nmod_mat(rows,97).rank()==177
 
 
 def add(left,right,scale=ONE):
