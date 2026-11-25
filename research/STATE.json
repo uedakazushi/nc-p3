@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-25",
-  "version": 251,
+  "version": 252,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -2693,6 +2693,15 @@
       "verification": [
         "computations/verify_marked_point_commutators.py"
       ]
+    },
+    {
+      "id": "OPPOSITE-CURVE-DIVISOR",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "On every invariant smooth nondegenerate curve component the opposite two-point contraction has a finite flat rank-drop divisor of bidegree (2,2), with class the diagonal plus the inverse four-step graph twisted by the inverse polarization second difference on both factors. Small fixed loci force zero second difference in genus at least two; the bielliptic exceptional divisor and all elliptic translation cases are explicit. Elliptic quartic second differences are six-torsion. On every smooth septic the canonical four-step map is the bielliptic deck involution and the divisor is the nonzero two-torsion displacement on its elliptic quotient.",
+      "proof": "sections/opposite_curve_divisor.tex",
+      "verification": [
+        "computations/verify_opposite_curve_divisor.py"
+      ]
     }
   ],
   "document_paths": {
@@ -2756,7 +2765,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "1b58ab5973d7dce9198dbc50b1da0560fac208bb",
+  "reviewed_source_commit": "adfabc36c4ee2e32ea9bac9acfa122096293836c",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -2765,14 +2774,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Use the rank drop of the opposite two-point contraction on a smooth nondegenerate curve to obtain a degree-(2,2) divisor on its square and restrictions on the canonical monodromy; also solve remaining matrix commutator branches for finite graphs.",
+    "immediate_next_action": "Use the opposite determinant cubic surfaces through smooth sextic curves of genus three, their rank-one singularities and the structured linear system; continue the remaining finite commutator and positive-fiber branches.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/marked_point_commutators.tex",
-      "sections/finite_cubic_separators.tex"
+      "sections/opposite_curve_divisor.tex",
+      "sections/septic_bielliptic_forms.tex"
     ],
     "known_obstruction": "General windows can lack a recognized symmetry or Ore mark. All-degree AS membership is open for such candidates, including finite locally planar cases.",
-    "state_of_claim": "At any reduced point of a finite Frobenius point graph, the entire four-tensor has a canonical traceless presentation by four triples of three-by-three matrices. Both adjacent rank-six conditions reduce to one commutator equation linear in two of the triples. All marked basis changes, the opposite rank and the common-plane condition at rank eight are explicit. The complete kernel of point evaluation has a three-letter presentation by eight cubic commutators per position, with no higher defining relations. Full classification remains open.",
+    "state_of_claim": "On every invariant smooth nondegenerate curve component the opposite two-point contraction has a finite flat rank-drop divisor of bidegree (2,2), with class the diagonal plus the inverse four-step graph twisted by the inverse polarization second difference on both factors. Small fixed loci force zero second difference in genus at least two; the bielliptic exceptional divisor and all elliptic translation cases are explicit. Elliptic quartic second differences are six-torsion. On every smooth septic the canonical four-step map is the bielliptic deck involution and the divisor is the nonzero two-torsion displacement on its elliptic quotient. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

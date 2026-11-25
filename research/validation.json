@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 251,
+  "version": 252,
   "date": "2026-11-25",
   "reviewed_input": {
-    "source_commit": "1b58ab5973d7dce9198dbc50b1da0560fac208bb"
+    "source_commit": "adfabc36c4ee2e32ea9bac9acfa122096293836c"
   },
   "generation": {
     "result": "PASS",
-    "scope": "At any reduced point of a finite Frobenius point graph, the entire four-tensor has a canonical traceless presentation by four triples of three-by-three matrices. Both adjacent rank-six conditions reduce to one commutator equation linear in two of the triples. All marked basis changes, the opposite rank and the common-plane condition at rank eight are explicit. The complete kernel of point evaluation has a three-letter presentation by eight cubic commutators per position, with no higher defining relations."
+    "scope": "On every invariant smooth nondegenerate curve component the opposite two-point contraction has a finite flat rank-drop divisor of bidegree (2,2), with class the diagonal plus the inverse four-step graph twisted by the inverse polarization second difference on both factors. Small fixed loci force zero second difference in genus at least two; the bielliptic exceptional divisor and all elliptic translation cases are explicit. Elliptic quartic second differences are six-torsion. On every smooth septic the canonical four-step map is the bielliptic deck involution and the divisor is the nonzero two-torsion displacement on its elliptic quotient."
   },
   "checks": [
     {
-      "command": "python computations/verify_marked_point_commutators.py",
+      "command": "python computations/verify_opposite_curve_divisor.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Use the rank drop of the opposite two-point contraction on a smooth nondegenerate curve to obtain a degree-(2,2) divisor on its square and restrictions on the canonical monodromy; also solve remaining matrix commutator branches for finite graphs."
+    "Use the opposite determinant cubic surfaces through smooth sextic curves of genus three, their rank-one singularities and the structured linear system; continue the remaining finite commutator and positive-fiber branches."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 434,
+      "nc-p3": 436,
       "plan_ja": 10,
       "notes_ja": 20
     },
