@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 221,
+  "version": 222,
   "date": "2026-11-25",
   "reviewed_input": {
-    "source_commit": "39cd088279801e195df12f6c11a852d25f8ae33b"
+    "source_commit": "cf949f2daefe2859f298d5f52be0fb55409bbef0"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The signed double cover modulo simultaneous S3 is the normalization of the full projective Walsh image. Its regular locus is exactly rank(N)=2. The three spectra of a balanced representative recover a finite list of normalization points even at eigenvalue collisions and zero diagonals. Comparison of orbit-closure linear spans separates all candidates, decides the period and recognizes Walsh membership for an arbitrary input tensor."
+    "scope": "The four half-period germs through a general Walsh point belong to exactly two global fixed-locus components, of dimensions nine and five. The three smooth five-dimensional branches have full S3 monodromy and generic stabilizer C2. The nine-dimensional component is generically free and its normalization has three nearby five-dimensional double loci. Both cuts of an order-four half-turn have symmetric rank four and alternating rank two; the alternating determinant pencils recover finite vertex frames."
   },
   "checks": [
     {
-      "command": "python computations/verify_walsh_spectral_fibers.py",
+      "command": "python computations/verify_half_period_components.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine the global incidence and branching of the nine- and five-dimensional half-period components, identify stabilizers and construct deformation charts outside Walsh symmetry. Unrestricted AS membership and global coverage remain open."
+    "Parametrize the five-dimensional order-four half-period component by its two determinant pencils and symmetric extension matrices. Resolve the simultaneous Schur equations and investigate AS membership outside the Walsh locus."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 376,
+      "nc-p3": 377,
       "plan_ja": 9,
       "notes_ja": 17
     },

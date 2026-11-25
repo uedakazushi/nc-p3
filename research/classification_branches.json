@@ -421,7 +421,8 @@
         "result": "The generic recovery degree from one projected configuration is exactly two. The two finite-edge AS windows are the original orientation and its reversal; one ordered first edge determines the extension. At both rational samples the same classification holds. A pencil of quartics with twenty triple points recovers every normalized square root, including the exclusion of degenerate Grassmann candidates.",
         "proof": "sections/configuration_quartic_pencil.tex"
       },
-      "walsh_incidence": "sections/walsh_full_component.tex"
+      "walsh_incidence": "sections/walsh_full_component.tex",
+      "half_period_components": "sections/half_period_components.tex"
     },
     {
       "id": "SMOOTH-ELLIPTIC-ORE-ALL-EDGES",
@@ -520,7 +521,7 @@
     ]
   },
   "date": "2026-11-23",
-  "version": 221,
+  "version": 222,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
