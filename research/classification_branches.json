@@ -456,7 +456,8 @@
       "id": "WALSH-ADJACENT-RANK-SIX",
       "current_result": "For tensors admitting the specified Walsh symmetry bases, the two adjacent rank-six conditions reduce to signed row and column sums of a three-by-three matrix of squares after excluding exponential growth. Every opposite-rank-fifteen candidate is exactly a normalized regular Pauli window. Opposite ranks eleven and thirteen are impossible for standard objects. At ranks twelve and fourteen three nonzero blocks on each side are necessary and sufficient for regularity. Rank twelve has one quantum class; rank fourteen includes a single additional orbit of normalized presentations at H squared equal to four, certified by four-start central cuts.",
       "current_proof": "sections/walsh_symmetric_windows.tex",
-      "rank_fourteen_orbits": "sections/walsh_rank_fourteen_orbits.tex"
+      "rank_fourteen_orbits": "sections/walsh_rank_fourteen_orbits.tex",
+      "generic_parameter_space": "sections/walsh_presentation_space.tex"
     }
   ],
   "presentation_components": {
@@ -514,7 +515,7 @@
     ]
   },
   "date": "2026-11-23",
-  "version": 217,
+  "version": 218,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
