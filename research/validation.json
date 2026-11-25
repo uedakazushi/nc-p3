@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 234,
+  "version": 235,
   "date": "2026-11-25",
   "reviewed_input": {
-    "source_commit": "1bdc03fb507c454c3f013f4ea1609b67b9da535b"
+    "source_commit": "ec42944565093db89303f1547374e1e8914dedd1"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every standard indexed window with a regular normal linear sequence has exact period one. Marked classes correspond to central homogenizations of PBW deformations of ternary standard Koszul AS algebras, with an explicit three-condition test and affine change-of-lifts rule. For a smooth plane cubic quotient the normal sequence is intrinsically unique, yielding the full unmarked test. Over a fixed smooth elliptic Sklyanin quotient all special classes form a split point and a finite quotient of weighted projective space P(1,1,1,2,2,2), of dimension five."
+    "scope": "A finite four-line incidence in the raw tensor detects exactly all standard windows admitting a regular normal linear sequence and recovers every marking, even where multiple marks exist. A ternary overlap and two projective matrix-rank tests certify every ternary base including nonreduced plane cubics. The unmarked elliptic quotient classification extends to nodal and cuspidal integral graphs; the projective centralizer is at most six in the nodal case and trivial in the cuspidal case."
   },
   "checks": [
     {
-      "command": "python computations/verify_regular_normal_linear.py",
+      "command": "python computations/verify_normal_line_recognition.py",
       "result": "PASS"
     },
     {
@@ -36,14 +36,14 @@
     }
   ],
   "open_mathematics": [
-    "Extend intrinsic recognition of normal linear sequences to singular cubic quotients and to tensors without a supplied mark; determine overlap with other branches. Resolve the simultaneous two-pair quantum obstructions and the remaining windows without a quantum or normal-line description."
+    "Analyze the complementary branch with neither a regular normal linear sequence nor a quantum limit. Develop finite recognition and all-degree criteria for normal quadrics or higher projective evaluation strata. Resolve the two-pair simultaneous quantum obstruction when explicit strata are needed."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 400,
+      "nc-p3": 402,
       "plan_ja": 9,
-      "notes_ja": 18
+      "notes_ja": 19
     },
     "scope": "LuaLaTeX built the manuscript, plan and research notes."
   },

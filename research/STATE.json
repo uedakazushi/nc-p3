@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-25",
-  "version": 234,
+  "version": 235,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -2540,6 +2540,15 @@
       "verification": [
         "computations/verify_regular_normal_linear.py"
       ]
+    },
+    {
+      "id": "NORMAL-LINE-RECOGNITION",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "A finite four-line incidence in the raw tensor detects exactly all standard windows admitting a regular normal linear sequence and recovers every marking, even where multiple marks exist. A ternary overlap and two projective matrix-rank tests certify every ternary base including nonreduced plane cubics. The unmarked elliptic quotient classification extends to nodal and cuspidal integral graphs; the projective centralizer is at most six in the nodal case and trivial in the cuspidal case.",
+      "proof": "sections/normal_line_recognition.tex",
+      "verification": [
+        "computations/verify_normal_line_recognition.py"
+      ]
     }
   ],
   "document_paths": {
@@ -2603,7 +2612,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "1bdc03fb507c454c3f013f4ea1609b67b9da535b",
+  "reviewed_source_commit": "ec42944565093db89303f1547374e1e8914dedd1",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -2612,14 +2621,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Extend intrinsic recognition of normal linear sequences to singular cubic quotients and to tensors without a supplied mark; determine overlap with other branches. Resolve the simultaneous two-pair quantum obstructions and the remaining windows without a quantum or normal-line description.",
+    "immediate_next_action": "Analyze the complementary branch with neither a regular normal linear sequence nor a quantum limit. Develop finite recognition and all-degree criteria for normal quadrics or higher projective evaluation strata. Resolve the two-pair simultaneous quantum obstruction when explicit strata are needed.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/regular_normal_linear.tex",
-      "sections/quantum_universal_chambers.tex"
+      "sections/normal_line_recognition.tex",
+      "sections/half_period_semisimple.tex"
     ],
     "known_obstruction": "General windows can lack a recognized symmetry or Ore mark. All-degree AS membership is open for such candidates, including finite locally planar cases.",
-    "state_of_claim": "Every standard indexed window with a regular normal linear sequence has exact period one. Marked classes correspond to central homogenizations of PBW deformations of ternary standard Koszul AS algebras, with an explicit three-condition test and affine change-of-lifts rule. For a smooth plane cubic quotient the normal sequence is intrinsically unique, yielding the full unmarked test. Over a fixed smooth elliptic Sklyanin quotient all special classes form a split point and a finite quotient of weighted projective space P(1,1,1,2,2,2), of dimension five. Full classification remains open.",
+    "state_of_claim": "A finite four-line incidence in the raw tensor detects exactly all standard windows admitting a regular normal linear sequence and recovers every marking, even where multiple marks exist. A ternary overlap and two projective matrix-rank tests certify every ternary base including nonreduced plane cubics. The unmarked elliptic quotient classification extends to nodal and cuspidal integral graphs; the projective centralizer is at most six in the nodal case and trivial in the cuspidal case. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

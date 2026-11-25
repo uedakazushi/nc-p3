@@ -484,7 +484,9 @@
       "scope": "Every indexed object admitting a regular normal linear sequence, with the sequence marked. Marking is intrinsically redundant over smooth elliptic ternary quotients.",
       "current_result": "Every standard indexed window with a regular normal linear sequence has exact period one. Marked classes correspond to central homogenizations of PBW deformations of ternary standard Koszul AS algebras, with an explicit three-condition test and affine change-of-lifts rule. For a smooth plane cubic quotient the normal sequence is intrinsically unique, yielding the full unmarked test. Over a fixed smooth elliptic Sklyanin quotient all special classes form a split point and a finite quotient of weighted projective space P(1,1,1,2,2,2), of dimension five.",
       "current_proof": "sections/regular_normal_linear.tex",
-      "global_coverage": false
+      "global_coverage": false,
+      "recognition": "sections/normal_line_recognition.tex",
+      "unmarked": "Finite incidence plus marked isomorphism test for all, and unique mark over every integral cubic graph."
     }
   ],
   "presentation_components": {
@@ -542,7 +544,7 @@
     ]
   },
   "date": "2026-11-23",
-  "version": 234,
+  "version": 235,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
