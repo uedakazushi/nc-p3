@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 231,
+  "version": 232,
   "date": "2026-11-25",
   "reviewed_input": {
-    "source_commit": "50547c35c8913a9e0e19d5d5c330282de753fca7"
+    "source_commit": "4777727ee0defed8db20111b36e1b4195af53e86"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For every quantum background with four distinct oriented face parameters the entire attraction fiber is its single indexed orbit. With exactly one repeated nonunit face pair, every window over it has an explicit three-coefficient PBW normal form changing only one relation. Support and one scalar ratio classify all special values, up to reversal of the support when the repeated value is minus one. Every window in these fibers is regular and has exact period one."
+    "scope": "For exactly three equal oriented quantum faces every orbit over the quantum point has a nine-coefficient cyclic presentation with a central generator and vanishing product of its three square coefficients. Three coordinate planes, identified by a cyclic permutation, give the entire fiber. Supports and lattice monomials decide every indexed isomorphism and degeneration; all periods are one and the generic unmarked dimension is five. On the rest of the nine-coefficient family, the only nonregular values have both Q cubed and the square product equal to minus one."
   },
   "checks": [
     {
-      "command": "python computations/verify_quantum_face_resonance.py",
+      "command": "python computations/verify_quantum_triple_face.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Complete the description of quantum attraction fibers at higher face multiplicities, especially triple faces and simultaneous corrections, and continue covering windows without a quantum orbit limit."
+    "Give a terminating weight-by-weight description of the attraction fiber for arbitrary quantum backgrounds, including nonabelian stabilizers, and extend the coverage to windows with no quantum orbit limit."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 394,
+      "nc-p3": 396,
       "plan_ja": 9,
       "notes_ja": 18
     },

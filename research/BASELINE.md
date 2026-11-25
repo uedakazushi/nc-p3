@@ -172,3 +172,7 @@ Herschend--Iyama--Oppermann, *n-representation infinite algebras*, §2 と Grant
 
 ### 相異なる八点完全交叉の自己付随性
 D. Plaumann, B. Sturmfels, C. Vinzant, *Quartic curves and their bitangents*, Journal of Symbolic Computation 46 (2011), 712–733, doi:10.1016/j.jsc.2011.01.007. 著者公開の出版社PDF https://math.berkeley.edu/~bernd/JSCquartics.pdf の表題・書誌と Theorem 3.10 を確認した。同定理は一般位置の八点を仮定し、Cayley octadとGale自己付随性の同値を述べる。本稿では完全交叉から直交表示へ向かう方向を、評価フィルトレーションと非零重みから自前で証明する。任意の直交行列が正則八点配置を与えること、点配置同値がindexed代数の完全同型判定であることは主張しない。
+
+## 三面一致の九係数表示に使う三生成基底
+
+Iyudu–Shkarin, *Three dimensional Sklyanin algebras and Gröbner bases* の三生成Sklyanin代数のKoszul性とHilbert級数判定を使用する。三係数が非零で三乗が全て等しくない場合だけを適用し、左右の完全対合と例外の指数成長は[適用箇所](../sections/quantum_triple_face.tex)で直接証明した。今回のプロキシ環境では外部本文を再取得できなかった。

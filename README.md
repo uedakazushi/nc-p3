@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-25 / v231。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-25 / v232。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -28,7 +28,14 @@ Walsh基底を持つ隣接階数6の四窓は、符号付き平方行列 $N$ の
 
 この枝の階数12は一つの量子窓、階数14は二点除去直線、階数15は境界四点を含む有理曲面の開集合である。階数14の周期1は一点、階数15の周期1は二点である。[テンソルからの認識](sections/walsh_symmetric_windows.tex)・[階数14の同型曲線](sections/walsh_rank_fourteen_orbits.tex)・[階数15の全点分類](sections/rank_fifteen_all_ordinary.tex)
 
-Walsh三次元族は既知の十五次元成分に含まれる。その一般点からはWalsh族の外に次元9の一枝と次元5の三枝の周期2変形が出る。後の三枝はモノドロミーで置換され、大域的な五次元成分は一つである。十五次元成分では、53で指定の窓に還元される持上げが全て正則であり、代数的な最小周期4の正則閉点が稠密にある。[良い還元の判定と証明](sections/unrestricted_good_reduction.tex) 九次元成分の一般窓は滑らかな二次曲面、四直線枠と三自由重みで分類できる。[枠の復元と八固定点](sections/half_period_frame.tex) 九次元成分の三つの重みを変えても中心商は一定で、有理例では全非零重みが正則である。[重み全域の判定](sections/half_period_weight_fibers.tex) さらにGram行列と逆行列の対角が全て非零なら、九次元成分のこの開集合の全閉点が正則である。[双対の線型フィルトレーション](sections/half_period_semisimple.tex) 十五次元成分と量子多項式族全体の共通部分は反対階数12の一同型類に尽きる。[可除代数の特殊化と交叉の全判定](sections/quantum_component_intersection.tex) この量子点へ一径数で退化する全窓は正則で同成分に入る。対角量子Ore枝との交叉も量子背景だけで決まる。[五中心局所方程式とOre枝](sections/quantum_ore_component_incidence.tex) さらにこの量子点へ退化する全軌道が十八座標の台とトーラス・偶置換で分類でき、極大台は四種類である。[特殊同型・周期・退化の判定](sections/quantum_attraction_fiber.tex) 一般の量子四面で四値が異なれば量子軌道のみで、一対だけが1以外の重複値なら三係数の全特殊値を一つの比まで分類できる。[量子四面値による判定](sections/quantum_face_resonance.tex) 五次元成分の稠密開部分では、二倍率と二つの二次式を満たす平面からテンソルを復元できる。[平面からの復元](sections/half_period_two_quadrics.tex)・[二成分の正規化と安定化群](sections/half_period_components.tex) [成分の同定と四つの周期層](sections/walsh_full_component.tex)
+Walsh三次元族を含む十五次元成分と、そこから出る周期2の成分では、次のことが分かっている。
+
+- 十五次元成分では、指定の窓に法53で還元される持上げは全て正則で、最小周期4の正則な代数的閉点が稠密にある。[良い還元の判定](sections/unrestricted_good_reduction.tex)
+- 一般Walsh点から出る周期2の局所枝の次元は9、5、5、5である。後の三枝は大域では一つの成分に属し、二倍率と二つの二次式を満たす平面から一般窓を復元できる。[四つの周期層](sections/walsh_full_component.tex)・[成分の正規化](sections/half_period_components.tex)・[五次元成分の復元](sections/half_period_two_quadrics.tex)
+- 九次元成分の一般窓は滑らかな二次曲面、四直線枠と三自由重みで決まる。三重みを変えても中心商は一定で、枠のGram行列と逆行列の対角が全て非零なら全ての許容重みで正則である。[枠の復元](sections/half_period_frame.tex)・[共通中心商](sections/half_period_weight_fibers.tex)・[正則性の証明](sections/half_period_semisimple.tex)
+- 十五次元成分が量子多項式族と交わるのは反対階数12の一同型類だけである。この点へ退化する全窓は正則で同成分に属し、十八座標の台とトーラス・偶置換で分類できる。対角量子Ore枝の所属も量子背景で決まる。[共通部分の証明](sections/quantum_component_intersection.tex)・[Ore枝の判定](sections/quantum_ore_component_incidence.tex)・[全台の同型・周期・退化](sections/quantum_attraction_fiber.tex)
+
+量子点への退化は、四つの向き付き三角積でも判定できる。四値が相異なればその量子点だけが残る。一対だけが非単位の重複値なら、三係数の台と一つの比で全同型類が決まる。三面が一致する場合は九係数表示のうち平方係数の積が消える三平面で尽くされ、周期は全て1である。[相異なる場合と一対重複](sections/quantum_face_resonance.tex)・[三面一致の場合と九係数表示の正則性](sections/quantum_triple_face.tex)
 
 非恒等の平面グラフを基底に持つOre窓では、指定点を忘れた同型類も決定した。[正規形と平坦特殊化](sections/plane_graph_ore_windows.tex)・[検算](computations/verify_plane_graph_ore.py)
 
