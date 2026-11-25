@@ -1,17 +1,21 @@
 {
   "schema_version": 2,
-  "version": 213,
+  "version": 214,
   "date": "2026-11-25",
   "reviewed_input": {
-    "source_commit": "04688b7f3d3b8cadb75342d270c62cebd0797d4f"
+    "source_commit": "fefe74abba8bd835f1b274e62f1bac0119e448b8"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every ordinary positive fixed rank-fifteen window has a common four-center cut with a central monomial basis through degree nine at all starts. The ninth uncut and cut dimensions are 220 and 20. An upper bound of five for one odd-length character is enough: Walsh translations act transitively on the characters and preserve the zero-character center, so four open Grassmannian conditions intersect. A signed bivariate descent and eleven finite exceptional fibers verify the bound on the whole ordinary locus."
+    "scope": "When the five-center quotient vanishes in length eight, its normal words through seven give a single lifted arrow table for every four-center direction. Quadratic residuals on those words determine every higher quotient exactly. On the ordinary Hilbert stratum all central-direction minors through thirteen have degree at most 21. The two-variable residue-field quotient by columns two through five has the full target profile through thirteen at start zero with an explicit localization at 171 irreducible pivot factors."
   },
   "checks": [
     {
-      "command": "python computations/verify_rank_fifteen_ninth_character.py",
+      "command": "python computations/verify_rank_fifteen_bivariate_border.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_rank_fifteen_center_border.py",
       "result": "PASS"
     },
     {
@@ -36,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Lift five-center quotient word multiplication through length eight to a free module over one central parameter. Use the quadratic residual relations on length-seven generators to propagate minors through thirteen, descend the exceptional signed pairs, and test all residual points. The whole ordinary rank-fifteen plane and general four-window coverage remain open."
+    "Descend actual maximal minors of the original propagated rows (only one odd character is needed) instead of every elimination pivot. Handle the common signed residual curve via its sextic function field, then certify the remaining closed fibers and apply all-degree central lifting. General windows outside the Pauli ranks remain open."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 361,
+      "nc-p3": 363,
       "plan_ja": 9,
       "notes_ja": 17
     },

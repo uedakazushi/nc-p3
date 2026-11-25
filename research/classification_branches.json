@@ -440,6 +440,11 @@
       "id": "RANK-FIFTEEN-NINTH-CHARACTER",
       "current_result": "Every ordinary positive fixed rank-fifteen window has a common four-center cut with a central monomial basis through degree nine at all starts. The ninth uncut and cut dimensions are 220 and 20. An upper bound of five for one odd-length character is enough: Walsh translations act transitively on the characters and preserve the zero-character center, so four open Grassmannian conditions intersect. A signed bivariate descent and eleven finite exceptional fibers verify the bound on the whole ordinary locus.",
       "current_proof": "sections/rank_fifteen_ninth_character.tex"
+    },
+    {
+      "id": "FIVE-CENTER-ARROW-TABLE",
+      "current_result": "When the five-center quotient vanishes in length eight, its normal words through seven give a single lifted arrow table for every four-center direction. Quadratic residuals on those words determine every higher quotient exactly. On the ordinary Hilbert stratum all central-direction minors through thirteen have degree at most 21. The two-variable residue-field quotient by columns two through five has the full target profile through thirteen at start zero with an explicit localization at 171 irreducible pivot factors.",
+      "current_proof": "sections/rank_fifteen_center_border.tex"
     }
   ],
   "presentation_components": {
