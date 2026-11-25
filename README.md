@@ -1,6 +1,6 @@
 # nc-p3 — 非可換射影三空間の完全分類
 
-**2026-11-25 / v220。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-25 / v221。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -24,23 +24,11 @@ Codexは公表しやすさ、分類の巨大さ、局所問題の難しさを理
 
 後の三種類は対応する楕円族の特殊化である。三次元接点を持たない全ての有限四辺でも、局所点環と三つの四次元空間から添字保持同型と周期を判定できる。埋込み次元2の局所環では、最初の二元関係から高々六つの直線を選び、局所環の定義イデアルと三空間を同時に正規化する。[同型の完全不変量](sections/planar_point_flags.tex)
 
-Walsh三次元族は既知の十五次元成分に含まれる。その一般点からはWalsh族の外に次元9の一枝と次元5の三枝の周期2変形が出る。[成分の同定と四つの周期層](sections/walsh_full_component.tex)・[接空間の検算](computations/verify_walsh_full_component.py)
+Walsh基底を持つ隣接階数6の四窓は、符号付き平方行列 $N$ の階数が2のとき、かつそのときに限り標準Koszul左右AS正則である。四つの正規二次式の二乗上で各始点が自由階数256になる。指定なし商の正規化は六平面に分岐する二重被覆の三文字置換商であり、特殊値の同型と最小周期も三切断の特異値から有限候補を復元して比較できる。[全点の正則性](sections/walsh_normal_quadrics.tex)・[正規化と特殊点の判定](sections/walsh_spectral_fibers.tex)
 
-Walsh基底を持つ隣接階数6の全候補では、各側に三色が残り符号付き平方行列が階数2となることが、標準Koszul左右AS正則性の必要十分条件である。階数16の特殊値を含む。四つの正規二次式の二乗上で各始点が自由階数256になる。[全点の判定と証明](sections/walsh_normal_quadrics.tex)・[検算](computations/verify_walsh_normal_quadrics.py)
+この枝の階数12は一つの量子窓、階数14は二点除去直線、階数15は境界四点を含む有理曲面の開集合である。階数14の周期1は一点、階数15の周期1は二点である。[テンソルからの認識](sections/walsh_symmetric_windows.tex)・[階数14の同型曲線](sections/walsh_rank_fourteen_orbits.tex)・[階数15の全点分類](sections/rank_fifteen_all_ordinary.tex)
 
-Walsh表示の既約三次元族では、幾何学的一般点は階数16、周期2の標準正則窓である。一般の添字保持同型商は六平面で分岐する二重被覆の三文字置換商になる。全三色候補の二次双対は欠色の四語を零にしたFrobenius窓である。[一般商と全点の双対](sections/walsh_presentation_space.tex)・[検算](computations/verify_walsh_presentation_space.py)
-
-Walsh対称な階数14の正則窓の添字保持同型類は、原点が唯一の周期1点である二点除去直線をなす。[基底を忘れた同型と周期の証明](sections/walsh_rank_fourteen_orbits.tex)・[単項式による検算](computations/verify_walsh_rank_fourteen_orbits.py)
-
-Walsh基底を持つ四窓では、隣接二切断が階数6なら反対階数15の全候補がこの正則な曲面に入る。階数12と14の正則性は両側の非零文字ブロック数で決まり、階数11と13は除外される。[テンソルからの認識と証明](sections/walsh_symmetric_windows.tex)・[記号計算と境界の検算](computations/verify_walsh_symmetric_windows.py)
-
-正の固定曲線から得られる通常階数15窓は全点で左右AS正則であり、各始点で四つの中心四次式上自由階数256を持つ。境界四点を含む規格化族の添字保持同型類は一つの有理曲面の開集合に対応し、周期1は二点、他は周期2である。[全点の証明](sections/rank_fifteen_all_ordinary.tex)・[例外曲線の検算](computations/verify_rank_fifteen_signed_curve.py)
-
-五中心商の長さ7以下の語の乗法表から四中心商を計算し、二変数の関数体で十三次の消滅を確認した。[乗法表と例外条件](sections/rank_fifteen_center_border.tex)・[二変数計算](computations/verify_rank_fifteen_bivariate_border.py)
-
-通常階数15の全点・全始点で、九次の道は220次元、共通の四中心商は20次元となる。[文字空間の対称性による証明](sections/rank_fifteen_ninth_character.tex)・[再現計算](computations/verify_rank_fifteen_ninth_character.py)
-
-通常階数15では、三次曲線束 $y=\lambda x^3$ の任意の非零有理倍率で、特殊点を含む全通常点の正則性を証明した。[全次数の証明と種数2の同型曲線](sections/rank_fifteen_cubic_pencils.tex)・[再現計算](computations/verify_rank_fifteen_cubic_pencils.py)
+Walsh三次元族は既知の十五次元成分に含まれる。その一般点からはWalsh族の外に次元9の一枝と次元5の三枝の周期2変形が出る。[成分の同定と四つの周期層](sections/walsh_full_component.tex)
 
 非恒等の平面グラフを基底に持つOre窓では、指定点を忘れた同型類も決定した。[正規形と平坦特殊化](sections/plane_graph_ore_windows.tex)・[検算](computations/verify_plane_graph_ore.py)
 

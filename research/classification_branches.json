@@ -461,7 +461,8 @@
       "generic_parameter_space": "sections/walsh_presentation_space.tex",
       "all_parameters_AS": "An adjacent-rank-six Walsh tensor is standard quadratic Koszul two-sided AS-regular exactly when three colors survive on each cut and the signed three-by-three square matrix N has rank two. Every rank-one point has at least 36 paths of length four. At every rank-two point, sparse cases included, the transfer of the missing words is an orientation-reversing split-quaternion isometry. It supplies four normal quadratics whose central squares give freeness of rank 256 per start.",
       "regularity_proof": "sections/walsh_normal_quadrics.tex",
-      "full_component_and_periods": "sections/walsh_full_component.tex"
+      "full_component_and_periods": "sections/walsh_full_component.tex",
+      "unmarked_special_fibers": "sections/walsh_spectral_fibers.tex"
     }
   ],
   "presentation_components": {
@@ -519,7 +520,7 @@
     ]
   },
   "date": "2026-11-23",
-  "version": 220,
+  "version": 221,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
