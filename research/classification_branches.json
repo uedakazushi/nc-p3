@@ -487,6 +487,13 @@
       "global_coverage": false,
       "recognition": "sections/normal_line_recognition.tex",
       "unmarked": "Finite incidence plus marked isomorphism test for all, and unique mark over every integral cubic graph."
+    },
+    {
+      "id": "ONE-SIDED-PARAMETER-CUTOFF",
+      "scope": "Finite left module over a marked four-generator weighted iterated Ore source.",
+      "current_result": "For every finite-Frobenius window admitting a finite left module presentation over four positive weighted iterated Ore parameters, regularity is equivalent to a right-quotient Hilbert test and the left linear complex through the sum of the four weights. No centrality, normality or right-module finiteness of the parameters is needed. The finite test itself certifies finiteness, freeness and both AS conditions on success.",
+      "current_proof": "sections/onesided_parameter_cutoff.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -544,7 +551,7 @@
     ]
   },
   "date": "2026-11-23",
-  "version": 235,
+  "version": 236,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

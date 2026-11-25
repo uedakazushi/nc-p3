@@ -1,17 +1,21 @@
 {
   "schema_version": 2,
-  "version": 235,
+  "version": 236,
   "date": "2026-11-25",
   "reviewed_input": {
-    "source_commit": "ec42944565093db89303f1547374e1e8914dedd1"
+    "source_commit": "192f0ad31275b07451298dc1ef8013d6f295b3f0"
   },
   "generation": {
     "result": "PASS",
-    "scope": "A finite four-line incidence in the raw tensor detects exactly all standard windows admitting a regular normal linear sequence and recovers every marking, even where multiple marks exist. A ternary overlap and two projective matrix-rank tests certify every ternary base including nonreduced plane cubics. The unmarked elliptic quotient classification extends to nodal and cuspidal integral graphs; the projective centralizer is at most six in the nodal case and trivial in the cuspidal case."
+    "scope": "For every finite-Frobenius window admitting a finite left module presentation over four positive weighted iterated Ore parameters, regularity is equivalent to a right-quotient Hilbert test and the left linear complex through the sum of the four weights. No centrality, normality or right-module finiteness of the parameters is needed. The finite test itself certifies finiteness, freeness and both AS conditions on success."
   },
   "checks": [
     {
-      "command": "python computations/verify_normal_line_recognition.py",
+      "command": "python computations/verify_quantum_parameter_cutoff.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_central_window_cutoff.py",
       "result": "PASS"
     },
     {
@@ -36,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze the complementary branch with neither a regular normal linear sequence nor a quantum limit. Develop finite recognition and all-degree criteria for normal quadrics or higher projective evaluation strata. Resolve the two-pair simultaneous quantum obstruction when explicit strata are needed."
+    "Resolve the two-pair simultaneous quantum obstructions with graded Ore presentations. Investigate finite point-scheme evaluations in the remaining branch without quantum limits, regular normal lines or one-sided parameter certificates."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 402,
+      "nc-p3": 403,
       "plan_ja": 9,
       "notes_ja": 19
     },

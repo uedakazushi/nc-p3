@@ -56,13 +56,13 @@ def quotient_dimensions(windows, sections, start, unit=Fraction(1)):
     return dims
 
 
-def koszul_exact(windows, start):
-    paths = PathRow(windows, start, 16)
-    if paths.dims != [comb(n + 3, 3) for n in range(17)]:
+def koszul_exact(windows, start, cutoff=16):
+    paths = PathRow(windows, start, cutoff)
+    if paths.dims != [comb(n + 3, 3) for n in range(cutoff + 1)]:
         return False
     frames = CutFrames(windows)
     terms = (1, 4, 6, 4, 1)
-    for n in range(1, 17):
+    for n in range(1, cutoff + 1):
         previous_rank = 0
         for j in range(min(n, 4) + 1):
             dim = paths.dims[n - j] * terms[j]
