@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 210,
+  "version": 211,
   "date": "2026-11-25",
   "reviewed_input": {
-    "source_commit": "82280f48d5bd029c4c3e3b577445e4383f5d8906"
+    "source_commit": "234b9bd106fe246a7511bdef934f95da827d4d77"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The intrinsic rank-three marked Ore criterion works also for positive-dimensional edges. For a smooth elliptic ternary point graph the mark is unique. Outside translations of orders two and four, the correction space vanishes except for the inversion linear part, where it has dimension two for every admissible curve. All these positive-edge windows have period one."
+    "scope": "For a plane-graph ternary base the marked correction space is the fifteen-dimensional Euler quotient for the identity, zero for nonidentity without a fixed line, and the three binary quadratics with scalar shift for a fixed line. All have period one. For all nonidentity plane-graph bases the unmarked classes are determined by projective conjugacy in the no-line case, or by the multiplier up to inversion, the quadratic rank and the incidence with the center of a transvection. All transvection classes are flat limits of homologies."
   },
   "checks": [
     {
-      "command": "python computations/verify_elliptic_fixed_ore.py",
+      "command": "python computations/verify_plane_graph_ore.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine the recurrent corrections for projective-plane ternary graphs from their fixed divisors, then return to all-degree AS membership for the bivariate rank-fifteen plane and general finite-edge windows of tangent dimension at most two."
+    "Return to rank-fifteen AS membership. Use the full five-center quotient and graded relations over the polynomial ring in five variables to reduce the remaining high-degree ranks for ordinary bivariate inputs. Uncovered general finite and positive-dimensional windows still require a coverage proof."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 357,
+      "nc-p3": 359,
       "plan_ja": 9,
       "notes_ja": 17
     },

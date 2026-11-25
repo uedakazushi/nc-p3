@@ -425,6 +425,11 @@
       "id": "SMOOTH-ELLIPTIC-ORE-ALL-EDGES",
       "current_result": "The intrinsic rank-three marked Ore criterion works also for positive-dimensional edges. For a smooth elliptic ternary point graph the mark is unique. Outside translations of orders two and four, the correction space vanishes except for the inversion linear part, where it has dimension two for every admissible curve. All these positive-edge windows have period one.",
       "current_proof": "sections/elliptic_ore_recognition.tex"
+    },
+    {
+      "id": "PLANE-GRAPH-ORE-ALL-EDGES",
+      "current_result": "For a plane-graph ternary base the marked correction space is the fifteen-dimensional Euler quotient for the identity, zero for nonidentity without a fixed line, and the three binary quadratics with scalar shift for a fixed line. All have period one. For all nonidentity plane-graph bases the unmarked classes are determined by projective conjugacy in the no-line case, or by the multiplier up to inversion, the quadratic rank and the incidence with the center of a transvection. All transvection classes are flat limits of homologies.",
+      "current_proof": "sections/plane_graph_ore_windows.tex"
     }
   ],
   "presentation_components": {
