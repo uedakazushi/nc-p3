@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 356,
+  "version": 357,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "9a87ce1fb4dd561744d6c5aa7c668843a7f9e444"
+    "source_commit": "8aa6e6d116ff5e3205ec7277f1a045f45ad72299"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The entire normalized one-sided marked solution locus with smooth determinant, including every inverse commutator sheet, is irreducible of dimension 27, with indexed class image dimension fourteen in the known fifteen-dimensional component. For each fixed nonexceptional metric-cubic pair all lifts form one irreducible eighteen-dimensional presentation locus, including the commuting special nets, and its generic window is AS. For a fixed exceptional pair there are exactly four irreducible eighteen-dimensional presentation components labeled by order-four auxiliary classes. Regularity on those fixed exceptional components remains to be decided."
+    "scope": "For every ordered traceless target whose determinant is an integral singular plane cubic, the three-commutator fiber is empty at a nonfree singularity. At a locally free node it consists of four points, two points, or two points plus a smooth affine quadric. At a locally free cusp it consists of two points, the empty set, or a smooth affine quadric. All alternatives occur for every locally free representation class. Explicit adjugate inverses use negative doubling in the generalized Jacobian."
   },
   "checks": [
     {
-      "command": "python computations/verify_fixed_commutator_adjugate.py",
+      "command": "python computations/verify_singular_integral_commutators.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Extend the linear symmetrizer and fixed-target adjugate formulas to integral singular cubic determinants via the normalization and the noninvertible rank-one sheaf. Start with the nodal cubic xyz=y^3+z^3 and distinguish the singular-point ranks of the target and auxiliary representations."
+    "Treat reduced reducible cubic determinants, starting with a smooth conic and a transverse line. Use component multidegrees of the auxiliary determinantal representation and the two local nodal ranks, then solve the ordered commutator inversion. Keep separate the all-degree AS, full-window coverage, and exceptional fixed-metric obligations."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 627,
+      "nc-p3": 629,
       "plan_ja": 13,
       "notes_ja": 26
     },

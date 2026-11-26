@@ -1207,6 +1207,12 @@
       "current_result": "The entire normalized one-sided marked solution locus with smooth determinant, including every inverse commutator sheet, is irreducible of dimension 27, with indexed class image dimension fourteen in the known fifteen-dimensional component. For each fixed nonexceptional metric-cubic pair all lifts form one irreducible eighteen-dimensional presentation locus, including the commuting special nets, and its generic window is AS. For a fixed exceptional pair there are exactly four irreducible eighteen-dimensional presentation components labeled by order-four auxiliary classes. Regularity on those fixed exceptional components remains to be decided.",
       "current_proof": "sections/marked_smooth_discriminant_components.tex",
       "global_coverage": false
+    },
+    {
+      "id": "MARKED-SINGULAR-INTEGRAL-COMMUTATORS",
+      "current_result": "For every ordered traceless target whose determinant is an integral singular plane cubic, the three-commutator fiber is empty at a nonfree singularity. At a locally free node it consists of four points, two points, or two points plus a smooth affine quadric. At a locally free cusp it consists of two points, the empty set, or a smooth affine quadric. All alternatives occur for every locally free representation class. Explicit adjugate inverses use negative doubling in the generalized Jacobian.",
+      "current_proof": "sections/marked_singular_integral_commutators.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1264,7 +1270,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 356,
+  "version": 357,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
