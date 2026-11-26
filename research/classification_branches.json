@@ -611,6 +611,12 @@
       "current_result": "Only two explicitly specified indexed relation sequences can have smooth elliptic quintic point graphs: use either reference projection and alternate translation by the two branch points (1,0) and (-1,0). The full geometric cubic-overlap degeneracy calculation at 181 and a local lifting argument exclude all nontorsion shifts. The two signs cannot be indexed isomorphic if realized.",
       "current_proof": "sections/elliptic_quintic_cubic_overlaps.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SMOOTH-QUINTIC-COMPLETE",
+      "current_result": "There are exactly two index-preserving isomorphism classes with point-fiber point graph a smooth integral quintic disjoint from the finite residual. Both are realized, the residual is empty, the two point graphs are reduced elliptic quintics, and their bare period is one. Each has five folded central quartics, with a four-parameter normalization certified by the degree-sixteen cutoff. The canonical four-shift is projectively the identity.",
+      "current_proof": "sections/elliptic_quintic_regularity.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -668,7 +674,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 257,
+  "version": 258,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

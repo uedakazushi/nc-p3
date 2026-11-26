@@ -1,17 +1,21 @@
 {
   "schema_version": 2,
-  "version": 257,
+  "version": 258,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "594d6ae3cca67e337a393b55400dd9eaf9c539fb"
+    "source_commit": "e6e9a7d9719cff8d8f135426b5f0eb571022375e"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Only two explicitly specified indexed relation sequences can have smooth elliptic quintic point graphs: use either reference projection and alternate translation by the two branch points (1,0) and (-1,0). The full geometric cubic-overlap degeneracy calculation at 181 and a local lifting argument exclude all nontorsion shifts. The two signs cannot be indexed isomorphic if realized."
+    "scope": "There are exactly two index-preserving isomorphism classes with point-fiber point graph a smooth integral quintic disjoint from the finite residual. Both are realized, the residual is empty, the two point graphs are reduced elliptic quintics, and their bare period is one. Each has five folded central quartics, with a four-parameter normalization certified by the degree-sixteen cutoff. The canonical four-shift is projectively the identity."
   },
   "checks": [
     {
-      "command": "python computations/verify_elliptic_quintic_overlaps.py",
+      "command": "python computations/verify_elliptic_quintic_as.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_elliptic_quintic_koszul.py",
       "result": "PASS"
     },
     {
@@ -36,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine all-degree AS regularity of the two conjugate alternating relation sequences, certify their actual point schemes, and continue the other curve and finite-point branches."
+    "Determine the remaining smooth rational quartic graph branch and its two isolated points; handle low-degree, reducible and nonreduced curves, and the general finite high-opposite-rank AS problem."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 448,
+      "nc-p3": 450,
       "plan_ja": 10,
       "notes_ja": 20
     },
