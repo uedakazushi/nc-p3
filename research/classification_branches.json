@@ -1177,6 +1177,12 @@
       "current_result": "For every irreducible symmetric three-plane with independent self-brackets, all complementary three-planes of each prescribed cubic are reconstructed by two scalar equations and linear algebra, including singular/reducible cubics and nonreduced harmonic base schemes. The zero center is scheme-theoretically the distinguished plane plus that length-four base. Every smooth prescribed cubic, even through nonreduced base, is itself the complete elliptic quintic of possible planes.",
       "current_proof": "sections/marked_companion_plane_reconstruction.tex",
       "global_coverage": false
+    },
+    {
+      "id": "MARKED-FIXED-METRIC-ELLIPTIC",
+      "current_result": "For a smooth plane cubic in a fixed trace metric the exact obstruction to a finite independent-bracket mixed seed is membership of the inverse metric in one of the three other square-root Veronese surfaces of the elliptic normal sextic. Outside the exception a two-dimensional family of apolar reduced frames yields an eight-dimensional indexed-class image of finite rank-ten geometric-generic AS windows with that precise cubic. Inside the exception every apolar length-four divisor contains a length-three divisor giving a commuting plane, even with nonreduced support. A smooth exceptional cubic with nonsingular metric is computed explicitly.",
+      "current_proof": "sections/marked_fixed_metric_elliptic.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1234,7 +1240,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 351,
+  "version": 352,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

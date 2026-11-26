@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 351,
+  "version": 352,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "d406f3e0d6b6b1964617b3d5c149d0f4de793e64"
+    "source_commit": "d9db56cd8a16f84327842df6152d999133eafb39"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For every irreducible symmetric three-plane with independent self-brackets, all complementary three-planes of each prescribed cubic are reconstructed by two scalar equations and linear algebra, including singular/reducible cubics and nonreduced harmonic base schemes. The zero center is scheme-theoretically the distinguished plane plus that length-four base. Every smooth prescribed cubic, even through nonreduced base, is itself the complete elliptic quintic of possible planes."
+    "scope": "For a smooth plane cubic in a fixed trace metric the exact obstruction to a finite independent-bracket mixed seed is membership of the inverse metric in one of the three other square-root Veronese surfaces of the elliptic normal sextic. Outside the exception a two-dimensional family of apolar reduced frames yields an eight-dimensional indexed-class image of finite rank-ten geometric-generic AS windows with that precise cubic. Inside the exception every apolar length-four divisor contains a length-three divisor giving a commuting plane, even with nonreduced support. A smooth exceptional cubic with nonsingular metric is computed explicitly."
   },
   "checks": [
     {
-      "command": "python computations/verify_companion_plane_reconstruction.py",
+      "command": "python computations/verify_fixed_metric_elliptic_exception.py",
       "result": "PASS"
     },
     {
@@ -40,14 +40,14 @@
     }
   ],
   "open_mathematics": [
-    "Identify the exact four-secant obstruction for a fixed smooth cubic and a fixed metric by analyzing degree-three and degree-four divisors of the elliptic normal sextic. Relate admissible four-point sets to finite mixed Frobenius seeds, before testing the remaining ordered bases and inverse lifts."
+    "Resolve exceptional smooth cubics via their apolar triples: normalize a reduced orthogonal triangle, determine all possible complementary symmetric planes when the first net contains a Cartan plane, and study the remaining inverse-commutator and all-degree regularity conditions."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 618,
+      "nc-p3": 620,
       "plan_ja": 13,
-      "notes_ja": 25
+      "notes_ja": 26
     },
     "scope": "LuaLaTeX built the manuscript, plan and research notes."
   },

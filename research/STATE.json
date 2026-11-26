@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-26",
-  "version": 351,
+  "version": 352,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -3597,6 +3597,15 @@
       "verification": [
         "computations/verify_companion_plane_reconstruction.py"
       ]
+    },
+    {
+      "id": "MARKED-FIXED-METRIC-ELLIPTIC",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "For a smooth plane cubic in a fixed trace metric the exact obstruction to a finite independent-bracket mixed seed is membership of the inverse metric in one of the three other square-root Veronese surfaces of the elliptic normal sextic. Outside the exception a two-dimensional family of apolar reduced frames yields an eight-dimensional indexed-class image of finite rank-ten geometric-generic AS windows with that precise cubic. Inside the exception every apolar length-four divisor contains a length-three divisor giving a commuting plane, even with nonreduced support. A smooth exceptional cubic with nonsingular metric is computed explicitly.",
+      "proof": "sections/marked_fixed_metric_elliptic.tex",
+      "verification": [
+        "computations/verify_fixed_metric_elliptic_exception.py"
+      ]
     }
   ],
   "document_paths": {
@@ -3660,7 +3669,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "d406f3e0d6b6b1964617b3d5c149d0f4de793e64",
+  "reviewed_source_commit": "d9db56cd8a16f84327842df6152d999133eafb39",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -3669,14 +3678,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Identify the exact four-secant obstruction for a fixed smooth cubic and a fixed metric by analyzing degree-three and degree-four divisors of the elliptic normal sextic. Relate admissible four-point sets to finite mixed Frobenius seeds, before testing the remaining ordered bases and inverse lifts.",
+    "immediate_next_action": "Resolve exceptional smooth cubics via their apolar triples: normalize a reduced orthogonal triangle, determine all possible complementary symmetric planes when the first net contains a Cartan plane, and study the remaining inverse-commutator and all-degree regularity conditions.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/marked_companion_plane_reconstruction.tex",
-      "sections/marked_cubic_linear_system.tex"
+      "sections/marked_fixed_metric_elliptic.tex",
+      "sections/marked_companion_plane_reconstruction.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "For every irreducible symmetric three-plane with independent self-brackets, all complementary three-planes of each prescribed cubic are reconstructed by two scalar equations and linear algebra, including singular/reducible cubics and nonreduced harmonic base schemes. The zero center is scheme-theoretically the distinguished plane plus that length-four base. Every smooth prescribed cubic, even through nonreduced base, is itself the complete elliptic quintic of possible planes. Full classification remains open.",
+    "state_of_claim": "For a smooth plane cubic in a fixed trace metric the exact obstruction to a finite independent-bracket mixed seed is membership of the inverse metric in one of the three other square-root Veronese surfaces of the elliptic normal sextic. Outside the exception a two-dimensional family of apolar reduced frames yields an eight-dimensional indexed-class image of finite rank-ten geometric-generic AS windows with that precise cubic. Inside the exception every apolar length-four divisor contains a length-three divisor giving a commuting plane, even with nonreduced support. A smooth exceptional cubic with nonsingular metric is computed explicitly. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
