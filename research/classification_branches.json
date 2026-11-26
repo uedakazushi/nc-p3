@@ -931,6 +931,12 @@
       "current_result": "Pure-relation-free branching without surfaces requires opposite rank at least eleven. Opposite forward and backward centers have successor and predecessor lines meeting at one point. Their marked row spaces meet in one rank-one matrix; at rank eleven their sum is the full perpendicular of the crossing point and the resulting quotient bundle has splitting (2,1,1).",
       "current_proof": "sections/branch_rank_eleven_floor.tex",
       "global_coverage": false
+    },
+    {
+      "id": "RANK-EIGHT-BRANCH-MIDDLE-TWO-DETECTION",
+      "current_result": "Any branching window of opposite rank eight without surface projections has a forward or backward center with a two-dimensional middle support, even with pure relations. At rank nine, in the absence of such a center, every center has middle support three and the general point of its fiber line has middle support four. The primitive kernel degree bounds the loss in middle rank by local elementary divisors.",
+      "current_proof": "sections/branch_middle_defect_bound.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -988,7 +994,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 310,
+  "version": 311,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

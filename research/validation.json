@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 310,
+  "version": 311,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "0d29f0783ac58f1ade87e812e38b837a91fc7789"
+    "source_commit": "3bf1ae64835d8228c6d32c7f72f1d5de63dad88a"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Pure-relation-free branching without surfaces requires opposite rank at least eleven. Opposite forward and backward centers have successor and predecessor lines meeting at one point. Their marked row spaces meet in one rank-one matrix; at rank eleven their sum is the full perpendicular of the crossing point and the resulting quotient bundle has splitting (2,1,1)."
+    "scope": "Any branching window of opposite rank eight without surface projections has a forward or backward center with a two-dimensional middle support, even with pure relations. At rank nine, in the absence of such a center, every center has middle support three and the general point of its fiber line has middle support four. The primitive kernel degree bounds the loss in middle rank by local elementary divisors."
   },
   "checks": [
     {
-      "command": "python computations/verify_branch_rank_eleven_floor.py",
+      "command": "python computations/verify_branch_middle_defect_bound.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze the rank-eleven crossing pencils and central cubic contacts, cover pure-relation branches at ranks eight and above, and continue finite high-rank AS tests."
+    "Use the canonical L2 center and its paired linear sections to resolve the rank-eight pure-relation branches; continue the rank-eleven pure-free crossings and finite high-rank windows."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 547,
+      "nc-p3": 548,
       "plan_ja": 12,
       "notes_ja": 23
     },
