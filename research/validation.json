@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 359,
+  "version": 360,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "aa674eb8e1afc8bf3e626aab65f455a51c7ced1c"
+    "source_commit": "916c0560bf2f0b0501be5dc2678bb4fca32f368d"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All ordered three-commutator lifts are reconstructed for every reduced cubic determinant, including a tangent conic, a triangle and three concurrent lines. The regular-generator part uses explicit six-space adjugates and negative doubling on the generalized Jacobian, and every scalar-plus-rank-one generator is recovered by the compression-pair strata. The generic balanced tangent conic fiber has two isolated points and two affine lines; tangency is exactly the collision of the two points at infinity of the semisimple fiber conic in the stated open coordinates."
+    "scope": "For triple-line and double-plus-simple-line determinants the only irreducible auxiliary pencils are two explicit one-parameter normal forms. The target parameter is -k/2, and a single adjugate rank test recovers every lift without a scalar-plus-rank-one generator. Compression pairs and the zero-generator quadric recover all other lifts. This completes ordered three-commutator inversion for every non-identically-zero determinant, covering the commutator equation for arbitrary fixed symmetric data on the finite q=3, g>3 branch. Full AS and unmarked classification remain open."
   },
   "checks": [
     {
-      "command": "python computations/verify_reduced_cubic_commutators.py",
+      "command": "python computations/verify_nonreduced_commutators.py",
       "result": "PASS"
     },
     {
@@ -40,13 +40,13 @@
     }
   ],
   "open_mathematics": [
-    "Investigate nonreduced nonzero commutator determinants starting with a triple line: classify nilpotent 3-by-3 auxiliary pencils, including the nontriangular pencil, and determine which produce full symmetrizers. Use the resulting structure for marked-window coverage and pursue all-degree regularity and the remaining unmarked windows."
+    "Turn to the general marked branch with q,g>3. Use the linear trace identities of prescribed mixed brackets [Q_i,P_j] to compress the inverse to two linear spaces and a rank-one tensor in their product. Test injectivity on actual high-opposite-rank regular seeds and at generic moment-zero representatives."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 634,
-      "plan_ja": 13,
+      "nc-p3": 636,
+      "plan_ja": 14,
       "notes_ja": 26
     },
     "scope": "LuaLaTeX built the manuscript, plan and research notes."

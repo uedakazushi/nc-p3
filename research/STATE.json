@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-26",
-  "version": 359,
+  "version": 360,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -3669,6 +3669,15 @@
       "verification": [
         "computations/verify_reduced_cubic_commutators.py"
       ]
+    },
+    {
+      "id": "MARKED-NONREDUCED-CUBIC-COMMUTATORS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "For triple-line and double-plus-simple-line determinants the only irreducible auxiliary pencils are two explicit one-parameter normal forms. The target parameter is -k/2, and a single adjugate rank test recovers every lift without a scalar-plus-rank-one generator. Compression pairs and the zero-generator quadric recover all other lifts. This completes ordered three-commutator inversion for every non-identically-zero determinant, covering the commutator equation for arbitrary fixed symmetric data on the finite q=3, g>3 branch. Full AS and unmarked classification remain open.",
+      "proof": "sections/marked_nonreduced_cubic_commutators.tex",
+      "verification": [
+        "computations/verify_nonreduced_commutators.py"
+      ]
     }
   ],
   "document_paths": {
@@ -3732,7 +3741,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "aa674eb8e1afc8bf3e626aab65f455a51c7ced1c",
+  "reviewed_source_commit": "916c0560bf2f0b0501be5dc2678bb4fca32f368d",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -3741,14 +3750,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Investigate nonreduced nonzero commutator determinants starting with a triple line: classify nilpotent 3-by-3 auxiliary pencils, including the nontriangular pencil, and determine which produce full symmetrizers. Use the resulting structure for marked-window coverage and pursue all-degree regularity and the remaining unmarked windows.",
+    "immediate_next_action": "Turn to the general marked branch with q,g>3. Use the linear trace identities of prescribed mixed brackets [Q_i,P_j] to compress the inverse to two linear spaces and a rank-one tensor in their product. Test injectivity on actual high-opposite-rank regular seeds and at generic moment-zero representatives.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/marked_reduced_cubic_commutators.tex",
-      "sections/marked_transverse_conic_commutators.tex"
+      "sections/marked_nonreduced_cubic_commutators.tex",
+      "sections/marked_reduced_cubic_commutators.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "All ordered three-commutator lifts are reconstructed for every reduced cubic determinant, including a tangent conic, a triangle and three concurrent lines. The regular-generator part uses explicit six-space adjugates and negative doubling on the generalized Jacobian, and every scalar-plus-rank-one generator is recovered by the compression-pair strata. The generic balanced tangent conic fiber has two isolated points and two affine lines; tangency is exactly the collision of the two points at infinity of the semisimple fiber conic in the stated open coordinates. Full classification remains open.",
+    "state_of_claim": "For triple-line and double-plus-simple-line determinants the only irreducible auxiliary pencils are two explicit one-parameter normal forms. The target parameter is -k/2, and a single adjugate rank test recovers every lift without a scalar-plus-rank-one generator. Compression pairs and the zero-generator quadric recover all other lifts. This completes ordered three-commutator inversion for every non-identically-zero determinant, covering the commutator equation for arbitrary fixed symmetric data on the finite q=3, g>3 branch. Full AS and unmarked classification remain open. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

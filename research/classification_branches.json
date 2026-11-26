@@ -1225,6 +1225,12 @@
       "current_result": "All ordered three-commutator lifts are reconstructed for every reduced cubic determinant, including a tangent conic, a triangle and three concurrent lines. The regular-generator part uses explicit six-space adjugates and negative doubling on the generalized Jacobian, and every scalar-plus-rank-one generator is recovered by the compression-pair strata. The generic balanced tangent conic fiber has two isolated points and two affine lines; tangency is exactly the collision of the two points at infinity of the semisimple fiber conic in the stated open coordinates.",
       "current_proof": "sections/marked_reduced_cubic_commutators.tex",
       "global_coverage": false
+    },
+    {
+      "id": "MARKED-NONREDUCED-CUBIC-COMMUTATORS",
+      "current_result": "For triple-line and double-plus-simple-line determinants the only irreducible auxiliary pencils are two explicit one-parameter normal forms. The target parameter is -k/2, and a single adjugate rank test recovers every lift without a scalar-plus-rank-one generator. Compression pairs and the zero-generator quadric recover all other lifts. This completes ordered three-commutator inversion for every non-identically-zero determinant, covering the commutator equation for arbitrary fixed symmetric data on the finite q=3, g>3 branch. Full AS and unmarked classification remain open.",
+      "current_proof": "sections/marked_nonreduced_cubic_commutators.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1282,7 +1288,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 359,
+  "version": 360,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
