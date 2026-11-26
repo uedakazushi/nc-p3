@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 353,
+  "version": 354,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "9d92b0736ee1d41336ca771c1c6a3b26f17ed68b"
+    "source_commit": "4a3ea400b86e27335718216c4d72c2ede372744d"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For an irreducible symmetric first net with dependent self-brackets, every smooth prescribed cubic through its harmonic base has a complete rational conic of complementary symmetric planes. Its open nonzero fibers omit two distinct points or a single double boundary, depending on whether the residual point is detached from or attached to the apolar commuting triple. Together with the elliptic quintic for independent self-brackets, this handles the complementary-plane step for every irreducible first net over smooth cubics, including the fixed-metric exceptions."
+    "scope": "All ordered traceless triples with smooth commutator determinant are recovered through a six-dimensional linear space over auxiliary determinantal representations of the same cubic. The nonsingular symmetrizer locus is nonempty exactly away from two-torsion, and the class of the actual commutator representation is minus twice the auxiliary class in Pic^0. Thus every smooth target up to independent left and right bases has exactly four auxiliary classes, including the fixed-metric exceptional cubics. Actual bases follow by linear comparisons; special-fiber AS is a separate condition."
   },
   "checks": [
     {
-      "command": "python computations/verify_commuting_plane_fibers.py",
+      "command": "python computations/verify_moore_commutator_doubling.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Recover all skew-commutator triples with a smooth prescribed determinant by linear symmetrizers and determinantal representations of the cubic. Determine how to match their ordered target matrices back to the symmetric planes and finally test the all-degree conditions on the resulting fibers."
+    "Use the fourfold elliptic inverse and six linear lift coordinates to determine irreducibility, generic regularity, and periods over fixed smooth discriminants including fixed-metric exceptions. For targets with already fixed bases, determine the remaining simultaneous-conjugacy fibers. Extend the symmetrizer method to nodal and cuspidal cubics."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 621,
+      "nc-p3": 623,
       "plan_ja": 13,
       "notes_ja": 26
     },

@@ -1189,6 +1189,12 @@
       "current_result": "For an irreducible symmetric first net with dependent self-brackets, every smooth prescribed cubic through its harmonic base has a complete rational conic of complementary symmetric planes. Its open nonzero fibers omit two distinct points or a single double boundary, depending on whether the residual point is detached from or attached to the apolar commuting triple. Together with the elliptic quintic for independent self-brackets, this handles the complementary-plane step for every irreducible first net over smooth cubics, including the fixed-metric exceptions.",
       "current_proof": "sections/marked_commuting_plane_fibers.tex",
       "global_coverage": false
+    },
+    {
+      "id": "MARKED-ELLIPTIC-COMMUTATOR-DOUBLING",
+      "current_result": "All ordered traceless triples with smooth commutator determinant are recovered through a six-dimensional linear space over auxiliary determinantal representations of the same cubic. The nonsingular symmetrizer locus is nonempty exactly away from two-torsion, and the class of the actual commutator representation is minus twice the auxiliary class in Pic^0. Thus every smooth target up to independent left and right bases has exactly four auxiliary classes, including the fixed-metric exceptional cubics. Actual bases follow by linear comparisons; special-fiber AS is a separate condition.",
+      "current_proof": "sections/marked_elliptic_commutator_doubling.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1246,7 +1252,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 353,
+  "version": 354,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
