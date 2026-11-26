@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-26",
-  "version": 344,
+  "version": 345,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -3534,6 +3534,15 @@
       "verification": [
         "computations/verify_bracket_pencil_rank.py"
       ]
+    },
+    {
+      "id": "MARKED-PERSISTENT-BRACKET-DEFECT",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "The linear reconstruction has full rank four in a general direction except exactly for one explicit transverse block form with a nonsymmetric invertible two-by-two matrix. This form has a triple-line determinant and a square-zero planar triple rank-one slice. It cannot occur in any finite window of the unequal symmetric-net branch. A length-four Veronese section in a triple line forces a common eigenvector and hence an entire line over one adjacent point. The generic-direction linear reconstruction therefore always has full rank in this finite branch. A nine-word determinant equals minus the cube of the original commutator determinant.",
+      "proof": "sections/marked_persistent_bracket_defect.tex",
+      "verification": [
+        "computations/verify_persistent_bracket_defect.py"
+      ]
     }
   ],
   "document_paths": {
@@ -3597,7 +3606,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "a2cc05d7ee244a77b92c91e45685f75018590095",
+  "reviewed_source_commit": "0979cd7425373284775e18f4821f1a940b20acee",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -3606,14 +3615,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Prove when rank four can always be obtained by changing the marked direction. Analyze the Jordan product of a pair with invertible commutator, and the exceptional nets in which a repeated determinantal line forces persistent rank three. Then apply this structure to finite-edge regularity.",
+    "immediate_next_action": "Use full-rank reconstruction to analyze the finite one-sided symmetric rank-ten windows. Develop the intrinsic projective normal form for the cyclic unknown and seek an all-degree certificate or obstruction on its coefficient locus. Continue the finite-graph coverage below seventeen sites.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/marked_bracket_pencil_rank.tex",
-      "sections/marked_commuting_intersection.tex"
+      "sections/marked_persistent_bracket_defect.tex",
+      "sections/marked_bracket_pencil_rank.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "For a pencil containing an invertible prescribed commutator, the four-coefficient linear reconstruction has rank three or four. A singular defect direction is a multiple determinantal root. All invertible defect directions give line components of an explicit conic of the target three-space and admit an exact square-root and affine-line reconstruction using two Sylvester inverses, including nondiagonalizable matrices. Full classification remains open.",
+    "state_of_claim": "The linear reconstruction has full rank four in a general direction except exactly for one explicit transverse block form with a nonsymmetric invertible two-by-two matrix. This form has a triple-line determinant and a square-zero planar triple rank-one slice. It cannot occur in any finite window of the unequal symmetric-net branch. A length-four Veronese section in a triple line forces a common eigenvector and hence an entire line over one adjacent point. The generic-direction linear reconstruction therefore always has full rank in this finite branch. A nine-word determinant equals minus the cube of the original commutator determinant. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
