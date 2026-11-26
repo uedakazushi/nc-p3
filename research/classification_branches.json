@@ -955,6 +955,12 @@
       "current_result": "A common marked slice with four reduced rank-one vertices forces opposite symmetry on its row and column coordinate positions whenever the mark has tangent dimension at most one, even if all local factors are nonreduced. The projected kernel cross product is supported on at most four socles, and cubic separation and the absence of pure relations exclude every nonsymmetric case.",
       "current_proof": "sections/finite_tetrahedral_kernel_symmetry.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FINITE-ARTIN-LENGTH-FOUR-KERNEL-SYMMETRY",
+      "current_result": "Every length-four rank-one common slice at a mark of tangent dimension at most one forces symmetry on its kernel-coordinate parity, for all length-four Gorenstein Artin types. Hence at opposite rank eight a finite window with such a mark either has an all-degree regular ternary contraction or is at least one-sided symmetric. The existing one-sided symmetric criterion therefore decides all-degree regularity throughout this stratum.",
+      "current_proof": "sections/finite_artin_kernel_symmetry.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1012,7 +1018,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 314,
+  "version": 315,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

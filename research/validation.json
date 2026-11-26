@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 314,
+  "version": 315,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "7a4c1341c65e402a6df82f78562d3d22770bcef1"
+    "source_commit": "58bfb5098195cfb285fa51bb485fbb5051cbf6d6"
   },
   "generation": {
     "result": "PASS",
-    "scope": "A common marked slice with four reduced rank-one vertices forces opposite symmetry on its row and column coordinate positions whenever the mark has tangent dimension at most one, even if all local factors are nonreduced. The projected kernel cross product is supported on at most four socles, and cubic separation and the absence of pure relations exclude every nonsymmetric case."
+    "scope": "Every length-four rank-one common slice at a mark of tangent dimension at most one forces symmetry on its kernel-coordinate parity, for all length-four Gorenstein Artin types. Hence at opposite rank eight a finite window with such a mark either has an all-degree regular ternary contraction or is at least one-sided symmetric. The existing one-sided symmetric criterion therefore decides all-degree regularity throughout this stratum."
   },
   "checks": [
     {
-      "command": "python computations/verify_finite_tetrahedral_kernel_symmetry.py",
+      "command": "python computations/verify_finite_artin_kernel_symmetry.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Use the length-four Frobenius trace model to extend the kernel-coordinate symmetry test to nonreduced rank-one slices. Analyze the remaining parity and planar marks, and the independent rank-nine branching problem."
+    "Treat the remaining finite rank-eight windows whose every mark has tangent dimension at least two; continue the higher-rank regularity and branching questions."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 553,
+      "nc-p3": 555,
       "plan_ja": 12,
       "notes_ja": 23
     },
