@@ -659,6 +659,12 @@
       "current_result": "All integral reduced quintic point graphs with disjoint finite residual in a standard AS window, including all singularities, are the two smooth elliptic quintics. The genus-two Gorenstein cubic separator yields a degree-three pencil and forces a double cover with incompatible fixed lengths. The non-Gorenstein cone vertex gives an Ore mark and a conic lift with pole degree at most two instead of three.",
       "current_proof": "sections/singular_integral_quintic_exclusion.tex",
       "global_coverage": false
+    },
+    {
+      "id": "INTEGRAL-SEPTIC-BOUNDARY",
+      "current_result": "Classify all integral reduced septic point graphs including singularities by the same eight bielliptic coefficients: the sole condition is geometrically integral complete intersection. All such windows are AS, the original full isomorphism and period tests extend, and every singular window is a flat limit of the smooth five-dimensional moduli stratum. Every embedding-dimension-three point on any point-fiber graph is automatically a four-periodic Ore mark.",
+      "current_proof": "sections/integral_septic_boundary.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -716,7 +722,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 265,
+  "version": 266,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
