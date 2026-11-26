@@ -715,6 +715,12 @@
       "current_result": "Exclude a sextic union of two twisted cubics for every length-four gluing. The cross-component degree-(1,1) correspondence determines its polarization, while an exchanging canonical involution forces the general trisecants into a smooth quadric even at nonreduced intersections. Thus all one-dimensional point-fiber graphs of degree at least four have finite AS/isomorphism atlases; among smaller degrees the only remaining unmarked hull is a twisted cubic with length-six defect.",
       "current_proof": "sections/binary_sextic_exclusion.tex",
       "global_coverage": false
+    },
+    {
+      "id": "TWISTED-CUBIC-LINE-MODULES-AND-HILBERT-CRITERION",
+      "current_result": "For any full twisted-cubic point subgraph of a standard finite-Frobenius window with point fibers, every rank-two relation whose pencil has a basepoint gives a line module of Hilbert function n+1 with a principal first relation module, even before AS regularity. The expected Hilbert function in all windows is sufficient for Koszul two-sided AS regularity. A compatible pencil sequence ensures it, and the two secant determinant cubics each have a line factor or vanish identically.",
+      "current_proof": "sections/twisted_cubic_line_modules.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -772,7 +778,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 274,
+  "version": 275,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

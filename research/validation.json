@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 274,
+  "version": 275,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "f9380c4c008ed2853a60b82b5a2aa483aa57858a"
+    "source_commit": "5965e8b19c15592ae8150b757683ac8e3a26ab66"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Exclude a sextic union of two twisted cubics for every length-four gluing. The cross-component degree-(1,1) correspondence determines its polarization, while an exchanging canonical involution forces the general trisecants into a smooth quadric even at nonreduced intersections. Thus all one-dimensional point-fiber graphs of degree at least four have finite AS/isomorphism atlases; among smaller degrees the only remaining unmarked hull is a twisted cubic with length-six defect."
+    "scope": "For any full twisted-cubic point subgraph of a standard finite-Frobenius window with point fibers, every rank-two relation whose pencil has a basepoint gives a line module of Hilbert function n+1 with a principal first relation module, even before AS regularity. The expected Hilbert function in all windows is sufficient for Koszul two-sided AS regularity. A compatible pencil sequence ensures it, and the two secant determinant cubics each have a line factor or vanish identically."
   },
   "checks": [
     {
-      "command": "python computations/verify_binary_sextic_exclusion.py",
+      "command": "python computations/verify_twisted_cubic_line_modules.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "For a twisted cubic hull with finite length-six discrepancy, study the first conormal neighborhood and the opposite determinants at embedded directions. Continue the general finite-point and positive-dimensional-fiber AS tests and the global component/specialization problem."
+    "Determine whether the embedded length-four first conormal neighborhood forces a compatible pencil sequence or another polynomial Hilbert bound on the residual twisted cubic. Continue the finite-point and higher-fiber branches and global specialization problem."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 487,
+      "nc-p3": 489,
       "plan_ja": 10,
       "notes_ja": 21
     },
