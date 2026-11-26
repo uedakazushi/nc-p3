@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-26",
-  "version": 355,
+  "version": 356,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -3633,6 +3633,15 @@
       "verification": [
         "computations/verify_fixed_commutator_adjugate.py"
       ]
+    },
+    {
+      "id": "MARKED-SMOOTH-DISCRIMINANT-COMPONENTS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "The entire normalized one-sided marked solution locus with smooth determinant, including every inverse commutator sheet, is irreducible of dimension 27, with indexed class image dimension fourteen in the known fifteen-dimensional component. For each fixed nonexceptional metric-cubic pair all lifts form one irreducible eighteen-dimensional presentation locus, including the commuting special nets, and its generic window is AS. For a fixed exceptional pair there are exactly four irreducible eighteen-dimensional presentation components labeled by order-four auxiliary classes. Regularity on those fixed exceptional components remains to be decided.",
+      "proof": "sections/marked_smooth_discriminant_components.tex",
+      "verification": [
+        "computations/verify_fixed_commutator_adjugate.py"
+      ]
     }
   ],
   "document_paths": {
@@ -3696,7 +3705,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "802ecd251b1f38390fde8439673f427b65a6cb6e",
+  "reviewed_source_commit": "9a87ce1fb4dd561744d6c5aa7c668843a7f9e444",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -3705,14 +3714,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Determine the monodromy of the four auxiliary roots along the complementary-plane elliptic quintic and the rational conic. Use this to separate the fixed-metric exceptional components and transfer all-degree regularity where possible. Extend the reconstruction beyond smooth cubic determinants.",
+    "immediate_next_action": "Extend the linear symmetrizer and fixed-target adjugate formulas to integral singular cubic determinants via the normalization and the noninvertible rank-one sheaf. Start with the nodal cubic xyz=y^3+z^3 and distinguish the singular-point ranks of the target and auxiliary representations.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/marked_fixed_commutator_adjugate.tex",
-      "sections/marked_elliptic_commutator_doubling.tex"
+      "sections/marked_smooth_discriminant_components.tex",
+      "sections/marked_fixed_commutator_adjugate.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "The exact inverse of the three-commutator map on every fixed ordered traceless target with smooth determinant is four symmetric 3x3 adjugate equations. Each admits two, zero or a smooth affine quadric of solutions; at most one of the four can degenerate because the four square-root Veronese surfaces contain the same elliptic normal sextic of rank-one multipliers. Thus the full ordered fibers are eight points, six points, or six isolated points plus a two-dimensional quadric, all realized. In particular the dominant map sl3^3 to sl3^3 has generic degree eight. Full classification remains open.",
+    "state_of_claim": "The entire normalized one-sided marked solution locus with smooth determinant, including every inverse commutator sheet, is irreducible of dimension 27, with indexed class image dimension fourteen in the known fifteen-dimensional component. For each fixed nonexceptional metric-cubic pair all lifts form one irreducible eighteen-dimensional presentation locus, including the commuting special nets, and its generic window is AS. For a fixed exceptional pair there are exactly four irreducible eighteen-dimensional presentation components labeled by order-four auxiliary classes. Regularity on those fixed exceptional components remains to be decided. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

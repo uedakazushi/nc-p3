@@ -1201,6 +1201,12 @@
       "current_result": "The exact inverse of the three-commutator map on every fixed ordered traceless target with smooth determinant is four symmetric 3x3 adjugate equations. Each admits two, zero or a smooth affine quadric of solutions; at most one of the four can degenerate because the four square-root Veronese surfaces contain the same elliptic normal sextic of rank-one multipliers. Thus the full ordered fibers are eight points, six points, or six isolated points plus a two-dimensional quadric, all realized. In particular the dominant map sl3^3 to sl3^3 has generic degree eight.",
       "current_proof": "sections/marked_fixed_commutator_adjugate.tex",
       "global_coverage": false
+    },
+    {
+      "id": "MARKED-SMOOTH-DISCRIMINANT-COMPONENTS",
+      "current_result": "The entire normalized one-sided marked solution locus with smooth determinant, including every inverse commutator sheet, is irreducible of dimension 27, with indexed class image dimension fourteen in the known fifteen-dimensional component. For each fixed nonexceptional metric-cubic pair all lifts form one irreducible eighteen-dimensional presentation locus, including the commuting special nets, and its generic window is AS. For a fixed exceptional pair there are exactly four irreducible eighteen-dimensional presentation components labeled by order-four auxiliary classes. Regularity on those fixed exceptional components remains to be decided.",
+      "current_proof": "sections/marked_smooth_discriminant_components.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1258,7 +1264,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 355,
+  "version": 356,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
-  "version": 355,
+  "version": 356,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "802ecd251b1f38390fde8439673f427b65a6cb6e"
+    "source_commit": "9a87ce1fb4dd561744d6c5aa7c668843a7f9e444"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The exact inverse of the three-commutator map on every fixed ordered traceless target with smooth determinant is four symmetric 3x3 adjugate equations. Each admits two, zero or a smooth affine quadric of solutions; at most one of the four can degenerate because the four square-root Veronese surfaces contain the same elliptic normal sextic of rank-one multipliers. Thus the full ordered fibers are eight points, six points, or six isolated points plus a two-dimensional quadric, all realized. In particular the dominant map sl3^3 to sl3^3 has generic degree eight."
+    "scope": "The entire normalized one-sided marked solution locus with smooth determinant, including every inverse commutator sheet, is irreducible of dimension 27, with indexed class image dimension fourteen in the known fifteen-dimensional component. For each fixed nonexceptional metric-cubic pair all lifts form one irreducible eighteen-dimensional presentation locus, including the commuting special nets, and its generic window is AS. For a fixed exceptional pair there are exactly four irreducible eighteen-dimensional presentation components labeled by order-four auxiliary classes. Regularity on those fixed exceptional components remains to be decided."
   },
   "checks": [
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine the monodromy of the four auxiliary roots along the complementary-plane elliptic quintic and the rational conic. Use this to separate the fixed-metric exceptional components and transfer all-degree regularity where possible. Extend the reconstruction beyond smooth cubic determinants."
+    "Extend the linear symmetrizer and fixed-target adjugate formulas to integral singular cubic determinants via the normalization and the noninvertible rank-one sheaf. Start with the nodal cubic xyz=y^3+z^3 and distinguish the singular-point ranks of the target and auxiliary representations."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 625,
+      "nc-p3": 627,
       "plan_ja": 13,
       "notes_ja": 26
     },
