@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 346,
+  "version": 347,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "64feeb97fcbd654062248606507e3a4b11cd1790"
+    "source_commit": "23d18cdfeae2c977e14f8d65407223c4b1a7e21b"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For every prescribed projective trace normal N and line ell, including every nilpotent/Jordan type and repeated or tangent factor, there is a nineteen-dimensional irreducible marked chart whose geometric generic window is finite, opposite rank ten, quadratic Koszul and left/right AS regular, and whose mixed discriminant is ell times v-transpose N v. Its indexed-class image has dimension nine minus the projective orthogonal stabilizer dimension of the pair; varying the pair gives dimension twelve. The proof uses an etale commutator inverse, three exact exceptional finite mixed windows, and all internal degrees of the relative bar complex."
+    "scope": "For every semisimple trace normal and every prescribed line, the geometric generic all-degree regular rank-ten family constructed at the split mixed seed has minimal shift period four and trivial projective indexed automorphism group, also after forgetting the marking. This includes repeated eigenvalues and nontransverse line sections. Its two even configurations are projectively inequivalent by first-order obstructions to all unmarked projectivities."
   },
   "checks": [
     {
-      "command": "python computations/verify_prescribed_discriminant_seeds.py",
+      "command": "python computations/verify_semisimple_period_obstruction.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine which special fibers of the prescribed-discriminant deformations stay AS and how periodicities and multiple commutator lifts identify. Compare the finite mixed branch via its four-dimensional Frobenius algebra and lifts of normal quadrics. Continue the finite graph structure for supports below seventeen."
+    "Resolve the local specialization geometry of the g=3,4,5 strata by projecting F to Sym_0/span(G) and identifying its determinantal singularities. Continue the all-degree closed-fiber regularity and finite-edge coverage below seventeen support points."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 609,
+      "nc-p3": 610,
       "plan_ja": 13,
       "notes_ja": 25
     },

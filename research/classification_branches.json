@@ -1147,6 +1147,12 @@
       "current_result": "For every prescribed projective trace normal N and line ell, including every nilpotent/Jordan type and repeated or tangent factor, there is a nineteen-dimensional irreducible marked chart whose geometric generic window is finite, opposite rank ten, quadratic Koszul and left/right AS regular, and whose mixed discriminant is ell times v-transpose N v. Its indexed-class image has dimension nine minus the projective orthogonal stabilizer dimension of the pair; varying the pair gives dimension twelve. The proof uses an etale commutator inverse, three exact exceptional finite mixed windows, and all internal degrees of the relative bar complex.",
       "current_proof": "sections/marked_prescribed_discriminant_as.tex",
       "global_coverage": false
+    },
+    {
+      "id": "MARKED-SEMISIMPLE-DISCRIMINANT-PERIOD",
+      "current_result": "For every semisimple trace normal and every prescribed line, the geometric generic all-degree regular rank-ten family constructed at the split mixed seed has minimal shift period four and trivial projective indexed automorphism group, also after forgetting the marking. This includes repeated eigenvalues and nontransverse line sections. Its two even configurations are projectively inequivalent by first-order obstructions to all unmarked projectivities.",
+      "current_proof": "sections/marked_semisimple_period.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1204,7 +1210,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 346,
+  "version": 347,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
