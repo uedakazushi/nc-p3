@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 288,
+  "version": 289,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "065415908c7d38e37edefb136d5c7670da8b9d10"
+    "source_commit": "16fbd562a5c3f7e07ba30fdbc9afa09b46209a23"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every moving line-fiber center sweeps a pencil in a plane, with the whole line of centers as the inverse fiber at the pencil vertex. Smooth quadrics force a separated arrow and cones force three consecutive-side pure relations with a common letter. The plane slice forces a nonzero pure relation on the opposite edge. Consequently pure-relation-free regular windows have only finitely many exceptional line fibers."
+    "scope": "All bi-infinite birational chains of integral quadrics in regular windows extend to projective isomorphisms. In the absence of decomposable quadratic relations every surface projection belongs to the established polynomial, normal-plane, smooth-quadric or cone quotient classifications, including possible isolated exceptional fibers."
   },
   "checks": [
     {
-      "command": "python computations/verify_plane_branch_pencils.py",
+      "command": "python computations/verify_birational_quadric_chains.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Treat isolated line fibers and plane pencils with an opposite pure relation, as well as the remaining finite point-scheme charts and their global orbit structure."
+    "Analyze plane and quadric transitions with pure relations, the remaining curve correspondences with branching and finite windows outside the classified rank and symmetry charts."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 515,
+      "nc-p3": 518,
       "plan_ja": 11,
       "notes_ja": 22
     },

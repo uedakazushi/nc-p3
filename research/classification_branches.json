@@ -799,6 +799,12 @@
       "current_result": "Every moving line-fiber center sweeps a pencil in a plane, with the whole line of centers as the inverse fiber at the pencil vertex. Smooth quadrics force a separated arrow and cones force three consecutive-side pure relations with a common letter. The plane slice forces a nonzero pure relation on the opposite edge. Consequently pure-relation-free regular windows have only finitely many exceptional line fibers.",
       "current_proof": "sections/plane_branch_pencils.tex",
       "global_coverage": false
+    },
+    {
+      "id": "BIRATIONAL-QUADRIC-CHAINS",
+      "current_result": "All bi-infinite birational chains of integral quadrics in regular windows extend to projective isomorphisms. In the absence of decomposable quadratic relations every surface projection belongs to the established polynomial, normal-plane, smooth-quadric or cone quotient classifications, including possible isolated exceptional fibers.",
+      "current_proof": "sections/birational_quadric_chains.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -856,7 +862,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 288,
+  "version": 289,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
