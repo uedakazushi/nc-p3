@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 311,
+  "version": 312,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "3bf1ae64835d8228c6d32c7f72f1d5de63dad88a"
+    "source_commit": "6c6227b6a3f02cd791aada1d1b17c0a2e2b4091e"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Any branching window of opposite rank eight without surface projections has a forward or backward center with a two-dimensional middle support, even with pure relations. At rank nine, in the absence of such a center, every center has middle support three and the general point of its fiber line has middle support four. The primitive kernel degree bounds the loss in middle rank by local elementary divisors."
+    "scope": "If the general successor of a curve-only branching center of middle support a has middle support four, the opposite rank is at least a+6. Two-line corridors require opposite rank at least nine. At opposite rank eight all centers have middle support two or four, and at most one forward center and one backward center occur per phase. Every forward center of middle support four has a preceding forward center of middle support two whose opposite annihilator is its successor line."
   },
   "checks": [
     {
-      "command": "python computations/verify_branch_middle_defect_bound.py",
+      "command": "python computations/verify_branch_rank_one_residual.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Use the canonical L2 center and its paired linear sections to resolve the rank-eight pure-relation branches; continue the rank-eleven pure-free crossings and finite high-rank windows."
+    "Classify the resulting rank-eight configurations of binary centers and their middle-four companions. Analyze which constrained edges support moving components and how the reverse centers are paired."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 548,
+      "nc-p3": 549,
       "plan_ja": 12,
       "notes_ja": 23
     },

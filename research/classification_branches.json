@@ -937,6 +937,12 @@
       "current_result": "Any branching window of opposite rank eight without surface projections has a forward or backward center with a two-dimensional middle support, even with pure relations. At rank nine, in the absence of such a center, every center has middle support three and the general point of its fiber line has middle support four. The primitive kernel degree bounds the loss in middle rank by local elementary divisors.",
       "current_proof": "sections/branch_middle_defect_bound.tex",
       "global_coverage": false
+    },
+    {
+      "id": "BRANCH-RANK-ONE-RESIDUAL-EXCLUSION",
+      "current_result": "If the general successor of a curve-only branching center of middle support a has middle support four, the opposite rank is at least a+6. Two-line corridors require opposite rank at least nine. At opposite rank eight all centers have middle support two or four, and at most one forward center and one backward center occur per phase. Every forward center of middle support four has a preceding forward center of middle support two whose opposite annihilator is its successor line.",
+      "current_proof": "sections/branch_rank_one_residual.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -994,7 +1000,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 311,
+  "version": 312,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
