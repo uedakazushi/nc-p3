@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 331,
+  "version": 332,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "2fb57e7db6b4c9119c7fd6bc7363cd73cf117bee"
+    "source_commit": "bf7e94fde3df1ae79c6c184a2620d3a0680ae43f"
   },
   "generation": {
     "result": "PASS",
-    "scope": "At rank ten a four-support center followed by a second conic forces its unique first-line forward center to be ternary of singular pencil type. Its third curve and next position are planar; a cubic third curve has a backward center at its double point. Independently of rank, a singular ternary center identifies projected coordinates on the next pair. After a twisted cubic its third degree is between two and four (at most three if the projection center lies on the cubic), by the length-one bound for paths returning to their fixed start."
+    "scope": "When no corridor consists of two lines, no binary forward or backward center can occur in any surface-free standard regular window. The paired binary equations place the moving curves of two phases on quadric cones. A forward center opposite the binary one would produce a twisted cubic through the vertex, forcing a backward center onto a line with unique predecessors. Without that opposite center the degree recurrence contradicts the degrees at both possible terminal centers. Consequently all moving components have full generic middle support, in particular for every remaining rank-ten branching candidate."
   },
   "checks": [
     {
-      "command": "python computations/verify_rank_ten_conic_after_center.py",
+      "command": "python computations/verify_binary_center_cone_degrees.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Use the now forced next centers and projections to restrict the terminal directed components at rank ten, in particular regular ternary pencils and binary centers paired with their reverse centers. For finite reduced rank ten resolve the unequal symmetric triples; extend five-space support arguments to nonreduced graphs."
+    "At rank ten exploit full generic middle support on every moving component, so each pair of consecutive components yields a rank-at-most-two family on the opposite edge. Analyze the singular and regular ternary pencils and their forced adjacent centers; continue finite one-symmetric unequal triples."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 580,
+      "nc-p3": 582,
       "plan_ja": 12,
       "notes_ja": 24
     },

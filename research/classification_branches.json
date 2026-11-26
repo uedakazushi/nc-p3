@@ -1057,6 +1057,12 @@
       "current_result": "At rank ten a four-support center followed by a second conic forces its unique first-line forward center to be ternary of singular pencil type. Its third curve and next position are planar; a cubic third curve has a backward center at its double point. Independently of rank, a singular ternary center identifies projected coordinates on the next pair. After a twisted cubic its third degree is between two and four (at most three if the projection center lies on the cubic), by the length-one bound for paths returning to their fixed start.",
       "current_proof": "sections/rank_ten_conic_after_center.tex",
       "global_coverage": false
+    },
+    {
+      "id": "BRANCH-BINARY-QUADRIC-CONES",
+      "current_result": "When no corridor consists of two lines, no binary forward or backward center can occur in any surface-free standard regular window. The paired binary equations place the moving curves of two phases on quadric cones. A forward center opposite the binary one would produce a twisted cubic through the vertex, forcing a backward center onto a line with unique predecessors. Without that opposite center the degree recurrence contradicts the degrees at both possible terminal centers. Consequently all moving components have full generic middle support, in particular for every remaining rank-ten branching candidate.",
+      "current_proof": "sections/binary_centers_quadric_cones.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1114,7 +1120,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 331,
+  "version": 332,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
