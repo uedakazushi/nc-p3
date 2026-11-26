@@ -641,6 +641,12 @@
       "current_result": "The fixed ideal of the canonical shift on a reduced locally complete intersection curve is cut by a section of the dualizing sheaf times the squared polarization second difference. On any generically reduced normalized component the formula includes cotangent torsion and ramification. Smooth open-and-closed rational components are impossible. The full smooth curve plus disjoint finite residual stratum consists of the plane cubic, elliptic quartic, elliptic quintic, and bielliptic septic charts.",
       "current_proof": "sections/point_graph_fixed_differentials.tex",
       "global_coverage": false
+    },
+    {
+      "id": "REDUCED-CUBIC-POINT-CURVES",
+      "current_result": "Every pure reduced point curve of degree at most three with disjoint finite residual is either a smooth plane cubic or a triangle. The full triangle stratum is the central PBW family over lambda in G_m minus one, with a split point and the quotient of P(1,1,1,2,2,2) by C3 squared over each lambda. All are AS, have period one, and are flat specializations of smooth cubic windows.",
+      "current_proof": "sections/reduced_cubic_point_curves.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -698,7 +704,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 262,
+  "version": 263,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
