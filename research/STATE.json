@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-26",
-  "version": 323,
+  "version": 324,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -3345,6 +3345,15 @@
       "verification": [
         "computations/verify_finite_carrier_blowup.py"
       ]
+    },
+    {
+      "id": "FINITE-RANK-NINE-ALL-MARKS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "Finite-edge rank nine is regular exactly at a point of middle support three. In the single high-order chart a nonzero four-form requires opposite rank at least twelve. Together with surface and curve-graph coverage and branching exclusions, all windows through opposite rank eight have finite all-degree regularity and indexed-isomorphism tests. The sole residual rank-nine type has a pure relation and curve-only branching.",
+      "proof": "sections/finite_rank_nine_all_marks.tex",
+      "verification": [
+        "computations/verify_finite_rank_nine_marks.py"
+      ]
     }
   ],
   "document_paths": {
@@ -3408,23 +3417,24 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "986dfccbb83b18249cc7e23309e4dd282ca691e8",
+  "reviewed_source_commit": "4cbb9fa4f58ecd5b32583c28aa71cf6531de893e",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
   "cloud_codex_status": "Repository-side Cloud guidance and preflight added; actual Cloud environment publishing, TeX tools and Git push permissions are not verifiable from repository alone.",
   "resume_point": {
     "task_id": "Z4-AS-004",
-    "status": "active_rank_nine_finite_marks_and_curve_graphs",
+    "status": "active_rank_nine_branching_and_rank_ten_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "At opposite rank nine compare the dimensions of both pairs of marked slices inside the opposite pairing. Use a common four-space on at least one parity and determine which Artin marks still obstruct a symmetry. Also treat rank-eight positive-dimensional point graphs and rank-nine curved branching.",
+    "immediate_next_action": "Resolve rank-nine curve-only branching with pure relations, starting with rank-three forward centers and their first nonlinear component. At finite rank ten compare the two five-dimensional sums of marked slices.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/finite_rank_eight_all_marks.tex",
-      "sections/finite_common_net_symmetry.tex"
+      "sections/finite_rank_nine_all_marks.tex",
+      "sections/branch_rank_one_residual.tex",
+      "sections/rank_eight_branch_exclusion.tex"
     ],
-    "known_obstruction": "Finite rank-eight AS membership is decided. In rank nine a common marked four-space need not occur on both parities. Nonfinite curve graphs, higher-rank regularity, full normal forms and global strata remain open.",
-    "state_of_claim": "Every standard finite Frobenius window with finite edges and opposite rank eight has a finite all-degree Koszul and two-sided AS regularity decision. Middle support three certifies regularity. Otherwise one parity is symmetric, so the low-rank symmetric-kernel test and the bisymmetric finite test decide every candidate, including one- and two-support nonreduced schemes. The new argument applies once to the blowup of a multiplicity-two or -three plane carrier, including nonreduced carriers. Full classification remains open.",
+    "known_obstruction": "Rank-nine curve-only branching with pure relations is undecided. Finite windows at higher opposite ranks may lack any aligned marked pair. Full orbit, component and specialization data remain open.",
+    "state_of_claim": "Finite-edge rank nine is regular exactly at a point of middle support three. In the single high-order chart a nonzero four-form requires opposite rank at least twelve. Together with surface and curve-graph coverage and branching exclusions, all windows through opposite rank eight have finite all-degree regularity and indexed-isomorphism tests. The sole residual rank-nine type has a pure relation and curve-only branching. Global classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

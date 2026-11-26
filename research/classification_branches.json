@@ -1009,6 +1009,12 @@
       "current_result": "Every standard finite Frobenius window with finite edges and opposite rank eight has a finite all-degree Koszul and two-sided AS regularity decision. Middle support three certifies regularity. Otherwise one parity is symmetric, so the low-rank symmetric-kernel test and the bisymmetric finite test decide every candidate, including one- and two-support nonreduced schemes. The new argument applies once to the blowup of a multiplicity-two or -three plane carrier, including nonreduced carriers.",
       "current_proof": "sections/finite_rank_eight_all_marks.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FINITE-RANK-NINE-ALL-MARKS",
+      "current_result": "Finite-edge rank nine is regular exactly at a point of middle support three. In the single high-order chart a nonzero four-form requires opposite rank at least twelve. Together with surface and curve-graph coverage and branching exclusions, all windows through opposite rank eight have finite all-degree regularity and indexed-isomorphism tests. The sole residual rank-nine type has a pure relation and curve-only branching.",
+      "current_proof": "sections/finite_rank_nine_all_marks.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1066,7 +1072,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 323,
+  "version": 324,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

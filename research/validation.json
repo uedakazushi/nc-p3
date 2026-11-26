@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 323,
+  "version": 324,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "986dfccbb83b18249cc7e23309e4dd282ca691e8"
+    "source_commit": "4cbb9fa4f58ecd5b32583c28aa71cf6531de893e"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every standard finite Frobenius window with finite edges and opposite rank eight has a finite all-degree Koszul and two-sided AS regularity decision. Middle support three certifies regularity. Otherwise one parity is symmetric, so the low-rank symmetric-kernel test and the bisymmetric finite test decide every candidate, including one- and two-support nonreduced schemes. The new argument applies once to the blowup of a multiplicity-two or -three plane carrier, including nonreduced carriers."
+    "scope": "Finite-edge rank nine is regular exactly at a point of middle support three. In the single high-order chart a nonzero four-form requires opposite rank at least twelve. Together with surface and curve-graph coverage and branching exclusions, all windows through opposite rank eight have finite all-degree regularity and indexed-isomorphism tests. The sole residual rank-nine type has a pure relation and curve-only branching."
   },
   "checks": [
     {
-      "command": "python computations/verify_finite_carrier_blowup.py",
+      "command": "python computations/verify_finite_rank_nine_marks.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "At opposite rank nine compare the dimensions of both pairs of marked slices inside the opposite pairing. Use a common four-space on at least one parity and determine which Artin marks still obstruct a symmetry. Also treat rank-eight positive-dimensional point graphs and rank-nine curved branching."
+    "Resolve rank-nine curve-only branching with pure relations, starting with rank-three forward centers and their first nonlinear component. At finite rank ten compare the two five-dimensional sums of marked slices."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 566,
+      "nc-p3": 569,
       "plan_ja": 12,
       "notes_ja": 24
     },
