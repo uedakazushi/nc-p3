@@ -793,6 +793,12 @@
       "current_result": "In every standard regular window each positive-dimensional component of the line-fiber center locus is itself a line. It sweeps a plane or a quadric. Nonlinear centers on a smooth quadric would be a conic or a twisted cubic, both excluded by a split path block or an endpoint overlap. Any three-dimensional edge projection gives the polynomial ring and the total divisor degree of any other edge projection is at most two.",
       "current_proof": "sections/branching_lines_only.tex",
       "global_coverage": false
+    },
+    {
+      "id": "MOVING-LINE-FIBERS-ONLY-PLANE-PENCILS",
+      "current_result": "Every moving line-fiber center sweeps a pencil in a plane, with the whole line of centers as the inverse fiber at the pencil vertex. Smooth quadrics force a separated arrow and cones force three consecutive-side pure relations with a common letter. The plane slice forces a nonzero pure relation on the opposite edge. Consequently pure-relation-free regular windows have only finitely many exceptional line fibers.",
+      "current_proof": "sections/plane_branch_pencils.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -850,7 +856,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 287,
+  "version": 288,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

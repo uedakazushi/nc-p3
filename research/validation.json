@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 287,
+  "version": 288,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "700c62cdb4f77f626e6d03a9328481d95b0f3c27"
+    "source_commit": "065415908c7d38e37edefb136d5c7670da8b9d10"
   },
   "generation": {
     "result": "PASS",
-    "scope": "In every standard regular window each positive-dimensional component of the line-fiber center locus is itself a line. It sweeps a plane or a quadric. Nonlinear centers on a smooth quadric would be a conic or a twisted cubic, both excluded by a split path block or an endpoint overlap. Any three-dimensional edge projection gives the polynomial ring and the total divisor degree of any other edge projection is at most two."
+    "scope": "Every moving line-fiber center sweeps a pencil in a plane, with the whole line of centers as the inverse fiber at the pencil vertex. Smooth quadrics force a separated arrow and cones force three consecutive-side pure relations with a common letter. The plane slice forces a nonzero pure relation on the opposite edge. Consequently pure-relation-free regular windows have only finitely many exceptional line fibers."
   },
   "checks": [
     {
-      "command": "python computations/verify_branching_lines_only.py",
+      "command": "python computations/verify_plane_branch_pencils.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Resolve the remaining linear or isolated line-fiber centers, finite point graphs of higher rank, and their global component and specialization structure."
+    "Treat isolated line fibers and plane pencils with an opposite pure relation, as well as the remaining finite point-scheme charts and their global orbit structure."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 514,
+      "nc-p3": 515,
       "plan_ja": 11,
       "notes_ja": 22
     },
