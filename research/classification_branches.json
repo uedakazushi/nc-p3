@@ -811,6 +811,12 @@
       "current_result": "Every generically birational chain of surface components containing a plane is a chain of projective planes with linear transitions. A plane Koszul sheaf complex exact off finitely many points is exact everywhere. Consequently all regular windows with surface projections and only isolated exceptional line fibers belong to the established lists, even in the presence of pure relations.",
       "current_proof": "sections/isolated_surface_fibers.tex",
       "global_coverage": false
+    },
+    {
+      "id": "NO-MOVING-PENCILS-ALL-SURFACES",
+      "current_result": "No positive-dimensional family of line fibers occurs in a regular window. Any moving pencil would also move on the other side. Its three-letter block between independent centers gives a (2,2) determinant containing the diagonal. The resulting degree-two flat path schemes, including double diagonals, force exponential growth. This removes all fiber hypotheses from the coverage of windows with a surface projection.",
+      "current_proof": "sections/exclude_moving_plane_pencils.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -868,7 +874,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 290,
+  "version": 291,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
