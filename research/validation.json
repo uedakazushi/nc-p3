@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 340,
+  "version": 341,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "d538cc15624ce535121fac7ca125f1d6c3bba915"
+    "source_commit": "25b7c312cb2c7d3d99c448dcce7e428e93c74e47"
   },
   "generation": {
     "result": "PASS",
-    "scope": "In the marked one-sided symmetric finite branch with symmetric nets spanning a four-space, the determinant of the prescribed commutator is the product of the linear commutator of their common plane and the conic of their trace normal. It vanishes identically exactly when the common plane commutes. For three independent target brackets and either four- or five-dimensional sum, every irreducible realizing triple is reconstructed on sixteen cyclic charts from one traceless matrix satisfying two linear and two quadratic trace equations and linear consistency conditions."
+    "scope": "Finite curvilinear graphs on seventeen sites with full middle support force symmetry at opposite rank ten. Rank eleven is excluded there as well: four shared finite marks force all three double points into a common plane, leaving no room for any opposite exceptional mark. An embedded conic pencil charges the double weight of a fixed kernel line, forcing each exceptional mark onto the secant of a length-two scheme supported on nonsimple graph points. At a confluent six-node slice the relative first-jet speed on both hyperplane cuts is identical."
   },
   "checks": [
     {
-      "command": "python computations/verify_mixed_commutator_discriminant.py",
+      "command": "python computations/verify_seventeen_site_pencils.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze the three-bracket reconstruction on the line of singular commutators, especially the common commuting plane and rank drops of the conic. Use finite-edge and growth obstructions to identify or exclude positive-dimensional solution charts. Continue the nonreduced finite-graph branch at seventeen sites."
+    "Resolve the noncurvilinear length-four site using the local Gorenstein pairing and the constraints on pencils projecting into a ruling. Analyze the fully singular commutator cubic when two symmetric nets have commuting intersection."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 597,
+      "nc-p3": 599,
       "plan_ja": 13,
       "notes_ja": 25
     },
