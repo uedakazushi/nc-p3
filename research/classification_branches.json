@@ -919,6 +919,12 @@
       "current_result": "For a reduced tetrahedral rank-one section at a simple or curvilinear finite mark, all six off-diagonal products in the two opposite coordinate systems coincide after a single unit normalization. Without opposite symmetry, their six alternating differences have disjoint supports of length one or two on the corresponding pairs of lines. The four diagonal corrections are quadratic and at least three are nonzero.",
       "current_proof": "sections/finite_marked_tetrahedral_products.tex",
       "global_coverage": false
+    },
+    {
+      "id": "PURE-FREE-BRANCH-OPPOSITE-PHASES",
+      "current_result": "Pure-relation-free branching without a surface or a two-line corridor, in particular at opposite ranks 9 through 11, has exactly one forward and one backward center in each of two opposite positions. The only possible pairs of corridor lengths are (3,3),(3,7),(5,5). The degree-ten determinantal tangent obstruction excludes adjacent or isolated occupied positions.",
+      "current_proof": "sections/branch_centers_opposite_phases.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -976,7 +982,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 308,
+  "version": 309,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
