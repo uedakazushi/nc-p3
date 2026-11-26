@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 336,
+  "version": 337,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "605d09a99e8b99705a542f310634e985c63ae514"
+    "source_commit": "76e8920d2c0cdf7e7c6b15a85bee240be5d804e9"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every rank-ten standard regular window with all point projections of dimension at most one is unbranched. The cyclic regular ternary cubic option contradicts the square factor in its quintic deficit. In the all-conic configuration each phase has one forward and one backward center, and every corridor begins and ends with (1,2,1). A singular ternary center then annihilates its opposite forward center: its projected second conic and third line identify that point by its unique predecessor. The adjacent three-dimensional evaluation kernel forces the preceding center to have middle support at most two, already excluded. All remaining rank-ten recognition gaps therefore have four finite edges."
+    "scope": "For a finite window of full middle support with eighteen simple points and one double point, opposite rank ten forces an opposite symmetry and rank eleven is impossible. Weighted residual pencils exclude rulings; a conic with an embedded tangent cannot supply twelve distinct pencils, while two detached nodes give symmetry even over dual numbers. For a reduced six-node section the thirteen edge stresses force coincidence at the unique double point. Re-marking there combines nine simple marks in one parity into a common four-space."
   },
   "checks": [
     {
-      "command": "python computations/verify_rank_ten_quintic_centers.py",
+      "command": "python computations/verify_one_double_secant_bounds.py",
       "result": "PASS"
     },
     {
@@ -40,14 +40,14 @@
     }
   ],
   "open_mathematics": [
-    "Resolve rank-ten finite edges: in the reduced one-symmetric chart classify the unequal symmetric triples and decide AS at all exceptional points; extend five-space secants to nonreduced graphs. At higher rank continue the general recognition and isomorphism/period/specialization obligations."
+    "Extend the weighted five-space argument to two double points or one triple point, distinguishing the incidence at coincident secants and the length-four chart of the new mark. For one-sided rank-ten finite windows pursue the unequal symmetric triples and their commutator discriminant."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 589,
+      "nc-p3": 592,
       "plan_ja": 12,
-      "notes_ja": 24
+      "notes_ja": 25
     },
     "scope": "LuaLaTeX built the manuscript, plan and research notes."
   },
