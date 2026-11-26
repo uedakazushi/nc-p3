@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 297,
+  "version": 298,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "e29a3df8e8a1a4ef5c759d99312f95eccb869e1d"
+    "source_commit": "04aa9a9d8c7a94375fa20b0ca5b56fed47f022c2"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Two moving lines between fixed centers force a nondegenerate ternary tensor on restriction and an opposite-rank lower bound 6+a+b-r. Without pure relations the bound is twelve, each center confines other successors to a canonical twisted cubic, and there are at most two centers per position. The two critical divisors of a two-line chain are secant or tangent intersections with those cubics."
+    "scope": "At any simple finite point with full middle supports, one common marked triple span forces an opposite symmetry without assuming a bound on the opposite rank. The other span has dimension at most five. For distinct spans and bracket rank two it is exactly five, from complementary two-planes in a symplectic four-space. In particular no rank above ten has a common triple span at such a mark."
   },
   "checks": [
     {
-      "command": "python computations/verify_two_line_branch_blocks.py",
+      "command": "python computations/verify_marked_common_triple_symmetry.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Use the forced conic of pure relations at rank eight and the critical pair geometry of longer rational chains to decide the remaining branching and finite point strata."
+    "Resolve the residual full-rank one-symmetry finite charts and marked four-plane pairs, and the exceptional branching and non-simple finite cases."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 529,
+      "nc-p3": 530,
       "plan_ja": 11,
       "notes_ja": 22
     },

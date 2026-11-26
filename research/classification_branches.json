@@ -853,6 +853,12 @@
       "current_result": "Two moving lines between fixed centers force a nondegenerate ternary tensor on restriction and an opposite-rank lower bound 6+a+b-r. Without pure relations the bound is twelve, each center confines other successors to a canonical twisted cubic, and there are at most two centers per position. The two critical divisors of a two-line chain are secant or tangent intersections with those cubics.",
       "current_proof": "sections/two_line_branch_blocks.tex",
       "global_coverage": false
+    },
+    {
+      "id": "COMMON-MARKED-TRIPLE-UNBOUNDED-SYMMETRY",
+      "current_result": "At any simple finite point with full middle supports, one common marked triple span forces an opposite symmetry without assuming a bound on the opposite rank. The other span has dimension at most five. For distinct spans and bracket rank two it is exactly five, from complementary two-planes in a symplectic four-space. In particular no rank above ten has a common triple span at such a mark.",
+      "current_proof": "sections/marked_common_triple_symmetry.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -910,7 +916,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 297,
+  "version": 298,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
