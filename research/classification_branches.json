@@ -859,6 +859,12 @@
       "current_result": "At any simple finite point with full middle supports, one common marked triple span forces an opposite symmetry without assuming a bound on the opposite rank. The other span has dimension at most five. For distinct spans and bracket rank two it is exactly five, from complementary two-planes in a symplectic four-space. In particular no rank above ten has a common triple span at such a mark.",
       "current_proof": "sections/marked_common_triple_symmetry.tex",
       "global_coverage": false
+    },
+    {
+      "id": "MARKED-TWO-COMMUTATOR-PENCIL",
+      "current_result": "At a simple finite mark with full middle supports and common triple of cross-bracket rank two, the two commutators admit an invertible pencil member. A Sylvester equation reconstructs the common triple in terms of the pencil and three scalar parameters, subject to cyclicity and a trace condition.",
+      "current_proof": "sections/marked_two_commutators.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -916,7 +922,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 298,
+  "version": 299,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
