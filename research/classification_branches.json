@@ -841,6 +841,12 @@
       "current_result": "Any residual branching window with no surface projection has at most twenty forward centers and a branching point orbit of period at most forty in each direction. Both a cyclic right and a cyclic left periodic point module have infinitely generated defining ideals, with exact first Tor dimensions. Within terminal recurrent components all forward defects of the same rational family concentrate at a single unramified parameter.",
       "current_proof": "sections/periodic_branch_obstruction.tex",
       "global_coverage": false
+    },
+    {
+      "id": "LOW-OPPOSITE-RANK-ALL-WINDOW-COVERAGE",
+      "current_result": "Exclude every exceptional line fiber in surface-free regular windows of opposite rank six or seven. At seven, opposite binary kernels would pair each forward center to a backward center by a conic of pure relations. The ensuing twisted cubic has a successor simultaneously contained in a plane and a quadric cone, contradicting the reversed degree. This covers all regular windows through opposite rank seven. A pure-free branching window must have opposite rank at least nine and a full L3 pencil.",
+      "current_proof": "sections/low_rank_branch_exclusion.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -898,7 +904,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 295,
+  "version": 296,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

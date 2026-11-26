@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 295,
+  "version": 296,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "cd8e6957d7ff340d9b51839d9effab2aabcc2c4d"
+    "source_commit": "4b65c792a1f67b9acc0d6af3016ef85e2ba32a74"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Any residual branching window with no surface projection has at most twenty forward centers and a branching point orbit of period at most forty in each direction. Both a cyclic right and a cyclic left periodic point module have infinitely generated defining ideals, with exact first Tor dimensions. Within terminal recurrent components all forward defects of the same rational family concentrate at a single unramified parameter."
+    "scope": "Exclude every exceptional line fiber in surface-free regular windows of opposite rank six or seven. At seven, opposite binary kernels would pair each forward center to a backward center by a conic of pure relations. The ensuing twisted cubic has a successor simultaneously contained in a plane and a quadric cone, contradicting the reversed degree. This covers all regular windows through opposite rank seven. A pure-free branching window must have opposite rank at least nine and a full L3 pencil."
   },
   "checks": [
     {
-      "command": "python computations/verify_periodic_branch_obstruction.py",
+      "command": "python computations/verify_low_rank_branch_exclusion.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Exclude or classify the remaining nonnoetherian branching candidates via finite period and opposite rank, and settle the remaining finite point windows."
+    "Address branching at rank eight with pure relations, higher-rank one-sided centers, finite point graphs without the established marks and global component and period data."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 525,
+      "nc-p3": 527,
       "plan_ja": 11,
       "notes_ja": 22
     },

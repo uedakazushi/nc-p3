@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-26",
-  "version": 295,
+  "version": 296,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -3093,6 +3093,15 @@
       "verification": [
         "computations/verify_periodic_branch_obstruction.py"
       ]
+    },
+    {
+      "id": "LOW-OPPOSITE-RANK-ALL-WINDOW-COVERAGE",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "Exclude every exceptional line fiber in surface-free regular windows of opposite rank six or seven. At seven, opposite binary kernels would pair each forward center to a backward center by a conic of pure relations. The ensuing twisted cubic has a successor simultaneously contained in a plane and a quadric cone, contradicting the reversed degree. This covers all regular windows through opposite rank seven. A pure-free branching window must have opposite rank at least nine and a full L3 pencil.",
+      "proof": "sections/low_rank_branch_exclusion.tex",
+      "verification": [
+        "computations/verify_low_rank_branch_exclusion.py"
+      ]
     }
   ],
   "document_paths": {
@@ -3156,7 +3165,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "cd8e6957d7ff340d9b51839d9effab2aabcc2c4d",
+  "reviewed_source_commit": "4b65c792a1f67b9acc0d6af3016ef85e2ba32a74",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -3165,14 +3174,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Exclude or classify the remaining nonnoetherian branching candidates via finite period and opposite rank, and settle the remaining finite point windows.",
+    "immediate_next_action": "Address branching at rank eight with pure relations, higher-rank one-sided centers, finite point graphs without the established marks and global component and period data.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/periodic_branch_obstruction.tex",
-      "sections/finite_branch_corridors.tex"
+      "sections/low_rank_branch_exclusion.tex",
+      "sections/periodic_branch_obstruction.tex"
     ],
     "known_obstruction": "General windows can lack a recognized symmetry or Ore mark. All-degree AS membership is open for such candidates, including finite locally planar cases.",
-    "state_of_claim": "Any residual branching window with no surface projection has at most twenty forward centers and a branching point orbit of period at most forty in each direction. Both a cyclic right and a cyclic left periodic point module have infinitely generated defining ideals, with exact first Tor dimensions. Within terminal recurrent components all forward defects of the same rational family concentrate at a single unramified parameter. Full classification remains open.",
+    "state_of_claim": "Exclude every exceptional line fiber in surface-free regular windows of opposite rank six or seven. At seven, opposite binary kernels would pair each forward center to a backward center by a conic of pure relations. The ensuing twisted cubic has a successor simultaneously contained in a plane and a quadric cone, contradicting the reversed degree. This covers all regular windows through opposite rank seven. A pure-free branching window must have opposite rank at least nine and a full L3 pencil. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
