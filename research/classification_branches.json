@@ -1141,6 +1141,12 @@
       "current_result": "The linear reconstruction has full rank four in a general direction except exactly for one explicit transverse block form with a nonsymmetric invertible two-by-two matrix. This form has a triple-line determinant and a square-zero planar triple rank-one slice. It cannot occur in any finite window of the unequal symmetric-net branch. A length-four Veronese section in a triple line forces a common eigenvector and hence an entire line over one adjacent point. The generic-direction linear reconstruction therefore always has full rank in this finite branch. A nine-word determinant equals minus the cube of the original commutator determinant.",
       "current_proof": "sections/marked_persistent_bracket_defect.tex",
       "global_coverage": false
+    },
+    {
+      "id": "MARKED-PRESCRIBED-DISCRIMINANT-AS",
+      "current_result": "For every prescribed projective trace normal N and line ell, including every nilpotent/Jordan type and repeated or tangent factor, there is a nineteen-dimensional irreducible marked chart whose geometric generic window is finite, opposite rank ten, quadratic Koszul and left/right AS regular, and whose mixed discriminant is ell times v-transpose N v. Its indexed-class image has dimension nine minus the projective orthogonal stabilizer dimension of the pair; varying the pair gives dimension twelve. The proof uses an etale commutator inverse, three exact exceptional finite mixed windows, and all internal degrees of the relative bar complex.",
+      "current_proof": "sections/marked_prescribed_discriminant_as.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1198,7 +1204,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 345,
+  "version": 346,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
