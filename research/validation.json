@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 292,
+  "version": 293,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "bbaa6085bb64b1cf7b11dbeb7d64c4ea5038c789"
+    "source_commit": "01ee474c0c72532bfd2fc959ee28e614959e363c"
   },
   "generation": {
     "result": "PASS",
-    "scope": "At an isolated forward line fiber the reverse rank is two or three. The relations on the successor line form a square or rectangular binary pencil; any nonconstant generic successor is a complete rational normal linear system of degree at most three. Every two-sided center has a unique nonzero four-step self-block and has neighboring exceptional fibers cut out inside its intrinsic plane by binary quadratics."
+    "scope": "A point can never have both a predecessor line and a successor line. Its hypothetical unique self-block extends over a two-dimensional first-order base of simultaneous rank-two deformations. Three scalar equations suffice to close two moving boundaries between fixed endpoints, giving a nonconstant infinitesimal loop and exponential growth."
   },
   "checks": [
     {
-      "command": "python computations/verify_isolated_branch_blocks.py",
+      "command": "python computations/verify_two_sided_center_deformations.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Follow isolated centers through rational normal successors and through the paired binary critical loci; decide the remaining finite point branches and the global orbit structure."
+    "Analyze one-sided isolated centers through their rational normal successors and the finite point strata beyond the existing symmetry tests."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 522,
+      "nc-p3": 523,
       "plan_ja": 11,
       "notes_ja": 22
     },

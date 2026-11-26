@@ -823,6 +823,12 @@
       "current_result": "At an isolated forward line fiber the reverse rank is two or three. The relations on the successor line form a square or rectangular binary pencil; any nonconstant generic successor is a complete rational normal linear system of degree at most three. Every two-sided center has a unique nonzero four-step self-block and has neighboring exceptional fibers cut out inside its intrinsic plane by binary quadratics.",
       "current_proof": "sections/isolated_branch_blocks.tex",
       "global_coverage": false
+    },
+    {
+      "id": "NO-TWO-SIDED-ISOLATED-CENTERS",
+      "current_result": "A point can never have both a predecessor line and a successor line. Its hypothetical unique self-block extends over a two-dimensional first-order base of simultaneous rank-two deformations. Three scalar equations suffice to close two moving boundaries between fixed endpoints, giving a nonconstant infinitesimal loop and exponential growth.",
+      "current_proof": "sections/exclude_two_sided_centers.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -880,7 +886,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 292,
+  "version": 293,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
