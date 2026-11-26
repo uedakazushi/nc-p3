@@ -973,6 +973,12 @@
       "current_result": "The finite rank-eight all-degree regularity test covers a local factor of length six and therefore all windows on three or more closed points. Length-three rank-one slices give symmetry at arbitrary planar Cartier marks on an ordinary node or cusp. In any finite Frobenius window each coordinate line meets the point scheme in length at most three, without assuming a rank or reducedness.",
       "current_proof": "sections/finite_nodal_cuspidal_marks.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FINITE-SPLIT-SEPARATOR-SLICES",
+      "current_result": "A repeated linear factor in a finite cubic separator forces the alternating three-by-three space plus one symmetric rank-one matrix, with separator h times s squared. Three distinct plane factors force a short or positive-dimensional rank-one slice. At a single supporting point every length-four marked slice now gives opposite kernel symmetry even for arbitrary planar local rings. At two points the length-four curvilinear kernel discrepancy is excluded.",
+      "current_proof": "sections/finite_split_separator_slices.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1030,7 +1036,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 317,
+  "version": 318,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 317,
+  "version": 318,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "641ed0d7649d8f6733b1359c7e242784a733f912"
+    "source_commit": "3b6ea2f0a0da6de53b1fa52e26908c02439f9563"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The finite rank-eight all-degree regularity test covers a local factor of length six and therefore all windows on three or more closed points. Length-three rank-one slices give symmetry at arbitrary planar Cartier marks on an ordinary node or cusp. In any finite Frobenius window each coordinate line meets the point scheme in length at most three, without assuming a rank or reducedness."
+    "scope": "A repeated linear factor in a finite cubic separator forces the alternating three-by-three space plus one symmetric rank-one matrix, with separator h times s squared. Three distinct plane factors force a short or positive-dimensional rank-one slice. At a single supporting point every length-four marked slice now gives opposite kernel symmetry even for arbitrary planar local rings. At two points the length-four curvilinear kernel discrepancy is excluded."
   },
   "checks": [
     {
-      "command": "python computations/verify_finite_nodal_cuspidal_marks.py",
+      "command": "python computations/verify_finite_split_separator_slices.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze the remaining finite rank-eight windows supported at one or two nonstretched planar points of local length at least seven, starting with lengths seven to ten and the incidence of the rank-one loci at the marks. Continue the independent higher-rank branches."
+    "Treat length-three slices at a sole planar point and the remaining local discrepancies at two planar points. Use the separator factorization and local second-order evaluation constraints."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 558,
+      "nc-p3": 560,
       "plan_ja": 12,
       "notes_ja": 23
     },
