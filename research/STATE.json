@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-26",
-  "version": 281,
+  "version": 282,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -2967,6 +2967,15 @@
       "verification": [
         "computations/verify_smooth_kernel_binary_transfer.py"
       ]
+    },
+    {
+      "id": "CONE-SYMMETRIC-KERNEL-FINITE-GRAPH",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "A rank-three symmetric kernel on a finite point graph forces either a bisymmetric window or exponential growth. In the full case a rank-two commutator with a cyclic operator determines the symmetric pairing even at repeated eigenvalues. In the deficient case binary septics produce exponentially many independent paths. At opposite rank nine with a simple local point the existence of a ternary middle support is now necessary and sufficient for regularity.",
+      "proof": "sections/cone_kernel_binary_transfer.tex",
+      "verification": [
+        "computations/verify_cone_kernel_binary_transfer.py"
+      ]
     }
   ],
   "document_paths": {
@@ -3030,7 +3039,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "8da0a1c158019ce43fe25ba31f62c6efe5d4fa91",
+  "reviewed_source_commit": "ab18aea19a75cc63d3634836989c30d4d88e7843",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -3039,14 +3048,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Analyze the rank-three symmetric kernel, finite graphs with no simple component, higher opposite ranks, positive-dimensional fibers and global components and specializations.",
+    "immediate_next_action": "Treat finite graphs without a simple local point, higher opposite ranks, positive-dimensional fibers, and the remaining moduli components and specializations.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/smooth_kernel_binary_transfer.tex",
-      "sections/rank_nine_finite_symmetry.tex"
+      "sections/cone_kernel_binary_transfer.tex",
+      "sections/smooth_kernel_binary_transfer.tex"
     ],
     "known_obstruction": "General windows can lack a recognized symmetry or Ore mark. All-degree AS membership is open for such candidates, including finite locally planar cases.",
-    "state_of_claim": "For any finite point graph with an opposite symmetry and a smooth generator of its one-dimensional symmetric quadratic kernel, simultaneous surjectivity in one binary direction forces bisymmetry, including repeated eigenvalues. The only other alternative has exponential growth. The bisymmetric finite test therefore decides regularity throughout this stratum. Full classification remains open.",
+    "state_of_claim": "A rank-three symmetric kernel on a finite point graph forces either a bisymmetric window or exponential growth. In the full case a rank-two commutator with a cyclic operator determines the symmetric pairing even at repeated eigenvalues. In the deficient case binary septics produce exponentially many independent paths. At opposite rank nine with a simple local point the existence of a ternary middle support is now necessary and sufficient for regularity. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 281,
+  "version": 282,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "8da0a1c158019ce43fe25ba31f62c6efe5d4fa91"
+    "source_commit": "ab18aea19a75cc63d3634836989c30d4d88e7843"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For any finite point graph with an opposite symmetry and a smooth generator of its one-dimensional symmetric quadratic kernel, simultaneous surjectivity in one binary direction forces bisymmetry, including repeated eigenvalues. The only other alternative has exponential growth. The bisymmetric finite test therefore decides regularity throughout this stratum."
+    "scope": "A rank-three symmetric kernel on a finite point graph forces either a bisymmetric window or exponential growth. In the full case a rank-two commutator with a cyclic operator determines the symmetric pairing even at repeated eigenvalues. In the deficient case binary septics produce exponentially many independent paths. At opposite rank nine with a simple local point the existence of a ternary middle support is now necessary and sufficient for regularity."
   },
   "checks": [
     {
-      "command": "python computations/verify_smooth_kernel_binary_transfer.py",
+      "command": "python computations/verify_cone_kernel_binary_transfer.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze the rank-three symmetric kernel, finite graphs with no simple component, higher opposite ranks, positive-dimensional fibers and global components and specializations."
+    "Treat finite graphs without a simple local point, higher opposite ranks, positive-dimensional fibers, and the remaining moduli components and specializations."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 501,
+      "nc-p3": 503,
       "plan_ja": 11,
       "notes_ja": 21
     },

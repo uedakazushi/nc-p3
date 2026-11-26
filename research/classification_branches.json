@@ -757,6 +757,12 @@
       "current_result": "For any finite point graph with an opposite symmetry and a smooth generator of its one-dimensional symmetric quadratic kernel, simultaneous surjectivity in one binary direction forces bisymmetry, including repeated eigenvalues. The only other alternative has exponential growth. The bisymmetric finite test therefore decides regularity throughout this stratum.",
       "current_proof": "sections/smooth_kernel_binary_transfer.tex",
       "global_coverage": false
+    },
+    {
+      "id": "CONE-SYMMETRIC-KERNEL-FINITE-GRAPH",
+      "current_result": "A rank-three symmetric kernel on a finite point graph forces either a bisymmetric window or exponential growth. In the full case a rank-two commutator with a cyclic operator determines the symmetric pairing even at repeated eigenvalues. In the deficient case binary septics produce exponentially many independent paths. At opposite rank nine with a simple local point the existence of a ternary middle support is now necessary and sufficient for regularity.",
+      "current_proof": "sections/cone_kernel_binary_transfer.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -814,7 +820,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 281,
+  "version": 282,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
