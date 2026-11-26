@@ -889,6 +889,12 @@
       "current_result": "All aligned finite marks with finite rank-one section of length at most two now force opposite symmetry, including planar local marks tangent to the exceptional secant. A curvilinear or simple mark with three distinct rank-one points also forces it, by separation on three noncoplanar lines.",
       "current_proof": "sections/finite_marked_tangent_secants.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FINITE-MARKED-POSITIVE-RANK-ONE-RULING",
+      "current_result": "Every positive-dimensional rank-one section of an aligned finite mark is a single reduced Segre ruling. Its unique common-kernel pencil has one fixed kernel direction over every Artin base. This forces opposite symmetry even at planar, nonreduced marks with exceptional tangent direction.",
+      "current_proof": "sections/finite_marked_ruling_pencil.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -946,7 +952,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 303,
+  "version": 304,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
