@@ -1153,6 +1153,12 @@
       "current_result": "For every semisimple trace normal and every prescribed line, the geometric generic all-degree regular rank-ten family constructed at the split mixed seed has minimal shift period four and trivial projective indexed automorphism group, also after forgetting the marking. This includes repeated eigenvalues and nontransverse line sections. Its two even configurations are projectively inequivalent by first-order obstructions to all unmarked projectivities.",
       "current_proof": "sections/marked_semisimple_period.tex",
       "global_coverage": false
+    },
+    {
+      "id": "MARKED-MIXED-COMPONENT-SMOOTHING",
+      "current_result": "All finite mixed marked windows with the symmetric net at G and the skew net at Q, as well as the prescribed-discriminant constructions for every Jordan type, lie in the previously identified fifteen-dimensional component. A single nested chain of marked image closures has dimensions fourteen, twelve, eight and generic periods four, four, two. The rank-one determinantal cone of two by three matrices describes the marked local incidence. An explicit transverse polynomial family has all-degree AS iff (t^2+3)(3t^2+1) is nonzero, including the two rank-fourteen fibers where Walsh normalization degenerates.",
+      "current_proof": "sections/marked_mixed_component.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1210,7 +1216,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 347,
+  "version": 348,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

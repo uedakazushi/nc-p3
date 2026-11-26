@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-26",
-  "version": 347,
+  "version": 348,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -3561,6 +3561,15 @@
       "verification": [
         "computations/verify_semisimple_period_obstruction.py"
       ]
+    },
+    {
+      "id": "MARKED-MIXED-COMPONENT-SMOOTHING",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "All finite mixed marked windows with the symmetric net at G and the skew net at Q, as well as the prescribed-discriminant constructions for every Jordan type, lie in the previously identified fifteen-dimensional component. A single nested chain of marked image closures has dimensions fourteen, twelve, eight and generic periods four, four, two. The rank-one determinantal cone of two by three matrices describes the marked local incidence. An explicit transverse polynomial family has all-degree AS iff (t^2+3)(3t^2+1) is nonzero, including the two rank-fourteen fibers where Walsh normalization degenerates.",
+      "proof": "sections/marked_mixed_component.tex",
+      "verification": [
+        "computations/verify_mixed_component_smoothing.py"
+      ]
     }
   ],
   "document_paths": {
@@ -3624,7 +3633,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "23d18cdfeae2c977e14f8d65407223c4b1a7e21b",
+  "reviewed_source_commit": "a6331f58292977f2e0cc9dd06090ab6bfb3b463e",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -3633,14 +3642,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Resolve the local specialization geometry of the g=3,4,5 strata by projecting F to Sym_0/span(G) and identifying its determinantal singularities. Continue the all-degree closed-fiber regularity and finite-edge coverage below seventeen support points.",
+    "immediate_next_action": "Determine the period and unmarked parameter identifications along the transverse polynomial family, especially at the two rank-fourteen non-Walsh-normalized points. Extend component recognition or pointwise regularity to the other inverse-commutator sheets and finite graphs below seventeen supports.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/marked_semisimple_period.tex",
-      "sections/marked_prescribed_discriminant_as.tex"
+      "sections/marked_mixed_component.tex",
+      "sections/marked_semisimple_period.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "For every semisimple trace normal and every prescribed line, the geometric generic all-degree regular rank-ten family constructed at the split mixed seed has minimal shift period four and trivial projective indexed automorphism group, also after forgetting the marking. This includes repeated eigenvalues and nontransverse line sections. Its two even configurations are projectively inequivalent by first-order obstructions to all unmarked projectivities. Full classification remains open.",
+    "state_of_claim": "All finite mixed marked windows with the symmetric net at G and the skew net at Q, as well as the prescribed-discriminant constructions for every Jordan type, lie in the previously identified fifteen-dimensional component. A single nested chain of marked image closures has dimensions fourteen, twelve, eight and generic periods four, four, two. The rank-one determinantal cone of two by three matrices describes the marked local incidence. An explicit transverse polynomial family has all-degree AS iff (t^2+3)(3t^2+1) is nonzero, including the two rank-fourteen fibers where Walsh normalization degenerates. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
