@@ -1279,6 +1279,12 @@
       "current_result": "Squarefree four-windows with adjacent ranks six are AS exactly when all 24 permutation coefficients survive. All other supports grow exponentially. Every survivor is an ordinary quantum indexed class, recognized without a marked point or opposite rank hypothesis. In the unmarked two-missing-color Klein chart with all permutation entries nonzero, reciprocally present diagonal pairs define a graph. A universal vertex gives the classified marked chart, an intersecting edge family degenerates to a regular quantum window, and only matching, path, and four-cycle supports remain.",
       "current_proof": "sections/squarefree_window_coverage.tex",
       "global_coverage": false
+    },
+    {
+      "id": "UNMARKED-KLEIN-PBW",
+      "current_result": "For the unmarked three-rank-two-color chart, assume all four coordinate cycles have no additional off-diagonal coordinate edge. Every window missing even one repeated-pair coefficient is AS, with a triangular PBW presentation or a good PBW degeneration. Nonzero permutations need not be assumed: the two rank factorizations force support reflections, and missing repeated pairs force precisely the two-column pivots. All remaining candidates have a marked chart already decided.",
+      "current_proof": "sections/unmarked_klein_pbw.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1336,7 +1342,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 368,
+  "version": 369,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

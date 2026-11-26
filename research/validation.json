@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 368,
+  "version": 369,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "b90f2223f1fd4700fd867eaf741b9dff0061d547"
+    "source_commit": "a980424b7b7377c7ca6c5f64f0db0e9dd16f4cb4"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Squarefree four-windows with adjacent ranks six are AS exactly when all 24 permutation coefficients survive. All other supports grow exponentially. Every survivor is an ordinary quantum indexed class, recognized without a marked point or opposite rank hypothesis. In the unmarked two-missing-color Klein chart with all permutation entries nonzero, reciprocally present diagonal pairs define a graph. A universal vertex gives the classified marked chart, an intersecting edge family degenerates to a regular quantum window, and only matching, path, and four-cycle supports remain."
+    "scope": "For the unmarked three-rank-two-color chart, assume all four coordinate cycles have no additional off-diagonal coordinate edge. Every window missing even one repeated-pair coefficient is AS, with a triangular PBW presentation or a good PBW degeneration. Nonzero permutations need not be assumed: the two rank factorizations force support reflections, and missing repeated pairs force precisely the two-column pivots. All remaining candidates have a marked chart already decided."
   },
   "checks": [
     {
-      "command": "python computations/verify_squarefree_window_coverage.py",
+      "command": "python computations/verify_unmarked_klein_pbw.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Solve the remaining one- and two-matching block completions on the unmarked Klein chart, including AS and failure of gauge normalization at special parameters. Extend character-free growth tests outside the Klein presentations."
+    "Remove the no-off-diagonal-coordinate-edge hypothesis: classify rank-two zero-diagonal slice supports permitting zero rows/columns and acyclic one-way transitions. Determine exceptional zero-row strata not covered by triangular PBW or simple marks."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 650,
+      "nc-p3": 651,
       "plan_ja": 14,
       "notes_ja": 26
     },
