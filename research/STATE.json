@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-26",
-  "version": 301,
+  "version": 302,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -3147,6 +3147,15 @@
       "verification": [
         "computations/verify_finite_marked_projection.py"
       ]
+    },
+    {
+      "id": "FINITE-MARKED-SECANT-PENCIL-SUPPORT",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "At an aligned finite mark the rank-one scheme in its four-dimensional matrix span has length at most four if finite. For length at most two the unique possible exceptional secant is rigid over Artin bases; at a curvilinear mark, or an embedding-dimension-two mark passing the tangent test, the induced map gives a scheme-wide opposite symmetry even with exceptional points elsewhere. A nonzero adjacent coordinate word has scheme support of length at least six.",
+      "proof": "sections/finite_marked_secant_pencil.tex",
+      "verification": [
+        "computations/verify_finite_marked_secants.py"
+      ]
     }
   ],
   "document_paths": {
@@ -3210,7 +3219,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "17ebe623ea120baf6de9b993e2f93954882b6479",
+  "reviewed_source_commit": "88e55ce845a837dc53632a2664c0766abb2c5988",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -3219,14 +3228,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Determine the exceptional common-kernel pencils in singular determinantal cubics at non-simple marks and continue the marked four-plane pairs, higher ranks and curve branching.",
+    "immediate_next_action": "Treat the tangent exceptional secant at a planar mark, multiple secants, and the remaining marked four-planes and higher-rank and branching windows.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/finite_marked_projection_symmetry.tex",
-      "sections/rank_eight_finite_symmetry.tex"
+      "sections/finite_marked_secant_pencil.tex",
+      "sections/finite_marked_projection_symmetry.tex"
     ],
     "known_obstruction": "General windows can lack a recognized symmetry or Ore mark. All-degree AS membership is open for such candidates, including finite locally planar cases.",
-    "state_of_claim": "In finite windows of opposite rank eight the two opposite marked slices have the same four-dimensional image at every point, including nonreduced components. A common-kernel line test on the other points and on marked tangent directions forces the induced identification to give an opposite symmetry on the whole scheme. Passing on both sides certifies the finite all-degree AS test without a simple point. Smooth determinantal cubics suffice on either side. Full classification remains open.",
+    "state_of_claim": "At an aligned finite mark the rank-one scheme in its four-dimensional matrix span has length at most four if finite. For length at most two the unique possible exceptional secant is rigid over Artin bases; at a curvilinear mark, or an embedding-dimension-two mark passing the tangent test, the induced map gives a scheme-wide opposite symmetry even with exceptional points elsewhere. A nonzero adjacent coordinate word has scheme support of length at least six. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

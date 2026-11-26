@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 301,
+  "version": 302,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "17ebe623ea120baf6de9b993e2f93954882b6479"
+    "source_commit": "88e55ce845a837dc53632a2664c0766abb2c5988"
   },
   "generation": {
     "result": "PASS",
-    "scope": "In finite windows of opposite rank eight the two opposite marked slices have the same four-dimensional image at every point, including nonreduced components. A common-kernel line test on the other points and on marked tangent directions forces the induced identification to give an opposite symmetry on the whole scheme. Passing on both sides certifies the finite all-degree AS test without a simple point. Smooth determinantal cubics suffice on either side."
+    "scope": "At an aligned finite mark the rank-one scheme in its four-dimensional matrix span has length at most four if finite. For length at most two the unique possible exceptional secant is rigid over Artin bases; at a curvilinear mark, or an embedding-dimension-two mark passing the tangent test, the induced map gives a scheme-wide opposite symmetry even with exceptional points elsewhere. A nonzero adjacent coordinate word has scheme support of length at least six."
   },
   "checks": [
     {
-      "command": "python computations/verify_finite_marked_projection.py",
+      "command": "python computations/verify_finite_marked_secants.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine the exceptional common-kernel pencils in singular determinantal cubics at non-simple marks and continue the marked four-plane pairs, higher ranks and curve branching."
+    "Treat the tangent exceptional secant at a planar mark, multiple secants, and the remaining marked four-planes and higher-rank and branching windows."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 534,
+      "nc-p3": 536,
       "plan_ja": 12,
       "notes_ja": 22
     },

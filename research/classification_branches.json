@@ -877,6 +877,12 @@
       "current_result": "In finite windows of opposite rank eight the two opposite marked slices have the same four-dimensional image at every point, including nonreduced components. A common-kernel line test on the other points and on marked tangent directions forces the induced identification to give an opposite symmetry on the whole scheme. Passing on both sides certifies the finite all-degree AS test without a simple point. Smooth determinantal cubics suffice on either side.",
       "current_proof": "sections/finite_marked_projection_symmetry.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FINITE-MARKED-SECANT-PENCIL-SUPPORT",
+      "current_result": "At an aligned finite mark the rank-one scheme in its four-dimensional matrix span has length at most four if finite. For length at most two the unique possible exceptional secant is rigid over Artin bases; at a curvilinear mark, or an embedding-dimension-two mark passing the tangent test, the induced map gives a scheme-wide opposite symmetry even with exceptional points elsewhere. A nonzero adjacent coordinate word has scheme support of length at least six.",
+      "current_proof": "sections/finite_marked_secant_pencil.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -934,7 +940,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 301,
+  "version": 302,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
