@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 293,
+  "version": 294,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "01ee474c0c72532bfd2fc959ee28e614959e363c"
+    "source_commit": "d2af5cd8b15d8ceed1fa69f3442d4a05beeb77c6"
   },
   "generation": {
     "result": "PASS",
-    "scope": "A point can never have both a predecessor line and a successor line. Its hypothetical unique self-block extends over a two-dimensional first-order base of simultaneous rank-two deformations. Three scalar equations suffice to close two moving boundaries between fixed endpoints, giving a nonconstant infinitesimal loop and exponential growth."
+    "scope": "With no surface projection, each forward branch center gives a unique finite chain of birational rational curves ending at a backward branch center, bijectively in a four-period window. Every successor on its birth line has that center as unique predecessor. The Pluecker degrees give exact zeroth and first moment identities for forward and backward defects; in particular any branching forces a periodic point sequence passing through a forward center."
   },
   "checks": [
     {
-      "command": "python computations/verify_two_sided_center_deformations.py",
+      "command": "python computations/verify_branch_corridor_degree.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze one-sided isolated centers through their rational normal successors and the finite point strata beyond the existing symmetry tests."
+    "Analyze periodic point sequences with one-sided branching and their tangent and homological obstructions; complete the unresolved finite point strata and orbit structure."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 523,
+      "nc-p3": 524,
       "plan_ja": 11,
       "notes_ja": 22
     },

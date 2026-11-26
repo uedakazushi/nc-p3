@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-26",
-  "version": 293,
+  "version": 294,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -3075,6 +3075,15 @@
       "verification": [
         "computations/verify_two_sided_center_deformations.py"
       ]
+    },
+    {
+      "id": "BRANCH-CORRIDOR-DEGREE-CONSERVATION",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "With no surface projection, each forward branch center gives a unique finite chain of birational rational curves ending at a backward branch center, bijectively in a four-period window. Every successor on its birth line has that center as unique predecessor. The Pluecker degrees give exact zeroth and first moment identities for forward and backward defects; in particular any branching forces a periodic point sequence passing through a forward center.",
+      "proof": "sections/finite_branch_corridors.tex",
+      "verification": [
+        "computations/verify_branch_corridor_degree.py"
+      ]
     }
   ],
   "document_paths": {
@@ -3138,7 +3147,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "01ee474c0c72532bfd2fc959ee28e614959e363c",
+  "reviewed_source_commit": "d2af5cd8b15d8ceed1fa69f3442d4a05beeb77c6",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -3147,14 +3156,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Analyze one-sided isolated centers through their rational normal successors and the finite point strata beyond the existing symmetry tests.",
+    "immediate_next_action": "Analyze periodic point sequences with one-sided branching and their tangent and homological obstructions; complete the unresolved finite point strata and orbit structure.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/exclude_two_sided_centers.tex",
-      "sections/isolated_branch_blocks.tex"
+      "sections/finite_branch_corridors.tex",
+      "sections/exclude_two_sided_centers.tex"
     ],
     "known_obstruction": "General windows can lack a recognized symmetry or Ore mark. All-degree AS membership is open for such candidates, including finite locally planar cases.",
-    "state_of_claim": "A point can never have both a predecessor line and a successor line. Its hypothetical unique self-block extends over a two-dimensional first-order base of simultaneous rank-two deformations. Three scalar equations suffice to close two moving boundaries between fixed endpoints, giving a nonconstant infinitesimal loop and exponential growth. Full classification remains open.",
+    "state_of_claim": "With no surface projection, each forward branch center gives a unique finite chain of birational rational curves ending at a backward branch center, bijectively in a four-period window. Every successor on its birth line has that center as unique predecessor. The Pluecker degrees give exact zeroth and first moment identities for forward and backward defects; in particular any branching forces a periodic point sequence passing through a forward center. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
