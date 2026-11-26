@@ -1,21 +1,21 @@
 {
   "schema_version": 2,
-  "version": 272,
+  "version": 273,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "5b1f44615f52a88cfcd71b3bc7b99a03fcc9b505"
+    "source_commit": "129be9c89f418d2ef03c9a7492cc023d492e3da7"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every compatible plane cubic subscheme in a one-dimensional point-fiber graph, including nonreduced cubics or embedded intersections, forces a regular normal linear parameter. The entire window is a period-one central PBW lift of its ternary AS quotient. The two adjacent conormal presentations detect any failure of normality without smoothness or isolation."
+    "scope": "The split and nonsplit double twisted cubics are impossible. For the nonsplit ribbon the Picard recurrence forces an ordinary unipotent shift and exact cyclic chart elimination contradicts embedding. No union of a twisted cubic and an integral quartic can be septic. All septic point graphs now have finite AS/isomorphism atlases; the only residual sextic support without established marks is two twisted cubics meeting in length four."
   },
   "checks": [
     {
-      "command": "python computations/verify_plane_cubic_mark_normality.py",
+      "command": "python computations/verify_double_twisted_cubic.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_elliptic_quintic_koszul.py",
+      "command": "python computations/verify_reducible_septic_coverage.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Classify a pure double twisted cubic via its split or canonical ribbon, the polarization recurrence and cyclic tensor constraints. Then treat two twisted cubics, twisted cubic plus spatial quartic, and rational cubic hulls with embedded points; continue the general finite and positive-fiber regimes."
+    "Study a length-four intersection of two twisted cubics: separate the hyperelliptic matching from the canonical conic pair, use opposite rank divisors and trisecants, and analyze the surviving component permutations. Also address rational cubic hulls with embedded defects, general finite windows and positive fibers."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 480,
+      "nc-p3": 483,
       "plan_ja": 10,
       "notes_ja": 21
     },

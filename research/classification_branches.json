@@ -702,6 +702,13 @@
       "current_result": "Every compatible plane cubic subscheme in a one-dimensional point-fiber graph, including nonreduced cubics or embedded intersections, forces a regular normal linear parameter. The entire window is a period-one central PBW lift of its ternary AS quotient. The two adjacent conormal presentations detect any failure of normality without smoothness or isolation.",
       "current_proof": "sections/plane_cubic_mark_normality.tex",
       "global_coverage": false
+    },
+    {
+      "id": "DOUBLE-CUBIC-EXCLUSION-AND-ALL-SEPTICS",
+      "current_result": "The split and nonsplit double twisted cubics are impossible. For the nonsplit ribbon the Picard recurrence forces an ordinary unipotent shift and exact cyclic chart elimination contradicts embedding. No union of a twisted cubic and an integral quartic can be septic. All septic point graphs now have finite AS/isomorphism atlases; the only residual sextic support without established marks is two twisted cubics meeting in length four.",
+      "current_proof": "sections/double_twisted_cubic_exclusion.tex",
+      "global_coverage": false,
+      "additional_proof": "sections/reducible_septic_coverage.tex"
     }
   ],
   "presentation_components": {
@@ -759,7 +766,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 272,
+  "version": 273,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
