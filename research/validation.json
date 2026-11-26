@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 337,
+  "version": 338,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "76e8920d2c0cdf7e7c6b15a85bee240be5d804e9"
+    "source_commit": "bfef6975bee18ed19bf17ecfb33bc9caca3f3e9a"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For a finite window of full middle support with eighteen simple points and one double point, opposite rank ten forces an opposite symmetry and rank eleven is impossible. Weighted residual pencils exclude rulings; a conic with an embedded tangent cannot supply twelve distinct pencils, while two detached nodes give symmetry even over dual numbers. For a reduced six-node section the thirteen edge stresses force coincidence at the unique double point. Re-marking there combines nine simple marks in one parity into a common four-space."
+    "scope": "At a simple five-space mark of any curvilinear finite graph with full middle support, projected evaluation valuations exclude every ruling. Six reduced nodes force a secant collision at a nonsimple graph point, and a conic with two detached reduced nodes forces symmetry. For seventeen simple points and one curvilinear triple point, opposite rank ten forces symmetry and rank eleven is impossible."
   },
   "checks": [
     {
-      "command": "python computations/verify_one_double_secant_bounds.py",
+      "command": "python computations/verify_curvilinear_pencils.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Extend the weighted five-space argument to two double points or one triple point, distinguishing the incidence at coincident secants and the length-four chart of the new mark. For one-sided rank-ten finite windows pursue the unequal symmetric triples and their commutator discriminant."
+    "Treat the two-double graph. In the five-node degeneration, compare the confluent square relations for the four simple nodes and one dual-number node. For the conic plus an embedded point test whether the two moving pencils at distinct conic secants can simultaneously exhaust the two excess lengths. Analyze the commutator discriminant on the one-sided symmetric rank-ten branch."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 592,
+      "nc-p3": 594,
       "plan_ja": 12,
       "notes_ja": 25
     },

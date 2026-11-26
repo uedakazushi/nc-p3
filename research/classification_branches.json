@@ -1093,6 +1093,12 @@
       "current_result": "For a finite window of full middle support with eighteen simple points and one double point, opposite rank ten forces an opposite symmetry and rank eleven is impossible. Weighted residual pencils exclude rulings; a conic with an embedded tangent cannot supply twelve distinct pencils, while two detached nodes give symmetry even over dual numbers. For a reduced six-node section the thirteen edge stresses force coincidence at the unique double point. Re-marking there combines nine simple marks in one parity into a common four-space.",
       "current_proof": "sections/finite_one_double_five_space.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FINITE-CURVILINEAR-PENCILS",
+      "current_result": "At a simple five-space mark of any curvilinear finite graph with full middle support, projected evaluation valuations exclude every ruling. Six reduced nodes force a secant collision at a nonsimple graph point, and a conic with two detached reduced nodes forces symmetry. For seventeen simple points and one curvilinear triple point, opposite rank ten forces symmetry and rank eleven is impossible.",
+      "current_proof": "sections/finite_curvilinear_pencils.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1150,7 +1156,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 337,
+  "version": 338,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
