@@ -1261,6 +1261,12 @@
       "current_result": "All Klein homogeneous windows with nonzero common diagonal bracket, including every sparse coefficient pattern, are decided. The 293 Boolean supports form 19 cases under axes and rotations. Of the 18 sparse cases two are empty, thirteen have exact rational function field Hilbert obstructions valid also at all specializations, and three are regular at every allowed parameter, with dimensions zero, one and two. Smith character quotients, finite unmarked isomorphism, and periods dividing two complete this chart.",
       "current_proof": "sections/marked_klein_mixed_supports.tex",
       "global_coverage": false
+    },
+    {
+      "id": "MARKED-KLEIN-ZERO-BRACKET-BOUNDARY",
+      "current_result": "For zero diagonal brackets all 47,492 potential Klein supports reduce to 2,038 orbits, and 2,036 have an explicit monomial quotient of exponential growth. The unique surviving sparse orbit has a two-parameter normal form regular at every nonzero pair, including the square-matrix rank drop. Its two normal regular squares, 128 Laurent diamond identities, full graded basis, and linear self-dual resolution give all-degree certification.",
+      "current_proof": "sections/marked_klein_zero_bracket_boundary.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1318,7 +1324,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 365,
+  "version": 366,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

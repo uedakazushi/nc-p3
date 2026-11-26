@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 365,
+  "version": 366,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "e1c18d4f057941b1629b63fb82aeab9aa2bee548"
+    "source_commit": "26aa50e11e0f91f787ad87f1fcbaab9c77637a18"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All Klein homogeneous windows with nonzero common diagonal bracket, including every sparse coefficient pattern, are decided. The 293 Boolean supports form 19 cases under axes and rotations. Of the 18 sparse cases two are empty, thirteen have exact rational function field Hilbert obstructions valid also at all specializations, and three are regular at every allowed parameter, with dimensions zero, one and two. Smith character quotients, finite unmarked isomorphism, and periods dividing two complete this chart."
+    "scope": "For zero diagonal brackets all 47,492 potential Klein supports reduce to 2,038 orbits, and 2,036 have an explicit monomial quotient of exponential growth. The unique surviving sparse orbit has a two-parameter normal form regular at every nonzero pair, including the square-matrix rank drop. Its two normal regular squares, 128 Laurent diamond identities, full graded basis, and linear self-dual resolution give all-degree certification."
   },
   "checks": [
     {
-      "command": "python computations/verify_klein_mixed_supports.py",
+      "command": "python computations/verify_klein_zero_bracket_boundary.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Treat zero common diagonal brackets and wider partially symmetric nets; test which AS windows survive when each matched pair is collinear and the Cartan-frame recovery degenerates."
+    "Resolve the remaining full-support zero-bracket orbit, its Sklyanin and Walsh presentations, then compare unmarked classes of zero-bracket windows and generalize the monomial exclusion to larger branches."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 645,
+      "nc-p3": 647,
       "plan_ja": 14,
       "notes_ja": 26
     },
