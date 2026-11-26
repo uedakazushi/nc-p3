@@ -1231,6 +1231,12 @@
       "current_result": "For triple-line and double-plus-simple-line determinants the only irreducible auxiliary pencils are two explicit one-parameter normal forms. The target parameter is -k/2, and a single adjugate rank test recovers every lift without a scalar-plus-rank-one generator. Compression pairs and the zero-generator quadric recover all other lifts. This completes ordered three-commutator inversion for every non-identically-zero determinant, covering the commutator equation for arbitrary fixed symmetric data on the finite q=3, g>3 branch. Full AS and unmarked classification remain open.",
       "current_proof": "sections/marked_nonreduced_cubic_commutators.tex",
       "global_coverage": false
+    },
+    {
+      "id": "MARKED-MIXED-BRACKET-RECONSTRUCTION",
+      "current_result": "On the generic fifteen-dimensional component with both marked spans six and opposite rank sixteen, the single projective crossed-bracket tensor is a complete marked invariant up to the two adjoint PGL3 actions. Both reconstructions are unique modulo independent inverse scalars by two injective 36-column maps. The induced eight-dimensional operator is invertible with eight distinct spectral lines; two finite ordered multiplication tables give an exact marked and, by enumeration of marks, unmarked indexed isomorphism test throughout this open chart. The p-adic certificate is on the actual smooth component.",
+      "current_proof": "sections/marked_mixed_bracket_reconstruction.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1288,7 +1294,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 360,
+  "version": 361,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

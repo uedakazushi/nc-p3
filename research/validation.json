@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 360,
+  "version": 361,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "916c0560bf2f0b0501be5dc2678bb4fca32f368d"
+    "source_commit": "83f4bb727c4f947ba861271e3562144f63cd85c4"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For triple-line and double-plus-simple-line determinants the only irreducible auxiliary pencils are two explicit one-parameter normal forms. The target parameter is -k/2, and a single adjugate rank test recovers every lift without a scalar-plus-rank-one generator. Compression pairs and the zero-generator quadric recover all other lifts. This completes ordered three-commutator inversion for every non-identically-zero determinant, covering the commutator equation for arbitrary fixed symmetric data on the finite q=3, g>3 branch. Full AS and unmarked classification remain open."
+    "scope": "On the generic fifteen-dimensional component with both marked spans six and opposite rank sixteen, the single projective crossed-bracket tensor is a complete marked invariant up to the two adjoint PGL3 actions. Both reconstructions are unique modulo independent inverse scalars by two injective 36-column maps. The induced eight-dimensional operator is invertible with eight distinct spectral lines; two finite ordered multiplication tables give an exact marked and, by enumeration of marks, unmarked indexed isomorphism test throughout this open chart. The p-adic certificate is on the actual smooth component."
   },
   "checks": [
     {
-      "command": "python computations/verify_nonreduced_commutators.py",
+      "command": "python computations/verify_mixed_bracket_reconstruction.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Turn to the general marked branch with q,g>3. Use the linear trace identities of prescribed mixed brackets [Q_i,P_j] to compress the inverse to two linear spaces and a rank-one tensor in their product. Test injectivity on actual high-opposite-rank regular seeds and at generic moment-zero representatives."
+    "Use the eight spectral lines and finite marked comparison to identify generic projective automorphisms, re-marking correspondences and periods on this high-rank chart. Then split the noninjective or repeated-spectrum boundary and seek all-degree regularity certificates beyond geometric generic points."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 636,
+      "nc-p3": 638,
       "plan_ja": 14,
       "notes_ja": 26
     },
