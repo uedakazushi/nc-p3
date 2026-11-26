@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 279,
+  "version": 280,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "1f566f6cf64a3f68c6ec8c83ab592b63f83c93a3"
+    "source_commit": "6487b85e6360f67cb0d0cea39960415600461308"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For every finite point window of opposite rank eight with at least one simple local component, a middle support of dimension three certifies regularity; otherwise the two opposite pairs are simultaneously symmetrizable and the existing bisymmetric finite all-degree test is necessary and sufficient. The proof includes dependent commutators, nondiagonalizable commuting planes, and both skew alternatives."
+    "scope": "Every finite rank-nine window with a simple local component and four-dimensional middle supports has at least one symmetric opposite pair. An irreducible four-plane in sl3 has at least three independent commutators. A rank-at-most-two generator of the remaining symmetric quadratic kernel certifies regularity. The open cases in this stratum reduce to rank-three or rank-four symmetric kernels."
   },
   "checks": [
     {
-      "command": "python computations/verify_rank_eight_finite_symmetry.py",
+      "command": "python computations/verify_rank_nine_finite_symmetry.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Extend rank-eight coverage to finite point schemes without a simple local factor, and analyze higher opposite ranks and positive-dimensional projection fibers; global components and specializations are still open."
+    "Analyze the two binary factors of a rank-four symmetric kernel and the degenerate rank-three case. Also treat finite graphs with no simple component, higher opposite ranks, positive-dimensional fibers and global specializations."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 497,
+      "nc-p3": 498,
       "plan_ja": 11,
       "notes_ja": 21
     },
