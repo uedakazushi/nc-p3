@@ -1183,6 +1183,12 @@
       "current_result": "For a smooth plane cubic in a fixed trace metric the exact obstruction to a finite independent-bracket mixed seed is membership of the inverse metric in one of the three other square-root Veronese surfaces of the elliptic normal sextic. Outside the exception a two-dimensional family of apolar reduced frames yields an eight-dimensional indexed-class image of finite rank-ten geometric-generic AS windows with that precise cubic. Inside the exception every apolar length-four divisor contains a length-three divisor giving a commuting plane, even with nonreduced support. A smooth exceptional cubic with nonsingular metric is computed explicitly.",
       "current_proof": "sections/marked_fixed_metric_elliptic.tex",
       "global_coverage": false
+    },
+    {
+      "id": "MARKED-COMMUTING-PLANE-FIBERS",
+      "current_result": "For an irreducible symmetric first net with dependent self-brackets, every smooth prescribed cubic through its harmonic base has a complete rational conic of complementary symmetric planes. Its open nonzero fibers omit two distinct points or a single double boundary, depending on whether the residual point is detached from or attached to the apolar commuting triple. Together with the elliptic quintic for independent self-brackets, this handles the complementary-plane step for every irreducible first net over smooth cubics, including the fixed-metric exceptions.",
+      "current_proof": "sections/marked_commuting_plane_fibers.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1240,7 +1246,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 352,
+  "version": 353,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 352,
+  "version": 353,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "d9db56cd8a16f84327842df6152d999133eafb39"
+    "source_commit": "9d92b0736ee1d41336ca771c1c6a3b26f17ed68b"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For a smooth plane cubic in a fixed trace metric the exact obstruction to a finite independent-bracket mixed seed is membership of the inverse metric in one of the three other square-root Veronese surfaces of the elliptic normal sextic. Outside the exception a two-dimensional family of apolar reduced frames yields an eight-dimensional indexed-class image of finite rank-ten geometric-generic AS windows with that precise cubic. Inside the exception every apolar length-four divisor contains a length-three divisor giving a commuting plane, even with nonreduced support. A smooth exceptional cubic with nonsingular metric is computed explicitly."
+    "scope": "For an irreducible symmetric first net with dependent self-brackets, every smooth prescribed cubic through its harmonic base has a complete rational conic of complementary symmetric planes. Its open nonzero fibers omit two distinct points or a single double boundary, depending on whether the residual point is detached from or attached to the apolar commuting triple. Together with the elliptic quintic for independent self-brackets, this handles the complementary-plane step for every irreducible first net over smooth cubics, including the fixed-metric exceptions."
   },
   "checks": [
     {
-      "command": "python computations/verify_fixed_metric_elliptic_exception.py",
+      "command": "python computations/verify_commuting_plane_fibers.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Resolve exceptional smooth cubics via their apolar triples: normalize a reduced orthogonal triangle, determine all possible complementary symmetric planes when the first net contains a Cartan plane, and study the remaining inverse-commutator and all-degree regularity conditions."
+    "Recover all skew-commutator triples with a smooth prescribed determinant by linear symmetrizers and determinantal representations of the cubic. Determine how to match their ordered target matrices back to the symmetric planes and finally test the all-degree conditions on the resulting fibers."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 620,
+      "nc-p3": 621,
       "plan_ja": 13,
       "notes_ja": 26
     },
