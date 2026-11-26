@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 315,
+  "version": 316,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "58bfb5098195cfb285fa51bb485fbb5051cbf6d6"
+    "source_commit": "dc034943e913648c393913b31d770fae1c087171"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every length-four rank-one common slice at a mark of tangent dimension at most one forces symmetry on its kernel-coordinate parity, for all length-four Gorenstein Artin types. Hence at opposite rank eight a finite window with such a mark either has an all-degree regular ternary contraction or is at least one-sided symmetric. The existing one-sided symmetric criterion therefore decides all-degree regularity throughout this stratum."
+    "scope": "At opposite rank eight all-degree regularity is decidable for finite Frobenius windows with a planar mark whose maximal ideal has principal square. Thus the untested finite stratum has at most three closed points, each a nonstretched planar Gorenstein local ring of length at least six. The proof handles both types of length-three slices and all length-four slices at the mark."
   },
   "checks": [
     {
-      "command": "python computations/verify_finite_artin_kernel_symmetry.py",
+      "command": "python computations/verify_finite_stretched_planar_marks.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Treat the remaining finite rank-eight windows whose every mark has tangent dimension at least two; continue the higher-rank regularity and branching questions."
+    "Study the remaining finite rank-eight windows on at most three nonstretched planar local factors, using their second fundamental forms, support bounds, and embedded line sections. Work also on the rank-nine branching obstruction."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 555,
+      "nc-p3": 557,
       "plan_ja": 12,
       "notes_ja": 23
     },
