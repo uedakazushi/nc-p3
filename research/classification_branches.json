@@ -817,6 +817,12 @@
       "current_result": "No positive-dimensional family of line fibers occurs in a regular window. Any moving pencil would also move on the other side. Its three-letter block between independent centers gives a (2,2) determinant containing the diagonal. The resulting degree-two flat path schemes, including double diagonals, force exponential growth. This removes all fiber hypotheses from the coverage of windows with a surface projection.",
       "current_proof": "sections/exclude_moving_plane_pencils.tex",
       "global_coverage": false
+    },
+    {
+      "id": "ISOLATED-BRANCH-SELF-BLOCK",
+      "current_result": "At an isolated forward line fiber the reverse rank is two or three. The relations on the successor line form a square or rectangular binary pencil; any nonconstant generic successor is a complete rational normal linear system of degree at most three. Every two-sided center has a unique nonzero four-step self-block and has neighboring exceptional fibers cut out inside its intrinsic plane by binary quadratics.",
+      "current_proof": "sections/isolated_branch_blocks.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -874,7 +880,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 291,
+  "version": 292,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

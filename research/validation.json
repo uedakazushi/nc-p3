@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 291,
+  "version": 292,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "b6a0aa14bca6456dc4b919a484a5aeaa60615aca"
+    "source_commit": "bbaa6085bb64b1cf7b11dbeb7d64c4ea5038c789"
   },
   "generation": {
     "result": "PASS",
-    "scope": "No positive-dimensional family of line fibers occurs in a regular window. Any moving pencil would also move on the other side. Its three-letter block between independent centers gives a (2,2) determinant containing the diagonal. The resulting degree-two flat path schemes, including double diagonals, force exponential growth. This removes all fiber hypotheses from the coverage of windows with a surface projection."
+    "scope": "At an isolated forward line fiber the reverse rank is two or three. The relations on the successor line form a square or rectangular binary pencil; any nonconstant generic successor is a complete rational normal linear system of degree at most three. Every two-sided center has a unique nonzero four-step self-block and has neighboring exceptional fibers cut out inside its intrinsic plane by binary quadratics."
   },
   "checks": [
     {
-      "command": "python computations/verify_moving_pencil_growth.py",
+      "command": "python computations/verify_isolated_branch_blocks.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Treat isolated exceptional line fibers over curves, finite windows outside the classified charts and cross-branch periods and specializations."
+    "Follow isolated centers through rational normal successors and through the paired binary critical loci; decide the remaining finite point branches and the global orbit structure."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 521,
+      "nc-p3": 522,
       "plan_ja": 11,
       "notes_ja": 22
     },
