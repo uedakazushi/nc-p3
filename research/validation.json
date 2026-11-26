@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 299,
+  "version": 300,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "a31b46534e647d5078db0a81c512f278ed82a65b"
+    "source_commit": "c9303f1397cc3fbf1161fc36a13dee51858236c8"
   },
   "generation": {
     "result": "PASS",
-    "scope": "At a simple finite mark with full middle supports and common triple of cross-bracket rank two, the two commutators admit an invertible pencil member. A Sylvester equation reconstructs the common triple in terms of the pencil and three scalar parameters, subject to cyclicity and a trace condition."
+    "scope": "When both marked spans have dimension four at a simple finite point with full middle supports, the common bracket rank is four or five. Both pairs admit simultaneous rank-one differences. At rank five each span has one commuting plane, and at rank four these planes form a pencil through a matrix of rank one modulo scalars."
   },
   "checks": [
     {
-      "command": "python computations/verify_marked_two_commutators.py",
+      "command": "python computations/verify_paired_marked_four_planes.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze pairs of four-dimensional marked spans, the remaining one-sided-symmetry cases, and branching and non-simple finite windows."
+    "Use the simultaneous rank-one differences and the two commuting pencils to determine the surviving four-plane pairs; continue the non-simple and branching windows and single-symmetry AS tests."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 532,
+      "nc-p3": 533,
       "plan_ja": 12,
       "notes_ja": 22
     },

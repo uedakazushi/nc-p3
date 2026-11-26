@@ -2,7 +2,7 @@
 
 **共同研究：** 本リポジトリは大川新之介・植田一石の共同研究プロジェクトです。この表示は個々の論文の著者を確定するものではありません。
 
-**2026-11-26 / v299。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-26 / v300。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -167,6 +167,8 @@ Walsh三次元族を含む十五次元成分と、そこから出る周期2の�
 単純な有限点で一組の交換子三平面が一致すれば、反対階数の上限を仮定せず片側対称となる。[共通三平面の対称性](sections/marked_common_triple_symmetry.tex)
 
 交換子が二つの共通三平面では可逆な束の元が存在し、Sylvester方程式から三平面を復元できる。[二交換子束の復元](sections/marked_two_commutators.tex)
+
+両側の印付き線形包が四次元なら交換子階数は4か5で、両側で二つの三列の差を同時に階数1にできる。[四平面対](sections/paired_marked_four_planes.tex)
 
 非恒等の平面グラフを基底に持つOre窓では、指定点を忘れた同型類も決定した。[正規形と平坦特殊化](sections/plane_graph_ore_windows.tex)・[検算](computations/verify_plane_graph_ore.py)
 

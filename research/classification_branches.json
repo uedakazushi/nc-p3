@@ -865,6 +865,12 @@
       "current_result": "At a simple finite mark with full middle supports and common triple of cross-bracket rank two, the two commutators admit an invertible pencil member. A Sylvester equation reconstructs the common triple in terms of the pencil and three scalar parameters, subject to cyclicity and a trace condition.",
       "current_proof": "sections/marked_two_commutators.tex",
       "global_coverage": false
+    },
+    {
+      "id": "PAIRED-MARKED-FOUR-PLANE-RANK-ONE-DIFFERENCES",
+      "current_result": "When both marked spans have dimension four at a simple finite point with full middle supports, the common bracket rank is four or five. Both pairs admit simultaneous rank-one differences. At rank five each span has one commuting plane, and at rank four these planes form a pencil through a matrix of rank one modulo scalars.",
+      "current_proof": "sections/paired_marked_four_planes.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -922,7 +928,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 299,
+  "version": 300,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
