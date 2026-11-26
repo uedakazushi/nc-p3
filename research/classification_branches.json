@@ -1237,6 +1237,12 @@
       "current_result": "On the generic fifteen-dimensional component with both marked spans six and opposite rank sixteen, the single projective crossed-bracket tensor is a complete marked invariant up to the two adjoint PGL3 actions. Both reconstructions are unique modulo independent inverse scalars by two injective 36-column maps. The induced eight-dimensional operator is invertible with eight distinct spectral lines; two finite ordered multiplication tables give an exact marked and, by enumeration of marks, unmarked indexed isomorphism test throughout this open chart. The p-adic certificate is on the actual smooth component.",
       "current_proof": "sections/marked_mixed_bracket_reconstruction.tex",
       "global_coverage": false
+    },
+    {
+      "id": "MARKED-TWENTY-RATIONAL-INVARIANTS",
+      "current_result": "All twenty generic marks on the fifteen-dimensional component admit rational mixed-bracket reconstruction and are separated, with all four starts, by two explicit covariants. Two nine-word bases give root-free complete marked invariants, and interpolation over a degree-twenty finite etale algebra gives complete rational unmarked invariants on the open chart. There the projective automorphism group is trivial and the minimum period is four. Every lift in a specified 1009-adic congruence ball is all-degree AS by good reduction, with a fifteen-parameter analytic slice of pairwise nonisomorphic windows and Zariski-dense algebraic regular realizations.",
+      "current_proof": "sections/marked_twenty_rational_invariants.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1294,7 +1300,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 361,
+  "version": 362,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

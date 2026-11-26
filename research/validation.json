@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 361,
+  "version": 362,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "83f4bb727c4f947ba861271e3562144f63cd85c4"
+    "source_commit": "78c210c0897ed528d3bd3a313790e23611c521e6"
   },
   "generation": {
     "result": "PASS",
-    "scope": "On the generic fifteen-dimensional component with both marked spans six and opposite rank sixteen, the single projective crossed-bracket tensor is a complete marked invariant up to the two adjoint PGL3 actions. Both reconstructions are unique modulo independent inverse scalars by two injective 36-column maps. The induced eight-dimensional operator is invertible with eight distinct spectral lines; two finite ordered multiplication tables give an exact marked and, by enumeration of marks, unmarked indexed isomorphism test throughout this open chart. The p-adic certificate is on the actual smooth component."
+    "scope": "All twenty generic marks on the fifteen-dimensional component admit rational mixed-bracket reconstruction and are separated, with all four starts, by two explicit covariants. Two nine-word bases give root-free complete marked invariants, and interpolation over a degree-twenty finite etale algebra gives complete rational unmarked invariants on the open chart. There the projective automorphism group is trivial and the minimum period is four. Every lift in a specified 1009-adic congruence ball is all-degree AS by good reduction, with a fifteen-parameter analytic slice of pairwise nonisomorphic windows and Zariski-dense algebraic regular realizations."
   },
   "checks": [
     {
-      "command": "python computations/verify_mixed_bracket_reconstruction.py",
+      "command": "python computations/verify_twenty_mixed_bracket_invariants.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Use the eight spectral lines and finite marked comparison to identify generic projective automorphisms, re-marking correspondences and periods on this high-rank chart. Then split the noninjective or repeated-spectrum boundary and seek all-degree regularity certificates beyond geometric generic points."
+    "Study the boundary of the high-rank marked reconstruction where the trace or product ranks drop. Start at the transverse mixed curve and its period-two involution. Determine the actual mixed bracket fibers there via reversal and its positive-dimensional linear kernels, then relate to remaining all-degree and unmarked coverage problems."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 638,
+      "nc-p3": 639,
       "plan_ja": 14,
       "notes_ja": 26
     },

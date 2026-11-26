@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-26",
-  "version": 361,
+  "version": 362,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -3687,6 +3687,15 @@
       "verification": [
         "computations/verify_mixed_bracket_reconstruction.py"
       ]
+    },
+    {
+      "id": "MARKED-TWENTY-RATIONAL-INVARIANTS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "All twenty generic marks on the fifteen-dimensional component admit rational mixed-bracket reconstruction and are separated, with all four starts, by two explicit covariants. Two nine-word bases give root-free complete marked invariants, and interpolation over a degree-twenty finite etale algebra gives complete rational unmarked invariants on the open chart. There the projective automorphism group is trivial and the minimum period is four. Every lift in a specified 1009-adic congruence ball is all-degree AS by good reduction, with a fifteen-parameter analytic slice of pairwise nonisomorphic windows and Zariski-dense algebraic regular realizations.",
+      "proof": "sections/marked_twenty_rational_invariants.tex",
+      "verification": [
+        "computations/verify_twenty_mixed_bracket_invariants.py"
+      ]
     }
   ],
   "document_paths": {
@@ -3750,7 +3759,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "83f4bb727c4f947ba861271e3562144f63cd85c4",
+  "reviewed_source_commit": "78c210c0897ed528d3bd3a313790e23611c521e6",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -3759,14 +3768,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Use the eight spectral lines and finite marked comparison to identify generic projective automorphisms, re-marking correspondences and periods on this high-rank chart. Then split the noninjective or repeated-spectrum boundary and seek all-degree regularity certificates beyond geometric generic points.",
+    "immediate_next_action": "Study the boundary of the high-rank marked reconstruction where the trace or product ranks drop. Start at the transverse mixed curve and its period-two involution. Determine the actual mixed bracket fibers there via reversal and its positive-dimensional linear kernels, then relate to remaining all-degree and unmarked coverage problems.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/marked_mixed_bracket_reconstruction.tex",
-      "sections/marked_nonreduced_cubic_commutators.tex"
+      "sections/marked_twenty_rational_invariants.tex",
+      "sections/marked_mixed_bracket_reconstruction.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "On the generic fifteen-dimensional component with both marked spans six and opposite rank sixteen, the single projective crossed-bracket tensor is a complete marked invariant up to the two adjoint PGL3 actions. Both reconstructions are unique modulo independent inverse scalars by two injective 36-column maps. The induced eight-dimensional operator is invertible with eight distinct spectral lines; two finite ordered multiplication tables give an exact marked and, by enumeration of marks, unmarked indexed isomorphism test throughout this open chart. The p-adic certificate is on the actual smooth component. Full classification remains open.",
+    "state_of_claim": "All twenty generic marks on the fifteen-dimensional component admit rational mixed-bracket reconstruction and are separated, with all four starts, by two explicit covariants. Two nine-word bases give root-free complete marked invariants, and interpolation over a degree-twenty finite etale algebra gives complete rational unmarked invariants on the open chart. There the projective automorphism group is trivial and the minimum period is four. Every lift in a specified 1009-adic congruence ball is all-degree AS by good reduction, with a fifteen-parameter analytic slice of pairwise nonisomorphic windows and Zariski-dense algebraic regular realizations. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
