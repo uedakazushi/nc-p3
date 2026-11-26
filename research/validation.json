@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 296,
+  "version": 297,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "4b65c792a1f67b9acc0d6af3016ef85e2ba32a74"
+    "source_commit": "e29a3df8e8a1a4ef5c759d99312f95eccb869e1d"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Exclude every exceptional line fiber in surface-free regular windows of opposite rank six or seven. At seven, opposite binary kernels would pair each forward center to a backward center by a conic of pure relations. The ensuing twisted cubic has a successor simultaneously contained in a plane and a quadric cone, contradicting the reversed degree. This covers all regular windows through opposite rank seven. A pure-free branching window must have opposite rank at least nine and a full L3 pencil."
+    "scope": "Two moving lines between fixed centers force a nondegenerate ternary tensor on restriction and an opposite-rank lower bound 6+a+b-r. Without pure relations the bound is twelve, each center confines other successors to a canonical twisted cubic, and there are at most two centers per position. The two critical divisors of a two-line chain are secant or tangent intersections with those cubics."
   },
   "checks": [
     {
-      "command": "python computations/verify_low_rank_branch_exclusion.py",
+      "command": "python computations/verify_two_line_branch_blocks.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Address branching at rank eight with pure relations, higher-rank one-sided centers, finite point graphs without the established marks and global component and period data."
+    "Use the forced conic of pure relations at rank eight and the critical pair geometry of longer rational chains to decide the remaining branching and finite point strata."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 527,
+      "nc-p3": 529,
       "plan_ja": 11,
       "notes_ja": 22
     },

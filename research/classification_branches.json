@@ -847,6 +847,12 @@
       "current_result": "Exclude every exceptional line fiber in surface-free regular windows of opposite rank six or seven. At seven, opposite binary kernels would pair each forward center to a backward center by a conic of pure relations. The ensuing twisted cubic has a successor simultaneously contained in a plane and a quadric cone, contradicting the reversed degree. This covers all regular windows through opposite rank seven. A pure-free branching window must have opposite rank at least nine and a full L3 pencil.",
       "current_proof": "sections/low_rank_branch_exclusion.tex",
       "global_coverage": false
+    },
+    {
+      "id": "TWO-LINE-OPPOSITE-CUT-AND-SECANT",
+      "current_result": "Two moving lines between fixed centers force a nondegenerate ternary tensor on restriction and an opposite-rank lower bound 6+a+b-r. Without pure relations the bound is twelve, each center confines other successors to a canonical twisted cubic, and there are at most two centers per position. The two critical divisors of a two-line chain are secant or tangent intersections with those cubics.",
+      "current_proof": "sections/two_line_branch_blocks.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -904,7 +910,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 296,
+  "version": 297,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
