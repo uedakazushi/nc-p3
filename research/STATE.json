@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-26",
-  "version": 328,
+  "version": 329,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -3390,6 +3390,15 @@
       "verification": [
         "computations/verify_five_space_secant_stresses.py"
       ]
+    },
+    {
+      "id": "FINITE-FIVE-SPACE-CONIC-SYMMETRY",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "For a reduced twenty-point finite window with full middle support, different marked four-spaces spanning a five-space force an opposite symmetry. A ruling cannot supply thirteen common-kernel pencils. For a plane conic the off-plane rank-one points and transverse contacts are controlled by one binary quadric. Projecting from its at most two distinguished points gives three independent opposite words supported on at most two points. The identically zero quadric yields a second conic or a symmetric matrix space. Consequently reduced finite rank ten has an opposite symmetry and reduced finite rank eleven is impossible under full middle support.",
+      "proof": "sections/finite_five_space_rank_one_curves.tex",
+      "verification": [
+        "computations/verify_five_space_conic_quotients.py"
+      ]
     }
   ],
   "document_paths": {
@@ -3453,7 +3462,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "f91a9edc10f276fbb9a380d57d69087b2cc1324a",
+  "reviewed_source_commit": "0a417c56a9725191c426dfb002ef570614631819",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -3462,15 +3471,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Classify the remaining positive-dimensional Segre sections in a marked five-space, starting with ruling lines and plane conics with isolated nodes; bound available secants from their two projected kernels. Test the analogous secant incidence with nonreduced marks, and pursue four-dimensional branching-center pencils at rank ten.",
+    "immediate_next_action": "Analyze the reduced one-symmetric rank-ten case with unequal symmetric triples (g=4 or 5), using eigenlines and opposite square interpolation. Extend the five-space theorem beyond reduced twenty-point graphs; continue rank-ten four-support branching pencils.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/finite_marked_five_space_secants.tex",
-      "sections/finite_marked_ruling_pencil.tex",
-      "sections/rank_nine_branch_exclusion.tex"
+      "sections/finite_five_space_rank_one_curves.tex",
+      "sections/finite_marked_five_space_secants.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "For any full-middle-support reduced finite twenty-point graph, two different marked four-spaces spanning a five-space force its Segre intersection to be positive-dimensional. A finite six-point intersection would have to supply at least thirteen secants. The square-coordinate dependency codes on those labeled secants recover the two hyperplanes up to a change on the missing edges, contradicting the distinct intersections even with two omitted pairs. A single quartic slice at a curvilinear mark already forces kernel-side symmetry without a common slice. Hence a spanning integral rank-one curve in the five-space forces symmetry. Full classification remains open.",
+    "state_of_claim": "For a reduced twenty-point finite window with full middle support, different marked four-spaces spanning a five-space force an opposite symmetry. A ruling cannot supply thirteen common-kernel pencils. For a plane conic the off-plane rank-one points and transverse contacts are controlled by one binary quadric. Projecting from its at most two distinguished points gives three independent opposite words supported on at most two points. The identically zero quadric yields a second conic or a symmetric matrix space. Consequently reduced finite rank ten has an opposite symmetry and reduced finite rank eleven is impossible under full middle support. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

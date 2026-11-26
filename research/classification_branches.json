@@ -1039,6 +1039,12 @@
       "current_result": "For any full-middle-support reduced finite twenty-point graph, two different marked four-spaces spanning a five-space force its Segre intersection to be positive-dimensional. A finite six-point intersection would have to supply at least thirteen secants. The square-coordinate dependency codes on those labeled secants recover the two hyperplanes up to a change on the missing edges, contradicting the distinct intersections even with two omitted pairs. A single quartic slice at a curvilinear mark already forces kernel-side symmetry without a common slice. Hence a spanning integral rank-one curve in the five-space forces symmetry.",
       "current_proof": "sections/finite_marked_five_space_secants.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FINITE-FIVE-SPACE-CONIC-SYMMETRY",
+      "current_result": "For a reduced twenty-point finite window with full middle support, different marked four-spaces spanning a five-space force an opposite symmetry. A ruling cannot supply thirteen common-kernel pencils. For a plane conic the off-plane rank-one points and transverse contacts are controlled by one binary quadric. Projecting from its at most two distinguished points gives three independent opposite words supported on at most two points. The identically zero quadric yields a second conic or a symmetric matrix space. Consequently reduced finite rank ten has an opposite symmetry and reduced finite rank eleven is impossible under full middle support.",
+      "current_proof": "sections/finite_five_space_rank_one_curves.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1096,7 +1102,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 328,
+  "version": 329,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
