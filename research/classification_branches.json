@@ -1171,6 +1171,12 @@
       "current_result": "For every cubic through the harmonic pencil base of any finite mixed seed with independent brackets, a geometric-generic all-degree AS finite rank-ten deformation realizes that exact projective cubic. Every planar cubic up to projectivity occurs, including every smooth j-invariant. Through the split tetrahedron the class image for each fixed cubic has dimension six, trivial generic projective automorphisms and generic minimum period four. For a smooth such cubic E the full scheme of complementary three-planes with determinant proportional to its equation is the elliptic normal quintic Pic^2(E), with exactly five specified zero-determinant planes.",
       "current_proof": "sections/marked_cubic_linear_system.tex",
       "global_coverage": false
+    },
+    {
+      "id": "MARKED-COMPANION-PLANE-RECONSTRUCTION",
+      "current_result": "For every irreducible symmetric three-plane with independent self-brackets, all complementary three-planes of each prescribed cubic are reconstructed by two scalar equations and linear algebra, including singular/reducible cubics and nonreduced harmonic base schemes. The zero center is scheme-theoretically the distinguished plane plus that length-four base. Every smooth prescribed cubic, even through nonreduced base, is itself the complete elliptic quintic of possible planes.",
+      "current_proof": "sections/marked_companion_plane_reconstruction.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1228,7 +1234,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 350,
+  "version": 351,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

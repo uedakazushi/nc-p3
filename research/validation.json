@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 350,
+  "version": 351,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "a37fb036fa3275ea75bbc12cd122c028b2d507e5"
+    "source_commit": "d406f3e0d6b6b1964617b3d5c149d0f4de793e64"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For every cubic through the harmonic pencil base of any finite mixed seed with independent brackets, a geometric-generic all-degree AS finite rank-ten deformation realizes that exact projective cubic. Every planar cubic up to projectivity occurs, including every smooth j-invariant. Through the split tetrahedron the class image for each fixed cubic has dimension six, trivial generic projective automorphisms and generic minimum period four. For a smooth such cubic E the full scheme of complementary three-planes with determinant proportional to its equation is the elliptic normal quintic Pic^2(E), with exactly five specified zero-determinant planes."
+    "scope": "For every irreducible symmetric three-plane with independent self-brackets, all complementary three-planes of each prescribed cubic are reconstructed by two scalar equations and linear algebra, including singular/reducible cubics and nonreduced harmonic base schemes. The zero center is scheme-theoretically the distinguished plane plus that length-four base. Every smooth prescribed cubic, even through nonreduced base, is itself the complete elliptic quintic of possible planes."
   },
   "checks": [
     {
-      "command": "python computations/verify_mixed_cubic_pencil.py",
+      "command": "python computations/verify_companion_plane_reconstruction.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "For a fixed trace metric and arbitrary smooth cubic E, characterize which apolar length-four schemes support finite mixed deformations using the degree-six embedding, then analyze ordered bases and inverse-commutator lifts over the elliptic quintic."
+    "Identify the exact four-secant obstruction for a fixed smooth cubic and a fixed metric by analyzing degree-three and degree-four divisors of the elliptic normal sextic. Relate admissible four-point sets to finite mixed Frobenius seeds, before testing the remaining ordered bases and inverse lifts."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 616,
+      "nc-p3": 618,
       "plan_ja": 13,
       "notes_ja": 25
     },

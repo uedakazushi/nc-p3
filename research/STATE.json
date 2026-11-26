@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-26",
-  "version": 350,
+  "version": 351,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -3588,6 +3588,15 @@
       "verification": [
         "computations/verify_mixed_cubic_pencil.py"
       ]
+    },
+    {
+      "id": "MARKED-COMPANION-PLANE-RECONSTRUCTION",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "For every irreducible symmetric three-plane with independent self-brackets, all complementary three-planes of each prescribed cubic are reconstructed by two scalar equations and linear algebra, including singular/reducible cubics and nonreduced harmonic base schemes. The zero center is scheme-theoretically the distinguished plane plus that length-four base. Every smooth prescribed cubic, even through nonreduced base, is itself the complete elliptic quintic of possible planes.",
+      "proof": "sections/marked_companion_plane_reconstruction.tex",
+      "verification": [
+        "computations/verify_companion_plane_reconstruction.py"
+      ]
     }
   ],
   "document_paths": {
@@ -3651,7 +3660,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "a37fb036fa3275ea75bbc12cd122c028b2d507e5",
+  "reviewed_source_commit": "d406f3e0d6b6b1964617b3d5c149d0f4de793e64",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -3660,14 +3669,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "For a fixed trace metric and arbitrary smooth cubic E, characterize which apolar length-four schemes support finite mixed deformations using the degree-six embedding, then analyze ordered bases and inverse-commutator lifts over the elliptic quintic.",
+    "immediate_next_action": "Identify the exact four-secant obstruction for a fixed smooth cubic and a fixed metric by analyzing degree-three and degree-four divisors of the elliptic normal sextic. Relate admissible four-point sets to finite mixed Frobenius seeds, before testing the remaining ordered bases and inverse lifts.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/marked_cubic_linear_system.tex",
-      "sections/marked_mixed_curve_isomorphisms.tex"
+      "sections/marked_companion_plane_reconstruction.tex",
+      "sections/marked_cubic_linear_system.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "For every cubic through the harmonic pencil base of any finite mixed seed with independent brackets, a geometric-generic all-degree AS finite rank-ten deformation realizes that exact projective cubic. Every planar cubic up to projectivity occurs, including every smooth j-invariant. Through the split tetrahedron the class image for each fixed cubic has dimension six, trivial generic projective automorphisms and generic minimum period four. For a smooth such cubic E the full scheme of complementary three-planes with determinant proportional to its equation is the elliptic normal quintic Pic^2(E), with exactly five specified zero-determinant planes. Full classification remains open.",
+    "state_of_claim": "For every irreducible symmetric three-plane with independent self-brackets, all complementary three-planes of each prescribed cubic are reconstructed by two scalar equations and linear algebra, including singular/reducible cubics and nonreduced harmonic base schemes. The zero center is scheme-theoretically the distinguished plane plus that length-four base. Every smooth prescribed cubic, even through nonreduced base, is itself the complete elliptic quintic of possible planes. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
