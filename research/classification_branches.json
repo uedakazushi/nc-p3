@@ -1273,6 +1273,12 @@
       "current_result": "All closed points in every support of the homogeneous Klein marked bracket chart now have exact AS decisions, including the full zero-diagonal torus. Its four presentations use two signs and two nonzero spectral coordinates. Opposite signs are AS exactly off xy+x+y=0. Equal signs are always AS by smooth diagonal pencil or reducible pencil and evaluation, with the other case related by cocycle twist. Both equal-sign branches are graded; every regular window in the entire homogeneous marked chart has period dividing two.",
       "current_proof": "sections/marked_klein_zero_bracket_torus.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SQUAREFREE-WINDOW-COVERAGE",
+      "current_result": "Squarefree four-windows with adjacent ranks six are AS exactly when all 24 permutation coefficients survive. All other supports grow exponentially. Every survivor is an ordinary quantum indexed class, recognized without a marked point or opposite rank hypothesis. In the unmarked two-missing-color Klein chart with all permutation entries nonzero, reciprocally present diagonal pairs define a graph. A universal vertex gives the classified marked chart, an intersecting edge family degenerates to a regular quantum window, and only matching, path, and four-cycle supports remain.",
+      "current_proof": "sections/squarefree_window_coverage.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1330,7 +1336,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 367,
+  "version": 368,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

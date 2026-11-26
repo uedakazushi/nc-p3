@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 367,
+  "version": 368,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "4c0b9754e4ededa9403d5c1ff137ee62fdddf8f0"
+    "source_commit": "b90f2223f1fd4700fd867eaf741b9dff0061d547"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All closed points in every support of the homogeneous Klein marked bracket chart now have exact AS decisions, including the full zero-diagonal torus. Its four presentations use two signs and two nonzero spectral coordinates. Opposite signs are AS exactly off xy+x+y=0. Equal signs are always AS by smooth diagonal pencil or reducible pencil and evaluation, with the other case related by cocycle twist. Both equal-sign branches are graded; every regular window in the entire homogeneous marked chart has period dividing two."
+    "scope": "Squarefree four-windows with adjacent ranks six are AS exactly when all 24 permutation coefficients survive. All other supports grow exponentially. Every survivor is an ordinary quantum indexed class, recognized without a marked point or opposite rank hypothesis. In the unmarked two-missing-color Klein chart with all permutation entries nonzero, reciprocally present diagonal pairs define a graph. A universal vertex gives the classified marked chart, an intersecting edge family degenerates to a regular quantum window, and only matching, path, and four-cycle supports remain."
   },
   "checks": [
     {
-      "command": "python computations/verify_klein_zero_bracket_torus.py",
+      "command": "python computations/verify_squarefree_window_coverage.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Extend the marked exponential growth obstruction beyond Klein supports using flags and coordinate-independent free monomial quotients. Determine the geometric cover of windows not meeting these charts, especially high-rank ones without symmetry."
+    "Solve the remaining one- and two-matching block completions on the unmarked Klein chart, including AS and failure of gauge normalization at special parameters. Extend character-free growth tests outside the Klein presentations."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 649,
+      "nc-p3": 650,
       "plan_ja": 14,
       "notes_ja": 26
     },
