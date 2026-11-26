@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 326,
+  "version": 327,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "a983ce89e75de603f24a231966feac9324024ce1"
+    "source_commit": "cc8fe02dfa5e21669b8dfc0e38d028b5e26b50ba"
   },
   "generation": {
     "result": "PASS",
-    "scope": "At opposite rank nine no curve-only branching is possible in a standard regular window, including windows with pure relations. A ternary center forces its second component to be a conic whose plane equation ends a pure relation. A binary center cannot have a forward center in the preceding phase. Ternary centers would then exist in all phases in both directions and force consecutive pure relations. Binary centers alone require adjacent nonplanar cubics, also impossible. This completes finite all-degree regularity and indexed-isomorphism recognition for every window of opposite rank at most nine."
+    "scope": "In any finite-edge standard Frobenius window of full middle support, one planar local complete intersection whose two equations have order at least four forces bisymmetry at every opposite rank, whether or not residual support is present. Off the mark, linkage in two common unit coordinates identifies the same octad. Its net gives a half-turn on the point scheme, trivial on the entire large local factor by characteristic-zero tangent rigidity and hence globally by the support bound on adjacent words. Such windows cannot be regular at opposite rank above eight."
   },
   "checks": [
     {
-      "command": "python computations/verify_rank_nine_ternary_pencils.py",
+      "command": "python computations/verify_finite_high_order_half_turn.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "At rank ten analyze center pairs with residual rank two along adjacent moving components and the finite-point cases with no common marked four-space. Begin with centers of middle support four and their degree-two residual matrix on a cubic successor."
+    "For finite rank ten analyze five-dimensional spans of two marked four-spaces at quadratic or cubic planar marks. On the branching side examine the restricted two-by-four-by-three pencils of four-dimensional centers and the length-four corridor with nonplanar inner curves."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 572,
+      "nc-p3": 573,
       "plan_ja": 12,
       "notes_ja": 24
     },

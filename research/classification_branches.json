@@ -1027,6 +1027,12 @@
       "current_result": "At opposite rank nine no curve-only branching is possible in a standard regular window, including windows with pure relations. A ternary center forces its second component to be a conic whose plane equation ends a pure relation. A binary center cannot have a forward center in the preceding phase. Ternary centers would then exist in all phases in both directions and force consecutive pure relations. Binary centers alone require adjacent nonplanar cubics, also impossible. This completes finite all-degree regularity and indexed-isomorphism recognition for every window of opposite rank at most nine.",
       "current_proof": "sections/rank_nine_branch_exclusion.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FINITE-HIGH-ORDER-HALF-TURN",
+      "current_result": "In any finite-edge standard Frobenius window of full middle support, one planar local complete intersection whose two equations have order at least four forces bisymmetry at every opposite rank, whether or not residual support is present. Off the mark, linkage in two common unit coordinates identifies the same octad. Its net gives a half-turn on the point scheme, trivial on the entire large local factor by characteristic-zero tangent rigidity and hence globally by the support bound on adjacent words. Such windows cannot be regular at opposite rank above eight.",
+      "current_proof": "sections/finite_high_order_half_turn.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1084,7 +1090,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 326,
+  "version": 327,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
