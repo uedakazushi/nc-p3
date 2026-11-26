@@ -683,6 +683,12 @@
       "current_result": "For an arbitrary one-dimensional point-fiber graph with pure hull Y the finite discrepancy has length 18-4d+2p_a(Y). Sextics are always pure of genus three with a (2,2) residual in each projection; quintic hulls have genus one or two. The conormal correction to the fixed length excludes embedded structure on every reduced integral hull of degree at least five, and excludes rational quartic hulls.",
       "current_proof": "sections/pure_curve_finite_defect.tex",
       "global_coverage": false
+    },
+    {
+      "id": "GENUS-ONE-COMPONENTS-AND-PENTAGON",
+      "current_result": "Every connected reduced pure open-and-closed curve in a point-fiber graph has positive arithmetic genus. In genus one it is smooth elliptic or a rational nodal polygon. Five-line polygons are impossible: two opposite contractions of the Frobenius tensor would fix every vertex, whereas the canonical shift is a fixed-point-free rotation. This closes every reduced genus-one quintic hull, leaving only the two smooth elliptic classes.",
+      "current_proof": "sections/genus_one_polygon_exclusion.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -740,7 +746,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 269,
+  "version": 270,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

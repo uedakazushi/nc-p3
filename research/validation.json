@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 269,
+  "version": 270,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "262add244e6b2f6162b2e04e6ad3cf4ba3ff6114"
+    "source_commit": "2d087f4720dc5951dc6151a08b9685e53de3c0a6"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For an arbitrary one-dimensional point-fiber graph with pure hull Y the finite discrepancy has length 18-4d+2p_a(Y). Sextics are always pure of genus three with a (2,2) residual in each projection; quintic hulls have genus one or two. The conormal correction to the fixed length excludes embedded structure on every reduced integral hull of degree at least five, and excludes rational quartic hulls."
+    "scope": "Every connected reduced pure open-and-closed curve in a point-fiber graph has positive arithmetic genus. In genus one it is smooth elliptic or a rational nodal polygon. Five-line polygons are impossible: two opposite contractions of the Frobenius tensor would fix every vertex, whereas the canonical shift is a fixed-point-free rotation. This closes every reduced genus-one quintic hull, leaving only the two smooth elliptic classes."
   },
   "checks": [
     {
-      "command": "python computations/verify_pure_curve_finite_defect.py",
+      "command": "python computations/verify_pentagon_node_ranks.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine the reducible quintic genus-one branch using projective frames and node syzygies, then continue reducible sextics, nonreduced curves and the remaining general AS tests."
+    "Analyze reduced genus-two quintic hulls with length-two discrepancy via their quadric and dualizing pencils, and nonreduced curves, reducible sextics and general AS tests."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 473,
+      "nc-p3": 475,
       "plan_ja": 11,
       "notes_ja": 21
     },

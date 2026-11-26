@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-26",
-  "version": 269,
+  "version": 270,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -2856,6 +2856,15 @@
       "verification": [
         "computations/verify_pure_curve_finite_defect.py"
       ]
+    },
+    {
+      "id": "GENUS-ONE-COMPONENTS-AND-PENTAGON",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "Every connected reduced pure open-and-closed curve in a point-fiber graph has positive arithmetic genus. In genus one it is smooth elliptic or a rational nodal polygon. Five-line polygons are impossible: two opposite contractions of the Frobenius tensor would fix every vertex, whereas the canonical shift is a fixed-point-free rotation. This closes every reduced genus-one quintic hull, leaving only the two smooth elliptic classes.",
+      "proof": "sections/genus_one_polygon_exclusion.tex",
+      "verification": [
+        "computations/verify_pentagon_node_ranks.py"
+      ]
     }
   ],
   "document_paths": {
@@ -2919,7 +2928,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "262add244e6b2f6162b2e04e6ad3cf4ba3ff6114",
+  "reviewed_source_commit": "2d087f4720dc5951dc6151a08b9685e53de3c0a6",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -2928,14 +2937,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Determine the reducible quintic genus-one branch using projective frames and node syzygies, then continue reducible sextics, nonreduced curves and the remaining general AS tests.",
+    "immediate_next_action": "Analyze reduced genus-two quintic hulls with length-two discrepancy via their quadric and dualizing pencils, and nonreduced curves, reducible sextics and general AS tests.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/pure_curve_finite_defect.tex",
-      "sections/integral_sextic_exclusion.tex"
+      "sections/genus_one_polygon_exclusion.tex",
+      "sections/pure_curve_finite_defect.tex"
     ],
     "known_obstruction": "General windows can lack a recognized symmetry or Ore mark. All-degree AS membership is open for such candidates, including finite locally planar cases.",
-    "state_of_claim": "For an arbitrary one-dimensional point-fiber graph with pure hull Y the finite discrepancy has length 18-4d+2p_a(Y). Sextics are always pure of genus three with a (2,2) residual in each projection; quintic hulls have genus one or two. The conormal correction to the fixed length excludes embedded structure on every reduced integral hull of degree at least five, and excludes rational quartic hulls. Full classification remains open.",
+    "state_of_claim": "Every connected reduced pure open-and-closed curve in a point-fiber graph has positive arithmetic genus. In genus one it is smooth elliptic or a rational nodal polygon. Five-line polygons are impossible: two opposite contractions of the Frobenius tensor would fix every vertex, whereas the canonical shift is a fixed-point-free rotation. This closes every reduced genus-one quintic hull, leaving only the two smooth elliptic classes. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
