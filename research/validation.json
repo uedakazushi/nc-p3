@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 282,
+  "version": 283,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "ab18aea19a75cc63d3634836989c30d4d88e7843"
+    "source_commit": "20d85f6f0572bbecce6851bd77168fc7ac45ed54"
   },
   "generation": {
     "result": "PASS",
-    "scope": "A rank-three symmetric kernel on a finite point graph forces either a bisymmetric window or exponential growth. In the full case a rank-two commutator with a cyclic operator determines the symmetric pairing even at repeated eigenvalues. In the deficient case binary septics produce exponentially many independent paths. At opposite rank nine with a simple local point the existence of a ternary middle support is now necessary and sufficient for regularity."
+    "scope": "The mixed skew/symmetric marked chart is classified by a four-dimensional commutative Frobenius algebra with normalized functional and a projective nondegenerate ternary quadratic form. Regularity for all parameters, including nonreduced factors, is equivalent to nonisotropy of every lifted local socle in the matrix factor. Every finite point graph on this chart is regular, of opposite rank ten and minimal period two."
   },
   "checks": [
     {
-      "command": "python computations/verify_cone_kernel_binary_transfer.py",
+      "command": "python computations/verify_mixed_point_frobenius_algebras.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Treat finite graphs without a simple local point, higher opposite ranks, positive-dimensional fibers, and the remaining moduli components and specializations."
+    "Treat unequal marked matrix spans at opposite rank ten and above, finite graphs without a simple local component, positive-dimensional fibers and global components and specializations."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 503,
+      "nc-p3": 506,
       "plan_ja": 11,
       "notes_ja": 21
     },

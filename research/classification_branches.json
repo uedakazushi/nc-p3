@@ -763,6 +763,12 @@
       "current_result": "A rank-three symmetric kernel on a finite point graph forces either a bisymmetric window or exponential growth. In the full case a rank-two commutator with a cyclic operator determines the symmetric pairing even at repeated eigenvalues. In the deficient case binary septics produce exponentially many independent paths. At opposite rank nine with a simple local point the existence of a ternary middle support is now necessary and sufficient for regularity.",
       "current_proof": "sections/cone_kernel_binary_transfer.tex",
       "global_coverage": false
+    },
+    {
+      "id": "MIXED-MARKED-QUARTIC-FROBENIUS-CLASSIFICATION",
+      "current_result": "The mixed skew/symmetric marked chart is classified by a four-dimensional commutative Frobenius algebra with normalized functional and a projective nondegenerate ternary quadratic form. Regularity for all parameters, including nonreduced factors, is equivalent to nonisotropy of every lifted local socle in the matrix factor. Every finite point graph on this chart is regular, of opposite rank ten and minimal period two.",
+      "current_proof": "sections/mixed_point_frobenius_algebras.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -820,7 +826,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 282,
+  "version": 283,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
