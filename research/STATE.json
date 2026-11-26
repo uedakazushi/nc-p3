@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-26",
-  "version": 277,
+  "version": 278,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -2931,6 +2931,15 @@
       "verification": [
         "computations/verify_doubled_binary_pencils.py"
       ]
+    },
+    {
+      "id": "SPLIT-BINARY-CHARTS-AND-ALL-ONE-DIMENSIONAL-GRAPHS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "Finish all reduced split auxiliary binary determinants, including the two-node and tacnodal cases and mixed Moebius transitions. The nodal chart forces a common pair of coordinates and a common involution line of secants; the tacnodal chart forces the singular coordinate to agree everywhere. All one-dimensional point-fiber graphs now have finite all-degree regularity and indexed-isomorphism atlases, including the residual twisted cubic with its nonreduced finite structure.",
+      "proof": "sections/split_binary_pencil_charts.tex",
+      "verification": [
+        "computations/verify_split_binary_pencil_charts.py"
+      ]
     }
   ],
   "document_paths": {
@@ -2994,7 +3003,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "6bb26d5bad942bc946852182f27afd72c821f8db",
+  "reviewed_source_commit": "e3d9392471fb6914b06901dbc9bc1c161b70394d",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -3003,14 +3012,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Analyze reduced pairs with mixed involutive and noninvolutive Moebius transitions beyond the finite compatible-secant certificate. Continue the finite point and higher-fiber branches and the global component/specialization classification.",
+    "immediate_next_action": "Continue the finite twenty-point graph branch at high opposite rank and positive-dimensional projection fibers, then determine global components and specializations. One-dimensional coverage alone is not completion.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/doubled_binary_pencils.tex",
-      "sections/elliptic_binary_cubic_pencils.tex"
+      "sections/split_binary_pencil_charts.tex",
+      "sections/doubled_binary_pencils.tex"
     ],
     "known_obstruction": "General windows can lack a recognized symmetry or Ore mark. All-degree AS membership is open for such candidates, including finite locally planar cases.",
-    "state_of_claim": "All doubled auxiliary (1,1) graphs on the residual twisted cubic are regular. The same holds for two inverse graph components at every position or a component with only involutive/identity transitions. In the entire residual cubic regime the secant schemes on both sides of every edge are isomorphic plane cubics; closed-set iteration decides the existence of a bilateral secant chain in finite time. Full classification remains open.",
+    "state_of_claim": "Finish all reduced split auxiliary binary determinants, including the two-node and tacnodal cases and mixed Moebius transitions. The nodal chart forces a common pair of coordinates and a common involution line of secants; the tacnodal chart forces the singular coordinate to agree everywhere. All one-dimensional point-fiber graphs now have finite all-degree regularity and indexed-isomorphism atlases, including the residual twisted cubic with its nonreduced finite structure. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

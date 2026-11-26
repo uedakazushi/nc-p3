@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 277,
+  "version": 278,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "6bb26d5bad942bc946852182f27afd72c821f8db"
+    "source_commit": "e3d9392471fb6914b06901dbc9bc1c161b70394d"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All doubled auxiliary (1,1) graphs on the residual twisted cubic are regular. The same holds for two inverse graph components at every position or a component with only involutive/identity transitions. In the entire residual cubic regime the secant schemes on both sides of every edge are isomorphic plane cubics; closed-set iteration decides the existence of a bilateral secant chain in finite time."
+    "scope": "Finish all reduced split auxiliary binary determinants, including the two-node and tacnodal cases and mixed Moebius transitions. The nodal chart forces a common pair of coordinates and a common involution line of secants; the tacnodal chart forces the singular coordinate to agree everywhere. All one-dimensional point-fiber graphs now have finite all-degree regularity and indexed-isomorphism atlases, including the residual twisted cubic with its nonreduced finite structure."
   },
   "checks": [
     {
-      "command": "python computations/verify_doubled_binary_pencils.py",
+      "command": "python computations/verify_split_binary_pencil_charts.py",
       "result": "PASS"
     },
     {
@@ -40,13 +40,13 @@
     }
   ],
   "open_mathematics": [
-    "Analyze reduced pairs with mixed involutive and noninvolutive Moebius transitions beyond the finite compatible-secant certificate. Continue the finite point and higher-fiber branches and the global component/specialization classification."
+    "Continue the finite twenty-point graph branch at high opposite rank and positive-dimensional projection fibers, then determine global components and specializations. One-dimensional coverage alone is not completion."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 492,
-      "plan_ja": 10,
+      "nc-p3": 495,
+      "plan_ja": 11,
       "notes_ja": 21
     },
     "scope": "LuaLaTeX built the manuscript, plan and research notes."

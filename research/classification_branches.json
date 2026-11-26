@@ -733,6 +733,12 @@
       "current_result": "All doubled auxiliary (1,1) graphs on the residual twisted cubic are regular. The same holds for two inverse graph components at every position or a component with only involutive/identity transitions. In the entire residual cubic regime the secant schemes on both sides of every edge are isomorphic plane cubics; closed-set iteration decides the existence of a bilateral secant chain in finite time.",
       "current_proof": "sections/doubled_binary_pencils.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SPLIT-BINARY-CHARTS-AND-ALL-ONE-DIMENSIONAL-GRAPHS",
+      "current_result": "Finish all reduced split auxiliary binary determinants, including the two-node and tacnodal cases and mixed Moebius transitions. The nodal chart forces a common pair of coordinates and a common involution line of secants; the tacnodal chart forces the singular coordinate to agree everywhere. All one-dimensional point-fiber graphs now have finite all-degree regularity and indexed-isomorphism atlases, including the residual twisted cubic with its nonreduced finite structure.",
+      "current_proof": "sections/split_binary_pencil_charts.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -790,7 +796,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 277,
+  "version": 278,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
