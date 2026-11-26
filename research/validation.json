@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 319,
+  "version": 320,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "35e914d980ec61645bda33b9a917f893cd33df15"
+    "source_commit": "e3049006cb109edaabd233708d04c9b98dde0f37"
   },
   "generation": {
     "result": "PASS",
-    "scope": "A two-line corridor requires opposite rank at least eleven even in the presence of pure relations. Both endpoint middle supports restrict surjectively to the opposite line, and every moving point on either line has middle support four. At rank eleven only endpoint supports three and a pure endpoint contraction of rank one are possible."
+    "scope": "A plane meets any coordinate of a finite window in length at most seven. At opposite rank eight tangent incidence between two planar points is equivalent on opposite coordinates and cannot go in both directions at one position. In an untested two-support length-four slice the nonsymmetric kernel discrepancy must be supported at the mark itself and has length three curvilinear or length four of type (1,2,1), with a repeated-plane separator there."
   },
   "checks": [
     {
-      "command": "python computations/verify_two_line_full_middle_restriction.py",
+      "command": "python computations/verify_finite_plane_sections.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze longer corridors at opposite ranks nine and ten with pure relations, and the remaining one- and two-support finite planar slices at opposite rank eight."
+    "For two nonstretched planar supports exploit the directed tangent incidence forced by a repeated-plane separator and the plane length bound. For one support resolve the remaining length-three slices; analyze longer pure branching at ranks nine and ten."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 561,
+      "nc-p3": 562,
       "plan_ja": 12,
       "notes_ja": 23
     },

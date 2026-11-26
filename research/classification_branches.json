@@ -985,6 +985,12 @@
       "current_result": "A two-line corridor requires opposite rank at least eleven even in the presence of pure relations. Both endpoint middle supports restrict surjectively to the opposite line, and every moving point on either line has middle support four. At rank eleven only endpoint supports three and a pure endpoint contraction of rank one are possible.",
       "current_proof": "sections/two_line_full_middle_restriction.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FINITE-PLANE-SEVEN-TWO-SUPPORT-TANGENCY",
+      "current_result": "A plane meets any coordinate of a finite window in length at most seven. At opposite rank eight tangent incidence between two planar points is equivalent on opposite coordinates and cannot go in both directions at one position. In an untested two-support length-four slice the nonsymmetric kernel discrepancy must be supported at the mark itself and has length three curvilinear or length four of type (1,2,1), with a repeated-plane separator there.",
+      "current_proof": "sections/finite_plane_sections_and_tangent_incidence.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1042,7 +1048,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 319,
+  "version": 320,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
