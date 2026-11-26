@@ -835,6 +835,12 @@
       "current_result": "With no surface projection, each forward branch center gives a unique finite chain of birational rational curves ending at a backward branch center, bijectively in a four-period window. Every successor on its birth line has that center as unique predecessor. The Pluecker degrees give exact zeroth and first moment identities for forward and backward defects; in particular any branching forces a periodic point sequence passing through a forward center.",
       "current_proof": "sections/finite_branch_corridors.tex",
       "global_coverage": false
+    },
+    {
+      "id": "BOUNDED-BRANCH-PERIOD-NONNOETHERIAN",
+      "current_result": "Any residual branching window with no surface projection has at most twenty forward centers and a branching point orbit of period at most forty in each direction. Both a cyclic right and a cyclic left periodic point module have infinitely generated defining ideals, with exact first Tor dimensions. Within terminal recurrent components all forward defects of the same rational family concentrate at a single unramified parameter.",
+      "current_proof": "sections/periodic_branch_obstruction.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -892,7 +898,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 294,
+  "version": 295,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
