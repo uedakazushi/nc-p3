@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 354,
+  "version": 355,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "4a3ea400b86e27335718216c4d72c2ede372744d"
+    "source_commit": "802ecd251b1f38390fde8439673f427b65a6cb6e"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All ordered traceless triples with smooth commutator determinant are recovered through a six-dimensional linear space over auxiliary determinantal representations of the same cubic. The nonsingular symmetrizer locus is nonempty exactly away from two-torsion, and the class of the actual commutator representation is minus twice the auxiliary class in Pic^0. Thus every smooth target up to independent left and right bases has exactly four auxiliary classes, including the fixed-metric exceptional cubics. Actual bases follow by linear comparisons; special-fiber AS is a separate condition."
+    "scope": "The exact inverse of the three-commutator map on every fixed ordered traceless target with smooth determinant is four symmetric 3x3 adjugate equations. Each admits two, zero or a smooth affine quadric of solutions; at most one of the four can degenerate because the four square-root Veronese surfaces contain the same elliptic normal sextic of rank-one multipliers. Thus the full ordered fibers are eight points, six points, or six isolated points plus a two-dimensional quadric, all realized. In particular the dominant map sl3^3 to sl3^3 has generic degree eight."
   },
   "checks": [
     {
-      "command": "python computations/verify_moore_commutator_doubling.py",
+      "command": "python computations/verify_fixed_commutator_adjugate.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Use the fourfold elliptic inverse and six linear lift coordinates to determine irreducibility, generic regularity, and periods over fixed smooth discriminants including fixed-metric exceptions. For targets with already fixed bases, determine the remaining simultaneous-conjugacy fibers. Extend the symmetrizer method to nodal and cuspidal cubics."
+    "Determine the monodromy of the four auxiliary roots along the complementary-plane elliptic quintic and the rational conic. Use this to separate the fixed-metric exceptional components and transfer all-degree regularity where possible. Extend the reconstruction beyond smooth cubic determinants."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 623,
+      "nc-p3": 625,
       "plan_ja": 13,
       "notes_ja": 26
     },

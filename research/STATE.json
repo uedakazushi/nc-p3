@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-26",
-  "version": 354,
+  "version": 355,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -3624,6 +3624,15 @@
       "verification": [
         "computations/verify_moore_commutator_doubling.py"
       ]
+    },
+    {
+      "id": "MARKED-FIXED-COMMUTATOR-ADJUGATE",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "The exact inverse of the three-commutator map on every fixed ordered traceless target with smooth determinant is four symmetric 3x3 adjugate equations. Each admits two, zero or a smooth affine quadric of solutions; at most one of the four can degenerate because the four square-root Veronese surfaces contain the same elliptic normal sextic of rank-one multipliers. Thus the full ordered fibers are eight points, six points, or six isolated points plus a two-dimensional quadric, all realized. In particular the dominant map sl3^3 to sl3^3 has generic degree eight.",
+      "proof": "sections/marked_fixed_commutator_adjugate.tex",
+      "verification": [
+        "computations/verify_fixed_commutator_adjugate.py"
+      ]
     }
   ],
   "document_paths": {
@@ -3687,7 +3696,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "4a3ea400b86e27335718216c4d72c2ede372744d",
+  "reviewed_source_commit": "802ecd251b1f38390fde8439673f427b65a6cb6e",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -3696,14 +3705,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Use the fourfold elliptic inverse and six linear lift coordinates to determine irreducibility, generic regularity, and periods over fixed smooth discriminants including fixed-metric exceptions. For targets with already fixed bases, determine the remaining simultaneous-conjugacy fibers. Extend the symmetrizer method to nodal and cuspidal cubics.",
+    "immediate_next_action": "Determine the monodromy of the four auxiliary roots along the complementary-plane elliptic quintic and the rational conic. Use this to separate the fixed-metric exceptional components and transfer all-degree regularity where possible. Extend the reconstruction beyond smooth cubic determinants.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/marked_elliptic_commutator_doubling.tex",
-      "sections/marked_commuting_plane_fibers.tex"
+      "sections/marked_fixed_commutator_adjugate.tex",
+      "sections/marked_elliptic_commutator_doubling.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "All ordered traceless triples with smooth commutator determinant are recovered through a six-dimensional linear space over auxiliary determinantal representations of the same cubic. The nonsingular symmetrizer locus is nonempty exactly away from two-torsion, and the class of the actual commutator representation is minus twice the auxiliary class in Pic^0. Thus every smooth target up to independent left and right bases has exactly four auxiliary classes, including the fixed-metric exceptional cubics. Actual bases follow by linear comparisons; special-fiber AS is a separate condition. Full classification remains open.",
+    "state_of_claim": "The exact inverse of the three-commutator map on every fixed ordered traceless target with smooth determinant is four symmetric 3x3 adjugate equations. Each admits two, zero or a smooth affine quadric of solutions; at most one of the four can degenerate because the four square-root Veronese surfaces contain the same elliptic normal sextic of rank-one multipliers. Thus the full ordered fibers are eight points, six points, or six isolated points plus a two-dimensional quadric, all realized. In particular the dominant map sl3^3 to sl3^3 has generic degree eight. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

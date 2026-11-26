@@ -1195,6 +1195,12 @@
       "current_result": "All ordered traceless triples with smooth commutator determinant are recovered through a six-dimensional linear space over auxiliary determinantal representations of the same cubic. The nonsingular symmetrizer locus is nonempty exactly away from two-torsion, and the class of the actual commutator representation is minus twice the auxiliary class in Pic^0. Thus every smooth target up to independent left and right bases has exactly four auxiliary classes, including the fixed-metric exceptional cubics. Actual bases follow by linear comparisons; special-fiber AS is a separate condition.",
       "current_proof": "sections/marked_elliptic_commutator_doubling.tex",
       "global_coverage": false
+    },
+    {
+      "id": "MARKED-FIXED-COMMUTATOR-ADJUGATE",
+      "current_result": "The exact inverse of the three-commutator map on every fixed ordered traceless target with smooth determinant is four symmetric 3x3 adjugate equations. Each admits two, zero or a smooth affine quadric of solutions; at most one of the four can degenerate because the four square-root Veronese surfaces contain the same elliptic normal sextic of rank-one multipliers. Thus the full ordered fibers are eight points, six points, or six isolated points plus a two-dimensional quadric, all realized. In particular the dominant map sl3^3 to sl3^3 has generic degree eight.",
+      "current_proof": "sections/marked_fixed_commutator_adjugate.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1252,7 +1258,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 354,
+  "version": 355,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
