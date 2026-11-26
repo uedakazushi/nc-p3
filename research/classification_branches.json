@@ -1165,6 +1165,12 @@
       "current_result": "The entire transverse AS curve has unmarked indexed parameter x=t^2, excluding precisely -3 and -1/3. Its minimal period is one precisely at x=1 and x=-1, and two elsewhere. Every regular rank-sixteen point except x=1 has projective automorphism group of order 48. The rank-fourteen period-one point is a nonclosed tensor orbit outside all Walsh presentations; its central-generator graded form specializes to the regular rank-twelve quantum window. Trace contractions of the inverse opposite cut reconstruct the coordinate axes throughout the nonexceptional rank-sixteen locus.",
       "current_proof": "sections/marked_mixed_curve_isomorphisms.tex",
       "global_coverage": false
+    },
+    {
+      "id": "MARKED-CUBIC-LINEAR-SYSTEM",
+      "current_result": "For every cubic through the harmonic pencil base of any finite mixed seed with independent brackets, a geometric-generic all-degree AS finite rank-ten deformation realizes that exact projective cubic. Every planar cubic up to projectivity occurs, including every smooth j-invariant. Through the split tetrahedron the class image for each fixed cubic has dimension six, trivial generic projective automorphisms and generic minimum period four. For a smooth such cubic E the full scheme of complementary three-planes with determinant proportional to its equation is the elliptic normal quintic Pic^2(E), with exactly five specified zero-determinant planes.",
+      "current_proof": "sections/marked_cubic_linear_system.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1222,7 +1228,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 349,
+  "version": 350,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
