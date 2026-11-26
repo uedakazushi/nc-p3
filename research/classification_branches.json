@@ -739,6 +739,12 @@
       "current_result": "Finish all reduced split auxiliary binary determinants, including the two-node and tacnodal cases and mixed Moebius transitions. The nodal chart forces a common pair of coordinates and a common involution line of secants; the tacnodal chart forces the singular coordinate to agree everywhere. All one-dimensional point-fiber graphs now have finite all-degree regularity and indexed-isomorphism atlases, including the residual twisted cubic with its nonreduced finite structure.",
       "current_proof": "sections/split_binary_pencil_charts.tex",
       "global_coverage": false
+    },
+    {
+      "id": "RANK-EIGHT-FINITE-POINT-BISYMMETRY",
+      "current_result": "For every finite point window of opposite rank eight with at least one simple local component, a middle support of dimension three certifies regularity; otherwise the two opposite pairs are simultaneously symmetrizable and the existing bisymmetric finite all-degree test is necessary and sufficient. The proof includes dependent commutators, nondiagonalizable commuting planes, and both skew alternatives.",
+      "current_proof": "sections/rank_eight_finite_symmetry.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -796,7 +802,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 278,
+  "version": 279,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

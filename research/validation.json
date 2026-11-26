@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 278,
+  "version": 279,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "e3d9392471fb6914b06901dbc9bc1c161b70394d"
+    "source_commit": "1f566f6cf64a3f68c6ec8c83ab592b63f83c93a3"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Finish all reduced split auxiliary binary determinants, including the two-node and tacnodal cases and mixed Moebius transitions. The nodal chart forces a common pair of coordinates and a common involution line of secants; the tacnodal chart forces the singular coordinate to agree everywhere. All one-dimensional point-fiber graphs now have finite all-degree regularity and indexed-isomorphism atlases, including the residual twisted cubic with its nonreduced finite structure."
+    "scope": "For every finite point window of opposite rank eight with at least one simple local component, a middle support of dimension three certifies regularity; otherwise the two opposite pairs are simultaneously symmetrizable and the existing bisymmetric finite all-degree test is necessary and sufficient. The proof includes dependent commutators, nondiagonalizable commuting planes, and both skew alternatives."
   },
   "checks": [
     {
-      "command": "python computations/verify_split_binary_pencil_charts.py",
+      "command": "python computations/verify_rank_eight_finite_symmetry.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Continue the finite twenty-point graph branch at high opposite rank and positive-dimensional projection fibers, then determine global components and specializations. One-dimensional coverage alone is not completion."
+    "Extend rank-eight coverage to finite point schemes without a simple local factor, and analyze higher opposite ranks and positive-dimensional projection fibers; global components and specializations are still open."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 495,
+      "nc-p3": 497,
       "plan_ja": 11,
       "notes_ja": 21
     },

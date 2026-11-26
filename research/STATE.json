@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-26",
-  "version": 278,
+  "version": 279,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -2940,6 +2940,15 @@
       "verification": [
         "computations/verify_split_binary_pencil_charts.py"
       ]
+    },
+    {
+      "id": "RANK-EIGHT-FINITE-POINT-BISYMMETRY",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "For every finite point window of opposite rank eight with at least one simple local component, a middle support of dimension three certifies regularity; otherwise the two opposite pairs are simultaneously symmetrizable and the existing bisymmetric finite all-degree test is necessary and sufficient. The proof includes dependent commutators, nondiagonalizable commuting planes, and both skew alternatives.",
+      "proof": "sections/rank_eight_finite_symmetry.tex",
+      "verification": [
+        "computations/verify_rank_eight_finite_symmetry.py"
+      ]
     }
   ],
   "document_paths": {
@@ -3003,7 +3012,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "e3d9392471fb6914b06901dbc9bc1c161b70394d",
+  "reviewed_source_commit": "1f566f6cf64a3f68c6ec8c83ab592b63f83c93a3",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -3012,14 +3021,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Continue the finite twenty-point graph branch at high opposite rank and positive-dimensional projection fibers, then determine global components and specializations. One-dimensional coverage alone is not completion.",
+    "immediate_next_action": "Extend rank-eight coverage to finite point schemes without a simple local factor, and analyze higher opposite ranks and positive-dimensional projection fibers; global components and specializations are still open.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/split_binary_pencil_charts.tex",
-      "sections/doubled_binary_pencils.tex"
+      "sections/rank_eight_finite_symmetry.tex",
+      "sections/marked_point_commutators.tex"
     ],
     "known_obstruction": "General windows can lack a recognized symmetry or Ore mark. All-degree AS membership is open for such candidates, including finite locally planar cases.",
-    "state_of_claim": "Finish all reduced split auxiliary binary determinants, including the two-node and tacnodal cases and mixed Moebius transitions. The nodal chart forces a common pair of coordinates and a common involution line of secants; the tacnodal chart forces the singular coordinate to agree everywhere. All one-dimensional point-fiber graphs now have finite all-degree regularity and indexed-isomorphism atlases, including the residual twisted cubic with its nonreduced finite structure. Full classification remains open.",
+    "state_of_claim": "For every finite point window of opposite rank eight with at least one simple local component, a middle support of dimension three certifies regularity; otherwise the two opposite pairs are simultaneously symmetrizable and the existing bisymmetric finite all-degree test is necessary and sufficient. The proof includes dependent commutators, nondiagonalizable commuting planes, and both skew alternatives. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
