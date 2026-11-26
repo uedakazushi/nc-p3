@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-26",
-  "version": 256,
+  "version": 257,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -2738,6 +2738,15 @@
       "verification": [
         "computations/verify_elliptic_quintic_trisecants.py"
       ]
+    },
+    {
+      "id": "ELLIPTIC-QUINTIC-TORSION",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "Only two explicitly specified indexed relation sequences can have smooth elliptic quintic point graphs: use either reference projection and alternate translation by the two branch points (1,0) and (-1,0). The full geometric cubic-overlap degeneracy calculation at 181 and a local lifting argument exclude all nontorsion shifts. The two signs cannot be indexed isomorphic if realized.",
+      "proof": "sections/elliptic_quintic_cubic_overlaps.tex",
+      "verification": [
+        "computations/verify_elliptic_quintic_overlaps.py"
+      ]
     }
   ],
   "document_paths": {
@@ -2801,7 +2810,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "a85d9c4847c8e2f754a8d04c7f77abc6b2301bcc",
+  "reviewed_source_commit": "594d6ae3cca67e337a393b55400dd9eaf9c539fb",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -2810,14 +2819,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Use the explicit two projected quintics and torsion offsets to determine which consecutive kernels have cubic overlap four. Test the cyclic four-tensor and all-degree regularity on the surviving strata.",
+    "immediate_next_action": "Determine all-degree AS regularity of the two conjugate alternating relation sequences, certify their actual point schemes, and continue the other curve and finite-point branches.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/elliptic_quintic_trisecants.tex",
-      "sections/genus_two_quintic_ruling.tex"
+      "sections/elliptic_quintic_cubic_overlaps.tex",
+      "sections/elliptic_quintic_trisecants.tex"
     ],
     "known_obstruction": "General windows can lack a recognized symmetry or Ore mark. All-degree AS membership is open for such candidates, including finite locally planar cases.",
-    "state_of_claim": "Every smooth elliptic quintic point graph in a finite Frobenius four-edge graph window has j=1728 and translation four-shift. Each projection center is an eigenline for one of two cyclic order-five groups. Each adjacent relation space is the entire mixed multiplication kernel. All four positions have the same order-five subgroup and adjacent translations do not differ by five-torsion. Two explicit reference embeddings and a finite list of torsion offsets reduce the candidates to finitely many one-parameter elliptic families. Sufficiency is open. Full classification remains open.",
+    "state_of_claim": "Only two explicitly specified indexed relation sequences can have smooth elliptic quintic point graphs: use either reference projection and alternate translation by the two branch points (1,0) and (-1,0). The full geometric cubic-overlap degeneracy calculation at 181 and a local lifting argument exclude all nontorsion shifts. The two signs cannot be indexed isomorphic if realized. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

@@ -605,6 +605,12 @@
       "current_result": "Every smooth elliptic quintic point graph in a finite Frobenius four-edge graph window has j=1728 and translation four-shift. Each projection center is an eigenline for one of two cyclic order-five groups. Each adjacent relation space is the entire mixed multiplication kernel. All four positions have the same order-five subgroup and adjacent translations do not differ by five-torsion. Two explicit reference embeddings and a finite list of torsion offsets reduce the candidates to finitely many one-parameter elliptic families. Sufficiency is open.",
       "current_proof": "sections/elliptic_quintic_trisecants.tex",
       "global_coverage": false
+    },
+    {
+      "id": "ELLIPTIC-QUINTIC-TORSION",
+      "current_result": "Only two explicitly specified indexed relation sequences can have smooth elliptic quintic point graphs: use either reference projection and alternate translation by the two branch points (1,0) and (-1,0). The full geometric cubic-overlap degeneracy calculation at 181 and a local lifting argument exclude all nontorsion shifts. The two signs cannot be indexed isomorphic if realized.",
+      "current_proof": "sections/elliptic_quintic_cubic_overlaps.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -662,7 +668,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 256,
+  "version": 257,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

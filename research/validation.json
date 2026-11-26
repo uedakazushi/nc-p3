@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 256,
+  "version": 257,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "a85d9c4847c8e2f754a8d04c7f77abc6b2301bcc"
+    "source_commit": "594d6ae3cca67e337a393b55400dd9eaf9c539fb"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every smooth elliptic quintic point graph in a finite Frobenius four-edge graph window has j=1728 and translation four-shift. Each projection center is an eigenline for one of two cyclic order-five groups. Each adjacent relation space is the entire mixed multiplication kernel. All four positions have the same order-five subgroup and adjacent translations do not differ by five-torsion. Two explicit reference embeddings and a finite list of torsion offsets reduce the candidates to finitely many one-parameter elliptic families. Sufficiency is open."
+    "scope": "Only two explicitly specified indexed relation sequences can have smooth elliptic quintic point graphs: use either reference projection and alternate translation by the two branch points (1,0) and (-1,0). The full geometric cubic-overlap degeneracy calculation at 181 and a local lifting argument exclude all nontorsion shifts. The two signs cannot be indexed isomorphic if realized."
   },
   "checks": [
     {
-      "command": "python computations/verify_elliptic_quintic_trisecants.py",
+      "command": "python computations/verify_elliptic_quintic_overlaps.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Use the explicit two projected quintics and torsion offsets to determine which consecutive kernels have cubic overlap four. Test the cyclic four-tensor and all-degree regularity on the surviving strata."
+    "Determine all-degree AS regularity of the two conjugate alternating relation sequences, certify their actual point schemes, and continue the other curve and finite-point branches."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 446,
+      "nc-p3": 448,
       "plan_ja": 10,
       "notes_ja": 20
     },
