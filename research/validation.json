@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 305,
+  "version": 306,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "cdab0ea159e3476bb6798e79e233f89c12934831"
+    "source_commit": "3d66d2d640a393adf29a2fca468d35445cb82875"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For an aligned finite slice with a length-three Gorenstein rank-one scheme, any simple or curvilinear mark forces opposite symmetry, including doubled and tripled directions. Every length-four rank-one section is Gorenstein and its algebra determines the entire slice as the trace multiplication form on its trace hyperplane."
+    "scope": "The non-Gorenstein length-three rank-one slice has a two-by-two congruence normal form. For a simple or curvilinear mark its canonical length-six plane complete intersection forces opposite symmetry: otherwise all cofactors of a generically invertible plane matrix would be proportional. This covers all length-three slices at such marks."
   },
   "checks": [
     {
-      "command": "python computations/verify_finite_marked_artin_secants.py",
+      "command": "python computations/verify_finite_marked_planar_triple.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Resolve the square-zero length-three slice, planar marks for Gorenstein triples, and the four-point trace-hyperplane compatibility with whole-window regularity; continue the higher-rank and branching cases."
+    "Analyze the length-four trace-hyperplane model and the remaining planar marked directions, alongside higher opposite ranks and branching windows."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 540,
+      "nc-p3": 541,
       "plan_ja": 12,
       "notes_ja": 23
     },

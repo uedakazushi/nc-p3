@@ -2,7 +2,7 @@
 
 **共同研究：** 本リポジトリは大川新之介・植田一石の共同研究プロジェクトです。この表示は個々の論文の著者を確定するものではありません。
 
-**2026-11-26 / v305。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-26 / v306。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -179,6 +179,8 @@ Walsh三次元族を含む十五次元成分と、そこから出る周期2の�
 印付き切断の階数1軌跡が正次元なら被約な一本のSegre直線で、非被約の印でも反対対称性が従う。[正次元の階数1切断](sections/finite_marked_ruling_pencil.tex)
 
 長さ3のGorenstein階数1切断では三重方向を含め曲線状の印から対称性が従い、長さ4の切断は有限環の積跡で正規化できる。[Artin割線](sections/finite_marked_artin_secants.tex)
+
+曲線状の印では非Gorensteinの三重点も二平面の長さ6の完全交叉によって対称になり、長さ3の全型を覆う。[三重点と余因子](sections/finite_marked_planar_triple.tex)
 
 非恒等の平面グラフを基底に持つOre窓では、指定点を忘れた同型類も決定した。[正規形と平坦特殊化](sections/plane_graph_ore_windows.tex)・[検算](computations/verify_plane_graph_ore.py)
 

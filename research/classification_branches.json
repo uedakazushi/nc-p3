@@ -901,6 +901,12 @@
       "current_result": "For an aligned finite slice with a length-three Gorenstein rank-one scheme, any simple or curvilinear mark forces opposite symmetry, including doubled and tripled directions. Every length-four rank-one section is Gorenstein and its algebra determines the entire slice as the trace multiplication form on its trace hyperplane.",
       "current_proof": "sections/finite_marked_artin_secants.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FINITE-MARKED-SQUARE-ZERO-TRIPLE-PLANAR-COFACTORS",
+      "current_result": "The non-Gorenstein length-three rank-one slice has a two-by-two congruence normal form. For a simple or curvilinear mark its canonical length-six plane complete intersection forces opposite symmetry: otherwise all cofactors of a generically invertible plane matrix would be proportional. This covers all length-three slices at such marks.",
+      "current_proof": "sections/finite_marked_planar_triple.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -958,7 +964,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 305,
+  "version": 306,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
