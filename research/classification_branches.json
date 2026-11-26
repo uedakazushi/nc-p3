@@ -787,6 +787,12 @@
       "current_result": "In a standard regular window the centers of positive-dimensional projection fibers have dimension at most one on every edge. A curve of such centers sweeps out an irreducible surface in the next letter, and all but finitely many of its points also have predecessors. The surface bound allows singular cubics and does not assume absence of pure relations.",
       "current_proof": "sections/branching_curve_bound.tex",
       "global_coverage": false
+    },
+    {
+      "id": "BRANCHING-CENTER-COMPONENTS-ARE-LINES",
+      "current_result": "In every standard regular window each positive-dimensional component of the line-fiber center locus is itself a line. It sweeps a plane or a quadric. Nonlinear centers on a smooth quadric would be a conic or a twisted cubic, both excluded by a split path block or an endpoint overlap. Any three-dimensional edge projection gives the polynomial ring and the total divisor degree of any other edge projection is at most two.",
+      "current_proof": "sections/branching_lines_only.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -844,7 +850,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 286,
+  "version": 287,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
