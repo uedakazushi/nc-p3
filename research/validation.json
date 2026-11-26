@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 334,
+  "version": 335,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "77d635c33d20b0d197cb9621367f5b307528de10"
+    "source_commit": "3083ee3891a463c9eabdfb470f4ce5cb925bf737"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every full-middle-support branching center at rank ten has a second conic, never a twisted cubic. On either ruled kernel surface the true edge scheme is a divisor of bidegree (4,1). Frobenius orthogonality lifts a successor over each generic local factor including its multiplicity. The remaining successor minors have first bidegree at most three, hence vanish identically and would give a surface projection. Such a center is immediately followed on its first line by a singular ternary center."
+    "scope": "At any rank without two-line corridors a twisted cubic second curve has generic residual matrix rank three: the other rank-two nets yield a (1,1) incidence scroll where the full edge divisor forces a surface projection or a second line. At rank ten the one remaining syzygy forces a third line and a quintic deficit. A line adjacent to a twisted cubic can only be the endpoint line on that side. Rank-ten branching therefore has either only conic second curves, with both orientations represented in every phase, or only (1,3,1) corridors with cyclic regular ternary endpoints, at most one per phase in each direction."
   },
   "checks": [
     {
-      "command": "python computations/verify_rank_ten_cubic_kernel_divisor.py",
+      "command": "python computations/verify_ternary_cubic_scroll.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "For a ternary center with cubic second curve, use the same divisor argument on the (1,1) incidence surface of the rank-two quadratic net, and examine the rank-three quintic-defect alternative. Use the required singular ternary center after every four-dimensional center to restrict terminal cycles. Continue the finite one-symmetric rank-ten case."
+    "Analyze the all-(1,3,1) rank-ten case using the two projected ternary pencils and the quintic forward/backward defects supported at distinct centers on each cubic; in the all-conic case exploit the cycles of adjacent centers and conflicting pure relations. Continue the finite reduced one-symmetric triples."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 584,
+      "nc-p3": 586,
       "plan_ja": 12,
       "notes_ja": 24
     },
