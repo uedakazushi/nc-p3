@@ -1255,6 +1255,12 @@
       "current_result": "All homogeneous mixed-bracket marked windows with all twenty-four coefficients nonzero and nonzero diagonal brackets have a three-parameter primary torus chart and one extra central branch at equal parameters. Throughout the primary chart AS regularity is equivalent to u^6 != 1, including every vanishing diagonal Walsh normalization factor. The secondary choices are regular central quantum deformations. Two-step periodicity, recovery of both Cartan frames, and finite necessary-and-sufficient unmarked isomorphism and minimum-period tests hold at all regular chart points.",
       "current_proof": "sections/marked_klein_mixed_torus.tex",
       "global_coverage": false
+    },
+    {
+      "id": "MARKED-KLEIN-MIXED-SPARSE",
+      "current_result": "All Klein homogeneous windows with nonzero common diagonal bracket, including every sparse coefficient pattern, are decided. The 293 Boolean supports form 19 cases under axes and rotations. Of the 18 sparse cases two are empty, thirteen have exact rational function field Hilbert obstructions valid also at all specializations, and three are regular at every allowed parameter, with dimensions zero, one and two. Smith character quotients, finite unmarked isomorphism, and periods dividing two complete this chart.",
+      "current_proof": "sections/marked_klein_mixed_supports.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1312,7 +1318,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 364,
+  "version": 365,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
