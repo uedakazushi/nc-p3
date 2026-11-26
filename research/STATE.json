@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-26",
-  "version": 325,
+  "version": 326,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -3363,6 +3363,15 @@
       "verification": [
         "computations/verify_branch_binary_center_pairing.py"
       ]
+    },
+    {
+      "id": "RANK-NINE-BRANCH-EXCLUSION",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "At opposite rank nine no curve-only branching is possible in a standard regular window, including windows with pure relations. A ternary center forces its second component to be a conic whose plane equation ends a pure relation. A binary center cannot have a forward center in the preceding phase. Ternary centers would then exist in all phases in both directions and force consecutive pure relations. Binary centers alone require adjacent nonplanar cubics, also impossible. This completes finite all-degree regularity and indexed-isomorphism recognition for every window of opposite rank at most nine.",
+      "proof": "sections/rank_nine_branch_exclusion.tex",
+      "verification": [
+        "computations/verify_rank_nine_ternary_pencils.py"
+      ]
     }
   ],
   "document_paths": {
@@ -3426,24 +3435,24 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "dec00a2a23c278c72b6c94b56de6336f01aef082",
+  "reviewed_source_commit": "a983ce89e75de603f24a231966feac9324024ce1",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
   "cloud_codex_status": "Repository-side Cloud guidance and preflight added; actual Cloud environment publishing, TeX tools and Git push permissions are not verifiable from repository alone.",
   "resume_point": {
     "task_id": "Z4-AS-004",
-    "status": "active_rank_nine_branching_and_rank_ten_marks",
+    "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Classify the three-by-three binary pencils of rank-nine ternary centers. Use the pure relation from the first two moving positions to restrict the third component, and combine adjacent planar component restrictions with the corridor degree formula. Finite rank-ten five-space pairs remain independent.",
+    "immediate_next_action": "At rank ten analyze center pairs with residual rank two along adjacent moving components and the finite-point cases with no common marked four-space. Begin with centers of middle support four and their degree-two residual matrix on a cubic successor.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/branch_binary_center_pairing.tex",
+      "sections/rank_nine_branch_exclusion.tex",
       "sections/branch_rank_one_residual.tex",
-      "sections/finite_branch_corridors.tex"
+      "sections/finite_rank_nine_all_marks.tex"
     ],
-    "known_obstruction": "Rank-nine curve-only branching with pure relations is undecided. Finite windows at higher opposite ranks may lack any aligned marked pair. Full orbit, component and specialization data remain open.",
-    "state_of_claim": "At every opposite rank a forward branching center of middle support two has a unique paired backward center in the preceding phase. Their binary support planes coincide and their two corresponding lines have generic middle support three. No other moving component in a finite branching corridor has generic middle support three: paired moving opposite annihilators would propagate backward past the starting center. At rank nine all centers have middle support two or three. Any consecutive string of nonlinear components contains at most one nonplanar curve; all planar components have degree at most three. Full classification remains open.",
+    "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
+    "state_of_claim": "At opposite rank nine no curve-only branching is possible in a standard regular window, including windows with pure relations. A ternary center forces its second component to be a conic whose plane equation ends a pure relation. A binary center cannot have a forward center in the preceding phase. Ternary centers would then exist in all phases in both directions and force consecutive pure relations. Binary centers alone require adjacent nonplanar cubics, also impossible. This completes finite all-degree regularity and indexed-isomorphism recognition for every window of opposite rank at most nine. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

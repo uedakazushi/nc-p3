@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 325,
+  "version": 326,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "dec00a2a23c278c72b6c94b56de6336f01aef082"
+    "source_commit": "a983ce89e75de603f24a231966feac9324024ce1"
   },
   "generation": {
     "result": "PASS",
-    "scope": "At every opposite rank a forward branching center of middle support two has a unique paired backward center in the preceding phase. Their binary support planes coincide and their two corresponding lines have generic middle support three. No other moving component in a finite branching corridor has generic middle support three: paired moving opposite annihilators would propagate backward past the starting center. At rank nine all centers have middle support two or three. Any consecutive string of nonlinear components contains at most one nonplanar curve; all planar components have degree at most three."
+    "scope": "At opposite rank nine no curve-only branching is possible in a standard regular window, including windows with pure relations. A ternary center forces its second component to be a conic whose plane equation ends a pure relation. A binary center cannot have a forward center in the preceding phase. Ternary centers would then exist in all phases in both directions and force consecutive pure relations. Binary centers alone require adjacent nonplanar cubics, also impossible. This completes finite all-degree regularity and indexed-isomorphism recognition for every window of opposite rank at most nine."
   },
   "checks": [
     {
-      "command": "python computations/verify_branch_binary_center_pairing.py",
+      "command": "python computations/verify_rank_nine_ternary_pencils.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Classify the three-by-three binary pencils of rank-nine ternary centers. Use the pure relation from the first two moving positions to restrict the third component, and combine adjacent planar component restrictions with the corridor degree formula. Finite rank-ten five-space pairs remain independent."
+    "At rank ten analyze center pairs with residual rank two along adjacent moving components and the finite-point cases with no common marked four-space. Begin with centers of middle support four and their degree-two residual matrix on a cubic successor."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 570,
+      "nc-p3": 572,
       "plan_ja": 12,
       "notes_ja": 24
     },
