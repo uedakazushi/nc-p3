@@ -991,6 +991,12 @@
       "current_result": "A plane meets any coordinate of a finite window in length at most seven. At opposite rank eight tangent incidence between two planar points is equivalent on opposite coordinates and cannot go in both directions at one position. In an untested two-support length-four slice the nonsymmetric kernel discrepancy must be supported at the mark itself and has length three curvilinear or length four of type (1,2,1), with a repeated-plane separator there.",
       "current_proof": "sections/finite_plane_sections_and_tangent_incidence.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FINITE-HIGH-ORDER-COMMON-OCTAD",
+      "current_result": "If an untested finite rank-eight planar window has no local equations through degree three, it has a single support and a common length-eight subscheme on which all four coordinates are projectively identified. Each embedding is a complete intersection of three quadrics. Its ideal is the annihilator of the square of every tangent-plane equation. Consecutive tangent planes cut length six and each tangent plane cuts length seven.",
+      "current_proof": "sections/finite_high_order_common_octad.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1048,7 +1054,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 320,
+  "version": 321,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 320,
+  "version": 321,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "e3049006cb109edaabd233708d04c9b98dde0f37"
+    "source_commit": "e6dcc1e8d9fce887d35ae9057afadf4f74d5e0d9"
   },
   "generation": {
     "result": "PASS",
-    "scope": "A plane meets any coordinate of a finite window in length at most seven. At opposite rank eight tangent incidence between two planar points is equivalent on opposite coordinates and cannot go in both directions at one position. In an untested two-support length-four slice the nonsymmetric kernel discrepancy must be supported at the mark itself and has length three curvilinear or length four of type (1,2,1), with a repeated-plane separator there."
+    "scope": "If an untested finite rank-eight planar window has no local equations through degree three, it has a single support and a common length-eight subscheme on which all four coordinates are projectively identified. Each embedding is a complete intersection of three quadrics. Its ideal is the annihilator of the square of every tangent-plane equation. Consecutive tangent planes cut length six and each tangent plane cuts length seven."
   },
   "checks": [
     {
-      "command": "python computations/verify_finite_plane_sections.py",
+      "command": "python computations/verify_finite_high_order_octad.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "For two nonstretched planar supports exploit the directed tangent incidence forced by a repeated-plane separator and the plane length bound. For one support resolve the remaining length-three slices; analyze longer pure branching at ranks nine and ten."
+    "Use the common octad and its three quadratic equations to compare the opposite coordinate square maps. Analyze the local quadratic and cubic initial-ideal cases and the independent rank-nine branching strata."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 562,
+      "nc-p3": 564,
       "plan_ja": 12,
       "notes_ja": 23
     },
