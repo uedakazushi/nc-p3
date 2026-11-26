@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 348,
+  "version": 349,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "a6331f58292977f2e0cc9dd06090ab6bfb3b463e"
+    "source_commit": "e4d30d446685207e40e50c834157cf5be7100de1"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All finite mixed marked windows with the symmetric net at G and the skew net at Q, as well as the prescribed-discriminant constructions for every Jordan type, lie in the previously identified fifteen-dimensional component. A single nested chain of marked image closures has dimensions fourteen, twelve, eight and generic periods four, four, two. The rank-one determinantal cone of two by three matrices describes the marked local incidence. An explicit transverse polynomial family has all-degree AS iff (t^2+3)(3t^2+1) is nonzero, including the two rank-fourteen fibers where Walsh normalization degenerates."
+    "scope": "The entire transverse AS curve has unmarked indexed parameter x=t^2, excluding precisely -3 and -1/3. Its minimal period is one precisely at x=1 and x=-1, and two elsewhere. Every regular rank-sixteen point except x=1 has projective automorphism group of order 48. The rank-fourteen period-one point is a nonclosed tensor orbit outside all Walsh presentations; its central-generator graded form specializes to the regular rank-twelve quantum window. Trace contractions of the inverse opposite cut reconstruct the coordinate axes throughout the nonexceptional rank-sixteen locus."
   },
   "checks": [
     {
-      "command": "python computations/verify_mixed_component_smoothing.py",
+      "command": "python computations/verify_mixed_curve_axes.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine the period and unmarked parameter identifications along the transverse polynomial family, especially at the two rank-fourteen non-Walsh-normalized points. Extend component recognition or pointwise regularity to the other inverse-commutator sheets and finite graphs below seventeen supports."
+    "Use the marked traceless equations and commutator targets to detect when other inverse lifts are on the same fifteen-dimensional component or have all-degree certificates. Seek structural rank-sixteen diagonal-algebra tests beyond the transverse curve, and continue small-support finite-edge propagation."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 612,
+      "nc-p3": 614,
       "plan_ja": 13,
       "notes_ja": 25
     },
