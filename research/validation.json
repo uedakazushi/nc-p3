@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 285,
+  "version": 286,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "d926bd4df53a4018622bbb78be90b9df31ac1009"
+    "source_commit": "ee1a762d42ace561b833dff4f2d74ac29755b78f"
   },
   "generation": {
     "result": "PASS",
-    "scope": "In every standard regular window the endpoint ranks of all nonzero cubic slices are at least two, without any symmetry, recurrence or finite-fiber assumption. Positive-dimensional fibers can therefore only be lines. A two-dimensional endpoint support determines at most one evaluation point, and a line on both sides forces both relation intersections to have dimension two."
+    "scope": "In a standard regular window the centers of positive-dimensional projection fibers have dimension at most one on every edge. A curve of such centers sweeps out an irreducible surface in the next letter, and all but finitely many of its points also have predecessors. The surface bound allows singular cubics and does not assume absence of pure relations."
   },
   "checks": [
     {
-      "command": "python computations/verify_endpoint_plane_growth.py",
+      "command": "python computations/verify_branching_curve_bound.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Resolve line fibers and the unrestricted finite strata, including higher opposite ranks and nonreduced point graphs, and finish their global orbit and specialization comparison."
+    "Classify adjacent correspondences with a curve or isolated centers of line fibers, and continue the finite-window regularity and global component analysis."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 510,
+      "nc-p3": 511,
       "plan_ja": 11,
       "notes_ja": 21
     },

@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-26",
-  "version": 285,
+  "version": 286,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -3003,6 +3003,15 @@
       "verification": [
         "computations/verify_endpoint_plane_growth.py"
       ]
+    },
+    {
+      "id": "LINE-FIBER-CENTERS-AT-MOST-CURVES",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "In a standard regular window the centers of positive-dimensional projection fibers have dimension at most one on every edge. A curve of such centers sweeps out an irreducible surface in the next letter, and all but finitely many of its points also have predecessors. The surface bound allows singular cubics and does not assume absence of pure relations.",
+      "proof": "sections/branching_curve_bound.tex",
+      "verification": [
+        "computations/verify_branching_curve_bound.py"
+      ]
     }
   ],
   "document_paths": {
@@ -3066,7 +3075,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "d926bd4df53a4018622bbb78be90b9df31ac1009",
+  "reviewed_source_commit": "ee1a762d42ace561b833dff4f2d74ac29755b78f",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -3075,14 +3084,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Resolve line fibers and the unrestricted finite strata, including higher opposite ranks and nonreduced point graphs, and finish their global orbit and specialization comparison.",
+    "immediate_next_action": "Classify adjacent correspondences with a curve or isolated centers of line fibers, and continue the finite-window regularity and global component analysis.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/endpoint_plane_growth.tex",
-      "sections/recurrent_point_correspondences.tex"
+      "sections/branching_curve_bound.tex",
+      "sections/endpoint_plane_growth.tex"
     ],
     "known_obstruction": "General windows can lack a recognized symmetry or Ore mark. All-degree AS membership is open for such candidates, including finite locally planar cases.",
-    "state_of_claim": "In every standard regular window the endpoint ranks of all nonzero cubic slices are at least two, without any symmetry, recurrence or finite-fiber assumption. Positive-dimensional fibers can therefore only be lines. A two-dimensional endpoint support determines at most one evaluation point, and a line on both sides forces both relation intersections to have dimension two. Full classification remains open.",
+    "state_of_claim": "In a standard regular window the centers of positive-dimensional projection fibers have dimension at most one on every edge. A curve of such centers sweeps out an irreducible surface in the next letter, and all but finitely many of its points also have predecessors. The surface bound allows singular cubics and does not assume absence of pure relations. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

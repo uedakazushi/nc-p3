@@ -781,6 +781,12 @@
       "current_result": "In every standard regular window the endpoint ranks of all nonzero cubic slices are at least two, without any symmetry, recurrence or finite-fiber assumption. Positive-dimensional fibers can therefore only be lines. A two-dimensional endpoint support determines at most one evaluation point, and a line on both sides forces both relation intersections to have dimension two.",
       "current_proof": "sections/endpoint_plane_growth.tex",
       "global_coverage": false
+    },
+    {
+      "id": "LINE-FIBER-CENTERS-AT-MOST-CURVES",
+      "current_result": "In a standard regular window the centers of positive-dimensional projection fibers have dimension at most one on every edge. A curve of such centers sweeps out an irreducible surface in the next letter, and all but finitely many of its points also have predecessors. The surface bound allows singular cubics and does not assume absence of pure relations.",
+      "current_proof": "sections/branching_curve_bound.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -838,7 +844,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 285,
+  "version": 286,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
