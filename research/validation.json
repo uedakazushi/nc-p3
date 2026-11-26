@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 258,
+  "version": 259,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "e6e9a7d9719cff8d8f135426b5f0eb571022375e"
+    "source_commit": "6bd71065a4163aaf2db3e560dba0ceb4b5f70d9a"
   },
   "generation": {
     "result": "PASS",
-    "scope": "There are exactly two index-preserving isomorphism classes with point-fiber point graph a smooth integral quintic disjoint from the finite residual. Both are realized, the residual is empty, the two point graphs are reduced elliptic quintics, and their bare period is one. Each has five folded central quartics, with a four-parameter normalization certified by the degree-sixteen cutoff. The canonical four-shift is projectively the identity."
+    "scope": "A finite Frobenius four-edge point-fiber graph cannot be a smooth integral rational quartic with disjoint finite residual. Seven mixed relations give a balanced quadratic syzygy bundle and a five-dimensional full cubic overlap. The required four-dimensional suboverlap would force a Hankel determinant simultaneously zero and nonzero. Smooth integral quartics with disjoint residual are elliptic with isolated length four."
   },
   "checks": [
     {
-      "command": "python computations/verify_elliptic_quintic_as.py",
+      "command": "python computations/verify_rational_quartic_exclusion.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine the remaining smooth rational quartic graph branch and its two isolated points; handle low-degree, reducible and nonreduced curves, and the general finite high-opposite-rank AS problem."
+    "Treat smooth plane cubic point components and the nonplanar twisted cubic; use the restricted ternary relations on plane graphs and the binary four-factor tensor on the twisted cubic. Other singular, reducible, nonreduced and finite high-rank graphs remain open."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 450,
+      "nc-p3": 452,
       "plan_ja": 10,
       "notes_ja": 20
     },

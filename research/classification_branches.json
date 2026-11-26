@@ -617,6 +617,12 @@
       "current_result": "There are exactly two index-preserving isomorphism classes with point-fiber point graph a smooth integral quintic disjoint from the finite residual. Both are realized, the residual is empty, the two point graphs are reduced elliptic quintics, and their bare period is one. Each has five folded central quartics, with a four-parameter normalization certified by the degree-sixteen cutoff. The canonical four-shift is projectively the identity.",
       "current_proof": "sections/elliptic_quintic_regularity.tex",
       "global_coverage": false
+    },
+    {
+      "id": "RATIONAL-QUARTIC-EXCLUSION",
+      "current_result": "A finite Frobenius four-edge point-fiber graph cannot be a smooth integral rational quartic with disjoint finite residual. Seven mixed relations give a balanced quadratic syzygy bundle and a five-dimensional full cubic overlap. The required four-dimensional suboverlap would force a Hankel determinant simultaneously zero and nonzero. Smooth integral quartics with disjoint residual are elliptic with isolated length four.",
+      "current_proof": "sections/rational_quartic_exclusion.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -674,7 +680,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 258,
+  "version": 259,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
