@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 362,
+  "version": 363,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "78c210c0897ed528d3bd3a313790e23611c521e6"
+    "source_commit": "38ed1b18e4f8645eef259509a11aa1d749805a9b"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All twenty generic marks on the fifteen-dimensional component admit rational mixed-bracket reconstruction and are separated, with all four starts, by two explicit covariants. Two nine-word bases give root-free complete marked invariants, and interpolation over a degree-twenty finite etale algebra gives complete rational unmarked invariants on the open chart. There the projective automorphism group is trivial and the minimum period is four. Every lift in a specified 1009-adic congruence ball is all-degree AS by good reduction, with a fifteen-parameter analytic slice of pairwise nonisomorphic windows and Zariski-dense algebraic regular realizations."
+    "scope": "The rank-five crossed-bracket chart with diagonal Cartan and all six nonzero off-diagonal skew entries rigidifies to C(t), with t-squared modulo inversion as projective bracket parameter. All marked lifts and all their AS and indexed classes are determined: typically two period-two W and two period-one central quantum deformations; on the two nonregular W parameters only the central pair survives, at t-squared=-1 all sheets coincide, and at the diagonal endpoint only W(1) is regular. Root of unity central quotients and all allowed special values are included."
   },
   "checks": [
     {
-      "command": "python computations/verify_twenty_mixed_bracket_invariants.py",
+      "command": "python computations/verify_five_dimensional_mixed_brackets.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Study the boundary of the high-rank marked reconstruction where the trace or product ranks drop. Start at the transverse mixed curve and its period-two involution. Determine the actual mixed bracket fibers there via reversal and its positive-dimensional linear kernels, then relate to remaining all-degree and unmarked coverage problems."
+    "Move beyond the skew off-diagonal bracket chart to arbitrary Klein-four graded crossed brackets. Start with the three ordered pairs of off-diagonal coefficients and the diagonal block, use the paired trace conditions to recover monomial generator frames or identify the exceptional mixed character kernels. Continue general-window AS and other components in parallel."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 639,
+      "nc-p3": 642,
       "plan_ja": 14,
       "notes_ja": 26
     },

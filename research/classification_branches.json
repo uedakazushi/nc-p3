@@ -1243,6 +1243,12 @@
       "current_result": "All twenty generic marks on the fifteen-dimensional component admit rational mixed-bracket reconstruction and are separated, with all four starts, by two explicit covariants. Two nine-word bases give root-free complete marked invariants, and interpolation over a degree-twenty finite etale algebra gives complete rational unmarked invariants on the open chart. There the projective automorphism group is trivial and the minimum period is four. Every lift in a specified 1009-adic congruence ball is all-degree AS by good reduction, with a fifteen-parameter analytic slice of pairwise nonisomorphic windows and Zariski-dense algebraic regular realizations.",
       "current_proof": "sections/marked_twenty_rational_invariants.tex",
       "global_coverage": false
+    },
+    {
+      "id": "MARKED-FIVE-DIMENSIONAL-BRACKET-FIBER",
+      "current_result": "The rank-five crossed-bracket chart with diagonal Cartan and all six nonzero off-diagonal skew entries rigidifies to C(t), with t-squared modulo inversion as projective bracket parameter. All marked lifts and all their AS and indexed classes are determined: typically two period-two W and two period-one central quantum deformations; on the two nonregular W parameters only the central pair survives, at t-squared=-1 all sheets coincide, and at the diagonal endpoint only W(1) is regular. Root of unity central quotients and all allowed special values are included.",
+      "current_proof": "sections/marked_five_dimensional_bracket_fiber.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1300,7 +1306,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 362,
+  "version": 363,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
