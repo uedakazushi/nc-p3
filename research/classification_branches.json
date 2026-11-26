@@ -871,6 +871,12 @@
       "current_result": "When both marked spans have dimension four at a simple finite point with full middle supports, the common bracket rank is four or five. Both pairs admit simultaneous rank-one differences. At rank five each span has one commuting plane, and at rank four these planes form a pencil through a matrix of rank one modulo scalars.",
       "current_proof": "sections/paired_marked_four_planes.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FINITE-NONREDUCED-MARKED-PROJECTION-SYMMETRY",
+      "current_result": "In finite windows of opposite rank eight the two opposite marked slices have the same four-dimensional image at every point, including nonreduced components. A common-kernel line test on the other points and on marked tangent directions forces the induced identification to give an opposite symmetry on the whole scheme. Passing on both sides certifies the finite all-degree AS test without a simple point. Smooth determinantal cubics suffice on either side.",
+      "current_proof": "sections/finite_marked_projection_symmetry.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -928,7 +934,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 300,
+  "version": 301,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

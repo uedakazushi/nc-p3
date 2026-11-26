@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 300,
+  "version": 301,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "c9303f1397cc3fbf1161fc36a13dee51858236c8"
+    "source_commit": "17ebe623ea120baf6de9b993e2f93954882b6479"
   },
   "generation": {
     "result": "PASS",
-    "scope": "When both marked spans have dimension four at a simple finite point with full middle supports, the common bracket rank is four or five. Both pairs admit simultaneous rank-one differences. At rank five each span has one commuting plane, and at rank four these planes form a pencil through a matrix of rank one modulo scalars."
+    "scope": "In finite windows of opposite rank eight the two opposite marked slices have the same four-dimensional image at every point, including nonreduced components. A common-kernel line test on the other points and on marked tangent directions forces the induced identification to give an opposite symmetry on the whole scheme. Passing on both sides certifies the finite all-degree AS test without a simple point. Smooth determinantal cubics suffice on either side."
   },
   "checks": [
     {
-      "command": "python computations/verify_paired_marked_four_planes.py",
+      "command": "python computations/verify_finite_marked_projection.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Use the simultaneous rank-one differences and the two commuting pencils to determine the surviving four-plane pairs; continue the non-simple and branching windows and single-symmetry AS tests."
+    "Determine the exceptional common-kernel pencils in singular determinantal cubics at non-simple marks and continue the marked four-plane pairs, higher ranks and curve branching."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 533,
+      "nc-p3": 534,
       "plan_ja": 12,
       "notes_ja": 22
     },
