@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 304,
+  "version": 305,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "2af9efeaf49baa1963cdfae7745c028623ddcb7f"
+    "source_commit": "cdab0ea159e3476bb6798e79e233f89c12934831"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every positive-dimensional rank-one section of an aligned finite mark is a single reduced Segre ruling. Its unique common-kernel pencil has one fixed kernel direction over every Artin base. This forces opposite symmetry even at planar, nonreduced marks with exceptional tangent direction."
+    "scope": "For an aligned finite slice with a length-three Gorenstein rank-one scheme, any simple or curvilinear mark forces opposite symmetry, including doubled and tripled directions. Every length-four rank-one section is Gorenstein and its algebra determines the entire slice as the trace multiplication form on its trace hyperplane."
   },
   "checks": [
     {
-      "command": "python computations/verify_finite_ruling_pencil.py",
+      "command": "python computations/verify_finite_marked_artin_secants.py",
       "result": "PASS"
     },
     {
@@ -40,14 +40,14 @@
     }
   ],
   "open_mathematics": [
-    "In the remaining finite rank-one sections, treat lengths three and four with nonreduced structure, planar marked tangents, and tetrahedral secants; continue higher ranks and curve branching."
+    "Resolve the square-zero length-three slice, planar marks for Gorenstein triples, and the four-point trace-hyperplane compatibility with whole-window regularity; continue the higher-rank and branching cases."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 539,
+      "nc-p3": 540,
       "plan_ja": 12,
-      "notes_ja": 22
+      "notes_ja": 23
     },
     "scope": "LuaLaTeX built the manuscript, plan and research notes."
   },
