@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 261,
+  "version": 262,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "b4698d472442533b6888cb1b7af0615efdb671ec"
+    "source_commit": "4a4cff5115c78074ba43215d85e77c0359255d72"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For a twisted cubic point graph with disjoint finite residual, each six-point residual is scheme-isomorphic to a plane section of an explicit quadric and the three-by-three determinant. The cyclic tensor is the product of four binary edge diagonals and a four-qubit tensor. The canonical four-shift on the curve is either the identity or an involution: connected groups and all orders at least three are excluded."
+    "scope": "The fixed ideal of the canonical shift on a reduced locally complete intersection curve is cut by a section of the dualizing sheaf times the squared polarization second difference. On any generically reduced normalized component the formula includes cotangent torsion and ramification. Smooth open-and-closed rational components are impossible. The full smooth curve plus disjoint finite residual stratum consists of the plane cubic, elliptic quartic, elliptic quintic, and bielliptic septic charts."
   },
   "checks": [
     {
-      "command": "python computations/verify_twisted_cubic_residual.py",
+      "command": "python computations/verify_point_graph_fixed_differentials.py",
       "result": "PASS"
     },
     {
@@ -40,13 +40,13 @@
     }
   ],
   "open_mathematics": [
-    "Analyze the two binary tensor rank-six cuts for the involution and identity. Use the residual plane complete intersection and finite Frobenius test to remove boundary components and prove AS criteria for remaining candidates."
+    "Use the fixed ideal on singular reduced curves to classify nodal and cuspidal supports; continue the general AS and non-point-fiber cases."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 456,
-      "plan_ja": 11,
+      "nc-p3": 457,
+      "plan_ja": 10,
       "notes_ja": 20
     },
     "scope": "LuaLaTeX built the manuscript, plan and research notes."

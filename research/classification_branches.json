@@ -635,6 +635,12 @@
       "current_result": "For a twisted cubic point graph with disjoint finite residual, each six-point residual is scheme-isomorphic to a plane section of an explicit quadric and the three-by-three determinant. The cyclic tensor is the product of four binary edge diagonals and a four-qubit tensor. The canonical four-shift on the curve is either the identity or an involution: connected groups and all orders at least three are excluded.",
       "current_proof": "sections/twisted_cubic_residual.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FIXED-IDEAL-SMOOTH-CURVE-COVER",
+      "current_result": "The fixed ideal of the canonical shift on a reduced locally complete intersection curve is cut by a section of the dualizing sheaf times the squared polarization second difference. On any generically reduced normalized component the formula includes cotangent torsion and ramification. Smooth open-and-closed rational components are impossible. The full smooth curve plus disjoint finite residual stratum consists of the plane cubic, elliptic quartic, elliptic quintic, and bielliptic septic charts.",
+      "current_proof": "sections/point_graph_fixed_differentials.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -692,7 +698,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 261,
+  "version": 262,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

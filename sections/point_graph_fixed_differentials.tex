@@ -1,0 +1,104 @@
+% !TeX root = ../papers/nc-p3.tex
+\section{四移動の固定イデアル、余接層と滑らかな点曲線の全被覆}
+\label{sec:point-graph-fixed-differentials}
+四辺の左右点ファイバーが空または一点の標準有限Frobenius窓を取る。
+点グラフを $X$ とし、埋込みを $j_i$、偏極を $L_i$、
+$j_{i+4}=j_i\sigma$ となる四移動を $\sigma$ とする。
+定理\ref{thm:point-graph-curve-degree}の一定の二階差を $K=L_{i-1}L_{i+1}/L_i^2$ と書く。
+次の式は曲線が全位置で空間を張ることを要求しない。
+
+\begin{theorem}\label{thm:fixed-differential}
+一次元の成分で一般点が被約なものの正規化を $\nu:C\to X$ とする。
+$M$ を $\nu^*\Omega_X$ の無捩れ商、$T$ をその捩れ部分の局所長の因子とする。
+$M=\omega_C(-B)$ で、$B$ は正規化写像の微分の共通零因子である。
+\begin{enumerate}
+\item $\sigma^{-1}\nu\ne\nu$ なら、二写像の一致スキームは $C$ 上の有効因子 $Z$ で
+\[
+                 \mathcal O_C(Z)=\nu^*K^2\otimes M(T).
+\]
+別の成分に移る場合にも、二写像の像が交わる点での一致を数える。
+\item $\sigma^{-1}\nu=\nu$ なら
+\[
+                   \nu^*K^2\otimes M^2(T)=\mathcal O_C .
+\]
+\item $X$ が被約な局所完全交叉曲線である開閉部分 $Y$ 上では、四移動の固定イデアルは
+$\omega_Y\otimes K^2|_Y$ の一切断の零イデアルである。固定成分がなければ固定スキームはCartier因子となる。
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+一辺の周囲を $P=\mathbb P^3\times\mathbb P^3$、$H=L_0L_1$ とする。
+以下正規化への引戻しを略記する。六関係のJacobi写像
+\[
+           R_0\otimes H^{-1}\longrightarrow\Omega_P|_C
+                          \longrightarrow\nu^*\Omega_X\longrightarrow0
+\]
+の一般階数は5である。最初の写像の核を $S\otimes H^{-1}$ と書くと、
+$S$ は $R_0\otimes\mathcal O_C$ の飽和直線部分束である。
+$\det\Omega_P|_C=H^{-4}$ と完全列の行列式から
+$S=H^{-1}\otimes M(T)$ を得る。捩れ層の行列式は局所長の因子の束である。
+標数零なので $\nu^*\Omega_X\to\Omega_C$ は一般点で同型となり、像は $M=\omega_C(-B)$ である。
+
+四次テンソル $w\in R_0\otimes R_2$ は両六次元空間の完全対合を与える。
+後ろ二位置を $j_2(p),j_3(\sigma^{-1}p)$ で評価すると、
+$R_0\otimes L_2 L_{-1}$ の切断 $s$ を得る。ここで位置3と位置 $-1$ の文字同定を用いた。
+左二位置の第一を $j_0(p)$ に固定すると最後から最初への辺により全ての値が零、
+第二を $j_1(p)$ に固定しても位置1から2への辺により全て零である。
+よって $s$ は六式の微分の核 $S\otimes L_2L_{-1}$ に入る。
+またその六成分の零イデアルは後ろの点対がその辺のグラフに入る条件そのものである。
+グラフの両射影が閉埋込みなので、これは $p=\sigma^{-1}p$ の一致イデアルをスキームとして引き戻したものである。
+$S$ は局所直和因子であり、$L_{-1}L_2/H=K^2$ は偏極の三階差の式から従う。
+切断が一般点で非零なら第一項を得る。
+
+成分上で $\sigma$ が恒等の場合、後ろ二点を一旦独立に $j_2(p),j_3(q)$ とし、
+$q=p$ に沿う $q$ の一次微分を取る。零切断の微分なのでこれは自明化によらない
+$R_0\otimes L_2 L_{-1}\otimes\omega_C$ の切断である。
+第二文字を $j_1(p)$ に固定すれば微分後も零である。
+第一文字を $j_0(q)$ に固定した消滅を微分すると、第一文字を微分する項は後ろ二位置の隣接消滅で零となる。
+従って再び $S$ に値を持つ。その零因子は正確に $B$ である。
+実際、後ろの六式が $C\times C$ に引き戻すイデアルは $\nu(p)=\nu(q)$ のイデアルで、
+局所的に $X$ のアフィン座標の二組の差で生成される。
+対角イデアルをその二乗で割ると、六式の一次係数はこれら座標の微分と同じ部分加群 $M\subset\omega_C$ を生成する。
+これが第二項を与える。
+
+最後に $Y$ 上では $I/I^2$ は階数5の束で、六式が全射
+$R_0\otimes H^{-1}\to I/I^2$ を与える。
+余法束から周囲の余接束への写像は各成分の一般点で単射であり、$Y$ が被約なので単射である。
+従って微分の核はこの全射の核に一致し、$H$ でひねって得る $S_Y$ は局所直和因子である。
+随伴公式より $S_Y=H^{-1}\otimes\omega_Y$ で、上の $s$ の零スキームの同定がそのまま使える。
+\end{proof}
+
+\begin{corollary}\label{cor:smooth-point-curves-covered}
+点グラフが空でない滑らかな射影曲線と、これと交わらない有限スキームとの和なら、
+曲線は連結で、正則窓の全候補は次の四行で尽きる。
+\[
+\begin{array}{c|c|c|l}
+\text{次数}&\text{種数}&\text{有限部の長さ}&\text{正則性と添字保持同型の判定}\\ \hline
+3&1&8&\text{定理}\ \ref{thm:plane-cubic-point-graphs}\\
+4&1&4&\text{定理}\ \ref{thm:elliptic-quartic-as-test},\ \text{系}\ \ref{cor:elliptic-point-finite-atlas}\\
+5&1&0&\text{定理}\ \ref{thm:elliptic-quintic-regularity}\\
+7&5&0&\text{定理}\ \ref{thm:septic-bielliptic-forms}
+\end{array}
+\]
+特に有理正規三次に対する前節の残余平面と階数条件は同時には実現されない。
+\end{corollary}
+\begin{proof}
+滑らかな開閉成分では $T=B=0$ で、$K$ の次数は零である。
+成分を点ごとに保てば第二項から種数1となる。
+そうでなければ第一項から固定因子の長さは $2g-2$ であり、ここでも有理曲線は現れない。
+各成分の次数は従って少なくとも3で、総次数上限7により二成分があれば次数は $(3,3)$ または $(3,4)$。
+三次は種数1、四次の種数は高々3である。系\ref{cor:point-graph-excess}の超過交叉の証明を
+各開閉成分に適用すると、三次の寄与は12、残る成分の寄与も少なくとも12となり、総数20を超える。
+連結な曲線は既出の各次数の結果で足りる。次数4の平面曲線は隣接平面の積の点グラフの次数上限3で除かれ、
+次数6は定理\ref{thm:smooth-sextic-exclusion}で除かれる。
+\end{proof}
+
+\begin{corollary}\label{cor:nodal-fixed-count}
+被約な節点曲線が点グラフの開閉部分をなすとする。
+正規化成分の種数を $g$、その上の節点の枝の本数を $n$ とすると、
+四移動がその成分上で恒等なら $n=4-4g$、
+そうでなければ正規化上の固定イデアルの長さは $2g-2+n$ である。
+\end{corollary}
+\begin{proof}
+節点 $xy=0$ の $x$ 枝で余接層を引き戻すと自由な $dx$ と $x\,dy=0$ の直和となる。
+従って $B=0$、$T$ は全節点の逆像を一回ずつ数える。前定理の次数を取ればよい。
+\end{proof}
