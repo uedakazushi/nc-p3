@@ -593,6 +593,12 @@
       "current_result": "A finite Frobenius candidate with all four point correspondences graphs cannot have point scheme the disjoint union of a smooth integral sextic and a finite scheme. In the remaining hyperelliptic genus-three case two ruling pencils express the cubic quotient as a space of dimension at most eighteen, incompatible with the required twenty.",
       "current_proof": "sections/smooth_sextic_exclusion.tex",
       "global_coverage": false
+    },
+    {
+      "id": "GENUS-TWO-QUINTIC-EXCLUSION",
+      "current_result": "A smooth integral quintic point graph with disjoint isolated residual in a four-edge point-fiber finite Frobenius candidate must be elliptic with empty residual. In genus two the opposite contraction forces two alternating Weierstrass polarizations. Cyclic parity then forces three common commutators, giving an impossible complete intersection of degree eight supported on a sextic.",
+      "current_proof": "sections/genus_two_quintic_ruling.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -649,8 +655,8 @@
       }
     ]
   },
-  "date": "2026-11-23",
-  "version": 254,
+  "date": "2026-11-26",
+  "version": 255,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
