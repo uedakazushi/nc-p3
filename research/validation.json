@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 270,
+  "version": 271,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "2d087f4720dc5951dc6151a08b9685e53de3c0a6"
+    "source_commit": "a733123c3f01c66f3ddda808c2a9e7617f7908ba"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every connected reduced pure open-and-closed curve in a point-fiber graph has positive arithmetic genus. In genus one it is smooth elliptic or a rational nodal polygon. Five-line polygons are impossible: two opposite contractions of the Frobenius tensor would fix every vertex, whereas the canonical shift is a fixed-point-free rotation. This closes every reduced genus-one quintic hull, leaving only the two smooth elliptic classes."
+    "scope": "A line component gives a finite necessary and sufficient all-degree AS test: each opposite restriction along its shift orbit must have rank two. A conic component gives a mixed linear-quadratic syzygy test, also necessary and sufficient with embedded structures allowed. Their two-window atlases together with the two integral elliptic classes cover all quintic point graphs, reduced or not."
   },
   "checks": [
     {
-      "command": "python computations/verify_pentagon_node_ranks.py",
+      "command": "python computations/verify_low_degree_curve_as_tests.py",
       "result": "PASS"
     },
     {
@@ -40,13 +40,13 @@
     }
   ],
   "open_mathematics": [
-    "Analyze reduced genus-two quintic hulls with length-two discrepancy via their quadric and dualizing pencils, and nonreduced curves, reducible sextics and general AS tests."
+    "Use the plane cubic mark ideal in two adjacent planes to recognize normal linear parameters even at embedded points, and analyze twisted cubic marks and the remaining cubic/cubic and cubic/quartic supports. Continue higher-fiber and finite regimes."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 475,
-      "plan_ja": 11,
+      "nc-p3": 479,
+      "plan_ja": 10,
       "notes_ja": 21
     },
     "scope": "LuaLaTeX built the manuscript, plan and research notes."

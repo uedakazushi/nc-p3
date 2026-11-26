@@ -689,6 +689,13 @@
       "current_result": "Every connected reduced pure open-and-closed curve in a point-fiber graph has positive arithmetic genus. In genus one it is smooth elliptic or a rational nodal polygon. Five-line polygons are impossible: two opposite contractions of the Frobenius tensor would fix every vertex, whereas the canonical shift is a fixed-point-free rotation. This closes every reduced genus-one quintic hull, leaving only the two smooth elliptic classes.",
       "current_proof": "sections/genus_one_polygon_exclusion.tex",
       "global_coverage": false
+    },
+    {
+      "id": "ALL-LINE-CONIC-AND-QUINTIC-WINDOWS",
+      "current_result": "A line component gives a finite necessary and sufficient all-degree AS test: each opposite restriction along its shift orbit must have rank two. A conic component gives a mixed linear-quadratic syzygy test, also necessary and sufficient with embedded structures allowed. Their two-window atlases together with the two integral elliptic classes cover all quintic point graphs, reduced or not.",
+      "current_proof": "sections/line_component_as_test.tex",
+      "global_coverage": false,
+      "additional_proof": "sections/conic_component_as_test.tex"
     }
   ],
   "presentation_components": {
@@ -746,7 +753,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 270,
+  "version": 271,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
