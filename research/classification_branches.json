@@ -1081,6 +1081,12 @@
       "current_result": "At any rank without two-line corridors a twisted cubic second curve has generic residual matrix rank three: the other rank-two nets yield a (1,1) incidence scroll where the full edge divisor forces a surface projection or a second line. At rank ten the one remaining syzygy forces a third line and a quintic deficit. A line adjacent to a twisted cubic can only be the endpoint line on that side. Rank-ten branching therefore has either only conic second curves, with both orientations represented in every phase, or only (1,3,1) corridors with cyclic regular ternary endpoints, at most one per phase in each direction.",
       "current_proof": "sections/ternary_center_cubic_scroll.tex",
       "global_coverage": false
+    },
+    {
+      "id": "BRANCH-RANK-TEN-QUINTIC-CENTERS",
+      "current_result": "Every rank-ten standard regular window with all point projections of dimension at most one is unbranched. The cyclic regular ternary cubic option contradicts the square factor in its quintic deficit. In the all-conic configuration each phase has one forward and one backward center, and every corridor begins and ends with (1,2,1). A singular ternary center then annihilates its opposite forward center: its projected second conic and third line identify that point by its unique predecessor. The adjacent three-dimensional evaluation kernel forces the preceding center to have middle support at most two, already excluded. All remaining rank-ten recognition gaps therefore have four finite edges.",
+      "current_proof": "sections/rank_ten_quintic_centers.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1138,7 +1144,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 335,
+  "version": 336,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

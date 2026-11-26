@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 335,
+  "version": 336,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "3083ee3891a463c9eabdfb470f4ce5cb925bf737"
+    "source_commit": "605d09a99e8b99705a542f310634e985c63ae514"
   },
   "generation": {
     "result": "PASS",
-    "scope": "At any rank without two-line corridors a twisted cubic second curve has generic residual matrix rank three: the other rank-two nets yield a (1,1) incidence scroll where the full edge divisor forces a surface projection or a second line. At rank ten the one remaining syzygy forces a third line and a quintic deficit. A line adjacent to a twisted cubic can only be the endpoint line on that side. Rank-ten branching therefore has either only conic second curves, with both orientations represented in every phase, or only (1,3,1) corridors with cyclic regular ternary endpoints, at most one per phase in each direction."
+    "scope": "Every rank-ten standard regular window with all point projections of dimension at most one is unbranched. The cyclic regular ternary cubic option contradicts the square factor in its quintic deficit. In the all-conic configuration each phase has one forward and one backward center, and every corridor begins and ends with (1,2,1). A singular ternary center then annihilates its opposite forward center: its projected second conic and third line identify that point by its unique predecessor. The adjacent three-dimensional evaluation kernel forces the preceding center to have middle support at most two, already excluded. All remaining rank-ten recognition gaps therefore have four finite edges."
   },
   "checks": [
     {
-      "command": "python computations/verify_ternary_cubic_scroll.py",
+      "command": "python computations/verify_rank_ten_quintic_centers.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze the all-(1,3,1) rank-ten case using the two projected ternary pencils and the quintic forward/backward defects supported at distinct centers on each cubic; in the all-conic case exploit the cycles of adjacent centers and conflicting pure relations. Continue the finite reduced one-symmetric triples."
+    "Resolve rank-ten finite edges: in the reduced one-symmetric chart classify the unequal symmetric triples and decide AS at all exceptional points; extend five-space secants to nonreduced graphs. At higher rank continue the general recognition and isomorphism/period/specialization obligations."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 586,
+      "nc-p3": 589,
       "plan_ja": 12,
       "notes_ja": 24
     },
