@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 275,
+  "version": 276,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "5965e8b19c15592ae8150b757683ac8e3a26ab66"
+    "source_commit": "ecc2b57a8c06dd73f8674faeca409904cf5b1d6b"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For any full twisted-cubic point subgraph of a standard finite-Frobenius window with point fibers, every rank-two relation whose pencil has a basepoint gives a line module of Hilbert function n+1 with a principal first relation module, even before AS regularity. The expected Hilbert function in all windows is sufficient for Koszul two-sided AS regularity. A compatible pencil sequence ensures it, and the two secant determinant cubics each have a line factor or vanish identically."
+    "scope": "Prove all-degree regularity on the residual twisted cubic whenever the auxiliary binary determinant is integral (including nodal and cuspidal curves), identically zero, or has a ruling fiber. Integral genus-one addition links sets of at most four secant pencils in every position. The only remaining auxiliary divisors are pairs of (1,1) graphs and doubled (1,1) graphs."
   },
   "checks": [
     {
-      "command": "python computations/verify_twisted_cubic_line_modules.py",
+      "command": "python computations/verify_elliptic_binary_cubic_pencils.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine whether the embedded length-four first conormal neighborhood forces a compatible pencil sequence or another polynomial Hilbert bound on the residual twisted cubic. Continue the finite-point and higher-fiber branches and global specialization problem."
+    "Analyze the two Moebius-graph and doubled-graph degenerations of the auxiliary determinant. Then continue finite point graphs, higher projection fibers, and global parameter components and specializations."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 489,
+      "nc-p3": 491,
       "plan_ja": 10,
       "notes_ja": 21
     },

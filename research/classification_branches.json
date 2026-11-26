@@ -721,6 +721,12 @@
       "current_result": "For any full twisted-cubic point subgraph of a standard finite-Frobenius window with point fibers, every rank-two relation whose pencil has a basepoint gives a line module of Hilbert function n+1 with a principal first relation module, even before AS regularity. The expected Hilbert function in all windows is sufficient for Koszul two-sided AS regularity. A compatible pencil sequence ensures it, and the two secant determinant cubics each have a line factor or vanish identically.",
       "current_proof": "sections/twisted_cubic_line_modules.tex",
       "global_coverage": false
+    },
+    {
+      "id": "INTEGRAL-BINARY-CURVE-AND-VERTICAL-FIBER-REGULARITY",
+      "current_result": "Prove all-degree regularity on the residual twisted cubic whenever the auxiliary binary determinant is integral (including nodal and cuspidal curves), identically zero, or has a ruling fiber. Integral genus-one addition links sets of at most four secant pencils in every position. The only remaining auxiliary divisors are pairs of (1,1) graphs and doubled (1,1) graphs.",
+      "current_proof": "sections/elliptic_binary_cubic_pencils.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -778,7 +784,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 275,
+  "version": 276,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
