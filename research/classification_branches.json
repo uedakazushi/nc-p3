@@ -1069,6 +1069,12 @@
       "current_result": "At rank ten a four-support forward center with a twisted cubic second curve reaches a center on that cubic whose successor line is the flat limit of the general pencil kernels and whose own second curve is a conic. The original third curve is a line or conic, a conic is followed by a line, and the second normal form forces a third line. Thus every four-support center reaches a ternary center within three edges, even in a terminal recurrent class.",
       "current_proof": "sections/rank_ten_flat_kernel_lines.tex",
       "global_coverage": false
+    },
+    {
+      "id": "BRANCH-RANK-TEN-CUBIC-KERNEL-DIVISOR",
+      "current_result": "Every full-middle-support branching center at rank ten has a second conic, never a twisted cubic. On either ruled kernel surface the true edge scheme is a divisor of bidegree (4,1). Frobenius orthogonality lifts a successor over each generic local factor including its multiplicity. The remaining successor minors have first bidegree at most three, hence vanish identically and would give a surface projection. Such a center is immediately followed on its first line by a singular ternary center.",
+      "current_proof": "sections/rank_ten_cubic_kernel_divisor.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1126,7 +1132,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 333,
+  "version": 334,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

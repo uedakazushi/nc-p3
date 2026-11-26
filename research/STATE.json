@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-26",
-  "version": 333,
+  "version": 334,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -3435,6 +3435,15 @@
       "verification": [
         "computations/verify_rank_ten_flat_kernel_lines.py"
       ]
+    },
+    {
+      "id": "BRANCH-RANK-TEN-CUBIC-KERNEL-DIVISOR",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "Every full-middle-support branching center at rank ten has a second conic, never a twisted cubic. On either ruled kernel surface the true edge scheme is a divisor of bidegree (4,1). Frobenius orthogonality lifts a successor over each generic local factor including its multiplicity. The remaining successor minors have first bidegree at most three, hence vanish identically and would give a surface projection. Such a center is immediately followed on its first line by a singular ternary center.",
+      "proof": "sections/rank_ten_cubic_kernel_divisor.tex",
+      "verification": [
+        "computations/verify_rank_ten_cubic_kernel_divisor.py"
+      ]
     }
   ],
   "document_paths": {
@@ -3498,7 +3507,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "f53f091e0f119b86828133fd195b0b904046b537",
+  "reviewed_source_commit": "77d635c33d20b0d197cb9621367f5b307528de10",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -3507,14 +3516,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Analyze the ternary centers necessarily present in every terminal recurrent class at rank ten: separate regular and singular three-by-three pencils, their projected cubic configurations and pure-relation incidence. Continue the unequal triples in the finite reduced rank-ten chart.",
+    "immediate_next_action": "For a ternary center with cubic second curve, use the same divisor argument on the (1,1) incidence surface of the rank-two quadratic net, and examine the rank-three quintic-defect alternative. Use the required singular ternary center after every four-dimensional center to restrict terminal cycles. Continue the finite one-symmetric rank-ten case.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/rank_ten_flat_kernel_lines.tex",
-      "sections/binary_centers_quadric_cones.tex"
+      "sections/rank_ten_cubic_kernel_divisor.tex",
+      "sections/rank_ten_flat_kernel_lines.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "At rank ten a four-support forward center with a twisted cubic second curve reaches a center on that cubic whose successor line is the flat limit of the general pencil kernels and whose own second curve is a conic. The original third curve is a line or conic, a conic is followed by a line, and the second normal form forces a third line. Thus every four-support center reaches a ternary center within three edges, even in a terminal recurrent class. Full classification remains open.",
+    "state_of_claim": "Every full-middle-support branching center at rank ten has a second conic, never a twisted cubic. On either ruled kernel surface the true edge scheme is a divisor of bidegree (4,1). Frobenius orthogonality lifts a successor over each generic local factor including its multiplicity. The remaining successor minors have first bidegree at most three, hence vanish identically and would give a surface projection. Such a center is immediately followed on its first line by a singular ternary center. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

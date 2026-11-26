@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 333,
+  "version": 334,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "f53f091e0f119b86828133fd195b0b904046b537"
+    "source_commit": "77d635c33d20b0d197cb9621367f5b307528de10"
   },
   "generation": {
     "result": "PASS",
-    "scope": "At rank ten a four-support forward center with a twisted cubic second curve reaches a center on that cubic whose successor line is the flat limit of the general pencil kernels and whose own second curve is a conic. The original third curve is a line or conic, a conic is followed by a line, and the second normal form forces a third line. Thus every four-support center reaches a ternary center within three edges, even in a terminal recurrent class."
+    "scope": "Every full-middle-support branching center at rank ten has a second conic, never a twisted cubic. On either ruled kernel surface the true edge scheme is a divisor of bidegree (4,1). Frobenius orthogonality lifts a successor over each generic local factor including its multiplicity. The remaining successor minors have first bidegree at most three, hence vanish identically and would give a surface projection. Such a center is immediately followed on its first line by a singular ternary center."
   },
   "checks": [
     {
-      "command": "python computations/verify_rank_ten_flat_kernel_lines.py",
+      "command": "python computations/verify_rank_ten_cubic_kernel_divisor.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze the ternary centers necessarily present in every terminal recurrent class at rank ten: separate regular and singular three-by-three pencils, their projected cubic configurations and pure-relation incidence. Continue the unequal triples in the finite reduced rank-ten chart."
+    "For a ternary center with cubic second curve, use the same divisor argument on the (1,1) incidence surface of the rank-two quadratic net, and examine the rank-three quintic-defect alternative. Use the required singular ternary center after every four-dimensional center to restrict terminal cycles. Continue the finite one-symmetric rank-ten case."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 583,
+      "nc-p3": 584,
       "plan_ja": 12,
       "notes_ja": 24
     },
