@@ -913,6 +913,12 @@
       "current_result": "For all finite Frobenius windows an opposite coordinate product has dimension exactly ten or sixteen. Any single mixed bilinear equation forces the two-step identification and opposite tensor symmetry. The criterion is independent of marks, opposite tensor rank and AS regularity and applies to arbitrary nonreduced point schemes.",
       "current_proof": "sections/finite_opposite_product_gap.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FINITE-MARKED-TETRAHEDRAL-OFFDIAGONAL-PRODUCTS",
+      "current_result": "For a reduced tetrahedral rank-one section at a simple or curvilinear finite mark, all six off-diagonal products in the two opposite coordinate systems coincide after a single unit normalization. Without opposite symmetry, their six alternating differences have disjoint supports of length one or two on the corresponding pairs of lines. The four diagonal corrections are quadratic and at least three are nonzero.",
+      "current_proof": "sections/finite_marked_tetrahedral_products.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -970,7 +976,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 307,
+  "version": 308,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

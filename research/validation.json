@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 307,
+  "version": 308,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "01fa0a5ccda38105339175b3e3b8caecc89f6842"
+    "source_commit": "9fa9ac6a25e313f03f11d151a9b3b50c22a0263b"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For all finite Frobenius windows an opposite coordinate product has dimension exactly ten or sixteen. Any single mixed bilinear equation forces the two-step identification and opposite tensor symmetry. The criterion is independent of marks, opposite tensor rank and AS regularity and applies to arbitrary nonreduced point schemes."
+    "scope": "For a reduced tetrahedral rank-one section at a simple or curvilinear finite mark, all six off-diagonal products in the two opposite coordinate systems coincide after a single unit normalization. Without opposite symmetry, their six alternating differences have disjoint supports of length one or two on the corresponding pairs of lines. The four diagonal corrections are quadratic and at least three are nonzero."
   },
   "checks": [
     {
-      "command": "python computations/verify_finite_opposite_product_gap.py",
+      "command": "python computations/verify_finite_tetrahedral_products.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Use the marked secant defects and the ten-or-sixteen gap to force or exclude full opposite products, particularly in the length-four trace model; continue unresolved higher-rank, single-symmetry and branching AS cases."
+    "Test the diagonal corrections against the adjacent complete intersection and extend the tetrahedral identities to nonreduced rank-one sections; continue the planar marks, higher ranks and branching cases."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 543,
+      "nc-p3": 544,
       "plan_ja": 12,
       "notes_ja": 23
     },
