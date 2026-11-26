@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 280,
+  "version": 281,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "6487b85e6360f67cb0d0cea39960415600461308"
+    "source_commit": "8da0a1c158019ce43fe25ba31f62c6efe5d4fa91"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every finite rank-nine window with a simple local component and four-dimensional middle supports has at least one symmetric opposite pair. An irreducible four-plane in sl3 has at least three independent commutators. A rank-at-most-two generator of the remaining symmetric quadratic kernel certifies regularity. The open cases in this stratum reduce to rank-three or rank-four symmetric kernels."
+    "scope": "For any finite point graph with an opposite symmetry and a smooth generator of its one-dimensional symmetric quadratic kernel, simultaneous surjectivity in one binary direction forces bisymmetry, including repeated eigenvalues. The only other alternative has exponential growth. The bisymmetric finite test therefore decides regularity throughout this stratum."
   },
   "checks": [
     {
-      "command": "python computations/verify_rank_nine_finite_symmetry.py",
+      "command": "python computations/verify_smooth_kernel_binary_transfer.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze the two binary factors of a rank-four symmetric kernel and the degenerate rank-three case. Also treat finite graphs with no simple component, higher opposite ranks, positive-dimensional fibers and global specializations."
+    "Analyze the rank-three symmetric kernel, finite graphs with no simple component, higher opposite ranks, positive-dimensional fibers and global components and specializations."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 498,
+      "nc-p3": 501,
       "plan_ja": 11,
       "notes_ja": 21
     },

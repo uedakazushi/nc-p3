@@ -751,6 +751,12 @@
       "current_result": "Every finite rank-nine window with a simple local component and four-dimensional middle supports has at least one symmetric opposite pair. An irreducible four-plane in sl3 has at least three independent commutators. A rank-at-most-two generator of the remaining symmetric quadratic kernel certifies regularity. The open cases in this stratum reduce to rank-three or rank-four symmetric kernels.",
       "current_proof": "sections/rank_nine_finite_symmetry.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SMOOTH-SYMMETRIC-KERNEL-FINITE-GRAPH",
+      "current_result": "For any finite point graph with an opposite symmetry and a smooth generator of its one-dimensional symmetric quadratic kernel, simultaneous surjectivity in one binary direction forces bisymmetry, including repeated eigenvalues. The only other alternative has exponential growth. The bisymmetric finite test therefore decides regularity throughout this stratum.",
+      "current_proof": "sections/smooth_kernel_binary_transfer.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -808,7 +814,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 280,
+  "version": 281,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
