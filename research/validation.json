@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 309,
+  "version": 310,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "6b63db541f61d17477d0047dc7b793f2ee40683c"
+    "source_commit": "0d29f0783ac58f1ade87e812e38b837a91fc7789"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Pure-relation-free branching without a surface or a two-line corridor, in particular at opposite ranks 9 through 11, has exactly one forward and one backward center in each of two opposite positions. The only possible pairs of corridor lengths are (3,3),(3,7),(5,5). The degree-ten determinantal tangent obstruction excludes adjacent or isolated occupied positions."
+    "scope": "Pure-relation-free branching without surfaces requires opposite rank at least eleven. Opposite forward and backward centers have successor and predecessor lines meeting at one point. Their marked row spaces meet in one rank-one matrix; at rank eleven their sum is the full perpendicular of the crossing point and the resulting quotient bundle has splitting (2,1,1)."
   },
   "checks": [
     {
-      "command": "python computations/verify_branch_opposite_phases.py",
+      "command": "python computations/verify_branch_rank_eleven_floor.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze the three remaining pure-free branch profiles using their binary cubic middle transitions and exceptional contacts; continue finite tetrahedral and higher-rank AS cases."
+    "Analyze the rank-eleven crossing pencils and central cubic contacts, cover pure-relation branches at ranks eight and above, and continue finite high-rank AS tests."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 546,
+      "nc-p3": 547,
       "plan_ja": 12,
       "notes_ja": 23
     },
