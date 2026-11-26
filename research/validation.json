@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 338,
+  "version": 339,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "bfef6975bee18ed19bf17ecfb33bc9caca3f3e9a"
+    "source_commit": "67668ebd63e7d22bd9cb7061b8a47b3361153103"
   },
   "generation": {
     "result": "PASS",
-    "scope": "At a simple five-space mark of any curvilinear finite graph with full middle support, projected evaluation valuations exclude every ruling. Six reduced nodes force a secant collision at a nonsimple graph point, and a conic with two detached reduced nodes forces symmetry. For seventeen simple points and one curvilinear triple point, opposite rank ten forces symmetry and rank eleven is impossible."
+    "scope": "A finite full-middle-support graph on at least eighteen geometric sites forces opposite symmetry at opposite rank ten and excludes rank eleven. For two double points, two first jets in a confluent six-node square configuration force a forbidden secant equality. Each conic with an embedded node puts the simple mark on the fixed line through both double points, leaving at most one exceptional mark per parity. In a reduced six-node slice every nonsimple graph point has proportional contractions."
   },
   "checks": [
     {
-      "command": "python computations/verify_curvilinear_pencils.py",
+      "command": "python computations/verify_confluent_secant_squares.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Treat the two-double graph. In the five-node degeneration, compare the confluent square relations for the four simple nodes and one dual-number node. For the conic plus an embedded point test whether the two moving pencils at distinct conic secants can simultaneously exhaust the two excess lengths. Analyze the commutator discriminant on the one-sided symmetric rank-ten branch."
+    "Study the one-sided symmetric rank-ten finite branch by computing the commutator discriminant for two symmetric nets with four-dimensional sum. For graphs on seventeen or fewer sites analyze how confluent secants and re-marking behave when an additional unit of length is lost."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 594,
+      "nc-p3": 596,
       "plan_ja": 12,
       "notes_ja": 25
     },

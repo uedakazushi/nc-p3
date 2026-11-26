@@ -1099,6 +1099,12 @@
       "current_result": "At a simple five-space mark of any curvilinear finite graph with full middle support, projected evaluation valuations exclude every ruling. Six reduced nodes force a secant collision at a nonsimple graph point, and a conic with two detached reduced nodes forces symmetry. For seventeen simple points and one curvilinear triple point, opposite rank ten forces symmetry and rank eleven is impossible.",
       "current_proof": "sections/finite_curvilinear_pencils.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FINITE-EIGHTEEN-SITES",
+      "current_result": "A finite full-middle-support graph on at least eighteen geometric sites forces opposite symmetry at opposite rank ten and excludes rank eleven. For two double points, two first jets in a confluent six-node square configuration force a forbidden secant equality. Each conic with an embedded node puts the simple mark on the fixed line through both double points, leaving at most one exceptional mark per parity. In a reduced six-node slice every nonsimple graph point has proportional contractions.",
+      "current_proof": "sections/finite_two_double_five_space.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1156,7 +1162,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 338,
+  "version": 339,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
