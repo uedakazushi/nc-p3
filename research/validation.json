@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 289,
+  "version": 290,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "16fbd562a5c3f7e07ba30fdbc9afa09b46209a23"
+    "source_commit": "87bacfa0eade7c702194e9baa0408f2fb62a5961"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All bi-infinite birational chains of integral quadrics in regular windows extend to projective isomorphisms. In the absence of decomposable quadratic relations every surface projection belongs to the established polynomial, normal-plane, smooth-quadric or cone quotient classifications, including possible isolated exceptional fibers."
+    "scope": "Every generically birational chain of surface components containing a plane is a chain of projective planes with linear transitions. A plane Koszul sheaf complex exact off finitely many points is exact everywhere. Consequently all regular windows with surface projections and only isolated exceptional line fibers belong to the established lists, even in the presence of pure relations."
   },
   "checks": [
     {
-      "command": "python computations/verify_birational_quadric_chains.py",
+      "command": "python computations/verify_isolated_surface_fibers.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze plane and quadric transitions with pure relations, the remaining curve correspondences with branching and finite windows outside the classified rank and symmetry charts."
+    "Decide whether a moving plane pencil can occur, and classify the remaining branching curve and finite point windows."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 518,
+      "nc-p3": 519,
       "plan_ja": 11,
       "notes_ja": 22
     },

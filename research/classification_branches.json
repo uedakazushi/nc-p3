@@ -805,6 +805,12 @@
       "current_result": "All bi-infinite birational chains of integral quadrics in regular windows extend to projective isomorphisms. In the absence of decomposable quadratic relations every surface projection belongs to the established polynomial, normal-plane, smooth-quadric or cone quotient classifications, including possible isolated exceptional fibers.",
       "current_proof": "sections/birational_quadric_chains.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SURFACE-COVERAGE-ISOLATED-LINE-FIBERS",
+      "current_result": "Every generically birational chain of surface components containing a plane is a chain of projective planes with linear transitions. A plane Koszul sheaf complex exact off finitely many points is exact everywhere. Consequently all regular windows with surface projections and only isolated exceptional line fibers belong to the established lists, even in the presence of pure relations.",
+      "current_proof": "sections/isolated_surface_fibers.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -862,7 +868,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 289,
+  "version": 290,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
