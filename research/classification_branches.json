@@ -1117,6 +1117,12 @@
       "current_result": "Finite curvilinear graphs on seventeen sites with full middle support force symmetry at opposite rank ten. Rank eleven is excluded there as well: four shared finite marks force all three double points into a common plane, leaving no room for any opposite exceptional mark. An embedded conic pencil charges the double weight of a fixed kernel line, forcing each exceptional mark onto the secant of a length-two scheme supported on nonsimple graph points. At a confluent six-node slice the relative first-jet speed on both hyperplane cuts is identical.",
       "current_proof": "sections/finite_seventeen_site_pencils.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FINITE-SEVENTEEN-ALL",
+      "current_result": "On every finite full-middle-support graph with at least seventeen geometric sites, opposite rank ten forces an opposite symmetry and rank eleven is impossible. At a planar Gorenstein length-four site, embedded conic pencils select one of two isotropic tangent directions. The only loss in the projected ruling bound is a socle contact, which produces rulings with the same tangent-plane factor in both re-marked four-spaces; the two-space incidence count then excludes it globally.",
+      "current_proof": "sections/finite_planar_four_seventeen.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1174,7 +1180,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 341,
+  "version": 342,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
