@@ -1267,6 +1267,12 @@
       "current_result": "For zero diagonal brackets all 47,492 potential Klein supports reduce to 2,038 orbits, and 2,036 have an explicit monomial quotient of exponential growth. The unique surviving sparse orbit has a two-parameter normal form regular at every nonzero pair, including the square-matrix rank drop. Its two normal regular squares, 128 Laurent diamond identities, full graded basis, and linear self-dual resolution give all-degree certification.",
       "current_proof": "sections/marked_klein_zero_bracket_boundary.tex",
       "global_coverage": false
+    },
+    {
+      "id": "MARKED-KLEIN-ZERO-BRACKET-TORUS",
+      "current_result": "All closed points in every support of the homogeneous Klein marked bracket chart now have exact AS decisions, including the full zero-diagonal torus. Its four presentations use two signs and two nonzero spectral coordinates. Opposite signs are AS exactly off xy+x+y=0. Equal signs are always AS by smooth diagonal pencil or reducible pencil and evaluation, with the other case related by cocycle twist. Both equal-sign branches are graded; every regular window in the entire homogeneous marked chart has period dividing two.",
+      "current_proof": "sections/marked_klein_zero_bracket_torus.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1324,7 +1330,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 366,
+  "version": 367,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

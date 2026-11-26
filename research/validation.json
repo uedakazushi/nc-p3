@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 366,
+  "version": 367,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "26aa50e11e0f91f787ad87f1fcbaab9c77637a18"
+    "source_commit": "4c0b9754e4ededa9403d5c1ff137ee62fdddf8f0"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For zero diagonal brackets all 47,492 potential Klein supports reduce to 2,038 orbits, and 2,036 have an explicit monomial quotient of exponential growth. The unique surviving sparse orbit has a two-parameter normal form regular at every nonzero pair, including the square-matrix rank drop. Its two normal regular squares, 128 Laurent diamond identities, full graded basis, and linear self-dual resolution give all-degree certification."
+    "scope": "All closed points in every support of the homogeneous Klein marked bracket chart now have exact AS decisions, including the full zero-diagonal torus. Its four presentations use two signs and two nonzero spectral coordinates. Opposite signs are AS exactly off xy+x+y=0. Equal signs are always AS by smooth diagonal pencil or reducible pencil and evaluation, with the other case related by cocycle twist. Both equal-sign branches are graded; every regular window in the entire homogeneous marked chart has period dividing two."
   },
   "checks": [
     {
-      "command": "python computations/verify_klein_zero_bracket_boundary.py",
+      "command": "python computations/verify_klein_zero_bracket_torus.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Resolve the remaining full-support zero-bracket orbit, its Sklyanin and Walsh presentations, then compare unmarked classes of zero-bracket windows and generalize the monomial exclusion to larger branches."
+    "Extend the marked exponential growth obstruction beyond Klein supports using flags and coordinate-independent free monomial quotients. Determine the geometric cover of windows not meeting these charts, especially high-rank ones without symmetry."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 647,
+      "nc-p3": 649,
       "plan_ja": 14,
       "notes_ja": 26
     },
