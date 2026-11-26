@@ -1,0 +1,70 @@
+% !TeX root = ../papers/nc-p3.tex
+\section{三交換子の判別三次式と巡回行列からの復元}
+\label{sec:marked-three-commutators}
+\begin{proposition}\label{prop:marked-mixed-discriminant}
+単純印を持つ有限窓の $q=3$, $g=4$ の場合に、定理\ref{thm:marked-common-triple-symmetry}の
+基底で $P=Q$ とし、跡零対称行列の五空間 $S$ 内の二つの三平面を $G,F$ とする。
+$G+F=N^\perp$ と跡対合で書き、$G\cap F=\langle H_1,H_2\rangle$ とする。
+交代添字 $s\wedge t$ に対応する三座標を $v=s\times t$ とすれば、固定した非零定数を除いて
+\[
+          \det[Q_s,Q_t]=
+          \operatorname{tr}\!\left([v]_\times[H_1,H_2]\right)\, v^t N v .
+\]
+従って常に特異交換子の直線があり、恒等零となる必要十分条件は $H_1,H_2$ の可換性である。
+重複因子、可約二次式、等方方向を許す。
+\end{proposition}
+\begin{proof}
+$K=[v]_\times$ は外積行列とし、$S$ 上に $\omega_v(X,Y)=\operatorname{tr}(K[X,Y])$ を取る。
+交換子式により $[Q_s,Q_t]$ の成分は $G,F$ の順序付き基底での混合行列の成分の一定倍である。
+従って $G$ の基底を $H_1,H_2,X$、$F$ の基底を $H_1,H_2,Y$ に替えたとき
+行列式は非零定数しか変わらない。混合行列式を展開すると
+$\omega_v(H_1,H_2)$ と、$H_1,H_2,X,Y$ 上の $\omega_v$ のPfaffianの積になる。
+
+$\omega_v$ の根基は $K$ と交換する跡零対称行列である。
+$0\ne v$ なら $K$ は巡回行列である。実際 $v^tv\ne0$ なら固有値が相異なり、
+$v^tv=0$ なら $K^2=vv^t\ne0$, $K^3=0$。従って根基は
+$T_v=vv^t-(v^tv)I/3$ の直線である。
+体積形式を固定して $\omega_v\wedge\omega_v/2$ を $S$ のベクトルとみなすと
+各成分は $v$ の二次式で、根基に入る。$T_v$ の成分に共通因子はない
+（非対角の三単項式だけで足りる）。よってそのベクトルは $T_v$ の非零定数倍である。
+四平面でのPfaffianは従って $\operatorname{tr}(N T_v)=v^tNv$ の一定倍である。
+$N\ne0$ と交代空間での跡対合の非退化性より最後の主張も従う。
+\end{proof}
+
+\begin{proposition}\label{prop:marked-three-commutators-reconstruction}
+$q=3$, $g>3$ で三つの指定交換子が独立の場合、対称三列 $G,F$ を固定すれば、
+適当な有限個の方向を使って、$Q$ の復元を跡零行列 $X$ 一つの二次以下の条件と
+線型方程式の整合性で被覆できる。具体的に基底 $s,t,u$ で指定値を
+$C=[Q_s,Q_t]$, $D=[Q_s,Q_u]$, $L=[Q_t,Q_u]$ と読む。
+\begin{enumerate}
+\item $X$ の最小多項式が三次で、$\operatorname{tr}XC=\operatorname{tr}XD
+=\operatorname{tr}X^2 C=\operatorname{tr}X^2 D=0$ となる跡零行列を取る。
+\item $[X,Y_0]=C$, $[X,Z_0]=D$ の跡零の一解ずつを取る。
+$X'=X^2-\operatorname{tr}(X^2)I/3$ とすると、残りの式はただ一つの線型系
+\[
+ L-[Y_0,Z_0]= aD+b(XD+DX)-cC-d(XC+CX)
+\]
+である。全ての解から $Q_s=X$, $Q_t=Y_0+aX+bX'$, $Q_u=Z_0+cX+dX'$ を得る。
+\end{enumerate}
+これは指定した印付き交換子の全解のうち $Q$ が既約なものを覆う。
+得られた行列には元の点窓および正則性の条件が別に必要である。
+\end{proposition}
+\begin{proof}
+巡回 $X$ の中心化環は $I,X,X^2$ の張る可換環で、$[X,-]$ の像はその跡直交補である。
+$C,D$ の跡は交換子なので既に零である（候補 $G,F$ から始めるなら最初に三つの指定値の
+跡を検査する）。これで一解の存在と一般解の表示が従う。
+両中心化元の交換子は零、$[X^2,Z_0]=XD+DX$ などを代入すれば表示の線型系となり、
+これを解けば三つの指定値を全て復元する。
+
+最後に方向を有限個で選べることを示す。三平面の全元 $X$ が非巡回なら、非零跡零元は
+二つの固有値のうち重複固有値の固有空間が二次元以上か、平方零で階数1以下である。
+$\operatorname{tr}(X^2)$ が恒等零なら全元が後者となる。それ以外では三平面上の多項式恒等式
+$(\operatorname{tr}X^2)^3=6(\operatorname{tr}X^3)^2$ が成立する。
+一意分解により非零定数を除いて二次式は一次式の平方、三次式はその立方であり、
+重複固有値 $-\operatorname{tr}(X^3)/\operatorname{tr}(X^2)$ は一次式 $\lambda(X)$ に延びる。
+従って前者でも $X-\lambda(X)I$ は全三平面で階数1以下である。階数1以下の線型空間は
+像直線を共有するか核平面を共有するので、元の三列の既約性に反する。
+従って $I,X,X^2$ の独立を検出する三次小行列の一つは $s$ の非零な三次式である。
+例えば $s=(1,i,j)$, $0\le i,j\le3$ の十六方向を取ればどれかで非零となる。
+各方向は一度だけ基底に補えばよい。
+\end{proof}

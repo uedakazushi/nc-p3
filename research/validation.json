@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 339,
+  "version": 340,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "67668ebd63e7d22bd9cb7061b8a47b3361153103"
+    "source_commit": "d538cc15624ce535121fac7ca125f1d6c3bba915"
   },
   "generation": {
     "result": "PASS",
-    "scope": "A finite full-middle-support graph on at least eighteen geometric sites forces opposite symmetry at opposite rank ten and excludes rank eleven. For two double points, two first jets in a confluent six-node square configuration force a forbidden secant equality. Each conic with an embedded node puts the simple mark on the fixed line through both double points, leaving at most one exceptional mark per parity. In a reduced six-node slice every nonsimple graph point has proportional contractions."
+    "scope": "In the marked one-sided symmetric finite branch with symmetric nets spanning a four-space, the determinant of the prescribed commutator is the product of the linear commutator of their common plane and the conic of their trace normal. It vanishes identically exactly when the common plane commutes. For three independent target brackets and either four- or five-dimensional sum, every irreducible realizing triple is reconstructed on sixteen cyclic charts from one traceless matrix satisfying two linear and two quadratic trace equations and linear consistency conditions."
   },
   "checks": [
     {
-      "command": "python computations/verify_confluent_secant_squares.py",
+      "command": "python computations/verify_mixed_commutator_discriminant.py",
       "result": "PASS"
     },
     {
@@ -40,13 +40,13 @@
     }
   ],
   "open_mathematics": [
-    "Study the one-sided symmetric rank-ten finite branch by computing the commutator discriminant for two symmetric nets with four-dimensional sum. For graphs on seventeen or fewer sites analyze how confluent secants and re-marking behave when an additional unit of length is lost."
+    "Analyze the three-bracket reconstruction on the line of singular commutators, especially the common commuting plane and rank drops of the conic. Use finite-edge and growth obstructions to identify or exclude positive-dimensional solution charts. Continue the nonreduced finite-graph branch at seventeen sites."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 596,
-      "plan_ja": 12,
+      "nc-p3": 597,
+      "plan_ja": 13,
       "notes_ja": 25
     },
     "scope": "LuaLaTeX built the manuscript, plan and research notes."

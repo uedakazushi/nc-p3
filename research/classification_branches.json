@@ -1105,6 +1105,12 @@
       "current_result": "A finite full-middle-support graph on at least eighteen geometric sites forces opposite symmetry at opposite rank ten and excludes rank eleven. For two double points, two first jets in a confluent six-node square configuration force a forbidden secant equality. Each conic with an embedded node puts the simple mark on the fixed line through both double points, leaving at most one exceptional mark per parity. In a reduced six-node slice every nonsimple graph point has proportional contractions.",
       "current_proof": "sections/finite_two_double_five_space.tex",
       "global_coverage": false
+    },
+    {
+      "id": "MARKED-THREE-COMMUTATORS",
+      "current_result": "In the marked one-sided symmetric finite branch with symmetric nets spanning a four-space, the determinant of the prescribed commutator is the product of the linear commutator of their common plane and the conic of their trace normal. It vanishes identically exactly when the common plane commutes. For three independent target brackets and either four- or five-dimensional sum, every irreducible realizing triple is reconstructed on sixteen cyclic charts from one traceless matrix satisfying two linear and two quadratic trace equations and linear consistency conditions.",
+      "current_proof": "sections/marked_three_commutators.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1162,7 +1168,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 339,
+  "version": 340,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
