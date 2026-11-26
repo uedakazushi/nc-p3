@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 259,
+  "version": 260,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "6bd71065a4163aaf2db3e560dba0ceb4b5f70d9a"
+    "source_commit": "bf802474a5ffe18c4ec40d0367506bdc1d1032a4"
   },
   "generation": {
     "result": "PASS",
-    "scope": "A finite Frobenius four-edge point-fiber graph cannot be a smooth integral rational quartic with disjoint finite residual. Seven mixed relations give a balanced quadratic syzygy bundle and a five-dimensional full cubic overlap. The required four-dimensional suboverlap would force a Hankel determinant simultaneously zero and nonzero. Smooth integral quartics with disjoint residual are elliptic with isolated length four."
+    "scope": "Smooth plane cubic point graphs with disjoint finite residual are exactly all central PBW homogenizations of the three-dimensional smooth elliptic Sklyanin algebras with translation outside E[3]. This holds starting just with finite Frobenius and point fibers: consecutive pure relations rule out deficient transverse matrices, stability of the plane evaluation bundles gives cubic injectivity, and the ordinary central presentation follows. The residual is the length-eight affine critical scheme of an explicit cubic. All classes have bare period one."
   },
   "checks": [
     {
-      "command": "python computations/verify_rational_quartic_exclusion.py",
+      "command": "python computations/verify_plane_cubic_point_graphs.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Treat smooth plane cubic point components and the nonplanar twisted cubic; use the restricted ternary relations on plane graphs and the binary four-factor tensor on the twisted cubic. Other singular, reducible, nonreduced and finite high-rank graphs remain open."
+    "Classify nonplanar twisted cubic windows using binary divisibility of the cyclic tensor and the six-point residual. Other remaining branches include lower degrees, singular curves and high-rank finite point schemes."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 452,
+      "nc-p3": 454,
       "plan_ja": 10,
       "notes_ja": 20
     },

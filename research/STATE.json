@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-26",
-  "version": 259,
+  "version": 260,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -2766,6 +2766,15 @@
       "verification": [
         "computations/verify_rational_quartic_exclusion.py"
       ]
+    },
+    {
+      "id": "PLANE-CUBIC-POINT-GRAPHS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "Smooth plane cubic point graphs with disjoint finite residual are exactly all central PBW homogenizations of the three-dimensional smooth elliptic Sklyanin algebras with translation outside E[3]. This holds starting just with finite Frobenius and point fibers: consecutive pure relations rule out deficient transverse matrices, stability of the plane evaluation bundles gives cubic injectivity, and the ordinary central presentation follows. The residual is the length-eight affine critical scheme of an explicit cubic. All classes have bare period one.",
+      "proof": "sections/plane_cubic_point_graphs.tex",
+      "verification": [
+        "computations/verify_plane_cubic_point_graphs.py"
+      ]
     }
   ],
   "document_paths": {
@@ -2829,7 +2838,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "6bd71065a4163aaf2db3e560dba0ceb4b5f70d9a",
+  "reviewed_source_commit": "bf802474a5ffe18c4ec40d0367506bdc1d1032a4",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -2838,14 +2847,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Treat smooth plane cubic point components and the nonplanar twisted cubic; use the restricted ternary relations on plane graphs and the binary four-factor tensor on the twisted cubic. Other singular, reducible, nonreduced and finite high-rank graphs remain open.",
+    "immediate_next_action": "Classify nonplanar twisted cubic windows using binary divisibility of the cyclic tensor and the six-point residual. Other remaining branches include lower degrees, singular curves and high-rank finite point schemes.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/rational_quartic_exclusion.tex",
-      "sections/elliptic_quintic_regularity.tex"
+      "sections/plane_cubic_point_graphs.tex",
+      "sections/rational_quartic_exclusion.tex"
     ],
     "known_obstruction": "General windows can lack a recognized symmetry or Ore mark. All-degree AS membership is open for such candidates, including finite locally planar cases.",
-    "state_of_claim": "A finite Frobenius four-edge point-fiber graph cannot be a smooth integral rational quartic with disjoint finite residual. Seven mixed relations give a balanced quadratic syzygy bundle and a five-dimensional full cubic overlap. The required four-dimensional suboverlap would force a Hankel determinant simultaneously zero and nonzero. Smooth integral quartics with disjoint residual are elliptic with isolated length four. Full classification remains open.",
+    "state_of_claim": "Smooth plane cubic point graphs with disjoint finite residual are exactly all central PBW homogenizations of the three-dimensional smooth elliptic Sklyanin algebras with translation outside E[3]. This holds starting just with finite Frobenius and point fibers: consecutive pure relations rule out deficient transverse matrices, stability of the plane evaluation bundles gives cubic injectivity, and the ordinary central presentation follows. The residual is the length-eight affine critical scheme of an explicit cubic. All classes have bare period one. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

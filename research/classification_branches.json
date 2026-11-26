@@ -623,6 +623,12 @@
       "current_result": "A finite Frobenius four-edge point-fiber graph cannot be a smooth integral rational quartic with disjoint finite residual. Seven mixed relations give a balanced quadratic syzygy bundle and a five-dimensional full cubic overlap. The required four-dimensional suboverlap would force a Hankel determinant simultaneously zero and nonzero. Smooth integral quartics with disjoint residual are elliptic with isolated length four.",
       "current_proof": "sections/rational_quartic_exclusion.tex",
       "global_coverage": false
+    },
+    {
+      "id": "PLANE-CUBIC-POINT-GRAPHS",
+      "current_result": "Smooth plane cubic point graphs with disjoint finite residual are exactly all central PBW homogenizations of the three-dimensional smooth elliptic Sklyanin algebras with translation outside E[3]. This holds starting just with finite Frobenius and point fibers: consecutive pure relations rule out deficient transverse matrices, stability of the plane evaluation bundles gives cubic injectivity, and the ordinary central presentation follows. The residual is the length-eight affine critical scheme of an explicit cubic. All classes have bare period one.",
+      "current_proof": "sections/plane_cubic_point_graphs.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -680,7 +686,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 259,
+  "version": 260,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
