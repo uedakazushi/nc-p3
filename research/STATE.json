@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-26",
-  "version": 273,
+  "version": 274,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -2895,6 +2895,15 @@
         "computations/verify_reducible_septic_coverage.py"
       ],
       "additional_proof": "sections/reducible_septic_coverage.tex"
+    },
+    {
+      "id": "BINARY-SEXTIC-EXCLUSION-AND-HIGH-CURVE-COVERAGE",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "Exclude a sextic union of two twisted cubics for every length-four gluing. The cross-component degree-(1,1) correspondence determines its polarization, while an exchanging canonical involution forces the general trisecants into a smooth quadric even at nonreduced intersections. Thus all one-dimensional point-fiber graphs of degree at least four have finite AS/isomorphism atlases; among smaller degrees the only remaining unmarked hull is a twisted cubic with length-six defect.",
+      "proof": "sections/binary_sextic_exclusion.tex",
+      "verification": [
+        "computations/verify_binary_sextic_exclusion.py"
+      ]
     }
   ],
   "document_paths": {
@@ -2958,7 +2967,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "129be9c89f418d2ef03c9a7492cc023d492e3da7",
+  "reviewed_source_commit": "f9380c4c008ed2853a60b82b5a2aa483aa57858a",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -2967,14 +2976,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Study a length-four intersection of two twisted cubics: separate the hyperelliptic matching from the canonical conic pair, use opposite rank divisors and trisecants, and analyze the surviving component permutations. Also address rational cubic hulls with embedded defects, general finite windows and positive fibers.",
+    "immediate_next_action": "For a twisted cubic hull with finite length-six discrepancy, study the first conormal neighborhood and the opposite determinants at embedded directions. Continue the general finite-point and positive-dimensional-fiber AS tests and the global component/specialization problem.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/reducible_septic_coverage.tex",
-      "sections/opposite_curve_divisor.tex"
+      "sections/binary_sextic_exclusion.tex",
+      "sections/reducible_septic_coverage.tex"
     ],
     "known_obstruction": "General windows can lack a recognized symmetry or Ore mark. All-degree AS membership is open for such candidates, including finite locally planar cases.",
-    "state_of_claim": "The split and nonsplit double twisted cubics are impossible. For the nonsplit ribbon the Picard recurrence forces an ordinary unipotent shift and exact cyclic chart elimination contradicts embedding. No union of a twisted cubic and an integral quartic can be septic. All septic point graphs now have finite AS/isomorphism atlases; the only residual sextic support without established marks is two twisted cubics meeting in length four. Full classification remains open.",
+    "state_of_claim": "Exclude a sextic union of two twisted cubics for every length-four gluing. The cross-component degree-(1,1) correspondence determines its polarization, while an exchanging canonical involution forces the general trisecants into a smooth quadric even at nonreduced intersections. Thus all one-dimensional point-fiber graphs of degree at least four have finite AS/isomorphism atlases; among smaller degrees the only remaining unmarked hull is a twisted cubic with length-six defect. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

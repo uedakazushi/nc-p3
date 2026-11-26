@@ -2,7 +2,7 @@
 
 **共同研究：** 本リポジトリは大川新之介・植田一石の共同研究プロジェクトです。この表示は個々の論文の著者を確定するものではありません。
 
-**2026-11-26 / v273。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-26 / v274。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -115,6 +115,8 @@ Walsh三次元族を含む十五次元成分と、そこから出る周期2の�
 点グラフ内に平面三次があれば、埋込み点や重複成分を許しても中心一次PBW表示と最小周期1が強制される。[平面三次の印からの復元](sections/plane_cubic_mark_normality.tex)
 
 有理正規三次の二重曲線を全て排除し、七次点グラフの全窓を四行の有限アトラスで被覆した。六次で既出の印を持たない場合に残るのは二本の有理正規三次だけである。[二重曲線](sections/double_twisted_cubic_exclusion.tex)・[七次の被覆](sections/reducible_septic_coverage.tex)
+
+六次の最後の候補であった二本の有理正規三次の和を、非被約な交点も含めて排除した。点ファイバーで一次元の点グラフは次数4以上の全窓が被覆された。[六次の証明と全次数の残余](sections/binary_sextic_exclusion.tex)
 
 非恒等の平面グラフを基底に持つOre窓では、指定点を忘れた同型類も決定した。[正規形と平坦特殊化](sections/plane_graph_ore_windows.tex)・[検算](computations/verify_plane_graph_ore.py)
 
