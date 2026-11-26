@@ -1,0 +1,95 @@
+% !TeX root = ../papers/nc-p3.tex
+\section{可逆交換子を持つ鉛筆の復元階数と例外直線}
+\label{sec:marked-bracket-pencil-rank}
+\begin{theorem}\label{thm:marked-bracket-pencil-rank}
+三独立な指定交換子の一般鉛筆 $N=B(s\wedge V)$ を取り、$N$ に可逆元があるとする。
+$X=Q_s$ の復元における四係数の線型系
+（命題\ref{prop:marked-three-commutators-reconstruction}）の階数は3または4である。
+階数3のとき $\{X,K\}=XK+KX\in N$ となる方向 $[K]\in\mathbf P(N)$ はただ一つである。
+特異な $K$ は $\det|_N$ の重根に限る。可逆な $K$ が例外方向になる場合には、
+全交換子空間 $\mathcal C$ 上の既知の二次式
+\[
+ \mathcal F(K\wedge T)=(\operatorname{tr} KT)^2-2\operatorname{tr}(KTKT)
+\]
+の零点が直線 $\mathbf P(K\wedge\mathcal C)$ を含む。
+特に $\det|_{\mathcal C}$ が被約三次曲線を定め、$\mathcal F$ が恒等零でなければ、
+一般の $s$ で全ての復元解の線型系は階数4になる。
+\end{theorem}
+\begin{proof}
+$C=[X,Y]$ を可逆に選ぶ。$X$ が非巡回ならスカラーを引いて階数1以下であり、
+$[X,Y]$ の階数は2以下なので、$X$ は必ず巡回である。
+$T_X(C)=XC+CX$ と書くと線型系の像は $N+T_X N$ である。
+$C,T_X C,T_X^2 C$ は常に独立である。実際 $T_X C=[X^2,Y]$、
+$T_X^2 C=[X^3,Y]+XCX$ で、Cayley--Hamiltonにより $[X^3,Y]$ は $C$ の倍である。
+従って従属なら $a C+b(XC+CX)+cXCX=0$ となる。
+$c=0$ なら $b\ne0$ であり、$C$ の共役で $X$ が $-X-aI/b$ に移る。
+$c\ne0$ なら $T=X+(b/c)I$ として $TCT=\mu C$。
+$\mu=0$ では可逆な $C$ により $\operatorname{rank}T\le1$ となって巡回性に反する。
+$\mu\ne0$ では $T$ は可逆で、共役で $T$ が $\mu T^{-1}$ に移る。
+両場合とも $C$ は可換環 $k[X]$ を保つ位数2以下の自己同型 $\sigma$ を誘導する。
+巡回基底で $U=k[X]$ とすれば $C$ は $\sigma$ と単元 $v$ の乗法の合成 $m_v\sigma$ である。
+しかし $C=[X,Y]$ は全 $k[X]$ と跡直交するのに
+$\operatorname{tr}(m_{v^{-1}}C)=\operatorname{tr}\sigma\ne0$。
+最後は三次元で対合の固有値が $\pm1$ だからである。従って $N$ が $T_X$ で閉じることはなく、
+階数3ならその欠けた一方向 $K$ は一意である。
+
+$K$ が特異で単根と仮定する。$K=[X,Y']$ と書き、$N$ を補うもう一元を $D=[X,Z]$ とする
+（ここで $D$ は $N$ 内で $K$ の補元）。$\operatorname{tr}(\operatorname{adj}K D)\ne0$。
+ところが $\operatorname{adj}K$ は $T_X K$ とも $K$ とも跡直交するので、
+$T_X K\in N$ は $K$ の倍となる。これより $[X,K^2]=0$ で、跡零のため
+$\operatorname{adj}K=K^2-\operatorname{tr}(K^2)I/2$ も $X$ と交換する。
+従って $[X,Z]$ と跡直交する矛盾となる。
+
+可逆な $K$ の場合は基底を取り直して $K=[X,Y]$, $D=[X,Z]$, $L=[Y,Z]$ とする。
+$T_X K=\alpha K+\beta D$ で $\beta\ne0$。零なら $K,T_X K$ が従属で
+上の独立性に反する。$[X,\{X,Y\}]=\{X,K\}$ と中心化環の記述から
+$Z$ は $\beta^{-1}(\{X,Y\}-\alpha Y)$ と $X$ の二次以下の多項式の和である。
+従って $L$ は $-\beta^{-1}\{Y,K\}$ と $K,D$ の線型結合の和である。
+つまり全 $\mathcal C$ が $T_K(\langle I,X,Y\rangle)$ に入る。
+$P,Q\in\langle I,X,Y\rangle$ について $\operatorname{tr}(K(PQ+QP))=0$ である。
+$X^2,Y^2$ への跡直交は交換子の巡回性から、
+$XY+YX$ への直交は $\operatorname{tr}([X,Y](XY+YX))=0$ による。
+従って $\operatorname{tr}(T T_K^{-1}T)=0$ が全 $T\in\mathcal C$ で成立する。
+
+可逆な跡零 $K$ と跡零 $T$ については
+\[
+ 2\det K\,T_K^{-1}T=\operatorname{tr}(K^2T)I+
+                         \operatorname{tr}(KT)K-2KTK .
+\]
+相異なる固有値の対角基底で非対角成分は $\lambda_i+\lambda_j=-\lambda_k$、
+対角成分はスペクトル射影の二次式から得られ、分母を払えば全元で成立する。
+$T_K$ 自体の可逆性は二固有値の和が零にならないためである。
+これで $2\det K\operatorname{tr}(T T_K^{-1}T)=\mathcal F(K\wedge T)$。
+この表示が外積の二次式であることは
+\[
+ 3\mathcal F(K\wedge T)=(\operatorname{tr} KT)^2-
+ \operatorname{tr}(K^2)\operatorname{tr}(T^2)-2\operatorname{tr}([K,T]^2)
+\]
+から従う。右辺の恒等式は $\operatorname{tr} M^4=(\operatorname{tr}M^2)^2/2$ の偏極である。
+非零二次式の零点に含まれる直線は高々二つなので、可逆な例外方向の候補は
+鉛筆を動かしても高々二点である。$N$ は $\mathcal C$ の全鉛筆を動くので、
+被約三次曲線との横断直線を取り、さらにこれらの候補を避ければ最後の結論を得る。
+\end{proof}
+
+\begin{proposition}\label{prop:invertible-defect-bracket-parameters}
+上の可逆な例外方向 $K$ を固定する。$K=[X,Y]$, $D=[X,Z]$, $L=[Y,Z]$ を指定値とし
+$U=T_K^{-1}D$, $V=T_K^{-1}L$, $u=\operatorname{tr}U/3$, $v=\operatorname{tr}V/3$ と置く。
+復元解が存在する必要十分条件は $[U,V]$ が $K$ の非零倍であることである。
+$K=-\beta^2[U,V]$ の二つの根と任意の $h\in k$ を取り、跡零部分を下添字0で表すと、
+この方向を持つ全解は
+\[
+ X=\beta U_0,\qquad Y=-\beta V_0+hX,\qquad
+ Z=\left(\beta^{-1}\{X,Y\}+2uY-2vX-(h/\beta)X^2\right)_0 .
+\]
+これは指定した三交換子の段階での必要十分条件である。
+\end{proposition}
+\begin{proof}
+$T_X K=\alpha K+\beta D$ に $T_K^{-1}$ を施して跡零にすると $X=\beta U_0$、
+$\alpha=-2\beta u$ である。
+前の証明での一般の $Z$ を
+$\big(\beta^{-1}(\{X,Y\}-\alpha Y)+c_1X+c_2X^2\big)_0$ とすれば、
+第三の交換子は $L=-\beta^{-1}\{Y,K\}-c_1 K-c_2\{X,K\}$。
+従って $Y=-\beta V_0+hX$、$c_2=-h/\beta$, $c_1=-2v$ が必要である。
+第一交換子を戻せば表示の平方根の条件を得る。逆にこれらの式を順に代入すれば
+$[X,Y]=K$, $[X,Z]=D$, $[Y,Z]=L$ であり、指定した $K$ が例外方向となる。
+\end{proof}

@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 343,
+  "version": 344,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "efa726e23bbda635d5c198431311dc4aa908127c"
+    "source_commit": "a2cc05d7ee244a77b92c91e45685f75018590095"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Three independent commutators of an irreducible traceless three-plane of 3-by-3 matrices cannot all send one fixed plane to one fixed line. Both the transverse and incident line cases force reducibility or a common self-adjoint form with only two independent compressed skew brackets. In every marked one-sided symmetric finite branch with unequal symmetric nets and three independent brackets the cubic determinant is nonzero. In particular the common plane of two symmetric nets with four-dimensional sum cannot commute."
+    "scope": "For a pencil containing an invertible prescribed commutator, the four-coefficient linear reconstruction has rank three or four. A singular defect direction is a multiple determinantal root. All invertible defect directions give line components of an explicit conic of the target three-space and admit an exact square-root and affine-line reconstruction using two Sylvester inverses, including nondiagonalizable matrices."
   },
   "checks": [
     {
-      "command": "python computations/verify_rank_one_commutator_compression.py",
+      "command": "python computations/verify_bracket_pencil_rank.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Choose an invertible commutator on the remaining unequal-net branches and determine the reconstruction on a fixed semisimple or regular Jordan cyclic chart. On graphs with fewer sites use residual pencils and re-marking together with the finite-graph square equations."
+    "Prove when rank four can always be obtained by changing the marked direction. Analyze the Jordan product of a pair with invertible commutator, and the exceptional nets in which a repeated determinantal line forces persistent rank three. Then apply this structure to finite-edge regularity."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 603,
+      "nc-p3": 605,
       "plan_ja": 13,
       "notes_ja": 25
     },

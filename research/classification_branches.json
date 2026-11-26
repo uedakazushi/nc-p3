@@ -1129,6 +1129,12 @@
       "current_result": "Three independent commutators of an irreducible traceless three-plane of 3-by-3 matrices cannot all send one fixed plane to one fixed line. Both the transverse and incident line cases force reducibility or a common self-adjoint form with only two independent compressed skew brackets. In every marked one-sided symmetric finite branch with unequal symmetric nets and three independent brackets the cubic determinant is nonzero. In particular the common plane of two symmetric nets with four-dimensional sum cannot commute.",
       "current_proof": "sections/marked_commuting_intersection.tex",
       "global_coverage": false
+    },
+    {
+      "id": "MARKED-BRACKET-PENCIL-RANK",
+      "current_result": "For a pencil containing an invertible prescribed commutator, the four-coefficient linear reconstruction has rank three or four. A singular defect direction is a multiple determinantal root. All invertible defect directions give line components of an explicit conic of the target three-space and admit an exact square-root and affine-line reconstruction using two Sylvester inverses, including nondiagonalizable matrices.",
+      "current_proof": "sections/marked_bracket_pencil_rank.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1186,7 +1192,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 343,
+  "version": 344,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
