@@ -653,6 +653,12 @@
       "current_result": "For every pure reduced quartic point graph with disjoint finite residual, the only possible singular curves are the two-conic nodal cycle and the spatial four-line cycle. Both have length-four residual and fixed-point-free canonical rotation with second difference of order at most two. Two explicit polygon coefficient charts have finite all-degree AS, isomorphism, and minimum-period tests, including all zero-coordinate strata.",
       "current_proof": "sections/reduced_quartic_point_curves.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SINGULAR-INTEGRAL-QUINTIC-EXCLUSION",
+      "current_result": "All integral reduced quintic point graphs with disjoint finite residual in a standard AS window, including all singularities, are the two smooth elliptic quintics. The genus-two Gorenstein cubic separator yields a degree-three pencil and forces a double cover with incompatible fixed lengths. The non-Gorenstein cone vertex gives an Ore mark and a conic lift with pole degree at most two instead of three.",
+      "current_proof": "sections/singular_integral_quintic_exclusion.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -710,7 +716,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 264,
+  "version": 265,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
