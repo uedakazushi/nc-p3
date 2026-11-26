@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 357,
+  "version": 358,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "8aa6e6d116ff5e3205ec7277f1a045f45ad72299"
+    "source_commit": "bd8ae0bca42386d6c759f41b1578c1efe9e6182f"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For every ordered traceless target whose determinant is an integral singular plane cubic, the three-commutator fiber is empty at a nonfree singularity. At a locally free node it consists of four points, two points, or two points plus a smooth affine quadric. At a locally free cusp it consists of two points, the empty set, or a smooth affine quadric. All alternatives occur for every locally free representation class. Explicit adjugate inverses use negative doubling in the generalized Jacobian."
+    "scope": "For every reduced determinant the auxiliary symmetrizer solution dimension is six plus the number of simple tensors in its annihilator. For a transverse line and smooth conic all ordered commutator lifts are reconstructed: the balanced free auxiliary contributes explicit adjugate sheets; every other actual lift has a distinguished scalar-plus-rank-one generator recovered from at most two compression pairs and four-variable matrix-rank strata. A generic balanced target has four isolated lifts and two affine conics isomorphic to the multiplicative group."
   },
   "checks": [
     {
-      "command": "python computations/verify_singular_integral_commutators.py",
+      "command": "python computations/verify_transverse_conic_commutators.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Treat reduced reducible cubic determinants, starting with a smooth conic and a transverse line. Use component multidegrees of the auxiliary determinantal representation and the two local nodal ranks, then solve the ordered commutator inversion. Keep separate the all-degree AS, full-window coverage, and exceptional fixed-metric obligations."
+    "Use the squarefree symmetrizer and compression-pair reconstruction to analyze tangency of the line and smooth conic and the triangle of lines. Seek links to all-degree specialization on fixed discriminant components, and independently address unmarked windows and exceptional AS values."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 629,
+      "nc-p3": 632,
       "plan_ja": 13,
       "notes_ja": 26
     },

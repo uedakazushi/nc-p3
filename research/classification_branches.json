@@ -1213,6 +1213,12 @@
       "current_result": "For every ordered traceless target whose determinant is an integral singular plane cubic, the three-commutator fiber is empty at a nonfree singularity. At a locally free node it consists of four points, two points, or two points plus a smooth affine quadric. At a locally free cusp it consists of two points, the empty set, or a smooth affine quadric. All alternatives occur for every locally free representation class. Explicit adjugate inverses use negative doubling in the generalized Jacobian.",
       "current_proof": "sections/marked_singular_integral_commutators.tex",
       "global_coverage": false
+    },
+    {
+      "id": "MARKED-TRANSVERSE-CONIC-COMMUTATORS",
+      "current_result": "For every reduced determinant the auxiliary symmetrizer solution dimension is six plus the number of simple tensors in its annihilator. For a transverse line and smooth conic all ordered commutator lifts are reconstructed: the balanced free auxiliary contributes explicit adjugate sheets; every other actual lift has a distinguished scalar-plus-rank-one generator recovered from at most two compression pairs and four-variable matrix-rank strata. A generic balanced target has four isolated lifts and two affine conics isomorphic to the multiplicative group.",
+      "current_proof": "sections/marked_transverse_conic_commutators.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1270,7 +1276,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 357,
+  "version": 358,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
