@@ -647,6 +647,12 @@
       "current_result": "Every pure reduced point curve of degree at most three with disjoint finite residual is either a smooth plane cubic or a triangle. The full triangle stratum is the central PBW family over lambda in G_m minus one, with a split point and the quotient of P(1,1,1,2,2,2) by C3 squared over each lambda. All are AS, have period one, and are flat specializations of smooth cubic windows.",
       "current_proof": "sections/reduced_cubic_point_curves.tex",
       "global_coverage": false
+    },
+    {
+      "id": "REDUCED-QUARTIC-POINT-CURVES",
+      "current_result": "For every pure reduced quartic point graph with disjoint finite residual, the only possible singular curves are the two-conic nodal cycle and the spatial four-line cycle. Both have length-four residual and fixed-point-free canonical rotation with second difference of order at most two. Two explicit polygon coefficient charts have finite all-degree AS, isomorphism, and minimum-period tests, including all zero-coordinate strata.",
+      "current_proof": "sections/reduced_quartic_point_curves.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -704,7 +710,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 263,
+  "version": 264,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
