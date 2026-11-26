@@ -629,6 +629,12 @@
       "current_result": "Smooth plane cubic point graphs with disjoint finite residual are exactly all central PBW homogenizations of the three-dimensional smooth elliptic Sklyanin algebras with translation outside E[3]. This holds starting just with finite Frobenius and point fibers: consecutive pure relations rule out deficient transverse matrices, stability of the plane evaluation bundles gives cubic injectivity, and the ordinary central presentation follows. The residual is the length-eight affine critical scheme of an explicit cubic. All classes have bare period one.",
       "current_proof": "sections/plane_cubic_point_graphs.tex",
       "global_coverage": false
+    },
+    {
+      "id": "TWISTED-CUBIC-RESIDUAL",
+      "current_result": "For a twisted cubic point graph with disjoint finite residual, each six-point residual is scheme-isomorphic to a plane section of an explicit quadric and the three-by-three determinant. The cyclic tensor is the product of four binary edge diagonals and a four-qubit tensor. The canonical four-shift on the curve is either the identity or an involution: connected groups and all orders at least three are excluded.",
+      "current_proof": "sections/twisted_cubic_residual.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -686,7 +692,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 260,
+  "version": 261,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
