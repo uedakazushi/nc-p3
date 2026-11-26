@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-26",
-  "version": 332,
+  "version": 333,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -3426,6 +3426,15 @@
       "verification": [
         "computations/verify_binary_center_cone_degrees.py"
       ]
+    },
+    {
+      "id": "BRANCH-RANK-TEN-FLAT-KERNEL-LINES",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "At rank ten a four-support forward center with a twisted cubic second curve reaches a center on that cubic whose successor line is the flat limit of the general pencil kernels and whose own second curve is a conic. The original third curve is a line or conic, a conic is followed by a line, and the second normal form forces a third line. Thus every four-support center reaches a ternary center within three edges, even in a terminal recurrent class.",
+      "proof": "sections/rank_ten_flat_kernel_lines.tex",
+      "verification": [
+        "computations/verify_rank_ten_flat_kernel_lines.py"
+      ]
     }
   ],
   "document_paths": {
@@ -3489,7 +3498,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "bf7e94fde3df1ae79c6c184a2620d3a0680ae43f",
+  "reviewed_source_commit": "f53f091e0f119b86828133fd195b0b904046b537",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -3498,14 +3507,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "At rank ten exploit full generic middle support on every moving component, so each pair of consecutive components yields a rank-at-most-two family on the opposite edge. Analyze the singular and regular ternary pencils and their forced adjacent centers; continue finite one-symmetric unequal triples.",
+    "immediate_next_action": "Analyze the ternary centers necessarily present in every terminal recurrent class at rank ten: separate regular and singular three-by-three pencils, their projected cubic configurations and pure-relation incidence. Continue the unequal triples in the finite reduced rank-ten chart.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/binary_centers_quadric_cones.tex",
-      "sections/rank_ten_conic_after_center.tex"
+      "sections/rank_ten_flat_kernel_lines.tex",
+      "sections/binary_centers_quadric_cones.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "When no corridor consists of two lines, no binary forward or backward center can occur in any surface-free standard regular window. The paired binary equations place the moving curves of two phases on quadric cones. A forward center opposite the binary one would produce a twisted cubic through the vertex, forcing a backward center onto a line with unique predecessors. Without that opposite center the degree recurrence contradicts the degrees at both possible terminal centers. Consequently all moving components have full generic middle support, in particular for every remaining rank-ten branching candidate. Full classification remains open.",
+    "state_of_claim": "At rank ten a four-support forward center with a twisted cubic second curve reaches a center on that cubic whose successor line is the flat limit of the general pencil kernels and whose own second curve is a conic. The original third curve is a line or conic, a conic is followed by a line, and the second normal form forces a third line. Thus every four-support center reaches a ternary center within three edges, even in a terminal recurrent class. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

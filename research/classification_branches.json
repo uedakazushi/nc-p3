@@ -1063,6 +1063,12 @@
       "current_result": "When no corridor consists of two lines, no binary forward or backward center can occur in any surface-free standard regular window. The paired binary equations place the moving curves of two phases on quadric cones. A forward center opposite the binary one would produce a twisted cubic through the vertex, forcing a backward center onto a line with unique predecessors. Without that opposite center the degree recurrence contradicts the degrees at both possible terminal centers. Consequently all moving components have full generic middle support, in particular for every remaining rank-ten branching candidate.",
       "current_proof": "sections/binary_centers_quadric_cones.tex",
       "global_coverage": false
+    },
+    {
+      "id": "BRANCH-RANK-TEN-FLAT-KERNEL-LINES",
+      "current_result": "At rank ten a four-support forward center with a twisted cubic second curve reaches a center on that cubic whose successor line is the flat limit of the general pencil kernels and whose own second curve is a conic. The original third curve is a line or conic, a conic is followed by a line, and the second normal form forces a third line. Thus every four-support center reaches a ternary center within three edges, even in a terminal recurrent class.",
+      "current_proof": "sections/rank_ten_flat_kernel_lines.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1120,7 +1126,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 332,
+  "version": 333,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

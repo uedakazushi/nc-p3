@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 332,
+  "version": 333,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "bf7e94fde3df1ae79c6c184a2620d3a0680ae43f"
+    "source_commit": "f53f091e0f119b86828133fd195b0b904046b537"
   },
   "generation": {
     "result": "PASS",
-    "scope": "When no corridor consists of two lines, no binary forward or backward center can occur in any surface-free standard regular window. The paired binary equations place the moving curves of two phases on quadric cones. A forward center opposite the binary one would produce a twisted cubic through the vertex, forcing a backward center onto a line with unique predecessors. Without that opposite center the degree recurrence contradicts the degrees at both possible terminal centers. Consequently all moving components have full generic middle support, in particular for every remaining rank-ten branching candidate."
+    "scope": "At rank ten a four-support forward center with a twisted cubic second curve reaches a center on that cubic whose successor line is the flat limit of the general pencil kernels and whose own second curve is a conic. The original third curve is a line or conic, a conic is followed by a line, and the second normal form forces a third line. Thus every four-support center reaches a ternary center within three edges, even in a terminal recurrent class."
   },
   "checks": [
     {
-      "command": "python computations/verify_binary_center_cone_degrees.py",
+      "command": "python computations/verify_rank_ten_flat_kernel_lines.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "At rank ten exploit full generic middle support on every moving component, so each pair of consecutive components yields a rank-at-most-two family on the opposite edge. Analyze the singular and regular ternary pencils and their forced adjacent centers; continue finite one-symmetric unequal triples."
+    "Analyze the ternary centers necessarily present in every terminal recurrent class at rank ten: separate regular and singular three-by-three pencils, their projected cubic configurations and pure-relation incidence. Continue the unequal triples in the finite reduced rank-ten chart."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 582,
+      "nc-p3": 583,
       "plan_ja": 12,
       "notes_ja": 24
     },
