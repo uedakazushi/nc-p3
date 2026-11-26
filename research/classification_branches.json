@@ -665,6 +665,12 @@
       "current_result": "Classify all integral reduced septic point graphs including singularities by the same eight bielliptic coefficients: the sole condition is geometrically integral complete intersection. All such windows are AS, the original full isomorphism and period tests extend, and every singular window is a flat limit of the smooth five-dimensional moduli stratum. Every embedding-dimension-three point on any point-fiber graph is automatically a four-periodic Ore mark.",
       "current_proof": "sections/integral_septic_boundary.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SINGULAR-SEXTIC-NORMALIZATION",
+      "current_result": "An integral reduced sextic point graph with disjoint finite residual can only be a singular canonical plane quartic of normalization genus zero or one, without finite residual. Nonplanar singularities, all hyperelliptic models and normalization genus two are excluded. Any nonidentity canonical four-shift is a plane homology of order two or four, with trivial squared polarization difference.",
+      "current_proof": "sections/singular_sextic_normalization.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -722,7 +728,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 266,
+  "version": 267,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 266,
+  "version": 267,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "c63665f9bd71b6b9bd99f9efd55b756cada5c9e3"
+    "source_commit": "e65a2b37e5cb88698888838f059e19e90f5b66f1"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Classify all integral reduced septic point graphs including singularities by the same eight bielliptic coefficients: the sole condition is geometrically integral complete intersection. All such windows are AS, the original full isomorphism and period tests extend, and every singular window is a flat limit of the smooth five-dimensional moduli stratum. Every embedding-dimension-three point on any point-fiber graph is automatically a four-periodic Ore mark."
+    "scope": "An integral reduced sextic point graph with disjoint finite residual can only be a singular canonical plane quartic of normalization genus zero or one, without finite residual. Nonplanar singularities, all hyperelliptic models and normalization genus two are excluded. Any nonidentity canonical four-shift is a plane homology of order two or four, with trivial squared polarization difference."
   },
   "checks": [
     {
-      "command": "python computations/verify_integral_septic_boundary.py",
+      "command": "python computations/verify_singular_sextic_normalization.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine the singular integral sextic branch; extend the fixed-ideal and automatic Ore tests to the remaining reduced reducible and embedded cases, alongside the general AS and non-point-fiber branches."
+    "Solve the rational and elliptic normalization strata of canonical plane quartic sextic models. Use the two moving trisecant points and canonical fixed-ideal conditions, then continue the outstanding general AS and global coverage problems."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 467,
+      "nc-p3": 469,
       "plan_ja": 11,
       "notes_ja": 20
     },
