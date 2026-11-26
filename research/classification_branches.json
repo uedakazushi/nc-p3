@@ -997,6 +997,12 @@
       "current_result": "If an untested finite rank-eight planar window has no local equations through degree three, it has a single support and a common length-eight subscheme on which all four coordinates are projectively identified. Each embedding is a complete intersection of three quadrics. Its ideal is the annihilator of the square of every tangent-plane equation. Consecutive tangent planes cut length six and each tangent plane cuts length seven.",
       "current_proof": "sections/finite_high_order_common_octad.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FINITE-COMMON-NET-SYMMETRY",
+      "current_result": "A four-tensor whose four diagonal edge restrictions belong to the same complete-intersection net of quadrics splits into a bisymmetric tensor and a four-form. In the high-order finite rank-eight residual branch the common octad aligns the positions, and the common irreducible quadric forces the symmetric opposite block to have rank at least three. The four-form must vanish, contradicting the required nonsymmetric marked slice. Thus every still undecided planar mark has an equation of order two or three.",
+      "current_proof": "sections/finite_common_net_symmetry.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1054,7 +1060,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 321,
+  "version": 322,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

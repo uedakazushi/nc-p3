@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-26",
-  "version": 321,
+  "version": 322,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -3327,6 +3327,15 @@
       "verification": [
         "computations/verify_finite_high_order_octad.py"
       ]
+    },
+    {
+      "id": "FINITE-COMMON-NET-SYMMETRY",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "A four-tensor whose four diagonal edge restrictions belong to the same complete-intersection net of quadrics splits into a bisymmetric tensor and a four-form. In the high-order finite rank-eight residual branch the common octad aligns the positions, and the common irreducible quadric forces the symmetric opposite block to have rank at least three. The four-form must vanish, contradicting the required nonsymmetric marked slice. Thus every still undecided planar mark has an equation of order two or three.",
+      "proof": "sections/finite_common_net_symmetry.tex",
+      "verification": [
+        "computations/verify_finite_common_net_symmetry.py"
+      ]
     }
   ],
   "document_paths": {
@@ -3390,7 +3399,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "e6dcc1e8d9fce887d35ae9057afadf4f74d5e0d9",
+  "reviewed_source_commit": "19503cc7406923eaabe70212554ce4e7cb38f8dd",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -3399,14 +3408,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Use the common octad and its three quadratic equations to compare the opposite coordinate square maps. Analyze the local quadratic and cubic initial-ideal cases and the independent rank-nine branching strata.",
+    "immediate_next_action": "Treat planar marks with quadratic or cubic initial relations. In the cubic case compare the leading vector equation with the tangent-cone cubic pencil. In the other ranks resolve branching with a nonlinear corridor.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/finite_high_order_common_octad.tex",
-      "sections/finite_plane_sections_and_tangent_incidence.tex"
+      "sections/finite_common_net_symmetry.tex",
+      "sections/finite_high_order_common_octad.tex"
     ],
     "known_obstruction": "General windows can lack a recognized symmetry or Ore mark. All-degree AS membership is open for such candidates, including finite locally planar cases.",
-    "state_of_claim": "If an untested finite rank-eight planar window has no local equations through degree three, it has a single support and a common length-eight subscheme on which all four coordinates are projectively identified. Each embedding is a complete intersection of three quadrics. Its ideal is the annihilator of the square of every tangent-plane equation. Consecutive tangent planes cut length six and each tangent plane cuts length seven. Full classification remains open.",
+    "state_of_claim": "A four-tensor whose four diagonal edge restrictions belong to the same complete-intersection net of quadrics splits into a bisymmetric tensor and a four-form. In the high-order finite rank-eight residual branch the common octad aligns the positions, and the common irreducible quadric forces the symmetric opposite block to have rank at least three. The four-form must vanish, contradicting the required nonsymmetric marked slice. Thus every still undecided planar mark has an equation of order two or three. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
