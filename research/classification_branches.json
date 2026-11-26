@@ -677,6 +677,12 @@
       "current_result": "Exclude every singular integral sextic point graph with disjoint finite residual. The trisecant residual maps have degree one by the transpose degree-three correspondence and differential trace. Anti-invariant dualizing forms generate the plane involution function field; normalized ramification jets exclude identity, and cyclic eigensheaves exclude order four. Thus the entire reduced integral point-curve plus disjoint finite residual stratum is covered in degrees 3, 4, 5 and 7, including every singular integral model.",
       "current_proof": "sections/integral_sextic_exclusion.tex",
       "global_coverage": false
+    },
+    {
+      "id": "PURE-CURVE-FINITE-DEFECT",
+      "current_result": "For an arbitrary one-dimensional point-fiber graph with pure hull Y the finite discrepancy has length 18-4d+2p_a(Y). Sextics are always pure of genus three with a (2,2) residual in each projection; quintic hulls have genus one or two. The conormal correction to the fixed length excludes embedded structure on every reduced integral hull of degree at least five, and excludes rational quartic hulls.",
+      "current_proof": "sections/pure_curve_finite_defect.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -734,7 +740,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 268,
+  "version": 269,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

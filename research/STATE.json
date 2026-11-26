@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-26",
-  "version": 268,
+  "version": 269,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -2847,6 +2847,15 @@
       "verification": [
         "computations/verify_integral_sextic_exclusion.py"
       ]
+    },
+    {
+      "id": "PURE-CURVE-FINITE-DEFECT",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "For an arbitrary one-dimensional point-fiber graph with pure hull Y the finite discrepancy has length 18-4d+2p_a(Y). Sextics are always pure of genus three with a (2,2) residual in each projection; quintic hulls have genus one or two. The conormal correction to the fixed length excludes embedded structure on every reduced integral hull of degree at least five, and excludes rational quartic hulls.",
+      "proof": "sections/pure_curve_finite_defect.tex",
+      "verification": [
+        "computations/verify_pure_curve_finite_defect.py"
+      ]
     }
   ],
   "document_paths": {
@@ -2910,7 +2919,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "ec219292160e15a2af9d1e4740355daa10fc2af4",
+  "reviewed_source_commit": "262add244e6b2f6162b2e04e6ad3cf4ba3ff6114",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -2919,14 +2928,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Move to reducible degree five through seven, curve-embedded zero-dimensional structures and general AS tests outside the integral point-curve branch.",
+    "immediate_next_action": "Determine the reducible quintic genus-one branch using projective frames and node syzygies, then continue reducible sextics, nonreduced curves and the remaining general AS tests.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/integral_sextic_exclusion.tex",
-      "sections/singular_sextic_normalization.tex"
+      "sections/pure_curve_finite_defect.tex",
+      "sections/integral_sextic_exclusion.tex"
     ],
     "known_obstruction": "General windows can lack a recognized symmetry or Ore mark. All-degree AS membership is open for such candidates, including finite locally planar cases.",
-    "state_of_claim": "Exclude every singular integral sextic point graph with disjoint finite residual. The trisecant residual maps have degree one by the transpose degree-three correspondence and differential trace. Anti-invariant dualizing forms generate the plane involution function field; normalized ramification jets exclude identity, and cyclic eigensheaves exclude order four. Thus the entire reduced integral point-curve plus disjoint finite residual stratum is covered in degrees 3, 4, 5 and 7, including every singular integral model. Full classification remains open.",
+    "state_of_claim": "For an arbitrary one-dimensional point-fiber graph with pure hull Y the finite discrepancy has length 18-4d+2p_a(Y). Sextics are always pure of genus three with a (2,2) residual in each projection; quintic hulls have genus one or two. The conormal correction to the fixed length excludes embedded structure on every reduced integral hull of degree at least five, and excludes rational quartic hulls. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
