@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 316,
+  "version": 317,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "dc034943e913648c393913b31d770fae1c087171"
+    "source_commit": "641ed0d7649d8f6733b1359c7e242784a733f912"
   },
   "generation": {
     "result": "PASS",
-    "scope": "At opposite rank eight all-degree regularity is decidable for finite Frobenius windows with a planar mark whose maximal ideal has principal square. Thus the untested finite stratum has at most three closed points, each a nonstretched planar Gorenstein local ring of length at least six. The proof handles both types of length-three slices and all length-four slices at the mark."
+    "scope": "The finite rank-eight all-degree regularity test covers a local factor of length six and therefore all windows on three or more closed points. Length-three rank-one slices give symmetry at arbitrary planar Cartier marks on an ordinary node or cusp. In any finite Frobenius window each coordinate line meets the point scheme in length at most three, without assuming a rank or reducedness."
   },
   "checks": [
     {
-      "command": "python computations/verify_finite_stretched_planar_marks.py",
+      "command": "python computations/verify_finite_nodal_cuspidal_marks.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Study the remaining finite rank-eight windows on at most three nonstretched planar local factors, using their second fundamental forms, support bounds, and embedded line sections. Work also on the rank-nine branching obstruction."
+    "Analyze the remaining finite rank-eight windows supported at one or two nonstretched planar points of local length at least seven, starting with lengths seven to ten and the incidence of the rank-one loci at the marks. Continue the independent higher-rank branches."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 557,
+      "nc-p3": 558,
       "plan_ja": 12,
       "notes_ja": 23
     },

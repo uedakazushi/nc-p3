@@ -967,6 +967,12 @@
       "current_result": "At opposite rank eight all-degree regularity is decidable for finite Frobenius windows with a planar mark whose maximal ideal has principal square. Thus the untested finite stratum has at most three closed points, each a nonstretched planar Gorenstein local ring of length at least six. The proof handles both types of length-three slices and all length-four slices at the mark.",
       "current_proof": "sections/finite_stretched_planar_marks.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FINITE-RANK-EIGHT-TWO-SUPPORT-BOUND",
+      "current_result": "The finite rank-eight all-degree regularity test covers a local factor of length six and therefore all windows on three or more closed points. Length-three rank-one slices give symmetry at arbitrary planar Cartier marks on an ordinary node or cusp. In any finite Frobenius window each coordinate line meets the point scheme in length at most three, without assuming a rank or reducedness.",
+      "current_proof": "sections/finite_nodal_cuspidal_marks.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1024,7 +1030,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 316,
+  "version": 317,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
