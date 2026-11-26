@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 267,
+  "version": 268,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "e65a2b37e5cb88698888838f059e19e90f5b66f1"
+    "source_commit": "ec219292160e15a2af9d1e4740355daa10fc2af4"
   },
   "generation": {
     "result": "PASS",
-    "scope": "An integral reduced sextic point graph with disjoint finite residual can only be a singular canonical plane quartic of normalization genus zero or one, without finite residual. Nonplanar singularities, all hyperelliptic models and normalization genus two are excluded. Any nonidentity canonical four-shift is a plane homology of order two or four, with trivial squared polarization difference."
+    "scope": "Exclude every singular integral sextic point graph with disjoint finite residual. The trisecant residual maps have degree one by the transpose degree-three correspondence and differential trace. Anti-invariant dualizing forms generate the plane involution function field; normalized ramification jets exclude identity, and cyclic eigensheaves exclude order four. Thus the entire reduced integral point-curve plus disjoint finite residual stratum is covered in degrees 3, 4, 5 and 7, including every singular integral model."
   },
   "checks": [
     {
-      "command": "python computations/verify_singular_sextic_normalization.py",
+      "command": "python computations/verify_integral_sextic_exclusion.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Solve the rational and elliptic normalization strata of canonical plane quartic sextic models. Use the two moving trisecant points and canonical fixed-ideal conditions, then continue the outstanding general AS and global coverage problems."
+    "Move to reducible degree five through seven, curve-embedded zero-dimensional structures and general AS tests outside the integral point-curve branch."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 469,
+      "nc-p3": 471,
       "plan_ja": 11,
       "notes_ja": 20
     },
