@@ -943,6 +943,12 @@
       "current_result": "If the general successor of a curve-only branching center of middle support a has middle support four, the opposite rank is at least a+6. Two-line corridors require opposite rank at least nine. At opposite rank eight all centers have middle support two or four, and at most one forward center and one backward center occur per phase. Every forward center of middle support four has a preceding forward center of middle support two whose opposite annihilator is its successor line.",
       "current_proof": "sections/branch_rank_one_residual.tex",
       "global_coverage": false
+    },
+    {
+      "id": "RANK-EIGHT-CURVE-BRANCH-EXCLUSION",
+      "current_result": "In a standard regular window of opposite rank eight with all projections at most one-dimensional, every fiber of each edge projection is empty or a point, including windows with pure relations. The last hypothetical configuration requires a three-dimensional annihilator of a space of biquadratics to contain a third-order jet and a decomposable tensor with a different right factor.",
+      "current_proof": "sections/rank_eight_branch_exclusion.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1000,7 +1006,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 312,
+  "version": 313,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

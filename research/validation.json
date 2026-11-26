@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 312,
+  "version": 313,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "6c6227b6a3f02cd791aada1d1b17c0a2e2b4091e"
+    "source_commit": "cffb27841a5a2030ea4a8f24b7fd8b289ae85989"
   },
   "generation": {
     "result": "PASS",
-    "scope": "If the general successor of a curve-only branching center of middle support a has middle support four, the opposite rank is at least a+6. Two-line corridors require opposite rank at least nine. At opposite rank eight all centers have middle support two or four, and at most one forward center and one backward center occur per phase. Every forward center of middle support four has a preceding forward center of middle support two whose opposite annihilator is its successor line."
+    "scope": "In a standard regular window of opposite rank eight with all projections at most one-dimensional, every fiber of each edge projection is empty or a point, including windows with pure relations. The last hypothetical configuration requires a three-dimensional annihilator of a space of biquadratics to contain a third-order jet and a decomposable tensor with a different right factor."
   },
   "checks": [
     {
-      "command": "python computations/verify_branch_rank_one_residual.py",
+      "command": "python computations/verify_rank_eight_branch_exclusion.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Classify the resulting rank-eight configurations of binary centers and their middle-four companions. Analyze which constrained edges support moving components and how the reverse centers are paired."
+    "At opposite rank eight the remaining nonsurface regularity question is entirely in point graphs, including the finite nonsymmetric Artin windows. Continue the finite opposite-product and marked-slice tests, and study pure branching at opposite rank nine using the rank bound."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 549,
+      "nc-p3": 551,
       "plan_ja": 12,
       "notes_ja": 23
     },

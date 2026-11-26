@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-26",
-  "version": 312,
+  "version": 313,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -3246,6 +3246,15 @@
       "verification": [
         "computations/verify_branch_rank_one_residual.py"
       ]
+    },
+    {
+      "id": "RANK-EIGHT-CURVE-BRANCH-EXCLUSION",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "In a standard regular window of opposite rank eight with all projections at most one-dimensional, every fiber of each edge projection is empty or a point, including windows with pure relations. The last hypothetical configuration requires a three-dimensional annihilator of a space of biquadratics to contain a third-order jet and a decomposable tensor with a different right factor.",
+      "proof": "sections/rank_eight_branch_exclusion.tex",
+      "verification": [
+        "computations/verify_rank_eight_branch_exclusion.py"
+      ]
     }
   ],
   "document_paths": {
@@ -3309,7 +3318,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "6c6227b6a3f02cd791aada1d1b17c0a2e2b4091e",
+  "reviewed_source_commit": "cffb27841a5a2030ea4a8f24b7fd8b289ae85989",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -3318,14 +3327,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_six_and_non_pbw_propagation",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Classify the resulting rank-eight configurations of binary centers and their middle-four companions. Analyze which constrained edges support moving components and how the reverse centers are paired.",
+    "immediate_next_action": "At opposite rank eight the remaining nonsurface regularity question is entirely in point graphs, including the finite nonsymmetric Artin windows. Continue the finite opposite-product and marked-slice tests, and study pure branching at opposite rank nine using the rank bound.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/branch_rank_one_residual.tex",
-      "sections/branch_middle_defect_bound.tex"
+      "sections/rank_eight_branch_exclusion.tex",
+      "sections/branch_rank_one_residual.tex"
     ],
     "known_obstruction": "General windows can lack a recognized symmetry or Ore mark. All-degree AS membership is open for such candidates, including finite locally planar cases.",
-    "state_of_claim": "If the general successor of a curve-only branching center of middle support a has middle support four, the opposite rank is at least a+6. Two-line corridors require opposite rank at least nine. At opposite rank eight all centers have middle support two or four, and at most one forward center and one backward center occur per phase. Every forward center of middle support four has a preceding forward center of middle support two whose opposite annihilator is its successor line. Full classification remains open.",
+    "state_of_claim": "In a standard regular window of opposite rank eight with all projections at most one-dimensional, every fiber of each edge projection is empty or a point, including windows with pure relations. The last hypothetical configuration requires a three-dimensional annihilator of a space of biquadratics to contain a third-order jet and a decomposable tensor with a different right factor. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
