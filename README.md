@@ -2,7 +2,7 @@
 
 **共同研究：** 本リポジトリは大川新之介・植田一石の共同研究プロジェクトです。この表示は個々の論文の著者を確定するものではありません。
 
-**2026-11-26 / v302。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-26 / v303。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -173,6 +173,8 @@ Walsh三次元族を含む十五次元成分と、そこから出る周期2の�
 被約点を仮定せず、反対階数8の印付き行列の核と接方向から反対位置の対称性を判定する十分条件を得た。[非被約の印からの対称性](sections/finite_marked_projection_symmetry.tex)
 
 階数1切断の長さが2以下なら、曲線状の印では例外割線があっても反対対称性が従う。[割線と支持長](sections/finite_marked_secant_pencil.tex)
+
+階数1切断の長さ2以下では接方向の例外も解決した。階数1点が三つの被約点の場合には曲線状の印で対称となる。[接方向の割線](sections/finite_marked_tangent_secants.tex)
 
 非恒等の平面グラフを基底に持つOre窓では、指定点を忘れた同型類も決定した。[正規形と平坦特殊化](sections/plane_graph_ore_windows.tex)・[検算](computations/verify_plane_graph_ore.py)
 

@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 302,
+  "version": 303,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "88e55ce845a837dc53632a2664c0766abb2c5988"
+    "source_commit": "d83e61c379a99362f29f16d287d55f9e4364aede"
   },
   "generation": {
     "result": "PASS",
-    "scope": "At an aligned finite mark the rank-one scheme in its four-dimensional matrix span has length at most four if finite. For length at most two the unique possible exceptional secant is rigid over Artin bases; at a curvilinear mark, or an embedding-dimension-two mark passing the tangent test, the induced map gives a scheme-wide opposite symmetry even with exceptional points elsewhere. A nonzero adjacent coordinate word has scheme support of length at least six."
+    "scope": "All aligned finite marks with finite rank-one section of length at most two now force opposite symmetry, including planar local marks tangent to the exceptional secant. A curvilinear or simple mark with three distinct rank-one points also forces it, by separation on three noncoplanar lines."
   },
   "checks": [
     {
-      "command": "python computations/verify_finite_marked_secants.py",
+      "command": "python computations/verify_finite_tangent_secants.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Treat the tangent exceptional secant at a planar mark, multiple secants, and the remaining marked four-planes and higher-rank and branching windows."
+    "Resolve the remaining length-three and length-four rank-one schemes and positive-dimensional sections, then the higher opposite ranks and curve branching."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 536,
+      "nc-p3": 537,
       "plan_ja": 12,
       "notes_ja": 22
     },

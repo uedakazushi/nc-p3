@@ -883,6 +883,12 @@
       "current_result": "At an aligned finite mark the rank-one scheme in its four-dimensional matrix span has length at most four if finite. For length at most two the unique possible exceptional secant is rigid over Artin bases; at a curvilinear mark, or an embedding-dimension-two mark passing the tangent test, the induced map gives a scheme-wide opposite symmetry even with exceptional points elsewhere. A nonzero adjacent coordinate word has scheme support of length at least six.",
       "current_proof": "sections/finite_marked_secant_pencil.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FINITE-TANGENT-AND-THREE-REDUCED-SECANTS",
+      "current_result": "All aligned finite marks with finite rank-one section of length at most two now force opposite symmetry, including planar local marks tangent to the exceptional secant. A curvilinear or simple mark with three distinct rank-one points also forces it, by separation on three noncoplanar lines.",
+      "current_proof": "sections/finite_marked_tangent_secants.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -940,7 +946,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 302,
+  "version": 303,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
