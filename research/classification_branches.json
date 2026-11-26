@@ -1219,6 +1219,12 @@
       "current_result": "For every reduced determinant the auxiliary symmetrizer solution dimension is six plus the number of simple tensors in its annihilator. For a transverse line and smooth conic all ordered commutator lifts are reconstructed: the balanced free auxiliary contributes explicit adjugate sheets; every other actual lift has a distinguished scalar-plus-rank-one generator recovered from at most two compression pairs and four-variable matrix-rank strata. A generic balanced target has four isolated lifts and two affine conics isomorphic to the multiplicative group.",
       "current_proof": "sections/marked_transverse_conic_commutators.tex",
       "global_coverage": false
+    },
+    {
+      "id": "MARKED-REDUCED-CUBIC-COMMUTATORS",
+      "current_result": "All ordered three-commutator lifts are reconstructed for every reduced cubic determinant, including a tangent conic, a triangle and three concurrent lines. The regular-generator part uses explicit six-space adjugates and negative doubling on the generalized Jacobian, and every scalar-plus-rank-one generator is recovered by the compression-pair strata. The generic balanced tangent conic fiber has two isolated points and two affine lines; tangency is exactly the collision of the two points at infinity of the semisimple fiber conic in the stated open coordinates.",
+      "current_proof": "sections/marked_reduced_cubic_commutators.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1276,7 +1282,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 358,
+  "version": 359,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 358,
+  "version": 359,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "bd8ae0bca42386d6c759f41b1578c1efe9e6182f"
+    "source_commit": "aa674eb8e1afc8bf3e626aab65f455a51c7ced1c"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For every reduced determinant the auxiliary symmetrizer solution dimension is six plus the number of simple tensors in its annihilator. For a transverse line and smooth conic all ordered commutator lifts are reconstructed: the balanced free auxiliary contributes explicit adjugate sheets; every other actual lift has a distinguished scalar-plus-rank-one generator recovered from at most two compression pairs and four-variable matrix-rank strata. A generic balanced target has four isolated lifts and two affine conics isomorphic to the multiplicative group."
+    "scope": "All ordered three-commutator lifts are reconstructed for every reduced cubic determinant, including a tangent conic, a triangle and three concurrent lines. The regular-generator part uses explicit six-space adjugates and negative doubling on the generalized Jacobian, and every scalar-plus-rank-one generator is recovered by the compression-pair strata. The generic balanced tangent conic fiber has two isolated points and two affine lines; tangency is exactly the collision of the two points at infinity of the semisimple fiber conic in the stated open coordinates."
   },
   "checks": [
     {
-      "command": "python computations/verify_transverse_conic_commutators.py",
+      "command": "python computations/verify_reduced_cubic_commutators.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Use the squarefree symmetrizer and compression-pair reconstruction to analyze tangency of the line and smooth conic and the triangle of lines. Seek links to all-degree specialization on fixed discriminant components, and independently address unmarked windows and exceptional AS values."
+    "Investigate nonreduced nonzero commutator determinants starting with a triple line: classify nilpotent 3-by-3 auxiliary pencils, including the nontriangular pencil, and determine which produce full symmetrizers. Use the resulting structure for marked-window coverage and pursue all-degree regularity and the remaining unmarked windows."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 632,
+      "nc-p3": 634,
       "plan_ja": 13,
       "notes_ja": 26
     },

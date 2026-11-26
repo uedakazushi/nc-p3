@@ -59,9 +59,10 @@ def equal_polynomials(matrix):
                for w in matrix)
 
 
-def adjugate_map(q, target, rows, expected_minor):
+def adjugate_map(q, target, rows, expected_minor, point=(0, 1, 0)):
     commutators = [bracket(q[(i+1) % 3], q[(i+2) % 3]) for i in range(3)]
-    multiplier = commutators[1]*target.diff(y).inv()
+    multiplier = sum((h*c for h, c in zip(point, commutators)), sp.zeros(3))
+    multiplier *= target.subs(dict(zip(variables, point))).inv()
     # Each monomial below occurs in precisely one adjugate entry, with coefficient one.
     monomials = [t*u, p*u, p*t, b*d, a*d, a*b]
     polynomials = [sp.Poly(w, *coordinates) for w in multiplier]
