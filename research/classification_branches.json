@@ -599,6 +599,12 @@
       "current_result": "A smooth integral quintic point graph with disjoint isolated residual in a four-edge point-fiber finite Frobenius candidate must be elliptic with empty residual. In genus two the opposite contraction forces two alternating Weierstrass polarizations. Cyclic parity then forces three common commutators, giving an impossible complete intersection of degree eight supported on a sextic.",
       "current_proof": "sections/genus_two_quintic_ruling.tex",
       "global_coverage": false
+    },
+    {
+      "id": "ELLIPTIC-QUINTIC-CENTERS",
+      "current_result": "Every smooth elliptic quintic point graph in a finite Frobenius four-edge graph window has j=1728 and translation four-shift. Each projection center is an eigenline for one of two cyclic order-five groups. Each adjacent relation space is the entire mixed multiplication kernel. All four positions have the same order-five subgroup and adjacent translations do not differ by five-torsion. Two explicit reference embeddings and a finite list of torsion offsets reduce the candidates to finitely many one-parameter elliptic families. Sufficiency is open.",
+      "current_proof": "sections/elliptic_quintic_trisecants.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -656,7 +662,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 255,
+  "version": 256,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
