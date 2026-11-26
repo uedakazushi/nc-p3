@@ -949,6 +949,12 @@
       "current_result": "In a standard regular window of opposite rank eight with all projections at most one-dimensional, every fiber of each edge projection is empty or a point, including windows with pure relations. The last hypothetical configuration requires a three-dimensional annihilator of a space of biquadratics to contain a third-order jet and a decomposable tensor with a different right factor.",
       "current_proof": "sections/rank_eight_branch_exclusion.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FINITE-TETRAHEDRAL-KERNEL-SYMMETRY",
+      "current_result": "A common marked slice with four reduced rank-one vertices forces opposite symmetry on its row and column coordinate positions whenever the mark has tangent dimension at most one, even if all local factors are nonreduced. The projected kernel cross product is supported on at most four socles, and cubic separation and the absence of pure relations exclude every nonsymmetric case.",
+      "current_proof": "sections/finite_tetrahedral_kernel_symmetry.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1006,7 +1012,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 313,
+  "version": 314,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

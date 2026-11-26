@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 313,
+  "version": 314,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "cffb27841a5a2030ea4a8f24b7fd8b289ae85989"
+    "source_commit": "7a4c1341c65e402a6df82f78562d3d22770bcef1"
   },
   "generation": {
     "result": "PASS",
-    "scope": "In a standard regular window of opposite rank eight with all projections at most one-dimensional, every fiber of each edge projection is empty or a point, including windows with pure relations. The last hypothetical configuration requires a three-dimensional annihilator of a space of biquadratics to contain a third-order jet and a decomposable tensor with a different right factor."
+    "scope": "A common marked slice with four reduced rank-one vertices forces opposite symmetry on its row and column coordinate positions whenever the mark has tangent dimension at most one, even if all local factors are nonreduced. The projected kernel cross product is supported on at most four socles, and cubic separation and the absence of pure relations exclude every nonsymmetric case."
   },
   "checks": [
     {
-      "command": "python computations/verify_rank_eight_branch_exclusion.py",
+      "command": "python computations/verify_finite_tetrahedral_kernel_symmetry.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "At opposite rank eight the remaining nonsurface regularity question is entirely in point graphs, including the finite nonsymmetric Artin windows. Continue the finite opposite-product and marked-slice tests, and study pure branching at opposite rank nine using the rank bound."
+    "Use the length-four Frobenius trace model to extend the kernel-coordinate symmetry test to nonreduced rank-one slices. Analyze the remaining parity and planar marks, and the independent rank-nine branching problem."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 551,
+      "nc-p3": 553,
       "plan_ja": 12,
       "notes_ja": 23
     },
