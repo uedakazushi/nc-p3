@@ -1051,6 +1051,12 @@
       "current_result": "At rank ten, a four-middle-support branching center followed by a twisted cubic has exactly two forms for the restriction to its first line and second cubic, and forces a forward center on that cubic. The third curve has degree at most four. If nonplanar, it lies on a smooth quadric with projection degrees 1 and d3-1 and is followed by a moving plane curve through whose plane the original center passes, of degree at least d3-1. This excludes every (1,3,3,1) corridor with twisted cubic inner curves and either endpoint of full middle support.",
       "current_proof": "sections/rank_ten_cubic_after_center.tex",
       "global_coverage": false
+    },
+    {
+      "id": "BRANCH-RANK-TEN-CONIC-AFTER-CENTER",
+      "current_result": "At rank ten a four-support center followed by a second conic forces its unique first-line forward center to be ternary of singular pencil type. Its third curve and next position are planar; a cubic third curve has a backward center at its double point. Independently of rank, a singular ternary center identifies projected coordinates on the next pair. After a twisted cubic its third degree is between two and four (at most three if the projection center lies on the cubic), by the length-one bound for paths returning to their fixed start.",
+      "current_proof": "sections/rank_ten_conic_after_center.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1108,7 +1114,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 330,
+  "version": 331,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
