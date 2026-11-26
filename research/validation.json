@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 329,
+  "version": 330,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "0a417c56a9725191c426dfb002ef570614631819"
+    "source_commit": "916bf883a15470bb7cd06f75d66f73bedb815341"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For a reduced twenty-point finite window with full middle support, different marked four-spaces spanning a five-space force an opposite symmetry. A ruling cannot supply thirteen common-kernel pencils. For a plane conic the off-plane rank-one points and transverse contacts are controlled by one binary quadric. Projecting from its at most two distinguished points gives three independent opposite words supported on at most two points. The identically zero quadric yields a second conic or a symmetric matrix space. Consequently reduced finite rank ten has an opposite symmetry and reduced finite rank eleven is impossible under full middle support."
+    "scope": "At rank ten, a four-middle-support branching center followed by a twisted cubic has exactly two forms for the restriction to its first line and second cubic, and forces a forward center on that cubic. The third curve has degree at most four. If nonplanar, it lies on a smooth quadric with projection degrees 1 and d3-1 and is followed by a moving plane curve through whose plane the original center passes, of degree at least d3-1. This excludes every (1,3,3,1) corridor with twisted cubic inner curves and either endpoint of full middle support."
   },
   "checks": [
     {
-      "command": "python computations/verify_five_space_conic_quotients.py",
+      "command": "python computations/verify_rank_ten_cubic_after_center.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze the reduced one-symmetric rank-ten case with unequal symmetric triples (g=4 or 5), using eigenlines and opposite square interpolation. Extend the five-space theorem beyond reduced twenty-point graphs; continue rank-ten four-support branching pencils."
+    "Treat a second conic for a rank-ten four-support branching center, use the forced pure relation and incidence of the next center from the twisted cubic case. For the finite reduced branch resolve the unequal symmetric triples in the one-symmetric rank-ten chart, and extend the five-space secant argument to thickened graphs."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 577,
+      "nc-p3": 579,
       "plan_ja": 12,
       "notes_ja": 24
     },
