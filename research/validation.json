@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 276,
+  "version": 277,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "ecc2b57a8c06dd73f8674faeca409904cf5b1d6b"
+    "source_commit": "6bb26d5bad942bc946852182f27afd72c821f8db"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Prove all-degree regularity on the residual twisted cubic whenever the auxiliary binary determinant is integral (including nodal and cuspidal curves), identically zero, or has a ruling fiber. Integral genus-one addition links sets of at most four secant pencils in every position. The only remaining auxiliary divisors are pairs of (1,1) graphs and doubled (1,1) graphs."
+    "scope": "All doubled auxiliary (1,1) graphs on the residual twisted cubic are regular. The same holds for two inverse graph components at every position or a component with only involutive/identity transitions. In the entire residual cubic regime the secant schemes on both sides of every edge are isomorphic plane cubics; closed-set iteration decides the existence of a bilateral secant chain in finite time."
   },
   "checks": [
     {
-      "command": "python computations/verify_elliptic_binary_cubic_pencils.py",
+      "command": "python computations/verify_doubled_binary_pencils.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze the two Moebius-graph and doubled-graph degenerations of the auxiliary determinant. Then continue finite point graphs, higher projection fibers, and global parameter components and specializations."
+    "Analyze reduced pairs with mixed involutive and noninvolutive Moebius transitions beyond the finite compatible-secant certificate. Continue the finite point and higher-fiber branches and the global component/specialization classification."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 491,
+      "nc-p3": 492,
       "plan_ja": 10,
       "notes_ja": 21
     },
