@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 283,
+  "version": 284,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "20d85f6f0572bbecce6851bd77168fc7ac45ed54"
+    "source_commit": "3f7eca04b30ea707a1d4cbef8213809cf59de493"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The mixed skew/symmetric marked chart is classified by a four-dimensional commutative Frobenius algebra with normalized functional and a projective nondegenerate ternary quadratic form. Regularity for all parameters, including nonreduced factors, is equivalent to nonisotropy of every lifted local socle in the matrix factor. Every finite point graph on this chart is regular, of opposite rank ten and minimal period two."
+    "scope": "All finite one-opposite-symmetric windows of opposite rank at most nine admit a finite regularity decision without simple-point hypotheses. The whole regular mixed chart has rank ten and minimum period two. Its quartic Frobenius normal forms and residual groups are explicit, and finiteness is a ternary eigenvector test outside the noncurvilinear local algebra. Its eight-dimensional closure is a divisor in the nine-dimensional half-period component."
   },
   "checks": [
     {
-      "command": "python computations/verify_mixed_point_frobenius_algebras.py",
+      "command": "python computations/verify_mixed_point_orbits.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Treat unequal marked matrix spans at opposite rank ten and above, finite graphs without a simple local component, positive-dimensional fibers and global components and specializations."
+    "Analyze finite point windows without a known opposite symmetry, the full-rank one-symmetric stratum and positive-dimensional fibers. Complete global component and specialization coverage."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 506,
+      "nc-p3": 508,
       "plan_ja": 11,
       "notes_ja": 21
     },

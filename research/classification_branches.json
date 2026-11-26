@@ -769,6 +769,12 @@
       "current_result": "The mixed skew/symmetric marked chart is classified by a four-dimensional commutative Frobenius algebra with normalized functional and a projective nondegenerate ternary quadratic form. Regularity for all parameters, including nonreduced factors, is equivalent to nonisotropy of every lifted local socle in the matrix factor. Every finite point graph on this chart is regular, of opposite rank ten and minimal period two.",
       "current_proof": "sections/mixed_point_frobenius_algebras.tex",
       "global_coverage": false
+    },
+    {
+      "id": "MIXED-QUARTIC-ORBITS-AND-HALF-PERIOD-DIVISOR",
+      "current_result": "All finite one-opposite-symmetric windows of opposite rank at most nine admit a finite regularity decision without simple-point hypotheses. The whole regular mixed chart has rank ten and minimum period two. Its quartic Frobenius normal forms and residual groups are explicit, and finiteness is a ternary eigenvector test outside the noncurvilinear local algebra. Its eight-dimensional closure is a divisor in the nine-dimensional half-period component.",
+      "current_proof": "sections/mixed_point_orbits.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -826,7 +832,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 283,
+  "version": 284,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
