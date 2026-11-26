@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 322,
+  "version": 323,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "19503cc7406923eaabe70212554ce4e7cb38f8dd"
+    "source_commit": "986dfccbb83b18249cc7e23309e4dd282ca691e8"
   },
   "generation": {
     "result": "PASS",
-    "scope": "A four-tensor whose four diagonal edge restrictions belong to the same complete-intersection net of quadrics splits into a bisymmetric tensor and a four-form. In the high-order finite rank-eight residual branch the common octad aligns the positions, and the common irreducible quadric forces the symmetric opposite block to have rank at least three. The four-form must vanish, contradicting the required nonsymmetric marked slice. Thus every still undecided planar mark has an equation of order two or three."
+    "scope": "Every standard finite Frobenius window with finite edges and opposite rank eight has a finite all-degree Koszul and two-sided AS regularity decision. Middle support three certifies regularity. Otherwise one parity is symmetric, so the low-rank symmetric-kernel test and the bisymmetric finite test decide every candidate, including one- and two-support nonreduced schemes. The new argument applies once to the blowup of a multiplicity-two or -three plane carrier, including nonreduced carriers."
   },
   "checks": [
     {
-      "command": "python computations/verify_finite_common_net_symmetry.py",
+      "command": "python computations/verify_finite_carrier_blowup.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Treat planar marks with quadratic or cubic initial relations. In the cubic case compare the leading vector equation with the tangent-cone cubic pencil. In the other ranks resolve branching with a nonlinear corridor."
+    "At opposite rank nine compare the dimensions of both pairs of marked slices inside the opposite pairing. Use a common four-space on at least one parity and determine which Artin marks still obstruct a symmetry. Also treat rank-eight positive-dimensional point graphs and rank-nine curved branching."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 565,
+      "nc-p3": 566,
       "plan_ja": 12,
       "notes_ja": 24
     },
