@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 318,
+  "version": 319,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "3b6ea2f0a0da6de53b1fa52e26908c02439f9563"
+    "source_commit": "35e914d980ec61645bda33b9a917f893cd33df15"
   },
   "generation": {
     "result": "PASS",
-    "scope": "A repeated linear factor in a finite cubic separator forces the alternating three-by-three space plus one symmetric rank-one matrix, with separator h times s squared. Three distinct plane factors force a short or positive-dimensional rank-one slice. At a single supporting point every length-four marked slice now gives opposite kernel symmetry even for arbitrary planar local rings. At two points the length-four curvilinear kernel discrepancy is excluded."
+    "scope": "A two-line corridor requires opposite rank at least eleven even in the presence of pure relations. Both endpoint middle supports restrict surjectively to the opposite line, and every moving point on either line has middle support four. At rank eleven only endpoint supports three and a pure endpoint contraction of rank one are possible."
   },
   "checks": [
     {
-      "command": "python computations/verify_finite_split_separator_slices.py",
+      "command": "python computations/verify_two_line_full_middle_restriction.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Treat length-three slices at a sole planar point and the remaining local discrepancies at two planar points. Use the separator factorization and local second-order evaluation constraints."
+    "Analyze longer corridors at opposite ranks nine and ten with pure relations, and the remaining one- and two-support finite planar slices at opposite rank eight."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 560,
+      "nc-p3": 561,
       "plan_ja": 12,
       "notes_ja": 23
     },

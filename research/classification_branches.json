@@ -979,6 +979,12 @@
       "current_result": "A repeated linear factor in a finite cubic separator forces the alternating three-by-three space plus one symmetric rank-one matrix, with separator h times s squared. Three distinct plane factors force a short or positive-dimensional rank-one slice. At a single supporting point every length-four marked slice now gives opposite kernel symmetry even for arbitrary planar local rings. At two points the length-four curvilinear kernel discrepancy is excluded.",
       "current_proof": "sections/finite_split_separator_slices.tex",
       "global_coverage": false
+    },
+    {
+      "id": "TWO-LINE-FULL-MIDDLE-RESTRICTION",
+      "current_result": "A two-line corridor requires opposite rank at least eleven even in the presence of pure relations. Both endpoint middle supports restrict surjectively to the opposite line, and every moving point on either line has middle support four. At rank eleven only endpoint supports three and a pure endpoint contraction of rank one are possible.",
+      "current_proof": "sections/two_line_full_middle_restriction.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1036,7 +1042,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 318,
+  "version": 319,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
