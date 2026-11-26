@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 284,
+  "version": 285,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "3f7eca04b30ea707a1d4cbef8213809cf59de493"
+    "source_commit": "d926bd4df53a4018622bbb78be90b9df31ac1009"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All finite one-opposite-symmetric windows of opposite rank at most nine admit a finite regularity decision without simple-point hypotheses. The whole regular mixed chart has rank ten and minimum period two. Its quartic Frobenius normal forms and residual groups are explicit, and finiteness is a ternary eigenvector test outside the noncurvilinear local algebra. Its eight-dimensional closure is a divisor in the nine-dimensional half-period component."
+    "scope": "In every standard regular window the endpoint ranks of all nonzero cubic slices are at least two, without any symmetry, recurrence or finite-fiber assumption. Positive-dimensional fibers can therefore only be lines. A two-dimensional endpoint support determines at most one evaluation point, and a line on both sides forces both relation intersections to have dimension two."
   },
   "checks": [
     {
-      "command": "python computations/verify_mixed_point_orbits.py",
+      "command": "python computations/verify_endpoint_plane_growth.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze finite point windows without a known opposite symmetry, the full-rank one-symmetric stratum and positive-dimensional fibers. Complete global component and specialization coverage."
+    "Resolve line fibers and the unrestricted finite strata, including higher opposite ranks and nonreduced point graphs, and finish their global orbit and specialization comparison."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 508,
+      "nc-p3": 510,
       "plan_ja": 11,
       "notes_ja": 21
     },

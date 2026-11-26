@@ -775,6 +775,12 @@
       "current_result": "All finite one-opposite-symmetric windows of opposite rank at most nine admit a finite regularity decision without simple-point hypotheses. The whole regular mixed chart has rank ten and minimum period two. Its quartic Frobenius normal forms and residual groups are explicit, and finiteness is a ternary eigenvector test outside the noncurvilinear local algebra. Its eight-dimensional closure is a divisor in the nine-dimensional half-period component.",
       "current_proof": "sections/mixed_point_orbits.tex",
       "global_coverage": false
+    },
+    {
+      "id": "ENDPOINT-LINE-FIBER-UNIVERSAL-BOUND",
+      "current_result": "In every standard regular window the endpoint ranks of all nonzero cubic slices are at least two, without any symmetry, recurrence or finite-fiber assumption. Positive-dimensional fibers can therefore only be lines. A two-dimensional endpoint support determines at most one evaluation point, and a line on both sides forces both relation intersections to have dimension two.",
+      "current_proof": "sections/endpoint_plane_growth.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -832,7 +838,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 284,
+  "version": 285,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
