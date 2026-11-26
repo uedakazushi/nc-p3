@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 363,
+  "version": 364,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "38ed1b18e4f8645eef259509a11aa1d749805a9b"
+    "source_commit": "e32f3060d683afa4ee12da29ac6cde54df3f9c97"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The rank-five crossed-bracket chart with diagonal Cartan and all six nonzero off-diagonal skew entries rigidifies to C(t), with t-squared modulo inversion as projective bracket parameter. All marked lifts and all their AS and indexed classes are determined: typically two period-two W and two period-one central quantum deformations; on the two nonregular W parameters only the central pair survives, at t-squared=-1 all sheets coincide, and at the diagonal endpoint only W(1) is regular. Root of unity central quotients and all allowed special values are included."
+    "scope": "All homogeneous mixed-bracket marked windows with all twenty-four coefficients nonzero and nonzero diagonal brackets have a three-parameter primary torus chart and one extra central branch at equal parameters. Throughout the primary chart AS regularity is equivalent to u^6 != 1, including every vanishing diagonal Walsh normalization factor. The secondary choices are regular central quantum deformations. Two-step periodicity, recovery of both Cartan frames, and finite necessary-and-sufficient unmarked isomorphism and minimum-period tests hold at all regular chart points."
   },
   "checks": [
     {
-      "command": "python computations/verify_five_dimensional_mixed_brackets.py",
+      "command": "python computations/verify_klein_mixed_torus.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Move beyond the skew off-diagonal bracket chart to arbitrary Klein-four graded crossed brackets. Start with the three ordered pairs of off-diagonal coefficients and the diagonal block, use the paired trace conditions to recover monomial generator frames or identify the exceptional mixed character kernels. Continue general-window AS and other components in parallel."
+    "Remove the nonvanishing assumption on the twenty-four homogeneous coefficients at nonzero common diagonal bracket. Use the supports of the two rank-one off-diagonal completions and the diagonal determinant identity to classify the missing supports and decide their AS behavior, including rank-one coefficient limits."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 642,
+      "nc-p3": 644,
       "plan_ja": 14,
       "notes_ja": 26
     },

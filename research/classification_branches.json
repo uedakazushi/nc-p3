@@ -1249,6 +1249,12 @@
       "current_result": "The rank-five crossed-bracket chart with diagonal Cartan and all six nonzero off-diagonal skew entries rigidifies to C(t), with t-squared modulo inversion as projective bracket parameter. All marked lifts and all their AS and indexed classes are determined: typically two period-two W and two period-one central quantum deformations; on the two nonregular W parameters only the central pair survives, at t-squared=-1 all sheets coincide, and at the diagonal endpoint only W(1) is regular. Root of unity central quotients and all allowed special values are included.",
       "current_proof": "sections/marked_five_dimensional_bracket_fiber.tex",
       "global_coverage": false
+    },
+    {
+      "id": "MARKED-KLEIN-MIXED-TORUS",
+      "current_result": "All homogeneous mixed-bracket marked windows with all twenty-four coefficients nonzero and nonzero diagonal brackets have a three-parameter primary torus chart and one extra central branch at equal parameters. Throughout the primary chart AS regularity is equivalent to u^6 != 1, including every vanishing diagonal Walsh normalization factor. The secondary choices are regular central quantum deformations. Two-step periodicity, recovery of both Cartan frames, and finite necessary-and-sufficient unmarked isomorphism and minimum-period tests hold at all regular chart points.",
+      "current_proof": "sections/marked_klein_mixed_torus.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1306,7 +1312,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 363,
+  "version": 364,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
