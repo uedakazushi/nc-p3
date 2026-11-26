@@ -1015,6 +1015,12 @@
       "current_result": "Finite-edge rank nine is regular exactly at a point of middle support three. In the single high-order chart a nonzero four-form requires opposite rank at least twelve. Together with surface and curve-graph coverage and branching exclusions, all windows through opposite rank eight have finite all-degree regularity and indexed-isomorphism tests. The sole residual rank-nine type has a pure relation and curve-only branching.",
       "current_proof": "sections/finite_rank_nine_all_marks.tex",
       "global_coverage": false
+    },
+    {
+      "id": "BRANCH-BINARY-CENTER-PAIRING",
+      "current_result": "At every opposite rank a forward branching center of middle support two has a unique paired backward center in the preceding phase. Their binary support planes coincide and their two corresponding lines have generic middle support three. No other moving component in a finite branching corridor has generic middle support three: paired moving opposite annihilators would propagate backward past the starting center. At rank nine all centers have middle support two or three. Any consecutive string of nonlinear components contains at most one nonplanar curve; all planar components have degree at most three.",
+      "current_proof": "sections/branch_binary_center_pairing.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1072,7 +1078,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 324,
+  "version": 325,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

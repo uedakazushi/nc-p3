@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-26",
-  "version": 324,
+  "version": 325,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -3354,6 +3354,15 @@
       "verification": [
         "computations/verify_finite_rank_nine_marks.py"
       ]
+    },
+    {
+      "id": "BRANCH-BINARY-CENTER-PAIRING",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "At every opposite rank a forward branching center of middle support two has a unique paired backward center in the preceding phase. Their binary support planes coincide and their two corresponding lines have generic middle support three. No other moving component in a finite branching corridor has generic middle support three: paired moving opposite annihilators would propagate backward past the starting center. At rank nine all centers have middle support two or three. Any consecutive string of nonlinear components contains at most one nonplanar curve; all planar components have degree at most three.",
+      "proof": "sections/branch_binary_center_pairing.tex",
+      "verification": [
+        "computations/verify_branch_binary_center_pairing.py"
+      ]
     }
   ],
   "document_paths": {
@@ -3417,7 +3426,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "4cbb9fa4f58ecd5b32583c28aa71cf6531de893e",
+  "reviewed_source_commit": "dec00a2a23c278c72b6c94b56de6336f01aef082",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -3426,15 +3435,15 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_nine_branching_and_rank_ten_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Resolve rank-nine curve-only branching with pure relations, starting with rank-three forward centers and their first nonlinear component. At finite rank ten compare the two five-dimensional sums of marked slices.",
+    "immediate_next_action": "Classify the three-by-three binary pencils of rank-nine ternary centers. Use the pure relation from the first two moving positions to restrict the third component, and combine adjacent planar component restrictions with the corridor degree formula. Finite rank-ten five-space pairs remain independent.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/finite_rank_nine_all_marks.tex",
+      "sections/branch_binary_center_pairing.tex",
       "sections/branch_rank_one_residual.tex",
-      "sections/rank_eight_branch_exclusion.tex"
+      "sections/finite_branch_corridors.tex"
     ],
     "known_obstruction": "Rank-nine curve-only branching with pure relations is undecided. Finite windows at higher opposite ranks may lack any aligned marked pair. Full orbit, component and specialization data remain open.",
-    "state_of_claim": "Finite-edge rank nine is regular exactly at a point of middle support three. In the single high-order chart a nonzero four-form requires opposite rank at least twelve. Together with surface and curve-graph coverage and branching exclusions, all windows through opposite rank eight have finite all-degree regularity and indexed-isomorphism tests. The sole residual rank-nine type has a pure relation and curve-only branching. Global classification remains open.",
+    "state_of_claim": "At every opposite rank a forward branching center of middle support two has a unique paired backward center in the preceding phase. Their binary support planes coincide and their two corresponding lines have generic middle support three. No other moving component in a finite branching corridor has generic middle support three: paired moving opposite annihilators would propagate backward past the starting center. At rank nine all centers have middle support two or three. Any consecutive string of nonlinear components contains at most one nonplanar curve; all planar components have degree at most three. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
