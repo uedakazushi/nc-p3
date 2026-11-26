@@ -1123,6 +1123,12 @@
       "current_result": "On every finite full-middle-support graph with at least seventeen geometric sites, opposite rank ten forces an opposite symmetry and rank eleven is impossible. At a planar Gorenstein length-four site, embedded conic pencils select one of two isotropic tangent directions. The only loss in the projected ruling bound is a socle contact, which produces rulings with the same tangent-plane factor in both re-marked four-spaces; the two-space incidence count then excludes it globally.",
       "current_proof": "sections/finite_planar_four_seventeen.tex",
       "global_coverage": false
+    },
+    {
+      "id": "MARKED-NO-THREE-BRACKET-COMPRESSION",
+      "current_result": "Three independent commutators of an irreducible traceless three-plane of 3-by-3 matrices cannot all send one fixed plane to one fixed line. Both the transverse and incident line cases force reducibility or a common self-adjoint form with only two independent compressed skew brackets. In every marked one-sided symmetric finite branch with unequal symmetric nets and three independent brackets the cubic determinant is nonzero. In particular the common plane of two symmetric nets with four-dimensional sum cannot commute.",
+      "current_proof": "sections/marked_commuting_intersection.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1180,7 +1186,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 342,
+  "version": 343,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

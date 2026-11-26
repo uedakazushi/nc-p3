@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-26",
-  "version": 342,
+  "version": 343,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -3516,6 +3516,15 @@
       "verification": [
         "computations/verify_planar_four_pencils.py"
       ]
+    },
+    {
+      "id": "MARKED-NO-THREE-BRACKET-COMPRESSION",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "Three independent commutators of an irreducible traceless three-plane of 3-by-3 matrices cannot all send one fixed plane to one fixed line. Both the transverse and incident line cases force reducibility or a common self-adjoint form with only two independent compressed skew brackets. In every marked one-sided symmetric finite branch with unequal symmetric nets and three independent brackets the cubic determinant is nonzero. In particular the common plane of two symmetric nets with four-dimensional sum cannot commute.",
+      "proof": "sections/marked_commuting_intersection.tex",
+      "verification": [
+        "computations/verify_rank_one_commutator_compression.py"
+      ]
     }
   ],
   "document_paths": {
@@ -3579,7 +3588,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "9a745826150c0b8b6b59c46f7a030910760fb2d7",
+  "reviewed_source_commit": "efa726e23bbda635d5c198431311dc4aa908127c",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -3588,14 +3597,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "On the finite one-sided symmetric rank-ten branch, use the commuting intersection of the two symmetric nets and the prescribed commutator compression to reduce the fully singular discriminant. On smaller supports track the placement of length-two conic contacts and individual slice rulings.",
+    "immediate_next_action": "Choose an invertible commutator on the remaining unequal-net branches and determine the reconstruction on a fixed semisimple or regular Jordan cyclic chart. On graphs with fewer sites use residual pencils and re-marking together with the finite-graph square equations.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/finite_planar_four_seventeen.tex",
-      "sections/finite_seventeen_site_pencils.tex"
+      "sections/marked_commuting_intersection.tex",
+      "sections/marked_three_commutators.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "On every finite full-middle-support graph with at least seventeen geometric sites, opposite rank ten forces an opposite symmetry and rank eleven is impossible. At a planar Gorenstein length-four site, embedded conic pencils select one of two isotropic tangent directions. The only loss in the projected ruling bound is a socle contact, which produces rulings with the same tangent-plane factor in both re-marked four-spaces; the two-space incidence count then excludes it globally. Full classification remains open.",
+    "state_of_claim": "Three independent commutators of an irreducible traceless three-plane of 3-by-3 matrices cannot all send one fixed plane to one fixed line. Both the transverse and incident line cases force reducibility or a common self-adjoint form with only two independent compressed skew brackets. In every marked one-sided symmetric finite branch with unequal symmetric nets and three independent brackets the cubic determinant is nonzero. In particular the common plane of two symmetric nets with four-dimensional sum cannot commute. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
