@@ -696,6 +696,12 @@
       "current_proof": "sections/line_component_as_test.tex",
       "global_coverage": false,
       "additional_proof": "sections/conic_component_as_test.tex"
+    },
+    {
+      "id": "PLANE-CUBIC-MARK-NORMALITY",
+      "current_result": "Every compatible plane cubic subscheme in a one-dimensional point-fiber graph, including nonreduced cubics or embedded intersections, forces a regular normal linear parameter. The entire window is a period-one central PBW lift of its ternary AS quotient. The two adjacent conormal presentations detect any failure of normality without smoothness or isolation.",
+      "current_proof": "sections/plane_cubic_mark_normality.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -753,7 +759,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 271,
+  "version": 272,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
