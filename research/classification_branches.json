@@ -1033,6 +1033,12 @@
       "current_result": "In any finite-edge standard Frobenius window of full middle support, one planar local complete intersection whose two equations have order at least four forces bisymmetry at every opposite rank, whether or not residual support is present. Off the mark, linkage in two common unit coordinates identifies the same octad. Its net gives a half-turn on the point scheme, trivial on the entire large local factor by characteristic-zero tangent rigidity and hence globally by the support bound on adjacent words. Such windows cannot be regular at opposite rank above eight.",
       "current_proof": "sections/finite_high_order_half_turn.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FINITE-FIVE-SPACE-SECANT-STRESSES",
+      "current_result": "For any full-middle-support reduced finite twenty-point graph, two different marked four-spaces spanning a five-space force its Segre intersection to be positive-dimensional. A finite six-point intersection would have to supply at least thirteen secants. The square-coordinate dependency codes on those labeled secants recover the two hyperplanes up to a change on the missing edges, contradicting the distinct intersections even with two omitted pairs. A single quartic slice at a curvilinear mark already forces kernel-side symmetry without a common slice. Hence a spanning integral rank-one curve in the five-space forces symmetry.",
+      "current_proof": "sections/finite_marked_five_space_secants.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1090,7 +1096,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 327,
+  "version": 328,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

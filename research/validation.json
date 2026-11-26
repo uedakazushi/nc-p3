@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 327,
+  "version": 328,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "cc8fe02dfa5e21669b8dfc0e38d028b5e26b50ba"
+    "source_commit": "f91a9edc10f276fbb9a380d57d69087b2cc1324a"
   },
   "generation": {
     "result": "PASS",
-    "scope": "In any finite-edge standard Frobenius window of full middle support, one planar local complete intersection whose two equations have order at least four forces bisymmetry at every opposite rank, whether or not residual support is present. Off the mark, linkage in two common unit coordinates identifies the same octad. Its net gives a half-turn on the point scheme, trivial on the entire large local factor by characteristic-zero tangent rigidity and hence globally by the support bound on adjacent words. Such windows cannot be regular at opposite rank above eight."
+    "scope": "For any full-middle-support reduced finite twenty-point graph, two different marked four-spaces spanning a five-space force its Segre intersection to be positive-dimensional. A finite six-point intersection would have to supply at least thirteen secants. The square-coordinate dependency codes on those labeled secants recover the two hyperplanes up to a change on the missing edges, contradicting the distinct intersections even with two omitted pairs. A single quartic slice at a curvilinear mark already forces kernel-side symmetry without a common slice. Hence a spanning integral rank-one curve in the five-space forces symmetry."
   },
   "checks": [
     {
-      "command": "python computations/verify_finite_high_order_half_turn.py",
+      "command": "python computations/verify_five_space_secant_stresses.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "For finite rank ten analyze five-dimensional spans of two marked four-spaces at quadratic or cubic planar marks. On the branching side examine the restricted two-by-four-by-three pencils of four-dimensional centers and the length-four corridor with nonplanar inner curves."
+    "Classify the remaining positive-dimensional Segre sections in a marked five-space, starting with ruling lines and plane conics with isolated nodes; bound available secants from their two projected kernels. Test the analogous secant incidence with nonreduced marks, and pursue four-dimensional branching-center pencils at rank ten."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 573,
+      "nc-p3": 575,
       "plan_ja": 12,
       "notes_ja": 24
     },
