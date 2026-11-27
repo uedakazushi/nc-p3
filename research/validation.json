@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 418,
+  "version": 419,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "858f5aea8d93f06ea04a6f999b5c1ff7ae09ef0f"
+    "source_commit": "b8dd0f2c4ac70e3383a4bdb152dfbc5e199261e9"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The three sparse horizontal rectangle families lie in the five-dimensional Klein orbit closure. For horizontal 85 and 143–147, all-degree standard Koszul two-sided AS regularity holds exactly when b+c is nonzero. The entire third rectangle on 88–90 is regular. This completes every regularity fiber on those supports and gives the full pointed unmarked classification and periods for horizontal 85 and the third rectangle using their existing orbit coordinates."
+    "scope": "The seven-dimensional involution component has a rational moduli chart with its four point tracks ordered, including the residual projective sign quotient. Its generic unmarked stabilizer has order two and its minimal period is four."
   },
   "checks": [
     {
-      "command": "python computations/verify_horizontal_rectangle_flags.py",
+      "command": "python computations/verify_quartet_rational_chart.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Recover unmarked frames on all 112 horizontal fibers and determine evaluation obstructions on the full-thin elliptic completion. Extend the all-degree criterion beyond the involution locus; global coverage remains open."
+    "Analyze the general fifteen-dimensional finite-point component through its twenty determinantal cubic surfaces and the adjacent point contractions; continue unmarked horizontal frames and the uncovered windows."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 735,
+      "nc-p3": 736,
       "plan_ja": 16,
       "notes_ja": 29
     },
