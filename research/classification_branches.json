@@ -1687,6 +1687,12 @@
       "current_result": "The entire finite-point-graph locus with a nontrivial torus is classified. In the double-middle profile only one reciprocal pencil family survives, with parameter alpha modulo inversion, alpha different from zero and plus or minus one. Its windows are period one and polystable with two length-nine and two reduced sites. The tangent-pencil completions and equal-ratio completions have moving point curves. For both finite torus profiles the connected projective stabilizer is exactly the multiplicative group.",
       "current_proof": "sections/double_middle_finite_windows.tex",
       "global_coverage": false
+    },
+    {
+      "id": "UNRESTRICTED-FINITE-TORUS-FIBERS",
+      "current_result": "Without imposing symmetry, general finite torus surface points are smooth on a 76-dimensional affine component, and both finite torus curves have smooth points on 75-dimensional affine components. The first component and the simple-weight curve component intersect at their common period-one window. The entire GIT fibers of the three general types are classified by weighted projective spaces, with a sign quotient in the double-middle case, using the nonreduced length-twenty conormal and the Luna slice. Every member is regular, and the surface fibers all have period four.",
+      "current_proof": "sections/finite_torus_slices.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1744,7 +1750,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 436,
+  "version": 437,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
