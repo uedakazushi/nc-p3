@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 414,
+  "version": 415,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "529f4eefd108afac086dabe9cb460cfe23d78e61"
+    "source_commit": "57c6bb57e568a7e38e65aadab30f8fc92bad2a68"
   },
   "generation": {
     "result": "PASS",
-    "scope": "On the equal-determinant rank-ten second-completion sheet outside its two previously classified exchange planes, all evaluation failures are exactly eight explicit planes. All other four-edge graphs are finite of length twenty with explicit square-coordinate orbits and every collision curvilinear of length three. The generic unmarked quotient is rational with coordinates Q,L,H, and all candidate isomorphisms and periods, including enlarged stabilizers, admit finite frame comparisons."
+    "scope": "On the unequal-determinant conic of the final invertible fiber the four evaluation bounds are equivalent to a single explicit nonvanishing product; all failures are non-AS. All surviving candidates have opposite rank ten and finite length-twenty graphs with explicit orbits and curvilinear triple collisions. The generic unmarked quotient is rational of dimension three with three explicit invariants and Klein stabilizer."
   },
   "checks": [
     {
-      "command": "python computations/verify_equal_determinant_second_sheet.py",
+      "command": "python computations/verify_unequal_determinant_conic.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Establish all-degree regularity of the remaining finite-graph rank-ten points and mixed-corner points; propagate structural and recognition results beyond the marked Klein sector."
+    "Decide closed-point AS regularity after removing the complete evaluation obstruction, including on the two remaining rank-ten sheets; treat unmarked windows outside the Klein sector."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 727,
+      "nc-p3": 729,
       "plan_ja": 16,
       "notes_ja": 29
     },
