@@ -2233,6 +2233,12 @@
       "current_result": "In the finite fifteen-dimensional closure, every AS-regular specialization with even one semiprime corner is a composable domain, finite over its center, and passes the uniform 564-degree test. Thus every remaining hypothetical regular point must have a nonzero nilpotent two-sided ideal in each corner.",
       "current_proof": "sections/finite_semiprime_specialization.tex",
       "global_coverage": false
+    },
+    {
+      "id": "ALL-COMPONENTS-BOUNDED-NOETHERIAN-PI-CUTOFF",
+      "current_result": "In every component, the left and right Noetherian standard regular folds satisfying the identities of matrices of size 4s are exactly a finite central-parameter test at degree 4 lcm(1,...,s) lcm(1,...,s²) with the indicated generic rank bound. They are composable domains and finite over a normal center.",
+      "current_proof": "sections/noetherian_pi_window_cutoff.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2290,7 +2296,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 527,
+  "version": 528,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

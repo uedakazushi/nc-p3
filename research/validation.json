@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 527,
+  "version": 528,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "f975299d77896388cdc69ac37ca34335adb9f8d4"
+    "source_commit": "bee82d6b0fd6f3d95dea97913582a39265da9794"
   },
   "generation": {
     "result": "PASS",
-    "scope": "In the finite fifteen-dimensional closure, every AS-regular specialization with even one semiprime corner is a composable domain, finite over its center, and passes the uniform 564-degree test. Thus every remaining hypothetical regular point must have a nonzero nilpotent two-sided ideal in each corner."
+    "scope": "In every component, the left and right Noetherian standard regular folds satisfying the identities of matrices of size 4s are exactly a finite central-parameter test at degree 4 lcm(1,...,s) lcm(1,...,s²) with the indicated generic rank bound. They are composable domains and finite over a normal center."
   },
   "checks": [
     {
-      "command": "python computations/verify_semiprime_specialization.py",
+      "command": "python computations/verify_noetherian_pi_window_cutoff.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze nilpotent ideals in PI regular specializations using the relative trace ring and the AS vanishing for modules of small growth; continue classification outside this closure."
+    "Test simultaneous trace descent in the non-Noetherian residual locus via specialization of simple representations and their first extensions with vertex simples; pursue uncovered finite components."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 916,
+      "nc-p3": 918,
       "plan_ja": 21,
       "notes_ja": 35
     },
