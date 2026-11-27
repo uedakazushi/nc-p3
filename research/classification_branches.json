@@ -2245,6 +2245,12 @@
       "current_result": "For standard regular PI folds on every component, being finite over the center and being left/right Noetherian are each equivalent to vanishing in both directions of Ext¹ between every nonvertex simple and every vertex simple. No primeness, Noetherianity or degeneration hypothesis is needed in this criterion.",
       "current_proof": "sections/pi_vertex_extension_criterion.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FREE-ALGEBRA-OBSTRUCTION-FOR-SIMPLE-COMPLETIONS",
+      "current_result": "For any nonvertex simple, fixing all but one or two opposite arrows leaves in polynomial growth a single orbit of simple completions up to gauge and grading scale. Excess dimension explicitly forces a free subalgebra. For a stable vertex-dimension-two cut the two-dimensional return pencil is exactly the case of identical twisted cubics; it has binary cubic polar normal form and exponential growth.",
+      "current_proof": "sections/simple_linear_completion_growth.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2302,7 +2308,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 529,
+  "version": 530,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

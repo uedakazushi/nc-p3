@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 529,
+  "version": 530,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "381dfcfb06fecba33ec2413c097d38fb179a105e"
+    "source_commit": "a0da01a08311f17e245a262ea189cc439753f044"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For standard regular PI folds on every component, being finite over the center and being left/right Noetherian are each equivalent to vanishing in both directions of Ext¹ between every nonvertex simple and every vertex simple. No primeness, Noetherianity or degeneration hypothesis is needed in this criterion."
+    "scope": "For any nonvertex simple, fixing all but one or two opposite arrows leaves in polynomial growth a single orbit of simple completions up to gauge and grading scale. Excess dimension explicitly forces a free subalgebra. For a stable vertex-dimension-two cut the two-dimensional return pencil is exactly the case of identical twisted cubics; it has binary cubic polar normal form and exponential growth."
   },
   "checks": [
     {
-      "command": "python computations/verify_pi_vertex_extension_criterion.py",
+      "command": "python computations/verify_simple_linear_completion_growth.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine the exceptional simple representations having an extension with a vertex in the finite-edge locus; work also on finite windows with no PI identity."
+    "Classify finite regular windows with one vertex corner satisfying the identities of two-by-two matrices; separate surviving non-Noetherian obstructions in higher degree."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 920,
+      "nc-p3": 922,
       "plan_ja": 21,
       "notes_ja": 35
     },
