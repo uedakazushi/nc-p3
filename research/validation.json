@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 533,
+  "version": 534,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "c74a621b6d8edcf01de04759dbb45fbc1b594de1"
+    "source_commit": "e78428f237e83dc6b588058507c9299c536a9d55"
   },
   "generation": {
     "result": "PASS",
-    "scope": "On every polynomial-growth window a periodic sequence of stable equal-dimension Kronecker arrows is determined among all periodic sequences by any one arrow, up to vertex gauge and scaling. In particular distinct periodic cycles of oriented two-dimensional quadrics cannot intersect at a common phase. A primitive cycle of length 4m induces a simple of vertex dimension 2m with exact normalized grading stabilizer μ_m."
+    "scope": "The stabilizer order h>1 of any nonvertex center character of a regular finite-edge center-finite window satisfies 2h≤s for vertex index s, and generic inertia is trivial. At index four the stacky points have exactly three explicit types, all detected by octic traces. The doubled polarization is Cartier; on the fifteen-dimensional domain closure the inertia has codimension at least two and 2K is Cartier."
   },
   "checks": [
     {
-      "command": "python computations/verify_periodic_stable_arrow_uniqueness.py",
+      "command": "python computations/verify_central_character_periods.py",
       "result": "PASS"
     },
     {
@@ -40,13 +40,13 @@
     }
   ],
   "open_mathematics": [
-    "Classify the inertia of center characters at index four and test octic traces on genuine doubled periods; continue the general finite-window classification."
+    "Analyze remaining free-orbit octic basepoints using rank growth of arrow products and expand coverage of regular finite windows through their higher-dimensional simple representations."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 926,
-      "plan_ja": 21,
+      "nc-p3": 929,
+      "plan_ja": 22,
       "notes_ja": 35
     },
     "scope": "LuaLaTeX built the manuscript, plan and research notes."
