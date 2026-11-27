@@ -1693,6 +1693,12 @@
       "current_result": "Without imposing symmetry, general finite torus surface points are smooth on a 76-dimensional affine component, and both finite torus curves have smooth points on 75-dimensional affine components. The first component and the simple-weight curve component intersect at their common period-one window. The entire GIT fibers of the three general types are classified by weighted projective spaces, with a sign quotient in the double-middle case, using the nonreduced length-twenty conormal and the Luna slice. Every member is regular, and the surface fibers all have period four.",
       "current_proof": "sections/finite_torus_slices.tex",
       "global_coverage": false
+    },
+    {
+      "id": "UNRESTRICTED-SMOOTH-COMPONENT-CROSSING",
+      "current_result": "The complete unrestricted local orbit slice at the common finite torus point has exactly the equations uv=uz=0 in seventeen variables. The two smooth affine components have dimensions 76 and 75, with smooth reduced 74-dimensional intersection. All windows degenerating to this period-one closed orbit belong to their intersection and are classified by a single weighted projective space outside the closed orbit.",
+      "current_proof": "sections/torus_component_crossing.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1750,7 +1756,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 437,
+  "version": 438,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

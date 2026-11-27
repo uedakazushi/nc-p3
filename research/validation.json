@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 437,
+  "version": 438,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "ca84d061c9c4d6a081c416afd9a907038b21710a"
+    "source_commit": "1cca9f60d8f48ab90e65fa8192803b0088564223"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Without imposing symmetry, general finite torus surface points are smooth on a 76-dimensional affine component, and both finite torus curves have smooth points on 75-dimensional affine components. The first component and the simple-weight curve component intersect at their common period-one window. The entire GIT fibers of the three general types are classified by weighted projective spaces, with a sign quotient in the double-middle case, using the nonreduced length-twenty conormal and the Luna slice. Every member is regular, and the surface fibers all have period four."
+    "scope": "The complete unrestricted local orbit slice at the common finite torus point has exactly the equations uv=uz=0 in seventeen variables. The two smooth affine components have dimensions 76 and 75, with smooth reduced 74-dimensional intersection. All windows degenerating to this period-one closed orbit belong to their intersection and are classified by a single weighted projective space outside the closed orbit."
   },
   "checks": [
     {
-      "command": "python computations/verify_finite_torus_slices.py",
+      "command": "python computations/verify_torus_component_crossing.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Resolve the unrestricted local intersection at the common period-one point and classify further finite windows with unipotent or trivial stabilizer."
+    "Determine the shifts and periods on the entire attracting fibers and continue to the unipotent-only and unrestricted finite-graph loci."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 768,
+      "nc-p3": 770,
       "plan_ja": 17,
       "notes_ja": 30
     },
