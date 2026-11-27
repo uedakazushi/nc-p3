@@ -1549,6 +1549,12 @@
       "current_result": "All full-thin parallel two-doublet regular Klein windows, with arbitrary thick coefficient zeros, lie in the elliptic five-dimensional closure or the positive or negative exchange closures up to marked relabeling and shift. The thin quotient and the last invertible-corner fiber are determined. Two new rank-ten strata have regular open sets and respective generic periods four and two. The mixed rank-sixteen resolved fiber has one regular Zariski open containing both certified points.",
       "current_proof": "sections/full_thin_parallel_cover.tex",
       "global_coverage": false
+    },
+    {
+      "id": "EQUAL-DETERMINANT-SECOND-SHEET",
+      "current_result": "On the equal-determinant rank-ten second-completion sheet outside its two previously classified exchange planes, all evaluation failures are exactly eight explicit planes. All other four-edge graphs are finite of length twenty with explicit square-coordinate orbits and every collision curvilinear of length three. The generic unmarked quotient is rational with coordinates Q,L,H, and all candidate isomorphisms and periods, including enlarged stabilizers, admit finite frame comparisons.",
+      "current_proof": "sections/equal_determinant_second_sheet.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1606,7 +1612,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 413,
+  "version": 414,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

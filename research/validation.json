@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 413,
+  "version": 414,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "efb8c252f40681d349e1b4c3bf8cbe3982bbb33d"
+    "source_commit": "529f4eefd108afac086dabe9cb460cfe23d78e61"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All full-thin parallel two-doublet regular Klein windows, with arbitrary thick coefficient zeros, lie in the elliptic five-dimensional closure or the positive or negative exchange closures up to marked relabeling and shift. The thin quotient and the last invertible-corner fiber are determined. Two new rank-ten strata have regular open sets and respective generic periods four and two. The mixed rank-sixteen resolved fiber has one regular Zariski open containing both certified points."
+    "scope": "On the equal-determinant rank-ten second-completion sheet outside its two previously classified exchange planes, all evaluation failures are exactly eight explicit planes. All other four-edge graphs are finite of length twenty with explicit square-coordinate orbits and every collision curvilinear of length three. The generic unmarked quotient is rational with coordinates Q,L,H, and all candidate isomorphisms and periods, including enlarged stabilizers, admit finite frame comparisons."
   },
   "checks": [
     {
-      "command": "python computations/verify_full_thin_exchange_cover.py",
+      "command": "python computations/verify_equal_determinant_second_sheet.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Classify closed regularity on the mixed and second-completion strata beyond the regular opens, and supply unrestricted window coverage outside the marked Klein charts."
+    "Establish all-degree regularity of the remaining finite-graph rank-ten points and mixed-corner points; propagate structural and recognition results beyond the marked Klein sector."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 725,
+      "nc-p3": 727,
       "plan_ja": 16,
       "notes_ja": 29
     },
