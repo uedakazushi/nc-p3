@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 491,
+  "version": 492,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "00aea2568b48aaba904825a3d83ae6c766566968"
+    "source_commit": "2858d7ddb57bacbd806260383cc8cd97d399b071"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every pure-free branched regular window without a surface projection has a two-line corridor, hence opposite rank at least twelve. In the last competing configuration the two rank-six completions factor through a common binary quartic zero giving a forbidden two-sided center, including all degenerations of the quartics."
+    "scope": "Every curve projection of a regular window has scheme degree at most seven even in the presence of branching, giving a period bound of 28 for a branching point path. In the pure-free case every phase has at most one center in each direction and both lines in every two-line corridor are tangents, including nonreduced contact."
   },
   "checks": [
     {
-      "command": "python computations/verify_branch_pencil_resultant.py",
+      "command": "python computations/verify_branch_degree_seven.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Study the integral two-line corridor frame using its perfect six-space, the rank-six opposite-edge multiplication span and the endpoint Hankel pencils. Extend the unbranched all-degree classification outside split attraction."
+    "Resolve the central edge of the mandatory double-tangent corridor, determine its extra cubic or finite sextic locus, and track remaining corridors and endpoint matrix completions."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 854,
+      "nc-p3": 855,
       "plan_ja": 20,
       "notes_ja": 33
     },

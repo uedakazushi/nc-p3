@@ -2017,6 +2017,12 @@
       "current_result": "Every pure-free branched regular window without a surface projection has a two-line corridor, hence opposite rank at least twelve. In the last competing configuration the two rank-six completions factor through a common binary quartic zero giving a forbidden two-sided center, including all degenerations of the quartics.",
       "current_proof": "sections/branch_pencil_resultant.tex",
       "global_coverage": false
+    },
+    {
+      "id": "BRANCHED-DEGREE-SEVEN-AND-DOUBLE-TANGENCY",
+      "current_result": "Every curve projection of a regular window has scheme degree at most seven even in the presence of branching, giving a period bound of 28 for a branching point path. In the pure-free case every phase has at most one center in each direction and both lines in every two-line corridor are tangents, including nonreduced contact.",
+      "current_proof": "sections/branch_degree_seven.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2074,7 +2080,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 491,
+  "version": 492,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
