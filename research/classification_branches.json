@@ -1705,6 +1705,12 @@
       "current_result": "All periods are determined, including exceptional coordinate strata, in the unrestricted attracting fibers at the three general finite torus types and their singular common point. The simple surface fibers have period four, both nonclosed simple curve fibers have period two, and the other two fibers have period one precisely on explicitly specified involution fixed loci and otherwise period two.",
       "current_proof": "sections/torus_fiber_periods.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FINITE-ADDITIVE-FOUR-TRANSVECTIONS",
+      "current_result": "Every nontrivial additive action on a finite Frobenius graph is nontrivial at every slot, has a unique maximal Jordan block there and a canonical four-cycle, and cannot mix a regular block with a transvection. Four transvections force all-degree AS regularity by an explicit strict filtration, with only two possible closed orbit limits.",
+      "current_proof": "sections/finite_additive_windows.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1762,7 +1768,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 439,
+  "version": 440,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 439,
+  "version": 440,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "1b1b2e8469ff3a8cce527d3d2842f0786f7358c9"
+    "source_commit": "5f9904645012e3f1186e83ebadd2b88812b8ca31"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All periods are determined, including exceptional coordinate strata, in the unrestricted attracting fibers at the three general finite torus types and their singular common point. The simple surface fibers have period four, both nonclosed simple curve fibers have period two, and the other two fibers have period one precisely on explicitly specified involution fixed loci and otherwise period two."
+    "scope": "Every nontrivial additive action on a finite Frobenius graph is nontrivial at every slot, has a unique maximal Jordan block there and a canonical four-cycle, and cannot mix a regular block with a transvection. Four transvections force all-degree AS regularity by an explicit strict filtration, with only two possible closed orbit limits."
   },
   "checks": [
     {
-      "command": "python computations/verify_torus_fiber_periods.py",
+      "command": "python computations/verify_finite_additive_windows.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze finite-graph additive-group actions by their Jordan filtrations and use all-degree good reductions outside the closed torus fibers."
+    "Determine the remaining finite additive Jordan profiles and their all-degree reductions and investigate which closed limit fibers contain such finite graphs."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 771,
+      "nc-p3": 772,
       "plan_ja": 17,
       "notes_ja": 30
     },
