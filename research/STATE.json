@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-27",
-  "version": 542,
+  "version": 543,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -5348,6 +5348,15 @@
       "verification": [
         "computations/verify_scroll_spin_artin_center.py"
       ]
+    },
+    {
+      "id": "FINITE-AFFINE-CENTER-CLASS-GROUP-AND-QUADRIC-POLE-OBSTRUCTION",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "For a center-finite standard regular window on any component, the affine center divisor class group is finite of exponent dividing sixteen times the vertex index; its index multiple is a subquotient of Z/2 x Z/2 x Z/16. The projective center is Q-factorial of rational divisor rank one. A nonmonic quadric center over a smooth quadric cannot have a smooth pole divisor, by Brauer residues.",
+      "proof": "sections/finite_center_divisor_torsion.tex",
+      "verification": [
+        "computations/verify_finite_center_divisor_torsion.py"
+      ]
     }
   ],
   "document_paths": {
@@ -5411,7 +5420,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "eea526842d2313d96b66dcf186f125af24f6321b",
+  "reviewed_source_commit": "25aa786981bc59bc0d93c1cef98405c7360f9e47",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -5420,14 +5429,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Constrain the actual center equations by the divisor class group and local singularity representations, and resolve residual nilpotent and other-component regularity.",
+    "immediate_next_action": "Use the residue constraints and low-degree del Pezzo lattices to decide the exceptional center types, and continue the other regularity branches.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/scroll_spin_center_generators.tex",
-      "sections/quartic_center_image_atlas.tex"
+      "sections/finite_center_divisor_torsion.tex",
+      "sections/scroll_spin_center_generators.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "The scroll-image center has generators (5,3,4) in weights (1,2,3) and minimal relations (3,6,10,6,10) in weights two to six, computed by two regular sections to a genus-nine hyperelliptic spin ring and a further constant Artin reduction. A free central module with the four arrow actions replaces the triple-overlap bound. On every regular domain in the main finite component mixed quartic/octic parameters now give an all-degree test using paths through 22, central quotient through 21 and Koszul complex through 24. Full classification remains open.",
+    "state_of_claim": "For a center-finite standard regular window on any component, the affine center divisor class group is finite of exponent dividing sixteen times the vertex index; its index multiple is a subquotient of Z/2 x Z/2 x Z/16. The projective center is Q-factorial of rational divisor rank one. A nonmonic quadric center over a smooth quadric cannot have a smooth pole divisor, by Brauer residues. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 542,
+  "version": 543,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "eea526842d2313d96b66dcf186f125af24f6321b"
+    "source_commit": "25aa786981bc59bc0d93c1cef98405c7360f9e47"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The scroll-image center has generators (5,3,4) in weights (1,2,3) and minimal relations (3,6,10,6,10) in weights two to six, computed by two regular sections to a genus-nine hyperelliptic spin ring and a further constant Artin reduction. A free central module with the four arrow actions replaces the triple-overlap bound. On every regular domain in the main finite component mixed quartic/octic parameters now give an all-degree test using paths through 22, central quotient through 21 and Koszul complex through 24."
+    "scope": "For a center-finite standard regular window on any component, the affine center divisor class group is finite of exponent dividing sixteen times the vertex index; its index multiple is a subquotient of Z/2 x Z/2 x Z/16. The projective center is Q-factorial of rational divisor rank one. A nonmonic quadric center over a smooth quadric cannot have a smooth pole divisor, by Brauer residues."
   },
   "checks": [
     {
-      "command": "python computations/verify_scroll_spin_artin_center.py",
+      "command": "python computations/verify_finite_center_divisor_torsion.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Constrain the actual center equations by the divisor class group and local singularity representations, and resolve residual nilpotent and other-component regularity."
+    "Use the residue constraints and low-degree del Pezzo lattices to decide the exceptional center types, and continue the other regularity branches."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 942,
+      "nc-p3": 943,
       "plan_ja": 22,
       "notes_ja": 36
     },

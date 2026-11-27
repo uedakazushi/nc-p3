@@ -2323,6 +2323,12 @@
       "current_result": "The scroll-image center has generators (5,3,4) in weights (1,2,3) and minimal relations (3,6,10,6,10) in weights two to six, computed by two regular sections to a genus-nine hyperelliptic spin ring and a further constant Artin reduction. A free central module with the four arrow actions replaces the triple-overlap bound. On every regular domain in the main finite component mixed quartic/octic parameters now give an all-degree test using paths through 22, central quotient through 21 and Koszul complex through 24.",
       "current_proof": "sections/scroll_spin_center_generators.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FINITE-AFFINE-CENTER-CLASS-GROUP-AND-QUADRIC-POLE-OBSTRUCTION",
+      "current_result": "For a center-finite standard regular window on any component, the affine center divisor class group is finite of exponent dividing sixteen times the vertex index; its index multiple is a subquotient of Z/2 x Z/2 x Z/16. The projective center is Q-factorial of rational divisor rank one. A nonmonic quadric center over a smooth quadric cannot have a smooth pole divisor, by Brauer residues.",
+      "current_proof": "sections/finite_center_divisor_torsion.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2380,7 +2386,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 542,
+  "version": 543,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
