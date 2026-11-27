@@ -31,9 +31,8 @@ def character_matrices(even, odd):
     return np.array(matrices)
 
 
-def sample():
+def sample_rational(Y=(3,1,4,1,5,9,2,6,5), common_degree=0):
     T = (2,3,5,7,11,13,17,19,23,29,31)
-    Y = (3,1,4,1,5,9,2,6,5)
     G = sp.Matrix(6,6,lambda i,j:T[i+j])
     L = G.inv()*sp.Matrix(6,4,lambda i,j:Y[i+j])
     shifts = [sp.Matrix(6,4,lambda i,j:int(i==j+k)) for k in range(3)]
@@ -47,16 +46,19 @@ def sample():
     c = sp.Matrix(7,5,lambda i,j:T[i+j])[:5,:].inv()*Yell[:5,:]
     x = sp.symbols("x")
     assert ell[-1] and c[-1]
-    assert sp.resultant(sum(u*x**i for i,u in enumerate(ell)),sum(u*x**i for i,u in enumerate(c)),x)
+    assert sp.degree(sp.gcd(sum(u*x**i for i,u in enumerate(ell)),sum(u*x**i for i,u in enumerate(c))),x) == common_degree
 
     N = sp.Matrix.hstack(*(v*lcm(*(int(t.q) for t in v)) for v in relation.T.nullspace()))
-    integral = np.array([int(t) for t in N],dtype=object).reshape(N.shape)
-    n = reduced(N)
     pivots = list(relation.T.rref()[1])
-    inverse = np.zeros((16,16),dtype=int)
-    inverse[np.ix_(pivots,pivots)] = reduced(w[pivots,pivots].inv())
+    selector = sp.eye(16)[:,pivots]
+    inverse = selector*w[pivots,pivots].inv()*selector.T
+    return w, N, inverse
 
-    return w, integral, n, inverse
+
+def sample(Y=(3,1,4,1,5,9,2,6,5), common_degree=0):
+    w, N, inverse = sample_rational(Y, common_degree)
+    integral = np.array([int(t) for t in N],dtype=object).reshape(N.shape)
+    return w, integral, reduced(N), reduced(inverse)
 
 
 def tangent_data(integral, n, inverse):

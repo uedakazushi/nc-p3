@@ -1819,6 +1819,12 @@
       "current_result": "The generic residual opposite-rank-fifteen divisor at the binary boundary has two invertible bilinear kernels. For any graph, such windows have an exact indexed equivalence by projective trace-free linear isomorphisms modulo two inner conjugations, with explicit cyclic action and a nonvanishing degree-sixty semistability invariant.",
       "current_proof": "sections/rank_fifteen_opposite_kernels.tex",
       "global_coverage": false
+    },
+    {
+      "id": "GENERIC-RESIDUAL-FIFTEEN-ALL-DEGREES",
+      "current_result": "Every residual opposite-rank-fifteen component through the double binary sample has an all-degree regular geometric generic point, including each oriented residual divisor found at a generic binary point. One specified one-sided section for each orientation is generically all-degree regular of opposite rank ten. A rational corank-two calculation and a transverse quartic with two independently exchanged pairs force a specialization to the regular bisymmetric locus.",
+      "current_proof": "sections/double_binary_residual_regularity.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1876,7 +1882,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 458,
+  "version": 459,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

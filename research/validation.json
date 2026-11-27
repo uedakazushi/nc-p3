@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 458,
+  "version": 459,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "d278d26ec5cec2c972fe4e03c4c1c27f4dd064f7"
+    "source_commit": "3a8b1d2a646df128e71227efa8537f68fd4f5358"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The generic residual opposite-rank-fifteen divisor at the binary boundary has two invertible bilinear kernels. For any graph, such windows have an exact indexed equivalence by projective trace-free linear isomorphisms modulo two inner conjugations, with explicit cyclic action and a nonvanishing degree-sixty semistability invariant."
+    "scope": "Every residual opposite-rank-fifteen component through the double binary sample has an all-degree regular geometric generic point, including each oriented residual divisor found at a generic binary point. One specified one-sided section for each orientation is generically all-degree regular of opposite rank ten. A rational corank-two calculation and a transverse quartic with two independently exchanged pairs force a specialization to the regular bisymmetric locus."
   },
   "checks": [
     {
-      "command": "python computations/verify_rank_fifteen_opposite_kernels.py",
+      "command": "python computations/verify_double_binary_residual_quartic.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine how the residual divisor meets the double binary marks, and seek an all-degree regularity criterion on the rank-fifteen locus and remaining windows."
+    "Seek criteria for exceptional nonregular parameters on the residual and one-sided rank-ten loci; progress the parent finite and positive-dimensional windows beyond these components."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 801,
+      "nc-p3": 804,
       "plan_ja": 18,
       "notes_ja": 31
     },
