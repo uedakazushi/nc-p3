@@ -1,17 +1,21 @@
 {
   "schema_version": 2,
-  "version": 384,
+  "version": 385,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "ace92b2c5944cf4101bca767231fe90250f8af45"
+    "source_commit": "d19de84c0ba86ee8bfa15cf6b82d40e3bdf72d79"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For 29 parallel supports all coefficients fail through quartic growth or rank, eight more fail at lengths five to seven, and sixteen further coefficient tori are empty. Sixteen of the original 148 sparse supports still have an undecided part. Every parallel symmetric-surface fiber and its twist are disjoint from both three-line sheets, including all exceptional six-node planes."
+    "scope": "For both sparse parallel rectangle shapes with invertible mixed corners, the entire adjacent-rank locus is a rational main component and two exceptional vertical components with explicit equations and intersections. The unmarked main images have dimensions three and four, generic regularity, opposite rank sixteen and period four. All closed points of all four vertical components have explicit necessary and sufficient regularity conditions."
   },
   "checks": [
     {
-      "command": "python computations/verify_parallel_excluded_shapes.py",
+      "command": "python computations/verify_parallel_invertible_rectangles.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_parallel_vertical_regularity.py",
       "result": "PASS"
     },
     {
@@ -44,12 +48,12 @@
     }
   ],
   "open_mathematics": [
-    "Parametrize simultaneous rank-two completions on the remaining sparse rectangles, decide regularity and unmarked isomorphisms, and extend unrestricted coverage."
+    "Finish all-degree regularity of the horizontal components, the third sparse thin shape, unmarked identifications and unrestricted global coverage."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 674,
+      "nc-p3": 676,
       "plan_ja": 15,
       "notes_ja": 27
     },
