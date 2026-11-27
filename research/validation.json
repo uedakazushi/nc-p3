@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 505,
+  "version": 506,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "3c01ffb43c87d89c131cde913a0f16191580ec21"
+    "source_commit": "40142e5e68bf80cddc3aaf7ef2db8e60adc2352c"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All rank-ten finite one-sided symmetric regular windows in a fixed phase lie in one irreducible fourteen-dimensional closure. The entire both-bundle candidate locus is parameterized by smooth projected elliptic octics or quartic maps to Gr(2,4), with exact indexed isomorphism and half-period via projective equivalence and Grassmann duality. Its geometric generic point is regular."
+    "scope": "Every finite rank-ten both-bundle window admits a quartic K3 with two residual elliptic octic pencils. Four shifted line bundles realize its full finite Frobenius cohomology algebra. The product of their four spherical twists factors, up to shift two, into tensoring by the two negative fiber classes with an explicit two-twist conjugation."
   },
   "checks": [
     {
-      "command": "python computations/verify_quartic_grassmann_windows.py",
+      "command": "python computations/verify_quartic_k3_cut.py",
       "result": "PASS"
     },
     {
@@ -40,14 +40,14 @@
     }
   ],
   "open_mathematics": [
-    "Prove regularity or isolate exceptional fibers on the quartic Grassmann locus. Use the quartic K3 surface and the four line bundles of its two elliptic pencils to control the four-vertex Serre iterates."
+    "Relate the two-twist conjugation to linear determinantal presentations on the elliptic octics and use the resulting fiber objects to control Serre purity."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 877,
+      "nc-p3": 878,
       "plan_ja": 20,
-      "notes_ja": 33
+      "notes_ja": 34
     },
     "scope": "LuaLaTeX built the manuscript, plan and research notes."
   },

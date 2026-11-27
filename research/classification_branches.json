@@ -2101,6 +2101,12 @@
       "current_result": "All rank-ten finite one-sided symmetric regular windows in a fixed phase lie in one irreducible fourteen-dimensional closure. The entire both-bundle candidate locus is parameterized by smooth projected elliptic octics or quartic maps to Gr(2,4), with exact indexed isomorphism and half-period via projective equivalence and Grassmann duality. Its geometric generic point is regular.",
       "current_proof": "sections/finite_quartic_grassmann_windows.tex",
       "global_coverage": false
+    },
+    {
+      "id": "QUARTIC-K3-CUT-TWO-ELLIPTIC-PENCILS",
+      "current_result": "Every finite rank-ten both-bundle window admits a quartic K3 with two residual elliptic octic pencils. Four shifted line bundles realize its full finite Frobenius cohomology algebra. The product of their four spherical twists factors, up to shift two, into tensoring by the two negative fiber classes with an explicit two-twist conjugation.",
+      "current_proof": "sections/finite_quartic_k3_cut.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2158,7 +2164,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 505,
+  "version": 506,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
