@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 462,
+  "version": 463,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "9e9d51801198e67d16d1941e9dbde0c6cd3fae33"
+    "source_commit": "dce203716e3aa36f6438a750272711d1bd85ee0a"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every single edge whose one-letter projection lies in a binary Hankel six-plane excludes standard AS regularity, with no rank, graph, or neighboring-edge hypothesis. Rank-five torsion lifts force two two-dimensional endpoints at a residue point. For rank four, cutting a length-two subdivisor of the cyclic torsion gives the forbidden two-sided center even at nonreduced points."
+    "scope": "For every standard AS edge the positive-dimensional locus of pure relations consists of at most one ruling in each orientation, or a unique smooth (1,1) conic with at most three further isolated pure points. No surface of pure relations is possible, without graph-dimension or reducedness assumptions."
   },
   "checks": [
     {
-      "command": "python computations/verify_deficient_binary_quintic_pencil.py",
+      "command": "python computations/verify_pure_relation_curve_supports.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Study degenerations of the binary multiplication tensor and other projected rational edge supports, and the remaining regularity and coverage questions for general windows."
+    "Determine which of the surviving conic and ruling types can extend to standard AS four-windows and use them to constrain nonfinite graph branches."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 807,
+      "nc-p3": 808,
       "plan_ja": 18,
       "notes_ja": 31
     },

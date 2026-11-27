@@ -1843,6 +1843,12 @@
       "current_result": "Every single edge whose one-letter projection lies in a binary Hankel six-plane excludes standard AS regularity, with no rank, graph, or neighboring-edge hypothesis. Rank-five torsion lifts force two two-dimensional endpoints at a residue point. For rank four, cutting a length-two subdivisor of the cyclic torsion gives the forbidden two-sided center even at nonreduced points.",
       "current_proof": "sections/deficient_binary_quintic_pencil.tex",
       "global_coverage": false
+    },
+    {
+      "id": "UNIVERSAL-PURE-RELATION-CURVE-SUPPORTS",
+      "current_result": "For every standard AS edge the positive-dimensional locus of pure relations consists of at most one ruling in each orientation, or a unique smooth (1,1) conic with at most three further isolated pure points. No surface of pure relations is possible, without graph-dimension or reducedness assumptions.",
+      "current_proof": "sections/pure_relation_curve_supports.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1900,7 +1906,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 462,
+  "version": 463,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
