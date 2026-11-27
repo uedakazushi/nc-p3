@@ -2083,6 +2083,12 @@
       "current_result": "Point modules in every finite four-vertex cut are Serre-fixed up to shift three. Their mutual Ext dimensions are the mixed opposite rank defect, symmetric and independent of phase. For twenty reduced points with full middle supports the singularity incidences of the Lagrange cubics give the same undirected graph of valency at most four in each embedding. The general mixed component has twenty mutually orthogonal three-spherical modules with faithful direct sum.",
       "current_proof": "sections/finite_cut_point_pairings.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FINITE-ONE-SYMMETRY-CHARGE-FOUR-INSTANTON",
+      "current_result": "Finite one-sided symmetric windows of opposite rank greater than six are reconstructed from a three-layer commutative module of Hilbert vector (4,6,4), with a fixed complete Betti table. When its linear syzygies give a subbundle the window is classified up to indexed isomorphism by a charge-four instanton bundle up to projective coordinates, and this includes an explicit regular window.",
+      "current_proof": "sections/finite_symmetric_instanton_monad.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2140,7 +2146,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 502,
+  "version": 503,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

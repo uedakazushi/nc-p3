@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 502,
+  "version": 503,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "d64c595304f02c9eede4aeef40a526b2f528750d"
+    "source_commit": "e07684eb969d39293c7a10b759d3610b6f95f206"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Point modules in every finite four-vertex cut are Serre-fixed up to shift three. Their mutual Ext dimensions are the mixed opposite rank defect, symmetric and independent of phase. For twenty reduced points with full middle supports the singularity incidences of the Lagrange cubics give the same undirected graph of valency at most four in each embedding. The general mixed component has twenty mutually orthogonal three-spherical modules with faithful direct sum."
+    "scope": "Finite one-sided symmetric windows of opposite rank greater than six are reconstructed from a three-layer commutative module of Hilbert vector (4,6,4), with a fixed complete Betti table. When its linear syzygies give a subbundle the window is classified up to indexed isomorphism by a charge-four instanton bundle up to projective coordinates, and this includes an explicit regular window."
   },
   "checks": [
     {
-      "command": "python computations/verify_finite_cut_point_pairings.py",
+      "command": "python computations/verify_finite_symmetric_instanton_monad.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine whether point-ideal generators or their conormal modules detect the remaining nonregular finite stable cuts. Analyze the rank-nineteen defect and fully asymmetric finite coordinate products and their relations."
+    "Control the degeneracy of the four linear syzygies and the torsion-free instanton boundary, relate unstable planes and jumping lines to point modules, and determine regularity on the instanton locus."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 871,
+      "nc-p3": 872,
       "plan_ja": 20,
       "notes_ja": 33
     },
