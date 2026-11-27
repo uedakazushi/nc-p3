@@ -1771,6 +1771,12 @@
       "current_result": "Without assuming any symmetry, two consecutive pure-free binary multiplication edges using the full shared cubic letters force their twisted cubic markings to coincide and uniquely reconstruct the entire window as the opposite-rank-eight bisymmetric decimic obstruction. Distinct twisted cubics cannot support a four-dimensional cubic overlap, even at a single nonreduced intersection of length five. All alternating binary obstructions on finite Frobenius windows are thereby exhausted.",
       "current_proof": "sections/binary_two_edge_rigidity.tex",
       "global_coverage": false
+    },
+    {
+      "id": "BINARY-REVERSE-ORIENTATION-RESULTANT",
+      "current_result": "In the binary nonregular boundary, the kernel quadratic and its companion quartic decide the point graph and the possible orientations at all parameters. Their degree-one common factor gives an explicit reverse Gram transport and cuts out a reduced irreducible degree-fourteen divisor for each decimic; divisibility gives the nonfinite locus. This completes orientation overlaps, indexed isomorphism, and periods on the finite obstruction boundary.",
+      "current_proof": "sections/binary_reverse_orientation.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1828,7 +1834,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 450,
+  "version": 451,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
