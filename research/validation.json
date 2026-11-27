@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 497,
+  "version": 498,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "b9fba12465d332c3d210092436326471a1bd7b47"
+    "source_commit": "c6915c3475005c1988b48df9cce948dd77c8a87d"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The decomposable-relation scheme on every edge of every standard regular window is finite. A fixed-factor pure line forces a preceding pure relation with the same letter, by transporting the full determinantal plane quartic. A pure conic would produce a binary center, now excluded even in the presence of unrelated two-line paths. Every center therefore has middle support three or four and obeys the finite-pencil classification."
+    "scope": "In every standard regular window a nonempty pure-relation scheme meets at least two of the four edges and has length at least two on some single edge. A single active edge is impossible at any multiplicity; all four edges having only simple singleton or empty pure loci is also impossible."
   },
   "checks": [
     {
-      "command": "python computations/verify_finite_pure_relation_locus.py",
+      "command": "python computations/verify_sparse_pure_edges.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Use finiteness to treat all sparse edge distributions and enumerate the remaining higher-defect pencil configurations. Continue all-degree regularity on stable finite point windows."
+    "Enumerate arbitrary finite center pencils using cubic and conic projections, endpoint compatibility, contact multiplicities and moving-curve incidence. Isolate explicit frames for every remaining branched configuration."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 863,
+      "nc-p3": 864,
       "plan_ja": 20,
       "notes_ja": 33
     },

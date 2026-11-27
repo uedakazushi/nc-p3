@@ -2053,6 +2053,12 @@
       "current_result": "The decomposable-relation scheme on every edge of every standard regular window is finite. A fixed-factor pure line forces a preceding pure relation with the same letter, by transporting the full determinantal plane quartic. A pure conic would produce a binary center, now excluded even in the presence of unrelated two-line paths. Every center therefore has middle support three or four and obeys the finite-pencil classification.",
       "current_proof": "sections/finite_pure_relation_locus.tex",
       "global_coverage": false
+    },
+    {
+      "id": "PURE-RELATIONS-REQUIRE-MULTIPLE-EDGES-AND-DOUBLE-LENGTH",
+      "current_result": "In every standard regular window a nonempty pure-relation scheme meets at least two of the four edges and has length at least two on some single edge. A single active edge is impossible at any multiplicity; all four edges having only simple singleton or empty pure loci is also impossible.",
+      "current_proof": "sections/sparse_pure_edge_exclusion.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2110,7 +2116,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 497,
+  "version": 498,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
