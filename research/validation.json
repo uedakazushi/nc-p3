@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 471,
+  "version": 472,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "85ff7c7c6fac97f8a2b5553e5bdabbb120214afa"
+    "source_commit": "0315da6b01a96d188bc74f0b8c5a253ed03a30f4"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All invertible split windows and all their regular filtered lifts have no branching anywhere. Two four-by-four binary evaluation pencils and one quadratic per chart give their point graphs scheme-theoretically. The unique regular object of the isolated sextic component has two skew axes, three transversals, six ordinary nodes and two embedded length-one ideals."
+    "scope": "For all four generic completions of the split Bell spectral surface, the entire unrestricted GIT fiber is regular: besides the closed orbit it is weighted projective six-space of weights 1,1,1,1,2,2,2 modulo its specified Klein action. The positive cubic slice has dimension four, all quadratic obstructions vanish identically and the top freedom has dimension three. Every nonclosed orbit has a unique reduced line as its pure point curve. Moving the base gives an eight-dimensional unmarked family."
   },
   "checks": [
     {
-      "command": "python computations/verify_isolated_split_point_scheme.py",
+      "command": "python computations/verify_split_surface_lifts.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine transverse obstructions and regular attracting components over the split Bell spectral surface, then advance remaining stable finite and branching windows."
+    "Determine every minimal period and all half-shift fixed strata in these generic GIT fibers. Determine the unrestricted component and the nongeneric spectral fibers and advance the remaining finite and branching windows."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 819,
+      "nc-p3": 820,
       "plan_ja": 19,
       "notes_ja": 32
     },

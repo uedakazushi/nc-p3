@@ -1897,6 +1897,12 @@
       "current_result": "All invertible split windows and all their regular filtered lifts have no branching anywhere. Two four-by-four binary evaluation pencils and one quadratic per chart give their point graphs scheme-theoretically. The unique regular object of the isolated sextic component has two skew axes, three transversals, six ordinary nodes and two embedded length-one ideals.",
       "current_proof": "sections/split_point_pencils.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FULL-GIT-FIBERS-OVER-GENERIC-SPLIT-SPECTRAL-SURFACE",
+      "current_result": "For all four generic completions of the split Bell spectral surface, the entire unrestricted GIT fiber is regular: besides the closed orbit it is weighted projective six-space of weights 1,1,1,1,2,2,2 modulo its specified Klein action. The positive cubic slice has dimension four, all quadratic obstructions vanish identically and the top freedom has dimension three. Every nonclosed orbit has a unique reduced line as its pure point curve. Moving the base gives an eight-dimensional unmarked family.",
+      "current_proof": "sections/split_surface_full_fibers.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1954,7 +1960,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 471,
+  "version": 472,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

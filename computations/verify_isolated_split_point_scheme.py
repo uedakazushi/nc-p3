@@ -57,7 +57,7 @@ def local_pencil(field, normal_relation, tangent_relation, nt, tn):
         value = sum((adj[2+k][j]*constant(coeff[k][l])*adj[l][j]
                      for k,l in product(range(2),repeat=2)),ring.zero)
         common = common.gcd(value)
-    assert common.degree() == 3
+    return common.degree()
 
 
 def verify():
@@ -77,8 +77,8 @@ def verify():
     nn, tt = pure_relation(0,2), pure_relation(2,0)
     pairs = list(product(range(2),range(2,4)))
     nt, tn = ([column(i,j,k,l) for i,j in pairs] for k,l in ((0,2),(2,0)))
-    local_pencil(field,nn,tt,nt,tn)
-    local_pencil(field,tt,nn,tn,nt)
+    assert local_pencil(field,nn,tt,nt,tn) == 3
+    assert local_pencil(field,tt,nn,tn,nt) == 3
     print("Both quartics are squarefree with cubic transverse factors over the defining field.")
 
 
