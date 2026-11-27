@@ -1,17 +1,29 @@
 {
   "schema_version": 2,
-  "version": 404,
+  "version": 405,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "a380677dbf01fcbe85550f044e9fdbd38b8e7f1b"
+    "source_commit": "f703f83c52f64af79e485dac6234553ec9c71a84"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every point of the second horizontal rank-fourteen period-two conic is regular with projective stabilizer the Klein four group. Its unmarked quotient is a twelve-punctured projective line with twelve single-defect fibers."
+    "scope": "The four-dimensional negative component has a generic elliptic quartic graph plus four points at every edge, generic minimum period two and projective group of order four, and no finite point-graph fibers. The fixed bisymmetric Klein presentation is irreducible across all sparse supports. Projective isomorphisms specialize on stable finite and smooth-quartic configurations, recognizing the positive and negative components there."
   },
   "checks": [
     {
-      "command": "python computations/verify_rank_fourteen_conic_presentation.py",
+      "command": "python computations/verify_negative_component_point_graph.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_klein_bisymmetric_closure.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_negative_component_period.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_rectangle_stable_configurations.py",
       "result": "PASS"
     },
     {
@@ -96,12 +108,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine the global point schemes and stable specialization criteria for the unrestricted components, and classify the remaining windows."
+    "Compute the explicit unmarked parameter action on the negative component, its exceptions and intersections, and continue the unrestricted classification."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 703,
+      "nc-p3": 707,
       "plan_ja": 15,
       "notes_ja": 28
     },

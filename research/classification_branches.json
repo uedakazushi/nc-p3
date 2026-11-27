@@ -1495,6 +1495,12 @@
       "current_result": "Every point of the second horizontal rank-fourteen period-two conic is regular with projective stabilizer the Klein four group. Its unmarked quotient is a twelve-punctured projective line with twelve single-defect fibers.",
       "current_proof": "sections/rank_fourteen_conic_complete.tex",
       "global_coverage": false
+    },
+    {
+      "id": "RECTANGLE-COMPONENT-POINT-GEOMETRY",
+      "current_result": "The four-dimensional negative component has a generic elliptic quartic graph plus four points at every edge, generic minimum period two and projective group of order four, and no finite point-graph fibers. The fixed bisymmetric Klein presentation is irreducible across all sparse supports. Projective isomorphisms specialize on stable finite and smooth-quartic configurations, recognizing the positive and negative components there.",
+      "current_proof": "sections/rectangle_component_point_geometry.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1552,7 +1558,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 404,
+  "version": 405,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
