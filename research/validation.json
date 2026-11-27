@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 474,
+  "version": 475,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "75e1d53dcdbd4f2d8edd365d406e9de36a951ad1"
+    "source_commit": "fe54b060c083ddc9616d32272ccb4e1651aac990"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All four labeled split Bell spectral surface families lie in the known unrestricted fifteen-dimensional component, by exact five-center calculations and order-four quantum specializations. Every window in each generic full GIT fiber lies on that unique smooth 76-dimensional affine component and in a Zariski open of standard regular algebras finite over quartic centers. The generic closed slice multiplicities are 3,4,2,4,3."
+    "scope": "At every regular point of the fifteen-dimensional component, all periodic paths have primitive length at most 16, or 12 if branched. All unbranched graph points have four-shift order at most four and the twelfth power fixes the reduced graph. A genuine bridge of at least two arrows between cycles forces their lengths to be (4,4) or (4,8). In any regular window a periodically visited branch annihilates every positive homogeneous central element."
   },
   "checks": [
     {
-      "command": "python computations/verify_split_surface_component.py",
+      "command": "python computations/verify_pi_periodic_paths.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Use polynomial identities and central evaluations to constrain periodic paths and branching throughout the fifteen-dimensional component. Continue exceptional degenerations and other unrestricted components."
+    "Determine exceptional semisimple split line spectra including stabilizer jumps, and apply cyclic path and center constraints to the residual stable finite and branched strata."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 823,
+      "nc-p3": 825,
       "plan_ja": 19,
       "notes_ja": 32
     },
