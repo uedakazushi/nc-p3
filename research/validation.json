@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 518,
+  "version": 519,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "f000c2ec3c39d55033d527b7c056ce82fd4c6fbc"
+    "source_commit": "f1afbe065e1299f816a85d847fa316e8d78f2fd6"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The generic thirty-nodal center has rational divisor class group of rank one. Its unramified window class has period and index four. For fixed center identification and fixed Brauer class there are exactly four indexed windows, the four shifts. The proof compares minimal-rank twisted bundles on the generic K3 hyperplane over its own parameter field."
+    "scope": "The entire unramified Brauer group of the generic center is cyclic of order four. The partition of the thirty nodes is intrinsic. The generic center map has degree eight and Galois group the dihedral group: the four shifts of a window and its opposite are all the indexed classes with that general center on this component. The general center has trivial automorphism group."
   },
   "checks": [
     {
-      "command": "python computations/verify_thirty_node_brauer_windows.py",
+      "command": "python computations/verify_thirty_node_dihedral_cover.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine the entire Brauer group of the thirty-nodal centers and which remaining orientations occur, then continue the simple-marked coverage at the boundary."
+    "Return to the finite asymmetric boundary and its possible other components via all simple-marked tensor profiles, including deficient arrow ranks, and test all-degree regularity there."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 899,
+      "nc-p3": 902,
       "plan_ja": 21,
       "notes_ja": 34
     },

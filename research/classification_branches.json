@@ -2179,6 +2179,12 @@
       "current_result": "The generic thirty-nodal center has rational divisor class group of rank one. Its unramified window class has period and index four. For fixed center identification and fixed Brauer class there are exactly four indexed windows, the four shifts. The proof compares minimal-rank twisted bundles on the generic K3 hyperplane over its own parameter field.",
       "current_proof": "sections/thirty_node_brauer_windows.tex",
       "global_coverage": false
+    },
+    {
+      "id": "EIGHTFOLD-DIHEDRAL-CENTER-CLASSIFICATION",
+      "current_result": "The entire unramified Brauer group of the generic center is cyclic of order four. The partition of the thirty nodes is intrinsic. The generic center map has degree eight and Galois group the dihedral group: the four shifts of a window and its opposite are all the indexed classes with that general center on this component. The general center has trivial automorphism group.",
+      "current_proof": "sections/thirty_node_dihedral_cover.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2236,7 +2242,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 518,
+  "version": 519,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

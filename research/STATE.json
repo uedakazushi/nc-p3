@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-27",
-  "version": 518,
+  "version": 519,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -5132,6 +5132,15 @@
       "verification": [
         "computations/verify_thirty_node_brauer_windows.py"
       ]
+    },
+    {
+      "id": "EIGHTFOLD-DIHEDRAL-CENTER-CLASSIFICATION",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "The entire unramified Brauer group of the generic center is cyclic of order four. The partition of the thirty nodes is intrinsic. The generic center map has degree eight and Galois group the dihedral group: the four shifts of a window and its opposite are all the indexed classes with that general center on this component. The general center has trivial automorphism group.",
+      "proof": "sections/thirty_node_dihedral_cover.tex",
+      "verification": [
+        "computations/verify_thirty_node_dihedral_cover.py"
+      ]
     }
   ],
   "document_paths": {
@@ -5195,7 +5204,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "f000c2ec3c39d55033d527b7c056ce82fd4c6fbc",
+  "reviewed_source_commit": "f1afbe065e1299f816a85d847fa316e8d78f2fd6",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -5204,14 +5213,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Determine the entire Brauer group of the thirty-nodal centers and which remaining orientations occur, then continue the simple-marked coverage at the boundary.",
+    "immediate_next_action": "Return to the finite asymmetric boundary and its possible other components via all simple-marked tensor profiles, including deficient arrow ranks, and test all-degree regularity there.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/thirty_node_brauer_windows.tex",
-      "sections/thirty_node_center_map.tex"
+      "sections/thirty_node_dihedral_cover.tex",
+      "sections/thirty_node_brauer_windows.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "The generic thirty-nodal center has rational divisor class group of rank one. Its unramified window class has period and index four. For fixed center identification and fixed Brauer class there are exactly four indexed windows, the four shifts. The proof compares minimal-rank twisted bundles on the generic K3 hyperplane over its own parameter field. Full classification remains open.",
+    "state_of_claim": "The entire unramified Brauer group of the generic center is cyclic of order four. The partition of the thirty nodes is intrinsic. The generic center map has degree eight and Galois group the dihedral group: the four shifts of a window and its opposite are all the indexed classes with that general center on this component. The general center has trivial automorphism group. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
