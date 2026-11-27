@@ -1339,6 +1339,12 @@
       "current_result": "All transverse doublet Klein windows are covered, with no assumption on zero coefficients, by one family of unordered distinct points of P1. The 51 sparse supports have 63 coefficient components; 61 fail a character-resolved Hilbert test. One point and one torus are regular and give precisely the missing infinity boundary, including its rank-twelve specializations. Every object has period one, and reversal preserves its indexed class. Full unmarked redundancy of the projective parameters is still open.",
       "current_proof": "sections/klein_sparse_transverse.tex",
       "global_coverage": false
+    },
+    {
+      "id": "TRANSVERSE-DOUBLET-UNMARKED",
+      "current_result": "All unmarked index-preserving isomorphisms for transverse doublet windows, including both rank-twelve curves, are explicit. For the unordered projective pair p,q the full-rank locus only identifies simultaneous sign. The infinity boundary identifies q up to sign and the zero-sum boundary identifies p up to fourth roots; the two boundaries never meet in the unmarked moduli. Opposite inverses, cubic contractions, alternating gradients and singular kernel determinants certify separation at every exceptional point.",
+      "current_proof": "sections/transverse_doublet_isomorphism.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1396,7 +1402,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 378,
+  "version": 379,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

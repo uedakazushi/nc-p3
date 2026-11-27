@@ -1,17 +1,21 @@
 {
   "schema_version": 2,
-  "version": 378,
+  "version": 379,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "eca9d47fce4c0de82a900bf7cd9319da62109948"
+    "source_commit": "669814d0167922136565277aa3a058d165729535"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All transverse doublet Klein windows are covered, with no assumption on zero coefficients, by one family of unordered distinct points of P1. The 51 sparse supports have 63 coefficient components; 61 fail a character-resolved Hilbert test. One point and one torus are regular and give precisely the missing infinity boundary, including its rank-twelve specializations. Every object has period one, and reversal preserves its indexed class. Full unmarked redundancy of the projective parameters is still open."
+    "scope": "All unmarked index-preserving isomorphisms for transverse doublet windows, including both rank-twelve curves, are explicit. For the unordered projective pair p,q the full-rank locus only identifies simultaneous sign. The infinity boundary identifies q up to sign and the zero-sum boundary identifies p up to fourth roots; the two boundaries never meet in the unmarked moduli. Opposite inverses, cubic contractions, alternating gradients and singular kernel determinants certify separation at every exceptional point."
   },
   "checks": [
     {
-      "command": "python computations/verify_klein_sparse_transverse.py",
+      "command": "python computations/verify_transverse_rank_sixteen_isomorphism.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_transverse_rank_twelve_isomorphism.py",
       "result": "PASS"
     },
     {
@@ -40,12 +44,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine the unmarked identifications on the transverse projective surface using intrinsic contractions, and solve the parallel-direction (2,2,1,1) rectangular supports and dense exceptional fibers."
+    "Investigate the parallel doublet sector on all 148 sparse supports and the parallel dense exceptional fibers, and identify overlaps with the transverse sector and other gradings."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 663,
+      "nc-p3": 665,
       "plan_ja": 14,
       "notes_ja": 27
     },
