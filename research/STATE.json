@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-27",
-  "version": 426,
+  "version": 427,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -4300,6 +4300,15 @@
       "verification": [
         "computations/verify_klein_polystable_limits.py"
       ]
+    },
+    {
+      "id": "TORUS-EULER-FOUR-CHARACTERS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "For any torus action on any standard AS window, its equivariant Koszul Euler determinant splits into four linear cycle factors with actual torus characters. The four arrow determinants multiply to the fourth power of the socle character on the entire connected linear stabilizer. Two adjacent weights per slot allow only seven cyclic rank profiles. A two-plus-two action everywhere forces precisely one relation in each pure bidegree and four mixed relations per edge, and fixes the bigraded Hilbert series.",
+      "proof": "sections/torus_euler_characters.tex",
+      "verification": [
+        "computations/verify_torus_euler_profiles.py"
+      ]
     }
   ],
   "document_paths": {
@@ -4363,7 +4372,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "d9fbb6a88de9288752ef7c79c2c77cb8f772dd14",
+  "reviewed_source_commit": "96201fb8b96e22e09632b3164ded2136a2790ded",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -4372,14 +4381,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Determine attraction fibers outside the marked locus and use additional multiplicity-free symmetries or finite edge geometry to cover windows with no regular Klein action.",
+    "immediate_next_action": "Use the seven weight profiles to classify torus-marked windows beyond Klein symmetry, beginning with mixed relation projections on the two-plus-two and one-plus-three profiles. Continue the unrestricted stabilizer-free component analysis.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/klein_polystable_limits.tex",
-      "sections/klein_unmarked_atlas.tex"
+      "sections/torus_euler_characters.tex",
+      "sections/klein_polystable_limits.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "Every AS window with a regular Klein marking is semistable and has a unique polystable limit which is again AS. All such limits are computed: discard unmatched repeat edges on doubly missing supports and specialize 17 sparse parallel supports to the two fixed-start representatives 50 and 52. All remaining regular cases are polystable. A 51-dimensional normal toric quotient modulo 384 relabelings normalizes the ambient Klein GIT image. Every unrestricted rank-six window attracted to these regular closed orbits is AS. Full classification remains open.",
+    "state_of_claim": "For any torus action on any standard AS window, its equivariant Koszul Euler determinant splits into four linear cycle factors with actual torus characters. The four arrow determinants multiply to the fourth power of the socle character on the entire connected linear stabilizer. Two adjacent weights per slot allow only seven cyclic rank profiles. A two-plus-two action everywhere forces precisely one relation in each pure bidegree and four mixed relations per edge, and fixes the bigraded Hilbert series. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

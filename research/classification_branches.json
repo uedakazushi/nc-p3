@@ -1627,6 +1627,12 @@
       "current_result": "Every AS window with a regular Klein marking is semistable and has a unique polystable limit which is again AS. All such limits are computed: discard unmatched repeat edges on doubly missing supports and specialize 17 sparse parallel supports to the two fixed-start representatives 50 and 52. All remaining regular cases are polystable. A 51-dimensional normal toric quotient modulo 384 relabelings normalizes the ambient Klein GIT image. Every unrestricted rank-six window attracted to these regular closed orbits is AS.",
       "current_proof": "sections/klein_polystable_limits.tex",
       "global_coverage": false
+    },
+    {
+      "id": "TORUS-EULER-FOUR-CHARACTERS",
+      "current_result": "For any torus action on any standard AS window, its equivariant Koszul Euler determinant splits into four linear cycle factors with actual torus characters. The four arrow determinants multiply to the fourth power of the socle character on the entire connected linear stabilizer. Two adjacent weights per slot allow only seven cyclic rank profiles. A two-plus-two action everywhere forces precisely one relation in each pure bidegree and four mixed relations per edge, and fixes the bigraded Hilbert series.",
+      "current_proof": "sections/torus_euler_characters.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1684,7 +1690,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 426,
+  "version": 427,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
