@@ -2167,6 +2167,12 @@
       "current_result": "The generic center on the fifteen-dimensional component is a quartic threefold with exactly thirty ordinary double points. Twenty have simple vertex dimensions one and three, ten have two simples of vertex dimension two. Its function field has an unramified Brauer class of index four and is not stably rational.",
       "current_proof": "sections/thirty_central_nodes.tex",
       "global_coverage": false
+    },
+    {
+      "id": "GENERICALLY-ETALE-THIRTY-NODE-CENTER-MAP",
+      "current_result": "The generic center map is generically finite, dominant and generically etale onto a component of thirty-nodal quartic threefolds. The unordered nodes recover the equation. Fixed-center deformations of the ordered window are trivial.",
+      "current_proof": "sections/thirty_node_center_map.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2224,7 +2230,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 516,
+  "version": 517,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 516,
+  "version": 517,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "6402bbcbd6dcb2d5ad5761f4b18e8a799d2eeea8"
+    "source_commit": "703e93e67e3273a23e4fb3800d6779083920d30f"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The generic center on the fifteen-dimensional component is a quartic threefold with exactly thirty ordinary double points. Twenty have simple vertex dimensions one and three, ten have two simples of vertex dimension two. Its function field has an unramified Brauer class of index four and is not stably rational."
+    "scope": "The generic center map is generically finite, dominant and generically etale onto a component of thirty-nodal quartic threefolds. The unordered nodes recover the equation. Fixed-center deformations of the ordered window are trivial."
   },
   "checks": [
     {
-      "command": "python computations/verify_thirty_central_nodes.py",
+      "command": "python computations/verify_thirty_node_center_map.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine the degree and deformation image of the fifteen-dimensional component in the locus of thirty-nodal quartics and extend the simple-marked charts to exceptional windows."
+    "Determine marked normal forms for the finite windows with a two-dimensional simple, and recover the discrete fiber of the center map."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 896,
+      "nc-p3": 898,
       "plan_ja": 21,
       "notes_ja": 34
     },
