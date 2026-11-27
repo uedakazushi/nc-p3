@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 370,
+  "version": 371,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "3b7b939b1f2d514f594ed1a8d5e6cc03110ee875"
+    "source_commit": "e1957ce3611957ac5a96700f76acc57dc2c1cf05"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All homogeneous Klein regular-representation windows with at least one missing color in each adjacent cut now have a necessary-and-sufficient AS decision without any marking, support or symmetry hypothesis beyond the grading. The multicharacter Koszul recurrence forces exactly three rank-two blocks. Rank-two binary-line support enumeration proves every zero row or column yields a directed exponential quotient. The remaining 108 possible simultaneous masks have no such edges and fall under the triangular PBW or complete marked-bracket decision."
+    "scope": "For the singly missing Klein sector, the positive (3,1,1,1) partition is impossible: every one of 15,936,576 simultaneous support candidates has an exponential coordinate path quotient. The (2,2,1,1) partition reduces from 115,151,588 potential masks to 2,664 nonexponential coordinate graphs, 74 orbits, and just ten representatives after consecutive-pure-relation and cubic-slice bounds."
   },
   "checks": [
     {
-      "command": "python computations/verify_klein_missing_color_coverage.py",
+      "command": "python computations/verify_klein_single_missing_supports.py",
       "result": "PASS"
     },
     {
@@ -40,14 +40,14 @@
     }
   ],
   "open_mathematics": [
-    "Classify the singly missing-color case, pairing the forced three rank-two blocks on one side with the two positive rank partitions on the other. Use the anti-diagonal zeros and the rank-one colors to separate exponential and regular configurations."
+    "Solve the ten remaining simultaneous rank ideals and test every parameter, including all Smith torsion choices and rank-specialization strata."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 652,
+      "nc-p3": 653,
       "plan_ja": 14,
-      "notes_ja": 26
+      "notes_ja": 27
     },
     "scope": "LuaLaTeX built the manuscript, plan and research notes."
   },

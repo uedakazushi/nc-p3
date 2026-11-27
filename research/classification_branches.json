@@ -1291,6 +1291,12 @@
       "current_result": "All homogeneous Klein regular-representation windows with at least one missing color in each adjacent cut now have a necessary-and-sufficient AS decision without any marking, support or symmetry hypothesis beyond the grading. The multicharacter Koszul recurrence forces exactly three rank-two blocks. Rank-two binary-line support enumeration proves every zero row or column yields a directed exponential quotient. The remaining 108 possible simultaneous masks have no such edges and fall under the triangular PBW or complete marked-bracket decision.",
       "current_proof": "sections/klein_missing_color_coverage.tex",
       "global_coverage": false
+    },
+    {
+      "id": "KLEIN-SINGLE-MISSING-SUPPORTS",
+      "current_result": "For the singly missing Klein sector, the positive (3,1,1,1) partition is impossible: every one of 15,936,576 simultaneous support candidates has an exponential coordinate path quotient. The (2,2,1,1) partition reduces from 115,151,588 potential masks to 2,664 nonexponential coordinate graphs, 74 orbits, and just ten representatives after consecutive-pure-relation and cubic-slice bounds.",
+      "current_proof": "sections/klein_single_missing_supports.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1348,7 +1354,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 370,
+  "version": 371,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

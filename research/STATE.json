@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-26",
-  "version": 370,
+  "version": 371,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -3768,6 +3768,15 @@
       "verification": [
         "computations/verify_klein_missing_color_coverage.py"
       ]
+    },
+    {
+      "id": "KLEIN-SINGLE-MISSING-SUPPORTS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "For the singly missing Klein sector, the positive (3,1,1,1) partition is impossible: every one of 15,936,576 simultaneous support candidates has an exponential coordinate path quotient. The (2,2,1,1) partition reduces from 115,151,588 potential masks to 2,664 nonexponential coordinate graphs, 74 orbits, and just ten representatives after consecutive-pure-relation and cubic-slice bounds.",
+      "proof": "sections/klein_single_missing_supports.tex",
+      "verification": [
+        "computations/verify_klein_single_missing_supports.py"
+      ]
     }
   ],
   "document_paths": {
@@ -3831,7 +3840,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "3b7b939b1f2d514f594ed1a8d5e6cc03110ee875",
+  "reviewed_source_commit": "e1957ce3611957ac5a96700f76acc57dc2c1cf05",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -3840,14 +3849,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Classify the singly missing-color case, pairing the forced three rank-two blocks on one side with the two positive rank partitions on the other. Use the anti-diagonal zeros and the rank-one colors to separate exponential and regular configurations.",
+    "immediate_next_action": "Solve the ten remaining simultaneous rank ideals and test every parameter, including all Smith torsion choices and rank-specialization strata.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/klein_missing_color_coverage.tex",
-      "sections/unmarked_klein_pbw.tex"
+      "sections/klein_single_missing_supports.tex",
+      "sections/klein_missing_color_coverage.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "All homogeneous Klein regular-representation windows with at least one missing color in each adjacent cut now have a necessary-and-sufficient AS decision without any marking, support or symmetry hypothesis beyond the grading. The multicharacter Koszul recurrence forces exactly three rank-two blocks. Rank-two binary-line support enumeration proves every zero row or column yields a directed exponential quotient. The remaining 108 possible simultaneous masks have no such edges and fall under the triangular PBW or complete marked-bracket decision. Full classification remains open.",
+    "state_of_claim": "For the singly missing Klein sector, the positive (3,1,1,1) partition is impossible: every one of 15,936,576 simultaneous support candidates has an exponential coordinate path quotient. The (2,2,1,1) partition reduces from 115,151,588 potential masks to 2,664 nonexponential coordinate graphs, 74 orbits, and just ten representatives after consecutive-pure-relation and cubic-slice bounds. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
