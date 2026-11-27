@@ -1,21 +1,21 @@
 {
   "schema_version": 2,
-  "version": 487,
+  "version": 488,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "dddf47b913c406676022cb2e89e79087683fc4d0"
+    "source_commit": "42ade19c14f6263795d0b295dd0ec93de66a7f33"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every ordinary simple Bell fiber, including all exceptional simple parameters, and every nonline no-flip collision fiber is the closed orbit plus a weighted projective six-space modulo a Klein four-group. All are smooth points on the fifteen-parameter component, with the full period and orbit-specialization stratification. At the period-one collision the nonzero period-one locus has five components of dimensions 2,1,1,0,0. Every extra simple fiber is just one closed orbit."
+    "scope": "All reflected-collision quotient fibers are classified. Outside c squared equal to one there are five or three orbits, with periods at most two. At c squared equal to one the entire fiber is the sixteen half-plane coordinate charts of eight dimensions on sixteen weight lines, up to an explicit torus and finite monomial group. All exceptional charts lie in the fifteen-parameter component, with exact isomorphism, orbit closure, period two or four and six-dimensional maximal families."
   },
   "checks": [
     {
-      "command": "python computations/verify_split_surface_all_fibers.py",
+      "command": "python computations/verify_reflected_collision_fibers.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_split_collision_shift.py",
+      "command": "python computations/verify_split_repeated_surface.py",
       "result": "PASS"
     },
     {
@@ -40,13 +40,13 @@
     }
   ],
   "open_mathematics": [
-    "Resolve the remaining rank-two reflected collision fibers and the no-flip Bell line fibers. Use the split specialization theorem on the complementary stable and branched strata."
+    "Resolve the no-flip semisimple Bell line fibers including its order-four point. Establish good reduction criteria and continue the general stable and branched coverage."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 847,
-      "plan_ja": 19,
+      "nc-p3": 849,
+      "plan_ja": 20,
       "notes_ja": 33
     },
     "scope": "LuaLaTeX built the manuscript, plan and research notes."

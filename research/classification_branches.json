@@ -1993,6 +1993,12 @@
       "current_result": "Every ordinary simple Bell fiber, including all exceptional simple parameters, and every nonline no-flip collision fiber is the closed orbit plus a weighted projective six-space modulo a Klein four-group. All are smooth points on the fifteen-parameter component, with the full period and orbit-specialization stratification. At the period-one collision the nonzero period-one locus has five components of dimensions 2,1,1,0,0. Every extra simple fiber is just one closed orbit.",
       "current_proof": "sections/split_surface_all_fibers.tex",
       "global_coverage": false
+    },
+    {
+      "id": "REFLECTED-COLLISION-ALL-ATTRACTING-FIBERS",
+      "current_result": "All reflected-collision quotient fibers are classified. Outside c squared equal to one there are five or three orbits, with periods at most two. At c squared equal to one the entire fiber is the sixteen half-plane coordinate charts of eight dimensions on sixteen weight lines, up to an explicit torus and finite monomial group. All exceptional charts lie in the fifteen-parameter component, with exact isomorphism, orbit closure, period two or four and six-dimensional maximal families.",
+      "current_proof": "sections/reflected_collision_fibers.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2050,7 +2056,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 487,
+  "version": 488,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

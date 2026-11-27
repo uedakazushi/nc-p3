@@ -104,14 +104,15 @@ def tangent_blocks(w):
             assert all(sp.rem((S*C*(S**4-1))**10, f, S, C)==0
                        for f,_ in sp.factor_list(den)[1])
             blocks[h].append([str(sp.factor(row.get(q,0)*den)).replace('**','^') for q in words[h]])
-    return [(len(words[h]),rows) for h,rows in blocks.items()]
+    return [(h,words[h],rows) for h,rows in blocks.items()]
 
 
 def check_tangents(w):
     blocks = tangent_blocks(w)
     script = ['LIB "jacobson.lib";ring r=(0,c),s,dp;minpoly=MODULUS;poly support=s*(s^4-1);',
               'proc clean(poly f){poly d=gcd(f,support);while(deg(d)>0){f=f/d;d=gcd(f,support);}return(f/leadcoef(f));}']
-    for size, rows in blocks:
+    for _, words, rows in blocks:
+        size = len(words)
         values = ','.join(v for row in rows for v in row)
         script.append(f'matrix m[{len(rows)}][{size}]={values};')
         if size==1:
