@@ -8,15 +8,14 @@ from flint import fmpz_mpoly_ctx
 from verify_parallel_third_rectangle import K, WORDS, s, third_rectangle
 
 
-def polynomials():
-    v,h,b = s.symbols('v h b')
-    ring = fmpz_mpoly_ctx.get(('v','h','b'))
+def frame_differences(raw,variables,multiplier,unit_product):
+    ring = fmpz_mpoly_ctx.get(tuple(map(str,variables)))
     zero = ring.constant(0)
 
     def convert(f):
-        return ring.from_dict({k:int(n) for k,n in s.Poly(f,v,h,b).terms()})
+        return ring.from_dict({k:int(n) for k,n in s.Poly(f,*variables).terms()})
 
-    units = convert(v*h*(h-1)*b*(b-1))
+    units = convert(unit_product)
 
     def primitive(f):
         while f:
@@ -26,8 +25,7 @@ def polynomials():
             f = f//g
         return zero
 
-    w = {k:convert(s.cancel(value*v*b*(h-1)*(b-1)))
-         for k,value in third_rectangle(v,h/v,b).items()}
+    w = {k:convert(s.cancel(value*multiplier)) for k,value in raw.items()}
 
     def sign(seq):
         return (-1)**sum(i>j for i,j in combinations(seq,2))
@@ -109,21 +107,22 @@ proc removeUnits(ideal J) {
     }
     return(G);
 }
-proc checkPair(ideal P) {
+proc pairIdeal(ideal P) {
     ideal J=std(ideal(0)); poly f; int i;
     for(i=1;i<=ncols(P);i++) {
         f=stripUnits(reduce(P[i],J));
         if(f!=0) { J=removeUnits(J+ideal(f)); attrib(J,"isSB",1); }
-        if(J[1]==1) { return(1); }
+        if(J[1]==1) { break; }
     }
-    return(0);
+    return(J);
 }
 """
 
 
 def check():
-    pairs = list(polynomials())
-    commands = [f'print(checkPair(ideal({",".join(rows)})));' for _,rows in pairs]
+    v,h,b = s.symbols('v h b')
+    pairs = list(frame_differences(third_rectangle(v,h/v,b),(v,h,b),v*b*(h-1)*(b-1),v*h*(h-1)*b*(b-1)))
+    commands = [f'print(pairIdeal(ideal({",".join(rows)}))[1]);' for _,rows in pairs]
     result = subprocess.run([os.environ.get('SINGULAR_BIN','Singular'),'-q'],
                             input=SINGULAR+'\n'.join(commands)+'\nquit;\n',
                             text=True,capture_output=True,check=True)
