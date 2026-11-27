@@ -1903,6 +1903,12 @@
       "current_result": "For all four generic completions of the split Bell spectral surface, the entire unrestricted GIT fiber is regular: besides the closed orbit it is weighted projective six-space of weights 1,1,1,1,2,2,2 modulo its specified Klein action. The positive cubic slice has dimension four, all quadratic obstructions vanish identically and the top freedom has dimension three. Every nonclosed orbit has a unique reduced line as its pure point curve. Moving the base gives an eight-dimensional unmarked family.",
       "current_proof": "sections/split_surface_full_fibers.tex",
       "global_coverage": false
+    },
+    {
+      "id": "PERIOD-STRATA-FOR-ALL-GENERIC-SPLIT-BELL-FIBERS",
+      "current_result": "Over every generic split Bell surface completion all objects have minimal period two or four. The period-two locus off the closed orbit has exactly four irreducible pieces of dimensions 4,2,2,2; a simultaneous eigenspace test covers every weighted coordinate including zero coordinates. All other orbits have minimal period four.",
+      "current_proof": "sections/split_surface_periods.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1960,7 +1966,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 472,
+  "version": 473,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 472,
+  "version": 473,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "0315da6b01a96d188bc74f0b8c5a253ed03a30f4"
+    "source_commit": "f17cc4e6fd51db6b21737e297747c3911e6b6cff"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For all four generic completions of the split Bell spectral surface, the entire unrestricted GIT fiber is regular: besides the closed orbit it is weighted projective six-space of weights 1,1,1,1,2,2,2 modulo its specified Klein action. The positive cubic slice has dimension four, all quadratic obstructions vanish identically and the top freedom has dimension three. Every nonclosed orbit has a unique reduced line as its pure point curve. Moving the base gives an eight-dimensional unmarked family."
+    "scope": "Over every generic split Bell surface completion all objects have minimal period two or four. The period-two locus off the closed orbit has exactly four irreducible pieces of dimensions 4,2,2,2; a simultaneous eigenspace test covers every weighted coordinate including zero coordinates. All other orbits have minimal period four."
   },
   "checks": [
     {
-      "command": "python computations/verify_split_surface_lifts.py",
+      "command": "python computations/verify_split_surface_periods.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine every minimal period and all half-shift fixed strata in these generic GIT fibers. Determine the unrestricted component and the nongeneric spectral fibers and advance the remaining finite and branching windows."
+    "Use exact generic quartic centers and the quantum specialization to establish membership in the fifteen-dimensional unrestricted component and local smoothness. Extend to degenerate split spectra and remaining finite and branched strata."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 820,
+      "nc-p3": 821,
       "plan_ja": 19,
       "notes_ja": 32
     },
