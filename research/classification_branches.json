@@ -1639,6 +1639,12 @@
       "current_result": "On arbitrary two-plane-split windows with ranks 1,4,1, simultaneous one-direction invertibility of the four mixed projections is equivalent to all eight pure-degree relations being nondegenerate. Every such window is standard quadratic PBW Koszul two-sided AS regular. Marked classification reduces to one two-by-two-by-two-by-two tensor and stabilizer-conjugacy classes of transporters between two inverse flattenings. Unmarking is finite, and for finite local stabilizer adds only simultaneous exchange of the two planes.",
       "current_proof": "sections/split_inverse_windows.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SPLIT-SEMISIMPLE-RECIPROCAL-SPECTRA",
+      "current_result": "For semisimple alternating tensors on the nondegenerate two-plane split locus, the reciprocal comparison is solved at every spectrum. Its base modulo the even signed permutation group consists of a quadric surface chart, a paired-eigenvalue line and two isolated orbits given by a sextic. The isolated orbits yield one unmarked period-one AS class with projective stabilizer exactly the one-dimensional torus and hence no Klein marking. The general surface fiber has four ordered-splitting isomorphism classes.",
+      "current_proof": "sections/split_bell_locus.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1696,7 +1702,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 428,
+  "version": 429,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

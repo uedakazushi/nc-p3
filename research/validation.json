@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 428,
+  "version": 429,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "7779495fecf55e584e064dc40a3281a32a9ceaa9"
+    "source_commit": "a68a2133f6e36e0f92cd08d0ae1150a4f8d666cf"
   },
   "generation": {
     "result": "PASS",
-    "scope": "On arbitrary two-plane-split windows with ranks 1,4,1, simultaneous one-direction invertibility of the four mixed projections is equivalent to all eight pure-degree relations being nondegenerate. Every such window is standard quadratic PBW Koszul two-sided AS regular. Marked classification reduces to one two-by-two-by-two-by-two tensor and stabilizer-conjugacy classes of transporters between two inverse flattenings. Unmarking is finite, and for finite local stabilizer adds only simultaneous exchange of the two planes."
+    "scope": "For semisimple alternating tensors on the nondegenerate two-plane split locus, the reciprocal comparison is solved at every spectrum. Its base modulo the even signed permutation group consists of a quadric surface chart, a paired-eigenvalue line and two isolated orbits given by a sextic. The isolated orbits yield one unmarked period-one AS class with projective stabilizer exactly the one-dimensional torus and hence no Klein marking. The general surface fiber has four ordered-splitting isomorphism classes."
   },
   "checks": [
     {
-      "command": "python computations/verify_split_inverse_windows.py",
+      "command": "python computations/verify_split_bell_locus.py",
       "result": "PASS"
     },
     {
@@ -124,13 +124,13 @@
     }
   ],
   "open_mathematics": [
-    "Resolve the reciprocal comparison on the simple-spectrum two-qubit-pair tensor chart, determine its components and exceptional orbits, then analyze the degenerate pure-plane relations."
+    "Resolve the nonsemisimple alternating tensors by orthogonal Jordan blocks and determine the transporter quotients over repeated eigenvalues; continue the non-Klein two-weight and stabilizer-free branches."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 751,
-      "plan_ja": 16,
+      "nc-p3": 753,
+      "plan_ja": 17,
       "notes_ja": 29
     },
     "scope": "LuaLaTeX built the manuscript, plan and research notes."
