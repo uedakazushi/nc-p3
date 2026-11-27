@@ -2,7 +2,7 @@
 
 **共同研究：** 本リポジトリは大川新之介・植田一石の共同研究プロジェクトです。この表示は個々の論文の著者を確定するものではありません。
 
-**2026-11-27 / v509。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-27 / v510。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -587,6 +587,8 @@ Bell曲面の固有値衝突部は全Jordan型と例外値を含む三行で尽�
 曲面のNéron–Severi群が超平面と楕円繊維で生成される場合、二つの相対Picard曲面を同定し、四移動の逆を自己交叉4の豊富な線束による捩りにした。[証明](sections/finite_residual_picard_surfaces.tex)
 
 超平面と繊維でPicard格子が生成される四次切断を持つ反対階数10の有限片側対称窓では、二鉛筆への制限から全次数の左右AS正則性を証明した。[証明](sections/finite_minimal_picard_regularity.tex)
+
+全辺有限・片側対称・反対階数10では、二つのモナドの局所自由性が全次数のKoszul左右AS正則性の必要十分条件である。楕円八次曲線表示の全許容値に成立し、曲面のPicard格子に制限はない。[証明](sections/finite_rank_ten_full_regularity.tex)
 
 非恒等の平面グラフを基底に持つOre窓では、指定点を忘れた同型類も決定した。[正規形と平坦特殊化](sections/plane_graph_ore_windows.tex)・[検算](computations/verify_plane_graph_ore.py)
 
