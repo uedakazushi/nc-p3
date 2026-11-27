@@ -1867,6 +1867,12 @@
       "current_result": "Every regular unbranched curve graph is pure-free on all four edges and GIT semistable. On the locus containing a line, Segre avoidance on all edges is also sufficient. For a four-shift-invariant system of lines with rank-three evaluation on both sides, even with branching elsewhere, rank two for four normal relations is equivalent to regularity and yields a quadratic PBW basis.",
       "current_proof": "sections/curve_graph_pure_exclusion.tex",
       "global_coverage": false
+    },
+    {
+      "id": "CURVE-STRICT-SEMISTABILITY-AND-REGULAR-LINE-LIMIT",
+      "current_result": "All strictly semistable pure-free unbranched one-dimensional point graph candidates are regular. Every regular rank-three four-shift-invariant line window, including those with branching elsewhere, is strictly semistable; its unique polystable limit has two complementary clean line systems and is quadratic PBW and regular. Two-by-two equality flags recognize the invariant-line case and necessarily have the same weight gap in all four slots.",
+      "current_proof": "sections/curve_graded_limits.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1924,7 +1930,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 466,
+  "version": 467,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

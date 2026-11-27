@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 466,
+  "version": 467,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "da5ddddd0f43c7d1b2e634a4c5de0a2ac91f4cc8"
+    "source_commit": "c895cfb544876dbddb947c302b72aecf2650e5f4"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every regular unbranched curve graph is pure-free on all four edges and GIT semistable. On the locus containing a line, Segre avoidance on all edges is also sufficient. For a four-shift-invariant system of lines with rank-three evaluation on both sides, even with branching elsewhere, rank two for four normal relations is equivalent to regularity and yields a quadratic PBW basis."
+    "scope": "All strictly semistable pure-free unbranched one-dimensional point graph candidates are regular. Every regular rank-three four-shift-invariant line window, including those with branching elsewhere, is strictly semistable; its unique polystable limit has two complementary clean line systems and is quadratic PBW and regular. Two-by-two equality flags recognize the invariant-line case and necessarily have the same weight gap in all four slots."
   },
   "checks": [
     {
-      "command": "python computations/verify_invariant_line_pbw.py",
+      "command": "python computations/verify_curve_graded_limits.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze strictly semistable curve graphs using rectangular rank bounds, and the deficient equal rectangles via line and plane cubic graphs. Continue unrestricted branches."
+    "Determine the filtered lifts over the classified split inverse tensors, including their quadratic obstructions and exceptional monodromies; continue other equality flags, finite and branched windows."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 812,
+      "nc-p3": 814,
       "plan_ja": 18,
       "notes_ja": 31
     },
