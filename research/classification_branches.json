@@ -2287,6 +2287,12 @@
       "current_result": "For a regular window with one PI corner, left graded coherence forces every nonzero graded right vertex ideal to have growth four. Two-sided graded coherence already implies a composable domain on every component. In the finite fifteen-dimensional closure even the regular-and-coherent locus is exactly the 84-degree test, without an a priori Noetherian hypothesis.",
       "current_proof": "sections/coherent_pi_regular_domains.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SHORT-CENTRAL-ZERO-DIVISOR-IN-EVERY-RESIDUAL-REGULAR-LIMIT",
+      "current_result": "Every hypothetical regular non-domain finite-edge limit on the fifteen-dimensional closure has a nonzero central zero-divisor in path degree four or eight, with a uniformly bounded homogeneous annihilator in any prescribed corner. The relative trace algebra of every regular specialization, even a nonsemiprime one, admits an octic normalization. Away from the indicated finite obstruction the 84-degree test decides regularity itself.",
+      "current_proof": "sections/finite_short_trace_pole.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2344,7 +2350,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 536,
+  "version": 537,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

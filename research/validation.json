@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 536,
+  "version": 537,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "21ff996e1e169ba70c0f2b0bd9d9fed5588f5748"
+    "source_commit": "c79cf81fcb644a5779d5503c921b087c86b6f96c"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For a regular window with one PI corner, left graded coherence forces every nonzero graded right vertex ideal to have growth four. Two-sided graded coherence already implies a composable domain on every component. In the finite fifteen-dimensional closure even the regular-and-coherent locus is exactly the 84-degree test, without an a priori Noetherian hypothesis."
+    "scope": "Every hypothetical regular non-domain finite-edge limit on the fifteen-dimensional closure has a nonzero central zero-divisor in path degree four or eight, with a uniformly bounded homogeneous annihilator in any prescribed corner. The relative trace algebra of every regular specialization, even a nonsemiprime one, admits an octic normalization. Away from the indicated finite obstruction the 84-degree test decides regularity itself."
   },
   "checks": [
     {
-      "command": "python computations/verify_coherent_pi_regular_domains.py",
+      "command": "python computations/verify_finite_short_trace_pole.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Study relative trace normalization at possible noncoherent nilpotent limits and produce low-degree central witnesses; pursue finite windows outside this PI closure."
+    "Use the short central annihilator and the finite trace degeneration to determine whether the remaining noncoherent regular windows exist; advance the separate non-PI finite locus and the center geometry."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 932,
+      "nc-p3": 934,
       "plan_ja": 22,
       "notes_ja": 35
     },
