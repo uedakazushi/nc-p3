@@ -1597,6 +1597,12 @@
       "current_result": "Every finite six-relation edge with a marked simple point is classified by its projected length-19 scheme in the product of two planes, including nonreduced residual points. Two uniquely recoverable tangent-bundle sections give the edge. All normalized companions with nondegenerate opposite marks are a linear kernel in 48 unknowns modulo its common scalar and the edge stabilizer. For all marks on the general fifteen-dimensional component the kernel has dimension one.",
       "current_proof": "sections/nineteen_point_edge.tex",
       "global_coverage": false
+    },
+    {
+      "id": "MARKED-SEVENTY-ONE-NODE-BICUBIC",
+      "current_result": "A marked sheet dominating the fifteen-dimensional component is generically finite and dominant over a full equisingular component of bicubic hypersurfaces in the product of two planes. The two reciprocal mixed determinants each have exactly 71 ordinary nodes. There are 36 rank-one nodes and 35 corresponding rank-two nodes split into the 19 window tracks and distinct reduced residual octads. Independent evaluation and differential ranks prove smoothness and dimension 15 of the local quotient.",
+      "current_proof": "sections/marked_bicubic_nodes.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1654,7 +1660,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 421,
+  "version": 422,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

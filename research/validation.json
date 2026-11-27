@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 421,
+  "version": 422,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "7be6bb3f3e5063ec30ed1df80a8ceb69d343d321"
+    "source_commit": "e462f0fd6702a17bf16553db3aca80cfea4f3011"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every finite six-relation edge with a marked simple point is classified by its projected length-19 scheme in the product of two planes, including nonreduced residual points. Two uniquely recoverable tangent-bundle sections give the edge. All normalized companions with nondegenerate opposite marks are a linear kernel in 48 unknowns modulo its common scalar and the edge stabilizer. For all marks on the general fifteen-dimensional component the kernel has dimension one."
+    "scope": "A marked sheet dominating the fifteen-dimensional component is generically finite and dominant over a full equisingular component of bicubic hypersurfaces in the product of two planes. The two reciprocal mixed determinants each have exactly 71 ordinary nodes. There are 36 rank-one nodes and 35 corresponding rank-two nodes split into the 19 window tracks and distinct reduced residual octads. Independent evaluation and differential ranks prove smoothness and dimension 15 of the local quotient."
   },
   "checks": [
     {
-      "command": "python computations/verify_nineteen_point_edge.py",
+      "command": "python computations/verify_marked_bicubic_nodes.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine which nineteen-point data yield regular extensions at special fibers and handle windows without a simple mark. Relate the residual octads to the singularities of the two mixed-bracket determinants."
+    "Recover the marked window from the nodal bicubic, determine the degree of the map and the behavior at boundary fibers. Continue all-degree tests and unmarked coverage outside the finite pointed component."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 739,
+      "nc-p3": 740,
       "plan_ja": 16,
       "notes_ja": 29
     },
