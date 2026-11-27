@@ -1765,6 +1765,12 @@
       "current_result": "For every binary obstruction parameter the Frobenius condition is exactly rank two of its two-by-three apolar matrix. All such tensors have opposite rank eight. Both cubic and quartic intersections are proved in all parameters by displacement identities. The oriented binary marking is unique; indexed isomorphism on the finite locus amounts to simultaneous PGL2 transport of the decimic and octavic class. The oriented nonregular boundary is irreducible of quotient dimension twelve.",
       "current_proof": "sections/binary_apolar_rank_test.tex",
       "global_coverage": false
+    },
+    {
+      "id": "UNRESTRICTED-TWO-EDGE-BINARY-RIGIDITY",
+      "current_result": "Without assuming any symmetry, two consecutive pure-free binary multiplication edges using the full shared cubic letters force their twisted cubic markings to coincide and uniquely reconstruct the entire window as the opposite-rank-eight bisymmetric decimic obstruction. Distinct twisted cubics cannot support a four-dimensional cubic overlap, even at a single nonreduced intersection of length five. All alternating binary obstructions on finite Frobenius windows are thereby exhausted.",
+      "current_proof": "sections/binary_two_edge_rigidity.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1822,7 +1828,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 449,
+  "version": 450,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
