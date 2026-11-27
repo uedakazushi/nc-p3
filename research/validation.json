@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 429,
+  "version": 430,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "a68a2133f6e36e0f92cd08d0ae1150a4f8d666cf"
+    "source_commit": "c59acd227d037323d79d316359b664f2cc8db9e3"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For semisimple alternating tensors on the nondegenerate two-plane split locus, the reciprocal comparison is solved at every spectrum. Its base modulo the even signed permutation group consists of a quadric surface chart, a paired-eigenvalue line and two isolated orbits given by a sextic. The isolated orbits yield one unmarked period-one AS class with projective stabilizer exactly the one-dimensional torus and hence no Klein marking. The general surface fiber has four ordered-splitting isomorphism classes."
+    "scope": "The semisimple spectral conditions are necessary and sufficient on the entire invertible two-plane split branch: every Jordan partition over every allowed repeated eigenvalue admits a reciprocal transporter, including both orthogonal orientations for even blocks. Every completion degenerates to one over the corresponding semisimple spectrum. All windows on this branch are semistable and their unique polystable limit stays on the same regular branch."
   },
   "checks": [
     {
-      "command": "python computations/verify_split_bell_locus.py",
+      "command": "python computations/verify_split_jordan_transport.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Resolve the nonsemisimple alternating tensors by orthogonal Jordan blocks and determine the transporter quotients over repeated eigenvalues; continue the non-Klein two-weight and stabilizer-free branches."
+    "Compute the twisted stabilizer conjugacy fibers for the paired-eigenvalue line and nonsemisimple records, then test degenerate pure-axis relations and the other torus profiles."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 753,
+      "nc-p3": 755,
       "plan_ja": 17,
       "notes_ja": 29
     },

@@ -1645,6 +1645,12 @@
       "current_result": "For semisimple alternating tensors on the nondegenerate two-plane split locus, the reciprocal comparison is solved at every spectrum. Its base modulo the even signed permutation group consists of a quadric surface chart, a paired-eigenvalue line and two isolated orbits given by a sextic. The isolated orbits yield one unmarked period-one AS class with projective stabilizer exactly the one-dimensional torus and hence no Klein marking. The general surface fiber has four ordered-splitting isomorphism classes.",
       "current_proof": "sections/split_bell_locus.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SPLIT-JORDAN-ALL-COMPLETIONS",
+      "current_result": "The semisimple spectral conditions are necessary and sufficient on the entire invertible two-plane split branch: every Jordan partition over every allowed repeated eigenvalue admits a reciprocal transporter, including both orthogonal orientations for even blocks. Every completion degenerates to one over the corresponding semisimple spectrum. All windows on this branch are semistable and their unique polystable limit stays on the same regular branch.",
+      "current_proof": "sections/split_jordan_transport.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1702,7 +1708,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 429,
+  "version": 430,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
