@@ -2029,6 +2029,12 @@
       "current_result": "All pure-free branched regular curve windows have only two possible global corridor configurations, up to cyclic notation: three forward centers with two adjacent tangent two-line paths and one (1,3,1) path, or four forward centers with four tangent two-line paths. This is a necessary condition and does not assert existence.",
       "current_proof": "sections/pure_branch_degree_patterns.tex",
       "global_coverage": false
+    },
+    {
+      "id": "ALL-PURE-FREE-CURVE-BRANCHING-EXCLUDED",
+      "current_result": "There is no branching at any opposite rank for a pure-relation-free standard regular window whose projections are curves or points. Both remaining global frames are impossible: comparison of two rank-two residual blocks excludes the four-center frame, and a common binary root with incompatible projected relation supports excludes the three-center frame. Together with the surface and curve-graph theorems this gives finite all-degree regularity and indexed-isomorphism tests for every pure-free candidate with a positive-dimensional projection.",
+      "current_proof": "sections/final_pure_branch_frames.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2086,7 +2092,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 493,
+  "version": 494,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
