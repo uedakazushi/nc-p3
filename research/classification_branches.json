@@ -1663,6 +1663,12 @@
       "current_result": "All regular windows admitting a nontrivial connected semisimple symmetry are classified up to unmarked index-preserving isomorphism. In the remaining single-standard profile all four ordinary boundary forms must be invertible. A binary congruence and an optional binary quadratic determine disjoint complete normal forms, all of period one. Every such window has a specified regular polystable limit.",
       "current_proof": "sections/one_standard_sl2.tex",
       "global_coverage": false
+    },
+    {
+      "id": "BINARY-TORUS-ALL-WINDOWS",
+      "current_result": "All nontrivial torus actions with at most two weights per arrow have the same gap and multiplicities at every slot. The 3+1 locus consists exactly of ordinary central polynomial extensions of ternary quadratic AS algebras, of period one. The entire 2+2 locus is the previously classified invertible-axis PBW chart: any singular pure form would force a moving mixed orbit corridor whose fixed endpoints cannot share a successor. Both loci have finite unmarking including comparisons across them.",
+      "current_proof": "sections/binary_torus_windows.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1720,7 +1726,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 432,
+  "version": 433,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
