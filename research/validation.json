@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 392,
+  "version": 393,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "b12da4398a53e5949b0481ca33dfa1270d0f6e39"
+    "source_commit": "af24b3ebbcf5891eb09a7379a414e6c61885d587"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Both support-145 surfaces and their horizontal boundary strata are standard Koszul two-sided AS-regular exactly when ay differs from minus one. Every regular positive fiber is free over four central quartics and its twist is free over four central elements of degrees 4,4,8,8. The full quadratic-cone quotient and its period and rank strata restrict to this locus."
+    "scope": "All fibers of the entire three-dimensional third rectangle (88,89,90) are regular and free over four central quartics. The even chart is universal and the two odd chart factors sum to a unit. Its projective window stabilizer is exactly Klein four everywhere; the same holds on both support-145 surfaces except their inversion fixed point."
   },
   "checks": [
     {
-      "command": "python computations/verify_rectangular_surface_cut_charts.py",
+      "command": "python computations/verify_third_rectangle_regularity.py",
       "result": "PASS"
     },
     {
@@ -60,12 +60,12 @@
     }
   ],
   "open_mathematics": [
-    "Complete regularity on the third rectangle and compare its unmarked stabilizers, then resolve the remaining horizontal rectangles and unrestricted windows."
+    "Classify the remaining 76 and 112 horizontal fibers and their geometry, then resolve coverage and regularity without the Klein marking."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 686,
+      "nc-p3": 687,
       "plan_ja": 15,
       "notes_ja": 28
     },

@@ -1423,6 +1423,12 @@
       "current_result": "Both support-145 surfaces and their horizontal boundary strata are standard Koszul two-sided AS-regular exactly when ay differs from minus one. Every regular positive fiber is free over four central quartics and its twist is free over four central elements of degrees 4,4,8,8. The full quadratic-cone quotient and its period and rank strata restrict to this locus.",
       "current_proof": "sections/parallel_rectangle_surface_regularity.tex",
       "global_coverage": false
+    },
+    {
+      "id": "THIRD-RECTANGLE-ALL-POINTS",
+      "current_result": "All fibers of the entire three-dimensional third rectangle (88,89,90) are regular and free over four central quartics. The even chart is universal and the two odd chart factors sum to a unit. Its projective window stabilizer is exactly Klein four everywhere; the same holds on both support-145 surfaces except their inversion fixed point.",
+      "current_proof": "sections/third_rectangle_regularity.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1480,7 +1486,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 392,
+  "version": 393,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
