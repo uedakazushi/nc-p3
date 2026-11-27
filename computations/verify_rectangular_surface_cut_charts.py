@@ -20,9 +20,9 @@ def central_cut_data(w,field,units):
     return relation_cut_data(rel,field,units)
 
 
-def relation_cut_data(rel,field,units,full_center=False):
+def relation_cut_data(rel,field,units,full_center=False,reducer=None):
     def reduce(rows):
-        return unit_echelon(rows,units)
+        return unit_echelon(rows,units) if reducer is None else reducer(rows)
     basis,image = field_paths(rel,field.one,reduce)
     sections = [[] for _ in K]
     for h in (0,1):

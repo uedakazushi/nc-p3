@@ -1,15 +1,23 @@
 {
   "schema_version": 2,
-  "version": 401,
+  "version": 402,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "04d87a06decd76cd8c73156ae66b7afb0143a9cf"
+    "source_commit": "eb220b2aca01bff149c4ad97439ea2a0b82d0fa8"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The opposite ranks and both determinant divisors are explicit over all five large horizontal 112 supports. Their rank-fourteen intersection has an elliptic K3 model of Picard number 20 and absolute Neron-Severi discriminant 16. Its generic unmarked quotient is rational, with a rational period-two branch. The surface, branch curve and both divisors have nonempty standard regular open subsets."
+    "scope": "The rank-fourteen rational curve of support 85 consists entirely of standard two-sided regular points of period four, including all eight residual number fields. The five quartic centers form a character-resolved vector bundle at every fourth-degree-standard point of all five large horizontal 112 strata."
   },
   "checks": [
+    {
+      "command": "python computations/verify_first_rectangle_rank_fourteen_curve.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_second_rectangle_quartic_bundle.py",
+      "result": "PASS"
+    },
     {
       "command": "python computations/verify_second_rectangle_opposite_ranks.py",
       "result": "PASS"
@@ -80,12 +88,12 @@
     }
   ],
   "open_mathematics": [
-    "Resolve all remaining fibers of the large horizontal supports, including the period-two curve, and unrestricted window components and orbit identifications."
+    "Resolve all fibers of the 112 rank-fourteen period-two curve, extend the all-point 85 result to the rank-fifteen and rank-sixteen loci, and continue on unrestricted windows."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 699,
+      "nc-p3": 700,
       "plan_ja": 15,
       "notes_ja": 28
     },

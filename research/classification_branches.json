@@ -1477,6 +1477,12 @@
       "current_result": "The opposite ranks and both determinant divisors are explicit over all five large horizontal 112 supports. Their rank-fourteen intersection has an elliptic K3 model of Picard number 20 and absolute Neron-Severi discriminant 16. Its generic unmarked quotient is rational, with a rational period-two branch. The surface, branch curve and both divisors have nonempty standard regular open subsets.",
       "current_proof": "sections/second_rectangle_opposite_ranks.tex",
       "global_coverage": false
+    },
+    {
+      "id": "RECTANGLE-CENTER-BUNDLES-RANK-FOURTEEN",
+      "current_result": "The rank-fourteen rational curve of support 85 consists entirely of standard two-sided regular points of period four, including all eight residual number fields. The five quartic centers form a character-resolved vector bundle at every fourth-degree-standard point of all five large horizontal 112 strata.",
+      "current_proof": "sections/rectangle_quartic_bundles.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1534,7 +1540,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 401,
+  "version": 402,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
