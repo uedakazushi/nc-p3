@@ -2023,6 +2023,12 @@
       "current_result": "Every curve projection of a regular window has scheme degree at most seven even in the presence of branching, giving a period bound of 28 for a branching point path. In the pure-free case every phase has at most one center in each direction and both lines in every two-line corridor are tangents, including nonreduced contact.",
       "current_proof": "sections/branch_degree_seven.tex",
       "global_coverage": false
+    },
+    {
+      "id": "TWO-GLOBAL-PURE-FREE-BRANCH-PATTERNS",
+      "current_result": "All pure-free branched regular curve windows have only two possible global corridor configurations, up to cyclic notation: three forward centers with two adjacent tangent two-line paths and one (1,3,1) path, or four forward centers with four tangent two-line paths. This is a necessary condition and does not assert existence.",
+      "current_proof": "sections/pure_branch_degree_patterns.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2080,7 +2086,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 492,
+  "version": 493,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
