@@ -1957,6 +1957,12 @@
       "current_result": "Every scalar-spectrum nonsemisimple split window is classified for all four Jordan partitions, including both orientations, unmarked identifications, and period one. All have quantum closed orbit and lie outside the fifteen-dimensional component. Together with the two-eigenvalue and semisimple tables this exhausts the full invertible split Bell line.",
       "current_proof": "sections/split_single_eigenvalue_jordan.tex",
       "global_coverage": false
+    },
+    {
+      "id": "ENTIRE-REPEATED-BELL-SURFACE-UNMARKED-CLASSIFICATION",
+      "current_result": "All repeated squared-eigenvalue split Bell surface windows outside the line are classified, including every Jordan completion, exact unmarked isomorphisms, all periods, closures to the semisimple class and incidence with the fifteen-dimensional component. Four univariate Smith computations exclude all additional root-of-unity intersections.",
+      "current_proof": "sections/split_repeated_surface.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2014,7 +2020,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 481,
+  "version": 482,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

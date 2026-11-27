@@ -2,7 +2,7 @@
 
 **共同研究：** 本リポジトリは大川新之介・植田一石の共同研究プロジェクトです。この表示は個々の論文の著者を確定するものではありません。
 
-**2026-11-27 / v481。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-27 / v482。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -531,6 +531,8 @@ Bell直線から十五次元成分に入るのは位数四の量子窓と反転�
 二固有値のBell直線で非半単純な全窓を、量子三角積と一辺または二辺、および片側反転に流れる例外一類で分類した。全て最小一周期である。[Jordan窓の無印同型](sections/split_two_eigenvalue_jordan.tex)
 
 Bell直線の単一固有値の全Jordan分割について、無印同型・周期・閉軌道を決定した。これで直線上は非半単純部を含めて尽くされる。[単一固有値の全分類](sections/split_single_eigenvalue_jordan.tex)
+
+Bell曲面の固有値衝突部は全Jordan型と例外値を含む三行で尽きる。最小周期・無印同型と十五次元成分との全交差を決定した。[重複曲面の分類](sections/split_repeated_surface.tex)
 
 非恒等の平面グラフを基底に持つOre窓では、指定点を忘れた同型類も決定した。[正規形と平坦特殊化](sections/plane_graph_ore_windows.tex)・[検算](computations/verify_plane_graph_ore.py)
 

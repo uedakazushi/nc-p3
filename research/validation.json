@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 481,
+  "version": 482,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "fa0fc23859d0d85750ae50f950ae61f7c6d0d6bd"
+    "source_commit": "9f61df5694fb29e6125f7286e82522c5f7e10868"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every scalar-spectrum nonsemisimple split window is classified for all four Jordan partitions, including both orientations, unmarked identifications, and period one. All have quantum closed orbit and lie outside the fifteen-dimensional component. Together with the two-eigenvalue and semisimple tables this exhausts the full invertible split Bell line."
+    "scope": "All repeated squared-eigenvalue split Bell surface windows outside the line are classified, including every Jordan completion, exact unmarked isomorphisms, all periods, closures to the semisimple class and incidence with the fifteen-dimensional component. Four univariate Smith computations exclude all additional root-of-unity intersections."
   },
   "checks": [
     {
-      "command": "python computations/verify_split_single_eigenvalue_jordan.py",
+      "command": "python computations/verify_split_repeated_surface.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Resolve the non-line repeated spectra over the Bell surface, then remaining exceptional surface stabilizers and their regular fibers. Continue global finite stable and branched window coverage."
+    "Complete the simple-spectrum surface including the extra stabilizer when a pair of squared eigenvalues are negatives. Then resolve remaining nonsplit and finite stable or branched windows."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 836,
+      "nc-p3": 838,
       "plan_ja": 19,
       "notes_ja": 32
     },
