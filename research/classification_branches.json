@@ -1939,6 +1939,12 @@
       "current_result": "A valuation obstruction from monic PBW Koszul bases excludes polar degenerations of every quantum triangle invariant. It excludes both ends of the mixed flip curve, and every regular point of its full unrestricted 59-dimensional projective component is exactly one of the classified period-one classes a modulo sign and inversion, including the two exceptional quotient values.",
       "current_proof": "sections/pbw_valuative_boundaries.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FULL-QUANTUM-ATTRACTION-LOCUS-CLOSED-UNDER-REGULAR-SPECIALIZATION",
+      "current_result": "The entire locus attracted to a quantum closed orbit is closed under arbitrary regular specialization, even with moving quantum parameters and moving filtered deformation coefficients. All four triangle values have unit valuation; the special closed orbit is the quantum class of their residues. Every individual quantum attraction fiber is closed inside the regular locus.",
+      "current_proof": "sections/quantum_regular_closure.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1996,7 +2002,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 478,
+  "version": 479,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 478,
+  "version": 479,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "40c8ea66d6179703566d924b3eb4362493f84a9d"
+    "source_commit": "85c28f7ff00033d2c8bcf3de212a7c4ef4e33dcb"
   },
   "generation": {
     "result": "PASS",
-    "scope": "A valuation obstruction from monic PBW Koszul bases excludes polar degenerations of every quantum triangle invariant. It excludes both ends of the mixed flip curve, and every regular point of its full unrestricted 59-dimensional projective component is exactly one of the classified period-one classes a modulo sign and inversion, including the two exceptional quotient values."
+    "scope": "The entire locus attracted to a quantum closed orbit is closed under arbitrary regular specialization, even with moving quantum parameters and moving filtered deformation coefficients. All four triangle values have unit valuation; the special closed orbit is the quantum class of their residues. Every individual quantum attraction fiber is closed inside the regular locus."
   },
   "checks": [
     {
-      "command": "python computations/verify_pbw_valuative_boundary.py",
+      "command": "python computations/verify_filtered_quantum_valuations.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Compute the nonsemisimple line and surface transport fibers, and extend the valuation obstruction to remaining moving nonquantum or branched and stable windows."
+    "Classify the remaining closed orbits and their nonquantum attraction fibers, including Jordan split spectra and mixed-flip exceptional fibers, while retaining the residual stable finite and branched alternatives."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 830,
+      "nc-p3": 831,
       "plan_ja": 19,
       "notes_ja": 32
     },
