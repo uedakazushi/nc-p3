@@ -2,7 +2,7 @@
 
 **共同研究：** 本リポジトリは大川新之介・植田一石の共同研究プロジェクトです。この表示は個々の論文の著者を確定するものではありません。
 
-**2026-11-27 / v445。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-27 / v446。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -459,6 +459,8 @@ Walsh三次元族を含む十五次元成分と、そこから出る周期2の�
 量子点へ退化する有限窓の残る全てを、六次元アフィン空間一枚と直線を除いた二枚で分類した。[六座標・例外直線・全周期](sections/finite_quantum_planar_fibers.tex)
 
 任意の有限点グラフで四文字評価は階数20、両対称の場合だけ19になる。通過成分の次元下界も得た。[部分スキームへの制限と余法線](sections/finite_four_slot_evaluations.tex)
+
+有限Frobenius窓はすべて半安定であり、厳密半安定な候補は例外なく全次数で正則となる。[重み不等式・等号条件・PBW還元](sections/finite_window_semistability.tex)
 
 非恒等の平面グラフを基底に持つOre窓では、指定点を忘れた同型類も決定した。[正規形と平坦特殊化](sections/plane_graph_ore_windows.tex)・[検算](computations/verify_plane_graph_ore.py)
 

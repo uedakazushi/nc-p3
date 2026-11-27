@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 445,
+  "version": 446,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "854efd85288c8515dca33ea776bc764d4d6cad67"
+    "source_commit": "7ab3d8bbd12a5a9bfaf921eedc215b26728e8a8d"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For every finite Frobenius graph, an adjacent coordinate product restricts on each proper nonempty subscheme to dimension strictly greater than half its length. Four-slot evaluation has rank 19 precisely for bisymmetric windows and rank 20 otherwise. Every affine component through a finite point has dimension at least 75, and at least 76 away from bisymmetry."
+    "scope": "Every finite Frobenius window is GIT semistable. Every strictly semistable finite candidate is all-degree standard two-sided Koszul AS regular with regular polystable limit. Every nontrivial equality filtration at a finite graph without a maximal tangent is uniform across the slots, preserves both cut ranks, and gives an explicit quadratic PBW initial window. Only stable finite candidates remain for general all-degree recognition."
   },
   "checks": [
     {
-      "command": "python computations/verify_finite_four_slot_evaluations.py",
+      "command": "python computations/verify_finite_window_semistability.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Prove universal semistability for finite Frobenius windows and restrict all possible nonclosed orbit limits using the extremal filtration weights without any prior symmetry hypothesis."
+    "Classify nonquantum closed limits admitted by the uniform equality profiles, and exploit intrinsic rank bounds and curve reconstruction on stable finite candidates."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 780,
+      "nc-p3": 782,
       "plan_ja": 17,
       "notes_ja": 30
     },

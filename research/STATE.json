@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-27",
-  "version": 445,
+  "version": 446,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -4471,6 +4471,15 @@
       "verification": [
         "computations/verify_finite_four_slot_evaluations.py"
       ]
+    },
+    {
+      "id": "UNIVERSAL-FINITE-SEMISTABILITY-STRICT-AS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "Every finite Frobenius window is GIT semistable. Every strictly semistable finite candidate is all-degree standard two-sided Koszul AS regular with regular polystable limit. Every nontrivial equality filtration at a finite graph without a maximal tangent is uniform across the slots, preserves both cut ranks, and gives an explicit quadratic PBW initial window. Only stable finite candidates remain for general all-degree recognition.",
+      "proof": "sections/finite_window_semistability.tex",
+      "verification": [
+        "computations/verify_finite_window_semistability.py"
+      ]
     }
   ],
   "document_paths": {
@@ -4534,7 +4543,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "854efd85288c8515dca33ea776bc764d4d6cad67",
+  "reviewed_source_commit": "7ab3d8bbd12a5a9bfaf921eedc215b26728e8a8d",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -4543,14 +4552,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Prove universal semistability for finite Frobenius windows and restrict all possible nonclosed orbit limits using the extremal filtration weights without any prior symmetry hypothesis.",
+    "immediate_next_action": "Classify nonquantum closed limits admitted by the uniform equality profiles, and exploit intrinsic rank bounds and curve reconstruction on stable finite candidates.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/finite_four_slot_evaluations.tex",
-      "sections/finite_quantum_planar_fibers.tex"
+      "sections/finite_window_semistability.tex",
+      "sections/finite_four_slot_evaluations.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "For every finite Frobenius graph, an adjacent coordinate product restricts on each proper nonempty subscheme to dimension strictly greater than half its length. Four-slot evaluation has rank 19 precisely for bisymmetric windows and rank 20 otherwise. Every affine component through a finite point has dimension at least 75, and at least 76 away from bisymmetry. Full classification remains open.",
+    "state_of_claim": "Every finite Frobenius window is GIT semistable. Every strictly semistable finite candidate is all-degree standard two-sided Koszul AS regular with regular polystable limit. Every nontrivial equality filtration at a finite graph without a maximal tangent is uniform across the slots, preserves both cut ranks, and gives an explicit quadratic PBW initial window. Only stable finite candidates remain for general all-degree recognition. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

@@ -1741,6 +1741,12 @@
       "current_result": "For every finite Frobenius graph, an adjacent coordinate product restricts on each proper nonempty subscheme to dimension strictly greater than half its length. Four-slot evaluation has rank 19 precisely for bisymmetric windows and rank 20 otherwise. Every affine component through a finite point has dimension at least 75, and at least 76 away from bisymmetry.",
       "current_proof": "sections/finite_four_slot_evaluations.tex",
       "global_coverage": false
+    },
+    {
+      "id": "UNIVERSAL-FINITE-SEMISTABILITY-STRICT-AS",
+      "current_result": "Every finite Frobenius window is GIT semistable. Every strictly semistable finite candidate is all-degree standard two-sided Koszul AS regular with regular polystable limit. Every nontrivial equality filtration at a finite graph without a maximal tangent is uniform across the slots, preserves both cut ranks, and gives an explicit quadratic PBW initial window. Only stable finite candidates remain for general all-degree recognition.",
+      "current_proof": "sections/finite_window_semistability.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1798,7 +1804,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 445,
+  "version": 446,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
