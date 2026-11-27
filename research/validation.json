@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 371,
+  "version": 372,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "e1957ce3611957ac5a96700f76acc57dc2c1cf05"
+    "source_commit": "516db941175c39f5d0839b49d338960afc7dda4c"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For the singly missing Klein sector, the positive (3,1,1,1) partition is impossible: every one of 15,936,576 simultaneous support candidates has an exponential coordinate path quotient. The (2,2,1,1) partition reduces from 115,151,588 potential masks to 2,664 nonexponential coordinate graphs, 74 orbits, and just ten representatives after consecutive-pure-relation and cubic-slice bounds."
+    "scope": "Every singly missing Klein window that is standard AS lies on a single explicitly tabulated one-parameter curve up to the stated finite presentation symmetries. The first nine remaining masks violate the quartic trivial-character dimension even at every specialization. The last mask has exactly one viable Smith root choice and all t nonzero with 1+t^2 nonzero are regular by four compatible binary flags and a triangular PBW basis."
   },
   "checks": [
     {
-      "command": "python computations/verify_klein_single_missing_supports.py",
+      "command": "python computations/verify_klein_single_missing_windows.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Solve the ten remaining simultaneous rank ideals and test every parameter, including all Smith torsion choices and rank-specialization strata."
+    "Determine all unmarked indexed isomorphisms and periods on the singly missing curve, using the intrinsic six-line correspondences and the two binary projective monodromies. Extend structural coverage to positive color profiles on both cuts."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 653,
+      "nc-p3": 655,
       "plan_ja": 14,
       "notes_ja": 27
     },
