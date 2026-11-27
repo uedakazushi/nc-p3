@@ -1,4 +1,5 @@
 """Recover the four intrinsic coordinate frames on the entire third rectangle."""
+from functools import cache
 from itertools import combinations, permutations, product
 from math import prod
 import os
@@ -8,7 +9,7 @@ from flint import fmpz_mpoly_ctx
 from verify_parallel_third_rectangle import K, WORDS, s, third_rectangle
 
 
-def frame_differences(raw,variables,multiplier,unit_product):
+def frame_operators(raw,variables,multiplier,unit_product):
     ring = fmpz_mpoly_ctx.get(tuple(map(str,variables)))
     zero = ring.constant(0)
 
@@ -50,6 +51,7 @@ def frame_differences(raw,variables,multiplier,unit_product):
         for key in tensor:
             tensor[key] = tensor[key]//common
 
+    @cache
     def second_moment(p,q):
         rest = tuple(j for j in K if j not in (p,q))
         def key(color,i,k):
@@ -70,6 +72,11 @@ def frame_differences(raw,variables,multiplier,unit_product):
         return [sum((a for k,a in weights.items() if k[p]==i
                      and tuple(k[j] for j in chosen)==letters),zero) for i in K]
 
+    return primitive,second_moment,projected,weights,zero
+
+
+def frame_differences(raw,variables,multiplier,unit_product):
+    primitive,second_moment,projected,weights,zero = frame_operators(raw,variables,multiplier,unit_product)
     for p in (1,3,0,2):
         if p==1:
             entries = [second_moment(p,q) for q in (0,2,3)]

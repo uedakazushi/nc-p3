@@ -1441,6 +1441,12 @@
       "current_result": "Both vertical 76-type support 85 surfaces and support 82 curves have complete unmarked quotients and period two at all points. The horizontal generic quotient is rational with a unique linearizable Klein marking inside an elementary order-eight stabilizer. The entire b+c=0 divisor on both 76 and 112 is excluded by an exact degree-four obstruction.",
       "current_proof": "sections/first_rectangle_orbits.tex",
       "global_coverage": false
+    },
+    {
+      "id": "VERTICAL-112-UNMARKED",
+      "current_result": "All normalized vertical 112 strata (118,124,129,134,139,142,145,147) have complete unmarked orbits and periods, including every regular exception. On the diagonal the two cocycle signs have dihedral order eight and multiplicative-torus normalizer stabilizers respectively.",
+      "current_proof": "sections/parallel_vertical_orbits.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1498,7 +1504,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 395,
+  "version": 396,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

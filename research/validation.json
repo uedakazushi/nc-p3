@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 395,
+  "version": 396,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "53526a541f8a7c116ecbdf9619f9e27a88ed8c1a"
+    "source_commit": "52cc891f7580b27043c20719f483d911b9a750ee"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Both vertical 76-type support 85 surfaces and support 82 curves have complete unmarked quotients and period two at all points. The horizontal generic quotient is rational with a unique linearizable Klein marking inside an elementary order-eight stabilizer. The entire b+c=0 divisor on both 76 and 112 is excluded by an exact degree-four obstruction."
+    "scope": "All normalized vertical 112 strata (118,124,129,134,139,142,145,147) have complete unmarked orbits and periods, including every regular exception. On the diagonal the two cocycle signs have dihedral order eight and multiplicative-torus normalizer stabilizers respectively."
   },
   "checks": [
     {
-      "command": "python computations/verify_first_rectangle_orbits.py",
+      "command": "python computations/verify_parallel_vertical_orbits.py",
       "result": "PASS"
     },
     {
@@ -60,12 +60,12 @@
     }
   ],
   "open_mathematics": [
-    "Complete unmarked vertical 112 strata, classify the remaining horizontal regular fibers and the unrestricted window coverage."
+    "Complete all unmarked horizontal first-rectangle frames and locate the remaining regular fibers on both large horizontal rectangles, then resume unrestricted coverage."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 690,
+      "nc-p3": 691,
       "plan_ja": 15,
       "notes_ja": 28
     },
