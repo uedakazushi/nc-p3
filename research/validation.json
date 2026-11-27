@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 430,
+  "version": 431,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "c59acd227d037323d79d316359b664f2cc8db9e3"
+    "source_commit": "73353e4296fe2eebbb5b9bdedd1f07d887ff0d5f"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The semisimple spectral conditions are necessary and sufficient on the entire invertible two-plane split branch: every Jordan partition over every allowed repeated eigenvalue admits a reciprocal transporter, including both orthogonal orientations for even blocks. Every completion degenerates to one over the corresponding semisimple spectrum. All windows on this branch are semistable and their unique polystable limit stays on the same regular branch."
+    "scope": "Every SL2 action on a standard window has identical arrow representations and identical relation representations at all four slots. Three nontrivial profiles are fully classified: irreducible arrows give the polynomial algebra, adjoint plus scalar arrows give polynomial or homogenized U(sl2), and two standard copies give polynomial or one unipotent PBW window. Their opposite ranks are 6,8,12 and all have period one. On the remaining standard plus two scalar arrows, missing boundary forms cause exponential growth and all four invertible boundary forms suffice for regularity."
   },
   "checks": [
     {
-      "command": "python computations/verify_split_jordan_transport.py",
+      "command": "python computations/verify_sl2_window_profiles.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Compute the twisted stabilizer conjugacy fibers for the paired-eigenvalue line and nonsemisimple records, then test degenerate pure-axis relations and the other torus profiles."
+    "Complete the SL2 profile with one standard summand and two scalars by resolving singular nonzero adjacent coefficient matrices, and continue the stabilizer-free component classification."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 755,
+      "nc-p3": 756,
       "plan_ja": 17,
       "notes_ja": 29
     },
