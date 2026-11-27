@@ -1447,6 +1447,12 @@
       "current_result": "All normalized vertical 112 strata (118,124,129,134,139,142,145,147) have complete unmarked orbits and periods, including every regular exception. On the diagonal the two cocycle signs have dihedral order eight and multiplicative-torus normalizer stabilizers respectively.",
       "current_proof": "sections/parallel_vertical_orbits.tex",
       "global_coverage": false
+    },
+    {
+      "id": "HORIZONTAL-85-UNMARKED",
+      "current_result": "Every horizontal support-85 candidate outside b+c=0 has an intrinsic four-frame and an unmarked torus chart with no residual identifications. Periods are exactly four except the two vertical intersection lines of period two. Degree four is standard exactly off b+c=0; the entire low path profile and quartic center (3,2,0,0) are constant there.",
+      "current_proof": "sections/first_rectangle_horizontal_frames.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1504,7 +1510,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 396,
+  "version": 397,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
