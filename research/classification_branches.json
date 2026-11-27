@@ -1435,6 +1435,12 @@
       "current_result": "The generic unmarked support-144 stratum has an elliptic K3 model of Picard rank 20 and discriminant 8. Support 146 is birational to affine three-space and the horizontal generic 147 quotient is rational in four parameters. All three geometric generic fibers are regular of period four.",
       "current_proof": "sections/parallel_horizontal_moduli.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FIRST-RECTANGLE-ORBITS",
+      "current_result": "Both vertical 76-type support 85 surfaces and support 82 curves have complete unmarked quotients and period two at all points. The horizontal generic quotient is rational with a unique linearizable Klein marking inside an elementary order-eight stabilizer. The entire b+c=0 divisor on both 76 and 112 is excluded by an exact degree-four obstruction.",
+      "current_proof": "sections/first_rectangle_orbits.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1492,7 +1498,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 394,
+  "version": 395,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

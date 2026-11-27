@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 394,
+  "version": 395,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "614adfa6378a186aebeae82aca9315d0432a563a"
+    "source_commit": "53526a541f8a7c116ecbdf9619f9e27a88ed8c1a"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The generic unmarked support-144 stratum has an elliptic K3 model of Picard rank 20 and discriminant 8. Support 146 is birational to affine three-space and the horizontal generic 147 quotient is rational in four parameters. All three geometric generic fibers are regular of period four."
+    "scope": "Both vertical 76-type support 85 surfaces and support 82 curves have complete unmarked quotients and period two at all points. The horizontal generic quotient is rational with a unique linearizable Klein marking inside an elementary order-eight stabilizer. The entire b+c=0 divisor on both 76 and 112 is excluded by an exact degree-four obstruction."
   },
   "checks": [
     {
-      "command": "python computations/verify_parallel_horizontal_moduli.py",
+      "command": "python computations/verify_first_rectangle_orbits.py",
       "result": "PASS"
     },
     {
@@ -60,12 +60,12 @@
     }
   ],
   "open_mathematics": [
-    "Recover the unmarked 76-type quotient, then determine the exceptional loci on the remaining horizontal strata and extend coverage beyond these markings."
+    "Complete unmarked vertical 112 strata, classify the remaining horizontal regular fibers and the unrestricted window coverage."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 688,
+      "nc-p3": 690,
       "plan_ja": 15,
       "notes_ja": 28
     },

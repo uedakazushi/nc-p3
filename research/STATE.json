@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-27",
-  "version": 394,
+  "version": 395,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -3994,6 +3994,17 @@
       "verification": [
         "computations/verify_parallel_horizontal_moduli.py"
       ]
+    },
+    {
+      "id": "FIRST-RECTANGLE-ORBITS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "Both vertical 76-type support 85 surfaces and support 82 curves have complete unmarked quotients and period two at all points. The horizontal generic quotient is rational with a unique linearizable Klein marking inside an elementary order-eight stabilizer. The entire b+c=0 divisor on both 76 and 112 is excluded by an exact degree-four obstruction.",
+      "proof": "sections/first_rectangle_orbits.tex",
+      "verification": [
+        "computations/verify_first_rectangle_orbits.py",
+        "computations/verify_first_rectangle_frames.py",
+        "computations/verify_rectangle_antidiagonal_obstruction.py"
+      ]
     }
   ],
   "document_paths": {
@@ -4057,7 +4068,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "614adfa6378a186aebeae82aca9315d0432a563a",
+  "reviewed_source_commit": "53526a541f8a7c116ecbdf9619f9e27a88ed8c1a",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -4066,14 +4077,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Recover the unmarked 76-type quotient, then determine the exceptional loci on the remaining horizontal strata and extend coverage beyond these markings.",
+    "immediate_next_action": "Complete unmarked vertical 112 strata, classify the remaining horizontal regular fibers and the unrestricted window coverage.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/parallel_horizontal_moduli.tex",
-      "sections/third_rectangle_regularity.tex"
+      "sections/first_rectangle_orbits.tex",
+      "sections/parallel_horizontal_moduli.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "The generic unmarked support-144 stratum has an elliptic K3 model of Picard rank 20 and discriminant 8. Support 146 is birational to affine three-space and the horizontal generic 147 quotient is rational in four parameters. All three geometric generic fibers are regular of period four. Full classification remains open.",
+    "state_of_claim": "Both vertical 76-type support 85 surfaces and support 82 curves have complete unmarked quotients and period two at all points. The horizontal generic quotient is rational with a unique linearizable Klein marking inside an elementary order-eight stabilizer. The entire b+c=0 divisor on both 76 and 112 is excluded by an exact degree-four obstruction. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
