@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 438,
+  "version": 439,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "1cca9f60d8f48ab90e65fa8192803b0088564223"
+    "source_commit": "1b1b2e8469ff3a8cce527d3d2842f0786f7358c9"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The complete unrestricted local orbit slice at the common finite torus point has exactly the equations uv=uz=0 in seventeen variables. The two smooth affine components have dimensions 76 and 75, with smooth reduced 74-dimensional intersection. All windows degenerating to this period-one closed orbit belong to their intersection and are classified by a single weighted projective space outside the closed orbit."
+    "scope": "All periods are determined, including exceptional coordinate strata, in the unrestricted attracting fibers at the three general finite torus types and their singular common point. The simple surface fibers have period four, both nonclosed simple curve fibers have period two, and the other two fibers have period one precisely on explicitly specified involution fixed loci and otherwise period two."
   },
   "checks": [
     {
-      "command": "python computations/verify_torus_component_crossing.py",
+      "command": "python computations/verify_torus_fiber_periods.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine the shifts and periods on the entire attracting fibers and continue to the unipotent-only and unrestricted finite-graph loci."
+    "Analyze finite-graph additive-group actions by their Jordan filtrations and use all-degree good reductions outside the closed torus fibers."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 770,
+      "nc-p3": 771,
       "plan_ja": 17,
       "notes_ja": 30
     },

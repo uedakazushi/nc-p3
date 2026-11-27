@@ -1699,6 +1699,12 @@
       "current_result": "The complete unrestricted local orbit slice at the common finite torus point has exactly the equations uv=uz=0 in seventeen variables. The two smooth affine components have dimensions 76 and 75, with smooth reduced 74-dimensional intersection. All windows degenerating to this period-one closed orbit belong to their intersection and are classified by a single weighted projective space outside the closed orbit.",
       "current_proof": "sections/torus_component_crossing.tex",
       "global_coverage": false
+    },
+    {
+      "id": "ALL-PERIODS-FINITE-TORUS-ATTRACTING-FIBERS",
+      "current_result": "All periods are determined, including exceptional coordinate strata, in the unrestricted attracting fibers at the three general finite torus types and their singular common point. The simple surface fibers have period four, both nonclosed simple curve fibers have period two, and the other two fibers have period one precisely on explicitly specified involution fixed loci and otherwise period two.",
+      "current_proof": "sections/torus_fiber_periods.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1756,7 +1762,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 438,
+  "version": 439,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
