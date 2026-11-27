@@ -1,17 +1,21 @@
 {
   "schema_version": 2,
-  "version": 405,
+  "version": 406,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "f703f83c52f64af79e485dac6234553ec9c71a84"
+    "source_commit": "91eb9d8dd0faf5fe0769d48107bf71d25daadd25"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The four-dimensional negative component has a generic elliptic quartic graph plus four points at every edge, generic minimum period two and projective group of order four, and no finite point-graph fibers. The fixed bisymmetric Klein presentation is irreducible across all sparse supports. Projective isomorphisms specialize on stable finite and smooth-quartic configurations, recognizing the positive and negative components there."
+    "scope": "On the negative exchange chart with (a-d)(zb-c) nonzero, every regular tensor has an explicit sixteen-element unmarked quotient, including the two-conic and quadrangular degenerations. The quotient is rational, the exact stabilizers are determined, and the period-one locus is a single quotient divisor."
   },
   "checks": [
     {
-      "command": "python computations/verify_negative_component_point_graph.py",
+      "command": "python computations/verify_negative_component_quotient.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_negative_smooth_pairing.py",
       "result": "PASS"
     },
     {
@@ -108,13 +112,13 @@
     }
   ],
   "open_mathematics": [
-    "Compute the explicit unmarked parameter action on the negative component, its exceptions and intersections, and continue the unrestricted classification."
+    "Resolve the negative exchange boundary a=d or zb=c and continue the general high-rank and unrestricted classification."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 707,
-      "plan_ja": 15,
+      "nc-p3": 709,
+      "plan_ja": 16,
       "notes_ja": 28
     },
     "scope": "LuaLaTeX built the manuscript, plan and research notes."

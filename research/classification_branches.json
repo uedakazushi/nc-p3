@@ -1501,6 +1501,12 @@
       "current_result": "The four-dimensional negative component has a generic elliptic quartic graph plus four points at every edge, generic minimum period two and projective group of order four, and no finite point-graph fibers. The fixed bisymmetric Klein presentation is irreducible across all sparse supports. Projective isomorphisms specialize on stable finite and smooth-quartic configurations, recognizing the positive and negative components there.",
       "current_proof": "sections/rectangle_component_point_geometry.tex",
       "global_coverage": false
+    },
+    {
+      "id": "NEGATIVE-PAIRING-UNMARKED-QUOTIENT",
+      "current_result": "On the negative exchange chart with (a-d)(zb-c) nonzero, every regular tensor has an explicit sixteen-element unmarked quotient, including the two-conic and quadrangular degenerations. The quotient is rational, the exact stabilizers are determined, and the period-one locus is a single quotient divisor.",
+      "current_proof": "sections/negative_pairing_unmarked_quotient.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1558,7 +1564,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 405,
+  "version": 406,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
