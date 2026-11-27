@@ -1,0 +1,59 @@
+% !TeX root = ../papers/nc-p3.tex
+\section{次数付きcoherentなPI正則窓の合成整性}
+\label{sec:coherent-pi-regular-domains}
+\begin{lemma}\label{lem:coherent-external-growth-grade}
+標準正則折り畳み $B$ が左次数付きcoherentであるとする。すなわち有限生成次数付き左射影間の射の核が有限生成である。
+右次数付き $B$ 加群 $N$ が、右作用と可換する正次数多項式環 $P$ 上で有限生成とする。$e=\dim P$ なら
+\[
+                \underline{\operatorname{Ext}}^j_B(N,B)=0\qquad(j<4-e).
+\]
+$N$ が右 $B$ 加群として有限生成であることは必要ない。
+\end{lemma}
+\begin{proof}
+$D=B\otimes_k P$ と書く。$N$ は $P$ 完全であり、右 $D$ 完全でもある。実際 $B$ の有限両側Koszul分解を
+$N$ の右にテンソルした各項は、$P$ 完全な $N$ の頂点成分を $D$ へ誘導した有限直和である。
+その $D$ 双対は $\operatorname{RHom}_P(N,P)$ と $\operatorname{RHom}_{B^e}(B,B^e)$ の $B$ 上の導来テンソルである
+（両側分解の各 $B\otimes W\otimes B$ の項で有限 $P$ 射影分解のテンソル・Hom同型を適用する）。
+後者は第4コホモロジーに内部移動した $B$ だけを持つため、$\operatorname{RHom}_D(N,D)$ は第4未満で消える。
+
+$F=\underline{\operatorname{Hom}}_k(P,B)$ を右 $D$ 加群とし、$P$ は引数への乗法、$B$ は値への乗法で作用させる。
+これは右 $B$ 加群として平坦である。各単項式基底で見ると次数付き圏での $B$ の移動の積である。
+有限生成斉次左イデアル $I$ は左coherent性により有限表示なので、そのテンソルはこの次数付き積と可換である。
+従って $F\otimes_B I\to F$ は各自由因子での単射の積であり、斉次イデアルによる平坦性の判定を満たす。
+よって右 $D$ 加群としての $F$ の平坦次元は高々 $e$ である。
+実際、多項式の左右座標差で対角を解消するKoszul分解に $F$ をテンソルすれば、
+各項は右 $B$ 平坦な $F$ を $D$ に誘導した加群の有限直和である。これは座標差による長さ $e$ の平坦分解である。
+
+余誘導の随伴および $N$ の $D$ 完全性により
+\[
+ \operatorname{RHom}_B(N,B)=\operatorname{RHom}_D(N,F)
+     = F\otimes_D^{\mathbf L}\operatorname{RHom}_D(N,D).
+\]
+最初は $D$ が $B$ 上自由で、$\underline{\operatorname{Hom}}_k(P,-)$ が各内部次数で完全なため導来でも成立する。
+二つのコホモロジー下界から主張を得る。
+\end{proof}
+
+\begin{theorem}\label{thm:coherent-pi-regular-domains}
+任意の成分の標準正則窓で一隅がPIとする。折り畳みが左次数付きcoherentなら
+各頂点右射影の非零な斉次部分加群はGK次元4を持つ。左右とも次数付きcoherentなら全ての非零合成が非零である。
+十五次元閉包の有限四辺では、正則かつ左右次数付きcoherentであることの必要十分条件も
+定理\ref{thm:index-four-octic-normalization}の84次検査である。
+\end{theorem}
+\begin{proof}
+命題\ref{prop:all-window-corner-center}で $B$ はPIとなる。非零な $M\subset e_iB$ において、
+定理\ref{thm:pi-vertex-extension-criterion}の片側イデアル抽出を適用する。
+ここで抽出自体には頂点との拡張条件を使わない。具体的に冪零根基と半素商の有限個の極小素の積で、
+ある斉次素商 $R$ 上の非零部分加群を選ぶ。有限次元商なら既に右socleの不在に反する。
+$R$ のtrace拡大 $T$ は有限型可換trace環 $C$ 上有限で、中心分母 $x$ が $xT\subset R$ を満たす。
+$x$ に核があればそこで $R/xR$ の素商を選び直す。前の証明通りGK次元が厳密に下がる。
+最後は $x$ が単射で、$x$ 局所化の中である斉次元 $m$ から $0\ne N=mxT\subset M$ を得る。
+$N$ は $C$ 上有限で、その台の次元 $e$ の斉次Noether正規化 $P$ を $C/\operatorname{ann}_C N$ 内で選ぶ。
+$N\hookrightarrow e_iB$ に前補題を使うと $e\ge4$、一方で頂点射影の成長により $e\le4$ である。
+よって $M$ の成長も4である。
+
+右coherent性もあれば非零斉次経路元の頂点射影間の左乗法は、核・像の双方が有限生成かつ有限表示である。
+逐次核も有限生成、大域次元は4なので有限生成による有限射影分解が取れる。
+核と像がともに非零なら、上の成長純性により分子の重複度整数は両方正、元の頂点射影ではその和が1である。
+従って核が零となり、最高次を取って合成整性が従う。指定閉包で整性は既出の有限判定を与え、
+逆に八次検査が成立すれば有限生成可換環上有限なので左右coherentである。
+\end{proof}

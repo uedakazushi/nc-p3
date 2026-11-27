@@ -2281,6 +2281,12 @@
       "current_result": "All center-finite standard regular finite-edge windows of vertex index up to four have four central parameters in path degree eight, including every exceptional fiber. On the fifteen-dimensional closure the criterion for a regular semiprime, domain or Noetherian window drops from path degree 564 to 84 (quotient 29 and complexes 32). In every component the same test plus a generic rank bound decides the center-finite regular branch through index four.",
       "current_proof": "sections/index_four_octic_normalization.tex",
       "global_coverage": false
+    },
+    {
+      "id": "COHERENT-REGULAR-PI-WINDOWS-ARE-COMPOSABLE-DOMAINS",
+      "current_result": "For a regular window with one PI corner, left graded coherence forces every nonzero graded right vertex ideal to have growth four. Two-sided graded coherence already implies a composable domain on every component. In the finite fifteen-dimensional closure even the regular-and-coherent locus is exactly the 84-degree test, without an a priori Noetherian hypothesis.",
+      "current_proof": "sections/coherent_pi_regular_domains.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2338,7 +2344,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 535,
+  "version": 536,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
