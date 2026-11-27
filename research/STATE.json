@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-27",
-  "version": 500,
+  "version": 501,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -4969,6 +4969,15 @@
         "computations/verify_cubic_corridor_jets.py"
       ],
       "other_proof": "sections/cubic_corridor_jets.tex"
+    },
+    {
+      "id": "FINITE-TRIPLE-EVALUATION-GAP-AND-POINT-IDEAL",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "In all finite Frobenius windows triple evaluation has rank 16 for projectively identified ends and otherwise 19 or 20. A defect at rank 19 has support length at least nine. Fully asymmetric point-evaluation ideals are generated through degree four. Full triple rank implies an all-degree linear presentation of the quartic point ideal and occurs generically in the fifteen-dimensional mixed component.",
+      "proof": "sections/finite_three_slot_evaluations.tex",
+      "verification": [
+        "computations/verify_finite_three_slot_evaluations.py"
+      ]
     }
   ],
   "document_paths": {
@@ -5032,7 +5041,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "92248ed2a220f5e948115ae3e92e5e33563f2a75",
+  "reviewed_source_commit": "88269630e5936131c52806b8d6a391acec3f4ebe",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -5041,14 +5050,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Address the stable length-twenty finite graph with finite stabilizer outside the certified charts. Investigate the regularity obstruction using the embedded degree-two and degree-three evaluation spaces of a marked point module.",
+    "immediate_next_action": "Use the finite point quotient and the point modules of the four-vertex cut to determine the perpendicular pairings, regularity in the stable finite locus and the behavior of rank-nineteen fibers.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/unrestricted_corridor_exclusion.tex",
-      "sections/conic_corridor_excess.tex"
+      "sections/finite_three_slot_evaluations.tex",
+      "sections/unrestricted_corridor_exclusion.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "Unrestricted center-pencil and corridor enumeration leaves four configurations; conic plane relations and the four-dimensional cubic overlap exclude all four. Every standard regular window has no decomposable quadratic relations. Every positive-dimensional projection candidate has a finite all-degree regularity and indexed-isomorphism decision. Full classification remains open.",
+    "state_of_claim": "In all finite Frobenius windows triple evaluation has rank 16 for projectively identified ends and otherwise 19 or 20. A defect at rank 19 has support length at least nine. Fully asymmetric point-evaluation ideals are generated through degree four. Full triple rank implies an all-degree linear presentation of the quartic point ideal and occurs generically in the fifteen-dimensional mixed component. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

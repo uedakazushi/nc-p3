@@ -2071,6 +2071,12 @@
       "current_result": "Unrestricted center-pencil and corridor enumeration leaves four configurations; conic plane relations and the four-dimensional cubic overlap exclude all four. Every standard regular window has no decomposable quadratic relations. Every positive-dimensional projection candidate has a finite all-degree regularity and indexed-isomorphism decision.",
       "current_proof": "sections/unrestricted_corridor_exclusion.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FINITE-TRIPLE-EVALUATION-GAP-AND-POINT-IDEAL",
+      "current_result": "In all finite Frobenius windows triple evaluation has rank 16 for projectively identified ends and otherwise 19 or 20. A defect at rank 19 has support length at least nine. Fully asymmetric point-evaluation ideals are generated through degree four. Full triple rank implies an all-degree linear presentation of the quartic point ideal and occurs generically in the fifteen-dimensional mixed component.",
+      "current_proof": "sections/finite_three_slot_evaluations.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2128,7 +2134,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 500,
+  "version": 501,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

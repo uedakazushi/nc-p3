@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 500,
+  "version": 501,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "92248ed2a220f5e948115ae3e92e5e33563f2a75"
+    "source_commit": "88269630e5936131c52806b8d6a391acec3f4ebe"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Unrestricted center-pencil and corridor enumeration leaves four configurations; conic plane relations and the four-dimensional cubic overlap exclude all four. Every standard regular window has no decomposable quadratic relations. Every positive-dimensional projection candidate has a finite all-degree regularity and indexed-isomorphism decision."
+    "scope": "In all finite Frobenius windows triple evaluation has rank 16 for projectively identified ends and otherwise 19 or 20. A defect at rank 19 has support length at least nine. Fully asymmetric point-evaluation ideals are generated through degree four. Full triple rank implies an all-degree linear presentation of the quartic point ideal and occurs generically in the fifteen-dimensional mixed component."
   },
   "checks": [
     {
-      "command": "python computations/verify_unrestricted_corridors.py",
+      "command": "python computations/verify_finite_three_slot_evaluations.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Address the stable length-twenty finite graph with finite stabilizer outside the certified charts. Investigate the regularity obstruction using the embedded degree-two and degree-three evaluation spaces of a marked point module."
+    "Use the finite point quotient and the point modules of the four-vertex cut to determine the perpendicular pairings, regularity in the stable finite locus and the behavior of rank-nineteen fibers."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 868,
+      "nc-p3": 870,
       "plan_ja": 20,
       "notes_ja": 33
     },
