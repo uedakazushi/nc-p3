@@ -2,7 +2,7 @@
 
 **共同研究：** 本リポジトリは大川新之介・植田一石の共同研究プロジェクトです。この表示は個々の論文の著者を確定するものではありません。
 
-**2026-11-27 / v524。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-27 / v525。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -617,6 +617,8 @@ Bell曲面の固有値衝突部は全Jordan型と例外値を含む三行で尽�
 四つの四次中心パラメータに通る有限窓はすべて素で、中心は正規Gorensteinである。中心の次数と頂点指数は(4,4)または(16,2)に限られ、後者の一般超平面は滑らかな種数九K3である。[証明](sections/central_cut_center_dichotomy.tex)
 
 四次中心列を持つ全有限窓の添字保持同型は、偏極中心と零番Azumaya隅の特殊線型持ち上げ障害で判定できる。非孤立特異点も含む。[証明](sections/central_cut_kummer_classification.tex)
+
+頂点指数二の有限窓はすべて通常の周期一Clifford代数である。二次式の四空間の基点無し条件と低階数交叉の有限性が全例外値を含む判定を与え、同型は四空間の射影同値に一致する。[証明](sections/index_two_central_clifford.tex)
 
 非恒等の平面グラフを基底に持つOre窓では、指定点を忘れた同型類も決定した。[正規形と平坦特殊化](sections/plane_graph_ore_windows.tex)・[検算](computations/verify_plane_graph_ore.py)
 

@@ -2215,6 +2215,12 @@
       "current_result": "For all finite four-central-parameter windows in both possible index classes, the polarized center and the special-linear lifting obstruction of its vertex-zero Azumaya algebra on the smooth locus classify indexed isomorphism, including nonisolated and exceptional singularities. A common twist recovers all vertex bundles on the smooth locus. The index-two case has period dividing two.",
       "current_proof": "sections/central_cut_kummer_classification.tex",
       "global_coverage": false
+    },
+    {
+      "id": "ALL-INDEX-TWO-WINDOWS-ARE-ORDINARY-CLIFFORD",
+      "current_result": "The entire finite vertex-index-two branch, including exceptional values, consists exactly of ordinary period-one graded Clifford windows of basepoint-free webs of quadrics meeting the symmetric rank-at-most-two locus in a finite scheme. Indexed isomorphism is precisely projective equivalence of the webs. The center is the quartic symmetroid double solid with doubled polarization; the web locus is irreducible of dimension nine modulo isomorphism.",
+      "current_proof": "sections/index_two_central_clifford.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2272,7 +2278,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 524,
+  "version": 525,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

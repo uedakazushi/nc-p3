@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 524,
+  "version": 525,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "32b16211a87bd7dfe0e570ccc116d21186204704"
+    "source_commit": "2d0400fc14077a42edaf7d5d578ddda521e18fee"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For all finite four-central-parameter windows in both possible index classes, the polarized center and the special-linear lifting obstruction of its vertex-zero Azumaya algebra on the smooth locus classify indexed isomorphism, including nonisolated and exceptional singularities. A common twist recovers all vertex bundles on the smooth locus. The index-two case has period dividing two."
+    "scope": "The entire finite vertex-index-two branch, including exceptional values, consists exactly of ordinary period-one graded Clifford windows of basepoint-free webs of quadrics meeting the symmetric rank-at-most-two locus in a finite scheme. Indexed isomorphism is precisely projective equivalence of the webs. The center is the quartic symmetroid double solid with doubled polarization; the web locus is irreducible of dimension nine modulo isomorphism."
   },
   "checks": [
     {
-      "command": "python computations/verify_central_cut_kummer_classification.py",
+      "command": "python computations/verify_index_two_central_clifford.py",
       "result": "PASS"
     },
     {
@@ -40,14 +40,14 @@
     }
   ],
   "open_mathematics": [
-    "Recover the full index-two branch explicitly from a basepoint-free web of quadrics via rank-two adjugation, and analyze realizability in index four."
+    "Analyze the remaining finite index-four central and noncentral windows; in particular determine which finite regular specializations of the main component retain central parameters."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 911,
+      "nc-p3": 912,
       "plan_ja": 21,
-      "notes_ja": 34
+      "notes_ja": 35
     },
     "scope": "LuaLaTeX built the manuscript, plan and research notes."
   },
