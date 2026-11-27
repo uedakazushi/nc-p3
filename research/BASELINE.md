@@ -184,3 +184,7 @@ Braverman–Gaitsgory, *Poincaré–Birkhoff–Witt theorem for quadratic algebr
 ## 有限中心窓の一般超平面の特異点
 
 J. T. Stafford and M. Van den Bergh, *Noncommutative resolutions and rational singularities* の、標数零のアフィン素なhomologically homogeneous代数の中心は有理特異点を持つという定理を使う。有限中心性、極大Cohen–Macaulay性、単純加群の射影次元が2となる理由は[適用箇所](../sections/central_cut_index_and_transverse_type.tex)に記した。Gorenstein有理曲面特異点のDu Val分類と、標数零の有限部分群による商表示を同箇所で使う。書誌照会はこの環境のプロキシで拒否され、今回原文の再取得はできていない。
+
+## 例外中心の周期と指数
+
+A. J. de Jong, *The period-index problem for the Brauer group of an algebraic surface*, Duke Mathematical Journal 123 (2004), 71–94. 代数閉体上の超越次数二の関数体で標数に素な周期と指数が一致する定理を使う。適用する体は標数零の次数四デルペッツォ曲面の関数体であり、三次元中心体にこの等式を仮定しない。今回原文を再取得していない。[適用箇所](../sections/exclude_del_pezzo_center_images.tex)

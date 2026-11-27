@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 543,
+  "version": 544,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "25aa786981bc59bc0d93c1cef98405c7360f9e47"
+    "source_commit": "cb29de9ca8c3c8c19cc1b32a185c3a77b994fe21"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For a center-finite standard regular window on any component, the affine center divisor class group is finite of exponent dividing sixteen times the vertex index; its index multiple is a subquotient of Z/2 x Z/2 x Z/16. The projective center is Q-factorial of rational divisor rank one. A nonmonic quadric center over a smooth quadric cannot have a smooth pole divisor, by Brauer residues."
+    "scope": "The degree-four del Pezzo surface image cannot occur on the regular-domain finite main component. Its conic-bundle center has Brauer index at most two for all binary leading forms. A basepoint on a birational smooth-quadric threefold image is also impossible for every pole divisor, including nonnormal and reducible quadrics. Only singular quadric threefolds and cubic scroll images remain as basepoint candidates."
   },
   "checks": [
     {
-      "command": "python computations/verify_finite_center_divisor_torsion.py",
+      "command": "python computations/verify_del_pezzo_center_exclusion.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Use the residue constraints and low-degree del Pezzo lattices to decide the exceptional center types, and continue the other regularity branches."
+    "Analyze the remaining singular quadric centers and scroll covers by their Brauer ramification, while testing residual regularity beyond the domain locus."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 943,
+      "nc-p3": 945,
       "plan_ja": 22,
       "notes_ja": 36
     },

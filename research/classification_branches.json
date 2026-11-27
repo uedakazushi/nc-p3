@@ -2329,6 +2329,12 @@
       "current_result": "For a center-finite standard regular window on any component, the affine center divisor class group is finite of exponent dividing sixteen times the vertex index; its index multiple is a subquotient of Z/2 x Z/2 x Z/16. The projective center is Q-factorial of rational divisor rank one. A nonmonic quadric center over a smooth quadric cannot have a smooth pole divisor, by Brauer residues.",
       "current_proof": "sections/finite_center_divisor_torsion.tex",
       "global_coverage": false
+    },
+    {
+      "id": "DEL-PEZZO-SURFACE-AND-SMOOTH-QUADRIC-BASEPOINT-EXCLUSION",
+      "current_result": "The degree-four del Pezzo surface image cannot occur on the regular-domain finite main component. Its conic-bundle center has Brauer index at most two for all binary leading forms. A basepoint on a birational smooth-quadric threefold image is also impossible for every pole divisor, including nonnormal and reducible quadrics. Only singular quadric threefolds and cubic scroll images remain as basepoint candidates.",
+      "current_proof": "sections/exclude_del_pezzo_center_images.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2386,7 +2392,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 543,
+  "version": 544,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
