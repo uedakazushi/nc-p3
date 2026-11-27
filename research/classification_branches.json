@@ -2317,6 +2317,12 @@
       "current_result": "The five central quartics of every regular finite-edge domain limit on the fifteen-dimensional component have exactly four possible image types: a quartic threefold, a quadric threefold, a normal degree-four intersection-of-two-quadrics surface, or a cubic scroll surface. The first three give weighted complete-intersection center presentations including quartic basepoints. In the scroll case the general octic canonical surface has two distinct simple canonical basepoints which are Weierstrass points of every general canonical curve.",
       "current_proof": "sections/quartic_center_image_atlas.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SCROLL-SPIN-CENTER-PRESENTATION-AND-TWENTY-FOUR-DEGREE-TEST",
+      "current_result": "The scroll-image center has generators (5,3,4) in weights (1,2,3) and minimal relations (3,6,10,6,10) in weights two to six, computed by two regular sections to a genus-nine hyperelliptic spin ring and a further constant Artin reduction. A free central module with the four arrow actions replaces the triple-overlap bound. On every regular domain in the main finite component mixed quartic/octic parameters now give an all-degree test using paths through 22, central quotient through 21 and Koszul complex through 24.",
+      "current_proof": "sections/scroll_spin_center_generators.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2374,7 +2380,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 541,
+  "version": 542,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
