@@ -1969,6 +1969,12 @@
       "current_result": "The entire invertible split atlas is now classified with all unmarked isomorphisms and minimal periods. Ordinary simple Bell surface windows all have period two. At one negative squared spectral pair a single extra curve appears, of period two except one period-one class, smooth throughout its own unrestricted 60-dimensional projective component.",
       "current_proof": "sections/split_simple_surface.tex",
       "global_coverage": false
+    },
+    {
+      "id": "MIXED-FLIP-SLICE-EXACT-CROSSING-AND-FULL-FIBERS",
+      "current_result": "The unrestricted GIT fibers of the mixed flip curve are single closed orbits away from a fourth root of unity. At a squared equal to one exactly the closed orbit and one Jordan orbit occur, and the completed transverse germ is k[[z,x,y]]/(zx,zy), the reduced crossing of the two classified components. At a squared equal to minus one all seven exceptional tangent weights are determined.",
+      "current_proof": "sections/mixed_flip_slice.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2026,7 +2032,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 483,
+  "version": 484,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

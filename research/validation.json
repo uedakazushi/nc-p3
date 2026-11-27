@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 483,
+  "version": 484,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "96f178d3ccdacca54648ca2d2a00e2882a591140"
+    "source_commit": "4810a3997d4854b9623ab01cdd48eb0e54afbc44"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The entire invertible split atlas is now classified with all unmarked isomorphisms and minimal periods. Ordinary simple Bell surface windows all have period two. At one negative squared spectral pair a single extra curve appears, of period two except one period-one class, smooth throughout its own unrestricted 60-dimensional projective component."
+    "scope": "The unrestricted GIT fibers of the mixed flip curve are single closed orbits away from a fourth root of unity. At a squared equal to one exactly the closed orbit and one Jordan orbit occur, and the completed transverse germ is k[[z,x,y]]/(zx,zy), the reduced crossing of the two classified components. At a squared equal to minus one all seven exceptional tangent weights are determined."
   },
   "checks": [
     {
-      "command": "python computations/verify_split_simple_surface.py",
+      "command": "python computations/verify_mixed_flip_slice.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine all regular boundary and attraction points of the extra simple-surface curve, and use the completed split atlas to classify nonsplit windows and remaining stable finite and branched cases."
+    "Resolve the seven-weight exceptional fiber at a squared equal to minus one and the polar boundary of the extra simple curve; continue full stable and branched coverage."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 840,
+      "nc-p3": 841,
       "plan_ja": 19,
       "notes_ja": 32
     },
