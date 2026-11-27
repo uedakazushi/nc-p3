@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 482,
+  "version": 483,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "9f61df5694fb29e6125f7286e82522c5f7e10868"
+    "source_commit": "96f178d3ccdacca54648ca2d2a00e2882a591140"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All repeated squared-eigenvalue split Bell surface windows outside the line are classified, including every Jordan completion, exact unmarked isomorphisms, all periods, closures to the semisimple class and incidence with the fifteen-dimensional component. Four univariate Smith computations exclude all additional root-of-unity intersections."
+    "scope": "The entire invertible split atlas is now classified with all unmarked isomorphisms and minimal periods. Ordinary simple Bell surface windows all have period two. At one negative squared spectral pair a single extra curve appears, of period two except one period-one class, smooth throughout its own unrestricted 60-dimensional projective component."
   },
   "checks": [
     {
-      "command": "python computations/verify_split_repeated_surface.py",
+      "command": "python computations/verify_split_simple_surface.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Complete the simple-spectrum surface including the extra stabilizer when a pair of squared eigenvalues are negatives. Then resolve remaining nonsplit and finite stable or branched windows."
+    "Determine all regular boundary and attraction points of the extra simple-surface curve, and use the completed split atlas to classify nonsplit windows and remaining stable finite and branched cases."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 838,
+      "nc-p3": 840,
       "plan_ja": 19,
       "notes_ja": 32
     },

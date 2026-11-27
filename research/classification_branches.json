@@ -1963,6 +1963,12 @@
       "current_result": "All repeated squared-eigenvalue split Bell surface windows outside the line are classified, including every Jordan completion, exact unmarked isomorphisms, all periods, closures to the semisimple class and incidence with the fifteen-dimensional component. Four univariate Smith computations exclude all additional root-of-unity intersections.",
       "current_proof": "sections/split_repeated_surface.tex",
       "global_coverage": false
+    },
+    {
+      "id": "COMPLETE-INVERTIBLE-SPLIT-ATLAS-AND-EXTRA-SURFACE-COMPONENT",
+      "current_result": "The entire invertible split atlas is now classified with all unmarked isomorphisms and minimal periods. Ordinary simple Bell surface windows all have period two. At one negative squared spectral pair a single extra curve appears, of period two except one period-one class, smooth throughout its own unrestricted 60-dimensional projective component.",
+      "current_proof": "sections/split_simple_surface.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2020,7 +2026,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 482,
+  "version": 483,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
