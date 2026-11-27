@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 454,
+  "version": 455,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "281c102d4dd44aa35a0159b1a89bdadf29f585ef"
+    "source_commit": "5503ac087e994f831147253328330c08737fbe5c"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The common thirteen-dimensional component at the binary boundary is the closure of the smooth elliptic pencils whose ordered degree-four line bundles differ by a nontrivial two-torsion class. The four cross-diagonal section space has exactly the two mixed signs on these elliptic curves and vanishes off two-torsion. Every finite binary obstruction is in this closure, by a basepoint-free pencil on a two-gon with multidegrees (4,0),(3,1) and a Legendre two-torsion smoothing."
+    "scope": "One binary multiplication edge alone in any finite-point Frobenius window forces opposite symmetry of the cubic letters and exponential growth, even without a mark or symmetry on any other edge. The adjacent vector-valued inverse system has forced splitting (1,1,1,1,1,7), and compressing the binary site splits dual paths into independent three-letter blocks of dimension at least three. Length 29 already violates the standard Hilbert function. The growth argument also applies off the finite graph under the stated two edge assumptions."
   },
   "checks": [
     {
-      "command": "python computations/verify_elliptic_two_torsion_crossing.py",
+      "command": "python computations/verify_single_binary_edge_obstruction.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze the irreducible rank-fifteen branch and its one-sided specializations, using the single binary-edge relation and the symplectic linear complex on its cubic curve."
+    "Parameterize and classify the new stable non-bisymmetric nonregular single-edge locus via linear complexes of the twisted cubic, and test its incidence with the residual rank-fifteen divisor."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 796,
+      "nc-p3": 797,
       "plan_ja": 18,
       "notes_ja": 31
     },

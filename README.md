@@ -2,7 +2,7 @@
 
 **共同研究：** 本リポジトリは大川新之介・植田一石の共同研究プロジェクトです。この表示は個々の論文の著者を確定するものではありません。
 
-**2026-11-27 / v454。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-27 / v455。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -477,6 +477,8 @@ Walsh三次元族を含む十五次元成分と、そこから出る周期2の�
 15次元成分で反対行列式は片側対称な二因子の各六乗と滑らかな残余因子の積になる。一般階数は16、10、残余では15である。[局所因子と階数の証明](sections/binary_opposite_determinant.tex)
 
 二成分の13次元の交叉を、二つの束の差が非自明な二捩れとなる楕円鉛筆の閉包と同定した。[四対角の切断と二角形からの平滑化](sections/elliptic_two_torsion_crossing.tex)
+
+有限Frobenius窓では一辺の二元商だけで指数成長と反対位置の片側対称性が従う。長さ29で標準Hilbert関数を超える。[核束の分裂と三文字ブロックの証明](sections/single_binary_edge_obstruction.tex)
 
 非恒等の平面グラフを基底に持つOre窓では、指定点を忘れた同型類も決定した。[正規形と平坦特殊化](sections/plane_graph_ore_windows.tex)・[検算](computations/verify_plane_graph_ore.py)
 
