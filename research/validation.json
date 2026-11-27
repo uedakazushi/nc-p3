@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 419,
+  "version": 420,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "b8dd0f2c4ac70e3383a4bdb152dfbc5e199261e9"
+    "source_commit": "5a15fdd9fffc7f3fb20ac7f4d12d0f8bda6de396"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The seven-dimensional involution component has a rational moduli chart with its four point tracks ordered, including the residual projective sign quotient. Its generic unmarked stabilizer has order two and its minimal period is four."
+    "scope": "On the general fifteen-dimensional component every one of the twenty marks gives an ordered pair of smooth cubic surfaces in the same product of two planes. The pair reconstructs the marked window up to pointed indexed isomorphism. The two plane quintic Cremona graphs meet in length 27, with the nineteen other tracks contributing simple points and a residual length-eight scheme. No two consecutive point-marked plane flags exist on this open."
   },
   "checks": [
     {
-      "command": "python computations/verify_quartet_rational_chart.py",
+      "command": "python computations/verify_marked_cubic_surface_pairs.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze the general fifteen-dimensional finite-point component through its twenty determinantal cubic surfaces and the adjacent point contractions; continue unmarked horizontal frames and the uncovered windows."
+    "Determine the residual eight-point geometry and the AS test for the cubic-surface description, including its degenerations; continue the finite and positive-dimensional unmarked window branches."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 736,
+      "nc-p3": 738,
       "plan_ja": 16,
       "notes_ja": 29
     },

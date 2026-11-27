@@ -36,7 +36,7 @@ def apply_frame(w, frame, axis):
     return np.moveaxis(np.tensordot(frame, w, axes=(1, axis)), 0, axis) % MOD
 
 
-def lift_mark(w, initial):
+def lift_points(w, initial):
     points = np.array(initial, dtype=object)
     fixed = [next(j for j in range(4) if points[i, j]) for i in range(4)]
     free = [(i, j) for i, j in np.ndindex(4, 4) if j != fixed[i]]
@@ -57,15 +57,27 @@ def lift_mark(w, initial):
         for h, (i, j) in zip(delta, free):
             points[i, j] += int(h)*P**n
     assert not np.any(adjacent_evaluations(w, points) % MOD)
+    return points
+
+
+def marked_tensor(w, points, normalize_gram=True):
     t = w
     for i in range(4):
-        frame = np.vstack([points[i], np.delete(np.eye(4, dtype=object), fixed[i], axis=0)])
+        fixed = next(j for j in range(4) if points[i, j] % P)
+        frame = np.vstack([points[i], np.delete(np.eye(4, dtype=object), fixed, axis=0)])
         t = apply_frame(t, frame, i)
+    if not normalize_gram:
+        return t
     for i, gram in [(2, t[1:, 0, 1:, 0]), (3, t[0, 1:, 0, 1:])]:
         m = sp.Matrix(gram)
         frame = np.eye(4, dtype=object)
         frame[1:, 1:] = np.array(m.adjugate().T, dtype=object)*pow(int(m.det()), -1, MOD) % MOD
         t = apply_frame(t, frame, i)
+    return t
+
+
+def lift_mark(w, initial):
+    t = marked_tensor(w, lift_points(w, initial))
     q = t[1:, 1:, 1:, 0].transpose(1, 0, 2)
     p = t[1:, 0, 1:, 1:].transpose(2, 0, 1)
     c = brackets(q, p) % MOD

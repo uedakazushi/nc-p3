@@ -1585,6 +1585,12 @@
       "current_result": "The seven-dimensional involution component has a rational moduli chart with its four point tracks ordered, including the residual projective sign quotient. Its generic unmarked stabilizer has order two and its minimal period is four.",
       "current_proof": "sections/rational_ordered_quartet.tex",
       "global_coverage": false
+    },
+    {
+      "id": "MARKED-CUBIC-SURFACE-PAIRS",
+      "current_result": "On the general fifteen-dimensional component every one of the twenty marks gives an ordered pair of smooth cubic surfaces in the same product of two planes. The pair reconstructs the marked window up to pointed indexed isomorphism. The two plane quintic Cremona graphs meet in length 27, with the nineteen other tracks contributing simple points and a residual length-eight scheme. No two consecutive point-marked plane flags exist on this open.",
+      "current_proof": "sections/marked_cubic_surface_pairs.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1642,7 +1648,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 419,
+  "version": 420,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
