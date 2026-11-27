@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 435,
+  "version": 436,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "e70c3eaba292cd52c392a5e13b46a83ade737e70"
+    "source_commit": "0c05f5b8053c70ce56e37015e4ee92cc6bb52253"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every simple-weight torus window with a finite point graph is classified by a rational surface with no identifications and a rational curve modulo reflection, meeting at a single period-one point. Rotation on the surface is (u,v) to (v,1-u); the remaining surface points have period four, all curve points have period one. Two explicit discriminants cut out finite graphs. All candidates including the discriminant fibers are PBW regular and polystable. The double-middle finite torus candidates are also automatically quadratic PBW."
+    "scope": "The entire finite-point-graph locus with a nontrivial torus is classified. In the double-middle profile only one reciprocal pencil family survives, with parameter alpha modulo inversion, alpha different from zero and plus or minus one. Its windows are period one and polystable with two length-nine and two reduced sites. The tangent-pencil completions and equal-ratio completions have moving point curves. For both finite torus profiles the connected projective stabilizer is exactly the multiplicative group."
   },
   "checks": [
     {
-      "command": "python computations/verify_simple_weight_torus.py",
+      "command": "python computations/verify_double_middle_torus.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Classify the remaining double-middle finite torus parameters via the two middle-pencil normal forms, and extend the analysis to unmarked unrestricted components."
+    "Analyze unipotent-only stabilizers and torus-free finite edges, and advance global all-degree and component coverage beyond the symmetry loci."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 765,
+      "nc-p3": 767,
       "plan_ja": 17,
       "notes_ja": 30
     },

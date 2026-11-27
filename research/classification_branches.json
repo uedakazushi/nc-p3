@@ -1681,6 +1681,12 @@
       "current_result": "Every simple-weight torus window with a finite point graph is classified by a rational surface with no identifications and a rational curve modulo reflection, meeting at a single period-one point. Rotation on the surface is (u,v) to (v,1-u); the remaining surface points have period four, all curve points have period one. Two explicit discriminants cut out finite graphs. All candidates including the discriminant fibers are PBW regular and polystable. The double-middle finite torus candidates are also automatically quadratic PBW.",
       "current_proof": "sections/simple_weight_finite_windows.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FINITE-TORUS-ALL-WINDOWS",
+      "current_result": "The entire finite-point-graph locus with a nontrivial torus is classified. In the double-middle profile only one reciprocal pencil family survives, with parameter alpha modulo inversion, alpha different from zero and plus or minus one. Its windows are period one and polystable with two length-nine and two reduced sites. The tangent-pencil completions and equal-ratio completions have moving point curves. For both finite torus profiles the connected projective stabilizer is exactly the multiplicative group.",
+      "current_proof": "sections/double_middle_finite_windows.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1738,7 +1744,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 435,
+  "version": 436,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
