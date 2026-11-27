@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 480,
+  "version": 481,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "e600068bd4fef869c7fe48abf25ebd3e4ef37501"
+    "source_commit": "fa0fc23859d0d85750ae50f950ae61f7c6d0d6bd"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All nonsemisimple invertible split Bell line windows with two distinct squared eigenvalues are classified up to unmarked indexed isomorphism. The quantum limit and one or two distinguished edges suffice, except for one additional object over the mixed flip at a squared equal to one. All have period one; exactly two classes lie on the fifteen-dimensional component."
+    "scope": "Every scalar-spectrum nonsemisimple split window is classified for all four Jordan partitions, including both orientations, unmarked identifications, and period one. All have quantum closed orbit and lie outside the fifteen-dimensional component. Together with the two-eigenvalue and semisimple tables this exhausts the full invertible split Bell line."
   },
   "checks": [
     {
-      "command": "python computations/verify_split_two_eigenvalue_jordan.py",
+      "command": "python computations/verify_split_single_eigenvalue_jordan.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine the remaining single-eigenvalue Jordan partitions and the full exceptional mixed-flip fibers; continue residual stable finite and branched coverage."
+    "Resolve the non-line repeated spectra over the Bell surface, then remaining exceptional surface stabilizers and their regular fibers. Continue global finite stable and branched window coverage."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 834,
+      "nc-p3": 836,
       "plan_ja": 19,
       "notes_ja": 32
     },
