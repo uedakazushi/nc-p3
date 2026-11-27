@@ -2155,6 +2155,12 @@
       "current_result": "All simple representations with dimension two at each vertex of every finite-edge window are classified projectively by four rank-three or rank-four determinant quadrics with ruling choices. Each connecting map is uniquely recovered. A successor is either unique or runs through the net of quadrics containing a smooth twisted cubic.",
       "current_proof": "sections/finite_two_dimensional_quadrics.tex",
       "global_coverage": false
+    },
+    {
+      "id": "PROPER-SPECIALIZATION-TWO-DIMENSIONAL-SIMPLE-COVER",
+      "current_result": "Every finite Frobenius point of the fifteen-dimensional component closure with twenty reduced pairwise Ext-orthogonal point modules admits a vertex-dimension-two simple, without assuming regularity at the point. Failure to admit one forces a nonreduced mark or a separator singularity edge. Stable four-layer cuts extend precisely when their top self-Ext is nonzero.",
+      "current_proof": "sections/finite_two_dimensional_specialization.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2212,7 +2218,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 514,
+  "version": 515,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

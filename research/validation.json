@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 514,
+  "version": 515,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "41db94478da2ea1fcec0aa8c1bfec139111b3498"
+    "source_commit": "678e84f690c07470cbac1dafe3b17da1ac8b03ef"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All simple representations with dimension two at each vertex of every finite-edge window are classified projectively by four rank-three or rank-four determinant quadrics with ruling choices. Each connecting map is uniquely recovered. A successor is either unique or runs through the net of quadrics containing a smooth twisted cubic."
+    "scope": "Every finite Frobenius point of the fifteen-dimensional component closure with twenty reduced pairwise Ext-orthogonal point modules admits a vertex-dimension-two simple, without assuming regularity at the point. Failure to admit one forces a nonreduced mark or a separator singularity edge. Stable four-layer cuts extend precisely when their top self-Ext is nonzero."
   },
   "checks": [
     {
-      "command": "python computations/verify_two_dimensional_quadrics.py",
+      "command": "python computations/verify_two_dimensional_specialization.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine the types and number of remaining generic singular characters. Test ordinary quadratic singularities on a transverse arithmetic deformation, and exploit the multibinary presentation from the two-dimensional simple representations."
+    "Use two-dimensional simple markings to reduce the covered asymmetric strata to cyclic binary tensor normal forms, and test regularity in those forms."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 893,
+      "nc-p3": 895,
       "plan_ja": 21,
       "notes_ja": 34
     },
