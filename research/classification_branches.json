@@ -1831,6 +1831,12 @@
       "current_result": "A single edge projecting isomorphically to the binary Hankel six-plane excludes standard AS regularity for every graph dimension, including every neighboring pure relation and all torsion evaluations. The only large torsion compatible with full support is cyclic of length six and gives consecutive pure relations on the original adjacent edges.",
       "current_proof": "sections/binary_edge_basepoints.tex",
       "global_coverage": false
+    },
+    {
+      "id": "DEFICIENT-BINARY-TWO-TORSION-LENGTHS",
+      "current_result": "For a deficient Hankel projection any standard AS candidate must have projected rank four or five and neighboring torsion length exactly two or three. Large torsion always produces consecutive original pure relations via a unique longest elementary divisor. Quintic annihilators split through a low-degree line quotient of the linear syzygy bundle. In any graph a projected pure curve cannot span both the ternary and quaternary factors.",
+      "current_proof": "sections/deficient_binary_support.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1888,7 +1894,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 460,
+  "version": 461,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

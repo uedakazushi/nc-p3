@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 460,
+  "version": 461,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "d215ceceba3eab281f7851e54c43357cb8cc236a"
+    "source_commit": "6a9305669dea80ef9e08a41958c23d50bac79880"
   },
   "generation": {
     "result": "PASS",
-    "scope": "A single edge projecting isomorphically to the binary Hankel six-plane excludes standard AS regularity for every graph dimension, including every neighboring pure relation and all torsion evaluations. The only large torsion compatible with full support is cyclic of length six and gives consecutive pure relations on the original adjacent edges."
+    "scope": "For a deficient Hankel projection any standard AS candidate must have projected rank four or five and neighboring torsion length exactly two or three. Large torsion always produces consecutive original pure relations via a unique longest elementary divisor. Quintic annihilators split through a low-degree line quotient of the linear syzygy bundle. In any graph a projected pure curve cannot span both the ternary and quaternary factors."
   },
   "checks": [
     {
-      "command": "python computations/verify_binary_edge_basepoints.py",
+      "command": "python computations/verify_deficient_binary_support.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Extend the single-edge exclusion to deficient projections and other rational support curves, and determine the exceptional parameters on the surviving regular components."
+    "Resolve the length-two and length-three deficient Hankel cases, and determine the remaining positive-dimensional edge geometries and finite-window exceptions."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 805,
+      "nc-p3": 806,
       "plan_ja": 18,
       "notes_ja": 31
     },
