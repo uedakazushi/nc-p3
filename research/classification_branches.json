@@ -2227,6 +2227,12 @@
       "current_result": "On every finite Frobenius window in the fifteen-dimensional closure, AS regularity together with one domain corner is equivalent to a finite test with central parameters of path length 48 (path cutoff 564). At all such specializations the full center lifts in every degree with the generic Hilbert function and all composable nonzero products survive. No regularity conclusion is imposed on windows with zero divisors.",
       "current_proof": "sections/finite_domain_specialization_parameters.tex",
       "global_coverage": false
+    },
+    {
+      "id": "ALL-SEMIPRIME-REGULAR-SPECIALIZATIONS-ARE-DOMAINS",
+      "current_result": "In the finite fifteen-dimensional closure, every AS-regular specialization with even one semiprime corner is a composable domain, finite over its center, and passes the uniform 564-degree test. Thus every remaining hypothetical regular point must have a nonzero nilpotent two-sided ideal in each corner.",
+      "current_proof": "sections/finite_semiprime_specialization.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2284,7 +2290,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 526,
+  "version": 527,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
