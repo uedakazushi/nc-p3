@@ -1,17 +1,21 @@
 {
   "schema_version": 2,
-  "version": 385,
+  "version": 386,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "d19de84c0ba86ee8bfa15cf6b82d40e3bdf72d79"
+    "source_commit": "b18a7677d6a49c85353a69a057759590c9fb081b"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For both sparse parallel rectangle shapes with invertible mixed corners, the entire adjacent-rank locus is a rational main component and two exceptional vertical components with explicit equations and intersections. The unmarked main images have dimensions three and four, generic regularity, opposite rank sixteen and period four. All closed points of all four vertical components have explicit necessary and sufficient regularity conditions."
+    "scope": "All coefficient completions of the remaining third sparse thin shape have an explicit three-parameter normal form. A degree-four central quotient and a length-fourteen free-module certificate over F_1009 give two actual regular characteristic-zero fibers without assuming any generic Hilbert bound. All three sparse horizontal families have a Zariski open of regular closed points free over four central quartics; every regular specialization satisfies s_512."
   },
   "checks": [
     {
-      "command": "python computations/verify_parallel_invertible_rectangles.py",
+      "command": "python computations/verify_parallel_third_rectangle.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_parallel_residue_border.py",
       "result": "PASS"
     },
     {
@@ -48,12 +52,12 @@
     }
   ],
   "open_mathematics": [
-    "Finish all-degree regularity of the horizontal components, the third sparse thin shape, unmarked identifications and unrestricted global coverage."
+    "Determine the individual exceptional horizontal fibers and their full unmarked equivalences, including the one-parameter double-zero stratum, and continue unrestricted coverage."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 676,
+      "nc-p3": 678,
       "plan_ja": 15,
       "notes_ja": 27
     },

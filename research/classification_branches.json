@@ -1381,6 +1381,12 @@
       "current_result": "For both sparse parallel rectangle shapes with invertible mixed corners, the entire adjacent-rank locus is a rational main component and two exceptional vertical components with explicit equations and intersections. The unmarked main images have dimensions three and four, generic regularity, opposite rank sixteen and period four. All closed points of all four vertical components have explicit necessary and sufficient regularity conditions.",
       "current_proof": "sections/parallel_invertible_rectangles.tex",
       "global_coverage": false
+    },
+    {
+      "id": "PARALLEL-THIRD-RECTANGLE",
+      "current_result": "All coefficient completions of the remaining third sparse thin shape have an explicit three-parameter normal form. A degree-four central quotient and a length-fourteen free-module certificate over F_1009 give two actual regular characteristic-zero fibers without assuming any generic Hilbert bound. All three sparse horizontal families have a Zariski open of regular closed points free over four central quartics; every regular specialization satisfies s_512.",
+      "current_proof": "sections/parallel_third_rectangle.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1438,7 +1444,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 385,
+  "version": 386,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

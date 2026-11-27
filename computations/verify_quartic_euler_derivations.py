@@ -8,11 +8,8 @@ from verify_klein_elliptic_completion import four_relations, rational_example
 from verify_klein_period_four_center import K, paths
 
 
-def check():
+def check_relations(relations, basis, image):
     prime = 1009
-    w, _, rev = rational_example()
-    relations = four_relations(w, rev)
-    basis, image = paths(relations, 6)
     assert all(
         sum(len(basis[p, n, h]) for h in K) == size
         for p in K
@@ -52,6 +49,12 @@ def check():
             f"Character {h}: {len(variables)} arrow coefficients, rank {rank}, "
             f"{quartics - central} inner and {central} Euler directions."
         )
+
+
+def check():
+    w, _, rev = rational_example()
+    relations = four_relations(w, rev)
+    check_relations(relations, *paths(relations, 6))
 
 
 if __name__ == "__main__":
