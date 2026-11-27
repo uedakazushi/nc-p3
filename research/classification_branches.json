@@ -1483,6 +1483,12 @@
       "current_result": "The rank-fourteen rational curve of support 85 consists entirely of standard two-sided regular points of period four, including all eight residual number fields. The five quartic centers form a character-resolved vector bundle at every fourth-degree-standard point of all five large horizontal 112 strata.",
       "current_proof": "sections/rectangle_quartic_bundles.tex",
       "global_coverage": false
+    },
+    {
+      "id": "RECTANGLE-UNRESTRICTED-COMPONENTS",
+      "current_result": "The three horizontal rectangle closures lie on the same unrestricted component of dimension 15 up to isomorphism. Both positive vertical families lie on a distinct bisymmetric component of dimension 14, and both negative vertical families on a dimension-four component exhausted by the basis saturation of the negative pairing. Artin point-algebra conormal identities work for nonreduced length-twenty complete intersections.",
+      "current_proof": "sections/rectangle_unrestricted_components.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1540,7 +1546,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 402,
+  "version": 403,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

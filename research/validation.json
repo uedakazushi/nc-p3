@@ -1,15 +1,19 @@
 {
   "schema_version": 2,
-  "version": 402,
+  "version": 403,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "eb220b2aca01bff149c4ad97439ea2a0b82d0fa8"
+    "source_commit": "720e429187210f8faac91123162a3e3405822faf"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The rank-fourteen rational curve of support 85 consists entirely of standard two-sided regular points of period four, including all eight residual number fields. The five quartic centers form a character-resolved vector bundle at every fourth-degree-standard point of all five large horizontal 112 strata."
+    "scope": "The three horizontal rectangle closures lie on the same unrestricted component of dimension 15 up to isomorphism. Both positive vertical families lie on a distinct bisymmetric component of dimension 14, and both negative vertical families on a dimension-four component exhausted by the basis saturation of the negative pairing. Artin point-algebra conormal identities work for nonreduced length-twenty complete intersections."
   },
   "checks": [
+    {
+      "command": "python computations/verify_rectangle_component_smoothing.py",
+      "result": "PASS"
+    },
     {
       "command": "python computations/verify_first_rectangle_rank_fourteen_curve.py",
       "result": "PASS"
@@ -88,12 +92,12 @@
     }
   ],
   "open_mathematics": [
-    "Resolve all fibers of the 112 rank-fourteen period-two curve, extend the all-point 85 result to the rank-fifteen and rank-sixteen loci, and continue on unrestricted windows."
+    "Certify all regularity and unmarked exceptional points on the 112 rank-fourteen period-two curve, and continue classifying the remaining horizontal and unrestricted loci."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 700,
+      "nc-p3": 702,
       "plan_ja": 15,
       "notes_ja": 28
     },
