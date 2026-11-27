@@ -1,21 +1,17 @@
 {
   "schema_version": 2,
-  "version": 488,
+  "version": 489,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "42ade19c14f6263795d0b295dd0ec93de66a7f33"
+    "source_commit": "43eae854f4863a507893324682a684a8d0977403"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All reflected-collision quotient fibers are classified. Outside c squared equal to one there are five or three orbits, with periods at most two. At c squared equal to one the entire fiber is the sixteen half-plane coordinate charts of eight dimensions on sixteen weight lines, up to an explicit torus and finite monomial group. All exceptional charts lie in the fifteen-parameter component, with exact isomorphism, orbit closure, period two or four and six-dimensional maximal families."
+    "scope": "The unreflected semisimple Bell line has a six-dimensional weighted projective fiber modulo eight or sixteen explicit comparisons. Every lift has period at most two; the nonzero period-one locus has eight components generically and five at the order-four collision. This completes the coverage, indexed-isomorphism and period tests for all windows whose closed orbit has an invertible two-plane split. All are regular and none have branching point fibers."
   },
   "checks": [
     {
-      "command": "python computations/verify_reflected_collision_fibers.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_split_repeated_surface.py",
+      "command": "python computations/verify_noflip_line_fibers.py",
       "result": "PASS"
     },
     {
@@ -40,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Resolve the no-flip semisimple Bell line fibers including its order-four point. Establish good reduction criteria and continue the general stable and branched coverage."
+    "Work on the specialization-open complementary stable and branched windows and on criteria for good integral models of moving regular classes. Do not equate the split-attracted subatlas with the full classification."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 849,
+      "nc-p3": 851,
       "plan_ja": 20,
       "notes_ja": 33
     },
