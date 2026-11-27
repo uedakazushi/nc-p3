@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 443,
+  "version": 444,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "4ff0504000b6f15585e1adecf91601596aed1b5e"
+    "source_commit": "b42c85eb60c0d134b3c33f9de723c8d52b161478"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Exactly two quantum polynomial orbits occur as closed limits of any finite-graph window: all four oriented face values are equal to minus one or a primitive fourth root up to inversion. The usual polynomial fiber contains no finite graph, by an exact second-order obstruction. Every maximal-tangent finite class has its closed limit explicitly: a smooth elliptic B[Z] or one of the two quantum points."
+    "scope": "All finite graphs in quantum closed fibers without a maximal tangent have three disjoint six-dimensional normal forms: one full affine space for the minus-one background and two affine spaces minus a coordinate line for the primitive-fourth background. The six parameters are complete unmarked invariants with explicit periods, trivial stabilizers and exceptional lengths 12,13,14,15,17,18,19. Together with the maximal tangent atlas this classifies every finite graph specializing to a quantum point."
   },
   "checks": [
     {
-      "command": "python computations/verify_finite_quantum_closed_limits.py",
+      "command": "python computations/verify_finite_quantum_planar_fibers.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Classify the finite planar members in the two exceptional quantum fibers via the common weighted chart and reduced affine cubics; investigate further nonquantum closed fibers."
+    "Use complementary restrictions in the finite Artin algebra to prove global conormal bounds and determine the exact four-slot evaluation deficiency on every finite Frobenius graph, without stabilizer or GIT assumptions."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 777,
+      "nc-p3": 779,
       "plan_ja": 17,
       "notes_ja": 30
     },

@@ -1729,6 +1729,12 @@
       "current_result": "Exactly two quantum polynomial orbits occur as closed limits of any finite-graph window: all four oriented face values are equal to minus one or a primitive fourth root up to inversion. The usual polynomial fiber contains no finite graph, by an exact second-order obstruction. Every maximal-tangent finite class has its closed limit explicitly: a smooth elliptic B[Z] or one of the two quantum points.",
       "current_proof": "sections/finite_quantum_closed_limits.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FINITE-QUANTUM-PLANAR-FIBERS-COMPLETE",
+      "current_result": "All finite graphs in quantum closed fibers without a maximal tangent have three disjoint six-dimensional normal forms: one full affine space for the minus-one background and two affine spaces minus a coordinate line for the primitive-fourth background. The six parameters are complete unmarked invariants with explicit periods, trivial stabilizers and exceptional lengths 12,13,14,15,17,18,19. Together with the maximal tangent atlas this classifies every finite graph specializing to a quantum point.",
+      "current_proof": "sections/finite_quantum_planar_fibers.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1786,7 +1792,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 443,
+  "version": 444,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
