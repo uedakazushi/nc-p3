@@ -2065,6 +2065,12 @@
       "current_result": "A conic second curve gives full six-dimensional restriction to the first line. Excess at the start forces a pure relation ending in the conic plane equation. A second consecutive conic gives another pure relation ending in its plane equation. This excludes double-ended excess for 121 and either endpoint excess for 1221.",
       "current_proof": "sections/conic_corridor_excess.tex",
       "global_coverage": false
+    },
+    {
+      "id": "ALL-POSITIVE-DIMENSIONAL-WINDOW-DECISION",
+      "current_result": "Unrestricted center-pencil and corridor enumeration leaves four configurations; conic plane relations and the four-dimensional cubic overlap exclude all four. Every standard regular window has no decomposable quadratic relations. Every positive-dimensional projection candidate has a finite all-degree regularity and indexed-isomorphism decision.",
+      "current_proof": "sections/unrestricted_corridor_exclusion.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2122,7 +2128,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 499,
+  "version": 500,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

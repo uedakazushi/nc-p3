@@ -1,17 +1,21 @@
 {
   "schema_version": 2,
-  "version": 499,
+  "version": 500,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "7a943adec348f6256fec509a1600daa72bf34479"
+    "source_commit": "92248ed2a220f5e948115ae3e92e5e33563f2a75"
   },
   "generation": {
     "result": "PASS",
-    "scope": "A conic second curve gives full six-dimensional restriction to the first line. Excess at the start forces a pure relation ending in the conic plane equation. A second consecutive conic gives another pure relation ending in its plane equation. This excludes double-ended excess for 121 and either endpoint excess for 1221."
+    "scope": "Unrestricted center-pencil and corridor enumeration leaves four configurations; conic plane relations and the four-dimensional cubic overlap exclude all four. Every standard regular window has no decomposable quadratic relations. Every positive-dimensional projection candidate has a finite all-degree regularity and indexed-isomorphism decision."
   },
   "checks": [
     {
-      "command": "python computations/verify_conic_corridor_excess.py",
+      "command": "python computations/verify_unrestricted_corridors.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_cubic_corridor_jets.py",
       "result": "PASS"
     },
     {
@@ -36,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Combine the arbitrary finite-pencil degree enumeration with conic excess and the order-five cubic contact constraints; resolve all remaining branch frames."
+    "Address the stable length-twenty finite graph with finite stabilizer outside the certified charts. Investigate the regularity obstruction using the embedded degree-two and degree-three evaluation spaces of a marked point module."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 865,
+      "nc-p3": 868,
       "plan_ja": 20,
       "notes_ja": 33
     },
