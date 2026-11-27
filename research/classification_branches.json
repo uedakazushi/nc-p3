@@ -1465,6 +1465,12 @@
       "current_result": "The degree-four profile is standard exactly when b+c is nonzero on all five horizontal support strata 143--147, and degree five is standard throughout that open. Four curves of the first rectangle and its sign twist are regular at every point, including 26 residual number-field strata.",
       "current_proof": "sections/horizontal_rectangle_low_fibers.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FIRST-RECTANGLE-RANK-TEN-REGULAR",
+      "current_result": "Every point of both rank-ten surfaces on horizontal support 85 is standard two-sided AS regular and free of rank 256 over four central quartics at each start. Both sign-twisted surfaces are also regular. Independent evaluated relations over five central variables give an all-degree Hilbert and depth certificate.",
+      "current_proof": "sections/first_rectangle_edge_regularity.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1522,7 +1528,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 399,
+  "version": 400,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

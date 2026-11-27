@@ -1,15 +1,27 @@
 {
   "schema_version": 2,
-  "version": 399,
+  "version": 400,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "c57b6d911930ea696be71b32cec2151bf9f47db2"
+    "source_commit": "7fb793bdb462e288949963dc4cf058a91e9cebd5"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The degree-four profile is standard exactly when b+c is nonzero on all five horizontal support strata 143--147, and degree five is standard throughout that open. Four curves of the first rectangle and its sign twist are regular at every point, including 26 residual number-field strata."
+    "scope": "Every point of both rank-ten surfaces on horizontal support 85 is standard two-sided AS regular and free of rank 256 over four central quartics at each start. Both sign-twisted surfaces are also regular. Independent evaluated relations over five central variables give an all-degree Hilbert and depth certificate."
   },
   "checks": [
+    {
+      "command": "python computations/verify_first_rectangle_edge_regularity.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_first_rectangle_edge_presentation.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_first_rectangle_rank_ten_curve.py",
+      "result": "PASS"
+    },
     {
       "command": "python computations/verify_second_rectangle_low_fibers.py",
       "result": "PASS"
@@ -60,12 +72,12 @@
     }
   ],
   "open_mathematics": [
-    "Resolve all regular fibers on the rank-ten surfaces by a five-variable presentation, then the larger horizontal and unrestricted window branches."
+    "Resolve remaining 85 and 112 horizontal fibers and their intersections, including opposite rank strata, and the unrestricted branches."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 696,
+      "nc-p3": 697,
       "plan_ja": 15,
       "notes_ja": 28
     },

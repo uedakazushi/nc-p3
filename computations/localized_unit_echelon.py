@@ -2,7 +2,8 @@
 from collections import Counter
 
 
-def unit_echelon(rows,units,record=None):
+def unit_echelon(rows,units,record=None,independent=None):
+    """Return normalized pivot rows, optionally recording the chosen original row indices."""
     typ = next((type(v) for row in rows for v in row.values()),None)
     if typ is None:
         return {}
@@ -62,27 +63,29 @@ def unit_echelon(rows,units,record=None):
         return primitive(out)
 
     work = []
-    for row in rows:
+    for index,row in enumerate(rows):
         if not row:
             continue
         den = next(iter(row.values())).d**0
         for x in row.values():
             den = (den//den.gcd(x.d))*x.d
         require_unit(den)
-        work.append(primitive({j:x.n*(den//x.d) for j,x in row.items()}))
+        work.append((index,primitive({j:x.n*(den//x.d) for j,x in row.items()})))
 
     pivots = {}
     while work:
-        columns = Counter(j for row in work for j in row)
+        columns = Counter(j for _,row in work for j in row)
         choices = [((0 if f.is_constant() else 1 if is_unit(f) else 2,
                      (len(row)-1)*(columns[j]-1),len(f),len(row),j),i,j)
-                   for i,row in enumerate(work) for j,f in row.items() if record is not None or is_unit(f)]
+                   for i,(_,row) in enumerate(work) for j,f in row.items() if record is not None or is_unit(f)]
         assert choices,'No pivot invertible throughout the specified open set'
         _,i,j = min(choices)
-        pivot = work.pop(i)
+        index,pivot = work.pop(i)
+        if independent is not None:
+            independent.append(index)
         require_unit(pivot[j])
         pivots[j] = pivot
-        work = [out for row in work if (out:=clear(row,pivot,j))]
+        work = [(index,out) for index,row in work if (out:=clear(row,pivot,j))]
     for j in reversed(pivots):
         for k in list(pivots[j]):
             if k!=j and k in pivots:
