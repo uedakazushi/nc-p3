@@ -2203,6 +2203,12 @@
       "current_result": "For every prime central-cut window the generic vertex corner is a division algebra: an integral Hilbert multiplicity forces its index to equal its degree. The four normalization degrees are 1,4,16,64. All finite windows with certified normal genus-three quartic centers have only transverse A1 curves with balanced two-plus-two vertex modules.",
       "current_proof": "sections/central_cut_index_and_transverse_type.tex",
       "global_coverage": false
+    },
+    {
+      "id": "CENTRAL-CUT-PRIMENESS-AND-TWO-CENTER-TYPES",
+      "current_result": "Every finite window with four regular central quartic parameters has prime folding and normal Gorenstein rational center, without additional hypotheses. Exactly the normalization degree/vertex index pairs (4,4) and (16,2) are possible as a dichotomy. The first has an ordinary quartic or quartic double-quadric center; the second has a smooth genus-nine generic K3 section.",
+      "current_proof": "sections/central_cut_center_dichotomy.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2260,7 +2266,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 522,
+  "version": 523,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 522,
+  "version": 523,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "af66e2bbd6a488fcd15e02b35ca1f2e1aa159376"
+    "source_commit": "c3316d929ce71882a2f9574855a09d911013e83e"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For every prime central-cut window the generic vertex corner is a division algebra: an integral Hilbert multiplicity forces its index to equal its degree. The four normalization degrees are 1,4,16,64. All finite windows with certified normal genus-three quartic centers have only transverse A1 curves with balanced two-plus-two vertex modules."
+    "scope": "Every finite window with four regular central quartic parameters has prime folding and normal Gorenstein rational center, without additional hypotheses. Exactly the normalization degree/vertex index pairs (4,4) and (16,2) are possible as a dichotomy. The first has an ordinary quartic or quartic double-quadric center; the second has a smooth genus-nine generic K3 section."
   },
   "checks": [
     {
-      "command": "python computations/verify_central_cut_index_transverse_type.py",
+      "command": "python computations/verify_central_cut_center_dichotomy.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Recover all ordinary and double-quadric finite normal central windows from their generic hyperplane Kummer classes, allowing singular curves and exceptional isolated singularities."
+    "Classify every finite central-cut window up to indexed isomorphism by the center and its determinant-normalized generic corner, including index two, and determine the period action."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 907,
+      "nc-p3": 909,
       "plan_ja": 21,
       "notes_ja": 34
     },
