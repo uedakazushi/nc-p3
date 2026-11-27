@@ -1885,6 +1885,12 @@
       "current_result": "The unmarked exceptional sextic split Bell object, of minimal period one, is rigid in the unrestricted two-flattening scheme. Its projective orbit is smooth and open of dimension 59; its closure is an entire irreducible component and its semistable quotient consists of this one reduced point. No other window specializes to it. A characteristic-zero transporter and a good-prime full tangent bound certify this.",
       "current_proof": "sections/isolated_split_component.tex",
       "global_coverage": false
+    },
+    {
+      "id": "VALUATIVE-DETERMINANT-AND-ALL-REGULAR-ORBIT-LIMITS",
+      "current_result": "For any two integral standard regular models generically identified, determinant valuations on the four arrow lattices sum to four times the top-tensor valuation. Thus every regular projective orbit specialization of a semistable regular tensor remains in its GIT class, and a polystable regular tensor has no other regular objects anywhere in its projective orbit closure. The full regular locus of the 59-dimensional isolated sextic component is exactly one indexed isomorphism class.",
+      "current_proof": "sections/regular_orbit_valuations.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1942,7 +1948,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 469,
+  "version": 470,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

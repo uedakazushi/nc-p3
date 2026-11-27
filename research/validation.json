@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 469,
+  "version": 470,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "4ae31d14a06d563cf561c76910425f44e7b09cbf"
+    "source_commit": "bf139162219d19a0ef77f772812c8b24147855c8"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The unmarked exceptional sextic split Bell object, of minimal period one, is rigid in the unrestricted two-flattening scheme. Its projective orbit is smooth and open of dimension 59; its closure is an entire irreducible component and its semistable quotient consists of this one reduced point. No other window specializes to it. A characteristic-zero transporter and a good-prime full tangent bound certify this."
+    "scope": "For any two integral standard regular models generically identified, determinant valuations on the four arrow lattices sum to four times the top-tensor valuation. Thus every regular projective orbit specialization of a semistable regular tensor remains in its GIT class, and a polystable regular tensor has no other regular objects anywhere in its projective orbit closure. The full regular locus of the 59-dimensional isolated sextic component is exactly one indexed isomorphism class."
   },
   "checks": [
     {
-      "command": "python computations/verify_isolated_split_component.py",
+      "command": "python computations/verify_regular_orbit_valuations.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine the point scheme of the isolated component and possible unstable regular boundary; test unrestricted components and their intersections beyond this orbit."
+    "Determine the isolated regular component point scheme with all embedded structure, and extend global methods to unresolved stable finite and branching components."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 816,
+      "nc-p3": 817,
       "plan_ja": 19,
       "notes_ja": 32
     },
