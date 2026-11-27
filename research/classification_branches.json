@@ -2035,6 +2035,12 @@
       "current_result": "There is no branching at any opposite rank for a pure-relation-free standard regular window whose projections are curves or points. Both remaining global frames are impossible: comparison of two rank-two residual blocks excludes the four-center frame, and a common binary root with incompatible projected relation supports excludes the three-center frame. Together with the surface and curve-graph theorems this gives finite all-degree regularity and indexed-isomorphism tests for every pure-free candidate with a positive-dimensional projection.",
       "current_proof": "sections/final_pure_branch_frames.tex",
       "global_coverage": false
+    },
+    {
+      "id": "LOCAL-PURE-BRANCH-OBSTRUCTION",
+      "current_result": "Branching requires a decomposable relation in the three-dimensional contraction space of an actual center. For finite pure-relation schemes all center pencils have a single Veronese block of degree zero to three and cyclic regular blocks, at most two centers per phase. Excess rank-drop contact at the start of a two-line corridor forces a length-two pure subscheme on its middle edge.",
+      "current_proof": "sections/branch_local_pure_pencils.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2092,7 +2098,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 494,
+  "version": 495,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
