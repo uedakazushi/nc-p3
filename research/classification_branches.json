@@ -1711,6 +1711,12 @@
       "current_result": "Every nontrivial additive action on a finite Frobenius graph is nontrivial at every slot, has a unique maximal Jordan block there and a canonical four-cycle, and cannot mix a regular block with a transvection. Four transvections force all-degree AS regularity by an explicit strict filtration, with only two possible closed orbit limits.",
       "current_proof": "sections/finite_additive_windows.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FINITE-POSITIVE-DIMENSIONAL-STABILIZER-AS",
+      "current_result": "Every finite Frobenius window with positive-dimensional projective stabilizer is standard two-sided Koszul AS regular and semistable. Every additive action has one uniform Jordan profile (4), (3,1), or (2,1,1); the first two have polynomial closed limit and the last has at most two closed limits. The known finite torus atlas exhausts even the candidates before any AS assumption.",
+      "current_proof": "sections/finite_connected_regularity.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1768,7 +1774,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 440,
+  "version": 441,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

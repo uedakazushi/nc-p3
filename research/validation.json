@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 440,
+  "version": 441,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "5f9904645012e3f1186e83ebadd2b88812b8ca31"
+    "source_commit": "c0865d6f39b41707e43dcaab003b09142e477906"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every nontrivial additive action on a finite Frobenius graph is nontrivial at every slot, has a unique maximal Jordan block there and a canonical four-cycle, and cannot mix a regular block with a transvection. Four transvections force all-degree AS regularity by an explicit strict filtration, with only two possible closed orbit limits."
+    "scope": "Every finite Frobenius window with positive-dimensional projective stabilizer is standard two-sided Koszul AS regular and semistable. Every additive action has one uniform Jordan profile (4), (3,1), or (2,1,1); the first two have polynomial closed limit and the last has at most two closed limits. The known finite torus atlas exhausts even the candidates before any AS assumption."
   },
   "checks": [
     {
-      "command": "python computations/verify_finite_additive_windows.py",
+      "command": "python computations/verify_finite_connected_regularity.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine the remaining finite additive Jordan profiles and their all-degree reductions and investigate which closed limit fibers contain such finite graphs."
+    "Determine the finite-graph additive parameters in the polynomial and symmetric closed fibers; extend AS recognition to finite stabilizers and the nonfinite point correspondences."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 772,
+      "nc-p3": 774,
       "plan_ja": 17,
       "notes_ja": 30
     },
