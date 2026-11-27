@@ -10,21 +10,33 @@ from verify_klein_generic_isomorphisms import normalize
 from verify_klein_two_doublets import modular_points
 
 
-def incidences(points, prime):
+def incidence_signatures(points, prime):
     planes = set()
-    for a,b,c in combinations(points,3):
+    triples = []
+    for I in combinations(range(len(points)),3):
+        a,b,c = (points[i] for i in I)
         coeff = []
         for i in range(4):
             j,k,l = [n for n in range(4) if n!=i]
             det = (a[j]*(b[k]*c[l]-b[l]*c[k])-a[k]*(b[j]*c[l]-b[l]*c[j])
                    +a[l]*(b[j]*c[k]-b[k]*c[j]))
             coeff.append((-1)**i*det%prime)
-        assert any(coeff)
+        if not any(coeff):
+            triples.append(I)
+            continue
         inds = tuple(i for i,q in enumerate(points) if sum(x*y for x,y in zip(coeff,q))%prime==0)
         if len(inds)>3:
             planes.add(inds)
-    assert len(planes)==52 and all(len(I)==4 for I in planes)
-    return [sum(i in pl for pl in planes) for i in range(20)]
+    histogram = Counter(map(len,planes))
+    signatures = [tuple(sum(i in pl for pl in planes if len(pl)==n) for n in sorted(histogram))
+                  + (sum(i in I for I in triples),) for i in range(len(points))]
+    return histogram,signatures
+
+
+def incidences(points, prime):
+    histogram,signatures = incidence_signatures(points,prime)
+    assert histogram=={4:52} and all(sig[-1]==0 for sig in signatures)
+    return [sig[0] for sig in signatures]
 
 
 def maps(source,target,prime):
