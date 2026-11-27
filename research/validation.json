@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 484,
+  "version": 485,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "4810a3997d4854b9623ab01cdd48eb0e54afbc44"
+    "source_commit": "f67c78b742a6f040806f5fc47b6a75d1b2d07aa6"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The unrestricted GIT fibers of the mixed flip curve are single closed orbits away from a fourth root of unity. At a squared equal to one exactly the closed orbit and one Jordan orbit occur, and the completed transverse germ is k[[z,x,y]]/(zx,zy), the reduced crossing of the two classified components. At a squared equal to minus one all seven exceptional tangent weights are determined."
+    "scope": "The full exceptional mixed-flip quotient fiber at a squared equal to minus one consists of five unobstructed affine attracting spaces, up to an explicit two-dimensional torus and two finite generators. All points are Koszul left and right AS regular, with exact isomorphism, period one or two and orbit-specialization criteria."
   },
   "checks": [
     {
-      "command": "python computations/verify_mixed_flip_slice.py",
+      "command": "python computations/verify_mixed_flip_fiber.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Resolve the seven-weight exceptional fiber at a squared equal to minus one and the polar boundary of the extra simple curve; continue full stable and branched coverage."
+    "Resolve the polar boundary of the extra simple component by comparing the opposite-cut determinant with the PBW-normalized volume. Continue coverage outside torus-attraction windows."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 841,
+      "nc-p3": 843,
       "plan_ja": 19,
       "notes_ja": 32
     },

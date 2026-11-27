@@ -1975,6 +1975,12 @@
       "current_result": "The unrestricted GIT fibers of the mixed flip curve are single closed orbits away from a fourth root of unity. At a squared equal to one exactly the closed orbit and one Jordan orbit occur, and the completed transverse germ is k[[z,x,y]]/(zx,zy), the reduced crossing of the two classified components. At a squared equal to minus one all seven exceptional tangent weights are determined.",
       "current_proof": "sections/mixed_flip_slice.tex",
       "global_coverage": false
+    },
+    {
+      "id": "MIXED-FLIP-EXCEPTIONAL-FIBER-ALL-ORBITS",
+      "current_result": "The full exceptional mixed-flip quotient fiber at a squared equal to minus one consists of five unobstructed affine attracting spaces, up to an explicit two-dimensional torus and two finite generators. All points are Koszul left and right AS regular, with exact isomorphism, period one or two and orbit-specialization criteria.",
+      "current_proof": "sections/mixed_flip_fiber.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2032,7 +2038,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 484,
+  "version": 485,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
