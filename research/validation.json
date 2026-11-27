@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 425,
+  "version": 426,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "71510058772981cbaf9e2b419d87bf4a08744241"
+    "source_commit": "d9fbb6a88de9288752ef7c79c2c77cb8f772dd14"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All windows admitting a regular-representation Klein marking now have an exhaustive finite test for all-degree regularity, including every missing-color and sparse branch. For every regular window in this locus, the finite set of saturated character records over connected stabilizer-conjugacy classes of markings is a complete index-preserving invariant across branches. The same invariant decides all periods even with positive-dimensional stabilizers."
+    "scope": "Every AS window with a regular Klein marking is semistable and has a unique polystable limit which is again AS. All such limits are computed: discard unmatched repeat edges on doubly missing supports and specialize 17 sparse parallel supports to the two fixed-start representatives 50 and 52. All remaining regular cases are polystable. A 51-dimensional normal toric quotient modulo 384 relabelings normalizes the ambient Klein GIT image. Every unrestricted rank-six window attracted to these regular closed orbits is AS."
   },
   "checks": [
     {
-      "command": "python computations/verify_klein_atlas_codes.py",
+      "command": "python computations/verify_klein_polystable_limits.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine specialization and component behavior of the Klein atlas via its torus quotient, then address windows without a regular Klein marking."
+    "Determine attraction fibers outside the marked locus and use additional multiplicity-free symmetries or finite edge geometry to cover windows with no regular Klein action."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 746,
+      "nc-p3": 747,
       "plan_ja": 16,
       "notes_ja": 29
     },
