@@ -1357,6 +1357,12 @@
       "current_result": "For the symmetric three-rank-one-color family the unordered four coefficients classify all unmarked indexed objects except the double-pair line. There r squared is identified with r squared divided by (r squared minus one), by the intrinsic binary isotropic graph. A unique six-node diagonal net, a recoverable five-form frame at triple equality, and the self-adjoint center distinguish every other specialization.",
       "current_proof": "sections/three_lines_symmetric_isomorphism.tex",
       "global_coverage": false
+    },
+    {
+      "id": "THREE-LINES-TWISTED-ISOMORPHISM",
+      "current_result": "Twisted three-line windows are indexed-isomorphic exactly for equal unordered coefficient quadruples, including the double-pair line. The symmetric and twisted three-line families, the transverse doublet family and the singly missing curve have pairwise disjoint unmarked images.",
+      "current_proof": "sections/three_lines_twisted_isomorphism.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1414,7 +1420,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 381,
+  "version": 382,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

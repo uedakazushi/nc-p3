@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 381,
+  "version": 382,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "8db4420893d09973931a5bc3dc900fed6fc8d7e1"
+    "source_commit": "ae719efaaae18cc834ac722ca78d481b05c19635"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For the symmetric three-rank-one-color family the unordered four coefficients classify all unmarked indexed objects except the double-pair line. There r squared is identified with r squared divided by (r squared minus one), by the intrinsic binary isotropic graph. A unique six-node diagonal net, a recoverable five-form frame at triple equality, and the self-adjoint center distinguish every other specialization."
+    "scope": "Twisted three-line windows are indexed-isomorphic exactly for equal unordered coefficient quadruples, including the double-pair line. The symmetric and twisted three-line families, the transverse doublet family and the singly missing curve have pairwise disjoint unmarked images."
   },
   "checks": [
     {
-      "command": "python computations/verify_three_lines_symmetric_isomorphism.py",
+      "command": "python computations/verify_three_lines_twisted_isomorphism.py",
       "result": "PASS"
     },
     {
@@ -44,12 +44,12 @@
     }
   ],
   "open_mathematics": [
-    "Resolve the unmarked twisted three-line family, finish the remaining parallel doublet rectangles and global coverage without Klein symmetry."
+    "Determine the remaining parallel doublet coefficients and unmarked identifications, and cover windows without a prescribed Klein action."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 668,
+      "nc-p3": 670,
       "plan_ja": 15,
       "notes_ja": 27
     },
