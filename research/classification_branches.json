@@ -1735,6 +1735,12 @@
       "current_result": "All finite graphs in quantum closed fibers without a maximal tangent have three disjoint six-dimensional normal forms: one full affine space for the minus-one background and two affine spaces minus a coordinate line for the primitive-fourth background. The six parameters are complete unmarked invariants with explicit periods, trivial stabilizers and exceptional lengths 12,13,14,15,17,18,19. Together with the maximal tangent atlas this classifies every finite graph specializing to a quantum point.",
       "current_proof": "sections/finite_quantum_planar_fibers.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FINITE-STRICT-HALF-FOUR-SLOT-RANK",
+      "current_result": "For every finite Frobenius graph, an adjacent coordinate product restricts on each proper nonempty subscheme to dimension strictly greater than half its length. Four-slot evaluation has rank 19 precisely for bisymmetric windows and rank 20 otherwise. Every affine component through a finite point has dimension at least 75, and at least 76 away from bisymmetry.",
+      "current_proof": "sections/finite_four_slot_evaluations.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1792,7 +1798,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 444,
+  "version": 445,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 444,
+  "version": 445,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "b42c85eb60c0d134b3c33f9de723c8d52b161478"
+    "source_commit": "854efd85288c8515dca33ea776bc764d4d6cad67"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All finite graphs in quantum closed fibers without a maximal tangent have three disjoint six-dimensional normal forms: one full affine space for the minus-one background and two affine spaces minus a coordinate line for the primitive-fourth background. The six parameters are complete unmarked invariants with explicit periods, trivial stabilizers and exceptional lengths 12,13,14,15,17,18,19. Together with the maximal tangent atlas this classifies every finite graph specializing to a quantum point."
+    "scope": "For every finite Frobenius graph, an adjacent coordinate product restricts on each proper nonempty subscheme to dimension strictly greater than half its length. Four-slot evaluation has rank 19 precisely for bisymmetric windows and rank 20 otherwise. Every affine component through a finite point has dimension at least 75, and at least 76 away from bisymmetry."
   },
   "checks": [
     {
-      "command": "python computations/verify_finite_quantum_planar_fibers.py",
+      "command": "python computations/verify_finite_four_slot_evaluations.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Use complementary restrictions in the finite Artin algebra to prove global conormal bounds and determine the exact four-slot evaluation deficiency on every finite Frobenius graph, without stabilizer or GIT assumptions."
+    "Prove universal semistability for finite Frobenius windows and restrict all possible nonclosed orbit limits using the extremal filtration weights without any prior symmetry hypothesis."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 779,
+      "nc-p3": 780,
       "plan_ja": 17,
       "notes_ja": 30
     },

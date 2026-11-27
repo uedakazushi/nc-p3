@@ -1,0 +1,73 @@
+% !TeX root = ../papers/nc-p3.tex
+\section{全ての有限点グラフでの四文字評価と成分の次元下界}
+\label{sec:finite-four-slot-evaluations}
+標準有限Frobenius窓とし、四辺の点対応が有限であるとする。
+定理\ref{thm:finite-cubic-separators}で四移動が恒等なので、各位置の四文字を
+同じ長さ20のスキーム $X$ 上で単元倍の自由度を持つ $U_i\subset D=H^0(\mathcal O_X)$ として読む。
+\begin{lemma}\label{lem:finite-adjacent-strict-half}
+隣接する積 $A=U_iU_{i+1}$ と、長さ $0<m<20$ の任意の部分スキーム $Y\subset X$ について
+\[
+                     \dim(A|_Y)>m/2
+\]
+である。被約性・支持数・局所埋込み次元の仮定は要らない。
+\end{lemma}
+\begin{proof}
+$C=H^0(\mathcal O_Y)$ は $m$ 次元で、各座標空間の像 $U,V$ に単元1を含めてよい。
+$U,V$ はそれぞれ $C$ を代数として生成する。実際、各三次式の制限が $D$ に全射である。
+$m\ge2,4,8$ なら $\dim U,\dim V$ はそれぞれ $2,3,4$ 以上である。
+これは射影が閉埋込みで、点・直線・平面の切断の長さの上限が $1,3,7$ であることによる
+（系\ref{cor:finite-no-four-on-line}、定理\ref{thm:finite-plane-section-seven}）。
+$\dim UV<m$ なら $\dim UV>\max(\dim U,\dim V)$ である。
+等号なら、例えば $UV=U$ となり、$V$ の生成する代数で $U$ が閉じるため $U=C$ となる。
+上の三段の下界を使えば $1\le m\le9$ で主張を得る。
+
+$m=10$ で $\dim UV=5$ を仮定する。$U+V\subset UV$ なので
+$\dim(U\cap V)\ge3$ である。$U(U\cap V)\subset UV$、かつ $U/(U\cap V)$ の次元は高々1なので
+$\dim U^2\le6$ となる。$U$ による閉埋込みのHilbert関数は従って
+$1,4,h_2,10$ で $h_2\le6$ である。全台で非零の一次式で割ったArtin還元では
+二次の次元が高々2だが三次が4以上になる。単項式初期イデアルに移すと、
+高々二つの標準二次単項式から、それらを全ての二次約数に持つ標準三次単項式は高々二つしか作れない。
+矛盾により $m=10$ も従う。
+
+$A$ は十次元で、辺の $(2,2)$ 完全跡により $A=A^\perp$ である
+（定理\ref{thm:finite-square-chart}の証明）。$Y$ の定義イデアルを $I$、
+残余 $Y'$ のイデアルを $I^\perp=\operatorname{ann}(I)$ とすれば、$Y'$ の長さは $20-m$ である。
+$A\cap I=(A+I^\perp)^\perp$ の次元を取って
+$\dim(A|_Y)=m-10+\dim(A|_{Y'})$ を得る。これが $10<m<20$ を既に示した範囲に戻す。
+\end{proof}
+
+\begin{theorem}\label{thm:finite-four-slot-rank}
+$P=U_0U_1U_2U_3$ の次元は19または20である。19になる必要十分条件は、
+両側で反対二位置の座標が射影線型に同定されること、同値に四テンソルが
+両方の反対位置の交換で対称な表示を持つことである。
+階数19の場合の唯一の零化汎関数は完全跡である。
+従ってどの枝にも $P$ を消す非零の退化積対合はない。
+\end{theorem}
+\begin{proof}
+$P$ を消す汎関数を一つの完全跡 $\tau$ に対し $\tau(g\,\cdot)$ と書く。
+$g\ne0$ が非単元なら $C=D/\operatorname{ann}(g)$ の長さは $0<m<20$ で、
+$\tau(g\,\cdot)$ は $C$ 上の完全跡となる。隣接二積 $U_0U_1,U_2U_3$ の $C$ での像が
+互いに直交するが、前補題で両次元が $m/2$ を超え、矛盾する。
+ゆえに非零の零化汎関数は全て完全である。二本独立にあれば、
+一つの局所因子の剰余体で対応する二単元を比例させて非零の非単元を作れるので、余次元は高々1である。
+
+完全跡で $P$ が消えれば $U_0U_2$ と $U_1U_3$ が直交する。
+定理\ref{thm:finite-opposite-product-gap}で各積の次元は10又は16であるから、両方が10である。
+同定理が両側の射影同定と対称表示を与える。二つの交換は異なる位置の組で行うので同時の基底選択でよい。
+逆に両側が同定されれば $P$ は単元倍を除き $U_0^2U_1^2$ であり、
+辺の $(2,2)$ 完全交叉の跡により正確に超平面である。
+\end{proof}
+
+\begin{corollary}\label{cor:finite-component-dimension-bound}
+二隣接階数6のアフィンテンソル軌跡で、有限Frobenius点を通る各成分の次元は
+両対称点なら75以上、その他の点なら76以上である。
+従って次元74以下の成分は有限Frobenius窓を含まない。
+次元75の成分の有限Frobenius部分はすべて両対称である。
+\end{corollary}
+\begin{proof}
+有限グラフの各部分評価は各台点で階数3である。補題\ref{lem:finite-flat-conormals}の
+有限平坦なSchur恒等式は $\dim P$ 本の独立行を与える。実際、その補題の四文字は
+中央の零点対と、グラフで一意な直前・直後の座標である。
+第一切断の滑らかな156次元軌跡の上で残る式は高々 $100-\dim P$ 本であり、
+高さ定理により各局所成分の次元は少なくとも $56+\dim P$ となる。
+\end{proof}
