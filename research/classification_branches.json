@@ -2305,6 +2305,12 @@
       "current_result": "Full-arrow two-dimensional marks with four forward row defects are parametrized by four quadratic self-maps between projective lines and a projective functional supported on their length-17 fixed scheme. Both cyclic flattenings reduce to ten-by-ten pairings; minimum supporting length fourteen is excluded even for nonreduced fixed points, leaving lengths fifteen through seventeen.",
       "current_proof": "sections/directed_binary_defect_cycle.tex",
       "global_coverage": false
+    },
+    {
+      "id": "ISOLATED-GRADING-INERTIA-AND-OCTIC-SURFACE-FINITENESS",
+      "current_result": "For every regular domain finite-edge limit on the fifteen-dimensional component the nontrivial grading stabilizers are isolated. The general octic section is a canonical surface with at worst A1 points, K squared eight, geometric genus five and irregularity zero. Its four rigid twisted bundles reconstruct the indexed window. Every fixed graded center has only finitely many indexed isomorphism classes, even with quartic basepoints.",
+      "current_proof": "sections/octic_surface_fixed_center.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2362,7 +2368,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 539,
+  "version": 540,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

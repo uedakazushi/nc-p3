@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 539,
+  "version": 540,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "bd8f0137c1d7593d686ca4ea59e7a3009330dbd8"
+    "source_commit": "3fe1a8614bb491773a0ea6df343a4bd917a43305"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Full-arrow two-dimensional marks with four forward row defects are parametrized by four quadratic self-maps between projective lines and a projective functional supported on their length-17 fixed scheme. Both cyclic flattenings reduce to ten-by-ten pairings; minimum supporting length fourteen is excluded even for nonreduced fixed points, leaving lengths fifteen through seventeen."
+    "scope": "For every regular domain finite-edge limit on the fifteen-dimensional component the nontrivial grading stabilizers are isolated. The general octic section is a canonical surface with at worst A1 points, K squared eight, geometric genus five and irregularity zero. Its four rigid twisted bundles reconstruct the indexed window. Every fixed graded center has only finitely many indexed isomorphism classes, even with quartic basepoints."
   },
   "checks": [
     {
-      "command": "python computations/verify_directed_binary_defect_cycle.py",
+      "command": "python computations/verify_octic_surface_rigidity.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine regularity on these fixed-scheme charts and address mixed row and column defects of bounded PI simple representations."
+    "Determine the possible fixed centers and their exceptional fibers and isolate remaining non-domain and other-component regularity branches."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 936,
+      "nc-p3": 938,
       "plan_ja": 22,
       "notes_ja": 35
     },
