@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 407,
+  "version": 408,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "9950095c45d15f4b86caf4f7e44a5bdfa3a49550"
+    "source_commit": "d36df07e3b3f3b012b38f0d9a1059b4d1bf5d725"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All regular fibers of the negative exchange chart zD(z^2-1) nonzero have the same sixteen-element unmarked quotient, including the double conic, quadrangle, and smooth quadric boundary. The two period-one planes, all opposite ranks and the full unmarked rank-twelve surface are explicit. The entire smooth quadric graph branch specializes inside the four-dimensional component."
+    "scope": "Every sparse Klein-bisymmetric marked tensor has an all-degree test using only the opposite rank and two Segre incidence tests. At z=-1 the full negative exchange quotient is an explicit open weighted projective threefold, with ranks eight, ten, twelve and its shift determined. At z=0 it equals the negative vertical rectangle 112 with exactly four nonregular lines, and at z=1 no invertible-corner exchange is regular."
   },
   "checks": [
     {
-      "command": "python computations/verify_negative_pairing_boundary.py",
+      "command": "python computations/verify_exchange_end_values.py",
       "result": "PASS"
     },
     {
@@ -116,12 +116,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze limits of the normalized exchange chart outside zD(z^2-1) nonzero and pursue the unrestricted high-rank windows."
+    "Classify the unmarked B=0 projective boundary of the vertical rectangle and continue covering unrestricted higher-rank windows."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 712,
+      "nc-p3": 713,
       "plan_ja": 16,
       "notes_ja": 28
     },

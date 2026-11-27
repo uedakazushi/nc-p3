@@ -1513,6 +1513,12 @@
       "current_result": "All regular fibers of the negative exchange chart zD(z^2-1) nonzero have the same sixteen-element unmarked quotient, including the double conic, quadrangle, and smooth quadric boundary. The two period-one planes, all opposite ranks and the full unmarked rank-twelve surface are explicit. The entire smooth quadric graph branch specializes inside the four-dimensional component.",
       "current_proof": "sections/negative_pairing_boundary.tex",
       "global_coverage": false
+    },
+    {
+      "id": "NEGATIVE-EXCHANGE-END-VALUES",
+      "current_result": "Every sparse Klein-bisymmetric marked tensor has an all-degree test using only the opposite rank and two Segre incidence tests. At z=-1 the full negative exchange quotient is an explicit open weighted projective threefold, with ranks eight, ten, twelve and its shift determined. At z=0 it equals the negative vertical rectangle 112 with exactly four nonregular lines, and at z=1 no invertible-corner exchange is regular.",
+      "current_proof": "sections/negative_exchange_end_values.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1570,7 +1576,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 407,
+  "version": 408,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
