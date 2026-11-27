@@ -1849,6 +1849,12 @@
       "current_result": "For every standard AS edge the positive-dimensional locus of pure relations consists of at most one ruling in each orientation, or a unique smooth (1,1) conic with at most three further isolated pure points. No surface of pure relations is possible, without graph-dimension or reducedness assumptions.",
       "current_proof": "sections/pure_relation_curve_supports.tex",
       "global_coverage": false
+    },
+    {
+      "id": "CURVE-GRAPH-RECTANGLE-FOUR-PURE-FRAME",
+      "current_result": "Every one-dimensional unbranched Frobenius point graph satisfies a sharp rectangular rank lower bound from equality of the two intersection degrees. It has at most four pure relations per edge in linear general position on each side. A four-pure edge has only reduced coordinate lines as its pure curve, on one of five diagrams with explicitly determined residual Artin lengths.",
+      "current_proof": "sections/curve_graph_pure_frames.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1906,7 +1912,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 463,
+  "version": 464,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

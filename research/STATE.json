@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-27",
-  "version": 463,
+  "version": 464,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -4633,6 +4633,15 @@
       "verification": [
         "computations/verify_pure_relation_curve_supports.py"
       ]
+    },
+    {
+      "id": "CURVE-GRAPH-RECTANGLE-FOUR-PURE-FRAME",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "Every one-dimensional unbranched Frobenius point graph satisfies a sharp rectangular rank lower bound from equality of the two intersection degrees. It has at most four pure relations per edge in linear general position on each side. A four-pure edge has only reduced coordinate lines as its pure curve, on one of five diagrams with explicitly determined residual Artin lengths.",
+      "proof": "sections/curve_graph_pure_frames.tex",
+      "verification": [
+        "computations/verify_curve_graph_pure_frames.py"
+      ]
     }
   ],
   "document_paths": {
@@ -4696,7 +4705,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "dce203716e3aa36f6438a750272711d1bd85ee0a",
+  "reviewed_source_commit": "31e7ed1380ed4ee285cacb13434b36eef63b428e",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -4705,14 +4714,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Determine which of the surviving conic and ruling types can extend to standard AS four-windows and use them to constrain nonfinite graph branches.",
+    "immediate_next_action": "Use the four pure coordinate frame to determine neighboring edges and rule out or certify each of the five unbranched curve diagrams; continue to handle branched edges and remaining finite regularity.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/pure_relation_curve_supports.tex",
-      "sections/deficient_binary_quintic_pencil.tex"
+      "sections/curve_graph_pure_frames.tex",
+      "sections/pure_relation_curve_supports.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "For every standard AS edge the positive-dimensional locus of pure relations consists of at most one ruling in each orientation, or a unique smooth (1,1) conic with at most three further isolated pure points. No surface of pure relations is possible, without graph-dimension or reducedness assumptions. Full classification remains open.",
+    "state_of_claim": "Every one-dimensional unbranched Frobenius point graph satisfies a sharp rectangular rank lower bound from equality of the two intersection degrees. It has at most four pure relations per edge in linear general position on each side. A four-pure edge has only reduced coordinate lines as its pure curve, on one of five diagrams with explicitly determined residual Artin lengths. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
