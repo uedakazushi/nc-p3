@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-27",
-  "version": 490,
+  "version": 491,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -4877,6 +4877,15 @@
       "verification": [
         "computations/verify_branch_cubic_contact.py"
       ]
+    },
+    {
+      "id": "PURE-FREE-BRANCH-REQUIRES-TWO-LINES",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "Every pure-free branched regular window without a surface projection has a two-line corridor, hence opposite rank at least twelve. In the last competing configuration the two rank-six completions factor through a common binary quartic zero giving a forbidden two-sided center, including all degenerations of the quartics.",
+      "proof": "sections/branch_pencil_resultant.tex",
+      "verification": [
+        "computations/verify_branch_pencil_resultant.py"
+      ]
     }
   ],
   "document_paths": {
@@ -4940,7 +4949,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "fba8ad9e33cf9f104b75cf10a834683044c951d5",
+  "reviewed_source_commit": "00aea2568b48aaba904825a3d83ae6c766566968",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -4949,14 +4958,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Impose both adjacent rank-six conditions by Schur complements and test the necessary center pencil conditions in the (3,3) frame. Resolve the two-line and nonsplit unbranched regions separately.",
+    "immediate_next_action": "Study the integral two-line corridor frame using its perfect six-space, the rank-six opposite-edge multiplication span and the endpoint Hankel pencils. Extend the unbranched all-degree classification outside split attraction.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/branch_cubic_contact.tex",
-      "sections/branch_rank_eleven_floor.tex"
+      "sections/branch_pencil_resultant.tex",
+      "sections/branch_cubic_contact.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "For pure-free branching without surface projections or a two-line corridor, only the (3,3) configuration survives. The two longer configurations force distinct twisted cubics to meet in length at least ten. All remaining such windows admit a common 38-coefficient polynomial frame with a nondegenerate bilinear core. Full classification remains open.",
+    "state_of_claim": "Every pure-free branched regular window without a surface projection has a two-line corridor, hence opposite rank at least twelve. In the last competing configuration the two rank-six completions factor through a common binary quartic zero giving a forbidden two-sided center, including all degenerations of the quartics. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

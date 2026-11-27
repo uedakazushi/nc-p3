@@ -2011,6 +2011,12 @@
       "current_result": "For pure-free branching without surface projections or a two-line corridor, only the (3,3) configuration survives. The two longer configurations force distinct twisted cubics to meet in length at least ten. All remaining such windows admit a common 38-coefficient polynomial frame with a nondegenerate bilinear core.",
       "current_proof": "sections/branch_cubic_contact.tex",
       "global_coverage": false
+    },
+    {
+      "id": "PURE-FREE-BRANCH-REQUIRES-TWO-LINES",
+      "current_result": "Every pure-free branched regular window without a surface projection has a two-line corridor, hence opposite rank at least twelve. In the last competing configuration the two rank-six completions factor through a common binary quartic zero giving a forbidden two-sided center, including all degenerations of the quartics.",
+      "current_proof": "sections/branch_pencil_resultant.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2068,7 +2074,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 490,
+  "version": 491,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

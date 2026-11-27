@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 490,
+  "version": 491,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "fba8ad9e33cf9f104b75cf10a834683044c951d5"
+    "source_commit": "00aea2568b48aaba904825a3d83ae6c766566968"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For pure-free branching without surface projections or a two-line corridor, only the (3,3) configuration survives. The two longer configurations force distinct twisted cubics to meet in length at least ten. All remaining such windows admit a common 38-coefficient polynomial frame with a nondegenerate bilinear core."
+    "scope": "Every pure-free branched regular window without a surface projection has a two-line corridor, hence opposite rank at least twelve. In the last competing configuration the two rank-six completions factor through a common binary quartic zero giving a forbidden two-sided center, including all degenerations of the quartics."
   },
   "checks": [
     {
-      "command": "python computations/verify_branch_cubic_contact.py",
+      "command": "python computations/verify_branch_pencil_resultant.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Impose both adjacent rank-six conditions by Schur complements and test the necessary center pencil conditions in the (3,3) frame. Resolve the two-line and nonsplit unbranched regions separately."
+    "Study the integral two-line corridor frame using its perfect six-space, the rank-six opposite-edge multiplication span and the endpoint Hankel pencils. Extend the unbranched all-degree classification outside split attraction."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 853,
+      "nc-p3": 854,
       "plan_ja": 20,
       "notes_ja": 33
     },

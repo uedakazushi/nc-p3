@@ -1,0 +1,51 @@
+% !TeX root = ../papers/nc-p3.tex
+\section{二つの切断の補完と共通四次根}
+\label{sec:branch-pencil-resultant}
+\begin{theorem}\label{thm:branch-pencil-resultant}
+曲面射影のない標準正則窓で純関係がなく、片側分岐があれば、
+二本の動く直線だけからなる列が存在する。とくに反対階数 $\rho\le11$ の純関係自由な窓には
+曲線射影の片側分岐はない。
+\end{theorem}
+\begin{proof}
+二直線列がないと仮定すると命題\ref{prop:branch-three-three-frame}が適用できる。
+二項双一次形式 $B=x^{\mathsf t}Gt$ の行列式を $\delta\ne0$ とし、
+$J=\left(\begin{smallmatrix}0&-1\\1&0\end{smallmatrix}\right)$、
+$T=JG^{\mathsf t},\ U=JG$ と置く。$Tx,Ut$ はそれぞれ $B(x,-), B(-,t)$ の零点を表し、
+$UT=TU=-\delta I$ である。二重二次式 $E$ に対し
+$A_E(x)=E(x,Tx)$、$Z_E(t)=E(Ut,t)$ は二項四次式である。
+
+まず $(x,v)\mid(t,v')$ 切断だけを階数6にする $D=D_0$ は任意の $P,Q$ に対し一意に存在する。
+実際、第四文字を除いた両側の対の空間で許される関係は各六次元であり、
+中央の可逆六次小行列がその両方を張る。片側だけ第四文字を許したブロックも反対側でその同じ空間に入る。
+従って二つの長方形ブロックの間にこの六次行列の逆を挟んだものが唯一の補完となる。
+これは $B$ を固定して $P,Q$ の双線型式である。この補完は
+\begin{equation}\label{eq:branch-complete-product}
+             PQ-BD_0=\delta^{-2}A_P(x) Z_Q(t)
+\end{equation}
+を満たす。実際、まず一般の $P,Q$ を取る。このとき $A_P,Z_Q$ はそれぞれ単純な四根を持ち、
+固定した有限個の点を避ける。グラフ $B=0$ に制限する写像は全四次系へ全射だからである
+（$T,U$ が同型なので二次式の積が全四次式を張る）。
+$A_P$ の根 $x$ では $P(x,t)=B(x,t)k(t)$ と一次式で書ける。そこで
+$h(x,t;v)$ の $v_0,v_1,v_2$ から全ての一次式が得られるので、$k$ を与える $v$ を選ぶ。
+$x$ を固定した $v_3$ 行とこの $v$ 行は、第四文字を除く全ての反対列で一致する
+（ともに $h'P$）。階数6はその列だけで達しているので、第四文字の列でも一致する。
+従って $D_0(x,t)=k(t)Q(x,t)$ である。$Z_Q$ の根で列からの同じ議論を使う。
+左辺の次数は $(4,4)$ なので $A_P Z_Q$ の定数倍となる。
+$t=Tx$ と置けば $Z_Q(Tx)=\delta^2 A_Q(x)$ によりその定数は $\delta^{-2}$ である。
+多項式恒等式として特殊な $P,Q$ でも従う。
+
+もう一つの切断 $(v,t)\mid(v',x)$ は、$x,t$ の側に取る奇文字を交換するため、
+右辺が $\delta^{-2} A_Q(x) Z_P(t)$ になる。両切断の階数が6なら
+$A_P(x)Z_Q(t)=A_Q(x)Z_P(t)$ である。両四次式 $A_P,A_Q$ が非零なら比例し共通根を持つ。
+一方が恒等零のときも他方の根を取り、両方が零なら任意の点を取る。
+この共通根を $x$ とすると $P(x,t)=B(x,t)k(t),\ Q(x,t)=B(x,t)l(t)$ で、
+式\eqref{eq:branch-complete-product}から $D(x,t)=B(x,t)k(t)l(t)$ である。
+従ってこの偶点での全縮約は
+\[
+       B(x,t)\big(h(x,t;v)+v_3 k(t)\big)
+               \big(h(t,x;v')+v'_3 l(t)\big)
+\]
+である。各括弧は $t$ に一次なので、両奇文字での支持次元はともに2以下である。
+三次曲線での評価は四文字の完全座標なので、これは実際の両側支持である。
+定理\ref{thm:no-two-sided-centers}に反する。反対階数の系は命題\ref{prop:two-line-branch-block}による。
+\end{proof}
