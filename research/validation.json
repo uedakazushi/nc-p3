@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 510,
+  "version": 511,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "aa309e3fb9995c5931177e11df278407d3c3f8a5"
+    "source_commit": "aae2cc0438e2b07785e8fcd963d53aa3b0b266de"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The finite rank-ten one-sided symmetric branch is completely decided in all degrees: a finite Frobenius candidate is Koszul left/right AS regular exactly when both instanton monads are bundles. Every admissible elliptic-octic parameter is regular, including special windows. Generic marked fibers of each fixed window have arithmetic degree index eight, giving stable rank-four transforms and all-degree Serre purity."
+    "scope": "A general marked window of the fifteen-dimensional fully asymmetric component gives a completely general 4 by 4 by 4 tensor, with finitely many marked completions up to basis. On its determinantal quartic K3, two pencils in genus-eleven polarizations cut out the same length-twenty scheme. One pencil recovers the window; a rank-six condition on an eight by sixteen cohomology map recovers the other pencil when the Picard lattice is minimal."
   },
   "checks": [
     {
-      "command": "python computations/verify_rank_ten_full_regularity.py",
+      "command": "python computations/verify_determinantal_marked_slice.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Move to finite windows with neither opposite pair projectively symmetric. Relate the big cut and general degree-four central quotients to twisted spherical bundles on K3 sections, and control the remaining noncentral boundaries."
+    "Use the linked pencils on the determinantal K3 to control the regularity and exceptional completions of asymmetric cuts. Determine the missing cubic sections and the precise overlap and obstruction at each pencil."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 885,
+      "nc-p3": 887,
       "plan_ja": 21,
       "notes_ja": 34
     },

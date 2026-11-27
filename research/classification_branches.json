@@ -2131,6 +2131,12 @@
       "current_result": "The finite rank-ten one-sided symmetric branch is completely decided in all degrees: a finite Frobenius candidate is Koszul left/right AS regular exactly when both instanton monads are bundles. Every admissible elliptic-octic parameter is regular, including special windows. Generic marked fibers of each fixed window have arithmetic degree index eight, giving stable rank-four transforms and all-degree Serre purity.",
       "current_proof": "sections/finite_rank_ten_full_regularity.tex",
       "global_coverage": false
+    },
+    {
+      "id": "DOMINANT-ASYMMETRIC-DETERMINANTAL-K3-SLICE",
+      "current_result": "A general marked window of the fifteen-dimensional fully asymmetric component gives a completely general 4 by 4 by 4 tensor, with finitely many marked completions up to basis. On its determinantal quartic K3, two pencils in genus-eleven polarizations cut out the same length-twenty scheme. One pencil recovers the window; a rank-six condition on an eight by sixteen cohomology map recovers the other pencil when the Picard lattice is minimal.",
+      "current_proof": "sections/finite_determinantal_marked_slice.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2188,7 +2194,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 510,
+  "version": 511,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
