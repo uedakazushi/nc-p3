@@ -2,7 +2,7 @@
 
 **共同研究：** 本リポジトリは大川新之介・植田一石の共同研究プロジェクトです。この表示は個々の論文の著者を確定するものではありません。
 
-**2026-11-27 / v441。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-27 / v442。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -451,6 +451,8 @@ Walsh三次元族を含む十五次元成分と、そこから出る周期2の�
 有限点対応を保つ加法群のJordan型を制限し、四位置が推移変換なら全次数で正則性を証明した。[加法群と閉極限](sections/finite_additive_windows.tex)
 
 正次元の安定群を持つ有限Frobenius窓の全てについて、全次数の正則性と半安定性を証明した。[Jordan型と各還元先](sections/finite_connected_regularity.tex)
+
+有限点グラフの加法群対称性を全て排除した。正次元の安定群がある有限候補はトーラスの一曲面と二曲線に尽きる。[固定点の接空間による排除](sections/finite_unipotent_exclusion.tex)
 
 非恒等の平面グラフを基底に持つOre窓では、指定点を忘れた同型類も決定した。[正規形と平坦特殊化](sections/plane_graph_ore_windows.tex)・[検算](computations/verify_plane_graph_ore.py)
 
