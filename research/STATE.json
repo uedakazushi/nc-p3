@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-27",
-  "version": 501,
+  "version": 502,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -4978,6 +4978,15 @@
       "verification": [
         "computations/verify_finite_three_slot_evaluations.py"
       ]
+    },
+    {
+      "id": "FINITE-CUT-POINT-EXT-AND-RECIPROCAL-CUBICS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "Point modules in every finite four-vertex cut are Serre-fixed up to shift three. Their mutual Ext dimensions are the mixed opposite rank defect, symmetric and independent of phase. For twenty reduced points with full middle supports the singularity incidences of the Lagrange cubics give the same undirected graph of valency at most four in each embedding. The general mixed component has twenty mutually orthogonal three-spherical modules with faithful direct sum.",
+      "proof": "sections/finite_cut_point_pairings.tex",
+      "verification": [
+        "computations/verify_finite_cut_point_pairings.py"
+      ]
     }
   ],
   "document_paths": {
@@ -5041,7 +5050,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "88269630e5936131c52806b8d6a391acec3f4ebe",
+  "reviewed_source_commit": "d64c595304f02c9eede4aeef40a526b2f528750d",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -5050,14 +5059,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Use the finite point quotient and the point modules of the four-vertex cut to determine the perpendicular pairings, regularity in the stable finite locus and the behavior of rank-nineteen fibers.",
+    "immediate_next_action": "Determine whether point-ideal generators or their conormal modules detect the remaining nonregular finite stable cuts. Analyze the rank-nineteen defect and fully asymmetric finite coordinate products and their relations.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/finite_three_slot_evaluations.tex",
-      "sections/unrestricted_corridor_exclusion.tex"
+      "sections/finite_cut_point_pairings.tex",
+      "sections/finite_three_slot_evaluations.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "In all finite Frobenius windows triple evaluation has rank 16 for projectively identified ends and otherwise 19 or 20. A defect at rank 19 has support length at least nine. Fully asymmetric point-evaluation ideals are generated through degree four. Full triple rank implies an all-degree linear presentation of the quartic point ideal and occurs generically in the fifteen-dimensional mixed component. Full classification remains open.",
+    "state_of_claim": "Point modules in every finite four-vertex cut are Serre-fixed up to shift three. Their mutual Ext dimensions are the mixed opposite rank defect, symmetric and independent of phase. For twenty reduced points with full middle supports the singularity incidences of the Lagrange cubics give the same undirected graph of valency at most four in each embedding. The general mixed component has twenty mutually orthogonal three-spherical modules with faithful direct sum. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

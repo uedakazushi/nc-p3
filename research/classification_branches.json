@@ -2077,6 +2077,12 @@
       "current_result": "In all finite Frobenius windows triple evaluation has rank 16 for projectively identified ends and otherwise 19 or 20. A defect at rank 19 has support length at least nine. Fully asymmetric point-evaluation ideals are generated through degree four. Full triple rank implies an all-degree linear presentation of the quartic point ideal and occurs generically in the fifteen-dimensional mixed component.",
       "current_proof": "sections/finite_three_slot_evaluations.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FINITE-CUT-POINT-EXT-AND-RECIPROCAL-CUBICS",
+      "current_result": "Point modules in every finite four-vertex cut are Serre-fixed up to shift three. Their mutual Ext dimensions are the mixed opposite rank defect, symmetric and independent of phase. For twenty reduced points with full middle supports the singularity incidences of the Lagrange cubics give the same undirected graph of valency at most four in each embedding. The general mixed component has twenty mutually orthogonal three-spherical modules with faithful direct sum.",
+      "current_proof": "sections/finite_cut_point_pairings.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2134,7 +2140,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 501,
+  "version": 502,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

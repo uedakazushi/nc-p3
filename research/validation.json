@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 501,
+  "version": 502,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "88269630e5936131c52806b8d6a391acec3f4ebe"
+    "source_commit": "d64c595304f02c9eede4aeef40a526b2f528750d"
   },
   "generation": {
     "result": "PASS",
-    "scope": "In all finite Frobenius windows triple evaluation has rank 16 for projectively identified ends and otherwise 19 or 20. A defect at rank 19 has support length at least nine. Fully asymmetric point-evaluation ideals are generated through degree four. Full triple rank implies an all-degree linear presentation of the quartic point ideal and occurs generically in the fifteen-dimensional mixed component."
+    "scope": "Point modules in every finite four-vertex cut are Serre-fixed up to shift three. Their mutual Ext dimensions are the mixed opposite rank defect, symmetric and independent of phase. For twenty reduced points with full middle supports the singularity incidences of the Lagrange cubics give the same undirected graph of valency at most four in each embedding. The general mixed component has twenty mutually orthogonal three-spherical modules with faithful direct sum."
   },
   "checks": [
     {
-      "command": "python computations/verify_finite_three_slot_evaluations.py",
+      "command": "python computations/verify_finite_cut_point_pairings.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Use the finite point quotient and the point modules of the four-vertex cut to determine the perpendicular pairings, regularity in the stable finite locus and the behavior of rank-nineteen fibers."
+    "Determine whether point-ideal generators or their conormal modules detect the remaining nonregular finite stable cuts. Analyze the rank-nineteen defect and fully asymmetric finite coordinate products and their relations."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 870,
+      "nc-p3": 871,
       "plan_ja": 20,
       "notes_ja": 33
     },
