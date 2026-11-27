@@ -1873,6 +1873,12 @@
       "current_result": "All strictly semistable pure-free unbranched one-dimensional point graph candidates are regular. Every regular rank-three four-shift-invariant line window, including those with branching elsewhere, is strictly semistable; its unique polystable limit has two complementary clean line systems and is quadratic PBW and regular. Two-by-two equality flags recognize the invariant-line case and necessarily have the same weight gap in all four slots.",
       "current_proof": "sections/curve_graded_limits.tex",
       "global_coverage": false
+    },
+    {
+      "id": "INVARIANT-LINE-FILTERED-LIFTS-AND-OBSTRUCTIONS",
+      "current_result": "All filtered lifts over all invertible split inverse tensors are classified with their marked equivalence by 48 linear constraints on 64 cubic-weight coefficients and a quadratic obstruction in dimension 5 (scalar normal monodromy) or 2 (nonscalar). The final 16 quartic-weight coefficients have affine solution fibers of dimension 3 or 0 respectively. Every solution is regular in all degrees, also with branching off the marked lines.",
+      "current_proof": "sections/invariant_line_filtered_lifts.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1930,7 +1936,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 467,
+  "version": 468,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
