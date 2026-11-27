@@ -2,7 +2,7 @@
 
 **共同研究：** 本リポジトリは大川新之介・植田一石の共同研究プロジェクトです。この表示は個々の論文の著者を確定するものではありません。
 
-**2026-11-27 / v446。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-27 / v447。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -461,6 +461,8 @@ Walsh三次元族を含む十五次元成分と、そこから出る周期2の�
 任意の有限点グラフで四文字評価は階数20、両対称の場合だけ19になる。通過成分の次元下界も得た。[部分スキームへの制限と余法線](sections/finite_four_slot_evaluations.tex)
 
 有限Frobenius窓はすべて半安定であり、厳密半安定な候補は例外なく全次数で正則となる。[重み不等式・等号条件・PBW還元](sections/finite_window_semistability.tex)
+
+有限窓の安定性を、長さ9以上の局所点から復元する高々二点の旗で判定した。[局所環による必要十分条件](sections/finite_intrinsic_stability_test.tex)
 
 非恒等の平面グラフを基底に持つOre窓では、指定点を忘れた同型類も決定した。[正規形と平坦特殊化](sections/plane_graph_ore_windows.tex)・[検算](computations/verify_plane_graph_ore.py)
 

@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 446,
+  "version": 447,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "7ab3d8bbd12a5a9bfaf921eedc215b26728e8a8d"
+    "source_commit": "aba3ed3a03d26206edbd67665fc6c397bb5ef3a6"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every finite Frobenius window is GIT semistable. Every strictly semistable finite candidate is all-degree standard two-sided Koszul AS regular with regular polystable limit. Every nontrivial equality filtration at a finite graph without a maximal tangent is uniform across the slots, preserves both cut ranks, and gives an explicit quadratic PBW initial window. Only stable finite candidates remain for general all-degree recognition."
+    "scope": "GIT stability on the entire finite Frobenius graph locus is decided by at most two intrinsic planar point flags, besides the always strictly semistable maximal tangents. The middle-double flag uses only the restrictions of two quadratic relations to tangent planes. The simple-flag test recovers its tangent line from the intrinsic square tangent cone. Only lengths at least nine or ten, respectively, need checking. Every all-curvilinear finite window is stable."
   },
   "checks": [
     {
-      "command": "python computations/verify_finite_window_semistability.py",
+      "command": "python computations/verify_finite_intrinsic_stability.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Classify nonquantum closed limits admitted by the uniform equality profiles, and exploit intrinsic rank bounds and curve reconstruction on stable finite candidates."
+    "Analyze stable finite candidates through the binary multiplication obstruction for bisymmetric windows and its projected secant construction."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 782,
+      "nc-p3": 783,
       "plan_ja": 17,
       "notes_ja": 30
     },

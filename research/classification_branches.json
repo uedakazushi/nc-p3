@@ -1747,6 +1747,12 @@
       "current_result": "Every finite Frobenius window is GIT semistable. Every strictly semistable finite candidate is all-degree standard two-sided Koszul AS regular with regular polystable limit. Every nontrivial equality filtration at a finite graph without a maximal tangent is uniform across the slots, preserves both cut ranks, and gives an explicit quadratic PBW initial window. Only stable finite candidates remain for general all-degree recognition.",
       "current_proof": "sections/finite_window_semistability.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FINITE-INTRINSIC-TWO-FLAG-STABILITY",
+      "current_result": "GIT stability on the entire finite Frobenius graph locus is decided by at most two intrinsic planar point flags, besides the always strictly semistable maximal tangents. The middle-double flag uses only the restrictions of two quadratic relations to tangent planes. The simple-flag test recovers its tangent line from the intrinsic square tangent cone. Only lengths at least nine or ten, respectively, need checking. Every all-curvilinear finite window is stable.",
+      "current_proof": "sections/finite_intrinsic_stability_test.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1804,7 +1810,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 446,
+  "version": 447,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
