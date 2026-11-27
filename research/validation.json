@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 498,
+  "version": 499,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "c6915c3475005c1988b48df9cce948dd77c8a87d"
+    "source_commit": "7a943adec348f6256fec509a1600daa72bf34479"
   },
   "generation": {
     "result": "PASS",
-    "scope": "In every standard regular window a nonempty pure-relation scheme meets at least two of the four edges and has length at least two on some single edge. A single active edge is impossible at any multiplicity; all four edges having only simple singleton or empty pure loci is also impossible."
+    "scope": "A conic second curve gives full six-dimensional restriction to the first line. Excess at the start forces a pure relation ending in the conic plane equation. A second consecutive conic gives another pure relation ending in its plane equation. This excludes double-ended excess for 121 and either endpoint excess for 1221."
   },
   "checks": [
     {
-      "command": "python computations/verify_sparse_pure_edges.py",
+      "command": "python computations/verify_conic_corridor_excess.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Enumerate arbitrary finite center pencils using cubic and conic projections, endpoint compatibility, contact multiplicities and moving-curve incidence. Isolate explicit frames for every remaining branched configuration."
+    "Combine the arbitrary finite-pencil degree enumeration with conic excess and the order-five cubic contact constraints; resolve all remaining branch frames."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 864,
+      "nc-p3": 865,
       "plan_ja": 20,
       "notes_ja": 33
     },

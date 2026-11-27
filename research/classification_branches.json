@@ -2059,6 +2059,12 @@
       "current_result": "In every standard regular window a nonempty pure-relation scheme meets at least two of the four edges and has length at least two on some single edge. A single active edge is impossible at any multiplicity; all four edges having only simple singleton or empty pure loci is also impossible.",
       "current_proof": "sections/sparse_pure_edge_exclusion.tex",
       "global_coverage": false
+    },
+    {
+      "id": "CONIC-CORRIDOR-EXCESS-AND-PLANE-RELATIONS",
+      "current_result": "A conic second curve gives full six-dimensional restriction to the first line. Excess at the start forces a pure relation ending in the conic plane equation. A second consecutive conic gives another pure relation ending in its plane equation. This excludes double-ended excess for 121 and either endpoint excess for 1221.",
+      "current_proof": "sections/conic_corridor_excess.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2116,7 +2122,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 498,
+  "version": 499,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
