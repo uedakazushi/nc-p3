@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-27",
-  "version": 534,
+  "version": 535,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -5276,6 +5276,15 @@
       "verification": [
         "computations/verify_central_character_periods.py"
       ]
+    },
+    {
+      "id": "OCTIC-NORMALIZATION-AND-84-DEGREE-REGULARITY",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "All center-finite standard regular finite-edge windows of vertex index up to four have four central parameters in path degree eight, including every exceptional fiber. On the fifteen-dimensional closure the criterion for a regular semiprime, domain or Noetherian window drops from path degree 564 to 84 (quotient 29 and complexes 32). In every component the same test plus a generic rank bound decides the center-finite regular branch through index four.",
+      "proof": "sections/index_four_octic_normalization.tex",
+      "verification": [
+        "computations/verify_index_four_octic_normalization.py"
+      ]
     }
   ],
   "document_paths": {
@@ -5339,7 +5348,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "e78428f237e83dc6b588058507c9299c536a9d55",
+  "reviewed_source_commit": "d920dd10db0009c374df046ed2c4dad47c0aa23b",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -5348,14 +5357,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Analyze remaining free-orbit octic basepoints using rank growth of arrow products and expand coverage of regular finite windows through their higher-dimensional simple representations.",
+    "immediate_next_action": "Classify the remaining non-Noetherian finite PI degenerations using their smaller simple representations and analyze the geometry of the octic normalization, including classification outside the fifteen-dimensional component.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/central_character_periods.tex",
-      "sections/periodic_stable_arrow_uniqueness.tex"
+      "sections/index_four_octic_normalization.tex",
+      "sections/central_character_periods.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "The stabilizer order h>1 of any nonvertex center character of a regular finite-edge center-finite window satisfies 2h≤s for vertex index s, and generic inertia is trivial. At index four the stacky points have exactly three explicit types, all detected by octic traces. The doubled polarization is Cartier; on the fifteen-dimensional domain closure the inertia has codimension at least two and 2K is Cartier. Full classification remains open.",
+    "state_of_claim": "All center-finite standard regular finite-edge windows of vertex index up to four have four central parameters in path degree eight, including every exceptional fiber. On the fifteen-dimensional closure the criterion for a regular semiprime, domain or Noetherian window drops from path degree 564 to 84 (quotient 29 and complexes 32). In every component the same test plus a generic rank bound decides the center-finite regular branch through index four. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
