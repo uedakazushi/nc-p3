@@ -2263,6 +2263,12 @@
       "current_result": "At any finite-edge center-finite index-four regular window the common quartic zeroes are exactly trace-orthogonal full four-dimensional simple fibers, pairs of the same marked two-dimensional simple at opposite scales, or two pairs of thin simples at opposite scales on distinct sites. The two non-Azumaya types never vanish on all octics.",
       "current_proof": "sections/index_four_quartic_basepoints.tex",
       "global_coverage": false
+    },
+    {
+      "id": "UNIQUE-PERIODIC-STABLE-ARROW-THROUGH-EACH-MARK",
+      "current_result": "On every polynomial-growth window a periodic sequence of stable equal-dimension Kronecker arrows is determined among all periodic sequences by any one arrow, up to vertex gauge and scaling. In particular distinct periodic cycles of oriented two-dimensional quadrics cannot intersect at a common phase. A primitive cycle of length 4m induces a simple of vertex dimension 2m with exact normalized grading stabilizer μ_m.",
+      "current_proof": "sections/periodic_stable_arrow_uniqueness.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2320,7 +2326,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 532,
+  "version": 533,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

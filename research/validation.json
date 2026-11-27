@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 532,
+  "version": 533,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "e205ec28f42bb31fdb52c101ef9576af44133326"
+    "source_commit": "c74a621b6d8edcf01de04759dbb45fbc1b594de1"
   },
   "generation": {
     "result": "PASS",
-    "scope": "At any finite-edge center-finite index-four regular window the common quartic zeroes are exactly trace-orthogonal full four-dimensional simple fibers, pairs of the same marked two-dimensional simple at opposite scales, or two pairs of thin simples at opposite scales on distinct sites. The two non-Azumaya types never vanish on all octics."
+    "scope": "On every polynomial-growth window a periodic sequence of stable equal-dimension Kronecker arrows is determined among all periodic sequences by any one arrow, up to vertex gauge and scaling. In particular distinct periodic cycles of oriented two-dimensional quadrics cannot intersect at a common phase. A primitive cycle of length 4m induces a simple of vertex dimension 2m with exact normalized grading stabilizer μ_m."
   },
   "checks": [
     {
-      "command": "python computations/verify_index_four_quartic_basepoints.py",
+      "command": "python computations/verify_periodic_stable_arrow_uniqueness.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze the four-dimensional simple with orthogonal two-step products and the allowable periodic simple packets; classify high-rank finite windows beyond the PI charts."
+    "Classify the inertia of center characters at index four and test octic traces on genuine doubled periods; continue the general finite-window classification."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 925,
+      "nc-p3": 926,
       "plan_ja": 21,
       "notes_ja": 35
     },
