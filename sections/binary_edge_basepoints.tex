@@ -1,0 +1,78 @@
+% !TeX root = ../papers/nc-p3.tex
+\section{点グラフの次元を問わない一辺の二元障害}
+\label{sec:binary-edge-basepoints}
+\begin{theorem}\label{thm:binary-edge-basepoints}
+標準有限Frobenius四窓で、一辺の六関係を一方の一文字を落として
+$P_2^*\otimes P_3^*$ に射影した像が、$P_5^*$ の乗法双対像に等しいとする。
+この窓は標準Koszul左右AS正則にはならない。点グラフの次元、純関係の有無、
+他の三辺の表示は任意でよい。順序を逆にした商についても同じである。
+\end{theorem}
+\begin{proof}[欠損を持つ評価層]
+定理\ref{thm:single-binary-edge-obstruction}の記号を用い、指定辺を $U,Q$、
+次の二文字を $V,W$ とする。$Q=P_3$ で、$P_2\subset U$ への圧縮を施す。
+指定の辺で六関係の射影が同型なので、圧縮しても対向する辺 $R_2$ の像と階数6は保たれる。
+特に圧縮窓でも $V,W$ の各支持は四次元、最初の二位置を合わせた $P_5^*$ も全支持である。
+
+$B=R_1^\perp\subset P_3\otimes V$ の十列の評価を取り、その像層を $E$、余核を $C$ とする。
+像は射影直線上の束で、核は $K=\bigoplus_{i=1}^{10-r}\mathcal O(-d_i)$、
+$r=\operatorname{rank}E$ と書く。定数列が独立なので $d_i\ge1$、
+$\sum_i d_i=\deg E\le3r$ である。最後の上界は $E\hookrightarrow V\otimes\mathcal O(3)$
+の最高外冪から従う。$E$ は十列で生成されるので $j\ge0$ では $H^1(E(j))=0$ である。
+$M_{3+j}=(BP_j)^\perp$ に対して二つの束列より
+\[
+ 0\longrightarrow H^1(K(j))\longrightarrow M_{3+j}^*
+       \longrightarrow H^0(C(j))\longrightarrow0
+\]
+を得る。右端からの双対包含は評価と可換である。特に $j=2$ のとき圧縮窓は
+$W\hookrightarrow M_5\subset P_5^*\otimes V^*$ を定める。
+
+$10-r\le 3r$ から $r\ge3$。$r=3$ では核は七項、$7\le\deg E\le9$ なので全て $d_i\le3$、
+$H^1(K(2))=0$ である。$C$ の捩れ長を $t$ とすると自由商は
+$\mathcal O(12-\deg E-t)$ である。この次数は $V\otimes\mathcal O(3)$ からの全射により3以上である。
+従って
+\[
+   h^0(C(-3))=t+12-\deg E-t-3+1=10-\deg E\le3.
+\]
+捩れ層の一次コホモロジーが零なのでこの式は拡大によらない。
+$V\to H^0(C(-3))$ に核があり、その文字と $P_5$ の任意の積は
+$H^0(C(2))=M_5^*$ で零になる。これは圧縮窓の $V$ が全支持であることに反する。
+\end{proof}
+\begin{proof}[有限長の欠損]
+残る $r=4$ では $C$ は捩れ長 $t=12-\deg E\le6$ であり、
+\[
+ \dim M_5=t+\sum_{i=1}^6(d_i-3)_+\ \ge4,\qquad
+ \sum_{i=1}^6(d_i-1)=6-t .
+\]
+$t=0$ は全射の場合で、定理\ref{thm:single-binary-edge-obstruction}が指数成長を与える。
+$1\le t\le3$ なら上式から唯一の分裂は $(1,1,1,1,1,7-t)$ で、$\dim M_5=4$ である。
+従って $W=M_5$。欠損の台の一点 $s$ と非零の剰余体商 $C\to k_s$ を取ると
+$H^0(C(2))^*\subset M_5$ に $\operatorname{ev}_s^{(5)}\otimes v_s$ という非零元がある。
+これは $P_5\otimes V\to C(2)|_s\to k$ の積評価である。
+この元に対応する第四文字で元の四テンソルを縮約する。圧縮後の三テンソルの末尾支持は $kv_s$ である。
+圧縮前にも末尾支持は同じである。実際最初の辺の六関係から $P_5^*$ への射影が同型なので、
+この三テンソルは $\operatorname{ev}_s^{(5)}$ の一意な持上げと $v_s$ の単純積となる。
+定理\ref{thm:all-endpoint-ranks-two}に反する。
+
+$4\le t\le6$ なら $d_i\le3$ だから $M_5=H^0(C(2))^*$ である。
+$C$ の零化イデアルが定める有効因子を $Z$ とすれば $\deg Z\le t$ である。
+もし $\deg Z\le5$ なら $Z$ 上で消える非零の五次式が全ての $V,W$ の組を消し、
+圧縮の $P_5$ 側の階数6に反する。従って $t=\deg Z=6$。
+局所の離散付値環で零化指数は基本因子の長さの最大値、層の長さはそれらの和であるから、
+各点で基本因子は一つである。従って $C$ は $Z$ 上可逆である。
+直線束を $Z$ 上で自明化して $D=H^0(\mathcal O_Z)$ を取ると
+$P_5\to D$ は同型である。$D$ は有限有効因子の環なので、
+完全積対合を与える汎関数 $\lambda$ があり $M_5\simeq D^*\simeq D$ となる。
+$V\to D$ の像を $v\mapsto\bar v$、$W\hookrightarrow D^*\simeq D$ を $w\mapsto\bar w$ とすると、
+圧縮窓は
+\[
+                (p,q,v,w)\longmapsto \lambda(\bar p\bar q\bar v\bar w)
+\]
+である。$Z$ の閉点 $s$ での評価は、辺 $R_1$ に
+$\operatorname{ev}_s^{(3)}\otimes v_s$ を与える。これは $R_1=M_3$ に対する上の右端の双対包含から従う。
+また $P_5\simeq D$ と完全対合により、同じ点での積評価
+$v_s\otimes w_s$ が $R_2$ に入る。$v_s$ は層の生成性から非零で、
+$w_s$ も非零である。零なら $\bar V\bar W$ の積がその極大イデアルに入り、
+$P_5$ に対する切断階数が6にならない。こうして中央文字 $v_s$ を共有する
+二つの純関係を\emph{元の}二辺に得る。定理\ref{thm:no-consecutive-pure-relations}で指数成長する。
+分裂次数の列挙は\path{computations/verify_binary_edge_basepoints.py}で再検算できる。
+\end{proof}

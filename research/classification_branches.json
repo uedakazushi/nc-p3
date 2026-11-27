@@ -1825,6 +1825,12 @@
       "current_result": "Every residual opposite-rank-fifteen component through the double binary sample has an all-degree regular geometric generic point, including each oriented residual divisor found at a generic binary point. One specified one-sided section for each orientation is generically all-degree regular of opposite rank ten. A rational corank-two calculation and a transverse quartic with two independently exchanged pairs force a specialization to the regular bisymmetric locus.",
       "current_proof": "sections/double_binary_residual_regularity.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SINGLE-BINARY-EDGE-ALL-GRAPH-DIMENSIONS",
+      "current_result": "A single edge projecting isomorphically to the binary Hankel six-plane excludes standard AS regularity for every graph dimension, including every neighboring pure relation and all torsion evaluations. The only large torsion compatible with full support is cyclic of length six and gives consecutive pure relations on the original adjacent edges.",
+      "current_proof": "sections/binary_edge_basepoints.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1882,7 +1888,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 459,
+  "version": 460,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

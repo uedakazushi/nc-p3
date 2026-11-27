@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 459,
+  "version": 460,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "3a8b1d2a646df128e71227efa8537f68fd4f5358"
+    "source_commit": "d215ceceba3eab281f7851e54c43357cb8cc236a"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every residual opposite-rank-fifteen component through the double binary sample has an all-degree regular geometric generic point, including each oriented residual divisor found at a generic binary point. One specified one-sided section for each orientation is generically all-degree regular of opposite rank ten. A rational corank-two calculation and a transverse quartic with two independently exchanged pairs force a specialization to the regular bisymmetric locus."
+    "scope": "A single edge projecting isomorphically to the binary Hankel six-plane excludes standard AS regularity for every graph dimension, including every neighboring pure relation and all torsion evaluations. The only large torsion compatible with full support is cyclic of length six and gives consecutive pure relations on the original adjacent edges."
   },
   "checks": [
     {
-      "command": "python computations/verify_double_binary_residual_quartic.py",
+      "command": "python computations/verify_binary_edge_basepoints.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Seek criteria for exceptional nonregular parameters on the residual and one-sided rank-ten loci; progress the parent finite and positive-dimensional windows beyond these components."
+    "Extend the single-edge exclusion to deficient projections and other rational support curves, and determine the exceptional parameters on the surviving regular components."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 804,
+      "nc-p3": 805,
       "plan_ja": 18,
       "notes_ja": 31
     },
