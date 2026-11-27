@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 520,
+  "version": 521,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "c6f489ffd2ddca04d61c78379e9a2093db3ca468"
+    "source_commit": "d41c6436272c4d74b8da253287a42f9c2dd9ce78"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All finite Frobenius windows marked by a dimension-two simple have sixteen arrow-rank profiles, with explicit linear tensor spaces and residual equivalences. Their dimensions are eighty-one except for the all-rank-three trivial holonomy case of dimension eighty-eight. Four full arrows give two binary catalecticants and exclude every apolar scheme of length at most six."
+    "scope": "Every finite central-cut window with an integral ordinary nodal quartic or nodal quartic double quadric is classified over its polarized center by the eight Kummer lifts of primitive Brauer classes. This includes exceptional automorphisms and gives the exact period by their action. All such centers have thirty nodes, twenty of type (1,3), without assuming their component, index or reduced markings."
   },
   "checks": [
     {
-      "command": "python computations/verify_two_dimensional_marked_forms.py",
+      "command": "python computations/verify_nodal_center_special_values.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Extend fixed-center recovery and the count of node types to all finite Frobenius windows passing the central cut test with nodal quartic centers, including exceptional values; resolve adjacent binary rank equations on the residual branch."
+    "Analyze the realizability and deformation of the nodal central charts and the remaining non-nodal or noncentral finite asymmetric windows."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 903,
+      "nc-p3": 905,
       "plan_ja": 21,
       "notes_ja": 34
     },
