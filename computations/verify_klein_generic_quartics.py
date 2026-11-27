@@ -4,25 +4,27 @@ from flint_rational_function import rational_function_field
 from verify_klein_center_lift import field_relations, field_paths, central_equations
 
 
-def cleared(row):
+def cleared(row,record=None):
  if not row:return {}
  els=list(row.values());unit=els[0].d**0
  den=unit
  for a in els:
   if a.d!=unit and a.d!=den:den=(den//den.gcd(a.d))*a.d
- return primitive({k:a.n*(den//a.d) for k,a in row.items()})
-def primitive(r):
+ return primitive({k:a.n*(den//a.d) for k,a in row.items()},record)
+def primitive(r,record=None):
  if not r:return r
  ordered=sorted(r.values(),key=len)
  g=ordered[0]
  for a in ordered[1:]:
   if g.is_constant():break
   g=g.gcd(a)
- if not g.is_constant():r={j:v//g for j,v in r.items()}
+ if not g.is_constant():
+  if record is not None:record(g)
+  r={j:v//g for j,v in r.items()}
  lead=min(r.values(),key=len).leading_coefficient()
  if lead!=1:r={j:v/lead for j,v in r.items()}
  return r
-def clear_entry(row,piv,j):
+def clear_entry(row,piv,j,record=None):
  if j not in row:return row
  a,b=row[j],piv[j]
  if a==b: ai=bi=a**0
@@ -34,22 +36,25 @@ def clear_entry(row,piv,j):
    x=out.get(k,0)-ai*v
    if x:out[k]=x
    elif k in out:del out[k]
- return primitive(out)
-def fraction_free_echelon(rows,limit=None):
+ return primitive(out,record)
+def fraction_free_echelon(rows,limit=None,record=None):
  if not rows:return {}
  typ=next((type(x) for row in rows for x in row.values()),None)
- work=[cleared(r) for r in rows if r]
+ work=[cleared(r,record) for r in rows if r]
  piv={}
  while work:
   j=min(min(r) for r in work)
   idx=min((i for i in range(len(work)) if j in work[i]),key=lambda i:(len(work[i]),sum(len(v) for v in work[i].values())))
   p=work.pop(idx)
-  work=[t for row in work if (t:=clear_entry(row,p,j))]
+  if record is not None:record(p[j])
+  work=[t for row in work if (t:=clear_entry(row,p,j,record))]
   piv[j]=p
   if limit==len(piv):break
  for j in sorted(piv,reverse=True):
   for k in sorted(piv[j]):
-   if k>j and k in piv:piv[j]=clear_entry(piv[j],piv[k],k)
+   if k>j and k in piv:piv[j]=clear_entry(piv[j],piv[k],k,record)
+ if record is not None:
+  for j,row in piv.items():record(row[j])
  return {j:{k:typ(v,row[j]) for k,v in row.items()} for j,row in piv.items()}
 
 if __name__=='__main__':

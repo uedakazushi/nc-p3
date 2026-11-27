@@ -1387,6 +1387,12 @@
       "current_result": "All coefficient completions of the remaining third sparse thin shape have an explicit three-parameter normal form. A degree-four central quotient and a length-fourteen free-module certificate over F_1009 give two actual regular characteristic-zero fibers without assuming any generic Hilbert bound. All three sparse horizontal families have a Zariski open of regular closed points free over four central quartics; every regular specialization satisfies s_512.",
       "current_proof": "sections/parallel_third_rectangle.tex",
       "global_coverage": false
+    },
+    {
+      "id": "PARALLEL-DOUBLE-ZERO-CURVE",
+      "current_result": "Every fiber on the double-zero third-rectangle curve is standard AS and free over four central quartics. The full unmarked coordinate is X=v squared; two shifts invert it to 4/X, giving period two only at X=+-2 and otherwise four. A rational-function chart, the two tensor symmetries and forty residual factors certify all algebraic exceptions.",
+      "current_proof": "sections/parallel_double_zero_curve.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1444,7 +1450,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 386,
+  "version": 387,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

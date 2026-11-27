@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 386,
+  "version": 387,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "b18a7677d6a49c85353a69a057759590c9fb081b"
+    "source_commit": "9ccb69ced5d7e13e513054c08aa1127d9c0b4171"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All coefficient completions of the remaining third sparse thin shape have an explicit three-parameter normal form. A degree-four central quotient and a length-fourteen free-module certificate over F_1009 give two actual regular characteristic-zero fibers without assuming any generic Hilbert bound. All three sparse horizontal families have a Zariski open of regular closed points free over four central quartics; every regular specialization satisfies s_512."
+    "scope": "Every fiber on the double-zero third-rectangle curve is standard AS and free over four central quartics. The full unmarked coordinate is X=v squared; two shifts invert it to 4/X, giving period two only at X=+-2 and otherwise four. A rational-function chart, the two tensor symmetries and forty residual factors certify all algebraic exceptions."
   },
   "checks": [
     {
-      "command": "python computations/verify_parallel_third_rectangle.py",
+      "command": "python computations/verify_parallel_double_zero_curve.py",
       "result": "PASS"
     },
     {
@@ -52,12 +52,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine the individual exceptional horizontal fibers and their full unmarked equivalences, including the one-parameter double-zero stratum, and continue unrestricted coverage."
+    "Recover unmarked coordinates on all of the third rectangle and on the other horizontal sheets, settle their remaining regularity loci, and continue unrestricted coverage."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 678,
+      "nc-p3": 679,
       "plan_ja": 15,
       "notes_ja": 27
     },
