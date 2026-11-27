@@ -1789,6 +1789,12 @@
       "current_result": "At a generic oriented stable binary obstruction, the unrestricted fifteen-dimensional component has opposite determinant a^6 b^6 D, with three independent smooth local parameters. The two one-sided regular divisors have generic opposite rank ten, the ambient generic rank is sixteen, and the residual divisor has generic rank fifteen, reduced finite points and period four. Its intersection with the bisymmetric crossing recovers the entire local nonregular binary boundary. Its own generic AS status is still open.",
       "current_proof": "sections/binary_opposite_determinant.tex",
       "global_coverage": false
+    },
+    {
+      "id": "ELLIPTIC-TWO-TORSION-UNRESTRICTED-CROSSING",
+      "current_result": "The common thirteen-dimensional component at the binary boundary is the closure of the smooth elliptic pencils whose ordered degree-four line bundles differ by a nontrivial two-torsion class. The four cross-diagonal section space has exactly the two mixed signs on these elliptic curves and vanishes off two-torsion. Every finite binary obstruction is in this closure, by a basepoint-free pencil on a two-gon with multidegrees (4,0),(3,1) and a Legendre two-torsion smoothing.",
+      "current_proof": "sections/elliptic_two_torsion_crossing.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1846,7 +1852,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 453,
+  "version": 454,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

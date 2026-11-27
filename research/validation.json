@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 453,
+  "version": 454,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "66f6c51a24030e5f82dfde2e22d5d76c86707b31"
+    "source_commit": "281c102d4dd44aa35a0159b1a89bdadf29f585ef"
   },
   "generation": {
     "result": "PASS",
-    "scope": "At a generic oriented stable binary obstruction, the unrestricted fifteen-dimensional component has opposite determinant a^6 b^6 D, with three independent smooth local parameters. The two one-sided regular divisors have generic opposite rank ten, the ambient generic rank is sixteen, and the residual divisor has generic rank fifteen, reduced finite points and period four. Its intersection with the bisymmetric crossing recovers the entire local nonregular binary boundary. Its own generic AS status is still open."
+    "scope": "The common thirteen-dimensional component at the binary boundary is the closure of the smooth elliptic pencils whose ordered degree-four line bundles differ by a nontrivial two-torsion class. The four cross-diagonal section space has exactly the two mixed signs on these elliptic curves and vanishes off two-torsion. Every finite binary obstruction is in this closure, by a basepoint-free pencil on a two-gon with multidegrees (4,0),(3,1) and a Legendre two-torsion smoothing."
   },
   "checks": [
     {
-      "command": "python computations/verify_binary_opposite_determinant.py",
+      "command": "python computations/verify_elliptic_two_torsion_crossing.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine the AS behavior of the residual rank-fifteen divisor or a general structure theorem for its two opposite bilinear kernels, and use stable finite edge configurations to constrain the remaining unrestricted locus."
+    "Analyze the irreducible rank-fifteen branch and its one-sided specializations, using the single binary-edge relation and the symplectic linear complex on its cubic curve."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 794,
+      "nc-p3": 796,
       "plan_ja": 18,
       "notes_ja": 31
     },
