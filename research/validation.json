@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 387,
+  "version": 388,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "9ccb69ced5d7e13e513054c08aa1127d9c0b4171"
+    "source_commit": "f48320180987059d8db650738c66cb3d06b9bec7"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every fiber on the double-zero third-rectangle curve is standard AS and free over four central quartics. The full unmarked coordinate is X=v squared; two shifts invert it to 4/X, giving period two only at X=+-2 and otherwise four. A rational-function chart, the two tensor symmetries and forty residual factors certify all algebraic exceptions."
+    "scope": "The entire third rectangle has explicit unmarked quotient (X,Y,h), all period and opposite-rank strata, and an irreducible single-zero surface with two transverse local branches along the double-zero curve. Every point of that curve has a regular neighborhood in the ambient family."
   },
   "checks": [
     {
-      "command": "python computations/verify_parallel_double_zero_curve.py",
+      "command": "python computations/verify_third_rectangle_orbits.py",
       "result": "PASS"
     },
     {
@@ -52,12 +52,12 @@
     }
   ],
   "open_mathematics": [
-    "Recover unmarked coordinates on all of the third rectangle and on the other horizontal sheets, settle their remaining regularity loci, and continue unrestricted coverage."
+    "Determine regularity on the remaining third-rectangle fibers, stratify the other horizontal and vertical rectangles, and extend coverage to unrestricted windows."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 679,
+      "nc-p3": 680,
       "plan_ja": 15,
       "notes_ja": 27
     },

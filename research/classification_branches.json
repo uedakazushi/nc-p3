@@ -1393,6 +1393,12 @@
       "current_result": "Every fiber on the double-zero third-rectangle curve is standard AS and free over four central quartics. The full unmarked coordinate is X=v squared; two shifts invert it to 4/X, giving period two only at X=+-2 and otherwise four. A rational-function chart, the two tensor symmetries and forty residual factors certify all algebraic exceptions.",
       "current_proof": "sections/parallel_double_zero_curve.tex",
       "global_coverage": false
+    },
+    {
+      "id": "THIRD-RECTANGLE-UNMARKED-QUOTIENT",
+      "current_result": "The entire third rectangle has explicit unmarked quotient (X,Y,h), all period and opposite-rank strata, and an irreducible single-zero surface with two transverse local branches along the double-zero curve. Every point of that curve has a regular neighborhood in the ambient family.",
+      "current_proof": "sections/third_rectangle_orbits.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1450,7 +1456,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 387,
+  "version": 388,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
