@@ -1333,6 +1333,12 @@
       "current_result": "Every sparse regular-representation Klein window with two rank-two colors on each adjacent cut lies among 148 parallel-direction or 51 transverse-direction support orbits. Exhaustive matching of four rank-one rectangles and all thick-cell completions, followed by free-coordinate growth, consecutive pure relations and cubic slice bounds, verifies both lists.",
       "current_proof": "sections/klein_two_doublet_supports.tex",
       "global_coverage": false
+    },
+    {
+      "id": "KLEIN-SPARSE-TRANSVERSE",
+      "current_result": "All transverse doublet Klein windows are covered, with no assumption on zero coefficients, by one family of unordered distinct points of P1. The 51 sparse supports have 63 coefficient components; 61 fail a character-resolved Hilbert test. One point and one torus are regular and give precisely the missing infinity boundary, including its rank-twelve specializations. Every object has period one, and reversal preserves its indexed class. Full unmarked redundancy of the projective parameters is still open.",
+      "current_proof": "sections/klein_sparse_transverse.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1390,7 +1396,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 377,
+  "version": 378,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
