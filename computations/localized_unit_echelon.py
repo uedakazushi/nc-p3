@@ -2,7 +2,7 @@
 from collections import Counter
 
 
-def unit_echelon(rows,units):
+def unit_echelon(rows,units,record=None):
     typ = next((type(v) for row in rows for v in row.values()),None)
     if typ is None:
         return {}
@@ -22,6 +22,11 @@ def unit_echelon(rows,units):
         if key not in unit_cache:
             unit_cache[key] = nonunit_part(f).is_constant()
         return unit_cache[key]
+
+    def require_unit(f):
+        if not is_unit(f):
+            assert record is not None,'Pivot outside the specified principal open set'
+            record(nonunit_part(f))
 
     def primitive(row):
         if not row:
@@ -63,22 +68,25 @@ def unit_echelon(rows,units):
         den = next(iter(row.values())).d**0
         for x in row.values():
             den = (den//den.gcd(x.d))*x.d
-        assert is_unit(den)
+        require_unit(den)
         work.append(primitive({j:x.n*(den//x.d) for j,x in row.items()}))
 
     pivots = {}
     while work:
         columns = Counter(j for row in work for j in row)
-        choices = [((int(not f.is_constant()),(len(row)-1)*(columns[j]-1),len(f),len(row),j),i,j)
-                   for i,row in enumerate(work) for j,f in row.items() if is_unit(f)]
+        choices = [((0 if f.is_constant() else 1 if is_unit(f) else 2,
+                     (len(row)-1)*(columns[j]-1),len(f),len(row),j),i,j)
+                   for i,row in enumerate(work) for j,f in row.items() if record is not None or is_unit(f)]
         assert choices,'No pivot invertible throughout the specified open set'
         _,i,j = min(choices)
         pivot = work.pop(i)
+        require_unit(pivot[j])
         pivots[j] = pivot
         work = [out for row in work if (out:=clear(row,pivot,j))]
     for j in reversed(pivots):
         for k in list(pivots[j]):
             if k!=j and k in pivots:
                 pivots[j] = clear(pivots[j],pivots[k],k)
-    assert all(is_unit(row[j]) for j,row in pivots.items())
+    for j,row in pivots.items():
+        require_unit(row[j])
     return {j:{k:typ(v,row[j]) for k,v in row.items()} for j,row in pivots.items()}

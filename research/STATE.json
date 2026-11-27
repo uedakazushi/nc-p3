@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-27",
-  "version": 391,
+  "version": 392,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -3963,6 +3963,18 @@
         "computations/verify_parallel_rectangle_surface.py",
         "computations/localized_unit_echelon.py"
       ]
+    },
+    {
+      "id": "PARALLEL-SUPPORT-145-ALL-REGULAR-FIBERS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "Both support-145 surfaces and their horizontal boundary strata are standard Koszul two-sided AS-regular exactly when ay differs from minus one. Every regular positive fiber is free over four central quartics and its twist is free over four central elements of degrees 4,4,8,8. The full quadratic-cone quotient and its period and rank strata restrict to this locus.",
+      "proof": "sections/parallel_rectangle_surface_regularity.tex",
+      "verification": [
+        "computations/verify_rectangular_surface_residual_points.py",
+        "computations/verify_rectangular_surface_cut_charts.py",
+        "computations/verify_rectangular_surface_curve_strata.py",
+        "research/rectangular_surface_cut_factors.json"
+      ]
     }
   ],
   "document_paths": {
@@ -4026,7 +4038,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "9af7dab48ac9d123c7abb8a54fb836f700bd571e",
+  "reviewed_source_commit": "b12da4398a53e5949b0481ca33dfa1270d0f6e39",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -4035,14 +4047,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Settle all-degree regularity off ay=-1 on the support-145 surfaces, then complete the other horizontal and unrestricted windows.",
+    "immediate_next_action": "Complete regularity on the third rectangle and compare its unmarked stabilizers, then resolve the remaining horizontal rectangles and unrestricted windows.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/parallel_rectangle_surface.tex",
-      "sections/parallel_septic_curve.tex"
+      "sections/parallel_rectangle_surface_regularity.tex",
+      "sections/parallel_rectangle_surface.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "Both full horizontal support-145 surfaces have the same explicit quadratic-cone quotient by simultaneous inversion, with all period and opposite-rank strata. All fibers on ay=-1 are irregular. Off that divisor the first five path modules and the entire positive-sign quartic center are free on the parameter ring and specialize in every fiber. Full classification remains open.",
+    "state_of_claim": "Both support-145 surfaces and their horizontal boundary strata are standard Koszul two-sided AS-regular exactly when ay differs from minus one. Every regular positive fiber is free over four central quartics and its twist is free over four central elements of degrees 4,4,8,8. The full quadratic-cone quotient and its period and rank strata restrict to this locus. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

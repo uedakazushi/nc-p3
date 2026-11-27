@@ -1,17 +1,25 @@
 {
   "schema_version": 2,
-  "version": 391,
-  "date": "2026-11-26",
+  "version": 392,
+  "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "9af7dab48ac9d123c7abb8a54fb836f700bd571e"
+    "source_commit": "b12da4398a53e5949b0481ca33dfa1270d0f6e39"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Both full horizontal support-145 surfaces have the same explicit quadratic-cone quotient by simultaneous inversion, with all period and opposite-rank strata. All fibers on ay=-1 are irregular. Off that divisor the first five path modules and the entire positive-sign quartic center are free on the parameter ring and specialize in every fiber."
+    "scope": "Both support-145 surfaces and their horizontal boundary strata are standard Koszul two-sided AS-regular exactly when ay differs from minus one. Every regular positive fiber is free over four central quartics and its twist is free over four central elements of degrees 4,4,8,8. The full quadratic-cone quotient and its period and rank strata restrict to this locus."
   },
   "checks": [
     {
-      "command": "python computations/verify_parallel_rectangle_surface.py",
+      "command": "python computations/verify_rectangular_surface_cut_charts.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_rectangular_surface_curve_strata.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_rectangular_surface_residual_points.py",
       "result": "PASS"
     },
     {
@@ -52,14 +60,14 @@
     }
   ],
   "open_mathematics": [
-    "Settle all-degree regularity off ay=-1 on the support-145 surfaces, then complete the other horizontal and unrestricted windows."
+    "Complete regularity on the third rectangle and compare its unmarked stabilizers, then resolve the remaining horizontal rectangles and unrestricted windows."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 684,
+      "nc-p3": 686,
       "plan_ja": 15,
-      "notes_ja": 27
+      "notes_ja": 28
     },
     "scope": "LuaLaTeX built the manuscript, plan and research notes."
   },
