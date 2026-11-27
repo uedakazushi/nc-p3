@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 408,
+  "version": 409,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "d36df07e3b3f3b012b38f0d9a1059b4d1bf5d725"
+    "source_commit": "7a552d6c26b67c23cab743b7ef76f1c63a5e5aff"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every sparse Klein-bisymmetric marked tensor has an all-degree test using only the opposite rank and two Segre incidence tests. At z=-1 the full negative exchange quotient is an explicit open weighted projective threefold, with ranks eight, ten, twelve and its shift determined. At z=0 it equals the negative vertical rectangle 112 with exactly four nonregular lines, and at z=1 no invertible-corner exchange is regular."
+    "scope": "The full projective zero-parameter negative exchange quotient is an explicit open weighted projective threefold. All its shifts, period and opposite-rank strata and unmarked comparisons at infinity are determined via filtered four-line and double-line cones. The bare integral quadric cone is the regular infinite-parameter limit of the smooth quadric graph branch."
   },
   "checks": [
     {
-      "command": "python computations/verify_exchange_end_values.py",
+      "command": "python computations/verify_zero_exchange_projective_flags.py",
       "result": "PASS"
     },
     {
@@ -116,12 +116,12 @@
     }
   ],
   "open_mathematics": [
-    "Classify the unmarked B=0 projective boundary of the vertical rectangle and continue covering unrestricted higher-rank windows."
+    "Classify the full-thin rank-one cross-block boundary without an invertible corner, then the remaining sparse and unrestricted windows."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 713,
+      "nc-p3": 715,
       "plan_ja": 16,
       "notes_ja": 28
     },

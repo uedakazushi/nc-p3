@@ -1519,6 +1519,12 @@
       "current_result": "Every sparse Klein-bisymmetric marked tensor has an all-degree test using only the opposite rank and two Segre incidence tests. At z=-1 the full negative exchange quotient is an explicit open weighted projective threefold, with ranks eight, ten, twelve and its shift determined. At z=0 it equals the negative vertical rectangle 112 with exactly four nonregular lines, and at z=1 no invertible-corner exchange is regular.",
       "current_proof": "sections/negative_exchange_end_values.tex",
       "global_coverage": false
+    },
+    {
+      "id": "ZERO-EXCHANGE-PROJECTIVE-QUOTIENT",
+      "current_result": "The full projective zero-parameter negative exchange quotient is an explicit open weighted projective threefold. All its shifts, period and opposite-rank strata and unmarked comparisons at infinity are determined via filtered four-line and double-line cones. The bare integral quadric cone is the regular infinite-parameter limit of the smooth quadric graph branch.",
+      "current_proof": "sections/zero_exchange_projective_quotient.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1576,7 +1582,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 408,
+  "version": 409,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
