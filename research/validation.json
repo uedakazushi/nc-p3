@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 397,
+  "version": 398,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "fd6a40b8b792cfe79e7beb3a4457f5c247d4df1a"
+    "source_commit": "85b34b2c60fcb61a41e91b53da093a219a2dacf8"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every horizontal support-85 candidate outside b+c=0 has an intrinsic four-frame and an unmarked torus chart with no residual identifications. Periods are exactly four except the two vertical intersection lines of period two. Degree four is standard exactly off b+c=0; the entire low path profile and quartic center (3,2,0,0) are constant there."
+    "scope": "All opposite-rank strata and their incidences on horizontal 85 are explicit. The rank-14 curve is rational, and the rank-10 locus is exactly the two one-sided symmetric surfaces. Every rank-ten point is module-finite over the full five-dimensional quartic center. A length-13 central-quotient test is necessary and sufficient there and on both sign twists."
   },
   "checks": [
     {
-      "command": "python computations/verify_first_rectangle_horizontal_frames.py",
+      "command": "python computations/verify_first_rectangle_edge_center.py",
       "result": "PASS"
     },
     {
@@ -60,12 +60,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine the all-degree regularity locus on 85 and 144/146/147, together with remaining unmarked horizontal exceptions and unrestricted coverage."
+    "Resolve the resulting finite regularity conditions on the entire rank-ten surfaces and the remaining higher-rank horizontal and unrestricted strata."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 692,
+      "nc-p3": 694,
       "plan_ja": 15,
       "notes_ja": 28
     },

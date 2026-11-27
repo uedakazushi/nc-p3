@@ -1453,6 +1453,12 @@
       "current_result": "Every horizontal support-85 candidate outside b+c=0 has an intrinsic four-frame and an unmarked torus chart with no residual identifications. Periods are exactly four except the two vertical intersection lines of period two. Degree four is standard exactly off b+c=0; the entire low path profile and quartic center (3,2,0,0) are constant there.",
       "current_proof": "sections/first_rectangle_horizontal_frames.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FIRST-RECTANGLE-RANK-STRATA",
+      "current_result": "All opposite-rank strata and their incidences on horizontal 85 are explicit. The rank-14 curve is rational, and the rank-10 locus is exactly the two one-sided symmetric surfaces. Every rank-ten point is module-finite over the full five-dimensional quartic center. A length-13 central-quotient test is necessary and sufficient there and on both sign twists.",
+      "current_proof": "sections/first_rectangle_rank_strata.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1510,7 +1516,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 397,
+  "version": 398,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

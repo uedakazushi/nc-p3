@@ -105,7 +105,10 @@ def exact_projection(rows, size, unit=one, specialize=residue, prime=101):
     return determinant, free, projection
 
 
-def quotient_layers(windows, sections, start, limit, unit, project):
+FOUR_QUARTIC_PROFILE = (1, 4, 10, 20, 31, 40, 44, 40, 31, 20, 10, 4, 1, 0)
+
+
+def quotient_layers(windows, sections, start, limit, unit, project, profile=FOUR_QUARTIC_PROFILE):
     """Append one arrow and impose terminal quadratic relations and the central cut."""
     paths = {(0, h): [()] if h == 0 else [] for h in range(4)}
     arrows = {}
@@ -121,7 +124,6 @@ def quotient_layers(windows, sections, start, limit, unit, project):
             add_multiple(row, arrows[len(prefix), h, word[-1]][j], value)
         return row
 
-    profile = (1, 4, 10, 20, 31, 40, 44, 40, 31, 20, 10, 4, 1, 0)
     for n in range(1, limit + 1):
         for h in range(4):
             words = [prefix + (a,) for a in range(4) for prefix in paths[n - 1, h ^ a]]

@@ -9,7 +9,7 @@ from flint_rational_function import rational_function_field
 from localized_unit_echelon import unit_echelon
 from verify_klein_center_lift import field_paths,central_equations
 from verify_parallel_rectangle_surface import K,U,a,matrix,s,window,y
-from verify_rank_fourteen_central_cut import quotient_layers
+from verify_rank_fourteen_central_cut import FOUR_QUARTIC_PROFILE,quotient_layers
 
 CERTIFICATE = Path(__file__).resolve().parents[1]/'research'/'rectangular_surface_cut_factors.json'
 
@@ -17,6 +17,10 @@ CERTIFICATE = Path(__file__).resolve().parents[1]/'research'/'rectangular_surfac
 def central_cut_data(w,field,units):
     rel = [[(h,{(j,j^h):field.from_sympy(s.factor(c[j])) for j in K if c[j]})
             for h in K for c in matrix(w,p,h).columnspace()] for p in K]
+    return relation_cut_data(rel,field,units)
+
+
+def relation_cut_data(rel,field,units,full_center=False):
     def reduce(rows):
         return unit_echelon(rows,units)
     basis,image = field_paths(rel,field.one,reduce)
@@ -26,7 +30,7 @@ def central_cut_data(w,field,units):
         piv = reduce(rows)
         free = [j for j in range(width) if j not in piv]
         assert len(free)==3-h
-        for j in ((free[0],free[2]) if h==0 else free):
+        for j in ((free[0],free[2]) if h==0 and not full_center else free):
             coefficients = {j:field.one}|{k:-row[j] for k,row in piv.items() if j in row}
             offset = 0
             for p in K:
@@ -43,7 +47,7 @@ def cut_data():
     return central_cut_data(window(a,y,1),field,field.from_sympy(U*(a*y+1)).n)
 
 
-def chart(p,data):
+def chart(p,data,profile=FOUR_QUARTIC_PROFILE):
     field,units,rel,sections = data
     factors = set()
     integer_ring = fmpz_mpoly_ctx.get(units.context().names())
@@ -66,7 +70,8 @@ def chart(p,data):
         ids = {j:i for i,j in enumerate(free)}
         return free,[{ids[j]:field.one} if j in ids else {ids[k]:-v for k,v in piv[j].items() if k!=j}
                      for j in range(size)]
-    assert list(quotient_layers(rel,sections,p,13,field.one,project))==list(range(1,14))
+    limit = len(profile)-1
+    assert list(quotient_layers(rel,sections,p,limit,field.one,project,profile))==list(range(1,limit+1))
     return sorted(factors)
 
 
