@@ -1759,6 +1759,12 @@
       "current_result": "All nonregular finite bisymmetric Frobenius windows have an oriented binary decimic and octavic Gram presentation. Points are degree-20 fibers of finite flat projections of the third secant of the rational normal octic; nonfinite graphs lie exactly over the projected second secant. The discriminant has degree 90. The family contains an open set of stable nonregular Frobenius candidates with twenty distinct points.",
       "current_proof": "sections/binary_secant_obstructions.tex",
       "global_coverage": false
+    },
+    {
+      "id": "BINARY-APOLAR-RANK-AND-UNMARKED-ISOMORPHISM",
+      "current_result": "For every binary obstruction parameter the Frobenius condition is exactly rank two of its two-by-three apolar matrix. All such tensors have opposite rank eight. Both cubic and quartic intersections are proved in all parameters by displacement identities. The oriented binary marking is unique; indexed isomorphism on the finite locus amounts to simultaneous PGL2 transport of the decimic and octavic class. The oriented nonregular boundary is irreducible of quotient dimension twelve.",
+      "current_proof": "sections/binary_apolar_rank_test.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1816,7 +1822,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 448,
+  "version": 449,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

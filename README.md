@@ -2,7 +2,7 @@
 
 **共同研究：** 本リポジトリは大川新之介・植田一石の共同研究プロジェクトです。この表示は個々の論文の著者を確定するものではありません。
 
-**2026-11-27 / v448。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-27 / v449。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -465,6 +465,8 @@ Walsh三次元族を含む十五次元成分と、そこから出る周期2の�
 有限窓の安定性を、長さ9以上の局所点から復元する高々二点の旗で判定した。[局所環による必要十分条件](sections/finite_intrinsic_stability_test.tex)
 
 非正則な有限両対称窓の全体を二元十次形式と八次形式から復元した。一般の例は安定で相異なる20点を持つ。[割線被覆と判別式](sections/binary_secant_obstructions.tex)
+
+二元商を持つ窓では、二行三列の階数だけでFrobenius性が全例外を含め決まる。商の向きを固定した同型も求めた。[差分式と商の復元](sections/binary_apolar_rank_test.tex)
 
 非恒等の平面グラフを基底に持つOre窓では、指定点を忘れた同型類も決定した。[正規形と平坦特殊化](sections/plane_graph_ore_windows.tex)・[検算](computations/verify_plane_graph_ore.py)
 
