@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 382,
+  "version": 383,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "ae719efaaae18cc834ac722ca78d481b05c19635"
+    "source_commit": "fa2a057bdb4337e282a73b85ffe48c4aad4cc7cd"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Twisted three-line windows are indexed-isomorphic exactly for equal unordered coefficient quadruples, including the double-pair line. The symmetric and twisted three-line families, the transverse doublet family and the singly missing curve have pairwise disjoint unmarked images."
+    "scope": "All parallel masks 94--96 give exactly two regular period-one affine parameter planes, symmetric and cocycle twisted. On either plane the full unmarked identifications are swap and simultaneous sign, including product zero or one. Precisely the diagonal of the twisted plane is the infinity boundary of the transverse doublet family."
   },
   "checks": [
     {
-      "command": "python computations/verify_three_lines_twisted_isomorphism.py",
+      "command": "python computations/verify_parallel_symmetric_surface.py",
       "result": "PASS"
     },
     {
@@ -44,12 +44,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine the remaining parallel doublet coefficients and unmarked identifications, and cover windows without a prescribed Klein action."
+    "Resolve the other parallel rectangles, compare the symmetric plane to other rank-six sheets, and continue coverage without a prescribed Klein action."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 670,
+      "nc-p3": 672,
       "plan_ja": 15,
       "notes_ja": 27
     },

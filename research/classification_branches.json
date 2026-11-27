@@ -1363,6 +1363,12 @@
       "current_result": "Twisted three-line windows are indexed-isomorphic exactly for equal unordered coefficient quadruples, including the double-pair line. The symmetric and twisted three-line families, the transverse doublet family and the singly missing curve have pairwise disjoint unmarked images.",
       "current_proof": "sections/three_lines_twisted_isomorphism.tex",
       "global_coverage": false
+    },
+    {
+      "id": "PARALLEL-SYMMETRIC-SURFACE",
+      "current_result": "All parallel masks 94--96 give exactly two regular period-one affine parameter planes, symmetric and cocycle twisted. On either plane the full unmarked identifications are swap and simultaneous sign, including product zero or one. Precisely the diagonal of the twisted plane is the infinity boundary of the transverse doublet family.",
+      "current_proof": "sections/parallel_symmetric_surface.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1420,7 +1426,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 382,
+  "version": 383,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
