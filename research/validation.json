@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 512,
+  "version": 513,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "4855fbc91f1384cc398e8d328f2cff163e865fbe"
+    "source_commit": "ec054bf94ca824092568f73177619f5c1b8c2010"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every window in the established central open of the fully asymmetric fifteen-dimensional component is recovered from a smooth plane quartic and four semistable rank-four bundles. The marked central pencil is classified by the curve and the bundles up to common twist. For arbitrary admissible curve input a finite criterion uses paths through degree 36 and Koszul complexes through degree 16, even when only the first two central parameters lift centrally."
+    "scope": "The generic fifteen-dimensional asymmetric center has only isolated singularities and admits smooth polarized quartic K3 sections. Its twenty known (one,three) nodes cannot exhaust the singular locus, by periodic cyclic Euler localization on the four-object exceptional category. Additional (two,two,two,two) simples exist in finite number projectively. If all additional points are two-simple ordinary nodes there are exactly ten of them."
   },
   "checks": [
     {
-      "command": "python computations/verify_genus_three_curve_cut.py",
+      "command": "python computations/verify_central_k3_section.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Extend the central curve realization past the known open, and study the remaining asymmetric candidates via linked K3 pencils. Locate the rank-two representations in the unresolved central boundary."
+    "Recognize and count the newly forced two-dimensional vertex representations directly using determinantal quadrics and the finite edge graphs, including their rank-three degeneracies."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 890,
+      "nc-p3": 892,
       "plan_ja": 21,
       "notes_ja": 34
     },

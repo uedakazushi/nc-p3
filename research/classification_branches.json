@@ -2143,6 +2143,12 @@
       "current_result": "Every window in the established central open of the fully asymmetric fifteen-dimensional component is recovered from a smooth plane quartic and four semistable rank-four bundles. The marked central pencil is classified by the curve and the bundles up to common twist. For arbitrary admissible curve input a finite criterion uses paths through degree 36 and Koszul complexes through degree 16, even when only the first two central parameters lift centrally.",
       "current_proof": "sections/finite_genus_three_curve_cut.tex",
       "global_coverage": false
+    },
+    {
+      "id": "GENERIC-CENTRAL-K3-AND-ADDITIONAL-SINGULARITIES",
+      "current_result": "The generic fifteen-dimensional asymmetric center has only isolated singularities and admits smooth polarized quartic K3 sections. Its twenty known (one,three) nodes cannot exhaust the singular locus, by periodic cyclic Euler localization on the four-object exceptional category. Additional (two,two,two,two) simples exist in finite number projectively. If all additional points are two-simple ordinary nodes there are exactly ten of them.",
+      "current_proof": "sections/finite_central_k3_general_section.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2200,7 +2206,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 512,
+  "version": 513,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
