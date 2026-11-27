@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-27",
-  "version": 410,
+  "version": 411,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -4155,6 +4155,16 @@
       "verification": [
         "computations/verify_exchange_singular_corners.py"
       ]
+    },
+    {
+      "id": "MIXED-EXCHANGE-RESOLUTION",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "Without either exchange symmetry, all full-thin z=1, lambda squared unequal to one candidates of this color type are covered by the rational mixed-corner hypersurface and its translated chart. The other rank completions have a universal length-four obstruction of dimension at least fifty. The mixed chart smooths to the five-dimensional elliptic family and has four-dimensional unmarked image, generic period four and Klein stabilizer. Two explicit rank-sixteen fibers are certified regular in every degree.",
+      "proof": "sections/klein_mixed_exchange_resolution.tex",
+      "verification": [
+        "computations/verify_exchange_mixed_resolution.py",
+        "computations/verify_exchange_mixed_configurations.py"
+      ]
     }
   ],
   "document_paths": {
@@ -4218,7 +4228,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "0d8675fa373f7f18eb68dee1d9ba854770a2ceb1",
+  "reviewed_source_commit": "4c8e34b4e1a068c1d076d70d7b7011df3edd9a7a",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -4227,14 +4237,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Resolve the unrestricted full-thin exchange fiber at z=1, including the mixed corner resolution, and determine regularity without reversal symmetry; then cover sparse and unrestricted windows.",
+    "immediate_next_action": "Classify closed exceptional mixed-corner fibers and the simultaneous rank-one exchange fiber z=1, lambda=+/-1; cover remaining sparse and unrestricted windows.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/klein_singular_exchange_corners.tex",
-      "sections/zero_exchange_projective_quotient.tex"
+      "sections/klein_mixed_exchange_resolution.tex",
+      "sections/klein_singular_exchange_corners.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "All full-thin rank-one cross-block bisymmetric windows and their nontrivial twists are classified by regularity, including singular thick corners. The regular forms have period one. The twisted unmarked quotient is A^2 times G_m with explicit rank and stabilizer strata, yielding a distinct period-one divisor. The positive forms have a finite quadric factor-frame normal form. Full classification remains open.",
+    "state_of_claim": "Without either exchange symmetry, all full-thin z=1, lambda squared unequal to one candidates of this color type are covered by the rational mixed-corner hypersurface and its translated chart. The other rank completions have a universal length-four obstruction of dimension at least fifty. The mixed chart smooths to the five-dimensional elliptic family and has four-dimensional unmarked image, generic period four and Klein stabilizer. Two explicit rank-sixteen fibers are certified regular in every degree. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

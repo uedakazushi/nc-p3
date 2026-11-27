@@ -1,17 +1,21 @@
 {
   "schema_version": 2,
-  "version": 410,
+  "version": 411,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "0d8675fa373f7f18eb68dee1d9ba854770a2ceb1"
+    "source_commit": "4c8e34b4e1a068c1d076d70d7b7011df3edd9a7a"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All full-thin rank-one cross-block bisymmetric windows and their nontrivial twists are classified by regularity, including singular thick corners. The regular forms have period one. The twisted unmarked quotient is A^2 times G_m with explicit rank and stabilizer strata, yielding a distinct period-one divisor. The positive forms have a finite quadric factor-frame normal form."
+    "scope": "Without either exchange symmetry, all full-thin z=1, lambda squared unequal to one candidates of this color type are covered by the rational mixed-corner hypersurface and its translated chart. The other rank completions have a universal length-four obstruction of dimension at least fifty. The mixed chart smooths to the five-dimensional elliptic family and has four-dimensional unmarked image, generic period four and Klein stabilizer. Two explicit rank-sixteen fibers are certified regular in every degree."
   },
   "checks": [
     {
-      "command": "python computations/verify_exchange_singular_corners.py",
+      "command": "python computations/verify_exchange_mixed_resolution.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_exchange_mixed_configurations.py",
       "result": "PASS"
     },
     {
@@ -116,12 +120,12 @@
     }
   ],
   "open_mathematics": [
-    "Resolve the unrestricted full-thin exchange fiber at z=1, including the mixed corner resolution, and determine regularity without reversal symmetry; then cover sparse and unrestricted windows."
+    "Classify closed exceptional mixed-corner fibers and the simultaneous rank-one exchange fiber z=1, lambda=+/-1; cover remaining sparse and unrestricted windows."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 717,
+      "nc-p3": 719,
       "plan_ja": 16,
       "notes_ja": 28
     },
