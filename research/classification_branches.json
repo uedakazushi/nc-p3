@@ -1351,6 +1351,12 @@
       "current_result": "For parallel doublets whose thin relation is confined to a high-bit pair on some edge, all 67 support candidates are decided: 14 realizable supports are PBW at every exact-rank coefficient value and 53 never give standard objects. Five other parallel supports are likewise regular everywhere. Coefficient-independent periodic dictionary flags, all torus-root choices, unit column bases and length-four obstructions certify this result.",
       "current_proof": "sections/klein_parallel_flags.tex",
       "global_coverage": false
+    },
+    {
+      "id": "THREE-LINES-SYMMETRIC-ISOMORPHISM",
+      "current_result": "For the symmetric three-rank-one-color family the unordered four coefficients classify all unmarked indexed objects except the double-pair line. There r squared is identified with r squared divided by (r squared minus one), by the intrinsic binary isotropic graph. A unique six-node diagonal net, a recoverable five-form frame at triple equality, and the self-adjoint center distinguish every other specialization.",
+      "current_proof": "sections/three_lines_symmetric_isomorphism.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1408,7 +1414,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 380,
+  "version": 381,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
