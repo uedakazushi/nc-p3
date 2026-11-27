@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 521,
+  "version": 522,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "d41c6436272c4d74b8da253287a42f9c2dd9ce78"
+    "source_commit": "af66e2bbd6a488fcd15e02b35ca1f2e1aa159376"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every finite central-cut window with an integral ordinary nodal quartic or nodal quartic double quadric is classified over its polarized center by the eight Kummer lifts of primitive Brauer classes. This includes exceptional automorphisms and gives the exact period by their action. All such centers have thirty nodes, twenty of type (1,3), without assuming their component, index or reduced markings."
+    "scope": "For every prime central-cut window the generic vertex corner is a division algebra: an integral Hilbert multiplicity forces its index to equal its degree. The four normalization degrees are 1,4,16,64. All finite windows with certified normal genus-three quartic centers have only transverse A1 curves with balanced two-plus-two vertex modules."
   },
   "checks": [
     {
-      "command": "python computations/verify_nodal_center_special_values.py",
+      "command": "python computations/verify_central_cut_index_transverse_type.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze the realizability and deformation of the nodal central charts and the remaining non-nodal or noncentral finite asymmetric windows."
+    "Recover all ordinary and double-quadric finite normal central windows from their generic hyperplane Kummer classes, allowing singular curves and exceptional isolated singularities."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 905,
+      "nc-p3": 907,
       "plan_ja": 21,
       "notes_ja": 34
     },

@@ -180,3 +180,7 @@ Iyudu–Shkarin, *Three dimensional Sklyanin algebras and Gröbner bases* の三
 ## 正則正規一次直線列と中心斉次化
 
 Braverman–Gaitsgory, *Poincaré–Birkhoff–Witt theorem for quadratic algebras of Koszul type* のPBW条件を[正規一次直線列の分類](../sections/regular_normal_linear.tex)で三生成Koszul商に適用する。関係の符号は本文で固定し、滑らかなSklyanin商には四テンソルによる独立な正則性証明も与えた。今回外部原文の再取得は行っていない。
+
+## 有限中心窓の一般超平面の特異点
+
+J. T. Stafford and M. Van den Bergh, *Noncommutative resolutions and rational singularities* の、標数零のアフィン素なhomologically homogeneous代数の中心は有理特異点を持つという定理を使う。有限中心性、極大Cohen–Macaulay性、単純加群の射影次元が2となる理由は[適用箇所](../sections/central_cut_index_and_transverse_type.tex)に記した。Gorenstein有理曲面特異点のDu Val分類と、標数零の有限部分群による商表示を同箇所で使う。書誌照会はこの環境のプロキシで拒否され、今回原文の再取得はできていない。
