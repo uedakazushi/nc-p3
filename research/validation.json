@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 517,
+  "version": 518,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "703e93e67e3273a23e4fb3800d6779083920d30f"
+    "source_commit": "f000c2ec3c39d55033d527b7c056ce82fd4c6fbc"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The generic center map is generically finite, dominant and generically etale onto a component of thirty-nodal quartic threefolds. The unordered nodes recover the equation. Fixed-center deformations of the ordered window are trivial."
+    "scope": "The generic thirty-nodal center has rational divisor class group of rank one. Its unramified window class has period and index four. For fixed center identification and fixed Brauer class there are exactly four indexed windows, the four shifts. The proof compares minimal-rank twisted bundles on the generic K3 hyperplane over its own parameter field."
   },
   "checks": [
     {
-      "command": "python computations/verify_thirty_node_center_map.py",
+      "command": "python computations/verify_thirty_node_brauer_windows.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine marked normal forms for the finite windows with a two-dimensional simple, and recover the discrete fiber of the center map."
+    "Determine the entire Brauer group of the thirty-nodal centers and which remaining orientations occur, then continue the simple-marked coverage at the boundary."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 898,
+      "nc-p3": 899,
       "plan_ja": 21,
       "notes_ja": 34
     },
