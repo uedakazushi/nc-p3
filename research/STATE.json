@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-27",
-  "version": 427,
+  "version": 428,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -4309,6 +4309,15 @@
       "verification": [
         "computations/verify_torus_euler_profiles.py"
       ]
+    },
+    {
+      "id": "SPLIT-INVERSE-ALL-REGULAR-CLASSIFICATION",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "On arbitrary two-plane-split windows with ranks 1,4,1, simultaneous one-direction invertibility of the four mixed projections is equivalent to all eight pure-degree relations being nondegenerate. Every such window is standard quadratic PBW Koszul two-sided AS regular. Marked classification reduces to one two-by-two-by-two-by-two tensor and stabilizer-conjugacy classes of transporters between two inverse flattenings. Unmarking is finite, and for finite local stabilizer adds only simultaneous exchange of the two planes.",
+      "proof": "sections/split_inverse_windows.tex",
+      "verification": [
+        "computations/verify_split_inverse_windows.py"
+      ]
     }
   ],
   "document_paths": {
@@ -4372,7 +4381,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "96201fb8b96e22e09632b3164ded2136a2790ded",
+  "reviewed_source_commit": "7779495fecf55e584e064dc40a3281a32a9ceaa9",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -4381,14 +4390,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Use the seven weight profiles to classify torus-marked windows beyond Klein symmetry, beginning with mixed relation projections on the two-plus-two and one-plus-three profiles. Continue the unrestricted stabilizer-free component analysis.",
+    "immediate_next_action": "Resolve the reciprocal comparison on the simple-spectrum two-qubit-pair tensor chart, determine its components and exceptional orbits, then analyze the degenerate pure-plane relations.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/torus_euler_characters.tex",
-      "sections/klein_polystable_limits.tex"
+      "sections/split_inverse_windows.tex",
+      "sections/torus_euler_characters.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "For any torus action on any standard AS window, its equivariant Koszul Euler determinant splits into four linear cycle factors with actual torus characters. The four arrow determinants multiply to the fourth power of the socle character on the entire connected linear stabilizer. Two adjacent weights per slot allow only seven cyclic rank profiles. A two-plus-two action everywhere forces precisely one relation in each pure bidegree and four mixed relations per edge, and fixes the bigraded Hilbert series. Full classification remains open.",
+    "state_of_claim": "On arbitrary two-plane-split windows with ranks 1,4,1, simultaneous one-direction invertibility of the four mixed projections is equivalent to all eight pure-degree relations being nondegenerate. Every such window is standard quadratic PBW Koszul two-sided AS regular. Marked classification reduces to one two-by-two-by-two-by-two tensor and stabilizer-conjugacy classes of transporters between two inverse flattenings. Unmarking is finite, and for finite local stabilizer adds only simultaneous exchange of the two planes. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

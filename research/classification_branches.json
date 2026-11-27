@@ -1633,6 +1633,12 @@
       "current_result": "For any torus action on any standard AS window, its equivariant Koszul Euler determinant splits into four linear cycle factors with actual torus characters. The four arrow determinants multiply to the fourth power of the socle character on the entire connected linear stabilizer. Two adjacent weights per slot allow only seven cyclic rank profiles. A two-plus-two action everywhere forces precisely one relation in each pure bidegree and four mixed relations per edge, and fixes the bigraded Hilbert series.",
       "current_proof": "sections/torus_euler_characters.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SPLIT-INVERSE-ALL-REGULAR-CLASSIFICATION",
+      "current_result": "On arbitrary two-plane-split windows with ranks 1,4,1, simultaneous one-direction invertibility of the four mixed projections is equivalent to all eight pure-degree relations being nondegenerate. Every such window is standard quadratic PBW Koszul two-sided AS regular. Marked classification reduces to one two-by-two-by-two-by-two tensor and stabilizer-conjugacy classes of transporters between two inverse flattenings. Unmarking is finite, and for finite local stabilizer adds only simultaneous exchange of the two planes.",
+      "current_proof": "sections/split_inverse_windows.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1690,7 +1696,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 427,
+  "version": 428,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
