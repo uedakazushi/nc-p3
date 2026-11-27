@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 455,
+  "version": 456,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "5503ac087e994f831147253328330c08737fbe5c"
+    "source_commit": "d806c623a93462d25bf896edab8fbca0b67577e4"
   },
   "generation": {
     "result": "PASS",
-    "scope": "One binary multiplication edge alone in any finite-point Frobenius window forces opposite symmetry of the cubic letters and exponential growth, even without a mark or symmetry on any other edge. The adjacent vector-valued inverse system has forced splitting (1,1,1,1,1,7), and compressing the binary site splits dual paths into independent three-letter blocks of dimension at least three. Length 29 already violates the standard Hilbert function. The growth argument also applies off the finite graph under the stated two edge assumptions."
+    "scope": "The entire finite single-binary-edge obstruction, without any initial symmetry assumption, is the open Frobenius finite part of one irreducible marked linear-complex incidence. A nondegenerate alternating complex gives opposite rank ten and generically a unique binary mark, twenty reduced points and period four; its unmarked dimension is thirteen. A decomposable complex gives ranks nine and eight exactly for common factor degrees one and two, and otherwise a nonfinite graph. All finite non-bisymmetric windows in the family have minimum period four and are stable nonregular."
   },
   "checks": [
     {
-      "command": "python computations/verify_single_binary_edge_obstruction.py",
+      "command": "python computations/verify_binary_linear_complex.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Parameterize and classify the new stable non-bisymmetric nonregular single-edge locus via linear complexes of the twisted cubic, and test its incidence with the residual rank-fifteen divisor."
+    "Find additional unobstructed or excluded finite windows via binary scrolls with other splitting types or via the residual opposite-rank-fifteen locus; determine global component incidence beyond this single-edge boundary."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 797,
+      "nc-p3": 799,
       "plan_ja": 18,
       "notes_ja": 31
     },

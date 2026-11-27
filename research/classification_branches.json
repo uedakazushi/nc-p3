@@ -1801,6 +1801,12 @@
       "current_result": "One binary multiplication edge alone in any finite-point Frobenius window forces opposite symmetry of the cubic letters and exponential growth, even without a mark or symmetry on any other edge. The adjacent vector-valued inverse system has forced splitting (1,1,1,1,1,7), and compressing the binary site splits dual paths into independent three-letter blocks of dimension at least three. Length 29 already violates the standard Hilbert function. The growth argument also applies off the finite graph under the stated two edge assumptions.",
       "current_proof": "sections/single_binary_edge_obstruction.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FINITE-BINARY-LINEAR-COMPLEX-RANK-STRATIFICATION",
+      "current_result": "The entire finite single-binary-edge obstruction, without any initial symmetry assumption, is the open Frobenius finite part of one irreducible marked linear-complex incidence. A nondegenerate alternating complex gives opposite rank ten and generically a unique binary mark, twenty reduced points and period four; its unmarked dimension is thirteen. A decomposable complex gives ranks nine and eight exactly for common factor degrees one and two, and otherwise a nonfinite graph. All finite non-bisymmetric windows in the family have minimum period four and are stable nonregular.",
+      "current_proof": "sections/binary_linear_complex.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1858,7 +1864,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 455,
+  "version": 456,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
