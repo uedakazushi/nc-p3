@@ -1945,6 +1945,12 @@
       "current_result": "The entire locus attracted to a quantum closed orbit is closed under arbitrary regular specialization, even with moving quantum parameters and moving filtered deformation coefficients. All four triangle values have unit valuation; the special closed orbit is the quantum class of their residues. Every individual quantum attraction fiber is closed inside the regular locus.",
       "current_proof": "sections/quantum_regular_closure.tex",
       "global_coverage": false
+    },
+    {
+      "id": "ALL-TWO-EIGENVALUE-JORDAN-LINE-WINDOWS",
+      "current_result": "All nonsemisimple invertible split Bell line windows with two distinct squared eigenvalues are classified up to unmarked indexed isomorphism. The quantum limit and one or two distinguished edges suffice, except for one additional object over the mixed flip at a squared equal to one. All have period one; exactly two classes lie on the fifteen-dimensional component.",
+      "current_proof": "sections/split_two_eigenvalue_jordan.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2002,7 +2008,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 479,
+  "version": 480,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

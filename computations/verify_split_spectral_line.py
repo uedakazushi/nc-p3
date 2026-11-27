@@ -32,6 +32,10 @@ def compare(left, right):
 
 def line_tensor(s, maps):
     p = {q:(sp.Integer(1) if q[0] == q[1] else s) if q[:2] == q[2:] else 0 for q in BITS}
+    return reconstruct(p, maps)
+
+
+def reconstruct(p, maps):
     targets = [transport(reciprocal(p, i), basis, PAIRS[i])
                for i, basis in enumerate(((I,)*4, maps))]
     scale = sp.cancel(targets[0][BITS[0]]/targets[1][BITS[0]])
