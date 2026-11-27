@@ -2161,6 +2161,12 @@
       "current_result": "Every finite Frobenius point of the fifteen-dimensional component closure with twenty reduced pairwise Ext-orthogonal point modules admits a vertex-dimension-two simple, without assuming regularity at the point. Failure to admit one forces a nonreduced mark or a separator singularity edge. Stable four-layer cuts extend precisely when their top self-Ext is nonzero.",
       "current_proof": "sections/finite_two_dimensional_specialization.tex",
       "global_coverage": false
+    },
+    {
+      "id": "THIRTY-ORDINARY-NODES-AND-UNRAMIFIED-DIVISION-CLASS",
+      "current_result": "The generic center on the fifteen-dimensional component is a quartic threefold with exactly thirty ordinary double points. Twenty have simple vertex dimensions one and three, ten have two simples of vertex dimension two. Its function field has an unramified Brauer class of index four and is not stably rational.",
+      "current_proof": "sections/thirty_central_nodes.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2218,7 +2224,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 515,
+  "version": 516,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

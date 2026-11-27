@@ -72,6 +72,17 @@ class CentralFiber:
     def matrix(self, rows):
         return nmod_mat(rows, self.prime)
 
+    def pivot_columns(self, constraint):
+        reduced, rank = constraint.rref()
+        pivots = [
+            next(j for j in range(constraint.ncols()) if reduced[i, j])
+            for i in range(rank)
+        ]
+        return reduced, pivots
+
+    def invert(self, matrix):
+        return matrix.inv()
+
     def prefix(self, p, n, word):
         if not word:
             dim = len(self.basis[p, n])
@@ -120,10 +131,7 @@ class CentralFiber:
                 equations -= constant * include
             rows.extend(equations.table())
         constraint = self.matrix(rows) if rows else nmod_mat(0, len(words), prime)
-        reduced, rank = constraint.rref()
-        pivots = [
-            next(j for j in range(len(words)) if reduced[i, j]) for i in range(rank)
-        ]
+        reduced, pivots = self.pivot_columns(constraint)
         free = [j for j in range(len(words)) if j not in pivots]
         self.basis[p, n] = [words[j] for j in free]
         projection = []
@@ -148,7 +156,7 @@ class CentralFiber:
         action = nmod_mat(64, 64, self.prime)
         for t, c in section[0].items():
             action += c * self.prefix(0, 16, t)
-        return include.inv() * action
+        return self.invert(include) * action
 
     def center_dimension(self):
         rows = []

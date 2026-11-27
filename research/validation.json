@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 515,
+  "version": 516,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "678e84f690c07470cbac1dafe3b17da1ac8b03ef"
+    "source_commit": "6402bbcbd6dcb2d5ad5761f4b18e8a799d2eeea8"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every finite Frobenius point of the fifteen-dimensional component closure with twenty reduced pairwise Ext-orthogonal point modules admits a vertex-dimension-two simple, without assuming regularity at the point. Failure to admit one forces a nonreduced mark or a separator singularity edge. Stable four-layer cuts extend precisely when their top self-Ext is nonzero."
+    "scope": "The generic center on the fifteen-dimensional component is a quartic threefold with exactly thirty ordinary double points. Twenty have simple vertex dimensions one and three, ten have two simples of vertex dimension two. Its function field has an unramified Brauer class of index four and is not stably rational."
   },
   "checks": [
     {
-      "command": "python computations/verify_two_dimensional_specialization.py",
+      "command": "python computations/verify_thirty_central_nodes.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Use two-dimensional simple markings to reduce the covered asymmetric strata to cyclic binary tensor normal forms, and test regularity in those forms."
+    "Determine the degree and deformation image of the fifteen-dimensional component in the locus of thirty-nodal quartics and extend the simple-marked charts to exceptional windows."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 895,
+      "nc-p3": 896,
       "plan_ja": 21,
       "notes_ja": 34
     },
