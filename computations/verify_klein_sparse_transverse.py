@@ -14,12 +14,12 @@ POINT = 0x0ff066663c3caa55
 CURVE = 0x0ff066667e7eaff5
 
 
-def torus(mask):
+def torus_forms(mask,direction):
     words = [w for w in WORDS if mask&bit(w)]
     index = {w:i for i,w in enumerate(words)}
     equations,others = {},{}
     for p,b in product(range(2),K):
-        size = 3 if b in (0,1 if p==0 else 2) else 2
+        size = 3 if b in (0,1 if p==0 else direction) else 2
         for I,J in product(combinations(K,size),repeat=2):
             terms = []
             for pi in permutations(range(size)):
@@ -42,7 +42,7 @@ def torus(mask):
     m = s.Matrix(list(equations))
     d,left,right = smith(m)
     ds = [n for n in d.diagonal() if n]
-    assert all(abs(n)==1 for n in ds)
+    assert all(abs(n) in (1,2,4) for n in ds)
     rk = len(ds)
     signs = left*s.Matrix([int(v==-1) for v in equations.values()])
     assert all(e%2==0 for e in signs[rk:])
@@ -52,21 +52,33 @@ def torus(mask):
     gr = sum(bool(a) for a in e.diagonal())
     exponents = right[:,rk:]*rows.inv()[:,gr:]
     y = s.symbols('y:'+str(exponents.cols))
-    sign_vec = right[:,:rk]*signs[:rk,:]
-    w = {key:s.Integer(-1)**int(sign_vec[j]%2)*s.prod(v**int(e) for v,e in zip(y,row))
-         for j,(key,row) in enumerate(zip(words,exponents.tolist()))}
-    minors = set()
-    for f in others:
-        poly = s.factor(sum(v*s.prod(w[words[j]] for j in key) for key,v in f))
-        if poly==0:
-            continue
-        if not y:
-            return w,y,[s.Integer(1)]
-        unit_free = s.Poly(s.fraction(poly)[0],*y).terms_gcd()[1].monic()
-        if len(unit_free.terms())==1:
-            return w,y,[s.Integer(1)]
-        minors.add(unit_free.as_expr())
-    return w,y,sorted(minors,key=str)
+    order = int(s.ilcm(2,*(2*abs(n) for n in ds)))
+    root = s.exp(2*s.pi*s.I/order).expand(complex=True)
+    phases = [s.simplify(root**i) for i in range(order)]
+    for choices in product(*(range(abs(int(n))) for n in ds)):
+        phase = s.Matrix([order*(int(signs[i])%2+2*j)//(2*d) for i,(j,d) in enumerate(zip(choices,ds))])
+        factors = right[:,:rk]*phase
+        w = {key:phases[int(factors[j]%order)]*s.prod(v**int(e) for v,e in zip(y,row))
+             for j,(key,row) in enumerate(zip(words,exponents.tolist()))}
+        minors = set()
+        for f in others:
+            poly = s.factor(sum(v*s.prod(w[words[j]] for j in key) for key,v in f))
+            if poly==0:
+                continue
+            if not y:
+                minors = {s.Integer(1)}
+                break
+            unit_free = s.Poly(s.fraction(poly)[0],*y).terms_gcd()[1].monic()
+            if len(unit_free.terms())==1:
+                minors = {s.Integer(1)}
+                break
+            minors.add(unit_free.as_expr())
+        yield w,y,sorted(minors,key=str)
+
+
+def torus(mask):
+    result, = torus_forms(mask,2)
+    return result
 
 
 def primes(eq,y):

@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 379,
+  "version": 380,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "669814d0167922136565277aa3a058d165729535"
+    "source_commit": "da335ffd33139adf165e8ec79aeabdbf95c2bd52"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All unmarked index-preserving isomorphisms for transverse doublet windows, including both rank-twelve curves, are explicit. For the unordered projective pair p,q the full-rank locus only identifies simultaneous sign. The infinity boundary identifies q up to sign and the zero-sum boundary identifies p up to fourth roots; the two boundaries never meet in the unmarked moduli. Opposite inverses, cubic contractions, alternating gradients and singular kernel determinants certify separation at every exceptional point."
+    "scope": "For parallel doublets whose thin relation is confined to a high-bit pair on some edge, all 67 support candidates are decided: 14 realizable supports are PBW at every exact-rank coefficient value and 53 never give standard objects. Five other parallel supports are likewise regular everywhere. Coefficient-independent periodic dictionary flags, all torus-root choices, unit column bases and length-four obstructions certify this result."
   },
   "checks": [
     {
-      "command": "python computations/verify_transverse_rank_sixteen_isomorphism.py",
+      "command": "python computations/verify_klein_parallel_flags.py",
       "result": "PASS"
     },
     {
@@ -44,12 +44,12 @@
     }
   ],
   "open_mathematics": [
-    "Investigate the parallel doublet sector on all 148 sparse supports and the parallel dense exceptional fibers, and identify overlaps with the transverse sector and other gradings."
+    "Finish the remaining parallel sparse rectangles which meet both high-bit pairs at each edge, and analyze the unrestricted parallel dense locus, including the elliptic and exceptional components."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 665,
+      "nc-p3": 666,
       "plan_ja": 14,
       "notes_ja": 27
     },

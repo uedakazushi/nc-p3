@@ -1345,6 +1345,12 @@
       "current_result": "All unmarked index-preserving isomorphisms for transverse doublet windows, including both rank-twelve curves, are explicit. For the unordered projective pair p,q the full-rank locus only identifies simultaneous sign. The infinity boundary identifies q up to sign and the zero-sum boundary identifies p up to fourth roots; the two boundaries never meet in the unmarked moduli. Opposite inverses, cubic contractions, alternating gradients and singular kernel determinants certify separation at every exceptional point.",
       "current_proof": "sections/transverse_doublet_isomorphism.tex",
       "global_coverage": false
+    },
+    {
+      "id": "KLEIN-PARALLEL-COORDINATE-FLAGS",
+      "current_result": "For parallel doublets whose thin relation is confined to a high-bit pair on some edge, all 67 support candidates are decided: 14 realizable supports are PBW at every exact-rank coefficient value and 53 never give standard objects. Five other parallel supports are likewise regular everywhere. Coefficient-independent periodic dictionary flags, all torus-root choices, unit column bases and length-four obstructions certify this result.",
+      "current_proof": "sections/klein_parallel_flags.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1402,7 +1408,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 379,
+  "version": 380,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
