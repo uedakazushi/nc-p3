@@ -1609,6 +1609,12 @@
       "current_result": "On the entire full-thin five-dimensional main closure with both cross blocks invertible and standard ranks, standard Koszul two-sided AS regularity is equivalent to the rank-three lower bound for every left and right point evaluation. All failures have two explicit support normal forms up to relabeling, orientation and normalization. Both give exponentially growing quotients even outside this closure.",
       "current_proof": "sections/elliptic_evaluation_obstructions.tex",
       "global_coverage": false
+    },
+    {
+      "id": "MIXED-EXCHANGE-ALL-POINTS",
+      "current_result": "On the entire rank-six mixed-exchange chart, regularity is equivalent to (tb-lambda)(tb-1/lambda) nonzero. All eight exceptional parameter charts admit quotients of dimension at least four to the number of four-letter blocks. Together with the previous full-thin cover, the elliptic test and exchange and transverse tests, this decides all-degree regularity on every four-full-thin two-doublet window.",
+      "current_proof": "sections/mixed_exchange_regularity.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1666,7 +1672,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 423,
+  "version": 424,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
