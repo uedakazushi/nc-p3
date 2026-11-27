@@ -2299,6 +2299,12 @@
       "current_result": "For every regular finite limit on the fifteen-dimensional component the entire kernel of reduction to the relative trace order is a nilpotent ideal. A residual non-domain regular point necessarily has a central nilpotent in path degree four or eight. Injectivity of the two low central trace evaluations on the single reduced representation scheme of dimension (4,4,4,4) guarantees that the 84-degree test decides regularity.",
       "current_proof": "sections/relative_trace_nilpotence.tex",
       "global_coverage": false
+    },
+    {
+      "id": "DIRECTED-ROW-DEFECT-FIXED-DIVISOR-AND-FOURTEEN-EXCLUSION",
+      "current_result": "Full-arrow two-dimensional marks with four forward row defects are parametrized by four quadratic self-maps between projective lines and a projective functional supported on their length-17 fixed scheme. Both cyclic flattenings reduce to ten-by-ten pairings; minimum supporting length fourteen is excluded even for nonreduced fixed points, leaving lengths fifteen through seventeen.",
+      "current_proof": "sections/directed_binary_defect_cycle.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2356,7 +2362,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 538,
+  "version": 539,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

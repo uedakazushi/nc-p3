@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-27",
-  "version": 538,
+  "version": 539,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -5312,6 +5312,15 @@
       "verification": [
         "computations/verify_relative_trace_nilpotence.py"
       ]
+    },
+    {
+      "id": "DIRECTED-ROW-DEFECT-FIXED-DIVISOR-AND-FOURTEEN-EXCLUSION",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "Full-arrow two-dimensional marks with four forward row defects are parametrized by four quadratic self-maps between projective lines and a projective functional supported on their length-17 fixed scheme. Both cyclic flattenings reduce to ten-by-ten pairings; minimum supporting length fourteen is excluded even for nonreduced fixed points, leaving lengths fifteen through seventeen.",
+      "proof": "sections/directed_binary_defect_cycle.tex",
+      "verification": [
+        "computations/verify_directed_binary_defect_cycle.py"
+      ]
     }
   ],
   "document_paths": {
@@ -5375,7 +5384,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "d5f0257d74d0b0d327eb99d1892f526ceac78165",
+  "reviewed_source_commit": "bd8f0137c1d7593d686ca4ea59e7a3009330dbd8",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -5384,14 +5393,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Analyze these low-degree trace kernels using the quadratic quiver equations and the geometry of smaller simple families; continue identification of remaining finite components.",
+    "immediate_next_action": "Determine regularity on these fixed-scheme charts and address mixed row and column defects of bounded PI simple representations.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/relative_trace_nilpotence.tex",
-      "sections/finite_short_trace_pole.tex"
+      "sections/directed_binary_defect_cycle.tex",
+      "sections/two_dimensional_marked_tensor_forms.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "For every regular finite limit on the fifteen-dimensional component the entire kernel of reduction to the relative trace order is a nilpotent ideal. A residual non-domain regular point necessarily has a central nilpotent in path degree four or eight. Injectivity of the two low central trace evaluations on the single reduced representation scheme of dimension (4,4,4,4) guarantees that the 84-degree test decides regularity. Full classification remains open.",
+    "state_of_claim": "Full-arrow two-dimensional marks with four forward row defects are parametrized by four quadratic self-maps between projective lines and a projective functional supported on their length-17 fixed scheme. Both cyclic flattenings reduce to ten-by-ten pairings; minimum supporting length fourteen is excluded even for nonreduced fixed points, leaving lengths fifteen through seventeen. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
