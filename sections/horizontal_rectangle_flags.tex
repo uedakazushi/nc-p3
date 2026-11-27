@@ -1,0 +1,64 @@
+% !TeX root = ../papers/nc-p3.tex
+\section{三つの水平長方形の特殊値を含む正則性}
+\label{sec:horizontal-rectangle-flags}
+\begin{theorem}\label{thm:horizontal-rectangle-flags}
+標数零で次が成立する。
+\begin{enumerate}
+\item 76型の水平台85、112型の水平台143--147では、標準Koszul左右AS正則性の
+必要十分条件は $b+c\ne0$ である。反対階数の制限はない。
+\item 第三長方形の台88--90では、定理\ref{thm:parallel-third-rectangle}の
+$b(b-1)AD(AD-1)\ne0$ の全点が標準Koszul左右AS正則である。
+\end{enumerate}
+従って台85では定理\ref{thm:first-rectangle-horizontal-frames}の三変数の開集合が、
+第三長方形では定理\ref{thm:third-rectangle-orbits}の $(X,Y,h)$ の開集合が、
+指定始点の正則同型類を例外なく表示する。そこでの最小周期の式も全点に適用される。
+\end{theorem}
+
+\begin{proof}[五次元固定成分への包含]
+定理\ref{thm:rectangle-unrestricted-components}の水平標本三点の証明を、
+四元群の作用を固定した軌跡で用いる。各標本でこの軌跡は滑らかで次元18であり、
+薄い零行・零列が全て消え、厚い交差ブロックが全て可逆になる変形がある。
+対角軌道の次元は13であるから、唯一の局所固定成分の一般点は
+定理\ref{thm:klein-all-pairings}の五次元楕円補完に入る。
+元の三つの水平族の各々は既にこの固定軌跡にあり、既約で、該当する標本を通る。
+従って三族の全閉包が、基底変更を許した五次元楕円補完の閉包に入る。
+定理\ref{thm:involution-quartet-component}により、以後は各辺で純関係がなく、
+左右の評価階数が全て3以上であることを調べれば十分である。使う台では隣接切断の色階数は
+$(2,2,1,1)$、一文字は全階数である。$b+c=0$ の最初の二族の排除は
+命題\ref{prop:parallel-antidiagonal-obstruction}での四次経路次元の障害による。
+\end{proof}
+
+\begin{proof}[開集合全体での評価と純関係]
+76型の十分性では定理\ref{thm:first-rectangle-horizontal-frames}のトーラス開集合を用いる。
+112型では定理\ref{thm:horizontal-rectangle-low-fibers}により、使う五台で共通して次が可逆である。
+\[
+ uv(u+v)(1+uv)(zw-1)
+ \prod_{q\in\{z,w\}}(v+q)(q-u)(uq-1)(vq+1).
+\]
+以下の計算はこの積だけを逆にするので、その開集合のどの点にも通用する。
+両型とも一位置移動 $J$ が該当する開集合を保ち、移動後のテンソルの
+全係数を与えるので、位置0の両向きだけを調べればよい。第三長方形では四位置を直接調べる。
+
+各色 $h$ について切断行列の列空間の基底を列に持つ $4\times d_h$ 行列を $B_h$ とする。
+指定した基底開集合で単元となる $d_h$ 次小行列を使えば、$B_h$ の対応する行ブロックを単位行列にできる。
+全ての切断列をこの基底で復元して等式を検算する。
+最初の二型の薄い列を $c,d$ と書くと、純関係の二つの交差ブロックの行列式がともに零であるため
+\[
+ \begin{pmatrix}c_0c_1&-d_0d_1\\c_2c_3&-d_2d_3\end{pmatrix}
+ \binom{\alpha^2}{\beta^2}=0
+\]
+となる。行列式は単元なので両薄色が消える。残ったブロック対角行列が階数1なら
+片側の二行ブロックが零となる。両厚色とも各側二行への射影が同型なので全て零である。
+第三長方形では $x\otimes y$ の色成分 $c_h=(x_j y_{j\oplus h})_j$ を作り、
+$B_h$ の単位行ブロックの添字を $I$ として $c_h=B_h(c_h)_I$ を課す。
+$x,y$ の先頭非零座標をそれぞれ1とした十六開片全てで、基底の非零積による飽和は単位イデアルとなる。
+
+左右評価には、非空の座標台 $S$ ごとに $x_{\min S}=1$ とし、$S$ の他の座標も可逆にする。
+一つの関係列 $c$ に対応する評価の行は、一方では $(c_{j\oplus h} x_{j\oplus h})_j$、
+他方では $(c_j x_{j\oplus h})_j$ である。六行四列の三次小行列式を課す。
+単元の二次小行列があればそれを含む縁の三次小行列式だけで十分である。
+各小行列式の分子を因数分解し、可逆な因子を除いた積を零にする最小因子集合ごとに
+飽和する。十五台のいずれでも左右とも消滅集合は空である。
+\path{computations/verify_horizontal_rectangle_flags.py} は三つのパラメータ環上でこの全検査を行う。
+従って巡回旗の特殊化による全次数判定が定理の全域で成立する。
+\end{proof}

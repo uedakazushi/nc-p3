@@ -1573,6 +1573,12 @@
       "current_result": "Four independent periodic tracks exchanged in pairs by an involution give a rank-one opposite-contraction certificate for recurrent flags. A seven-dimensional involution component through the full-rank Klein point is parametrized by five independent coordinates, a quadratic root and two affine conics. Its whole orbit closure, including the entire five-dimensional elliptic completion, is all-degree AS regular wherever the two adjacent ranks, full arrows, absence of pure relations and evaluation lower bounds hold.",
       "current_proof": "sections/involution_quartet_component.tex",
       "global_coverage": false
+    },
+    {
+      "id": "HORIZONTAL-RECTANGLE-ALL-FIBERS",
+      "current_result": "The three sparse horizontal rectangle families lie in the five-dimensional Klein orbit closure. For horizontal 85 and 143–147, all-degree standard Koszul two-sided AS regularity holds exactly when b+c is nonzero. The entire third rectangle on 88–90 is regular. This completes every regularity fiber on those supports and gives the full pointed unmarked classification and periods for horizontal 85 and the third rectangle using their existing orbit coordinates.",
+      "current_proof": "sections/horizontal_rectangle_flags.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1630,7 +1636,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 417,
+  "version": 418,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

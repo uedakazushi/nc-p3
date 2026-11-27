@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 417,
+  "version": 418,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "7bf9d6a503138f980a4c33d44012d64df7cdbe31"
+    "source_commit": "858f5aea8d93f06ea04a6f999b5c1ff7ae09ef0f"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Four independent periodic tracks exchanged in pairs by an involution give a rank-one opposite-contraction certificate for recurrent flags. A seven-dimensional involution component through the full-rank Klein point is parametrized by five independent coordinates, a quadratic root and two affine conics. Its whole orbit closure, including the entire five-dimensional elliptic completion, is all-degree AS regular wherever the two adjacent ranks, full arrows, absence of pure relations and evaluation lower bounds hold."
+    "scope": "The three sparse horizontal rectangle families lie in the five-dimensional Klein orbit closure. For horizontal 85 and 143–147, all-degree standard Koszul two-sided AS regularity holds exactly when b+c is nonzero. The entire third rectangle on 88–90 is regular. This completes every regularity fiber on those supports and gives the full pointed unmarked classification and periods for horizontal 85 and the third rectangle using their existing orbit coordinates."
   },
   "checks": [
     {
-      "command": "python computations/verify_involution_quartet_component.py",
+      "command": "python computations/verify_horizontal_rectangle_flags.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Remove evaluation defects or detect non-AS points on the main closure; extend the four-track construction beyond the involution locus and compare other components including arbitrary unmarked windows."
+    "Recover unmarked frames on all 112 horizontal fibers and determine evaluation obstructions on the full-thin elliptic completion. Extend the all-degree criterion beyond the involution locus; global coverage remains open."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 734,
+      "nc-p3": 735,
       "plan_ja": 16,
       "notes_ja": 29
     },
