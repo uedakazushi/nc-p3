@@ -1987,6 +1987,12 @@
       "current_result": "All regular specializations of windows admitting or attracted to an invertible two-plane split have a polystable regular core with an invertible split. The total PBW-normalized volume equals the product of four crossed pure-sector determinants, also for filtered lifts. The extra 60-dimensional simple component has precisely its displayed simple orbits, one mixed closed orbit, and one Jordan orbit on its regular locus; the opposite determinant excludes both poles.",
       "current_proof": "sections/split_regular_limits.tex",
       "global_coverage": false
+    },
+    {
+      "id": "ALL-SIMPLE-AND-NO-FLIP-COLLISION-FIBERS",
+      "current_result": "Every ordinary simple Bell fiber, including all exceptional simple parameters, and every nonline no-flip collision fiber is the closed orbit plus a weighted projective six-space modulo a Klein four-group. All are smooth points on the fifteen-parameter component, with the full period and orbit-specialization stratification. At the period-one collision the nonzero period-one locus has five components of dimensions 2,1,1,0,0. Every extra simple fiber is just one closed orbit.",
+      "current_proof": "sections/split_surface_all_fibers.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2044,7 +2050,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 486,
+  "version": 487,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

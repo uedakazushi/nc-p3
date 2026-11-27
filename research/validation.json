@@ -1,105 +1,21 @@
 {
   "schema_version": 2,
-  "version": 486,
+  "version": 487,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "187babad92f230781763180ae92bf100b933e3ba"
+    "source_commit": "dddf47b913c406676022cb2e89e79087683fc4d0"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All regular specializations of windows admitting or attracted to an invertible two-plane split have a polystable regular core with an invertible split. The total PBW-normalized volume equals the product of four crossed pure-sector determinants, also for filtered lifts. The extra 60-dimensional simple component has precisely its displayed simple orbits, one mixed closed orbit, and one Jordan orbit on its regular locus; the opposite determinant excludes both poles."
+    "scope": "Every ordinary simple Bell fiber, including all exceptional simple parameters, and every nonline no-flip collision fiber is the closed orbit plus a weighted projective six-space modulo a Klein four-group. All are smooth points on the fifteen-parameter component, with the full period and orbit-specialization stratification. At the period-one collision the nonzero period-one locus has five components of dimensions 2,1,1,0,0. Every extra simple fiber is just one closed orbit."
   },
   "checks": [
     {
-      "command": "python computations/verify_split_extra_boundary.py",
+      "command": "python computations/verify_split_surface_all_fibers.py",
       "result": "PASS"
     },
     {
-      "command": "python computations/verify_exchange_mixed_configurations.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_exchange_mixed_configurations.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_negative_boundary_vertices.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_negative_smooth_pairing.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_klein_bisymmetric_closure.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_negative_component_period.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_rectangle_stable_configurations.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_rank_fourteen_conic_frames.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_first_rectangle_rank_fourteen_curve.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_second_rectangle_quartic_bundle.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_second_rectangle_opposite_ranks.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_second_rectangle_rank_fourteen_samples.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_first_rectangle_edge_regularity.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_first_rectangle_edge_presentation.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_first_rectangle_rank_ten_curve.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_second_rectangle_low_fibers.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_rectangular_surface_curve_strata.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_rectangular_surface_residual_points.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_parallel_residue_border.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_parallel_vertical_regularity.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_transverse_rank_twelve_isomorphism.py",
-      "result": "PASS"
-    },
-    {
-      "command": "python computations/verify_reducible_septic_coverage.py",
+      "command": "python computations/verify_split_collision_shift.py",
       "result": "PASS"
     },
     {
@@ -124,14 +40,14 @@
     }
   ],
   "open_mathematics": [
-    "Classify nonsplit attracting fibers over the other polystable split cores, and use the complementary specialization-open locus to isolate the unclassified stable and branched windows."
+    "Resolve the remaining rank-two reflected collision fibers and the no-flip Bell line fibers. Use the split specialization theorem on the complementary stable and branched strata."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 845,
+      "nc-p3": 847,
       "plan_ja": 19,
-      "notes_ja": 32
+      "notes_ja": 33
     },
     "scope": "LuaLaTeX built the manuscript, plan and research notes."
   },
