@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-27",
-  "version": 496,
+  "version": 497,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -4931,6 +4931,15 @@
       "verification": [
         "computations/verify_single_pure_corridors.py"
       ]
+    },
+    {
+      "id": "FINITE-PURE-LOCUS-AND-NO-BINARY-CENTERS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "The decomposable-relation scheme on every edge of every standard regular window is finite. A fixed-factor pure line forces a preceding pure relation with the same letter, by transporting the full determinantal plane quartic. A pure conic would produce a binary center, now excluded even in the presence of unrelated two-line paths. Every center therefore has middle support three or four and obeys the finite-pencil classification.",
+      "proof": "sections/finite_pure_relation_locus.tex",
+      "verification": [
+        "computations/verify_finite_pure_relation_locus.py"
+      ]
     }
   ],
   "document_paths": {
@@ -4994,7 +5003,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "ce079fb7fe5fd11a49510216b5d6a4737b755b47",
+  "reviewed_source_commit": "b9fba12465d332c3d210092436326471a1bd7b47",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -5003,14 +5012,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Classify the first remaining finite pure schemes (length two, including one double point) by tracking shared eigenlines, excess contact and allowed endpoint pairings; analyze positive-dimensional pure schemes and stable finite-point candidates.",
+    "immediate_next_action": "Use finiteness to treat all sparse edge distributions and enumerate the remaining higher-defect pencil configurations. Continue all-degree regularity on stable finite point windows.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/single_pure_branch_exclusion.tex",
-      "sections/branch_local_pure_pencils.tex"
+      "sections/finite_pure_relation_locus.tex",
+      "sections/single_pure_branch_exclusion.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "No standard regular indexed algebra has exactly one reduced decomposable relation in the four-edge scheme. All projection dimensions and opposite ranks are covered. Independently of the size of the pure locus, a cycle of four two-line corridors with one center per phase and direction is impossible. Full classification remains open.",
+    "state_of_claim": "The decomposable-relation scheme on every edge of every standard regular window is finite. A fixed-factor pure line forces a preceding pure relation with the same letter, by transporting the full determinantal plane quartic. A pure conic would produce a binary center, now excluded even in the presence of unrelated two-line paths. Every center therefore has middle support three or four and obeys the finite-pencil classification. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

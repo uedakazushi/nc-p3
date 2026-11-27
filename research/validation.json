@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 496,
+  "version": 497,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "ce079fb7fe5fd11a49510216b5d6a4737b755b47"
+    "source_commit": "b9fba12465d332c3d210092436326471a1bd7b47"
   },
   "generation": {
     "result": "PASS",
-    "scope": "No standard regular indexed algebra has exactly one reduced decomposable relation in the four-edge scheme. All projection dimensions and opposite ranks are covered. Independently of the size of the pure locus, a cycle of four two-line corridors with one center per phase and direction is impossible."
+    "scope": "The decomposable-relation scheme on every edge of every standard regular window is finite. A fixed-factor pure line forces a preceding pure relation with the same letter, by transporting the full determinantal plane quartic. A pure conic would produce a binary center, now excluded even in the presence of unrelated two-line paths. Every center therefore has middle support three or four and obeys the finite-pencil classification."
   },
   "checks": [
     {
-      "command": "python computations/verify_single_pure_corridors.py",
+      "command": "python computations/verify_finite_pure_relation_locus.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Classify the first remaining finite pure schemes (length two, including one double point) by tracking shared eigenlines, excess contact and allowed endpoint pairings; analyze positive-dimensional pure schemes and stable finite-point candidates."
+    "Use finiteness to treat all sparse edge distributions and enumerate the remaining higher-defect pencil configurations. Continue all-degree regularity on stable finite point windows."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 861,
+      "nc-p3": 863,
       "plan_ja": 20,
       "notes_ja": 33
     },
