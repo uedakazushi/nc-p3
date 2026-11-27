@@ -1537,6 +1537,12 @@
       "current_result": "Without either exchange symmetry, all full-thin z=1, lambda squared unequal to one candidates of this color type are covered by the rational mixed-corner hypersurface and its translated chart. The other rank completions have a universal length-four obstruction of dimension at least fifty. The mixed chart smooths to the five-dimensional elliptic family and has four-dimensional unmarked image, generic period four and Klein stabilizer. Two explicit rank-sixteen fibers are certified regular in every degree.",
       "current_proof": "sections/klein_mixed_exchange_resolution.tex",
       "global_coverage": false
+    },
+    {
+      "id": "DOUBLE-EXCHANGE-FOURIER",
+      "current_result": "The entire simultaneous rank-one full-thin exchange fiber z=1, lambda=+/-1, without a symmetry assumption, has exactly two regular normal-form families and their twists. All exceptional parameters, unmarked finite frame comparisons, ranks and periods are determined. The second pair specializes from the mixed resolution and its twist has twenty explicitly reduced points at every regular value.",
+      "current_proof": "sections/klein_double_exchange_fourier.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1594,7 +1600,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 411,
+  "version": 412,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
