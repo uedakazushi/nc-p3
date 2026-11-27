@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 372,
+  "version": 373,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "516db941175c39f5d0839b49d338960afc7dda4c"
+    "source_commit": "ac20f0742fba22a38aa12da0c5a6699e665a9627"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every singly missing Klein window that is standard AS lies on a single explicitly tabulated one-parameter curve up to the stated finite presentation symmetries. The first nine remaining masks violate the quartic trivial-character dimension even at every specialization. The last mask has exactly one viable Smith root choice and all t nonzero with 1+t^2 nonzero are regular by four compatible binary flags and a triangular PBW basis."
+    "scope": "The complete unmarked, index-preserving isomorphism classes in the singly missing sector are parametrized by X=(t+1/t)^2 in the punctured affine line. Six-line point supports intrinsically select two core lines even at collisions, and a conformal trace invariant recovers X. An explicit tensor-product conjugacy gives shift X -> 16/X; there are exactly two period-one points X=4,-4 and all other points have minimum period two."
   },
   "checks": [
     {
-      "command": "python computations/verify_klein_single_missing_windows.py",
+      "command": "python computations/verify_single_missing_isomorphism.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine all unmarked indexed isomorphisms and periods on the singly missing curve, using the intrinsic six-line correspondences and the two binary projective monodromies. Extend structural coverage to positive color profiles on both cuts."
+    "Analyze overlap with other Klein presentations and the positive-color sectors, beginning with three rank-one colors on one cut and no missing colors on the other. Use the free-coordinate growth and cubic-slice certificates beyond this curve."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 655,
+      "nc-p3": 656,
       "plan_ja": 14,
       "notes_ja": 27
     },
