@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 431,
+  "version": 432,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "73353e4296fe2eebbb5b9bdedd1f07d887ff0d5f"
+    "source_commit": "e22c552cf94e88b59e61ab73b575e7120a6998cd"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every SL2 action on a standard window has identical arrow representations and identical relation representations at all four slots. Three nontrivial profiles are fully classified: irreducible arrows give the polynomial algebra, adjoint plus scalar arrows give polynomial or homogenized U(sl2), and two standard copies give polynomial or one unipotent PBW window. Their opposite ranks are 6,8,12 and all have period one. On the remaining standard plus two scalar arrows, missing boundary forms cause exponential growth and all four invertible boundary forms suffice for regularity."
+    "scope": "All regular windows admitting a nontrivial connected semisimple symmetry are classified up to unmarked index-preserving isomorphism. In the remaining single-standard profile all four ordinary boundary forms must be invertible. A binary congruence and an optional binary quadratic determine disjoint complete normal forms, all of period one. Every such window has a specified regular polystable limit."
   },
   "checks": [
     {
-      "command": "python computations/verify_sl2_window_profiles.py",
+      "command": "python computations/verify_one_standard_sl2.py",
       "result": "PASS"
     },
     {
@@ -124,14 +124,14 @@
     }
   ],
   "open_mathematics": [
-    "Complete the SL2 profile with one standard summand and two scalars by resolving singular nonzero adjacent coefficient matrices, and continue the stabilizer-free component classification."
+    "Use the semisimple classification to resolve other connected stabilizers, including unrestricted torus weights, and continue the component and regularity analysis without a stabilizer hypothesis."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 756,
+      "nc-p3": 759,
       "plan_ja": 17,
-      "notes_ja": 29
+      "notes_ja": 30
     },
     "scope": "LuaLaTeX built the manuscript, plan and research notes."
   },

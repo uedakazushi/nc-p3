@@ -1657,6 +1657,12 @@
       "current_result": "Every SL2 action on a standard window has identical arrow representations and identical relation representations at all four slots. Three nontrivial profiles are fully classified: irreducible arrows give the polynomial algebra, adjoint plus scalar arrows give polynomial or homogenized U(sl2), and two standard copies give polynomial or one unipotent PBW window. Their opposite ranks are 6,8,12 and all have period one. On the remaining standard plus two scalar arrows, missing boundary forms cause exponential growth and all four invertible boundary forms suffice for regularity.",
       "current_proof": "sections/sl2_window_profiles.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SEMISIMPLE-SYMMETRY-LOCUS-COMPLETE",
+      "current_result": "All regular windows admitting a nontrivial connected semisimple symmetry are classified up to unmarked index-preserving isomorphism. In the remaining single-standard profile all four ordinary boundary forms must be invertible. A binary congruence and an optional binary quadratic determine disjoint complete normal forms, all of period one. Every such window has a specified regular polystable limit.",
+      "current_proof": "sections/one_standard_sl2.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1714,7 +1720,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 431,
+  "version": 432,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

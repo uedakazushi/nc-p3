@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-27",
-  "version": 431,
+  "version": 432,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -4345,6 +4345,15 @@
       "verification": [
         "computations/verify_sl2_window_profiles.py"
       ]
+    },
+    {
+      "id": "SEMISIMPLE-SYMMETRY-LOCUS-COMPLETE",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "All regular windows admitting a nontrivial connected semisimple symmetry are classified up to unmarked index-preserving isomorphism. In the remaining single-standard profile all four ordinary boundary forms must be invertible. A binary congruence and an optional binary quadratic determine disjoint complete normal forms, all of period one. Every such window has a specified regular polystable limit.",
+      "proof": "sections/one_standard_sl2.tex",
+      "verification": [
+        "computations/verify_one_standard_sl2.py"
+      ]
     }
   ],
   "document_paths": {
@@ -4408,7 +4417,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "73353e4296fe2eebbb5b9bdedd1f07d887ff0d5f",
+  "reviewed_source_commit": "e22c552cf94e88b59e61ab73b575e7120a6998cd",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -4417,14 +4426,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Complete the SL2 profile with one standard summand and two scalars by resolving singular nonzero adjacent coefficient matrices, and continue the stabilizer-free component classification.",
+    "immediate_next_action": "Use the semisimple classification to resolve other connected stabilizers, including unrestricted torus weights, and continue the component and regularity analysis without a stabilizer hypothesis.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/sl2_window_profiles.tex",
-      "sections/split_jordan_transport.tex"
+      "sections/one_standard_sl2.tex",
+      "sections/sl2_window_profiles.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "Every SL2 action on a standard window has identical arrow representations and identical relation representations at all four slots. Three nontrivial profiles are fully classified: irreducible arrows give the polynomial algebra, adjoint plus scalar arrows give polynomial or homogenized U(sl2), and two standard copies give polynomial or one unipotent PBW window. Their opposite ranks are 6,8,12 and all have period one. On the remaining standard plus two scalar arrows, missing boundary forms cause exponential growth and all four invertible boundary forms suffice for regularity. Full classification remains open.",
+    "state_of_claim": "All regular windows admitting a nontrivial connected semisimple symmetry are classified up to unmarked index-preserving isomorphism. In the remaining single-standard profile all four ordinary boundary forms must be invertible. A binary congruence and an optional binary quadratic determine disjoint complete normal forms, all of period one. Every such window has a specified regular polystable limit. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
