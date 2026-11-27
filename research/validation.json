@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 476,
+  "version": 477,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "f306981939c50b3a8aabaae9cd63da519fe59702"
+    "source_commit": "a067ef915c35dab1784d6070b615e119aad7b23a"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The entire invertible split semisimple Bell line consists of all quantum classes and four disjoint explicit nonquantum rows, with all exceptional parameters and unmarked isomorphisms determined. Every object has minimal period one."
+    "scope": "Exactly two semisimple Bell line classes meet the fifteen-dimensional component: the order-four quantum point and the no-flip class at s squared equal to minus one. The mixed flip curve sweeps out a distinct 59-dimensional irreducible component of the unrestricted projective rank scheme, with one-dimensional rational quotient."
   },
   "checks": [
     {
-      "command": "python computations/verify_split_spectral_line.py",
+      "command": "python computations/verify_split_line_center.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Classify the marked and unmarked Jordan spectra over the Bell line and determine component incidence via regular limits and quartic central constraints. Continue covering the remaining finite stable and branched windows."
+    "Determine all boundary or exceptional regular points of the mixed flip component and the nonsemisimple Jordan completions. Continue addressing residual stable finite and branched windows."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 827,
+      "nc-p3": 828,
       "plan_ja": 19,
       "notes_ja": 32
     },

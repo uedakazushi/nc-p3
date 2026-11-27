@@ -1927,6 +1927,12 @@
       "current_result": "The entire invertible split semisimple Bell line consists of all quantum classes and four disjoint explicit nonquantum rows, with all exceptional parameters and unmarked isomorphisms determined. Every object has minimal period one.",
       "current_proof": "sections/split_spectral_line_classification.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SEMISIMPLE-LINE-COMPONENT-INTERSECTION-AND-MIXED-FLIP-COMPONENT",
+      "current_result": "Exactly two semisimple Bell line classes meet the fifteen-dimensional component: the order-four quantum point and the no-flip class at s squared equal to minus one. The mixed flip curve sweeps out a distinct 59-dimensional irreducible component of the unrestricted projective rank scheme, with one-dimensional rational quotient.",
+      "current_proof": "sections/split_line_component_incidence.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1984,7 +1990,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 476,
+  "version": 477,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
