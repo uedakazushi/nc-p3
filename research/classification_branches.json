@@ -1813,6 +1813,12 @@
       "current_result": "The unrestricted fifteen-dimensional component meeting the generic nonregular binary point is globally the previously constructed full fifteen-dimensional component. It contains every finite single-binary-edge obstruction and the entire elliptic two-torsion closure. Its opposite determinant at a generic one-sided nonregular contact window is the sixth power of the symmetry parameter times a unit, so this nonregular divisor on the one-sided locus differs from the residual rank-fifteen divisor cut there.",
       "current_proof": "sections/binary_global_component.tex",
       "global_coverage": false
+    },
+    {
+      "id": "RANK-FIFTEEN-TWO-NONDEGENERATE-KERNELS",
+      "current_result": "The generic residual opposite-rank-fifteen divisor at the binary boundary has two invertible bilinear kernels. For any graph, such windows have an exact indexed equivalence by projective trace-free linear isomorphisms modulo two inner conjugations, with explicit cyclic action and a nonvanishing degree-sixty semistability invariant.",
+      "current_proof": "sections/rank_fifteen_opposite_kernels.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1870,7 +1876,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 457,
+  "version": 458,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

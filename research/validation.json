@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 457,
+  "version": 458,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "85e127183d50c003ef21efb2bf62c9105b39164c"
+    "source_commit": "d278d26ec5cec2c972fe4e03c4c1c27f4dd064f7"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The unrestricted fifteen-dimensional component meeting the generic nonregular binary point is globally the previously constructed full fifteen-dimensional component. It contains every finite single-binary-edge obstruction and the entire elliptic two-torsion closure. Its opposite determinant at a generic one-sided nonregular contact window is the sixth power of the symmetry parameter times a unit, so this nonregular divisor on the one-sided locus differs from the residual rank-fifteen divisor cut there."
+    "scope": "The generic residual opposite-rank-fifteen divisor at the binary boundary has two invertible bilinear kernels. For any graph, such windows have an exact indexed equivalence by projective trace-free linear isomorphisms modulo two inner conjugations, with explicit cyclic action and a nonvanishing degree-sixty semistability invariant."
   },
   "checks": [
     {
-      "command": "python computations/verify_binary_global_component.py",
+      "command": "python computations/verify_rank_fifteen_opposite_kernels.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Use the known global fifteen-dimensional component and the residual kernel geometry to test AS regularity on its stable rank-fifteen divisor; develop minimal rational-subspace tests for other unclassified windows."
+    "Determine how the residual divisor meets the double binary marks, and seek an all-degree regularity criterion on the rank-fifteen locus and remaining windows."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 800,
+      "nc-p3": 801,
       "plan_ja": 18,
       "notes_ja": 31
     },
