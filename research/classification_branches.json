@@ -2095,6 +2095,12 @@
       "current_result": "All finite symmetric windows of opposite rank greater than six give torsion-free charge-four instanton sheaves with locally free double dual. At opposite rank ten every non-locally-free such window admits a binary edge and is nonregular. Thus the entire stable or nonstable rank-ten one-sided regular locus is contained in the locally free chart at both odd slots.",
       "current_proof": "sections/finite_rank_ten_instanton_boundary.tex",
       "global_coverage": false
+    },
+    {
+      "id": "RANK-TEN-ELLIPTIC-OCTIC-GRASSMANN-CLASSIFICATION",
+      "current_result": "All rank-ten finite one-sided symmetric regular windows in a fixed phase lie in one irreducible fourteen-dimensional closure. The entire both-bundle candidate locus is parameterized by smooth projected elliptic octics or quartic maps to Gr(2,4), with exact indexed isomorphism and half-period via projective equivalence and Grassmann duality. Its geometric generic point is regular.",
+      "current_proof": "sections/finite_quartic_grassmann_windows.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2152,7 +2158,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 504,
+  "version": 505,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

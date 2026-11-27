@@ -2,7 +2,7 @@
 
 **共同研究：** 本リポジトリは大川新之介・植田一石の共同研究プロジェクトです。この表示は個々の論文の著者を確定するものではありません。
 
-**2026-11-27 / v504。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-27 / v505。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -577,6 +577,8 @@ Bell曲面の固有値衝突部は全Jordan型と例外値を含む三行で尽�
 有限片側対称窓の可換三段加群と極小自由分解を決めた。線型シジジーが部分束を与える領域は電荷4のインスタントン束から復元できる。[証明](sections/finite_symmetric_instanton_monad.tex)
 
 有限片側対称窓のモナドは常に捩れなし層を与える。反対階数10で局所自由でない全境界は二元商を持ち非正則である。[証明](sections/finite_rank_ten_instanton_boundary.tex)
+
+階数10の有限片側対称な全正則窓は、位相ごとに一つの14次元既約閉包に入る。空間楕円八次曲線と四次Grassmann写像から窓を復元し、添字保持同型と二移動を決めた。[証明](sections/finite_quartic_grassmann_windows.tex)
 
 非恒等の平面グラフを基底に持つOre窓では、指定点を忘れた同型類も決定した。[正規形と平坦特殊化](sections/plane_graph_ore_windows.tex)・[検算](computations/verify_plane_graph_ore.py)
 
