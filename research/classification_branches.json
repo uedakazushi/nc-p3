@@ -1369,6 +1369,12 @@
       "current_result": "All parallel masks 94--96 give exactly two regular period-one affine parameter planes, symmetric and cocycle twisted. On either plane the full unmarked identifications are swap and simultaneous sign, including product zero or one. Precisely the diagonal of the twisted plane is the infinity boundary of the transverse doublet family.",
       "current_proof": "sections/parallel_symmetric_surface.tex",
       "global_coverage": false
+    },
+    {
+      "id": "PARALLEL-EXCLUDED-SHAPES",
+      "current_result": "For 29 parallel supports all coefficients fail through quartic growth or rank, eight more fail at lengths five to seven, and sixteen further coefficient tori are empty. Sixteen of the original 148 sparse supports still have an undecided part. Every parallel symmetric-surface fiber and its twist are disjoint from both three-line sheets, including all exceptional six-node planes.",
+      "current_proof": "sections/parallel_excluded_shapes.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1426,7 +1432,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 383,
+  "version": 384,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-27",
-  "version": 383,
+  "version": 384,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -3886,6 +3886,15 @@
       "verification": [
         "computations/verify_parallel_symmetric_surface.py"
       ]
+    },
+    {
+      "id": "PARALLEL-EXCLUDED-SHAPES",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "For 29 parallel supports all coefficients fail through quartic growth or rank, eight more fail at lengths five to seven, and sixteen further coefficient tori are empty. Sixteen of the original 148 sparse supports still have an undecided part. Every parallel symmetric-surface fiber and its twist are disjoint from both three-line sheets, including all exceptional six-node planes.",
+      "proof": "sections/parallel_excluded_shapes.tex",
+      "verification": [
+        "computations/verify_parallel_excluded_shapes.py"
+      ]
     }
   ],
   "document_paths": {
@@ -3949,7 +3958,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "fa2a057bdb4337e282a73b85ffe48c4aad4cc7cd",
+  "reviewed_source_commit": "ace92b2c5944cf4101bca767231fe90250f8af45",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -3958,14 +3967,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Resolve the other parallel rectangles, compare the symmetric plane to other rank-six sheets, and continue coverage without a prescribed Klein action.",
+    "immediate_next_action": "Parametrize simultaneous rank-two completions on the remaining sparse rectangles, decide regularity and unmarked isomorphisms, and extend unrestricted coverage.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/parallel_symmetric_surface.tex",
-      "sections/three_lines_twisted_isomorphism.tex"
+      "sections/parallel_excluded_shapes.tex",
+      "sections/parallel_symmetric_surface.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "All parallel masks 94--96 give exactly two regular period-one affine parameter planes, symmetric and cocycle twisted. On either plane the full unmarked identifications are swap and simultaneous sign, including product zero or one. Precisely the diagonal of the twisted plane is the infinity boundary of the transverse doublet family. Full classification remains open.",
+    "state_of_claim": "For 29 parallel supports all coefficients fail through quartic growth or rank, eight more fail at lengths five to seven, and sixteen further coefficient tori are empty. Sixteen of the original 148 sparse supports still have an undecided part. Every parallel symmetric-surface fiber and its twist are disjoint from both three-line sheets, including all exceptional six-node planes. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

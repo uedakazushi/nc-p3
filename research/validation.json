@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 383,
+  "version": 384,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "fa2a057bdb4337e282a73b85ffe48c4aad4cc7cd"
+    "source_commit": "ace92b2c5944cf4101bca767231fe90250f8af45"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All parallel masks 94--96 give exactly two regular period-one affine parameter planes, symmetric and cocycle twisted. On either plane the full unmarked identifications are swap and simultaneous sign, including product zero or one. Precisely the diagonal of the twisted plane is the infinity boundary of the transverse doublet family."
+    "scope": "For 29 parallel supports all coefficients fail through quartic growth or rank, eight more fail at lengths five to seven, and sixteen further coefficient tori are empty. Sixteen of the original 148 sparse supports still have an undecided part. Every parallel symmetric-surface fiber and its twist are disjoint from both three-line sheets, including all exceptional six-node planes."
   },
   "checks": [
     {
-      "command": "python computations/verify_parallel_symmetric_surface.py",
+      "command": "python computations/verify_parallel_excluded_shapes.py",
       "result": "PASS"
     },
     {
@@ -44,12 +44,12 @@
     }
   ],
   "open_mathematics": [
-    "Resolve the other parallel rectangles, compare the symmetric plane to other rank-six sheets, and continue coverage without a prescribed Klein action."
+    "Parametrize simultaneous rank-two completions on the remaining sparse rectangles, decide regularity and unmarked isomorphisms, and extend unrestricted coverage."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 672,
+      "nc-p3": 674,
       "plan_ja": 15,
       "notes_ja": 27
     },
