@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 531,
+  "version": 532,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "b0d303596cf0b25bb051a3220f7832a8e77d0e38"
+    "source_commit": "e205ec28f42bb31fdb52c101ef9576af44133326"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All standard regular finite-edge windows satisfying the two-by-two matrix identities in just one vertex corner are precisely the finite Clifford webs, with no component, central parameter or Noetherian hypothesis. Even a three-by-three corner identity gives the same classification when the fold is Noetherian. Every regular window satisfies the corner double-centralizer identity and all corner centers coincide with the fold center."
+    "scope": "At any finite-edge center-finite index-four regular window the common quartic zeroes are exactly trace-orthogonal full four-dimensional simple fibers, pairs of the same marked two-dimensional simple at opposite scales, or two pairs of thin simples at opposite scales on distinct sites. The two non-Azumaya types never vanish on all octics."
   },
   "checks": [
     {
-      "command": "python computations/verify_one_corner_clifford_classification.py",
+      "command": "python computations/verify_index_four_quartic_basepoints.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine which index-four center-finite windows lack a quartic normalization and constrain non-Noetherian specializations through their remaining unsaturated simple representations."
+    "Analyze the four-dimensional simple with orthogonal two-step products and the allowable periodic simple packets; classify high-rank finite windows beyond the PI charts."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 924,
+      "nc-p3": 925,
       "plan_ja": 21,
       "notes_ja": 35
     },

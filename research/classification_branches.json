@@ -2257,6 +2257,12 @@
       "current_result": "All standard regular finite-edge windows satisfying the two-by-two matrix identities in just one vertex corner are precisely the finite Clifford webs, with no component, central parameter or Noetherian hypothesis. Even a three-by-three corner identity gives the same classification when the fold is Noetherian. Every regular window satisfies the corner double-centralizer identity and all corner centers coincide with the fold center.",
       "current_proof": "sections/one_corner_clifford_classification.tex",
       "global_coverage": false
+    },
+    {
+      "id": "INDEX-FOUR-QUARTIC-BASEPOINT-PROFILES",
+      "current_result": "At any finite-edge center-finite index-four regular window the common quartic zeroes are exactly trace-orthogonal full four-dimensional simple fibers, pairs of the same marked two-dimensional simple at opposite scales, or two pairs of thin simples at opposite scales on distinct sites. The two non-Azumaya types never vanish on all octics.",
+      "current_proof": "sections/index_four_quartic_basepoints.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2314,7 +2320,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 531,
+  "version": 532,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
