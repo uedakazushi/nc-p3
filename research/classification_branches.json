@@ -1723,6 +1723,12 @@
       "current_result": "Finite Frobenius point graphs have no additive symmetry. Their positive-dimensional stabilizer locus is exactly the known finite torus surface and two curves, including unmarked isomorphisms and all periods. Any finite graph degenerating to the polynomial orbit must have strictly ordered four weights with e<2d and d+e<f<2e.",
       "current_proof": "sections/finite_unipotent_exclusion.tex",
       "global_coverage": false
+    },
+    {
+      "id": "EXACT-TWO-FINITE-QUANTUM-CLOSED-LIMITS",
+      "current_result": "Exactly two quantum polynomial orbits occur as closed limits of any finite-graph window: all four oriented face values are equal to minus one or a primitive fourth root up to inversion. The usual polynomial fiber contains no finite graph, by an exact second-order obstruction. Every maximal-tangent finite class has its closed limit explicitly: a smooth elliptic B[Z] or one of the two quantum points.",
+      "current_proof": "sections/finite_quantum_closed_limits.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1780,7 +1786,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 442,
+  "version": 443,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
