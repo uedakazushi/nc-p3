@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 420,
+  "version": 421,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "5a15fdd9fffc7f3fb20ac7f4d12d0f8bda6de396"
+    "source_commit": "7be6bb3f3e5063ec30ed1df80a8ceb69d343d321"
   },
   "generation": {
     "result": "PASS",
-    "scope": "On the general fifteen-dimensional component every one of the twenty marks gives an ordered pair of smooth cubic surfaces in the same product of two planes. The pair reconstructs the marked window up to pointed indexed isomorphism. The two plane quintic Cremona graphs meet in length 27, with the nineteen other tracks contributing simple points and a residual length-eight scheme. No two consecutive point-marked plane flags exist on this open."
+    "scope": "Every finite six-relation edge with a marked simple point is classified by its projected length-19 scheme in the product of two planes, including nonreduced residual points. Two uniquely recoverable tangent-bundle sections give the edge. All normalized companions with nondegenerate opposite marks are a linear kernel in 48 unknowns modulo its common scalar and the edge stabilizer. For all marks on the general fifteen-dimensional component the kernel has dimension one."
   },
   "checks": [
     {
-      "command": "python computations/verify_marked_cubic_surface_pairs.py",
+      "command": "python computations/verify_nineteen_point_edge.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine the residual eight-point geometry and the AS test for the cubic-surface description, including its degenerations; continue the finite and positive-dimensional unmarked window branches."
+    "Determine which nineteen-point data yield regular extensions at special fibers and handle windows without a simple mark. Relate the residual octads to the singularities of the two mixed-bracket determinants."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 738,
+      "nc-p3": 739,
       "plan_ja": 16,
       "notes_ja": 29
     },
