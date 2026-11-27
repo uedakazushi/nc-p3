@@ -1921,6 +1921,12 @@
       "current_result": "At every regular point of the fifteen-dimensional component, all periodic paths have primitive length at most 16, or 12 if branched. All unbranched graph points have four-shift order at most four and the twelfth power fixes the reduced graph. A genuine bridge of at least two arrows between cycles forces their lengths to be (4,4) or (4,8). In any regular window a periodically visited branch annihilates every positive homogeneous central element.",
       "current_proof": "sections/pi_periodic_point_paths.tex",
       "global_coverage": false
+    },
+    {
+      "id": "ALL-SEMISIMPLE-BELL-LINE-UNMARKED-CLASSES",
+      "current_result": "The entire invertible split semisimple Bell line consists of all quantum classes and four disjoint explicit nonquantum rows, with all exceptional parameters and unmarked isomorphisms determined. Every object has minimal period one.",
+      "current_proof": "sections/split_spectral_line_classification.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1978,7 +1984,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 475,
+  "version": 476,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

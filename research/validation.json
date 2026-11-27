@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 475,
+  "version": 476,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "fe54b060c083ddc9616d32272ccb4e1651aac990"
+    "source_commit": "f306981939c50b3a8aabaae9cd63da519fe59702"
   },
   "generation": {
     "result": "PASS",
-    "scope": "At every regular point of the fifteen-dimensional component, all periodic paths have primitive length at most 16, or 12 if branched. All unbranched graph points have four-shift order at most four and the twelfth power fixes the reduced graph. A genuine bridge of at least two arrows between cycles forces their lengths to be (4,4) or (4,8). In any regular window a periodically visited branch annihilates every positive homogeneous central element."
+    "scope": "The entire invertible split semisimple Bell line consists of all quantum classes and four disjoint explicit nonquantum rows, with all exceptional parameters and unmarked isomorphisms determined. Every object has minimal period one."
   },
   "checks": [
     {
-      "command": "python computations/verify_pi_periodic_paths.py",
+      "command": "python computations/verify_split_spectral_line.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine exceptional semisimple split line spectra including stabilizer jumps, and apply cyclic path and center constraints to the residual stable finite and branched strata."
+    "Classify the marked and unmarked Jordan spectra over the Bell line and determine component incidence via regular limits and quartic central constraints. Continue covering the remaining finite stable and branched windows."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 825,
+      "nc-p3": 827,
       "plan_ja": 19,
       "notes_ja": 32
     },
