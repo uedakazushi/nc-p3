@@ -1891,6 +1891,12 @@
       "current_result": "For any two integral standard regular models generically identified, determinant valuations on the four arrow lattices sum to four times the top-tensor valuation. Thus every regular projective orbit specialization of a semistable regular tensor remains in its GIT class, and a polystable regular tensor has no other regular objects anywhere in its projective orbit closure. The full regular locus of the 59-dimensional isolated sextic component is exactly one indexed isomorphism class.",
       "current_proof": "sections/regular_orbit_valuations.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SPLIT-POINT-PENCILS-AND-ISOLATED-FIVE-LINE-SCHEME",
+      "current_result": "All invertible split windows and all their regular filtered lifts have no branching anywhere. Two four-by-four binary evaluation pencils and one quadratic per chart give their point graphs scheme-theoretically. The unique regular object of the isolated sextic component has two skew axes, three transversals, six ordinary nodes and two embedded length-one ideals.",
+      "current_proof": "sections/split_point_pencils.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1948,7 +1954,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 470,
+  "version": 471,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

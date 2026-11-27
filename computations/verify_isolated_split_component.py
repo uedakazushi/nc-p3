@@ -46,15 +46,22 @@ def carry(tensor, maps, pairing):
             for q in BITS}
 
 
-def certificate():
-    d, modulus = polynomials()
-    spectrum = [sp.Integer(1), (d**5-d**4+3*d**3-7*d**2+6*d-2)/2,
-                (d**3+d**2+3*d-1)/2, d]
-    tensor = bell(spectrum)
-    maps = ([sp.eye(2)]*4, [sp.Matrix([[1,1],[-sp.I,sp.I]]),
+def spectrum_at(d):
+    return [sp.Integer(1), (d**5-d**4+3*d**3-7*d**2+6*d-2)/2,
+            (d**3+d**2+3*d-1)/2, d]
+
+
+def exceptional_maps():
+    return ([sp.eye(2)]*4, [sp.Matrix([[1,1],[-sp.I,sp.I]]),
                             sp.Matrix([[1,1],[sp.I,-sp.I]])/2,
                             sp.Matrix([[1,-1],[sp.I,sp.I]]),
                             sp.Matrix([[1,-1],[-sp.I,-sp.I]])/2])
+
+
+def certificate():
+    d, modulus = polynomials()
+    tensor = bell(spectrum_at(d))
+    maps = exceptional_maps()
     adjs = projective_inverses(tensor)
     transported = [carry(a,m,p) for a,m,p in zip(adjs,maps,PAIRS)]
     pivot = next(q for q in BITS if residue(transported[0][q]) and residue(transported[1][q]))

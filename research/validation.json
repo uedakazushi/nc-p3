@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 470,
+  "version": 471,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "bf139162219d19a0ef77f772812c8b24147855c8"
+    "source_commit": "85ff7c7c6fac97f8a2b5553e5bdabbb120214afa"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For any two integral standard regular models generically identified, determinant valuations on the four arrow lattices sum to four times the top-tensor valuation. Thus every regular projective orbit specialization of a semistable regular tensor remains in its GIT class, and a polystable regular tensor has no other regular objects anywhere in its projective orbit closure. The full regular locus of the 59-dimensional isolated sextic component is exactly one indexed isomorphism class."
+    "scope": "All invertible split windows and all their regular filtered lifts have no branching anywhere. Two four-by-four binary evaluation pencils and one quadratic per chart give their point graphs scheme-theoretically. The unique regular object of the isolated sextic component has two skew axes, three transversals, six ordinary nodes and two embedded length-one ideals."
   },
   "checks": [
     {
-      "command": "python computations/verify_regular_orbit_valuations.py",
+      "command": "python computations/verify_isolated_split_point_scheme.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine the isolated regular component point scheme with all embedded structure, and extend global methods to unresolved stable finite and branching components."
+    "Determine transverse obstructions and regular attracting components over the split Bell spectral surface, then advance remaining stable finite and branching windows."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 817,
+      "nc-p3": 819,
       "plan_ja": 19,
       "notes_ja": 32
     },
