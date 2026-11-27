@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 489,
+  "version": 490,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "43eae854f4863a507893324682a684a8d0977403"
+    "source_commit": "fba8ad9e33cf9f104b75cf10a834683044c951d5"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The unreflected semisimple Bell line has a six-dimensional weighted projective fiber modulo eight or sixteen explicit comparisons. Every lift has period at most two; the nonzero period-one locus has eight components generically and five at the order-four collision. This completes the coverage, indexed-isomorphism and period tests for all windows whose closed orbit has an invertible two-plane split. All are regular and none have branching point fibers."
+    "scope": "For pure-free branching without surface projections or a two-line corridor, only the (3,3) configuration survives. The two longer configurations force distinct twisted cubics to meet in length at least ten. All remaining such windows admit a common 38-coefficient polynomial frame with a nondegenerate bilinear core."
   },
   "checks": [
     {
-      "command": "python computations/verify_noflip_line_fibers.py",
+      "command": "python computations/verify_branch_cubic_contact.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Work on the specialization-open complementary stable and branched windows and on criteria for good integral models of moving regular classes. Do not equate the split-attracted subatlas with the full classification."
+    "Impose both adjacent rank-six conditions by Schur complements and test the necessary center pencil conditions in the (3,3) frame. Resolve the two-line and nonsplit unbranched regions separately."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 851,
+      "nc-p3": 853,
       "plan_ja": 20,
       "notes_ja": 33
     },

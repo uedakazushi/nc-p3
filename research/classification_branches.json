@@ -2005,6 +2005,12 @@
       "current_result": "The unreflected semisimple Bell line has a six-dimensional weighted projective fiber modulo eight or sixteen explicit comparisons. Every lift has period at most two; the nonzero period-one locus has eight components generically and five at the order-four collision. This completes the coverage, indexed-isomorphism and period tests for all windows whose closed orbit has an invertible two-plane split. All are regular and none have branching point fibers.",
       "current_proof": "sections/noflip_line_fibers.tex",
       "global_coverage": false
+    },
+    {
+      "id": "BRANCH-CUBIC-CONTACT-AND-FRAME",
+      "current_result": "For pure-free branching without surface projections or a two-line corridor, only the (3,3) configuration survives. The two longer configurations force distinct twisted cubics to meet in length at least ten. All remaining such windows admit a common 38-coefficient polynomial frame with a nondegenerate bilinear core.",
+      "current_proof": "sections/branch_cubic_contact.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2062,7 +2068,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 489,
+  "version": 490,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
