@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 434,
+  "version": 435,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "8903945fa914afa7a97621cf21ae2827d6425cbb"
+    "source_commit": "e70c3eaba292cd52c392a5e13b46a83ade737e70"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every finite point-graph edge of a standard window has projective stabilizer torus rank at most one. A nontrivial torus on a whole finite-graph window has exactly two possible normalized profiles, uniform 0123 with two length-ten fixed sites or uniform 0112 with length-nine extreme sites and a middle complete intersection of length two. This follows from the pure-free exposed face bound, fixed-point Koszul characters and exact enumeration of all edge spectra."
+    "scope": "Every simple-weight torus window with a finite point graph is classified by a rational surface with no identifications and a rational curve modulo reflection, meeting at a single period-one point. Rotation on the surface is (u,v) to (v,1-u); the remaining surface points have period four, all curve points have period one. Two explicit discriminants cut out finite graphs. All candidates including the discriminant fibers are PBW regular and polystable. The double-middle finite torus candidates are also automatically quadratic PBW."
   },
   "checks": [
     {
-      "command": "python computations/verify_finite_torus_profiles.py",
+      "command": "python computations/verify_simple_weight_torus.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Solve all-degree regularity, companions and equivalences on the two finite fixed-graph profiles, and continue coverage of unrestricted finite edges and unmarked components."
+    "Classify the remaining double-middle finite torus parameters via the two middle-pencil normal forms, and extend the analysis to unmarked unrestricted components."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 763,
+      "nc-p3": 765,
       "plan_ja": 17,
       "notes_ja": 30
     },

@@ -1675,6 +1675,12 @@
       "current_result": "Every finite point-graph edge of a standard window has projective stabilizer torus rank at most one. A nontrivial torus on a whole finite-graph window has exactly two possible normalized profiles, uniform 0123 with two length-ten fixed sites or uniform 0112 with length-nine extreme sites and a middle complete intersection of length two. This follows from the pure-free exposed face bound, fixed-point Koszul characters and exact enumeration of all edge spectra.",
       "current_proof": "sections/finite_torus_profiles.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SIMPLE-WEIGHT-FINITE-TORUS-COMPONENTS",
+      "current_result": "Every simple-weight torus window with a finite point graph is classified by a rational surface with no identifications and a rational curve modulo reflection, meeting at a single period-one point. Rotation on the surface is (u,v) to (v,1-u); the remaining surface points have period four, all curve points have period one. Two explicit discriminants cut out finite graphs. All candidates including the discriminant fibers are PBW regular and polystable. The double-middle finite torus candidates are also automatically quadratic PBW.",
+      "current_proof": "sections/simple_weight_finite_windows.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1732,7 +1738,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 434,
+  "version": 435,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
