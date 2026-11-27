@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-27",
-  "version": 540,
+  "version": 541,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -5330,6 +5330,15 @@
       "verification": [
         "computations/verify_octic_surface_rigidity.py"
       ]
+    },
+    {
+      "id": "FOUR-QUARTIC-CENTER-IMAGE-TYPES-AND-COMPLETE-INTERSECTIONS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "The five central quartics of every regular finite-edge domain limit on the fifteen-dimensional component have exactly four possible image types: a quartic threefold, a quadric threefold, a normal degree-four intersection-of-two-quadrics surface, or a cubic scroll surface. The first three give weighted complete-intersection center presentations including quartic basepoints. In the scroll case the general octic canonical surface has two distinct simple canonical basepoints which are Weierstrass points of every general canonical curve.",
+      "proof": "sections/quartic_center_image_atlas.tex",
+      "verification": [
+        "computations/verify_quartic_center_image_atlas.py"
+      ]
     }
   ],
   "document_paths": {
@@ -5393,7 +5402,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "3fe1a8614bb491773a0ea6df343a4bd917a43305",
+  "reviewed_source_commit": "261e0c3a9a60f1b5727522cc972d155db77e16a5",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -5402,14 +5411,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Determine the possible fixed centers and their exceptional fibers and isolate remaining non-domain and other-component regularity branches.",
+    "immediate_next_action": "Determine the center over the cubic scroll using its two ramification basepoints, and test exceptional weighted center realizations and the non-domain strata.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/octic_surface_fixed_center.tex",
-      "sections/central_character_periods.tex"
+      "sections/quartic_center_image_atlas.tex",
+      "sections/octic_surface_fixed_center.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "For every regular domain finite-edge limit on the fifteen-dimensional component the nontrivial grading stabilizers are isolated. The general octic section is a canonical surface with at worst A1 points, K squared eight, geometric genus five and irregularity zero. Its four rigid twisted bundles reconstruct the indexed window. Every fixed graded center has only finitely many indexed isomorphism classes, even with quartic basepoints. Full classification remains open.",
+    "state_of_claim": "The five central quartics of every regular finite-edge domain limit on the fifteen-dimensional component have exactly four possible image types: a quartic threefold, a quadric threefold, a normal degree-four intersection-of-two-quadrics surface, or a cubic scroll surface. The first three give weighted complete-intersection center presentations including quartic basepoints. In the scroll case the general octic canonical surface has two distinct simple canonical basepoints which are Weierstrass points of every general canonical curve. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

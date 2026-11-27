@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 540,
+  "version": 541,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "3fe1a8614bb491773a0ea6df343a4bd917a43305"
+    "source_commit": "261e0c3a9a60f1b5727522cc972d155db77e16a5"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For every regular domain finite-edge limit on the fifteen-dimensional component the nontrivial grading stabilizers are isolated. The general octic section is a canonical surface with at worst A1 points, K squared eight, geometric genus five and irregularity zero. Its four rigid twisted bundles reconstruct the indexed window. Every fixed graded center has only finitely many indexed isomorphism classes, even with quartic basepoints."
+    "scope": "The five central quartics of every regular finite-edge domain limit on the fifteen-dimensional component have exactly four possible image types: a quartic threefold, a quadric threefold, a normal degree-four intersection-of-two-quadrics surface, or a cubic scroll surface. The first three give weighted complete-intersection center presentations including quartic basepoints. In the scroll case the general octic canonical surface has two distinct simple canonical basepoints which are Weierstrass points of every general canonical curve."
   },
   "checks": [
     {
-      "command": "python computations/verify_octic_surface_rigidity.py",
+      "command": "python computations/verify_quartic_center_image_atlas.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine the possible fixed centers and their exceptional fibers and isolate remaining non-domain and other-component regularity branches."
+    "Determine the center over the cubic scroll using its two ramification basepoints, and test exceptional weighted center realizations and the non-domain strata."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 938,
+      "nc-p3": 940,
       "plan_ja": 22,
       "notes_ja": 35
     },
