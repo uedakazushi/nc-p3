@@ -51,14 +51,17 @@ def sparse():
     assert n==52
 
 
-def thin_system(colors):
-    thin = [w for w in WORDS if any((w[p]^w[p+1]) in colors[p] for p in range(2))]
+def thin_system(colors, words=WORDS):
+    thin = [w for w in words if any((w[p]^w[p+1]) in colors[p] for p in range(2))]
     rows = []
     for p,group in enumerate(colors):
         for b in group:
-            for i,k in product(range(1,4),repeat=2):
+            active_i = [i for i in K if any(entry(p,b,i,k) in thin for k in K)]
+            active_k = [k for k in K if any(entry(p,b,i,k) in thin for i in K)]
+            row0,col0 = active_i[0],active_k[0]
+            for i,k in product(active_i[1:],active_k[1:]):
                 r = [0]*len(thin)
-                for a,j,sign in [(0,0,1),(i,k,1),(0,k,-1),(i,0,-1)]:
+                for a,j,sign in [(row0,col0,1),(i,k,1),(row0,k,-1),(i,col0,-1)]:
                     r[thin.index(entry(p,b,a,j))] += sign
                 rows.append(r)
     matrix = s.Matrix(rows)
