@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-27",
-  "version": 530,
+  "version": 531,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -5240,6 +5240,15 @@
       "verification": [
         "computations/verify_simple_linear_completion_growth.py"
       ]
+    },
+    {
+      "id": "COMPLETE-FINITE-SINGLE-CORNER-DEGREE-TWO-BRANCH",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "All standard regular finite-edge windows satisfying the two-by-two matrix identities in just one vertex corner are precisely the finite Clifford webs, with no component, central parameter or Noetherian hypothesis. Even a three-by-three corner identity gives the same classification when the fold is Noetherian. Every regular window satisfies the corner double-centralizer identity and all corner centers coincide with the fold center.",
+      "proof": "sections/one_corner_clifford_classification.tex",
+      "verification": [
+        "computations/verify_one_corner_clifford_classification.py"
+      ]
     }
   ],
   "document_paths": {
@@ -5303,7 +5312,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "a0da01a08311f17e245a262ea189cc439753f044",
+  "reviewed_source_commit": "b0d303596cf0b25bb051a3220f7832a8e77d0e38",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -5312,14 +5321,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Classify finite regular windows with one vertex corner satisfying the identities of two-by-two matrices; separate surviving non-Noetherian obstructions in higher degree.",
+    "immediate_next_action": "Determine which index-four center-finite windows lack a quartic normalization and constrain non-Noetherian specializations through their remaining unsaturated simple representations.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/simple_linear_completion_growth.tex",
-      "sections/pi_vertex_extension_criterion.tex"
+      "sections/one_corner_clifford_classification.tex",
+      "sections/simple_linear_completion_growth.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "For any nonvertex simple, fixing all but one or two opposite arrows leaves in polynomial growth a single orbit of simple completions up to gauge and grading scale. Excess dimension explicitly forces a free subalgebra. For a stable vertex-dimension-two cut the two-dimensional return pencil is exactly the case of identical twisted cubics; it has binary cubic polar normal form and exponential growth. Full classification remains open.",
+    "state_of_claim": "All standard regular finite-edge windows satisfying the two-by-two matrix identities in just one vertex corner are precisely the finite Clifford webs, with no component, central parameter or Noetherian hypothesis. Even a three-by-three corner identity gives the same classification when the fold is Noetherian. Every regular window satisfies the corner double-centralizer identity and all corner centers coincide with the fold center. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

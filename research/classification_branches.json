@@ -2251,6 +2251,12 @@
       "current_result": "For any nonvertex simple, fixing all but one or two opposite arrows leaves in polynomial growth a single orbit of simple completions up to gauge and grading scale. Excess dimension explicitly forces a free subalgebra. For a stable vertex-dimension-two cut the two-dimensional return pencil is exactly the case of identical twisted cubics; it has binary cubic polar normal form and exponential growth.",
       "current_proof": "sections/simple_linear_completion_growth.tex",
       "global_coverage": false
+    },
+    {
+      "id": "COMPLETE-FINITE-SINGLE-CORNER-DEGREE-TWO-BRANCH",
+      "current_result": "All standard regular finite-edge windows satisfying the two-by-two matrix identities in just one vertex corner are precisely the finite Clifford webs, with no component, central parameter or Noetherian hypothesis. Even a three-by-three corner identity gives the same classification when the fold is Noetherian. Every regular window satisfies the corner double-centralizer identity and all corner centers coincide with the fold center.",
+      "current_proof": "sections/one_corner_clifford_classification.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2308,7 +2314,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 530,
+  "version": 531,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
