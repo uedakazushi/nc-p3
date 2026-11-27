@@ -1285,6 +1285,12 @@
       "current_result": "For the unmarked three-rank-two-color chart, assume all four coordinate cycles have no additional off-diagonal coordinate edge. Every window missing even one repeated-pair coefficient is AS, with a triangular PBW presentation or a good PBW degeneration. Nonzero permutations need not be assumed: the two rank factorizations force support reflections, and missing repeated pairs force precisely the two-column pivots. All remaining candidates have a marked chart already decided.",
       "current_proof": "sections/unmarked_klein_pbw.tex",
       "global_coverage": false
+    },
+    {
+      "id": "KLEIN-MISSING-COLOR-COVERAGE",
+      "current_result": "All homogeneous Klein regular-representation windows with at least one missing color in each adjacent cut now have a necessary-and-sufficient AS decision without any marking, support or symmetry hypothesis beyond the grading. The multicharacter Koszul recurrence forces exactly three rank-two blocks. Rank-two binary-line support enumeration proves every zero row or column yields a directed exponential quotient. The remaining 108 possible simultaneous masks have no such edges and fall under the triangular PBW or complete marked-bracket decision.",
+      "current_proof": "sections/klein_missing_color_coverage.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1342,7 +1348,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 369,
+  "version": 370,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 369,
+  "version": 370,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "a980424b7b7377c7ca6c5f64f0db0e9dd16f4cb4"
+    "source_commit": "3b7b939b1f2d514f594ed1a8d5e6cc03110ee875"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For the unmarked three-rank-two-color chart, assume all four coordinate cycles have no additional off-diagonal coordinate edge. Every window missing even one repeated-pair coefficient is AS, with a triangular PBW presentation or a good PBW degeneration. Nonzero permutations need not be assumed: the two rank factorizations force support reflections, and missing repeated pairs force precisely the two-column pivots. All remaining candidates have a marked chart already decided."
+    "scope": "All homogeneous Klein regular-representation windows with at least one missing color in each adjacent cut now have a necessary-and-sufficient AS decision without any marking, support or symmetry hypothesis beyond the grading. The multicharacter Koszul recurrence forces exactly three rank-two blocks. Rank-two binary-line support enumeration proves every zero row or column yields a directed exponential quotient. The remaining 108 possible simultaneous masks have no such edges and fall under the triangular PBW or complete marked-bracket decision."
   },
   "checks": [
     {
-      "command": "python computations/verify_unmarked_klein_pbw.py",
+      "command": "python computations/verify_klein_missing_color_coverage.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Remove the no-off-diagonal-coordinate-edge hypothesis: classify rank-two zero-diagonal slice supports permitting zero rows/columns and acyclic one-way transitions. Determine exceptional zero-row strata not covered by triangular PBW or simple marks."
+    "Classify the singly missing-color case, pairing the forced three rank-two blocks on one side with the two positive rank partitions on the other. Use the anti-diagonal zeros and the rank-one colors to separate exponential and regular configurations."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 651,
+      "nc-p3": 652,
       "plan_ja": 14,
       "notes_ja": 26
     },
