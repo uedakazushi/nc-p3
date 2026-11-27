@@ -1399,6 +1399,12 @@
       "current_result": "The entire third rectangle has explicit unmarked quotient (X,Y,h), all period and opposite-rank strata, and an irreducible single-zero surface with two transverse local branches along the double-zero curve. Every point of that curve has a regular neighborhood in the ambient family.",
       "current_proof": "sections/third_rectangle_orbits.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SEVEN-PARALLEL-SUPPORT-FIBERS",
+      "current_result": "Seven further sparse supports (82,118,124,129,134,139,142) have a necessary and sufficient all-point regularity test. All their regular fibers are vertical. Both horizontal cut surfaces a=b=1 in shape 112 fail in degree seven with dimension at least 134. The remaining horizontal surfaces and curves have explicit parameter sections; the sign flip is a cocycle twist on both whole families.",
+      "current_proof": "sections/parallel_support_fibers.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1456,7 +1462,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 388,
+  "version": 389,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

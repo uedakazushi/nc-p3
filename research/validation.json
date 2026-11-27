@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 388,
+  "version": 389,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "f48320180987059d8db650738c66cb3d06b9bec7"
+    "source_commit": "9bf9db90e70881ac407b0bf16a53e6de9c1721eb"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The entire third rectangle has explicit unmarked quotient (X,Y,h), all period and opposite-rank strata, and an irreducible single-zero surface with two transverse local branches along the double-zero curve. Every point of that curve has a regular neighborhood in the ambient family."
+    "scope": "Seven further sparse supports (82,118,124,129,134,139,142) have a necessary and sufficient all-point regularity test. All their regular fibers are vertical. Both horizontal cut surfaces a=b=1 in shape 112 fail in degree seven with dimension at least 134. The remaining horizontal surfaces and curves have explicit parameter sections; the sign flip is a cocycle twist on both whole families."
   },
   "checks": [
     {
-      "command": "python computations/verify_third_rectangle_orbits.py",
+      "command": "python computations/verify_parallel_support_fibers.py",
       "result": "PASS"
     },
     {
@@ -52,12 +52,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine regularity on the remaining third-rectangle fibers, stratify the other horizontal and vertical rectangles, and extend coverage to unrestricted windows."
+    "Complete the regularity and orbit strata on 143 and the remaining horizontal families and continue beyond the parallel supports."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 680,
+      "nc-p3": 682,
       "plan_ja": 15,
       "notes_ja": 27
     },
