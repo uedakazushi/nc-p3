@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 422,
+  "version": 423,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "e462f0fd6702a17bf16553db3aca80cfea4f3011"
+    "source_commit": "1f63c273ef19c4cc4cbbe9ed3a017f8d9fe05fcd"
   },
   "generation": {
     "result": "PASS",
-    "scope": "A marked sheet dominating the fifteen-dimensional component is generically finite and dominant over a full equisingular component of bicubic hypersurfaces in the product of two planes. The two reciprocal mixed determinants each have exactly 71 ordinary nodes. There are 36 rank-one nodes and 35 corresponding rank-two nodes split into the 19 window tracks and distinct reduced residual octads. Independent evaluation and differential ranks prove smoothness and dimension 15 of the local quotient."
+    "scope": "On the entire full-thin five-dimensional main closure with both cross blocks invertible and standard ranks, standard Koszul two-sided AS regularity is equivalent to the rank-three lower bound for every left and right point evaluation. All failures have two explicit support normal forms up to relabeling, orientation and normalization. Both give exponentially growing quotients even outside this closure."
   },
   "checks": [
     {
-      "command": "python computations/verify_marked_bicubic_nodes.py",
+      "command": "python computations/verify_elliptic_evaluation_obstructions.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Recover the marked window from the nodal bicubic, determine the degree of the map and the behavior at boundary fibers. Continue all-degree tests and unmarked coverage outside the finite pointed component."
+    "Resolve pure relations and low evaluations on the mixed exchange boundary, then extend the structural and all-degree classification beyond parallel full-thin windows."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 740,
+      "nc-p3": 742,
       "plan_ja": 16,
       "notes_ja": 29
     },

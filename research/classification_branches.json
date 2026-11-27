@@ -1603,6 +1603,12 @@
       "current_result": "A marked sheet dominating the fifteen-dimensional component is generically finite and dominant over a full equisingular component of bicubic hypersurfaces in the product of two planes. The two reciprocal mixed determinants each have exactly 71 ordinary nodes. There are 36 rank-one nodes and 35 corresponding rank-two nodes split into the 19 window tracks and distinct reduced residual octads. Independent evaluation and differential ranks prove smoothness and dimension 15 of the local quotient.",
       "current_proof": "sections/marked_bicubic_nodes.tex",
       "global_coverage": false
+    },
+    {
+      "id": "ELLIPTIC-ALL-DEGREE-EVALUATION-OBSTRUCTIONS",
+      "current_result": "On the entire full-thin five-dimensional main closure with both cross blocks invertible and standard ranks, standard Koszul two-sided AS regularity is equivalent to the rank-three lower bound for every left and right point evaluation. All failures have two explicit support normal forms up to relabeling, orientation and normalization. Both give exponentially growing quotients even outside this closure.",
+      "current_proof": "sections/elliptic_evaluation_obstructions.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1660,7 +1666,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 422,
+  "version": 423,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
