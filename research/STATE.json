@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-27",
-  "version": 398,
+  "version": 399,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -4035,6 +4035,16 @@
         "computations/verify_first_rectangle_edge_center.py",
         "computations/verify_first_rectangle_rank_strata.py"
       ]
+    },
+    {
+      "id": "HORIZONTAL-LOW-FIBERS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "The degree-four profile is standard exactly when b+c is nonzero on all five horizontal support strata 143--147, and degree five is standard throughout that open. Four curves of the first rectangle and its sign twist are regular at every point, including 26 residual number-field strata.",
+      "proof": "sections/horizontal_rectangle_low_fibers.tex",
+      "verification": [
+        "computations/verify_second_rectangle_low_fibers.py",
+        "computations/verify_first_rectangle_rank_ten_curve.py"
+      ]
     }
   ],
   "document_paths": {
@@ -4098,7 +4108,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "85b34b2c60fcb61a41e91b53da093a219a2dacf8",
+  "reviewed_source_commit": "c57b6d911930ea696be71b32cec2151bf9f47db2",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -4107,14 +4117,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Resolve the resulting finite regularity conditions on the entire rank-ten surfaces and the remaining higher-rank horizontal and unrestricted strata.",
+    "immediate_next_action": "Resolve all regular fibers on the rank-ten surfaces by a five-variable presentation, then the larger horizontal and unrestricted window branches.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/first_rectangle_rank_strata.tex",
-      "sections/first_rectangle_horizontal_frames.tex"
+      "sections/horizontal_rectangle_low_fibers.tex",
+      "sections/first_rectangle_rank_strata.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "All opposite-rank strata and their incidences on horizontal 85 are explicit. The rank-14 curve is rational, and the rank-10 locus is exactly the two one-sided symmetric surfaces. Every rank-ten point is module-finite over the full five-dimensional quartic center. A length-13 central-quotient test is necessary and sufficient there and on both sign twists. Full classification remains open.",
+    "state_of_claim": "The degree-four profile is standard exactly when b+c is nonzero on all five horizontal support strata 143--147, and degree five is standard throughout that open. Four curves of the first rectangle and its sign twist are regular at every point, including 26 residual number-field strata. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

@@ -1459,6 +1459,12 @@
       "current_result": "All opposite-rank strata and their incidences on horizontal 85 are explicit. The rank-14 curve is rational, and the rank-10 locus is exactly the two one-sided symmetric surfaces. Every rank-ten point is module-finite over the full five-dimensional quartic center. A length-13 central-quotient test is necessary and sufficient there and on both sign twists.",
       "current_proof": "sections/first_rectangle_rank_strata.tex",
       "global_coverage": false
+    },
+    {
+      "id": "HORIZONTAL-LOW-FIBERS",
+      "current_result": "The degree-four profile is standard exactly when b+c is nonzero on all five horizontal support strata 143--147, and degree five is standard throughout that open. Four curves of the first rectangle and its sign twist are regular at every point, including 26 residual number-field strata.",
+      "current_proof": "sections/horizontal_rectangle_low_fibers.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1516,7 +1522,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 398,
+  "version": 399,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
