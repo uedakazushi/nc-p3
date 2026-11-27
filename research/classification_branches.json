@@ -1489,6 +1489,12 @@
       "current_result": "The three horizontal rectangle closures lie on the same unrestricted component of dimension 15 up to isomorphism. Both positive vertical families lie on a distinct bisymmetric component of dimension 14, and both negative vertical families on a dimension-four component exhausted by the basis saturation of the negative pairing. Artin point-algebra conormal identities work for nonreduced length-twenty complete intersections.",
       "current_proof": "sections/rectangle_unrestricted_components.tex",
       "global_coverage": false
+    },
+    {
+      "id": "RANK-FOURTEEN-CONIC-COMPLETE",
+      "current_result": "Every point of the second horizontal rank-fourteen period-two conic is regular with projective stabilizer the Klein four group. Its unmarked quotient is a twelve-punctured projective line with twelve single-defect fibers.",
+      "current_proof": "sections/rank_fourteen_conic_complete.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1546,7 +1552,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 403,
+  "version": 404,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
