@@ -1,17 +1,21 @@
 {
   "schema_version": 2,
-  "version": 406,
+  "version": 407,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "91eb9d8dd0faf5fe0769d48107bf71d25daadd25"
+    "source_commit": "9950095c45d15f4b86caf4f7e44a5bdfa3a49550"
   },
   "generation": {
     "result": "PASS",
-    "scope": "On the negative exchange chart with (a-d)(zb-c) nonzero, every regular tensor has an explicit sixteen-element unmarked quotient, including the two-conic and quadrangular degenerations. The quotient is rational, the exact stabilizers are determined, and the period-one locus is a single quotient divisor."
+    "scope": "All regular fibers of the negative exchange chart zD(z^2-1) nonzero have the same sixteen-element unmarked quotient, including the double conic, quadrangle, and smooth quadric boundary. The two period-one planes, all opposite ranks and the full unmarked rank-twelve surface are explicit. The entire smooth quadric graph branch specializes inside the four-dimensional component."
   },
   "checks": [
     {
-      "command": "python computations/verify_negative_component_quotient.py",
+      "command": "python computations/verify_negative_pairing_boundary.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_negative_boundary_vertices.py",
       "result": "PASS"
     },
     {
@@ -112,12 +116,12 @@
     }
   ],
   "open_mathematics": [
-    "Resolve the negative exchange boundary a=d or zb=c and continue the general high-rank and unrestricted classification."
+    "Analyze limits of the normalized exchange chart outside zD(z^2-1) nonzero and pursue the unrestricted high-rank windows."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 709,
+      "nc-p3": 712,
       "plan_ja": 16,
       "notes_ja": 28
     },

@@ -1507,6 +1507,12 @@
       "current_result": "On the negative exchange chart with (a-d)(zb-c) nonzero, every regular tensor has an explicit sixteen-element unmarked quotient, including the two-conic and quadrangular degenerations. The quotient is rational, the exact stabilizers are determined, and the period-one locus is a single quotient divisor.",
       "current_proof": "sections/negative_pairing_unmarked_quotient.tex",
       "global_coverage": false
+    },
+    {
+      "id": "NEGATIVE-EXCHANGE-ALL-FIBERS",
+      "current_result": "All regular fibers of the negative exchange chart zD(z^2-1) nonzero have the same sixteen-element unmarked quotient, including the double conic, quadrangle, and smooth quadric boundary. The two period-one planes, all opposite ranks and the full unmarked rank-twelve surface are explicit. The entire smooth quadric graph branch specializes inside the four-dimensional component.",
+      "current_proof": "sections/negative_pairing_boundary.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1564,7 +1570,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 406,
+  "version": 407,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
