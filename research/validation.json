@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 451,
+  "version": 452,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "903eaead338f7e468ffb0699e91177cb425fd44d"
+    "source_commit": "114a155eddf5b98578d458a74a6c297e6badec23"
   },
   "generation": {
     "result": "PASS",
-    "scope": "In the binary nonregular boundary, the kernel quadratic and its companion quartic decide the point graph and the possible orientations at all parameters. Their degree-one common factor gives an explicit reverse Gram transport and cuts out a reduced irreducible degree-fourteen divisor for each decimic; divisibility gives the nonfinite locus. This completes orientation overlaps, indexed isomorphism, and periods on the finite obstruction boundary."
+    "scope": "At the generic stable binary obstruction and a rational sample the entire unrestricted orbit-transverse local ring is k[[13 base variables,h,a,b]]/(ah,bh). A smooth fourteen-dimensional bisymmetric and smooth fifteen-dimensional unrestricted component meet in a smooth reduced thirteen-dimensional locus. The larger component and its two one-sided symmetry divisors have generically all-degree AS regular windows with reduced finite points and minimum period four. The common boundary has regular generic point despite specializing to stable nonregular windows."
   },
   "checks": [
     {
-      "command": "python computations/verify_binary_reverse_orientation.py",
+      "command": "python computations/verify_binary_component_crossing.py",
       "result": "PASS"
     },
     {
@@ -124,14 +124,14 @@
     }
   ],
   "open_mathematics": [
-    "Determine the unrestricted local components through stable binary obstruction points via character Schur equations, second-order forms and finite-graph dimension bounds."
+    "Analyze the mixed tangent degeneracy divisor throughout the finite bisymmetric locus and identify the unrestricted rank and global component on its regular generic fibers; extend these all-window deformation criteria to other stable finite candidates."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 790,
+      "nc-p3": 793,
       "plan_ja": 18,
-      "notes_ja": 30
+      "notes_ja": 31
     },
     "scope": "LuaLaTeX built the manuscript, plan and research notes."
   },

@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-27",
-  "version": 451,
+  "version": 452,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -4525,6 +4525,15 @@
       "verification": [
         "computations/verify_binary_reverse_orientation.py"
       ]
+    },
+    {
+      "id": "UNRESTRICTED-COMPONENTS-AT-STABLE-BINARY-OBSTRUCTIONS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "At the generic stable binary obstruction and a rational sample the entire unrestricted orbit-transverse local ring is k[[13 base variables,h,a,b]]/(ah,bh). A smooth fourteen-dimensional bisymmetric and smooth fifteen-dimensional unrestricted component meet in a smooth reduced thirteen-dimensional locus. The larger component and its two one-sided symmetry divisors have generically all-degree AS regular windows with reduced finite points and minimum period four. The common boundary has regular generic point despite specializing to stable nonregular windows.",
+      "proof": "sections/binary_component_crossing.tex",
+      "verification": [
+        "computations/verify_binary_component_crossing.py"
+      ]
     }
   ],
   "document_paths": {
@@ -4588,7 +4597,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "903eaead338f7e468ffb0699e91177cb425fd44d",
+  "reviewed_source_commit": "114a155eddf5b98578d458a74a6c297e6badec23",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -4597,14 +4606,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Determine the unrestricted local components through stable binary obstruction points via character Schur equations, second-order forms and finite-graph dimension bounds.",
+    "immediate_next_action": "Analyze the mixed tangent degeneracy divisor throughout the finite bisymmetric locus and identify the unrestricted rank and global component on its regular generic fibers; extend these all-window deformation criteria to other stable finite candidates.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/binary_reverse_orientation.tex",
-      "sections/binary_two_edge_rigidity.tex"
+      "sections/binary_component_crossing.tex",
+      "sections/binary_reverse_orientation.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "In the binary nonregular boundary, the kernel quadratic and its companion quartic decide the point graph and the possible orientations at all parameters. Their degree-one common factor gives an explicit reverse Gram transport and cuts out a reduced irreducible degree-fourteen divisor for each decimic; divisibility gives the nonfinite locus. This completes orientation overlaps, indexed isomorphism, and periods on the finite obstruction boundary. Full classification remains open.",
+    "state_of_claim": "At the generic stable binary obstruction and a rational sample the entire unrestricted orbit-transverse local ring is k[[13 base variables,h,a,b]]/(ah,bh). A smooth fourteen-dimensional bisymmetric and smooth fifteen-dimensional unrestricted component meet in a smooth reduced thirteen-dimensional locus. The larger component and its two one-sided symmetry divisors have generically all-degree AS regular windows with reduced finite points and minimum period four. The common boundary has regular generic point despite specializing to stable nonregular windows. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

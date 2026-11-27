@@ -1777,6 +1777,12 @@
       "current_result": "In the binary nonregular boundary, the kernel quadratic and its companion quartic decide the point graph and the possible orientations at all parameters. Their degree-one common factor gives an explicit reverse Gram transport and cuts out a reduced irreducible degree-fourteen divisor for each decimic; divisibility gives the nonfinite locus. This completes orientation overlaps, indexed isomorphism, and periods on the finite obstruction boundary.",
       "current_proof": "sections/binary_reverse_orientation.tex",
       "global_coverage": false
+    },
+    {
+      "id": "UNRESTRICTED-COMPONENTS-AT-STABLE-BINARY-OBSTRUCTIONS",
+      "current_result": "At the generic stable binary obstruction and a rational sample the entire unrestricted orbit-transverse local ring is k[[13 base variables,h,a,b]]/(ah,bh). A smooth fourteen-dimensional bisymmetric and smooth fifteen-dimensional unrestricted component meet in a smooth reduced thirteen-dimensional locus. The larger component and its two one-sided symmetry divisors have generically all-degree AS regular windows with reduced finite points and minimum period four. The common boundary has regular generic point despite specializing to stable nonregular windows.",
+      "current_proof": "sections/binary_component_crossing.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1834,7 +1840,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 451,
+  "version": 452,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
