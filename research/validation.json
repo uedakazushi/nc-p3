@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 416,
+  "version": 417,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "a4ca1141f53e82eb5cdcb8f67b4e279d845f5609"
+    "source_commit": "7bf9d6a503138f980a4c33d44012d64df7cdbe31"
   },
   "generation": {
     "result": "PASS",
-    "scope": "A proper incidence of recurrent point-plane flags and a cycle of rank-two relations proves the full Hilbert series, Koszulity and two-sided AS regularity without any all-degree lower-bound hypothesis. Generic polynomial certificates on both final rank-ten sheets specialize across the entire evaluation-admissible loci, including all triple collisions. This completes all-degree regularity on every closed point over the final invertible thin fiber."
+    "scope": "Four independent periodic tracks exchanged in pairs by an involution give a rank-one opposite-contraction certificate for recurrent flags. A seven-dimensional involution component through the full-rank Klein point is parametrized by five independent coordinates, a quadratic root and two affine conics. Its whole orbit closure, including the entire five-dimensional elliptic completion, is all-degree AS regular wherever the two adjacent ranks, full arrows, absence of pure relations and evaluation lower bounds hold."
   },
   "checks": [
     {
-      "command": "python computations/verify_point_line_flag_cycles.py",
+      "command": "python computations/verify_involution_quartet_component.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Construct and prove recurrent flags on the generic five-dimensional elliptic sheet or the unrestricted fifteen-dimensional component to decide their entire evaluation-good loci. Continue structural coverage and unmarked component comparisons outside the Klein charts."
+    "Remove evaluation defects or detect non-AS points on the main closure; extend the four-track construction beyond the involution locus and compare other components including arbitrary unmarked windows."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 732,
+      "nc-p3": 734,
       "plan_ja": 16,
       "notes_ja": 29
     },

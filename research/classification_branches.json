@@ -1567,6 +1567,12 @@
       "current_result": "A proper incidence of recurrent point-plane flags and a cycle of rank-two relations proves the full Hilbert series, Koszulity and two-sided AS regularity without any all-degree lower-bound hypothesis. Generic polynomial certificates on both final rank-ten sheets specialize across the entire evaluation-admissible loci, including all triple collisions. This completes all-degree regularity on every closed point over the final invertible thin fiber.",
       "current_proof": "sections/point_line_flag_cycles.tex",
       "global_coverage": false
+    },
+    {
+      "id": "INVOLUTION-QUARTET-COMPONENT",
+      "current_result": "Four independent periodic tracks exchanged in pairs by an involution give a rank-one opposite-contraction certificate for recurrent flags. A seven-dimensional involution component through the full-rank Klein point is parametrized by five independent coordinates, a quadratic root and two affine conics. Its whole orbit closure, including the entire five-dimensional elliptic completion, is all-degree AS regular wherever the two adjacent ranks, full arrows, absence of pure relations and evaluation lower bounds hold.",
+      "current_proof": "sections/involution_quartet_component.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1624,7 +1630,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 416,
+  "version": 417,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
