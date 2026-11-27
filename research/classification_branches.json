@@ -1909,6 +1909,12 @@
       "current_result": "Over every generic split Bell surface completion all objects have minimal period two or four. The period-two locus off the closed orbit has exactly four irreducible pieces of dimensions 4,2,2,2; a simultaneous eigenspace test covers every weighted coordinate including zero coordinates. All other orbits have minimal period four.",
       "current_proof": "sections/split_surface_periods.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SPLIT-BELL-SURFACE-AND-FULL-FIFTEEN-COMPONENT",
+      "current_result": "All four labeled split Bell spectral surface families lie in the known unrestricted fifteen-dimensional component, by exact five-center calculations and order-four quantum specializations. Every window in each generic full GIT fiber lies on that unique smooth 76-dimensional affine component and in a Zariski open of standard regular algebras finite over quartic centers. The generic closed slice multiplicities are 3,4,2,4,3.",
+      "current_proof": "sections/split_surface_component.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1966,7 +1972,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 473,
+  "version": 474,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

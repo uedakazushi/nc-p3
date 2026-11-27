@@ -112,7 +112,7 @@ def tangent_dimensions(w):
         cols = [j for j,q in enumerate(WORDS) if sum(t < 2 for t in q) == n]
         restricted = nmod_mat([[row[j] for j in cols] for row in equations], PRIME)
         dims.append(len(cols)-restricted.rank())
-    assert nmod_mat(equations,PRIME).rank() == 196
+    assert nmod_mat(equations,PRIME).rank() == len(WORDS)-sum(dims)
     return dims
 
 

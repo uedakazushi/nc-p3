@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 473,
+  "version": 474,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "f17cc4e6fd51db6b21737e297747c3911e6b6cff"
+    "source_commit": "75e1d53dcdbd4f2d8edd365d406e9de36a951ad1"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Over every generic split Bell surface completion all objects have minimal period two or four. The period-two locus off the closed orbit has exactly four irreducible pieces of dimensions 4,2,2,2; a simultaneous eigenspace test covers every weighted coordinate including zero coordinates. All other orbits have minimal period four."
+    "scope": "All four labeled split Bell spectral surface families lie in the known unrestricted fifteen-dimensional component, by exact five-center calculations and order-four quantum specializations. Every window in each generic full GIT fiber lies on that unique smooth 76-dimensional affine component and in a Zariski open of standard regular algebras finite over quartic centers. The generic closed slice multiplicities are 3,4,2,4,3."
   },
   "checks": [
     {
-      "command": "python computations/verify_split_surface_periods.py",
+      "command": "python computations/verify_split_surface_component.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Use exact generic quartic centers and the quantum specialization to establish membership in the fifteen-dimensional unrestricted component and local smoothness. Extend to degenerate split spectra and remaining finite and branched strata."
+    "Use polynomial identities and central evaluations to constrain periodic paths and branching throughout the fifteen-dimensional component. Continue exceptional degenerations and other unrestricted components."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 821,
+      "nc-p3": 823,
       "plan_ja": 19,
       "notes_ja": 32
     },
