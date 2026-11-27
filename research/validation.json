@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 461,
+  "version": 462,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "6a9305669dea80ef9e08a41958c23d50bac79880"
+    "source_commit": "9e9d51801198e67d16d1941e9dbde0c6cd3fae33"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For a deficient Hankel projection any standard AS candidate must have projected rank four or five and neighboring torsion length exactly two or three. Large torsion always produces consecutive original pure relations via a unique longest elementary divisor. Quintic annihilators split through a low-degree line quotient of the linear syzygy bundle. In any graph a projected pure curve cannot span both the ternary and quaternary factors."
+    "scope": "Every single edge whose one-letter projection lies in a binary Hankel six-plane excludes standard AS regularity, with no rank, graph, or neighboring-edge hypothesis. Rank-five torsion lifts force two two-dimensional endpoints at a residue point. For rank four, cutting a length-two subdivisor of the cyclic torsion gives the forbidden two-sided center even at nonreduced points."
   },
   "checks": [
     {
-      "command": "python computations/verify_deficient_binary_support.py",
+      "command": "python computations/verify_deficient_binary_quintic_pencil.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Resolve the length-two and length-three deficient Hankel cases, and determine the remaining positive-dimensional edge geometries and finite-window exceptions."
+    "Study degenerations of the binary multiplication tensor and other projected rational edge supports, and the remaining regularity and coverage questions for general windows."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 806,
+      "nc-p3": 807,
       "plan_ja": 18,
       "notes_ja": 31
     },
