@@ -1807,6 +1807,12 @@
       "current_result": "The entire finite single-binary-edge obstruction, without any initial symmetry assumption, is the open Frobenius finite part of one irreducible marked linear-complex incidence. A nondegenerate alternating complex gives opposite rank ten and generically a unique binary mark, twenty reduced points and period four; its unmarked dimension is thirteen. A decomposable complex gives ranks nine and eight exactly for common factor degrees one and two, and otherwise a nonfinite graph. All finite non-bisymmetric windows in the family have minimum period four and are stable nonregular.",
       "current_proof": "sections/binary_linear_complex.tex",
       "global_coverage": false
+    },
+    {
+      "id": "GLOBAL-BINARY-CONTACT-FIFTEEN-COMPONENT",
+      "current_result": "The unrestricted fifteen-dimensional component meeting the generic nonregular binary point is globally the previously constructed full fifteen-dimensional component. It contains every finite single-binary-edge obstruction and the entire elliptic two-torsion closure. Its opposite determinant at a generic one-sided nonregular contact window is the sixth power of the symmetry parameter times a unit, so this nonregular divisor on the one-sided locus differs from the residual rank-fifteen divisor cut there.",
+      "current_proof": "sections/binary_global_component.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1864,7 +1870,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 456,
+  "version": 457,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
