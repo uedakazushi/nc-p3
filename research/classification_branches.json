@@ -1321,6 +1321,12 @@
       "current_result": "No standard object admits adjacent Klein cuts of positive profiles (3,1,1,1) and (2,2,1,1). The dense torus is excluded by localized determinantal ideals including a=+-1. In 109034088 supports the sparse part reduces to 312 orbits, then two masks; their exceptional fourth roots fail the character-resolved degree-four Hilbert function at every point.",
       "current_proof": "sections/klein_mixed_positive.tex",
       "global_coverage": false
+    },
+    {
+      "id": "KLEIN-TRANSVERSE-DENSE",
+      "current_result": "For two transverse thick-color directions of type (2,2,1,1), all windows with full rank-one rectangles are classified for regularity. Forty-eight geometric components fall into five symmetry orbits; four have an excessive degree-four character. The remaining two-parameter surface is regular exactly off u=v, including zero parameters, by a partial Fourier transform, a Klein cocycle and a symmetric basepoint-free four-quadric model. All points have minimum period one, with opposite rank twelve on three curves and sixteen elsewhere.",
+      "current_proof": "sections/klein_transverse_dense.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1378,7 +1384,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 375,
+  "version": 376,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
