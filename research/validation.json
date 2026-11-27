@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 503,
+  "version": 504,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "e07684eb969d39293c7a10b759d3610b6f95f206"
+    "source_commit": "faeb708297e8d2c7adac0476376a5d07e47937d1"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Finite one-sided symmetric windows of opposite rank greater than six are reconstructed from a three-layer commutative module of Hilbert vector (4,6,4), with a fixed complete Betti table. When its linear syzygies give a subbundle the window is classified up to indexed isomorphism by a charge-four instanton bundle up to projective coordinates, and this includes an explicit regular window."
+    "scope": "All finite symmetric windows of opposite rank greater than six give torsion-free charge-four instanton sheaves with locally free double dual. At opposite rank ten every non-locally-free such window admits a binary edge and is nonregular. Thus the entire stable or nonstable rank-ten one-sided regular locus is contained in the locally free chart at both odd slots."
   },
   "checks": [
     {
-      "command": "python computations/verify_finite_symmetric_instanton_monad.py",
+      "command": "python computations/verify_finite_instanton_boundary.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Control the degeneracy of the four linear syzygies and the torsion-free instanton boundary, relate unstable planes and jumping lines to point modules, and determine regularity on the instanton locus."
+    "Relate the two companion instanton monads by the middle differential of the commutative resolution. Study the rank-ten bundle locus through the evaluation of four sections and its quartic Grassmann map."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 872,
+      "nc-p3": 875,
       "plan_ja": 20,
       "notes_ja": 33
     },

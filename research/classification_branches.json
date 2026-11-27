@@ -2089,6 +2089,12 @@
       "current_result": "Finite one-sided symmetric windows of opposite rank greater than six are reconstructed from a three-layer commutative module of Hilbert vector (4,6,4), with a fixed complete Betti table. When its linear syzygies give a subbundle the window is classified up to indexed isomorphism by a charge-four instanton bundle up to projective coordinates, and this includes an explicit regular window.",
       "current_proof": "sections/finite_symmetric_instanton_monad.tex",
       "global_coverage": false
+    },
+    {
+      "id": "RANK-TEN-NONLOCALLY-FREE-BOUNDARY-IS-BINARY",
+      "current_result": "All finite symmetric windows of opposite rank greater than six give torsion-free charge-four instanton sheaves with locally free double dual. At opposite rank ten every non-locally-free such window admits a binary edge and is nonregular. Thus the entire stable or nonstable rank-ten one-sided regular locus is contained in the locally free chart at both odd slots.",
+      "current_proof": "sections/finite_rank_ten_instanton_boundary.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2146,7 +2152,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 503,
+  "version": 504,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
