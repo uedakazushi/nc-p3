@@ -1327,6 +1327,12 @@
       "current_result": "For two transverse thick-color directions of type (2,2,1,1), all windows with full rank-one rectangles are classified for regularity. Forty-eight geometric components fall into five symmetry orbits; four have an excessive degree-four character. The remaining two-parameter surface is regular exactly off u=v, including zero parameters, by a partial Fourier transform, a Klein cocycle and a symmetric basepoint-free four-quadric model. All points have minimum period one, with opposite rank twelve on three curves and sixteen elsewhere.",
       "current_proof": "sections/klein_transverse_dense.tex",
       "global_coverage": false
+    },
+    {
+      "id": "KLEIN-TWO-DOUBLET-SPARSE-SUPPORTS",
+      "current_result": "Every sparse regular-representation Klein window with two rank-two colors on each adjacent cut lies among 148 parallel-direction or 51 transverse-direction support orbits. Exhaustive matching of four rank-one rectangles and all thick-cell completions, followed by free-coordinate growth, consecutive pure relations and cubic slice bounds, verifies both lists.",
+      "current_proof": "sections/klein_two_doublet_supports.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1384,7 +1390,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 376,
+  "version": 377,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

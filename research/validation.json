@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 376,
+  "version": 377,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "79cd1c3090017d8bd8be933dec925fe3d89644b1"
+    "source_commit": "b642e085bd2914b6653541e77b7c38fd9a2555d8"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For two transverse thick-color directions of type (2,2,1,1), all windows with full rank-one rectangles are classified for regularity. Forty-eight geometric components fall into five symmetry orbits; four have an excessive degree-four character. The remaining two-parameter surface is regular exactly off u=v, including zero parameters, by a partial Fourier transform, a Klein cocycle and a symmetric basepoint-free four-quadric model. All points have minimum period one, with opposite rank twelve on three curves and sixteen elsewhere."
+    "scope": "Every sparse regular-representation Klein window with two rank-two colors on each adjacent cut lies among 148 parallel-direction or 51 transverse-direction support orbits. Exhaustive matching of four rank-one rectangles and all thick-cell completions, followed by free-coordinate growth, consecutive pure relations and cubic slice bounds, verifies both lists."
   },
   "checks": [
     {
-      "command": "python computations/verify_klein_transverse_dense.py",
+      "command": "python computations/verify_klein_two_doublet_supports.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Complete the simultaneous sparse (2,2,1,1) supports in the transverse and parallel sectors, and determine all exceptional parallel-direction dense windows and unmarked parameter equivalences."
+    "Solve all 51 sparse transverse supports, compare the surviving configurations to the compactification of the dense surface, and then analyze the 148 parallel-direction supports."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 661,
+      "nc-p3": 662,
       "plan_ja": 14,
       "notes_ja": 27
     },
