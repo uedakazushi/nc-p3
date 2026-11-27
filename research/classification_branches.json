@@ -1783,6 +1783,12 @@
       "current_result": "At the generic stable binary obstruction and a rational sample the entire unrestricted orbit-transverse local ring is k[[13 base variables,h,a,b]]/(ah,bh). A smooth fourteen-dimensional bisymmetric and smooth fifteen-dimensional unrestricted component meet in a smooth reduced thirteen-dimensional locus. The larger component and its two one-sided symmetry divisors have generically all-degree AS regular windows with reduced finite points and minimum period four. The common boundary has regular generic point despite specializing to stable nonregular windows.",
       "current_proof": "sections/binary_component_crossing.tex",
       "global_coverage": false
+    },
+    {
+      "id": "BINARY-CROSSING-OPPOSITE-DETERMINANT",
+      "current_result": "At a generic oriented stable binary obstruction, the unrestricted fifteen-dimensional component has opposite determinant a^6 b^6 D, with three independent smooth local parameters. The two one-sided regular divisors have generic opposite rank ten, the ambient generic rank is sixteen, and the residual divisor has generic rank fifteen, reduced finite points and period four. Its intersection with the bisymmetric crossing recovers the entire local nonregular binary boundary. Its own generic AS status is still open.",
+      "current_proof": "sections/binary_opposite_determinant.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1840,7 +1846,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 452,
+  "version": 453,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

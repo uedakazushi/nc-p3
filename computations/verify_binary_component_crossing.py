@@ -31,7 +31,7 @@ def character_matrices(even, odd):
     return np.array(matrices)
 
 
-def main():
+def sample():
     T = (2,3,5,7,11,13,17,19,23,29,31)
     Y = (3,1,4,1,5,9,2,6,5)
     G = sp.Matrix(6,6,lambda i,j:T[i+j])
@@ -56,6 +56,10 @@ def main():
     inverse = np.zeros((16,16),dtype=int)
     inverse[np.ix_(pivots,pivots)] = reduced(w[pivots,pivots].inv())
 
+    return w, integral, n, inverse
+
+
+def tangent_data(integral, n, inverse):
     lifts, obstructions = {}, {}
     expected = {(1,1):45,(1,-1):16,(-1,1):16,(-1,-1):0}
     for (even,odd),dimension in expected.items():
@@ -71,17 +75,26 @@ def main():
 
     symmetric = lifts[1,1]
     forms = []
+    mixed = {}
     for character in ((1,-1),(-1,1)):
         functional,index = obstructions[character]
         assert functional.shape[1] == 1
         pairings = []
-        for mixed in lifts[character]:
-            cross = ((symmetric@inverse%PRIME)@mixed+(mixed@inverse%PRIME)@symmetric)%PRIME
+        for direction in lifts[character]:
+            cross = ((symmetric@inverse%PRIME)@direction+(direction@inverse%PRIME)@symmetric)%PRIME
             normal = ((n.T@cross%PRIME)@n)%PRIME
             pairings.append(normal[:,index[0],index[1]]@functional[:,0]%PRIME)
         assert nmod_mat(np.array(pairings).tolist(),PRIME).rank() == 1
+        index = next(i for i,row in enumerate(pairings) if row.any())
+        mixed[character] = lifts[character][index]
         forms.extend(pairings)
     assert nmod_mat(np.array(forms).tolist(),PRIME).rank() == 1
+    return symmetric, mixed, np.array(forms)
+
+
+def main():
+    _, integral, n, inverse = sample()
+    tangent_data(integral, n, inverse)
     print("Finite sample, four rational Jacobians, and nonzero mixed Hessians in both characters verified.")
 
 
