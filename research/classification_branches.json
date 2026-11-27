@@ -2221,6 +2221,12 @@
       "current_result": "The entire finite vertex-index-two branch, including exceptional values, consists exactly of ordinary period-one graded Clifford windows of basepoint-free webs of quadrics meeting the symmetric rank-at-most-two locus in a finite scheme. Indexed isomorphism is precisely projective equivalence of the webs. The center is the quartic symmetroid double solid with doubled polarization; the web locus is irreducible of dimension nine modulo isomorphism.",
       "current_proof": "sections/index_two_central_clifford.tex",
       "global_coverage": false
+    },
+    {
+      "id": "ALL-DOMAIN-SPECIALIZATIONS-FINITE-48-PARAMETER-TEST",
+      "current_result": "On every finite Frobenius window in the fifteen-dimensional closure, AS regularity together with one domain corner is equivalent to a finite test with central parameters of path length 48 (path cutoff 564). At all such specializations the full center lifts in every degree with the generic Hilbert function and all composable nonzero products survive. No regularity conclusion is imposed on windows with zero divisors.",
+      "current_proof": "sections/finite_domain_specialization_parameters.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2278,7 +2284,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 525,
+  "version": 526,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

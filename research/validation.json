@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 525,
+  "version": 526,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "2d0400fc14077a42edaf7d5d578ddda521e18fee"
+    "source_commit": "ca690647c01e0624b1094320730493df3306801f"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The entire finite vertex-index-two branch, including exceptional values, consists exactly of ordinary period-one graded Clifford windows of basepoint-free webs of quadrics meeting the symmetric rank-at-most-two locus in a finite scheme. Indexed isomorphism is precisely projective equivalence of the webs. The center is the quartic symmetroid double solid with doubled polarization; the web locus is irreducible of dimension nine modulo isomorphism."
+    "scope": "On every finite Frobenius window in the fifteen-dimensional closure, AS regularity together with one domain corner is equivalent to a finite test with central parameters of path length 48 (path cutoff 564). At all such specializations the full center lifts in every degree with the generic Hilbert function and all composable nonzero products survive. No regularity conclusion is imposed on windows with zero divisors."
   },
   "checks": [
     {
-      "command": "python computations/verify_index_two_central_clifford.py",
+      "command": "python computations/verify_domain_specialization_cutoff.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze the remaining finite index-four central and noncentral windows; in particular determine which finite regular specializations of the main component retain central parameters."
+    "Analyze the remaining potential zero-divisor regular specializations, and extend finite certification to other components by representation or trace criteria."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 912,
+      "nc-p3": 914,
       "plan_ja": 21,
       "notes_ja": 35
     },
