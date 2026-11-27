@@ -1981,6 +1981,12 @@
       "current_result": "The full exceptional mixed-flip quotient fiber at a squared equal to minus one consists of five unobstructed affine attracting spaces, up to an explicit two-dimensional torus and two finite generators. All points are Koszul left and right AS regular, with exact isomorphism, period one or two and orbit-specialization criteria.",
       "current_proof": "sections/mixed_flip_fiber.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SPLIT-ATTRACTION-REGULAR-SPECIALIZATION-CLOSURE",
+      "current_result": "All regular specializations of windows admitting or attracted to an invertible two-plane split have a polystable regular core with an invertible split. The total PBW-normalized volume equals the product of four crossed pure-sector determinants, also for filtered lifts. The extra 60-dimensional simple component has precisely its displayed simple orbits, one mixed closed orbit, and one Jordan orbit on its regular locus; the opposite determinant excludes both poles.",
+      "current_proof": "sections/split_regular_limits.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2038,7 +2044,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 485,
+  "version": 486,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

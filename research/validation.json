@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 485,
+  "version": 486,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "f67c78b742a6f040806f5fc47b6a75d1b2d07aa6"
+    "source_commit": "187babad92f230781763180ae92bf100b933e3ba"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The full exceptional mixed-flip quotient fiber at a squared equal to minus one consists of five unobstructed affine attracting spaces, up to an explicit two-dimensional torus and two finite generators. All points are Koszul left and right AS regular, with exact isomorphism, period one or two and orbit-specialization criteria."
+    "scope": "All regular specializations of windows admitting or attracted to an invertible two-plane split have a polystable regular core with an invertible split. The total PBW-normalized volume equals the product of four crossed pure-sector determinants, also for filtered lifts. The extra 60-dimensional simple component has precisely its displayed simple orbits, one mixed closed orbit, and one Jordan orbit on its regular locus; the opposite determinant excludes both poles."
   },
   "checks": [
     {
-      "command": "python computations/verify_mixed_flip_fiber.py",
+      "command": "python computations/verify_split_extra_boundary.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Resolve the polar boundary of the extra simple component by comparing the opposite-cut determinant with the PBW-normalized volume. Continue coverage outside torus-attraction windows."
+    "Classify nonsplit attracting fibers over the other polystable split cores, and use the complementary specialization-open locus to isolate the unclassified stable and branched windows."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 843,
+      "nc-p3": 845,
       "plan_ja": 19,
       "notes_ja": 32
     },
