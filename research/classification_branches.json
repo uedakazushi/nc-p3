@@ -2239,6 +2239,12 @@
       "current_result": "In every component, the left and right Noetherian standard regular folds satisfying the identities of matrices of size 4s are exactly a finite central-parameter test at degree 4 lcm(1,...,s) lcm(1,...,s²) with the indicated generic rank bound. They are composable domains and finite over a normal center.",
       "current_proof": "sections/noetherian_pi_window_cutoff.tex",
       "global_coverage": false
+    },
+    {
+      "id": "PI-CENTER-FINITENESS-BY-VERTEX-EXTENSIONS",
+      "current_result": "For standard regular PI folds on every component, being finite over the center and being left/right Noetherian are each equivalent to vanishing in both directions of Ext¹ between every nonvertex simple and every vertex simple. No primeness, Noetherianity or degeneration hypothesis is needed in this criterion.",
+      "current_proof": "sections/pi_vertex_extension_criterion.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2296,7 +2302,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 528,
+  "version": 529,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

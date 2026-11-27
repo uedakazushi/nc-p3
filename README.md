@@ -2,7 +2,7 @@
 
 **共同研究：** 本リポジトリは大川新之介・植田一石の共同研究プロジェクトです。この表示は個々の論文の著者を確定するものではありません。
 
-**2026-11-27 / v528。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-27 / v529。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -625,6 +625,8 @@ Bell曲面の固有値衝突部は全Jordan型と例外値を含む三行で尽�
 十五次元閉包で有限辺を持つ正則点は、一隅が半素なら既に整域枝の有限判定に入る。残余の正則点があれば全隅に非零冪零両側イデアルが必要である。[証明](sections/finite_semiprime_specialization.tex)
 
 成分を指定せず、行列恒等式のサイズを固定した左右Noether正則窓を有限な中心切断で判定した。中心の正規性と合成整域性も従う。[証明](sections/noetherian_pi_window_cutoff.tex)
+
+PI正則窓が中心上有限になる必要十分条件を、非頂点単純と頂点単純との両向きの第一拡張で与えた。半素性や成分の指定を要しない。[証明](sections/pi_vertex_extension_criterion.tex)
 
 非恒等の平面グラフを基底に持つOre窓では、指定点を忘れた同型類も決定した。[正規形と平坦特殊化](sections/plane_graph_ore_windows.tex)・[検算](computations/verify_plane_graph_ore.py)
 

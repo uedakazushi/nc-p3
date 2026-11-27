@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-27",
-  "version": 528,
+  "version": 529,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -5222,6 +5222,15 @@
       "verification": [
         "computations/verify_noetherian_pi_window_cutoff.py"
       ]
+    },
+    {
+      "id": "PI-CENTER-FINITENESS-BY-VERTEX-EXTENSIONS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "For standard regular PI folds on every component, being finite over the center and being left/right Noetherian are each equivalent to vanishing in both directions of Ext¹ between every nonvertex simple and every vertex simple. No primeness, Noetherianity or degeneration hypothesis is needed in this criterion.",
+      "proof": "sections/pi_vertex_extension_criterion.tex",
+      "verification": [
+        "computations/verify_pi_vertex_extension_criterion.py"
+      ]
     }
   ],
   "document_paths": {
@@ -5285,7 +5294,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "bee82d6b0fd6f3d95dea97913582a39265da9794",
+  "reviewed_source_commit": "381dfcfb06fecba33ec2413c097d38fb179a105e",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -5294,14 +5303,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Test simultaneous trace descent in the non-Noetherian residual locus via specialization of simple representations and their first extensions with vertex simples; pursue uncovered finite components.",
+    "immediate_next_action": "Determine the exceptional simple representations having an extension with a vertex in the finite-edge locus; work also on finite windows with no PI identity.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/noetherian_pi_window_cutoff.tex",
-      "sections/finite_semiprime_specialization.tex"
+      "sections/pi_vertex_extension_criterion.tex",
+      "sections/noetherian_pi_window_cutoff.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "In every component, the left and right Noetherian standard regular folds satisfying the identities of matrices of size 4s are exactly a finite central-parameter test at degree 4 lcm(1,...,s) lcm(1,...,s²) with the indicated generic rank bound. They are composable domains and finite over a normal center. Full classification remains open.",
+    "state_of_claim": "For standard regular PI folds on every component, being finite over the center and being left/right Noetherian are each equivalent to vanishing in both directions of Ext¹ between every nonvertex simple and every vertex simple. No primeness, Noetherianity or degeneration hypothesis is needed in this criterion. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
