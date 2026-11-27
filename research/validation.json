@@ -1,15 +1,23 @@
 {
   "schema_version": 2,
-  "version": 400,
+  "version": 401,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "7fb793bdb462e288949963dc4cf058a91e9cebd5"
+    "source_commit": "04d87a06decd76cd8c73156ae66b7afb0143a9cf"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every point of both rank-ten surfaces on horizontal support 85 is standard two-sided AS regular and free of rank 256 over four central quartics at each start. Both sign-twisted surfaces are also regular. Independent evaluated relations over five central variables give an all-degree Hilbert and depth certificate."
+    "scope": "The opposite ranks and both determinant divisors are explicit over all five large horizontal 112 supports. Their rank-fourteen intersection has an elliptic K3 model of Picard number 20 and absolute Neron-Severi discriminant 16. Its generic unmarked quotient is rational, with a rational period-two branch. The surface, branch curve and both divisors have nonempty standard regular open subsets."
   },
   "checks": [
+    {
+      "command": "python computations/verify_second_rectangle_opposite_ranks.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python computations/verify_second_rectangle_rank_fourteen_samples.py",
+      "result": "PASS"
+    },
     {
       "command": "python computations/verify_first_rectangle_edge_regularity.py",
       "result": "PASS"
@@ -72,12 +80,12 @@
     }
   ],
   "open_mathematics": [
-    "Resolve remaining 85 and 112 horizontal fibers and their intersections, including opposite rank strata, and the unrestricted branches."
+    "Resolve all remaining fibers of the large horizontal supports, including the period-two curve, and unrestricted window components and orbit identifications."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 697,
+      "nc-p3": 699,
       "plan_ja": 15,
       "notes_ja": 28
     },
