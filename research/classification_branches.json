@@ -1525,6 +1525,12 @@
       "current_result": "The full projective zero-parameter negative exchange quotient is an explicit open weighted projective threefold. All its shifts, period and opposite-rank strata and unmarked comparisons at infinity are determined via filtered four-line and double-line cones. The bare integral quadric cone is the regular infinite-parameter limit of the smooth quadric graph branch.",
       "current_proof": "sections/zero_exchange_projective_quotient.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SINGULAR-EXCHANGE-CORNERS",
+      "current_result": "All full-thin rank-one cross-block bisymmetric windows and their nontrivial twists are classified by regularity, including singular thick corners. The regular forms have period one. The twisted unmarked quotient is A^2 times G_m with explicit rank and stabilizer strata, yielding a distinct period-one divisor. The positive forms have a finite quadric factor-frame normal form.",
+      "current_proof": "sections/klein_singular_exchange_corners.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1582,7 +1588,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 409,
+  "version": 410,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
