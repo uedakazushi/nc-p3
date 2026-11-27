@@ -2293,6 +2293,12 @@
       "current_result": "Every hypothetical regular non-domain finite-edge limit on the fifteen-dimensional closure has a nonzero central zero-divisor in path degree four or eight, with a uniformly bounded homogeneous annihilator in any prescribed corner. The relative trace algebra of every regular specialization, even a nonsemiprime one, admits an octic normalization. Away from the indicated finite obstruction the 84-degree test decides regularity itself.",
       "current_proof": "sections/finite_short_trace_pole.tex",
       "global_coverage": false
+    },
+    {
+      "id": "RELATIVE-TRACE-KERNEL-NILPOTENT-AND-SHORT-REPRESENTATION-TEST",
+      "current_result": "For every regular finite limit on the fifteen-dimensional component the entire kernel of reduction to the relative trace order is a nilpotent ideal. A residual non-domain regular point necessarily has a central nilpotent in path degree four or eight. Injectivity of the two low central trace evaluations on the single reduced representation scheme of dimension (4,4,4,4) guarantees that the 84-degree test decides regularity.",
+      "current_proof": "sections/relative_trace_nilpotence.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2350,7 +2356,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 537,
+  "version": 538,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 537,
+  "version": 538,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "c79cf81fcb644a5779d5503c921b087c86b6f96c"
+    "source_commit": "d5f0257d74d0b0d327eb99d1892f526ceac78165"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every hypothetical regular non-domain finite-edge limit on the fifteen-dimensional closure has a nonzero central zero-divisor in path degree four or eight, with a uniformly bounded homogeneous annihilator in any prescribed corner. The relative trace algebra of every regular specialization, even a nonsemiprime one, admits an octic normalization. Away from the indicated finite obstruction the 84-degree test decides regularity itself."
+    "scope": "For every regular finite limit on the fifteen-dimensional component the entire kernel of reduction to the relative trace order is a nilpotent ideal. A residual non-domain regular point necessarily has a central nilpotent in path degree four or eight. Injectivity of the two low central trace evaluations on the single reduced representation scheme of dimension (4,4,4,4) guarantees that the 84-degree test decides regularity."
   },
   "checks": [
     {
-      "command": "python computations/verify_finite_short_trace_pole.py",
+      "command": "python computations/verify_relative_trace_nilpotence.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Use the short central annihilator and the finite trace degeneration to determine whether the remaining noncoherent regular windows exist; advance the separate non-PI finite locus and the center geometry."
+    "Analyze these low-degree trace kernels using the quadratic quiver equations and the geometry of smaller simple families; continue identification of remaining finite components."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 934,
+      "nc-p3": 935,
       "plan_ja": 22,
       "notes_ja": 35
     },
