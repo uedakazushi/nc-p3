@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 468,
+  "version": 469,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "79fe3a288a9a438f7bc3a9f42fe6c35b39b45c0d"
+    "source_commit": "4ae31d14a06d563cf561c76910425f44e7b09cbf"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All filtered lifts over all invertible split inverse tensors are classified with their marked equivalence by 48 linear constraints on 64 cubic-weight coefficients and a quadratic obstruction in dimension 5 (scalar normal monodromy) or 2 (nonscalar). The final 16 quartic-weight coefficients have affine solution fibers of dimension 3 or 0 respectively. Every solution is regular in all degrees, also with branching off the marked lines."
+    "scope": "The unmarked exceptional sextic split Bell object, of minimal period one, is rigid in the unrestricted two-flattening scheme. Its projective orbit is smooth and open of dimension 59; its closure is an entire irreducible component and its semistable quotient consists of this one reduced point. No other window specializes to it. A characteristic-zero transporter and a good-prime full tangent bound certify this."
   },
   "checks": [
     {
-      "command": "python computations/verify_invariant_line_lifts.py",
+      "command": "python computations/verify_isolated_split_component.py",
       "result": "PASS"
     },
     {
@@ -124,14 +124,14 @@
     }
   ],
   "open_mathematics": [
-    "Compute the full attracting fibers and transverse deformation directions of the exceptional isolated split Bell tensor and generic split spectra. Continue unrestricted finite and branched strata."
+    "Determine the point scheme of the isolated component and possible unstable regular boundary; test unrestricted components and their intersections beyond this orbit."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 815,
-      "plan_ja": 18,
-      "notes_ja": 31
+      "nc-p3": 816,
+      "plan_ja": 19,
+      "notes_ja": 32
     },
     "scope": "LuaLaTeX built the manuscript, plan and research notes."
   },
