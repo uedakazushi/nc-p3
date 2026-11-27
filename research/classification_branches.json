@@ -1933,6 +1933,12 @@
       "current_result": "Exactly two semisimple Bell line classes meet the fifteen-dimensional component: the order-four quantum point and the no-flip class at s squared equal to minus one. The mixed flip curve sweeps out a distinct 59-dimensional irreducible component of the unrestricted projective rank scheme, with one-dimensional rational quotient.",
       "current_proof": "sections/split_line_component_incidence.tex",
       "global_coverage": false
+    },
+    {
+      "id": "PBW-VALUATION-OBSTRUCTION-AND-ENTIRE-MIXED-COMPONENT",
+      "current_result": "A valuation obstruction from monic PBW Koszul bases excludes polar degenerations of every quantum triangle invariant. It excludes both ends of the mixed flip curve, and every regular point of its full unrestricted 59-dimensional projective component is exactly one of the classified period-one classes a modulo sign and inversion, including the two exceptional quotient values.",
+      "current_proof": "sections/pbw_valuative_boundaries.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1990,7 +1996,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 477,
+  "version": 478,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 477,
+  "version": 478,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "a067ef915c35dab1784d6070b615e119aad7b23a"
+    "source_commit": "40c8ea66d6179703566d924b3eb4362493f84a9d"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Exactly two semisimple Bell line classes meet the fifteen-dimensional component: the order-four quantum point and the no-flip class at s squared equal to minus one. The mixed flip curve sweeps out a distinct 59-dimensional irreducible component of the unrestricted projective rank scheme, with one-dimensional rational quotient."
+    "scope": "A valuation obstruction from monic PBW Koszul bases excludes polar degenerations of every quantum triangle invariant. It excludes both ends of the mixed flip curve, and every regular point of its full unrestricted 59-dimensional projective component is exactly one of the classified period-one classes a modulo sign and inversion, including the two exceptional quotient values."
   },
   "checks": [
     {
-      "command": "python computations/verify_split_line_center.py",
+      "command": "python computations/verify_pbw_valuative_boundary.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine all boundary or exceptional regular points of the mixed flip component and the nonsemisimple Jordan completions. Continue addressing residual stable finite and branched windows."
+    "Compute the nonsemisimple line and surface transport fibers, and extend the valuation obstruction to remaining moving nonquantum or branched and stable windows."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 828,
+      "nc-p3": 830,
       "plan_ja": 19,
       "notes_ja": 32
     },
