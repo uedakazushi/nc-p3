@@ -1615,6 +1615,12 @@
       "current_result": "On the entire rank-six mixed-exchange chart, regularity is equivalent to (tb-lambda)(tb-1/lambda) nonzero. All eight exceptional parameter charts admit quotients of dimension at least four to the number of four-letter blocks. Together with the previous full-thin cover, the elliptic test and exchange and transverse tests, this decides all-degree regularity on every four-full-thin two-doublet window.",
       "current_proof": "sections/mixed_exchange_regularity.tex",
       "global_coverage": false
+    },
+    {
+      "id": "REGULAR-KLEIN-COMPLETE-TEST-AND-UNMARKING",
+      "current_result": "All windows admitting a regular-representation Klein marking now have an exhaustive finite test for all-degree regularity, including every missing-color and sparse branch. For every regular window in this locus, the finite set of saturated character records over connected stabilizer-conjugacy classes of markings is a complete index-preserving invariant across branches. The same invariant decides all periods even with positive-dimensional stabilizers.",
+      "current_proof": "sections/klein_unmarked_atlas.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1672,7 +1678,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 424,
+  "version": 425,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

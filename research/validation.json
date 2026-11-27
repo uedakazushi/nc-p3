@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 424,
+  "version": 425,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "50cc41e21383af3ac5f9ef4dfa5348761a77fe52"
+    "source_commit": "71510058772981cbaf9e2b419d87bf4a08744241"
   },
   "generation": {
     "result": "PASS",
-    "scope": "On the entire rank-six mixed-exchange chart, regularity is equivalent to (tb-lambda)(tb-1/lambda) nonzero. All eight exceptional parameter charts admit quotients of dimension at least four to the number of four-letter blocks. Together with the previous full-thin cover, the elliptic test and exchange and transverse tests, this decides all-degree regularity on every four-full-thin two-doublet window."
+    "scope": "All windows admitting a regular-representation Klein marking now have an exhaustive finite test for all-degree regularity, including every missing-color and sparse branch. For every regular window in this locus, the finite set of saturated character records over connected stabilizer-conjugacy classes of markings is a complete index-preserving invariant across branches. The same invariant decides all periods even with positive-dimensional stabilizers."
   },
   "checks": [
     {
-      "command": "python computations/verify_mixed_exchange_regularity.py",
+      "command": "python computations/verify_klein_atlas_codes.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine unmarked identifications and periods on exceptional elliptic and mixed fibers, and extend the common structural and regularity tests to sparse and non-Klein windows."
+    "Determine specialization and component behavior of the Klein atlas via its torus quotient, then address windows without a regular Klein marking."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 744,
+      "nc-p3": 746,
       "plan_ja": 16,
       "notes_ja": 29
     },

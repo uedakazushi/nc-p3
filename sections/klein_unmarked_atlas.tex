@@ -1,0 +1,84 @@
+% !TeX root = ../papers/nc-p3.tex
+\section{正則表現型四元群を持つ全窓の判定と印を忘れる有限不変量}
+\label{sec:klein-unmarked-atlas}
+$K=(\mathbb Z/2)^2$ とし $G=\prod_{i=0}^3\operatorname{PGL}(V_i)$ とする。
+ここで扱う印は $K\hookrightarrow G_{[w]}$ で、各位置で四本の固有直線に分かれ、
+線形持上げで四文字が一回ずつ現れるものである。最上テンソルの総文字は各位置の
+持上げの選択で零とする。非可換な射影持上げしかない印はこの型に含まれない。
+\begin{theorem}\label{thm:klein-unmarked-atlas}
+この型の印が一つでもある四窓全体について、標準Koszul左右AS正則性は有限判定できる。
+全正則窓の添字保持同型類には、次に定める有限集合 $\mathcal D(w)$ が完全不変量を与える。
+異なる色階数、疎密の異なる台、例外値、正次元の安定群を持つ場合の相互比較にも使える。
+最小周期は $\mathcal D(w)=\mathcal D(\operatorname{rot}^j w)$ となる最小の $j=1,2,4$ である。
+\end{theorem}
+\begin{proof}[全切断の判定]
+一文字全階数・隣接階数6を確認する。色別Euler式による
+定理\ref{thm:klein-missing-color-coverage}の制限により、許される各切断の分割は
+$0222,3111,2211$ に限られる。以下の参照は窓を受理・排除するための必要十分条件である。
+\begin{center}
+\begin{tabular}{c|l}
+二切断における条件 & 判定箇所\\\hline
+両方に欠色 & 定理\ref{thm:klein-missing-color-coverage}\\
+片方に欠色 & 定理\ref{thm:klein-single-missing-windows}\\
+両方 $3111$ & 定理\ref{thm:klein-three-lines}\\
+$3111$ と $2211$ & 定理\ref{thm:klein-mixed-positive}で全排除\\
+両方 $2211$、薄い四長方形が完備 & 系\ref{cor:regular-full-thin-all-pairings}\\
+両方 $2211$、疎で異方向 & 定理\ref{thm:klein-sparse-transverse}\\
+両方 $2211$、疎で平行 & 下記の148代表の判定
+\end{tabular}
+\end{center}
+最後の二行の被覆は命題\ref{prop:klein-two-doublet-supports}である。平行方向では
+定理\ref{thm:klein-parallel-flags}, \ref{thm:parallel-symmetric-surface}と
+節\ref{sec:parallel-excluded-shapes}の全排除により残る代表のうち、
+$82,118,124,129,134,139,142$ は定理\ref{thm:parallel-support-fibers}で決まる。
+$85,88$--$90,143$--$147$ の各補完は同定理と定理\ref{thm:horizontal-rectangle-flags}
+で全て決まる。以上は指定した四元群を保つ表示の被覆である。一般の入力でも
+後述の印の方程式を先に解いてこの型の印が存在するかを判定できる。
+\end{proof}
+
+\begin{proof}[一つの印の文字不変量]
+四つの共通固有基底を選び、総文字零の64語のうち非零の語の集合を $S$ とする。
+整数行列 $E_S$ の語 $q$ の行の $(i,j)$ 成分を $[q_i=j]$ とする。
+$\ker_{\mathbb Z}E_S^{\mathsf t}$ の基底 $m_1,\ldots,m_h$ を、固定した語順と整数行操作で取る。
+この印の記録は
+\[
+ \left(S,\;\big(\prod_{q\in S}w_q^{m_{a,q}}\big)_{1\le a\le h}\right)
+\]
+の以下の有限な付け替えによる軌道である。
+四位置で同じ $L\in\operatorname{GL}_2(\mathbb F_2)$ と、
+$\sum_i d_i=0$ となる四つの平行移動を取り、$q_i\mapsto Lq_i+d_i$ とする。
+これら $384$ 通りは、共通の群の生成元を選び直し、各線形持上げを文字倍して得られる。
+逆に、指定した射影群を自身へ共役する四位置写像は各文字直線をこう置換する。
+残る変換は各直線の倍率である。二記録の一致は二組の係数比が対角トーラスの像に入ることに等しい。
+これはトーラスの指標による像の記述から従い、非飽和な格子の有理基底で代用しない。
+射影全体倍率もこの像に含まれる。従って記録は部分群を指定した同型の完全不変量である。
+\path{computations/verify_klein_atlas_codes.py} は付け替えを独立に列挙し、疎な台でも飽和指標による比較を行う。
+\end{proof}
+
+\begin{proof}[全印の有限性と復元]
+$H=G_{[w]}$ とする。$\operatorname{Hom}(K,H)$ の一点 $\rho$ の接空間は
+$Z^1(K,\operatorname{Lie}H_{\operatorname{Ad}\rho})$、
+$H^\circ$ 共役軌道の接空間は同じ係数の余境界 $B^1$ である。
+実際各群元の一次摂動に積の等式を課せばコサイクル式そのものを得る。
+標数零の有限群ではこの二空間が等しい。コサイクル $c$ に対し
+$v=|K|^{-1}\sum_{g\in K}c(g)$ とすると $c(g)=v-gv$ である。
+軌道は滑らかで局所閉、周囲の接次元がその軌道次元に等しいので周囲もその点で滑らかで
+軌道は開である。全軌道が開なのでそれぞれ閉でもあり、有限型性で有限個しかない。
+各既約成分は一軌道である。この議論は $H$ の簡約性や有限性を要しない。
+
+具体的には $H$ を $g w\wedge w=0$ と各行列の可逆性で与え、
+$H$ の可換な二つの射影対合の方程式を取る（恒等元を含む $g^2=1$ でよい）。
+アフィン標での既約分解後、各成分から幾何点を一つ取る。
+各位置で二つの行列の二乗を1に規格化し、通常の行列として可換で、
+同時固有空間が各一次元の成分のみを残す。この条件は共役不変である。
+射影基底の全選択による重複は前段の有限軌道に吸収される。
+残った印についての記録の集合を $\mathcal D(w)$ とする。
+別の実装では、台と文字不変量の値を座標とし、固有基底による変換の存在を
+消去してもよい。その値の像は今示した有限集合であり、固有基底自体の有限性を要しない。
+
+添字保持同型は標準テンソルの四位置射影同値である
+（系\ref{cor:two-window-extension}の最後の構成）。
+従って同型なら全印の記録が一致する。逆に二集合に一つでも共通の記録があれば、
+その二つの固有基底を使って添字を保つ同型を構成できる。
+窓には四移動との標準同型があるため周期の判定も従う。
+\end{proof}

@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-27",
-  "version": 424,
+  "version": 425,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -4282,6 +4282,15 @@
       "verification": [
         "computations/verify_mixed_exchange_regularity.py"
       ]
+    },
+    {
+      "id": "REGULAR-KLEIN-COMPLETE-TEST-AND-UNMARKING",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "All windows admitting a regular-representation Klein marking now have an exhaustive finite test for all-degree regularity, including every missing-color and sparse branch. For every regular window in this locus, the finite set of saturated character records over connected stabilizer-conjugacy classes of markings is a complete index-preserving invariant across branches. The same invariant decides all periods even with positive-dimensional stabilizers.",
+      "proof": "sections/klein_unmarked_atlas.tex",
+      "verification": [
+        "computations/verify_klein_atlas_codes.py"
+      ]
     }
   ],
   "document_paths": {
@@ -4345,7 +4354,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "50cc41e21383af3ac5f9ef4dfa5348761a77fe52",
+  "reviewed_source_commit": "71510058772981cbaf9e2b419d87bf4a08744241",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -4354,14 +4363,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Determine unmarked identifications and periods on exceptional elliptic and mixed fibers, and extend the common structural and regularity tests to sparse and non-Klein windows.",
+    "immediate_next_action": "Determine specialization and component behavior of the Klein atlas via its torus quotient, then address windows without a regular Klein marking.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/mixed_exchange_regularity.tex",
-      "sections/elliptic_evaluation_obstructions.tex"
+      "sections/klein_unmarked_atlas.tex",
+      "sections/mixed_exchange_regularity.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "On the entire rank-six mixed-exchange chart, regularity is equivalent to (tb-lambda)(tb-1/lambda) nonzero. All eight exceptional parameter charts admit quotients of dimension at least four to the number of four-letter blocks. Together with the previous full-thin cover, the elliptic test and exchange and transverse tests, this decides all-degree regularity on every four-full-thin two-doublet window. Full classification remains open.",
+    "state_of_claim": "All windows admitting a regular-representation Klein marking now have an exhaustive finite test for all-degree regularity, including every missing-color and sparse branch. For every regular window in this locus, the finite set of saturated character records over connected stabilizer-conjugacy classes of markings is a complete index-preserving invariant across branches. The same invariant decides all periods even with positive-dimensional stabilizers. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
