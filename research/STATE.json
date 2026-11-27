@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-27",
-  "version": 415,
+  "version": 416,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -4201,6 +4201,15 @@
       "verification": [
         "computations/verify_unequal_determinant_conic.py"
       ]
+    },
+    {
+      "id": "RECURRENT-POINT-LINE-FLAGS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "A proper incidence of recurrent point-plane flags and a cycle of rank-two relations proves the full Hilbert series, Koszulity and two-sided AS regularity without any all-degree lower-bound hypothesis. Generic polynomial certificates on both final rank-ten sheets specialize across the entire evaluation-admissible loci, including all triple collisions. This completes all-degree regularity on every closed point over the final invertible thin fiber.",
+      "proof": "sections/point_line_flag_cycles.tex",
+      "verification": [
+        "computations/verify_point_line_flag_cycles.py"
+      ]
     }
   ],
   "document_paths": {
@@ -4264,7 +4273,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "57c6bb57e568a7e38e65aadab30f8fc92bad2a68",
+  "reviewed_source_commit": "a4ca1141f53e82eb5cdcb8f67b4e279d845f5609",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -4273,14 +4282,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Decide closed-point AS regularity after removing the complete evaluation obstruction, including on the two remaining rank-ten sheets; treat unmarked windows outside the Klein sector.",
+    "immediate_next_action": "Construct and prove recurrent flags on the generic five-dimensional elliptic sheet or the unrestricted fifteen-dimensional component to decide their entire evaluation-good loci. Continue structural coverage and unmarked component comparisons outside the Klein charts.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/unequal_determinant_conic.tex",
-      "sections/equal_determinant_second_sheet.tex"
+      "sections/point_line_flag_cycles.tex",
+      "sections/unequal_determinant_conic.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "On the unequal-determinant conic of the final invertible fiber the four evaluation bounds are equivalent to a single explicit nonvanishing product; all failures are non-AS. All surviving candidates have opposite rank ten and finite length-twenty graphs with explicit orbits and curvilinear triple collisions. The generic unmarked quotient is rational of dimension three with three explicit invariants and Klein stabilizer. Full classification remains open.",
+    "state_of_claim": "A proper incidence of recurrent point-plane flags and a cycle of rank-two relations proves the full Hilbert series, Koszulity and two-sided AS regularity without any all-degree lower-bound hypothesis. Generic polynomial certificates on both final rank-ten sheets specialize across the entire evaluation-admissible loci, including all triple collisions. This completes all-degree regularity on every closed point over the final invertible thin fiber. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

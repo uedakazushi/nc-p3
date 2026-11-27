@@ -1561,6 +1561,12 @@
       "current_result": "On the unequal-determinant conic of the final invertible fiber the four evaluation bounds are equivalent to a single explicit nonvanishing product; all failures are non-AS. All surviving candidates have opposite rank ten and finite length-twenty graphs with explicit orbits and curvilinear triple collisions. The generic unmarked quotient is rational of dimension three with three explicit invariants and Klein stabilizer.",
       "current_proof": "sections/unequal_determinant_conic.tex",
       "global_coverage": false
+    },
+    {
+      "id": "RECURRENT-POINT-LINE-FLAGS",
+      "current_result": "A proper incidence of recurrent point-plane flags and a cycle of rank-two relations proves the full Hilbert series, Koszulity and two-sided AS regularity without any all-degree lower-bound hypothesis. Generic polynomial certificates on both final rank-ten sheets specialize across the entire evaluation-admissible loci, including all triple collisions. This completes all-degree regularity on every closed point over the final invertible thin fiber.",
+      "current_proof": "sections/point_line_flag_cycles.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1618,7 +1624,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 415,
+  "version": 416,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
