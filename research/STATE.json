@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-27",
-  "version": 513,
+  "version": 514,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -5087,6 +5087,15 @@
       "verification": [
         "computations/verify_central_k3_section.py"
       ]
+    },
+    {
+      "id": "FINITE-TWO-DIMENSIONAL-QUADRIC-REPRESENTATIONS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "All simple representations with dimension two at each vertex of every finite-edge window are classified projectively by four rank-three or rank-four determinant quadrics with ruling choices. Each connecting map is uniquely recovered. A successor is either unique or runs through the net of quadrics containing a smooth twisted cubic.",
+      "proof": "sections/finite_two_dimensional_quadrics.tex",
+      "verification": [
+        "computations/verify_two_dimensional_quadrics.py"
+      ]
     }
   ],
   "document_paths": {
@@ -5150,7 +5159,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "ec054bf94ca824092568f73177619f5c1b8c2010",
+  "reviewed_source_commit": "41db94478da2ea1fcec0aa8c1bfec139111b3498",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -5159,14 +5168,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Recognize and count the newly forced two-dimensional vertex representations directly using determinantal quadrics and the finite edge graphs, including their rank-three degeneracies.",
+    "immediate_next_action": "Determine the types and number of remaining generic singular characters. Test ordinary quadratic singularities on a transverse arithmetic deformation, and exploit the multibinary presentation from the two-dimensional simple representations.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/finite_central_k3_general_section.tex",
-      "sections/finite_genus_three_curve_cut.tex"
+      "sections/finite_two_dimensional_quadrics.tex",
+      "sections/finite_central_k3_general_section.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "The generic fifteen-dimensional asymmetric center has only isolated singularities and admits smooth polarized quartic K3 sections. Its twenty known (one,three) nodes cannot exhaust the singular locus, by periodic cyclic Euler localization on the four-object exceptional category. Additional (two,two,two,two) simples exist in finite number projectively. If all additional points are two-simple ordinary nodes there are exactly ten of them. Full classification remains open.",
+    "state_of_claim": "All simple representations with dimension two at each vertex of every finite-edge window are classified projectively by four rank-three or rank-four determinant quadrics with ruling choices. Each connecting map is uniquely recovered. A successor is either unique or runs through the net of quadrics containing a smooth twisted cubic. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

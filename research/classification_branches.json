@@ -2149,6 +2149,12 @@
       "current_result": "The generic fifteen-dimensional asymmetric center has only isolated singularities and admits smooth polarized quartic K3 sections. Its twenty known (one,three) nodes cannot exhaust the singular locus, by periodic cyclic Euler localization on the four-object exceptional category. Additional (two,two,two,two) simples exist in finite number projectively. If all additional points are two-simple ordinary nodes there are exactly ten of them.",
       "current_proof": "sections/finite_central_k3_general_section.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FINITE-TWO-DIMENSIONAL-QUADRIC-REPRESENTATIONS",
+      "current_result": "All simple representations with dimension two at each vertex of every finite-edge window are classified projectively by four rank-three or rank-four determinant quadrics with ruling choices. Each connecting map is uniquely recovered. A successor is either unique or runs through the net of quadrics containing a smooth twisted cubic.",
+      "current_proof": "sections/finite_two_dimensional_quadrics.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2206,7 +2212,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 513,
+  "version": 514,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

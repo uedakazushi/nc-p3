@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 513,
+  "version": 514,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "ec054bf94ca824092568f73177619f5c1b8c2010"
+    "source_commit": "41db94478da2ea1fcec0aa8c1bfec139111b3498"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The generic fifteen-dimensional asymmetric center has only isolated singularities and admits smooth polarized quartic K3 sections. Its twenty known (one,three) nodes cannot exhaust the singular locus, by periodic cyclic Euler localization on the four-object exceptional category. Additional (two,two,two,two) simples exist in finite number projectively. If all additional points are two-simple ordinary nodes there are exactly ten of them."
+    "scope": "All simple representations with dimension two at each vertex of every finite-edge window are classified projectively by four rank-three or rank-four determinant quadrics with ruling choices. Each connecting map is uniquely recovered. A successor is either unique or runs through the net of quadrics containing a smooth twisted cubic."
   },
   "checks": [
     {
-      "command": "python computations/verify_central_k3_section.py",
+      "command": "python computations/verify_two_dimensional_quadrics.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Recognize and count the newly forced two-dimensional vertex representations directly using determinantal quadrics and the finite edge graphs, including their rank-three degeneracies."
+    "Determine the types and number of remaining generic singular characters. Test ordinary quadratic singularities on a transverse arithmetic deformation, and exploit the multibinary presentation from the two-dimensional simple representations."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 892,
+      "nc-p3": 893,
       "plan_ja": 21,
       "notes_ja": 34
     },
