@@ -1858,8 +1858,14 @@
     },
     {
       "id": "AS-CURVE-GRAPH-SINGLE-REDUCED-PURE",
-      "current_result": "An AS edge on an unbranched one-dimensional point graph has at most one reduced pure relation scheme-theoretically. A length-two scheme forces a cyclic quartic eigenline scheme of pure relations on the opposite edge, or a degree contradiction. One pure relation forces every reduced curve component to be a line in every slot and all such lines to lie in the two specified planes.",
+      "current_result": "An AS edge on an unbranched one-dimensional point graph has at most one reduced pure relation scheme-theoretically. A length-two scheme forces a cyclic quartic eigenline scheme of pure relations on the opposite edge, or a degree contradiction. One pure relation forces every reduced curve component to be a line in every slot and gives that pure relation as a contraction on an opposite line graph.",
       "current_proof": "sections/curve_graph_single_pure.tex",
+      "global_coverage": false
+    },
+    {
+      "id": "PURE-FREE-CURVE-GRAPHS-AND-INVARIANT-LINE-PBW",
+      "current_result": "Every regular unbranched curve graph is pure-free on all four edges and GIT semistable. On the locus containing a line, Segre avoidance on all edges is also sufficient. For a four-shift-invariant system of lines with rank-three evaluation on both sides, even with branching elsewhere, rank two for four normal relations is equivalent to regularity and yields a quadratic PBW basis.",
+      "current_proof": "sections/curve_graph_pure_exclusion.tex",
       "global_coverage": false
     }
   ],
@@ -1918,7 +1924,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 465,
+  "version": 466,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
