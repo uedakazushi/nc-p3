@@ -1429,6 +1429,12 @@
       "current_result": "All fibers of the entire three-dimensional third rectangle (88,89,90) are regular and free over four central quartics. The even chart is universal and the two odd chart factors sum to a unit. Its projective window stabilizer is exactly Klein four everywhere; the same holds on both support-145 surfaces except their inversion fixed point.",
       "current_proof": "sections/third_rectangle_regularity.tex",
       "global_coverage": false
+    },
+    {
+      "id": "HORIZONTAL-K3-MODULI",
+      "current_result": "The generic unmarked support-144 stratum has an elliptic K3 model of Picard rank 20 and discriminant 8. Support 146 is birational to affine three-space and the horizontal generic 147 quotient is rational in four parameters. All three geometric generic fibers are regular of period four.",
+      "current_proof": "sections/parallel_horizontal_moduli.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1486,7 +1492,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 393,
+  "version": 394,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
