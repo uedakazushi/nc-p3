@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 506,
+  "version": 507,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "40142e5e68bf80cddc3aaf7ef2db8e60adc2352c"
+    "source_commit": "e0632511dbb4911230f633c26e2431c9ed2e240e"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every finite rank-ten both-bundle window admits a quartic K3 with two residual elliptic octic pencils. Four shifted line bundles realize its full finite Frobenius cohomology algebra. The product of their four spherical twists factors, up to shift two, into tensoring by the two negative fiber classes with an explicit two-twist conjugation."
+    "scope": "For every both-bundle quartic K3 cut the four-twist product, corrected by shift two, fixes general degree minus four line sheaves on each smooth elliptic fiber. Two inverse twists transport them to pure sheaves of degree twelve on a residual fiber. The linear determinant is nonzero by a uniform secant bound and elliptic semistability argument."
   },
   "checks": [
     {
-      "command": "python computations/verify_quartic_k3_cut.py",
+      "command": "python computations/verify_elliptic_fiber_transfer.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Relate the two-twist conjugation to linear determinantal presentations on the elliptic octics and use the resulting fiber objects to control Serre purity."
+    "Use the two relative compactified Picard surfaces and the Serre adjunction triangle to recognize all-degree regularity on root-free K3 cuts."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 878,
+      "nc-p3": 879,
       "plan_ja": 20,
       "notes_ja": 34
     },

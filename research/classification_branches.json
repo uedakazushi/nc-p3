@@ -2107,6 +2107,12 @@
       "current_result": "Every finite rank-ten both-bundle window admits a quartic K3 with two residual elliptic octic pencils. Four shifted line bundles realize its full finite Frobenius cohomology algebra. The product of their four spherical twists factors, up to shift two, into tensoring by the two negative fiber classes with an explicit two-twist conjugation.",
       "current_proof": "sections/finite_quartic_k3_cut.tex",
       "global_coverage": false
+    },
+    {
+      "id": "ELLIPTIC-OCTIC-DETERMINANT-FIBER-TRANSFER",
+      "current_result": "For every both-bundle quartic K3 cut the four-twist product, corrected by shift two, fixes general degree minus four line sheaves on each smooth elliptic fiber. Two inverse twists transport them to pure sheaves of degree twelve on a residual fiber. The linear determinant is nonzero by a uniform secant bound and elliptic semistability argument.",
+      "current_proof": "sections/finite_elliptic_fiber_transfer.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2164,7 +2170,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 506,
+  "version": 507,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
