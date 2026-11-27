@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 464,
+  "version": 465,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "31e7ed1380ed4ee285cacb13434b36eef63b428e"
+    "source_commit": "95a04e577644d5a0629798260373176930fc5b98"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every one-dimensional unbranched Frobenius point graph satisfies a sharp rectangular rank lower bound from equality of the two intersection degrees. It has at most four pure relations per edge in linear general position on each side. A four-pure edge has only reduced coordinate lines as its pure curve, on one of five diagrams with explicitly determined residual Artin lengths."
+    "scope": "An AS edge on an unbranched one-dimensional point graph has at most one reduced pure relation scheme-theoretically. A length-two scheme forces a cyclic quartic eigenline scheme of pure relations on the opposite edge, or a degree contradiction. One pure relation forces every reduced curve component to be a line in every slot and all such lines to lie in the two specified planes."
   },
   "checks": [
     {
-      "command": "python computations/verify_curve_graph_pure_frames.py",
+      "command": "python computations/verify_curve_graph_pure_pair.py",
       "result": "PASS"
     },
     {
@@ -124,12 +124,12 @@
     }
   ],
   "open_mathematics": [
-    "Use the four pure coordinate frame to determine neighboring edges and rule out or certify each of the five unbranched curve diagrams; continue to handle branched edges and remaining finite regularity."
+    "Analyze the remaining single-pure case via the forced planar line configuration and the common complementary hyperplane on each opposite line square; continue the unbranched and branched classification."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 809,
+      "nc-p3": 811,
       "plan_ja": 18,
       "notes_ja": 31
     },

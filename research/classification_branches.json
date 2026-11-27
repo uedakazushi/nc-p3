@@ -1855,6 +1855,12 @@
       "current_result": "Every one-dimensional unbranched Frobenius point graph satisfies a sharp rectangular rank lower bound from equality of the two intersection degrees. It has at most four pure relations per edge in linear general position on each side. A four-pure edge has only reduced coordinate lines as its pure curve, on one of five diagrams with explicitly determined residual Artin lengths.",
       "current_proof": "sections/curve_graph_pure_frames.tex",
       "global_coverage": false
+    },
+    {
+      "id": "AS-CURVE-GRAPH-SINGLE-REDUCED-PURE",
+      "current_result": "An AS edge on an unbranched one-dimensional point graph has at most one reduced pure relation scheme-theoretically. A length-two scheme forces a cyclic quartic eigenline scheme of pure relations on the opposite edge, or a degree contradiction. One pure relation forces every reduced curve component to be a line in every slot and all such lines to lie in the two specified planes.",
+      "current_proof": "sections/curve_graph_single_pure.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1912,7 +1918,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 464,
+  "version": 465,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
