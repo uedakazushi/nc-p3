@@ -65,9 +65,9 @@ def path_system(v,field):
              for h in K for c in matrix(w,p,h).columnspace()] for p in K]
 
 
-def chart():
+def chart(make_paths=path_system):
     field = rational_function_field(('v',))
-    windows = path_system(s.Symbol('v'),field)
+    windows = make_paths(s.Symbol('v'),field)
     excluded = set()
     @cache
     def record_primitive(coefficients):

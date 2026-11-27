@@ -58,8 +58,8 @@ def paths(relations,prime,limit):
     return basis,image
 
 
-def residue_test(value,prime):
-    rel = rules(value,prime)
+def residue_test(value,prime,make_rules=rules):
+    rel = make_rules(value,prime)
     basis,image = paths(rel,prime,5)
     assert all(sum(len(basis[p,n,h]) for h in K)==d for p in K for n,d in enumerate((1,4,10,20,35,56)))
     cut = [list(r) for r in rel]
@@ -91,13 +91,13 @@ def residue_test(value,prime):
     assert all(sum(len(quotient[p,n,h]) for h in K)==d for p in K for n,d in enumerate(profile))
 
 
-def certify(exceptional):
+def certify(exceptional,make_rules=rules):
     for coefficients in exceptional:
         f = fmpz_poly(list(coefficients))
         for prime in (1009,1013,1019,1021,1031,1033,1039,1049,1051,1061):
             root = next((j for j in range(1,prime) if int(f(j))%prime==0),None)
             if root is not None and int(f.leading_coefficient())%prime:
-                residue_test(root,prime)
+                residue_test(root,prime,make_rules)
                 break
         else:
             raise AssertionError(('missing split residue',coefficients))
