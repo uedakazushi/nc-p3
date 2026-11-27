@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-26",
-  "version": 373,
+  "version": 374,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -3795,6 +3795,15 @@
       "verification": [
         "computations/verify_single_missing_isomorphism.py"
       ]
+    },
+    {
+      "id": "KLEIN-THREE-LINES",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "Every Klein window with three rank-one colors on each adjacent cut is classified for regularity, including all sparse supports: 39461472 candidates reduce to 52 sparse orbits and all are obstructed. The dense regular forms are a symmetric complete intersection and its nontrivial cocycle twist over the full punctured hyperplane sum(p)=1. Both have period one, their opposite ranks separate them, and the twisted rank drops from sixteen to fifteen on sum(1/p)=4 and to fourteen at exactly four points.",
+      "proof": "sections/klein_three_lines.tex",
+      "verification": [
+        "computations/verify_klein_three_lines.py"
+      ]
     }
   ],
   "document_paths": {
@@ -3858,7 +3867,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "ac20f0742fba22a38aa12da0c5a6699e665a9627",
+  "reviewed_source_commit": "14a407f3108181f0e20fda3b0741f77929c61fc4",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -3867,14 +3876,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Analyze overlap with other Klein presentations and the positive-color sectors, beginning with three rank-one colors on one cut and no missing colors on the other. Use the free-coordinate growth and cubic-slice certificates beyond this curve.",
+    "immediate_next_action": "Classify mixed positive profiles (3,1,1,1) and (2,2,1,1), then the two-sided (2,2,1,1) sector and unmarked isomorphisms.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/single_missing_curve_isomorphism.tex",
-      "sections/klein_single_missing_windows.tex"
+      "sections/klein_three_lines.tex",
+      "sections/single_missing_curve_isomorphism.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "The complete unmarked, index-preserving isomorphism classes in the singly missing sector are parametrized by X=(t+1/t)^2 in the punctured affine line. Six-line point supports intrinsically select two core lines even at collisions, and a conformal trace invariant recovers X. An explicit tensor-product conjugacy gives shift X -> 16/X; there are exactly two period-one points X=4,-4 and all other points have minimum period two. Full classification remains open.",
+    "state_of_claim": "Every Klein window with three rank-one colors on each adjacent cut is classified for regularity, including all sparse supports: 39461472 candidates reduce to 52 sparse orbits and all are obstructed. The dense regular forms are a symmetric complete intersection and its nontrivial cocycle twist over the full punctured hyperplane sum(p)=1. Both have period one, their opposite ranks separate them, and the twisted rank drops from sixteen to fifteen on sum(1/p)=4 and to fourteen at exactly four points. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

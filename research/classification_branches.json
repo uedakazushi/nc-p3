@@ -1309,6 +1309,12 @@
       "current_result": "The complete unmarked, index-preserving isomorphism classes in the singly missing sector are parametrized by X=(t+1/t)^2 in the punctured affine line. Six-line point supports intrinsically select two core lines even at collisions, and a conformal trace invariant recovers X. An explicit tensor-product conjugacy gives shift X -> 16/X; there are exactly two period-one points X=4,-4 and all other points have minimum period two.",
       "current_proof": "sections/single_missing_curve_isomorphism.tex",
       "global_coverage": false
+    },
+    {
+      "id": "KLEIN-THREE-LINES",
+      "current_result": "Every Klein window with three rank-one colors on each adjacent cut is classified for regularity, including all sparse supports: 39461472 candidates reduce to 52 sparse orbits and all are obstructed. The dense regular forms are a symmetric complete intersection and its nontrivial cocycle twist over the full punctured hyperplane sum(p)=1. Both have period one, their opposite ranks separate them, and the twisted rank drops from sixteen to fifteen on sum(1/p)=4 and to fourteen at exactly four points.",
+      "current_proof": "sections/klein_three_lines.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -1366,7 +1372,7 @@
     ]
   },
   "date": "2026-11-26",
-  "version": 373,
+  "version": 374,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

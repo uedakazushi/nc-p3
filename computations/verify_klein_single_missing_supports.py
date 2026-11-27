@@ -51,13 +51,13 @@ def upper(mask,r,indices):
     return min(r,len({classes[i] for i in indices if rows[i]}))
 
 
-def admissible(w):
+def admissible(w, block_rank=rank, row_bound=upper):
     mats = [[sum(1<<(4*t[p]+t[(p+2)%4]) for t in w if t[p]^t[(p+1)%4]==b) for b in K] for p in K]
     free = [[[(b^i) for b in K if not lines(mats[p][b])[0][i]] for i in K] for p in K]
     pure = [set() for _ in K]
     for p,b,i in product(K,repeat=3):
-        r = rank(p,b)
-        if r and upper(mats[p][b],r,[j for j in K if i!=j])<r:
+        r = block_rank(p,b)
+        if r and row_bound(mats[p][b],r,[j for j in K if i!=j])<r:
             pure[p].add((i,i^b))
     if any(j==k for p in K for i,j in pure[p] for k,l in pure[(p+1)%4]):
         return False
@@ -69,10 +69,10 @@ def admissible(w):
             d = len(x)*len(z)
             for c in z:
                 b = c^g
-                d -= upper(mats[(p+1)%4][b],rank(p+1,b),x)
+                d -= row_bound(mats[(p+1)%4][b],block_rank(p+1,b),x)
             for a in x:
                 b = a^g
-                d -= upper(mats[(p+2)%4][b],rank(p+2,b),[c^b for c in z])
+                d -= row_bound(mats[(p+2)%4][b],block_rank(p+2,b),[c^b for c in z])
             lower += max(d,0)
         if lower>=2:
             return False

@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 373,
+  "version": 374,
   "date": "2026-11-26",
   "reviewed_input": {
-    "source_commit": "ac20f0742fba22a38aa12da0c5a6699e665a9627"
+    "source_commit": "14a407f3108181f0e20fda3b0741f77929c61fc4"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The complete unmarked, index-preserving isomorphism classes in the singly missing sector are parametrized by X=(t+1/t)^2 in the punctured affine line. Six-line point supports intrinsically select two core lines even at collisions, and a conformal trace invariant recovers X. An explicit tensor-product conjugacy gives shift X -> 16/X; there are exactly two period-one points X=4,-4 and all other points have minimum period two."
+    "scope": "Every Klein window with three rank-one colors on each adjacent cut is classified for regularity, including all sparse supports: 39461472 candidates reduce to 52 sparse orbits and all are obstructed. The dense regular forms are a symmetric complete intersection and its nontrivial cocycle twist over the full punctured hyperplane sum(p)=1. Both have period one, their opposite ranks separate them, and the twisted rank drops from sixteen to fifteen on sum(1/p)=4 and to fourteen at exactly four points."
   },
   "checks": [
     {
-      "command": "python computations/verify_single_missing_isomorphism.py",
+      "command": "python computations/verify_klein_three_lines.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze overlap with other Klein presentations and the positive-color sectors, beginning with three rank-one colors on one cut and no missing colors on the other. Use the free-coordinate growth and cubic-slice certificates beyond this curve."
+    "Classify mixed positive profiles (3,1,1,1) and (2,2,1,1), then the two-sided (2,2,1,1) sector and unmarked isomorphisms."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 656,
+      "nc-p3": 659,
       "plan_ja": 14,
       "notes_ja": 27
     },
