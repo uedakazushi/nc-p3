@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 523,
+  "version": 524,
   "date": "2026-11-27",
   "reviewed_input": {
-    "source_commit": "c3316d929ce71882a2f9574855a09d911013e83e"
+    "source_commit": "32b16211a87bd7dfe0e570ccc116d21186204704"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every finite window with four regular central quartic parameters has prime folding and normal Gorenstein rational center, without additional hypotheses. Exactly the normalization degree/vertex index pairs (4,4) and (16,2) are possible as a dichotomy. The first has an ordinary quartic or quartic double-quadric center; the second has a smooth genus-nine generic K3 section."
+    "scope": "For all finite four-central-parameter windows in both possible index classes, the polarized center and the special-linear lifting obstruction of its vertex-zero Azumaya algebra on the smooth locus classify indexed isomorphism, including nonisolated and exceptional singularities. A common twist recovers all vertex bundles on the smooth locus. The index-two case has period dividing two."
   },
   "checks": [
     {
-      "command": "python computations/verify_central_cut_center_dichotomy.py",
+      "command": "python computations/verify_central_cut_kummer_classification.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Classify every finite central-cut window up to indexed isomorphism by the center and its determinant-normalized generic corner, including index two, and determine the period action."
+    "Recover the full index-two branch explicitly from a basepoint-free web of quadrics via rank-two adjugation, and analyze realizability in index four."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 909,
+      "nc-p3": 911,
       "plan_ja": 21,
       "notes_ja": 34
     },

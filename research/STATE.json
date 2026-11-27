@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-27",
-  "version": 523,
+  "version": 524,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -5177,6 +5177,15 @@
       "verification": [
         "computations/verify_central_cut_center_dichotomy.py"
       ]
+    },
+    {
+      "id": "ALL-FINITE-CENTRAL-CUT-WINDOWS-KUMMER-ISOMORPHISM",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "For all finite four-central-parameter windows in both possible index classes, the polarized center and the special-linear lifting obstruction of its vertex-zero Azumaya algebra on the smooth locus classify indexed isomorphism, including nonisolated and exceptional singularities. A common twist recovers all vertex bundles on the smooth locus. The index-two case has period dividing two.",
+      "proof": "sections/central_cut_kummer_classification.tex",
+      "verification": [
+        "computations/verify_central_cut_kummer_classification.py"
+      ]
     }
   ],
   "document_paths": {
@@ -5240,7 +5249,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "c3316d929ce71882a2f9574855a09d911013e83e",
+  "reviewed_source_commit": "32b16211a87bd7dfe0e570ccc116d21186204704",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -5249,14 +5258,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Classify every finite central-cut window up to indexed isomorphism by the center and its determinant-normalized generic corner, including index two, and determine the period action.",
+    "immediate_next_action": "Recover the full index-two branch explicitly from a basepoint-free web of quadrics via rank-two adjugation, and analyze realizability in index four.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/central_cut_center_dichotomy.tex",
-      "sections/central_cut_index_and_transverse_type.tex"
+      "sections/central_cut_kummer_classification.tex",
+      "sections/central_cut_center_dichotomy.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "Every finite window with four regular central quartic parameters has prime folding and normal Gorenstein rational center, without additional hypotheses. Exactly the normalization degree/vertex index pairs (4,4) and (16,2) are possible as a dichotomy. The first has an ordinary quartic or quartic double-quadric center; the second has a smooth genus-nine generic K3 section. Full classification remains open.",
+    "state_of_claim": "For all finite four-central-parameter windows in both possible index classes, the polarized center and the special-linear lifting obstruction of its vertex-zero Azumaya algebra on the smooth locus classify indexed isomorphism, including nonisolated and exceptional singularities. A common twist recovers all vertex bundles on the smooth locus. The index-two case has period dividing two. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

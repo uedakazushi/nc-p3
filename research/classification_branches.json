@@ -2209,6 +2209,12 @@
       "current_result": "Every finite window with four regular central quartic parameters has prime folding and normal Gorenstein rational center, without additional hypotheses. Exactly the normalization degree/vertex index pairs (4,4) and (16,2) are possible as a dichotomy. The first has an ordinary quartic or quartic double-quadric center; the second has a smooth genus-nine generic K3 section.",
       "current_proof": "sections/central_cut_center_dichotomy.tex",
       "global_coverage": false
+    },
+    {
+      "id": "ALL-FINITE-CENTRAL-CUT-WINDOWS-KUMMER-ISOMORPHISM",
+      "current_result": "For all finite four-central-parameter windows in both possible index classes, the polarized center and the special-linear lifting obstruction of its vertex-zero Azumaya algebra on the smooth locus classify indexed isomorphism, including nonisolated and exceptional singularities. A common twist recovers all vertex bundles on the smooth locus. The index-two case has period dividing two.",
+      "current_proof": "sections/central_cut_kummer_classification.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2266,7 +2272,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 523,
+  "version": 524,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
