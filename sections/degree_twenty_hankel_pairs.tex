@@ -1,0 +1,82 @@
+% !TeX root = ../papers/nc-p3.tex
+\section{二つのHankel表示の比較による二十次余因子曲線の完全排除}
+\label{sec:degree-twenty-hankel-pairs}
+\begin{theorem}\label{thm:exclude-degree-twenty-hankel-pairs}
+標準quadratic Koszul左右AS正則な被約四辺有限窓で、一般被約な整曲線を余因子の全正次元軌跡に持つ
+非恒等反対根の次数二十は生じない。従ってこの整曲線分岐で残るのは七余因子の二十一次Bezout正規形だけである。
+滑らかな二次曲面・二次錐、全ての例外射影と全中間座標を含む。
+\end{theorem}
+\begin{proof}[異なる二項四次構造]
+実際の二つの隣接辺に定理\ref{thm:quadric-conductor-quintic}を適用する。
+五次行列 $A(x)$ は同じものを固定できる。二つの二項四次同定の間を $T:S_t^4\to S_s^4$ と書く。
+$x$ は四次元の対称形式空間 $W$ で、その各 $G$ は $s$ 側でHankel、
+$T^t G T$ は $t$ 側でHankelである。$x\mapsto A(x)$ は単射である
+（$A(x)$ の階数は全射影点で三以上）。$G(l,h)=\phi_G(lh)$、
+$G(Tk,Tk')=\psi_G(kk')$ と書く。三つの連続する点座標を $q,G,p$ とすると
+$q\in S_s^3,p\in S_t^3$、二辺の関係は
+\[
+          \phi_G(q f)=0\ (f\in S_s^5),\qquad
+          \psi_G(p g)=0\ (g\in S_t^5).
+\]
+これらの各六式は独立である。正則窓のこの三文字の交叉は四次元である。
+
+$u_i$ を $t$ 側、$v_j$ を $s$ 側の二つの一次基底とする。
+\[
+                  w_{ij}(q,G,p)=G(T(u_i p),v_j q)
+\]
+はこの三次交叉に入る。実際 $q,G$ では $v_jT(u_i p)\in S_s^5$ の関係、
+$G,p$ では $u_iT^{-1}(v_jq)\in S_t^5$ の関係である。
+二つの四次評価曲線が異なるときこれらは四独立である。
+もし $\sum c_{ij}w_{ij}=0$ なら、全 $q,G$ に対して左辺は
+$\phi_G(q\sum c_{ij}v_j T(u_i p))=0$。六式の独立性より全 $p$ で中の五次式が零である。
+階数一の $c$ なら非零一次式と $T(u p)$ の積となり不可能。
+階数二なら変数を変えて $v_1 T(u_0p)=v_0 T(u_1p)$。
+四次単項式の像を $h_i=T(u_0^{4-i}u_1^i)$ と置くと
+$v_1 h_i=v_0 h_{i+1}$。よって全 $h_i$ は $v_0^{4-i}v_1^i$ の共通スカラー倍で、
+四次評価曲線が一致してしまう。
+
+従って異なる場合、第四文字の基底変更を除き頂テンソルは $w_{ij}$ を束ねたものしかない。
+新しい四文字の座標を $C_{ij}$ とする。$(p,C)$ 辺は
+$\sum C_{ij}v_jT(u_i p)=0$ の六関係である。実際残る $G,q$ で縮約したときの
+五次汎関数 $f\mapsto\phi_G(qf)$ は全双対を張る（上の六式の独立性）。
+$(C,q)$ 辺も $T^{-1}$ の式で同様である。これらは二曲線の三割平面の
+標準中間辺そのもので、定理\ref{thm:trisecant-middle-simple-obstruction}が正則延長を排除する。
+この適用では、$W$ が最初から全Hankel交叉に等しいと仮定していない。
+\end{proof}
+
+\begin{proof}[同じ二項四次構造]
+同じ評価曲線の安定群は四次対称冪なので同定を揃え $T=1$ とできる。
+すると二つの辺は $R_{mx}$ とその転置で、$m\in S_3$, $x=\lambda\in W\subset S_8^*$。
+四印配置のうち二つの中間位置は同じ $m$ である。
+有限辺の折り返しより三次交叉 $m,x,m$ は対称であり、その四次元空間は
+\[
+  \{D:S_3\longrightarrow S_5:\ 
+      \lambda(pDq-qDp)=0\text{ for all }p,q\in S_3,\ \lambda\in W\}
+\]
+に同定される。実際片方の関係を $Dq\in S_5$ で選んで
+$\lambda(p Dq)$ と書き、二端を入れ替えればよい。
+この空間に二次式倍 $p\mapsto a p$ の三空間があり、それに独立な第四写像を $D$ とする。
+ゆえに第四位置は $y=(a,b)$ で、その隣接辺は
+\[
+                       a m+bDm=0\quad\text{in }S_5
+\]
+およびその転置である。ここでも
+$f\mapsto\lambda(p f)$ が $S_5^*$ を張ることにより六成分全体が関係として復元される。
+
+この表示は $D$ が元の二次錐から来るかどうかによらず折り返し障害を満たす。
+必要な仮定を確認する。反対の三次交叉 $m,y,m$ が四次元であることから
+定理\ref{thm:cone-fold-plucker}の係数比較により
+$W_D=\langle pDq-qDp\rangle$ は五次元である。$W\subset W_D^\perp$ で次元はともに四だから等しい。
+母線の二評価 $m(z),(Dm)(z)$ が従属になれば $W_D$ の全八次式が $z$ で消える。
+すると $W$ に純八次評価が入り、対応する中央Hankel行列は階数一となる。
+これは $A(x)$ の階数下界三に反する。従って母線のPlücker五空間は基点を持たない。
+同定理の直線切断の議論から対称反対核に階数二以下の元はない
+（あれば $pqS_2\subset W_D$ となり長さ六がPlücker直線へ入る）。
+反対階数九以下の正則候補は系\ref{cor:all-defective-one-sym-finite}で両対称となり、
+$x,y$ の標識付き配置が同値となるため非恒等根に反する。
+反対階数十でも $a m+bDm$ の辺は固定六次元商から階数六の平方根接方向を持ち、
+定理\ref{thm:single-edge-instanton-extension}の必要条件に反する。
+折り返しは対称側を通るので反対階数十以下であり、これで全ての場合を尽くした。
+\end{proof}
+\path{computations/verify_degree_twenty_hankel_pairs.py} は異なる二項構造の四縮約と、
+一致した場合に二次式三乗法のほか一写像だけが残ることを既存の二標本で検算する。

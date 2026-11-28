@@ -2,7 +2,7 @@
 
 **共同研究：** 本リポジトリは大川新之介・植田一石の共同研究プロジェクトです。この表示は個々の論文の著者を確定するものではありません。
 
-**2026-11-28 / v655。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-28 / v656。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -866,6 +866,8 @@ PI正則窓が中心上有限になる必要十分条件を、非頂点単純と
 可約・多重割線でも中間結果式の導手全体が二項部分結果式の七つの六次式で定まり、錐での別根には両向きの退化条件が必要である。[中間導手の自由分解](sections/middle_conductor_resolution.tex)
 
 二十次入力の全隣接辺を、一意な五次対称行列式に対する二項Hankel表示として復元した。[導手五次と全隣接辺](sections/quadric_conductor_quintic.tex)
+
+二十次を全射影・全中間座標で排除した。整で一般被約な余因子曲線では二十一次Bezout表示だけが残る。[二つのHankel構造と二十次の排除](sections/degree_twenty_hankel_pairs.tex)
 
 非恒等の平面グラフを基底に持つOre窓では、指定点を忘れた同型類も決定した。[正規形と平坦特殊化](sections/plane_graph_ore_windows.tex)・[検算](computations/verify_plane_graph_ore.py)
 

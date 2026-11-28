@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-28",
-  "version": 655,
+  "version": 656,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -6365,6 +6365,15 @@
       "verification": [
         "computations/verify_quadric_conductor_quintic.py"
       ]
+    },
+    {
+      "id": "EXCLUDE-DEGREE-TWENTY-HANKEL-PAIRS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "Degree 20 is excluded for every reduced finite standard regular window with integral generically reduced cofactor excess. All neighbors are binary Hankel edges. Distinct Hankel structures force the forbidden standard trisecant window; equal structures force the forbidden cubic-quintic fold. Only degree 21 survives in the integral-curve branch.",
+      "proof": "sections/degree_twenty_hankel_pairs.tex",
+      "verification": [
+        "computations/verify_degree_twenty_hankel_pairs.py"
+      ]
     }
   ],
   "document_paths": {
@@ -6428,7 +6437,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "2f2f0a329e62680f950d8d1c714cd8ea1ad08c87",
+  "reviewed_source_commit": "527c559a8709c322fd0d8efbfff3d4883fecd084",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -6437,14 +6446,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Compare both actual adjacent Hankel structures: distinct structures induce the forbidden standard trisecant window and equal structures force a cubic-quintic fold.",
+    "immediate_next_action": "Classify all finite determinantal formats on the degree-21 Bezout marks, starting with their quartic Veronese restriction to the secant plane sextic, and handle remaining nonintegral or thick excess.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/quadric_conductor_quintic.tex",
-      "sections/middle_conductor_resolution.tex"
+      "sections/degree_twenty_hankel_pairs.tex",
+      "sections/quadric_conductor_quintic.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "Every finite edge over the degree-20 input, including all exceptional choices, is a binary catalecticant edge of a Hankel structure on the same five-by-five linear quintic symmetroid. The quartic involution of its kernel surface forces the whole Veronese fourfold into the Grassmannian by Pfaffian inversion. Full classification remains open.",
+    "state_of_claim": "Degree 20 is excluded for every reduced finite standard regular window with integral generically reduced cofactor excess. All neighbors are binary Hankel edges. Distinct Hankel structures force the forbidden standard trisecant window; equal structures force the forbidden cubic-quintic fold. Only degree 21 survives in the integral-curve branch. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

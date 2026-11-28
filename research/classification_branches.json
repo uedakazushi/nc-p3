@@ -3001,6 +3001,12 @@
       "current_result": "Every finite edge over the degree-20 input, including all exceptional choices, is a binary catalecticant edge of a Hankel structure on the same five-by-five linear quintic symmetroid. The quartic involution of its kernel surface forces the whole Veronese fourfold into the Grassmannian by Pfaffian inversion.",
       "current_proof": "sections/quadric_conductor_quintic.tex",
       "global_coverage": false
+    },
+    {
+      "id": "EXCLUDE-DEGREE-TWENTY-HANKEL-PAIRS",
+      "current_result": "Degree 20 is excluded for every reduced finite standard regular window with integral generically reduced cofactor excess. All neighbors are binary Hankel edges. Distinct Hankel structures force the forbidden standard trisecant window; equal structures force the forbidden cubic-quintic fold. Only degree 21 survives in the integral-curve branch.",
+      "current_proof": "sections/degree_twenty_hankel_pairs.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -3058,7 +3064,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 655,
+  "version": 656,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

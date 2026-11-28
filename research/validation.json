@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 655,
+  "version": 656,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "2f2f0a329e62680f950d8d1c714cd8ea1ad08c87"
+    "source_commit": "527c559a8709c322fd0d8efbfff3d4883fecd084"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every finite edge over the degree-20 input, including all exceptional choices, is a binary catalecticant edge of a Hankel structure on the same five-by-five linear quintic symmetroid. The quartic involution of its kernel surface forces the whole Veronese fourfold into the Grassmannian by Pfaffian inversion."
+    "scope": "Degree 20 is excluded for every reduced finite standard regular window with integral generically reduced cofactor excess. All neighbors are binary Hankel edges. Distinct Hankel structures force the forbidden standard trisecant window; equal structures force the forbidden cubic-quintic fold. Only degree 21 survives in the integral-curve branch."
   },
   "checks": [
     {
-      "command": "python computations/verify_quadric_conductor_quintic.py",
+      "command": "python computations/verify_degree_twenty_hankel_pairs.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Compare both actual adjacent Hankel structures: distinct structures induce the forbidden standard trisecant window and equal structures force a cubic-quintic fold."
+    "Classify all finite determinantal formats on the degree-21 Bezout marks, starting with their quartic Veronese restriction to the secant plane sextic, and handle remaining nonintegral or thick excess."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1140,
+      "nc-p3": 1141,
       "plan_ja": 26,
       "notes_ja": 42
     },
