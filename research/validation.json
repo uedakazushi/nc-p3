@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 594,
+  "version": 595,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "ce0be8b129ffb77e42430cfab00a2eb50da28652"
+    "source_commit": "9844fea769ce848b2fac740872cec0036839641b"
   },
   "generation": {
     "result": "PASS",
-    "scope": "No integral opposite octic of a four-edge finite Frobenius window has eight independent cofactors, with no reducedness assumption. The compactified singular pencil has virtual length sixteen. Its excess curve meets a general ruling in length at most three after subtracting the residual point; vertical thickenings and conductor gluing bound all cubic sections by nineteen or eighteen. The remaining integral cofactor counts are seven, nine and ten."
+    "scope": "Every admissible integral seven-cofactor pair has rank exactly three on its full canonical middle scheme, also for nonreduced inputs. The internal cubic Koszul quotient forces the length-twenty scheme isomorphisms. Middle rank two cuts out an irreducible codimension-five excluded locus among disjoint quartic pairs and occurs even for integral octics."
   },
   "checks": [
     {
-      "command": "python computations/verify_eight_cofactor_excess.py",
+      "command": "python computations/verify_trisecant_middle_degeneracy.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Establish whether the finite canonical middle of every admissible seven-cofactor pair is everywhere rank three using its degree-three Koszul quotient, and address alternate middles. Nine and ten cofactors, reducible octics and global AS coverage remain open."
+    "Analyze the branch and collision loci of the remaining canonical middle schemes and rule out or construct noncanonical middles. Continue nine- and ten-cofactor, reducible-octic and all-degree coverage."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1035,
+      "nc-p3": 1036,
       "plan_ja": 24,
       "notes_ja": 39
     },

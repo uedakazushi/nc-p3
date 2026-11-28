@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-28",
-  "version": 594,
+  "version": 595,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -5816,6 +5816,15 @@
       "verification": [
         "computations/verify_eight_cofactor_excess.py"
       ]
+    },
+    {
+      "id": "TRISECANT-MIDDLE-DEGENERACY",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "Every admissible integral seven-cofactor pair has rank exactly three on its full canonical middle scheme, also for nonreduced inputs. The internal cubic Koszul quotient forces the length-twenty scheme isomorphisms. Middle rank two cuts out an irreducible codimension-five excluded locus among disjoint quartic pairs and occurs even for integral octics.",
+      "proof": "sections/trisecant_middle_degeneracy.tex",
+      "verification": [
+        "computations/verify_trisecant_middle_degeneracy.py"
+      ]
     }
   ],
   "document_paths": {
@@ -5879,7 +5888,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "ce0be8b129ffb77e42430cfab00a2eb50da28652",
+  "reviewed_source_commit": "9844fea769ce848b2fac740872cec0036839641b",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -5888,14 +5897,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Establish whether the finite canonical middle of every admissible seven-cofactor pair is everywhere rank three using its degree-three Koszul quotient, and address alternate middles. Nine and ten cofactors, reducible octics and global AS coverage remain open.",
+    "immediate_next_action": "Analyze the branch and collision loci of the remaining canonical middle schemes and rule out or construct noncanonical middles. Continue nine- and ten-cofactor, reducible-octic and all-degree coverage.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/eight_cofactor_excess.tex",
-      "sections/singular_residual_gluing.tex"
+      "sections/trisecant_middle_degeneracy.tex",
+      "sections/eight_cofactor_excess.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "No integral opposite octic of a four-edge finite Frobenius window has eight independent cofactors, with no reducedness assumption. The compactified singular pencil has virtual length sixteen. Its excess curve meets a general ruling in length at most three after subtracting the residual point; vertical thickenings and conductor gluing bound all cubic sections by nineteen or eighteen. The remaining integral cofactor counts are seven, nine and ten. Full classification remains open.",
+    "state_of_claim": "Every admissible integral seven-cofactor pair has rank exactly three on its full canonical middle scheme, also for nonreduced inputs. The internal cubic Koszul quotient forces the length-twenty scheme isomorphisms. Middle rank two cuts out an irreducible codimension-five excluded locus among disjoint quartic pairs and occurs even for integral octics. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

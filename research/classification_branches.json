@@ -2635,6 +2635,12 @@
       "current_result": "No integral opposite octic of a four-edge finite Frobenius window has eight independent cofactors, with no reducedness assumption. The compactified singular pencil has virtual length sixteen. Its excess curve meets a general ruling in length at most three after subtracting the residual point; vertical thickenings and conductor gluing bound all cubic sections by nineteen or eighteen. The remaining integral cofactor counts are seven, nine and ten.",
       "current_proof": "sections/eight_cofactor_excess.tex",
       "global_coverage": false
+    },
+    {
+      "id": "TRISECANT-MIDDLE-DEGENERACY",
+      "current_result": "Every admissible integral seven-cofactor pair has rank exactly three on its full canonical middle scheme, also for nonreduced inputs. The internal cubic Koszul quotient forces the length-twenty scheme isomorphisms. Middle rank two cuts out an irreducible codimension-five excluded locus among disjoint quartic pairs and occurs even for integral octics.",
+      "current_proof": "sections/trisecant_middle_degeneracy.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2692,7 +2698,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 594,
+  "version": 595,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
