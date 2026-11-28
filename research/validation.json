@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 637,
+  "version": 638,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "3bd1bb0dd17215174c60f96128fec4abf7548b52"
+    "source_commit": "7f54da714f3b9035a54599b9094ba88b190af825"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Degree 19 integral generically reduced excess forces birational quadric kernel with inverse bidegree (2,3) or cone class 2E+5f and four simple bases or one double base. All cubic types are excluded. The symmetric root is uniquely reconstructed from the parametrized graph by linear equations."
+    "scope": "Degree 19 integral generically reduced cofactor curve is impossible. Both four simple (including infinitely near) and one double inverse base become a length-four complete-intersection blowup. At most three fibers contract curves; at least seventeen isolated triples lift to a scheme of length sixteen."
   },
   "checks": [
     {
-      "command": "python computations/verify_cofactor_nineteen_surface.py",
+      "command": "python computations/verify_cofactor_nineteen_clusters.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Resolve the degree-19 base clusters and degree-18 surface images; determine exceptional quadric projections and remaining windows."
+    "Resolve degree 18 surface kernels (double quadric or birational degree 2,3,4) and remaining degree-20 exceptional and nonintegral windows."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1105,
+      "nc-p3": 1108,
       "plan_ja": 25,
       "notes_ja": 41
     },

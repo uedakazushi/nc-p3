@@ -2893,6 +2893,12 @@
       "current_result": "Degree 19 integral generically reduced excess forces birational quadric kernel with inverse bidegree (2,3) or cone class 2E+5f and four simple bases or one double base. All cubic types are excluded. The symmetric root is uniquely reconstructed from the parametrized graph by linear equations.",
       "current_proof": "sections/cofactor_nineteen_surface.tex",
       "global_coverage": false
+    },
+    {
+      "id": "COFACTOR-EXCLUDE-NINETEEN",
+      "current_result": "Degree 19 integral generically reduced cofactor curve is impossible. Both four simple (including infinitely near) and one double inverse base become a length-four complete-intersection blowup. At most three fibers contract curves; at least seventeen isolated triples lift to a scheme of length sixteen.",
+      "current_proof": "sections/cofactor_nineteen_clusters.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2950,7 +2956,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 637,
+  "version": 638,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
