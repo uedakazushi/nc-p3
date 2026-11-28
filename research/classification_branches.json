@@ -2875,6 +2875,12 @@
       "current_result": "On the smooth degree-twenty quadric model with complete ruling restrictions, the two multiplication middles are the standard trisecant change-matrix edges and admit no standard regular four-finite-edge completion. An exact rational 14641 Frobenius example has opposite rank sixteen and an explicit unbalanced (3,3,2,2) simple.",
       "current_proof": "sections/quadric_biform_window.tex",
       "global_coverage": false
+    },
+    {
+      "id": "QUADRIC-ALL-MIDDLES-EXCLUSION",
+      "current_result": "On a certified nonempty dense open of the smooth quadric projection parameter space, the marked opposite pair has no regular finite four-edge extension for any choice of middles. A twenty-one-degree nodal double curve with a unique determinant octic intrinsically reconstructs its nonidentity root via the unique ruling and its normalization module.",
+      "current_proof": "sections/quadric_ruling_identifiability.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2932,7 +2938,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 634,
+  "version": 635,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
