@@ -2761,6 +2761,12 @@
       "current_result": "An integral quartic rank-one component in a reduced finite window must be a smooth elliptic quartic with a nontrivial two-torsion change of polarization. The common quadratic pencil groups outside marks by ruling lines, at most two per group except one possible three-mark line.",
       "current_proof": "sections/rank_one_quartic_normalization.tex",
       "global_coverage": false
+    },
+    {
+      "id": "RANK-ONE-ELLIPTIC-QUARTIC-EXCLUSION",
+      "current_result": "In all reduced four-edge finite windows with generally invertible opposite root, every rank-one curve component is a line or a plane conic and their total reduced degree is at most five. A smooth elliptic quartic would give a singular ternary pencil whose left and right kernels each span three dimensions, contradicting its quadratic adjugate.",
+      "current_proof": "sections/rank_one_elliptic_quartic_exclusion.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2818,7 +2824,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 615,
+  "version": 616,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

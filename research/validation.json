@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 615,
+  "version": 616,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "3723cff3d97fab2678e7613cb74ba69075183177"
+    "source_commit": "f55eea39debd167cb87a9d7d1f19f6e007b9e85b"
   },
   "generation": {
     "result": "PASS",
-    "scope": "An integral quartic rank-one component in a reduced finite window must be a smooth elliptic quartic with a nontrivial two-torsion change of polarization. The common quadratic pencil groups outside marks by ruling lines, at most two per group except one possible three-mark line."
+    "scope": "In all reduced four-edge finite windows with generally invertible opposite root, every rank-one curve component is a line or a plane conic and their total reduced degree is at most five. A smooth elliptic quartic would give a singular ternary pencil whose left and right kernels each span three dimensions, contradicting its quadratic adjugate."
   },
   "checks": [
     {
-      "command": "python computations/verify_rank_one_quartic_normalization.py",
+      "command": "python computations/verify_rank_one_elliptic_quartic_exclusion.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze common secants and marked directions of the two elliptic quartic embeddings, then the remaining unions of conics and lines, rank-two excess and all-degree AS coverage."
+    "Classify arrangements of lines and conics and their effect on rank-two and kernel loci, and continue exceptional middles and all-degree AS and global isomorphism coverage."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1068,
+      "nc-p3": 1069,
       "plan_ja": 24,
       "notes_ja": 40
     },
