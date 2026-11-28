@@ -2731,6 +2731,12 @@
       "current_result": "In every reduced finite window the total reduced degree of the opposite rank-one curve is at most five. All degree-six supports are impossible. The only possible repeated prime determinant factor is a single plane, and every rank-two surface component must therefore be that plane.",
       "current_proof": "sections/rank_one_total_five.tex",
       "global_coverage": false
+    },
+    {
+      "id": "RANK-ONE-GENUS-TWO-QUINTIC",
+      "current_result": "A smooth genus-two quintic cannot be a rank-one curve in a reduced finite window. Isotropic square-evaluation relations transfer the degree-four secant pencils; the remaining single- and double-intersection directions force an impossible pairing of seven outside marks.",
+      "current_proof": "sections/rank_one_genus_two_quintic.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2788,7 +2794,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 610,
+  "version": 611,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
