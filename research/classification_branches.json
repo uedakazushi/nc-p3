@@ -2905,6 +2905,12 @@
       "current_result": "The general plane kernel graph has arithmetic genus 21-d. At degree 18 its kernel sextic has arithmetic genus 3 or 4, with complete-intersection base ideals in the smooth birational equality case. Smooth cubic and normal Du Val quartic kernels are excluded, using triple bounds 13 and 14 on the cubic models.",
       "current_proof": "sections/cofactor_eighteen_sectional_graph.tex",
       "global_coverage": false
+    },
+    {
+      "id": "COFACTOR-EIGHTEEN-SMOOTH-QUADRIC-DEGREE",
+      "current_result": "A smooth quadric kernel image at degree 18 must be a double cover. Both birational bidegrees are excluded: the conic bundle has at most six exceptional inputs against twelve triples, and the defective (3,3) base reduces to a plane quartic inverse with at most four exceptional inputs against thirteen triples.",
+      "current_proof": "sections/cofactor_eighteen_birational_quadric.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2962,7 +2968,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 639,
+  "version": 640,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
