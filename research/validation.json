@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 652,
+  "version": 653,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "ec8b2b5b5ed9473747e62758dee7eaaf8e6da956"
+    "source_commit": "c601a9452669cee1b3dfaf93880545053642bf2e"
   },
   "generation": {
     "result": "PASS",
-    "scope": "On every genuine smooth quadric projection both canonical middle edges are finite reduced and neither fold has the four cubic overlaps. In both degree-20 models an integral middle secant sextic, including a singular one, excludes every regular extension. Thus every associated middle secant sextic must be reducible or nonreduced."
+    "scope": "Nonidentity opposite roots are infinitesimally rigid for all integral generically reduced cofactor curves, and also for finite cofactor support. Linearized adjugates force the conductor action and rigidity of the normalization line bundle; in finite support the constant double-point resolution controls the Veronese stabilizer."
   },
   "checks": [
     {
-      "command": "python computations/verify_integral_middle_secants.py",
+      "command": "python computations/verify_conductor_root_tangents.py",
       "result": "PASS"
     },
     {
@@ -36,13 +36,13 @@
     }
   ],
   "open_mathematics": [
-    "Analyze reducible and multiple middle secant sextics, special degree-21 middles, and nonintegral cofactor curves."
+    "Exploit rigidity and the middle resultant conductor against alternative middles on reducible and multiple sextics, and treat the uncovered cofactor regimes."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1135,
-      "plan_ja": 25,
+      "nc-p3": 1136,
+      "plan_ja": 26,
       "notes_ja": 42
     },
     "scope": "LuaLaTeX built the manuscript, plan and research notes."

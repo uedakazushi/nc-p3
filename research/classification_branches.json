@@ -2983,6 +2983,12 @@
       "current_result": "On every genuine smooth quadric projection both canonical middle edges are finite reduced and neither fold has the four cubic overlaps. In both degree-20 models an integral middle secant sextic, including a singular one, excludes every regular extension. Thus every associated middle secant sextic must be reducible or nonreduced.",
       "current_proof": "sections/integral_middle_secants.tex",
       "global_coverage": false
+    },
+    {
+      "id": "CONDUCTOR-ROOT-TANGENTS",
+      "current_result": "Nonidentity opposite roots are infinitesimally rigid for all integral generically reduced cofactor curves, and also for finite cofactor support. Linearized adjugates force the conductor action and rigidity of the normalization line bundle; in finite support the constant double-point resolution controls the Veronese stabilizer.",
+      "current_proof": "sections/conductor_root_tangents.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -3040,7 +3046,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 652,
+  "version": 653,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
