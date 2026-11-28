@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-28",
-  "version": 577,
+  "version": 578,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -5663,6 +5663,15 @@
       "verification": [
         "computations/verify_trisecant_common_quadric_locus.py"
       ]
+    },
+    {
+      "id": "TANGENT-DETERMINANTAL-OCTICS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "A square-root tangent has a symmetric bordered 5-by-5 octic. If its determinant is nonzero and the corank-two locus is finite, all admissible roots form one sign orbit of double points, including nonreduced finite Frobenius sources. The weighted symmetric minor resolution gives uniqueness and a nonzero second-order obstruction. A clean genuine opposite root makes both roots reduced isolated. For reduced sources with no four collinear points and no triple octic or a unique normal one, the admissible root scheme has length at most two modulo signs. This gives a finite regularity decision for all marked trisecant pairs meeting the middle-configuration conditions.",
+      "proof": "sections/tangent_determinantal_octics.tex",
+      "verification": [
+        "computations/verify_tangent_determinantal_octics.py"
+      ]
     }
   ],
   "document_paths": {
@@ -5726,7 +5735,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "3783cd4a77c1f756f8187ae784c85d0eb101ce4e",
+  "reviewed_source_commit": "97e9c7924a965b48a4dcfc249f77b98e22424251",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -5735,14 +5744,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Determine the remaining exceptional middle roots on the trisecant parameter space, and the effect of the opposite square-root scheme tangent on higher-cofactor and general windows.",
+    "immediate_next_action": "Extend the bordered tangent octic and its root classification to nonnormal divisors and nonreduced tangencies. Analyze higher-cofactor and reducible genuine opposite octics and uncovered general windows.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/trisecant_common_quadric_locus.tex",
-      "sections/trisecant_middle_simple_obstruction.tex"
+      "sections/tangent_determinantal_octics.tex",
+      "sections/trisecant_common_quadric_locus.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "The locus of quartic curve pairs on a common quadric is irreducible of codimension four in PGL5. On its dense open set the canonical candidate is finite Frobenius and the odd configuration has a unique normal triple octic. Any regular completion of the marked even pair must then be the candidate or its reversal, both excluded. The two-order rigidity lemma applies to arbitrary finite candidates, including nonreduced ones, with a clean odd matrix. Full classification remains open.",
+    "state_of_claim": "A square-root tangent has a symmetric bordered 5-by-5 octic. If its determinant is nonzero and the corank-two locus is finite, all admissible roots form one sign orbit of double points, including nonreduced finite Frobenius sources. The weighted symmetric minor resolution gives uniqueness and a nonzero second-order obstruction. A clean genuine opposite root makes both roots reduced isolated. For reduced sources with no four collinear points and no triple octic or a unique normal one, the admissible root scheme has length at most two modulo signs. This gives a finite regularity decision for all marked trisecant pairs meeting the middle-configuration conditions. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

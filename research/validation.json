@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 577,
+  "version": 578,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "3783cd4a77c1f756f8187ae784c85d0eb101ce4e"
+    "source_commit": "97e9c7924a965b48a4dcfc249f77b98e22424251"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The locus of quartic curve pairs on a common quadric is irreducible of codimension four in PGL5. On its dense open set the canonical candidate is finite Frobenius and the odd configuration has a unique normal triple octic. Any regular completion of the marked even pair must then be the candidate or its reversal, both excluded. The two-order rigidity lemma applies to arbitrary finite candidates, including nonreduced ones, with a clean odd matrix."
+    "scope": "A square-root tangent has a symmetric bordered 5-by-5 octic. If its determinant is nonzero and the corank-two locus is finite, all admissible roots form one sign orbit of double points, including nonreduced finite Frobenius sources. The weighted symmetric minor resolution gives uniqueness and a nonzero second-order obstruction. A clean genuine opposite root makes both roots reduced isolated. For reduced sources with no four collinear points and no triple octic or a unique normal one, the admissible root scheme has length at most two modulo signs. This gives a finite regularity decision for all marked trisecant pairs meeting the middle-configuration conditions."
   },
   "checks": [
     {
-      "command": "python computations/verify_trisecant_common_quadric_locus.py",
+      "command": "python computations/verify_tangent_determinantal_octics.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine the remaining exceptional middle roots on the trisecant parameter space, and the effect of the opposite square-root scheme tangent on higher-cofactor and general windows."
+    "Extend the bordered tangent octic and its root classification to nonnormal divisors and nonreduced tangencies. Analyze higher-cofactor and reducible genuine opposite octics and uncovered general windows."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1002,
+      "nc-p3": 1005,
       "plan_ja": 23,
       "notes_ja": 38
     },

@@ -2533,6 +2533,12 @@
       "current_result": "The locus of quartic curve pairs on a common quadric is irreducible of codimension four in PGL5. On its dense open set the canonical candidate is finite Frobenius and the odd configuration has a unique normal triple octic. Any regular completion of the marked even pair must then be the candidate or its reversal, both excluded. The two-order rigidity lemma applies to arbitrary finite candidates, including nonreduced ones, with a clean odd matrix.",
       "current_proof": "sections/trisecant_common_quadric_locus.tex",
       "global_coverage": false
+    },
+    {
+      "id": "TANGENT-DETERMINANTAL-OCTICS",
+      "current_result": "A square-root tangent has a symmetric bordered 5-by-5 octic. If its determinant is nonzero and the corank-two locus is finite, all admissible roots form one sign orbit of double points, including nonreduced finite Frobenius sources. The weighted symmetric minor resolution gives uniqueness and a nonzero second-order obstruction. A clean genuine opposite root makes both roots reduced isolated. For reduced sources with no four collinear points and no triple octic or a unique normal one, the admissible root scheme has length at most two modulo signs. This gives a finite regularity decision for all marked trisecant pairs meeting the middle-configuration conditions.",
+      "current_proof": "sections/tangent_determinantal_octics.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2590,7 +2596,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 577,
+  "version": 578,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
