@@ -2851,6 +2851,12 @@
       "current_result": "For an integral generically reduced cofactor curve, precisely one irreducible determinant factor contains it, with exponent one, degree at least five, and order exactly two along the curve. Any quartic carrier is unique, meets the determinant in twice the degree-sixteen curve, and has nontrivial two-torsion contact on its general plane quartic.",
       "current_proof": "sections/cofactor_quartic_contact.tex",
       "global_coverage": false
+    },
+    {
+      "id": "COFACTOR-INTEGRAL-OCTIC",
+      "current_result": "Every integral generically reduced positive-dimensional cofactor locus in the reduced finite setting spans no quartic carrier, has degree 17 through 21, and forces an irreducible determinant octic. Its limiting image planes span the full Plucker space.",
+      "current_proof": "sections/cofactor_integral_octic.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2908,7 +2914,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 630,
+  "version": 631,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
