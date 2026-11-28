@@ -2341,6 +2341,12 @@
       "current_result": "Every basepointed three-dimensional quartic-center image in the finite regular-domain main component is a rank-three quadric. Both quadratic forms have a common vertex at which the quartic is nonzero. The Brauer class is pulled back from the Hirzebruch surface F2 and ramifies to exact order four along every component of a reduced anticanonical elliptic curve or nodal rational cycle. On each nonexceptional component the vertex polynomial is a power of one cyclic irreducible factor. Rank-four quadrics are excluded even with reducible poles.",
       "current_proof": "sections/singular_quadric_common_vertex.tex",
       "global_coverage": false
+    },
+    {
+      "id": "ALL-MAIN-DOMAIN-QUARTIC-NORMALIZATION-AND-SIXTEEN-DEGREE-TEST",
+      "current_result": "Every regular domain finite-edge window on the entire fifteen-dimensional closure has four quartic central parameters, including every exceptional value. Its center is a quartic hypersurface or a quadric double cover and the polarized center with Kummer mark classifies its indexed isomorphism type among realized centers. The all-degree domain recognition needs paths through 14, quotient through 13 and Koszul through 16. The proof excludes all basepointed images via integral curve degrees and a lower bound two for the H-squared degree of moving surfaces.",
+      "current_proof": "sections/main_domain_quartic_parameters.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2398,7 +2404,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 545,
+  "version": 546,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
