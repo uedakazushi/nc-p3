@@ -2749,6 +2749,12 @@
       "current_result": "All geometrically integral quintic rank-one components, including singular curves, are impossible in every reduced four-edge finite window. At a singular length-one secant the two pencils trivialize the two-torsion after a single double-point blowup, forcing an impossible three-point partition. Irreducible rank-one components have degree at most four.",
       "current_proof": "sections/rank_one_singular_quintics.tex",
       "global_coverage": false
+    },
+    {
+      "id": "RANK-ONE-TWISTED-CUBIC-EXCLUSION",
+      "current_result": "Every integral cubic rank-one component is impossible in reduced finite windows. The twisted-cubic quadratic net must simultaneously diagonalize over a complete quadrilateral, and the six alternating evaluations on its tetrahedral edges contradict the marked bounds.",
+      "current_proof": "sections/rank_one_twisted_cubic_exclusion.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2806,7 +2812,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 613,
+  "version": 614,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
