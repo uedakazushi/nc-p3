@@ -2695,6 +2695,12 @@
       "current_result": "An integral opposite octic with curve kernel image always normalizes to a single-line scroll over the normalized kernel curve, including nonreduced windows. Cokernel duality excludes conic fibers, and opposite quadratic interpolation excludes paired skew rulings. The conductor quotient has Hilbert polynomial (degree-genus-3)(t+1); in equality with reduced window and finite rank-one locus, the 20-4g triple-ruling formula forces a twisted cubic.",
       "current_proof": "sections/kernel_curve_scroll.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SMOOTH-KERNEL-CURVE-EXCLUSION",
+      "current_result": "For reduced finite windows with finite rank-one locus and integral determinant every smooth curve kernel is the twisted cubic; smooth nine- and ten-cofactor kernel curves are excluded, including exceptional generator lines. In the zero-defect case the triple-incidence scheme equals the marked scheme even for nonreduced windows.",
+      "current_proof": "sections/smooth_kernel_curve_exclusion.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2752,7 +2758,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 604,
+  "version": 605,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

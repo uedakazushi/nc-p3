@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 604,
+  "version": 605,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "6d3c4e593401938dba0cd3f1c933ab4c1c6f03c4"
+    "source_commit": "8d4a8cc444e7e4bdc3a775ab909f878dab398601"
   },
   "generation": {
     "result": "PASS",
-    "scope": "An integral opposite octic with curve kernel image always normalizes to a single-line scroll over the normalized kernel curve, including nonreduced windows. Cokernel duality excludes conic fibers, and opposite quadratic interpolation excludes paired skew rulings. The conductor quotient has Hilbert polynomial (degree-genus-3)(t+1); in equality with reduced window and finite rank-one locus, the 20-4g triple-ruling formula forces a twisted cubic."
+    "scope": "For reduced finite windows with finite rank-one locus and integral determinant every smooth curve kernel is the twisted cubic; smooth nine- and ten-cofactor kernel curves are excluded, including exceptional generator lines. In the zero-defect case the triple-incidence scheme equals the marked scheme even for nonreduced windows."
   },
   "checks": [
     {
-      "command": "python computations/verify_kernel_curve_scroll.py",
+      "command": "python computations/verify_smooth_kernel_curve.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Use the scroll cokernel and its exceptional ruling lines on rational defective or singular kernel curves, and analyze surface kernel images and exceptional finite middles."
+    "Treat singular kernel curves via the normalization fibers, and rank-one curve excess; continue remaining surface kernels, exceptional middles and all-degree AS coverage."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1050,
+      "nc-p3": 1052,
       "plan_ja": 24,
       "notes_ja": 39
     },
