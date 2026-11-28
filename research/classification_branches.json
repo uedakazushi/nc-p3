@@ -2551,6 +2551,12 @@
       "current_result": "For every smooth elliptic eight-cofactor integral opposite matrix the elliptic quartic pencil selects one nontrivial two-torsion or order-four parameter, without a completeness or unique-octic assumption. Every unbranched parameter has an elliptic Bezout normal form. A surface degeneracy calculation bounds finite residual configurations by sixteen even on nonreduced sources, and excludes order three for the residual translation using the degree-four orbit curve.",
       "current_proof": "sections/elliptic_bezout_torsion.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SMOOTH-ELLIPTIC-COFACTOR-EXCLUSION",
+      "current_result": "A smooth elliptic quartic cannot be the kernel curve of an integral eight-cofactor opposite octic in any four-edge-finite Frobenius candidate. The branch member gives a nontrivial additive torsor and length at most sixteen. For order four the horizontal elliptic double cover and the vertical line multiplicities bound cubic evaluation by eighteen, contradicting twenty, also for nonreduced windows. An integral eight-cofactor kernel must therefore be nodal or cuspidal.",
+      "current_proof": "sections/smooth_elliptic_cofactor_exclusion.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2608,7 +2614,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 580,
+  "version": 581,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
