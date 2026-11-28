@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 590,
+  "version": 591,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "e82601d7fa81bb1e02858d00008919d2e42138b7"
+    "source_commit": "6f2cb58962f783f09ed61787036f7b4f2e0aa636"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The graph of a clean integral opposite octic is a canonically embedded Gorenstein surface with K squared 68, irregularity zero and geometric genus 15. Its two projections differ from the canonical bundle by a nontrivial two-torsion line bundle, yielding a canonically embedded etale double cover. The abstract graph with the input polarization and this torsion mark is a complete invariant of the opposite matrix, with finitely many matrix classes on each fixed surface."
+    "scope": "All finite middle edges from a fixed admissible length-twenty input are recovered exactly as Plucker bases of its fifteen quartics admitting four independent linear annihilators, modulo GL6. For the general fifteen-dimensional component exactly two Grassmannians pass; both are isolated reduced even among all Grassmannians containing the quartic model."
   },
   "checks": [
     {
-      "command": "python computations/verify_octic_kernel_canonical_model.py",
+      "command": "python computations/verify_edge_plucker_presentations.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Use the edge Grassmannian model of the blowup to recover all middle configurations and their regularity tests. Continue excess-rank loci and the incomplete finite-window atlas."
+    "Use centers of deficient Plucker systems on the input blowup to constrain singular finite eight-cofactor pencils and classify their curve components. Complete finite-window regularity and other uncovered strata."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1028,
+      "nc-p3": 1030,
       "plan_ja": 23,
       "notes_ja": 38
     },
