@@ -2887,6 +2887,12 @@
       "current_result": "In the integral generically reduced cofactor case, curve kernel image occurs only for degree 21 and the seven-cofactor Bezout model. Degrees 18, 19 and 20 force surface image. The proof descends rulings to a partial normalization and smooths its marked triple fibers, including the singular canonical genus-four sextic.",
       "current_proof": "sections/cofactor_singular_kernel_descent.tex",
       "global_coverage": false
+    },
+    {
+      "id": "COFACTOR-NINETEEN-QUADRIC-BASES",
+      "current_result": "Degree 19 integral generically reduced excess forces birational quadric kernel with inverse bidegree (2,3) or cone class 2E+5f and four simple bases or one double base. All cubic types are excluded. The symmetric root is uniquely reconstructed from the parametrized graph by linear equations.",
+      "current_proof": "sections/cofactor_nineteen_surface.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2944,7 +2950,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 636,
+  "version": 637,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
