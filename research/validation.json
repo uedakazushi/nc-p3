@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 547,
+  "version": 548,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "4139fb45212cddee51c32a2dcb796c0bc8ea386b"
+    "source_commit": "2734dff358816c8e904474482af643a7f12f0b7a"
   },
   "generation": {
     "result": "PASS",
-    "scope": "On any regular finite-edge window with all corners satisfying the identities of four-by-four matrices, every balanced size-two or size-three simple has vertex Ext1 on at most one side. The only still possible mixed nonvertex profile under this bound is a rotation of (2,2,2,3). On every component the semiprime three-matrix-identity regular windows are exactly ordinary Clifford windows. The proof uses injectivity of Yoneda products through any family of PI-forbidden three-block chains and a bridge along a shortest vertex segment."
+    "scope": "Every nonvertex simple on any finite regular window whose corners satisfy four-matrix identities has constant dimension vector. Every homogeneous prime quotient, and the quotient by the radical, are left and right Noetherian. A semiprime corner therefore implies a center-finite composable domain on every component. The remaining mixed profile (2,2,2,3) is excluded by incompatible lower and upper bounds on second Ext between universal head and socle extensions."
   },
   "checks": [
     {
-      "command": "python computations/verify_pi_yoneda_bridges.py",
+      "command": "python computations/verify_four_matrix_balanced_simples.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Eliminate the remaining mixed (2,2,2,3) profile and analyze nilpotent PI extensions using the one-sided Ext criterion, as well as finite high-rank components."
+    "Apply the absence of mixed vertex trace fibers in families to decide domainness at arbitrary finite regular specializations of the fifteen-dimensional component, and address uncovered high-rank windows."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 951,
+      "nc-p3": 952,
       "plan_ja": 22,
       "notes_ja": 36
     },

@@ -2353,6 +2353,12 @@
       "current_result": "On any regular finite-edge window with all corners satisfying the identities of four-by-four matrices, every balanced size-two or size-three simple has vertex Ext1 on at most one side. The only still possible mixed nonvertex profile under this bound is a rotation of (2,2,2,3). On every component the semiprime three-matrix-identity regular windows are exactly ordinary Clifford windows. The proof uses injectivity of Yoneda products through any family of PI-forbidden three-block chains and a bridge along a shortest vertex segment.",
       "current_proof": "sections/pi_yoneda_bridges.tex",
       "global_coverage": false
+    },
+    {
+      "id": "BALANCED-FOUR-MATRIX-SIMPLES-AND-NOETHERIAN-SEMIPRIME-QUOTIENT",
+      "current_result": "Every nonvertex simple on any finite regular window whose corners satisfy four-matrix identities has constant dimension vector. Every homogeneous prime quotient, and the quotient by the radical, are left and right Noetherian. A semiprime corner therefore implies a center-finite composable domain on every component. The remaining mixed profile (2,2,2,3) is excluded by incompatible lower and upper bounds on second Ext between universal head and socle extensions.",
+      "current_proof": "sections/four_matrix_balanced_simples.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2410,7 +2416,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 547,
+  "version": 548,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
