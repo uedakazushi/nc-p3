@@ -2689,6 +2689,12 @@
       "current_result": "For reduced finite windows no constant column combination of a generically invertible opposite matrix has a common factor. Without reducedness any such combination forces a double plane with the proportional contraction. Every fixed-kernel curve in a reduced window has degree at most two, and the quartics in a Bezout presentation are disjoint or, for nonreduced windows, meet only tangentially.",
       "current_proof": "sections/opposite_column_divisor.tex",
       "global_coverage": false
+    },
+    {
+      "id": "KERNEL-CURVE-SCROLL",
+      "current_result": "An integral opposite octic with curve kernel image always normalizes to a single-line scroll over the normalized kernel curve, including nonreduced windows. Cokernel duality excludes conic fibers, and opposite quadratic interpolation excludes paired skew rulings. The conductor quotient has Hilbert polynomial (degree-genus-3)(t+1); in equality with reduced window and finite rank-one locus, the 20-4g triple-ruling formula forces a twisted cubic.",
+      "current_proof": "sections/kernel_curve_scroll.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2746,7 +2752,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 603,
+  "version": 604,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

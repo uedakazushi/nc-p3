@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 603,
+  "version": 604,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "574e6fc3d2fb272cd6a195cc846b677626ba3468"
+    "source_commit": "6d3c4e593401938dba0cd3f1c933ab4c1c6f03c4"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For reduced finite windows no constant column combination of a generically invertible opposite matrix has a common factor. Without reducedness any such combination forces a double plane with the proportional contraction. Every fixed-kernel curve in a reduced window has degree at most two, and the quartics in a Bezout presentation are disjoint or, for nonreduced windows, meet only tangentially."
+    "scope": "An integral opposite octic with curve kernel image always normalizes to a single-line scroll over the normalized kernel curve, including nonreduced windows. Cokernel duality excludes conic fibers, and opposite quadratic interpolation excludes paired skew rulings. The conductor quotient has Hilbert polynomial (degree-genus-3)(t+1); in equality with reduced window and finite rank-one locus, the 20-4g triple-ruling formula forces a twisted cubic."
   },
   "checks": [
     {
-      "command": "python computations/verify_opposite_column_divisor.py",
+      "command": "python computations/verify_kernel_curve_scroll.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Classify the excess kernel loci using the line/conic fiber bound, and resolve the residual seven-cofactor parameters and general AS coverage."
+    "Use the scroll cokernel and its exceptional ruling lines on rational defective or singular kernel curves, and analyze surface kernel images and exceptional finite middles."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1049,
+      "nc-p3": 1050,
       "plan_ja": 24,
       "notes_ja": 39
     },
