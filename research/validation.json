@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 627,
+  "version": 628,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "811be6aa7bd0e6d271f2e0fa6de2cf21680c9eb5"
+    "source_commit": "f2f67275fd1ccccc20a1240efa4b8da0985a96e9"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every generically reduced positive-dimensional rank-two scheme in the reduced finite opposite-root setting has a component with moving image planes, and its cubic speciality exceeds the cubic restriction defect. This includes arbitrary singularities and reducible supports."
+    "scope": "No quadric contains the whole generically reduced cofactor curve. An integral such curve has Plucker degree at least three and cubic speciality defect at least two. A locally complete intersection integral curve requires a rank-one singularity with nonextending kernel; no integral global complete intersection occurs."
   },
   "checks": [
     {
-      "command": "python computations/verify_cofactor_singular_curve.py",
+      "command": "python computations/verify_cofactor_low_surfaces.py",
       "result": "PASS"
     },
     {
@@ -36,14 +36,14 @@
     }
   ],
   "open_mathematics": [
-    "Exclude singular curves with moving image planes by adjunction at nonextending kernel directions; analyze generically nonreduced excess and all-degree extension for exceptional middles."
+    "Use dualizing sections on containing cubic and quartic surfaces to constrain integral non-complete-intersection curves; continue all-degree certification of exceptional windows."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1089,
+      "nc-p3": 1091,
       "plan_ja": 25,
-      "notes_ja": 40
+      "notes_ja": 41
     },
     "scope": "LuaLaTeX built the manuscript, plan and research notes."
   },
