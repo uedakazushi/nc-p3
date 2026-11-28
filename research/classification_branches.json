@@ -3043,6 +3043,12 @@
       "current_result": "At scheme degree nineteen the kernel cannot be a curve, even with nonreduced cofactor support and positive-dimensional rank-one fibers. The genus-two scroll would have at least fourteen isolated triple fibers, while a simultaneous smoothing of its ruling and generating sections has triple-fiber length twelve.",
       "current_proof": "sections/genus_two_kernel_excess.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SECTIONAL-NINETEEN-MODEL",
+      "current_result": "At full cofactor scheme degree nineteen, the only remaining kernels are birational quadrics with inverse system 2L+F and a length-four local complete intersection base scheme. The rank-one locus must contain a line, a smooth conic or two incident lines. These conclusions allow arbitrary cofactor thickenings and components.",
+      "current_proof": "sections/sectional_nineteen_model.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -3100,7 +3106,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 662,
+  "version": 663,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
