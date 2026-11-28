@@ -2503,6 +2503,12 @@
       "current_result": "On every finite Frobenius window with at least ten geometric points, a distinct opposite root must yield a nonzero octic vanishing triply on the configuration. This includes arbitrary embedded multiplicities. A local contact annihilator, the planar Newton polygon bound, and projection from a nonplanar site eliminate all singular matrices there. Octic-free finite edges in this range have at most one regular extension on all components.",
       "current_proof": "sections/opposite_contact_support.tex",
       "global_coverage": false
+    },
+    {
+      "id": "OPPOSITE-GRAM-PENCIL",
+      "current_result": "Every singular distinct opposite matrix on any finite window is a global Gram matrix UU^t for a four-by-three matrix of linear forms. The isotropic determinant pencil is a nonzero binary octic and its cubic minors have a common divisor of degree two, three or four. The proof uses the local alternating trace pairing on a planar contact quotient and the length at most three on any line.",
+      "current_proof": "sections/opposite_gram_pencil.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2560,7 +2566,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 572,
+  "version": 573,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
