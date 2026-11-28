@@ -2671,6 +2671,12 @@
       "current_result": "For each clean reduced octic component the general output three-space restriction has exactly m-6e nonmarked rank-one points counted with length. A cubic factor without a marked triple point is normal with (marks,marked double points) equal to (15,3),(14,4) or (15,4); the nonnormal ruled cubics are excluded.",
       "current_proof": "sections/cubic_octic_tangent_planes.tex",
       "global_coverage": false
+    },
+    {
+      "id": "MARKED-CUBIC-CONE-EXCLUSION",
+      "current_result": "A marked triple point on the cubic factor is impossible. The plane of each ruling kernel selects one factor of the tangent conic, excluding smooth elliptic bases. For a nodal base the binary degrees 1 and 2 give a compactified incidence with at most three residual points, contradicted by complete-intersection duality. Only normal cubics with the three marked double-point budgets remain.",
+      "current_proof": "sections/marked_cubic_cone_exclusion.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2728,7 +2734,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 600,
+  "version": 601,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
