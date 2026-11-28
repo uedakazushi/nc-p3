@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 567,
+  "version": 568,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "a69f2548afb64a037a6c0855b9e7969fe9697886"
+    "source_commit": "c7d7f442ed6f21e6fc646e0a259f4b9b4a1a49e5"
   },
   "generation": {
     "result": "PASS",
-    "scope": "No center-finite standard regular finite window has odd prime vertex division index. Every odd prime dividing the index forces a nonzero central character fixed by scaling of order that prime, while such a fiber cannot consist solely of one cyclic orbit of thin simples."
+    "scope": "On every finite Frobenius window, standard regularity with five-matrix identities at all four corners is equivalent to the previous degree-32 four-matrix test. No Noetherianity is assumed. Balanced dimension-four simples are globally one-sided for vertex first extensions without PI. A remaining noncentral PI degeneration with only small simples would force infinitely many orthogonal binary intermediates in a fixed finite second Ext group."
   },
   "checks": [
     {
-      "command": "python computations/verify_odd_prime_finite_indices.py",
+      "command": "python computations/verify_five_matrix_finite_windows.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine center-finiteness without Noether assumptions under five-matrix corner identities, and analyze the composite-index stabilizer fibers."
+    "Remove the remaining multiple-corner hypotheses and handle larger PI indices, as well as non-PI and singular finite-edge extensions outside the covered loci."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 981,
+      "nc-p3": 984,
       "plan_ja": 22,
       "notes_ja": 37
     },

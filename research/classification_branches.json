@@ -2473,6 +2473,12 @@
       "current_result": "No center-finite standard regular finite window has odd prime vertex division index. Every odd prime dividing the index forces a nonzero central character fixed by scaling of order that prime, while such a fiber cannot consist solely of one cyclic orbit of thin simples.",
       "current_proof": "sections/odd_prime_finite_indices.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FIVE-MATRIX-FINITE-WINDOWS",
+      "current_result": "On every finite Frobenius window, standard regularity with five-matrix identities at all four corners is equivalent to the previous degree-32 four-matrix test. No Noetherianity is assumed. Balanced dimension-four simples are globally one-sided for vertex first extensions without PI. A remaining noncentral PI degeneration with only small simples would force infinitely many orthogonal binary intermediates in a fixed finite second Ext group.",
+      "current_proof": "sections/five_matrix_finite_windows.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2530,7 +2536,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 567,
+  "version": 568,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
