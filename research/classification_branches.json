@@ -2365,6 +2365,12 @@
       "current_result": "On the entire finite-edge locus of the fifteen-dimensional closure every standard regular window is a center-finite composable domain of vertex index four. Regularity is equivalent to the quartic parameter test through path degree 14, parameter quotient degree 13 and Koszul degree 16, and is relatively open. Polarized centers with their origin-corner Kummer class distinguish all realized indexed isomorphism classes. Proof: no nonzero relative trace fiber can mix vertex and nonvertex simples; relative graded Nakayama gives a finite centralizing extension of the original order over a DVR, so Noetherianity descends before specialization.",
       "current_proof": "sections/main_regular_specialization.tex",
       "global_coverage": false
+    },
+    {
+      "id": "THREE-MATRIX-REGULAR-CLASSIFICATION-WITHOUT-SEMIPRIMENESS",
+      "current_result": "On every component, if all corners of a finite regular window satisfy four-matrix identities and one satisfies three-matrix identities, the window is ordinary Clifford, without any semiprimeness assumption. All balanced size-three simples are vertex-orthogonal. Under the four-matrix bound a single vertex-orthogonal nonthin simple forces all vertex extensions to vanish and the window to be a center-finite domain. The proof uses finite projective resolutions of periodic tails and a three-block chain ending at any prescribed vertex.",
+      "current_proof": "sections/periodic_tail_vertex_bridges.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2422,7 +2428,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 549,
+  "version": 550,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

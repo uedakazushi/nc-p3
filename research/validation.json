@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 549,
+  "version": 550,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "978487fccf42112e1927b7ae8f91cca98fe910a4"
+    "source_commit": "1f03b621e38803ad88311f40d78b65efb05ff613"
   },
   "generation": {
     "result": "PASS",
-    "scope": "On the entire finite-edge locus of the fifteen-dimensional closure every standard regular window is a center-finite composable domain of vertex index four. Regularity is equivalent to the quartic parameter test through path degree 14, parameter quotient degree 13 and Koszul degree 16, and is relatively open. Polarized centers with their origin-corner Kummer class distinguish all realized indexed isomorphism classes. Proof: no nonzero relative trace fiber can mix vertex and nonvertex simples; relative graded Nakayama gives a finite centralizing extension of the original order over a DVR, so Noetherianity descends before specialization."
+    "scope": "On every component, if all corners of a finite regular window satisfy four-matrix identities and one satisfies three-matrix identities, the window is ordinary Clifford, without any semiprimeness assumption. All balanced size-three simples are vertex-orthogonal. Under the four-matrix bound a single vertex-orthogonal nonthin simple forces all vertex extensions to vanish and the window to be a center-finite domain. The proof uses finite projective resolutions of periodic tails and a three-block chain ending at any prescribed vertex."
   },
   "checks": [
     {
-      "command": "python computations/verify_main_regular_specialization.py",
+      "command": "python computations/verify_periodic_tail_vertex_bridges.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine coverage and regularity on finite-edge components beyond this closure, and characterize which polarized centers and Kummer classes occur, their periods and degenerations."
+    "For the four-matrix residual, all nonthin simples must now have size two, one-sided nonzero vertex extensions, and be linked to every thin point. Analyze this case and the high-rank finite components with other PI bounds or no PI identity."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 954,
+      "nc-p3": 955,
       "plan_ja": 22,
       "notes_ja": 36
     },
