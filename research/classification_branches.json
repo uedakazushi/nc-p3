@@ -2425,6 +2425,12 @@
       "current_result": "For any finite one-opposite-symmetric Frobenius window of opposite rank greater than six, each odd monad is a bundle exactly when the normalized square-root tangent of its edge contains a rank-ten skew form, in which case the tangent is a single line. At opposite rank ten the two linear tests characterize all regular parameters. The rational edge from the prior theorem extends to a verified regular window by the cubic-overlap construction.",
       "current_proof": "sections/single_edge_instanton_extension.tex",
       "global_coverage": false
+    },
+    {
+      "id": "OPPOSITE-ROOT-TRIPLE-OCTICS",
+      "current_result": "Distinct full opposite coordinate roots on any reduced finite window force a nonzero octic surface triple at all twenty marked points. Absence at the first projection gives a finite necessary-and-sufficient regular extension test and uniqueness on that open set. Every finite point of the fifteen-dimensional closure, including nonreduced configurations, satisfies the octic condition in every slot, separating the explicit Clifford configuration from that closure.",
+      "current_proof": "sections/opposite_root_triple_octics.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2482,7 +2488,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 559,
+  "version": 560,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

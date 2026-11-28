@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 559,
+  "version": 560,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "84bbf0e6b2737c7908731314e31d41a15e3fc535"
+    "source_commit": "14b4e0ebe97dd941d66b83ac5df26a9d252f38b5"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For any finite one-opposite-symmetric Frobenius window of opposite rank greater than six, each odd monad is a bundle exactly when the normalized square-root tangent of its edge contains a rank-ten skew form, in which case the tangent is a single line. At opposite rank ten the two linear tests characterize all regular parameters. The rational edge from the prior theorem extends to a verified regular window by the cubic-overlap construction."
+    "scope": "Distinct full opposite coordinate roots on any reduced finite window force a nonzero octic surface triple at all twenty marked points. Absence at the first projection gives a finite necessary-and-sufficient regular extension test and uniqueness on that open set. Every finite point of the fifteen-dimensional closure, including nonreduced configurations, satisfies the octic condition in every slot, separating the explicit Clifford configuration from that closure."
   },
   "checks": [
     {
-      "command": "python computations/verify_single_edge_instanton_extension.py",
+      "command": "python computations/verify_opposite_root_triple_octics.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine global restrictions on distinct full opposite square roots and image loci beyond the one-symmetric branch."
+    "Analyze the determinantal representations and multiplicity-three octics of the remaining finite configurations, including their nonreduced boundaries."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 970,
+      "nc-p3": 972,
       "plan_ja": 22,
       "notes_ja": 37
     },
