@@ -2581,6 +2581,12 @@
       "current_result": "All singular boundary Hankel members of integral eight-cofactor matrices are excluded even on nonreduced finite Frobenius windows. The residual by the conductor line extends scheme-theoretically to the pole-free eigenvector surface and has length at most sixteen. The conductor cut itself has length at most three.",
       "current_proof": "sections/boundary_conductor_residual.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SINGULAR-QUINTIC-PFAFFIANS",
+      "current_result": "A singular finite eight-cofactor member, including nodal order two, must have a positive-dimensional common-cubic degeneracy. All fifteen binary-quintic Pfaffians vanish scheme-theoretically on the point window, with span at most fourteen and a bound depending on conductor length. Away from proportional pairs the residual cubic and scalar incidence lift also on nonreduced supports.",
+      "current_proof": "sections/singular_quintic_pfaffians.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2638,7 +2644,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 585,
+  "version": 586,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

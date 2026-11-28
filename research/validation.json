@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 585,
+  "version": 586,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "0cb81487ee78bde35a44097620df092e0b64017c"
+    "source_commit": "b8911a5afc8441f91b5c353ec91d397b23225409"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All singular boundary Hankel members of integral eight-cofactor matrices are excluded even on nonreduced finite Frobenius windows. The residual by the conductor line extends scheme-theoretically to the pole-free eigenvector surface and has length at most sixteen. The conductor cut itself has length at most three."
+    "scope": "A singular finite eight-cofactor member, including nodal order two, must have a positive-dimensional common-cubic degeneracy. All fifteen binary-quintic Pfaffians vanish scheme-theoretically on the point window, with span at most fourteen and a bound depending on conductor length. Away from proportional pairs the residual cubic and scalar incidence lift also on nonreduced supports."
   },
   "checks": [
     {
-      "command": "python computations/verify_boundary_conductor_residual.py",
+      "command": "python computations/verify_singular_quintic_pfaffians.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze singular finite pencil members on nonreduced windows through the binary quintic skew identity, the common cubic incidence, proportional pairs and constant scalar components. Higher-cofactor, reducible determinants and general windows remain open."
+    "Study the excess degeneracy curves and the proportional conductor points on singular finite members. Investigate the smooth-quadric and quadric-cone alternatives for nine cofactors as well as general-window coverage."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1021,
+      "nc-p3": 1023,
       "plan_ja": 23,
       "notes_ja": 38
     },
