@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-28",
-  "version": 588,
+  "version": 589,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -5762,6 +5762,15 @@
       "verification": [
         "computations/verify_octic_kernel_image_degree.py"
       ]
+    },
+    {
+      "id": "NINE-COFACTOR-TRANSFERS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "For a nine-cofactor smooth kernel quadric, a quartic three-by-three matrix vanishes on the window, has determinant d times the square of a trace quadric, and recovers the nine sextic moments. For a quadric cone the primitive binary cubic pencil has resultant f squared times d. The vertex fiber is nonempty and cannot be a simple singleton on a smooth trace quadric.",
+      "proof": "sections/nine_cofactor_transfers.tex",
+      "verification": [
+        "computations/verify_nine_cofactor_transfers.py"
+      ]
     }
   ],
   "document_paths": {
@@ -5825,7 +5834,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "16cc880945cc444ae7d12cdceb8856efe3ac693a",
+  "reviewed_source_commit": "e1d36373141663f76f285616edb69db273d03f31",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -5834,14 +5843,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Analyze the smooth-quadric and quadric-cone nine-cofactor transfer matrices and the low-degree alternatives of the clean kernel incidence. Continue excess singular finite pencils and global regular-window coverage.",
+    "immediate_next_action": "Recover the clean kernel graph and its marked line bundles from the point blowup. Analyze excess vertex fibers and the remaining configurations of the nine- and eight-cofactor branches.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/octic_kernel_image_degree.tex",
-      "sections/cofactor_tangent_nets.tex"
+      "sections/nine_cofactor_transfers.tex",
+      "sections/octic_kernel_image_degree.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "For an integral opposite octic with finite rank-at-most-two locus the kernel map has degree times image degree twelve, and a general target plane has an integral residual cover of arithmetic genus twenty-five. All four maps on the general fifteen-dimensional component are birational to degree-twelve surfaces; the plane-section algebra has conductor quotient length thirty. With a rank-two curve but finite rank-one scheme the moving degree is at most eleven. Full classification remains open.",
+    "state_of_claim": "For a nine-cofactor smooth kernel quadric, a quartic three-by-three matrix vanishes on the window, has determinant d times the square of a trace quadric, and recovers the nine sextic moments. For a quadric cone the primitive binary cubic pencil has resultant f squared times d. The vertex fiber is nonempty and cannot be a simple singleton on a smooth trace quadric. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

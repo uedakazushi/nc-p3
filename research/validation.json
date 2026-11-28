@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 588,
+  "version": 589,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "16cc880945cc444ae7d12cdceb8856efe3ac693a"
+    "source_commit": "e1d36373141663f76f285616edb69db273d03f31"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For an integral opposite octic with finite rank-at-most-two locus the kernel map has degree times image degree twelve, and a general target plane has an integral residual cover of arithmetic genus twenty-five. All four maps on the general fifteen-dimensional component are birational to degree-twelve surfaces; the plane-section algebra has conductor quotient length thirty. With a rank-two curve but finite rank-one scheme the moving degree is at most eleven."
+    "scope": "For a nine-cofactor smooth kernel quadric, a quartic three-by-three matrix vanishes on the window, has determinant d times the square of a trace quadric, and recovers the nine sextic moments. For a quadric cone the primitive binary cubic pencil has resultant f squared times d. The vertex fiber is nonempty and cannot be a simple singleton on a smooth trace quadric."
   },
   "checks": [
     {
-      "command": "python computations/verify_octic_kernel_image_degree.py",
+      "command": "python computations/verify_nine_cofactor_transfers.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze the smooth-quadric and quadric-cone nine-cofactor transfer matrices and the low-degree alternatives of the clean kernel incidence. Continue excess singular finite pencils and global regular-window coverage."
+    "Recover the clean kernel graph and its marked line bundles from the point blowup. Analyze excess vertex fibers and the remaining configurations of the nine- and eight-cofactor branches."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1025,
+      "nc-p3": 1027,
       "plan_ja": 23,
       "notes_ja": 38
     },

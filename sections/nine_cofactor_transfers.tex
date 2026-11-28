@@ -1,0 +1,68 @@
+% !TeX root = ../papers/nc-p3.tex
+\section{九余因子の滑らかな二次曲面と錐の大域行列}
+\label{sec:nine-cofactor-transfers}
+整な八次式 $d=\det N$ の余因子 $P=\operatorname{adj}N$ が九次元を張るとする。
+その唯一の定数二次関係の二次曲面は整であるから、次の二種類で尽きる。
+\begin{proposition}\label{prop:nine-smooth-transfer}
+滑らかな核二次曲面の座標を $y_0y_3=y_1y_2$ とし、$P$ と三行行列 $H$ を
+\[
+ P=\begin{pmatrix}a&b&d'&e\\b&c&e&f'\\d'&e&g&h\\e&f'&h&i\end{pmatrix},\qquad
+ H=\begin{pmatrix}a&b&c\\d'&e&f'\\g&h&i\end{pmatrix},\qquad q=N_{03}-N_{12}
+\]
+と置く。$q\ne0$ は入力二次式で、$K=\operatorname{adj}H/d$ は点窓 $X$ 上で消える四次式行列である。
+\[
+             \det H=d^2q,\qquad \operatorname{adj}K=qH,\qquad \det K=dq^2 .
+\]
+$q$ の単純成分の一般点で $H,K$ の階数は順に2,1である。
+$K$ に共通因子があれば $q$ は一次式の平方で、その一次式を除くと三次式行列の随伴として $H$ が得られる
+（定数倍率を許す）。
+\end{proposition}
+\begin{proof}
+表示行列で $(\operatorname{adj}P)_{03}-(\operatorname{adj}P)_{12}=\det H$ を展開し、
+$\operatorname{adj}P=d^2N$ を使う。$q$ の非零性は全十個の二次式の独立性による。
+$H$ の二次小行列式は $P$ の二次小行列式の定数線型結合である。実際 $y_0y_3=y_1y_2$ の
+二次Veronese像でどの小行列式も消え、その座標環は四変数の偶数次環を当該二次式で割ったものの偶数次部分である。
+従ってこの像のイデアルは元の対称階数1の小行列式と指定の一次関係で生成される。
+$P$ の各二次小行列式はJacobiの相補公式で $d$ と $N$ の二次小行列式の積である。これで
+$K$ が四次式で $X$ 上消えることが分かる。残る二恒等式は三行行列の随伴公式による。
+$H$ に共通因子はない。全余因子を割る因子は $d$ を割る必要があり次数が足りないからである。
+従って $K$ の共通因子の平方は $q$ を割り、想定の場合に限られる。
+$q$ の単純成分での階数はその離散付値環で $\det H$ の位数が1であることから従う。
+\end{proof}
+
+\begin{proposition}\label{prop:nine-cone-transfer}
+核二次錐の頂点を第四座標点とし、関係を $P_{02}=P_{11}$ とする。
+$N=\left(\begin{smallmatrix}A&b\\b^{\mathsf t}&f\end{smallmatrix}\right)$ と置けば
+$G=fA-bb^{\mathsf t}$ は原始な四次式六成分で、逆Bezout表示はどこでもPlücker関係を満たす。
+従って有理的に二項三次式の鉛筆を与え、その結果式は定数倍を除いて $f^2d$ である。
+頂点を核に含む入力のスキーム $V(f,b)$ は非空である。$f=0$ がその台で滑らかなら、
+これは有限な単純一点にもなれない。
+\end{proposition}
+\begin{proof}
+Schur補公式で $\operatorname{adj}G=f P_{[0,1,2]}$、$\det G=f^2d$ である。
+前節のPlücker式で $G$ の逆Bezoutテンソルは分解可能であり、Bezout行列式が二項結果式を与える。
+共通因子があれば行列式の因数分解と次数から $f$ の因子である。しかしこの因子を法として
+$G=-bb^{\mathsf t}$ なので $b$ の全成分が割れ、$N$ の最終列から $d$ も割れてしまう。
+
+対称三行 $A$ のPlücker二次式を $F(A)=(\operatorname{adj}A)_{11}-(\operatorname{adj}A)_{02}$ とすると
+$F(bb^{\mathsf t})=0$ である。$F(fA-bb^{\mathsf t})$ を $f$ で割った式は
+\[
+                 f F(A)=\sum_{i\le j} A'_{ij} b_i b_j .
+\]
+$A\mapsto(A'_{ij})$ は可逆な定数線型変換である。Plücker二次式は六変数で非退化、
+$b b^{\mathsf t}$ の係数は全六二次単項式だからである。もし四二次式 $f,b_0,b_1,b_2$ が基点を持たなければ
+$R=k[x_0,\ldots,x_3]/(f)$ で三つの $b_i$ は正則列となる。
+$(b)$ に関する随伴次数環は $(R/(b))[T_0,T_1,T_2]$ なので、次数2で上式を読むと
+全ての $A'_{ij}$ が $(f,b_0,b_1,b_2)$ に入る。十個の二次式の独立性に反する。
+
+基点が単純一点で $f=0$ がそこで滑らかなら、一般の二つの $b$ の線型結合と $f$ が切る
+長さ8の完全交叉 $T$ ではその一点は単純である。残り長さ7とその点は互いに素である。
+$b$ の基底をこれらの二結合と残る一結合に取れば、上式を $T$ に制限した式は $A'' b_2^2=0$ となる。
+$A''$ は $A'$ の非零な定数線型結合であり、残り長さ7の上で消える。
+三つの二次式の完全交叉に対する二次のCayley--Bacharach性から $A''$ は全 $T$ 上で消える。
+実際 $\omega_T=\mathcal O_T(2)$ で二次式の像は完全跡の核、単純一点にだけ支えを持つ元は
+非零なら跡が非零である。よって $A''$ は定義三式の包に入り、再び独立性に反する。
+\end{proof}
+
+\path{computations/verify_nine_cofactor_transfers.py} は滑らかな二次曲面での三行行列式と
+錐でのPlücker極化の六係数の非退化性を独立変数で検算する。

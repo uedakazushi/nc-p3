@@ -2599,6 +2599,12 @@
       "current_result": "For an integral opposite octic with finite rank-at-most-two locus the kernel map has degree times image degree twelve, and a general target plane has an integral residual cover of arithmetic genus twenty-five. All four maps on the general fifteen-dimensional component are birational to degree-twelve surfaces; the plane-section algebra has conductor quotient length thirty. With a rank-two curve but finite rank-one scheme the moving degree is at most eleven.",
       "current_proof": "sections/octic_kernel_image_degree.tex",
       "global_coverage": false
+    },
+    {
+      "id": "NINE-COFACTOR-TRANSFERS",
+      "current_result": "For a nine-cofactor smooth kernel quadric, a quartic three-by-three matrix vanishes on the window, has determinant d times the square of a trace quadric, and recovers the nine sextic moments. For a quadric cone the primitive binary cubic pencil has resultant f squared times d. The vertex fiber is nonempty and cannot be a simple singleton on a smooth trace quadric.",
+      "current_proof": "sections/nine_cofactor_transfers.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2656,7 +2662,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 588,
+  "version": 589,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
