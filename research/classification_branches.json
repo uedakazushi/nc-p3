@@ -2461,6 +2461,12 @@
       "current_result": "A distinct opposite matrix on a finite Frobenius window has nonzero determinant if the point scheme has at least fourteen support points. At thirteen a singular matrix requires twelve reduced points and one length-eight point of embedding dimension three. On any curvilinear configuration it requires all lengths even and the half-length subscheme on a determinantal cubic curve. Thus triple octics are necessary far beyond reduced configurations.",
       "current_proof": "sections/singular_opposite_root_lengths.tex",
       "global_coverage": false
+    },
+    {
+      "id": "TERNARY-KERNEL-CUBIC-EXCLUSION",
+      "current_result": "A generically rank-three distinct opposite matrix must have four linearly independent kernel coordinates on every finite Frobenius window. The ternary case would put a self-annihilating length-ten ideal on a determinantal cubic, where the rank-one condition forces impossible cubic identities. In particular every distinct opposite of an arbitrary curvilinear finite graph gives a nonzero triple octic, with no restriction on local lengths.",
+      "current_proof": "sections/ternary_kernel_cubic_exclusion.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2518,7 +2524,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 565,
+  "version": 566,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 565,
+  "version": 566,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "bfd826e1ff8b965af8da53ea6b603bfa0dcabf71"
+    "source_commit": "7307a72ef068e815a8739b03a573da32505341ed"
   },
   "generation": {
     "result": "PASS",
-    "scope": "A distinct opposite matrix on a finite Frobenius window has nonzero determinant if the point scheme has at least fourteen support points. At thirteen a singular matrix requires twelve reduced points and one length-eight point of embedding dimension three. On any curvilinear configuration it requires all lengths even and the half-length subscheme on a determinantal cubic curve. Thus triple octics are necessary far beyond reduced configurations."
+    "scope": "A generically rank-three distinct opposite matrix must have four linearly independent kernel coordinates on every finite Frobenius window. The ternary case would put a self-annihilating length-ten ideal on a determinantal cubic, where the rank-one condition forces impossible cubic identities. In particular every distinct opposite of an arbitrary curvilinear finite graph gives a nonzero triple octic, with no restriction on local lengths."
   },
   "checks": [
     {
-      "command": "python computations/verify_singular_opposite_root_lengths.py",
+      "command": "python computations/verify_ternary_kernel_cubic_exclusion.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Resolve the remaining singular opposite matrices, in particular even curvilinear configurations on determinantal cubic curves and nonplanar length-eight configurations, and separate rank-drop curve cases for nonsingular presentations."
+    "Exclude or classify the four-coordinate generically singular presentations on noncurvilinear point configurations and reconstruct all finite regular extensions of edges with rank-drop curves."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 980,
+      "nc-p3": 981,
       "plan_ja": 22,
       "notes_ja": 37
     },
