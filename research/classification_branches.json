@@ -2617,6 +2617,12 @@
       "current_result": "All finite middle edges from a fixed admissible length-twenty input are recovered exactly as Plucker bases of its fifteen quartics admitting four independent linear annihilators, modulo GL6. For the general fifteen-dimensional component exactly two Grassmannians pass; both are isolated reduced even among all Grassmannians containing the quartic model.",
       "current_proof": "sections/edge_plucker_presentations.tex",
       "global_coverage": false
+    },
+    {
+      "id": "DEFICIENT-PLUCKER-CENTERS",
+      "current_result": "In every singular finite eight-cofactor pencil the fifteen common-cubic minors span at most eleven dimensions and their excess curve has degree at least four, with only lines and plane conics as irreducible supports. Excess Eagon-Northcott homology and the geometry of all line and plane projection centers give the bound even for nonreduced inputs.",
+      "current_proof": "sections/deficient_plucker_centers.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2674,7 +2680,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 591,
+  "version": 592,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
