@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 608,
+  "version": 609,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "801a9149832165bd025744b86ad1fea07a01202b"
+    "source_commit": "f040a859d29452d7c13cb5c3eb4177566b3a2f0a"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For every reduced four-edge finite window with generally invertible full opposite root the rank-one locus has dimension at most one, without assumptions on the other rank strata. On a rank-two plane containing a rank-one curve its rank-one ideal is exactly a conic and the matrix is a linear square plus a quadratic times a fixed square."
+    "scope": "In all reduced finite windows the opposite rank-one curve support has total degree at most six. Degree six requires exactly nineteen marks on three specified reducible types and one outside, with at least three connected components. An irreducible component has degree at most five. The octic has at most one repeated prime factor."
   },
   "checks": [
     {
-      "command": "python computations/verify_rank_one_surface_exclusion.py",
+      "command": "python computations/verify_rank_one_curve_degree_bound.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Treat the remaining rank-one curves and their intersections with rank-two surfaces, then rank-two curve excess, singular kernel curves, exceptional middles and all-degree AS coverage."
+    "Analyze the three disconnected degree-six supports and isolated rank-one marks via the unique rank-two surface; treat integral components of degrees three through five, singular kernel curves, exceptional middles and all-degree AS coverage."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1056,
+      "nc-p3": 1059,
       "plan_ja": 24,
       "notes_ja": 39
     },
