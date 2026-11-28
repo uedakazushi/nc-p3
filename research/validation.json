@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 618,
+  "version": 619,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "113d54c5d305974e696c6e0cfc051952d64a2d32"
+    "source_commit": "e3538874d40cb11a1d79aa3a6bbe06bbf63eeafe"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For reduced four-edge finite Frobenius windows with generally invertible full-rank opposite root, the reduced rank-one curve support has total degree at most two."
+    "scope": "Two skew rank-one lines are impossible in a reduced four-edge finite Frobenius window with generally invertible full-rank opposite root. All remaining rank-one curve supports are planar of degree at most two."
   },
   "checks": [
     {
-      "command": "python computations/verify_rank_one_cubic_arrangement_exclusion.py",
+      "command": "python computations/verify_rank_one_skew_pair_exclusion.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Resolve the two-skew-line case via the two Segre direction quadrics, then treat planar rank-one excess, exceptional middles and all-degree coverage."
+    "Analyze planar rank-one conics, intersecting lines and single lines; continue the all-degree Frobenius-window and exceptional-middle obligations."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1073,
+      "nc-p3": 1075,
       "plan_ja": 24,
       "notes_ja": 40
     },

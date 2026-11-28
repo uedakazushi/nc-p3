@@ -2779,6 +2779,12 @@
       "current_result": "For reduced four-edge finite Frobenius windows with generally invertible full-rank opposite root, the reduced rank-one curve support has total degree at most two.",
       "current_proof": "sections/rank_one_cubic_arrangement_exclusion.tex",
       "global_coverage": false
+    },
+    {
+      "id": "RANK-ONE-SKEW-PAIR-EXCLUSION",
+      "current_result": "Two skew rank-one lines are impossible in a reduced four-edge finite Frobenius window with generally invertible full-rank opposite root. All remaining rank-one curve supports are planar of degree at most two.",
+      "current_proof": "sections/rank_one_skew_pair_exclusion.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2836,7 +2842,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 618,
+  "version": 619,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

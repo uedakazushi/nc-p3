@@ -2,7 +2,7 @@
 
 **共同研究：** 本リポジトリは大川新之介・植田一石の共同研究プロジェクトです。この表示は個々の論文の著者を確定するものではありません。
 
-**2026-11-28 / v618。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-28 / v619。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -792,6 +792,8 @@ PI正則窓が中心上有限になる必要十分条件を、非頂点単純と
 直線・二次曲線の和についても四次・五次を排除し、被約な階数一曲線全体の総次数は三以下となった。[平面残余と配置の全分割](sections/rank_one_low_degree_arrangements.tex)
 
 三次の配置は、連結な和・平面二次と素な直線・互いに素な三直線のいずれも二十印を収容できず、曲線の総次数は二以下になる。[三次配置の排除](sections/rank_one_cubic_arrangement_exclusion.tex)
+
+素な二直線も排除でき、残る階数一曲線は全て一平面内にある。[方向の二次曲面と交点数](sections/rank_one_skew_pair_exclusion.tex)
 
 非恒等の平面グラフを基底に持つOre窓では、指定点を忘れた同型類も決定した。[正規形と平坦特殊化](sections/plane_graph_ore_windows.tex)・[検算](computations/verify_plane_graph_ore.py)
 
