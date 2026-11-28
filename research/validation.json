@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 654,
+  "version": 655,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "e75cfc4ea98212bbca4b646d2125548f56fc0030"
+    "source_commit": "2f2f0a329e62680f950d8d1c714cd8ea1ad08c87"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Even for reducible or multiple middle secants the resultant is an integral octic. Its full conductor is the degree-21 genus-50 Hilbert--Burch scheme of binary subresultants. Six linear syzygies exclude finite forward roots; the nonzero cone tangent excludes finite and classified integral reverse roots."
+    "scope": "Every finite edge over the degree-20 input, including all exceptional choices, is a binary catalecticant edge of a Hankel structure on the same five-by-five linear quintic symmetroid. The quartic involution of its kernel surface forces the whole Veronese fourfold into the Grassmannian by Pfaffian inversion."
   },
   "checks": [
     {
-      "command": "python computations/verify_middle_conductor_resolution.py",
+      "command": "python computations/verify_quadric_conductor_quintic.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Recover the degree-20 input quintic symmetroid and use middle conductor component and marked-divisor constraints for nonstandard roots."
+    "Compare both actual adjacent Hankel structures: distinct structures induce the forbidden standard trisecant window and equal structures force a cubic-quintic fold."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1138,
+      "nc-p3": 1140,
       "plan_ja": 26,
       "notes_ja": 42
     },

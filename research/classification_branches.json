@@ -2995,6 +2995,12 @@
       "current_result": "Even for reducible or multiple middle secants the resultant is an integral octic. Its full conductor is the degree-21 genus-50 Hilbert--Burch scheme of binary subresultants. Six linear syzygies exclude finite forward roots; the nonzero cone tangent excludes finite and classified integral reverse roots.",
       "current_proof": "sections/middle_conductor_resolution.tex",
       "global_coverage": false
+    },
+    {
+      "id": "QUADRIC-CONDUCTOR-QUINTIC",
+      "current_result": "Every finite edge over the degree-20 input, including all exceptional choices, is a binary catalecticant edge of a Hankel structure on the same five-by-five linear quintic symmetroid. The quartic involution of its kernel surface forces the whole Veronese fourfold into the Grassmannian by Pfaffian inversion.",
+      "current_proof": "sections/quadric_conductor_quintic.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -3052,7 +3058,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 654,
+  "version": 655,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
