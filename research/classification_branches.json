@@ -3067,6 +3067,12 @@
       "current_result": "Full cofactor scheme degree eighteen forces sectional kernel degree six. In the degree-five curve case the length-four trace divisor has a single input ruling; in both possible splitting cases a degree-four binary determinant bounds isolated triple fibers outside that ruling, contradicting the eleven required marks.",
       "current_proof": "sections/fourfold_fixed_ruling.tex",
       "global_coverage": false
+    },
+    {
+      "id": "GENUS-THREE-KERNEL-EXCESS",
+      "current_result": "At full cofactor degree eighteen the kernel image must be a surface. A putative sextic curve kernel descends to a genus-three Gorenstein base with semistable degree-eight ruling quotient; unobstructed smoothing and a dimension count give eight triple fibers against at least fourteen isolated marks.",
+      "current_proof": "sections/genus_three_kernel_excess.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -3124,7 +3130,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 666,
+  "version": 667,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
