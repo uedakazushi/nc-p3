@@ -2977,6 +2977,12 @@
       "current_result": "For every actual degree-20 cone projection the canonical cubic middle edge is finite and reduced; the cone vertex cannot be a length-three mark. The folded canonical middle is excluded at every opposite rank by Pluecker secants and the fixed rank-six tangent, including exceptional parameters.",
       "current_proof": "sections/cone_fold_plucker.tex",
       "global_coverage": false
+    },
+    {
+      "id": "INTEGRAL-MIDDLE-SECANTS",
+      "current_result": "On every genuine smooth quadric projection both canonical middle edges are finite reduced and neither fold has the four cubic overlaps. In both degree-20 models an integral middle secant sextic, including a singular one, excludes every regular extension. Thus every associated middle secant sextic must be reducible or nonreduced.",
+      "current_proof": "sections/integral_middle_secants.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -3034,7 +3040,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 651,
+  "version": 652,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
