@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 564,
+  "version": 565,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "fa61bc3824250a9c6b7abfb58784eeb49fd8ef42"
+    "source_commit": "bfd826e1ff8b965af8da53ea6b603bfa0dcabf71"
   },
   "generation": {
     "result": "PASS",
-    "scope": "If one regular finite window has finite submaximal loci for both opposite matrices, all standard regular extensions of its first point configuration across all components, even for nonreduced points, comprise the original, its reverse and at most two finitely tested bisymmetric folds. One clean opposite root on a specified edge gives at most two extensions. A general oriented edge of the fifteen-dimensional component has exactly one standard regular extension globally."
+    "scope": "A distinct opposite matrix on a finite Frobenius window has nonzero determinant if the point scheme has at least fourteen support points. At thirteen a singular matrix requires twelve reduced points and one length-eight point of embedding dimension three. On any curvilinear configuration it requires all lengths even and the half-length subscheme on a determinantal cubic curve. Thus triple octics are necessary far beyond reduced configurations."
   },
   "checks": [
     {
-      "command": "python computations/verify_clean_configuration_extensions.py",
+      "command": "python computations/verify_singular_opposite_root_lengths.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine regularity and root reconstruction for configurations that have no finite submaximal presentation, and identify components yielding these extensions."
+    "Resolve the remaining singular opposite matrices, in particular even curvilinear configurations on determinantal cubic curves and nonplanar length-eight configurations, and separate rank-drop curve cases for nonsingular presentations."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 978,
+      "nc-p3": 980,
       "plan_ja": 22,
       "notes_ja": 37
     },

@@ -2455,6 +2455,12 @@
       "current_result": "If one regular finite window has finite submaximal loci for both opposite matrices, all standard regular extensions of its first point configuration across all components, even for nonreduced points, comprise the original, its reverse and at most two finitely tested bisymmetric folds. One clean opposite root on a specified edge gives at most two extensions. A general oriented edge of the fifteen-dimensional component has exactly one standard regular extension globally.",
       "current_proof": "sections/clean_configuration_extensions.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SINGULAR-OPPOSITE-ROOT-LENGTHS",
+      "current_result": "A distinct opposite matrix on a finite Frobenius window has nonzero determinant if the point scheme has at least fourteen support points. At thirteen a singular matrix requires twelve reduced points and one length-eight point of embedding dimension three. On any curvilinear configuration it requires all lengths even and the half-length subscheme on a determinantal cubic curve. Thus triple octics are necessary far beyond reduced configurations.",
+      "current_proof": "sections/singular_opposite_root_lengths.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2512,7 +2518,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 564,
+  "version": 565,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
