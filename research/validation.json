@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 642,
+  "version": 643,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "38e46379db3a7f9fc70f50968199da4cc7cca26f"
+    "source_commit": "4db2783d7c9951078c8c2c0077b32c47fca6d1fa"
   },
   "generation": {
     "result": "PASS",
-    "scope": "A degree-18 birational quadric cone kernel is impossible. A colength-one Gorenstein partial normalization with Gorenstein source forces curve multiplicity two; both smooth and vertex defects therefore give local complete-intersection models deforming to the excluded plane and conic-bundle projections."
+    "scope": "At degree 18 all normal cubic kernels, including cones, are impossible. The same holds for nonnormal cubics with genus-four sectional sextic or with genus-three section and inverse defined in codimension one. Hilbert-Burch incidence and quadric sections on a singular cubic deform to the degree-13/14 triple counts."
   },
   "checks": [
     {
-      "command": "python computations/verify_cofactor_eighteen_cone.py",
+      "command": "python computations/verify_cofactor_cubic_incidence.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine double covers of the quadric cone and remaining singular cubic/quartic models, before exceptional degree-20 and nonintegral cases."
+    "Resolve the nonnormal cubic inverse along its conductor, quadric cone double covers and singular quartic surfaces, then other exceptional and nonintegral branches."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1115,
+      "nc-p3": 1117,
       "plan_ja": 25,
       "notes_ja": 41
     },

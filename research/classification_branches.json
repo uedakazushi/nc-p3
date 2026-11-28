@@ -2923,6 +2923,12 @@
       "current_result": "A degree-18 birational quadric cone kernel is impossible. A colength-one Gorenstein partial normalization with Gorenstein source forces curve multiplicity two; both smooth and vertex defects therefore give local complete-intersection models deforming to the excluded plane and conic-bundle projections.",
       "current_proof": "sections/cofactor_eighteen_cone_inverse.tex",
       "global_coverage": false
+    },
+    {
+      "id": "COFACTOR-EIGHTEEN-NORMAL-CUBIC",
+      "current_result": "At degree 18 all normal cubic kernels, including cones, are impossible. The same holds for nonnormal cubics with genus-four sectional sextic or with genus-three section and inverse defined in codimension one. Hilbert-Burch incidence and quadric sections on a singular cubic deform to the degree-13/14 triple counts.",
+      "current_proof": "sections/cofactor_eighteen_cubic_incidence.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2980,7 +2986,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 642,
+  "version": 643,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
