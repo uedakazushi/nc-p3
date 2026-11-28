@@ -1,0 +1,49 @@
+% !TeX root = ../papers/nc-p3.tex
+\section{一隅だけの三行列恒等式による有限Clifford枝の判定}
+\label{sec:single-three-matrix-windows}
+\begin{theorem}\label{thm:single-three-matrix-windows}
+四辺が有限な標準有限Frobenius候補で、標準Koszul左右AS正則かつ一つの隅が三行三列行列の
+恒等式を満たすための必要十分条件は、基点のない四二次式系で階数二以下との交叉が有限な
+通常Clifford窓であることである。他の三隅の行列恒等式、半素性、Noether性は仮定しない。
+\end{theorem}
+\begin{proof}
+指定隅を $e$ とする。全折り畳みはPIであるが、初めには他隅のPI次数を制限しない。
+非薄単純 $S$ の各頂点次元 $d_i$ は2以上である。$d_e=3$ なら中心多項式を指定隅で評価し、
+その正次数中心元を折り畳みへ延ばす既出の議論により、$S$ と頂点の全Extは消えて均衡する。
+従って $d_e=2$ の場合を扱えばよい。一つの矢空間の任意の非零ベクトル・双対共変元上の評価は
+階数2以上であるため、$d_{i+1}\le3(d_i-1)$ と $d_i\le3(d_{i+1}-1)$ が成り立つ。
+実際 $S_{i+1}^*$ は四行 $d_i$ 列の行列空間に入り、階数1の行列を含めないのでSegre余次元が上界となる。
+
+異なる一般倍率 $T$ を取ると、$e$ で $2+2>3$ なので両向きの第一Extが零である。
+ここでは頂点 $k_i$ を中間に取るYoneda積の直和も、$i$ によらず単射である。
+補題\ref{lem:pi-yoneda-bridges}の三段表現の証明で、中間を経る非零矩形の積を作ってから
+二端を $e$ で圧縮すれば、二端だけで四つの直交行列単位を通る。
+中間自身が $e$ に成分を持つ必要はない。従って
+\[
+ \sum_i a_i b_i\le E=\sum_i d_i h_i,\qquad
+ h_i=2d_i-4d_{i-1}-4d_{i+1}+6d_{i+2}.
+\]
+$a_i+b_i+h_i\ge0$ および $a_i\le3(d_{i-1}-1)-d_i$、
+$b_i\le3(d_{i+1}-1)-d_i$ は行・列の階数一排除から従う。
+
+$e=0$ として $d=(2,x,y,z)$ と置く。向き反転を許して $2\le x\le z\le3$、
+$2\le y\le3(x-1)$ である。$(x,z)=(3,3)$ で $y=4,5,6$ の三場合は
+それぞれ $E=-8,-14,-16$ となる。従って全成分が2または3である。
+$(2,2,3,3)$ とその巡回移動は $E=-4$、$(2,3,2,3)$ は $\sum a_i b_i\ge32>16=E$、
+$(2,3,3,3)$ は $\sum a_i b_i\ge9>2=E$ で除かれる。
+残る $(2,2,2,3)$ の巡回移動には定理\ref{thm:four-matrix-balanced-simples}の
+普遍拡張 $U,V$ を使う。同証明で行列恒等式に依存するのは、異なる端点 $S,T$ を
+非零矩形で結べないことだけである。今回は三次元の頂点でなく、指定隅 $e$ の二端
+$2+2>3$ で同じ非零矩形を排除できる。その他のEuler数と拡張次元は次元ベクトルだけで同じであり、
+第二Extが100以上かつ98以下となる矛盾がそのまま成立する。
+
+これで均衡二次元だけが残る。上のYoneda単射と $E=0$ により全 $a_i b_i=0$ である。
+異なる頂点で向きが逆になる場合も定理\ref{thm:one-sided-balanced-small-simples}の
+最短頂点区間を通る拡張で除かれる。その証明の $a_i,b_i\le1$ と二端間の第二Extの消滅は上で得た。
+最後の非零積は、ここでももとの二端を $e$ に圧縮するだけで禁止される。
+従って頂点との第一Extは少なくとも一向きで全て零となり、
+補題\ref{lem:periodic-tail-vertex-bridges}を $c=1,d=2$ として指定隅に使えば他方でも零である。
+残る薄い単純も直交する。定理\ref{thm:pi-vertex-extension-criterion}と
+系\ref{cor:no-index-three-finite-noetherian-window}がClifford分類を与える。
+逆向きは定理\ref{thm:one-corner-clifford-classification}による。
+\end{proof}

@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 552,
+  "version": 553,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "b3b8b6a585f87b4b6f414c70cf719788181fc26c"
+    "source_commit": "b56ce3ae6174d6bf08efb2e23a38fec740401dfb"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Across all components, finite regular windows satisfying four-matrix identities at every corner are always center-finite composable domains of vertex index two or four. They are recognized by the octic central normalization test (path degree 30, quotient degree 29, Koszul degree 32) and the generic corner degree. The periodic-tail Ext incidence with a fixed thin simple cannot escape to infinity in a size-two character cone with disjoint vertex-extension directions, so all bad size-two orbits are finite up to scale. A regular PI algebra cannot have only finitely many grading orbits of simple modules."
+    "scope": "A finite-edge standard candidate is regular with the identities of three-by-three matrices at one single corner if and only if it is an ordinary Clifford window from a basepoint-free web with finite rank-at-most-two locus. No identity bound at the other three corners and no semiprimeness hypothesis are needed. Two-endpoint matrix compression and the Segre inequalities reduce all mixed simple dimensions to the universal extensions already excluded."
   },
   "checks": [
     {
-      "command": "python computations/verify_four_matrix_all_regular.py",
+      "command": "python computations/verify_single_three_matrix_windows.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Remove the uniform four-corner hypothesis by studying single-corner matrix identities, and determine other finite components and their centers, periods and degenerations."
+    "Analyze regular finite windows with a single four-matrix corner, including mixed dimension vectors, and identify uncovered components beyond polynomial-identity criteria."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 959,
+      "nc-p3": 960,
       "plan_ja": 22,
       "notes_ja": 36
     },
