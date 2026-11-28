@@ -2725,6 +2725,12 @@
       "current_result": "In all reduced finite windows the opposite rank-one curve support has total degree at most six. Degree six requires exactly nineteen marks on three specified reducible types and one outside, with at least three connected components. An irreducible component has degree at most five. The octic has at most one repeated prime factor.",
       "current_proof": "sections/rank_one_curve_degree_bound.tex",
       "global_coverage": false
+    },
+    {
+      "id": "RANK-ONE-TOTAL-FIVE",
+      "current_result": "In every reduced finite window the total reduced degree of the opposite rank-one curve is at most five. All degree-six supports are impossible. The only possible repeated prime determinant factor is a single plane, and every rank-two surface component must therefore be that plane.",
+      "current_proof": "sections/rank_one_total_five.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2782,7 +2788,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 609,
+  "version": 610,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

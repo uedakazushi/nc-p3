@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 609,
+  "version": 610,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "f040a859d29452d7c13cb5c3eb4177566b3a2f0a"
+    "source_commit": "39024a5ebf228a5a60b25a6f0e3dc3c29eb3b661"
   },
   "generation": {
     "result": "PASS",
-    "scope": "In all reduced finite windows the opposite rank-one curve support has total degree at most six. Degree six requires exactly nineteen marks on three specified reducible types and one outside, with at least three connected components. An irreducible component has degree at most five. The octic has at most one repeated prime factor."
+    "scope": "In every reduced finite window the total reduced degree of the opposite rank-one curve is at most five. All degree-six supports are impossible. The only possible repeated prime determinant factor is a single plane, and every rank-two surface component must therefore be that plane."
   },
   "checks": [
     {
-      "command": "python computations/verify_rank_one_curve_degree_bound.py",
+      "command": "python computations/verify_rank_one_total_five.py",
       "result": "PASS"
     },
     {
@@ -36,14 +36,14 @@
     }
   ],
   "open_mathematics": [
-    "Analyze the three disconnected degree-six supports and isolated rank-one marks via the unique rank-two surface; treat integral components of degrees three through five, singular kernel curves, exceptional middles and all-degree AS coverage."
+    "Study total degree five and the remaining rank-two plane when rank one has curves; continue singular kernel curves, exceptional middles and all-degree AS coverage."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1059,
+      "nc-p3": 1060,
       "plan_ja": 24,
-      "notes_ja": 39
+      "notes_ja": 40
     },
     "scope": "LuaLaTeX built the manuscript, plan and research notes."
   },
