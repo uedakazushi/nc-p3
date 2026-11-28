@@ -2791,6 +2791,12 @@
       "current_result": "A rank-two plane cannot contain any rank-one curve in a reduced four-edge finite Frobenius window with a generally invertible opposite root. The bordered quartic excludes reduced determinants, and cubic interpolation excludes nonreduced and identically singular ones.",
       "current_proof": "sections/rank_two_plane_bordered_quartic.tex",
       "global_coverage": false
+    },
+    {
+      "id": "RANK-TWO-SURFACE-EXCESS-CURVES",
+      "current_result": "In every reduced four-edge finite Frobenius window with generally invertible full-rank opposite root, the rank-at-most-two locus has dimension at most one, including all rank-one excess curves.",
+      "current_proof": "sections/rank_two_surface_excess_curves.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2848,7 +2854,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 620,
+  "version": 621,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

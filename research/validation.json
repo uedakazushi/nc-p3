@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 620,
+  "version": 621,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "e0d32c4b9dbd4566d85314e2f2fdc0508a3a3cbe"
+    "source_commit": "90a5abe8f898998bb1e539e6f03094bf5939068c"
   },
   "generation": {
     "result": "PASS",
-    "scope": "A rank-two plane cannot contain any rank-one curve in a reduced four-edge finite Frobenius window with a generally invertible opposite root. The bordered quartic excludes reduced determinants, and cubic interpolation excludes nonreduced and identically singular ones."
+    "scope": "In every reduced four-edge finite Frobenius window with generally invertible full-rank opposite root, the rank-at-most-two locus has dimension at most one, including all rank-one excess curves."
   },
   "checks": [
     {
-      "command": "python computations/verify_rank_two_plane_bordered_quartic.py",
+      "command": "python computations/verify_rank_two_surface_excess_curves.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Resolve rank-two planes disjoint from the generic points of all rank-one curves using the excess loci of the six-row compression. Continue full-window AS coverage and exceptional middles."
+    "Use the curve-only rank-two incidence to constrain determinant factors, kernel images and remaining planar rank-one supports; continue the general all-degree and exceptional-middle cases."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1077,
+      "nc-p3": 1079,
       "plan_ja": 24,
       "notes_ja": 40
     },
