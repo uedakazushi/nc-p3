@@ -2815,6 +2815,12 @@
       "current_result": "The integral nonnormal residual sextic has only finitely many triple points, including its at least thirteen off-plane triple marks. A triple line is excluded by four balanced modifications of the cubic plane fibers, a conic by contraction to a quadric threefold, and a twisted cubic by its secant bundle.",
       "current_proof": "sections/sextic_residual_triple_curves.tex",
       "global_coverage": false
+    },
+    {
+      "id": "RESIDUAL-SEXTIC-CUBIC-TANGENTS",
+      "current_result": "All but at most three off-plane triple marks lie on the nonnormal curve of the residual sextic; its reduced degree is at least four. The tangent cubic Picard groups at all marks participating in quadratic evaluation relations are uniformly multiplicative or uniformly additive. At most three off-plane triple points are ordinary.",
+      "current_proof": "sections/residual_sextic_cubic_tangents.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2872,7 +2878,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 624,
+  "version": 625,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

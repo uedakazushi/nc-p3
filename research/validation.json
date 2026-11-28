@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 624,
+  "version": 625,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "a5e191852574d85a1a07660668c5fc5bc113ca20"
+    "source_commit": "12509d8cf9867b2d8963377ee2c5bff85cd78747"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The integral nonnormal residual sextic has only finitely many triple points, including its at least thirteen off-plane triple marks. A triple line is excluded by four balanced modifications of the cubic plane fibers, a conic by contraction to a quadric threefold, and a twisted cubic by its secant bundle."
+    "scope": "All but at most three off-plane triple marks lie on the nonnormal curve of the residual sextic; its reduced degree is at least four. The tangent cubic Picard groups at all marks participating in quadratic evaluation relations are uniformly multiplicative or uniformly additive. At most three off-plane triple points are ordinary."
   },
   "checks": [
     {
-      "command": "python computations/verify_sextic_residual_triple_curves.py",
+      "command": "python computations/verify_residual_sextic_cubic_tangents.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze the double curves and smooth stationary-contact curves responsible for the forced polar excess at each of the finite triple points; continue general AS certification and unmatched middles."
+    "Study conductor contributions, elliptic eight-point pencils and the two remaining tangent types; continue general AS coverage and exceptional middles."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1083,
+      "nc-p3": 1085,
       "plan_ja": 24,
       "notes_ja": 40
     },
