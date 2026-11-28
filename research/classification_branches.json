@@ -2557,6 +2557,12 @@
       "current_result": "A smooth elliptic quartic cannot be the kernel curve of an integral eight-cofactor opposite octic in any four-edge-finite Frobenius candidate. The branch member gives a nontrivial additive torsor and length at most sixteen. For order four the horizontal elliptic double cover and the vertical line multiplicities bound cubic evaluation by eighteen, contradicting twenty, also for nonreduced windows. An integral eight-cofactor kernel must therefore be nodal or cuspidal.",
       "current_proof": "sections/smooth_elliptic_cofactor_exclusion.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SINGULAR-ELLIPTIC-COFACTOR-PENCIL",
+      "current_result": "All remaining nodal and cuspidal integral eight-cofactor opposite matrices have an explicit quartic pencil, including the compactified boundary Hankel determinant. The quadratic principal entry at the singular kernel point factors into two linear forms and is a square at a nodal order-two member or the cuspidal boundary. Every finite unbranched member has the displayed binary Bezout normal form; the general transform in each type is excluded by nineteen quartic minors.",
+      "current_proof": "sections/singular_elliptic_cofactor_pencil.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2614,7 +2620,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 581,
+  "version": 582,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

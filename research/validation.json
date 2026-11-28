@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 581,
+  "version": 582,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "ee7e77cef4d2bae9da4044ec31ee4955ba581943"
+    "source_commit": "0974a4938f1eec32db7c4659083232771c157dd5"
   },
   "generation": {
     "result": "PASS",
-    "scope": "A smooth elliptic quartic cannot be the kernel curve of an integral eight-cofactor opposite octic in any four-edge-finite Frobenius candidate. The branch member gives a nontrivial additive torsor and length at most sixteen. For order four the horizontal elliptic double cover and the vertical line multiplicities bound cubic evaluation by eighteen, contradicting twenty, also for nonreduced windows. An integral eight-cofactor kernel must therefore be nodal or cuspidal."
+    "scope": "All remaining nodal and cuspidal integral eight-cofactor opposite matrices have an explicit quartic pencil, including the compactified boundary Hankel determinant. The quadratic principal entry at the singular kernel point factors into two linear forms and is a square at a nodal order-two member or the cuspidal boundary. Every finite unbranched member has the displayed binary Bezout normal form; the general transform in each type is excluded by nineteen quartic minors."
   },
   "checks": [
     {
-      "command": "python computations/verify_elliptic_branch_member.py",
+      "command": "python computations/verify_singular_elliptic_cofactor_pencil.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Treat nodal and cuspidal elliptic kernel curves, then higher cofactor spans, reducible octics, and the general finite-window AS/coverage problem."
+    "Exclude or classify the exceptional nodal and cuspidal residual pencils, including conductor and boundary points, and continue higher-cofactor and reducible-octic branches."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1013,
+      "nc-p3": 1015,
       "plan_ja": 23,
       "notes_ja": 38
     },

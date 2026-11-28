@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-28",
-  "version": 581,
+  "version": 582,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -5699,6 +5699,15 @@
       "verification": [
         "computations/verify_elliptic_branch_member.py"
       ]
+    },
+    {
+      "id": "SINGULAR-ELLIPTIC-COFACTOR-PENCIL",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "All remaining nodal and cuspidal integral eight-cofactor opposite matrices have an explicit quartic pencil, including the compactified boundary Hankel determinant. The quadratic principal entry at the singular kernel point factors into two linear forms and is a square at a nodal order-two member or the cuspidal boundary. Every finite unbranched member has the displayed binary Bezout normal form; the general transform in each type is excluded by nineteen quartic minors.",
+      "proof": "sections/singular_elliptic_cofactor_pencil.tex",
+      "verification": [
+        "computations/verify_singular_elliptic_cofactor_pencil.py"
+      ]
     }
   ],
   "document_paths": {
@@ -5762,7 +5771,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "ee7e77cef4d2bae9da4044ec31ee4955ba581943",
+  "reviewed_source_commit": "0974a4938f1eec32db7c4659083232771c157dd5",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -5771,14 +5780,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Treat nodal and cuspidal elliptic kernel curves, then higher cofactor spans, reducible octics, and the general finite-window AS/coverage problem.",
+    "immediate_next_action": "Exclude or classify the exceptional nodal and cuspidal residual pencils, including conductor and boundary points, and continue higher-cofactor and reducible-octic branches.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/smooth_elliptic_cofactor_exclusion.tex",
-      "sections/elliptic_bezout_torsion.tex"
+      "sections/singular_elliptic_cofactor_pencil.tex",
+      "sections/smooth_elliptic_cofactor_exclusion.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "A smooth elliptic quartic cannot be the kernel curve of an integral eight-cofactor opposite octic in any four-edge-finite Frobenius candidate. The branch member gives a nontrivial additive torsor and length at most sixteen. For order four the horizontal elliptic double cover and the vertical line multiplicities bound cubic evaluation by eighteen, contradicting twenty, also for nonreduced windows. An integral eight-cofactor kernel must therefore be nodal or cuspidal. Full classification remains open.",
+    "state_of_claim": "All remaining nodal and cuspidal integral eight-cofactor opposite matrices have an explicit quartic pencil, including the compactified boundary Hankel determinant. The quadratic principal entry at the singular kernel point factors into two linear forms and is a square at a nodal order-two member or the cuspidal boundary. Every finite unbranched member has the displayed binary Bezout normal form; the general transform in each type is excluded by nineteen quartic minors. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
