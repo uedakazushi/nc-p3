@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 597,
+  "version": 598,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "6ee348126f789a5e937a7df6b4b476ac2fa7aebf"
+    "source_commit": "08cdd9811f2be64c43aa034b405b16ff1205910b"
   },
   "generation": {
     "result": "PASS",
-    "scope": "If all clean reduced opposite-octic factors have degree at most four then the only possible splitting is an irreducible quartic with sixteen marked double points plus the four faces of a tetrahedron, with four further marks at its vertices. In particular two irreducible quartics cannot occur."
+    "scope": "A clean opposite octic on a reduced window has an irreducible factor of degree at least five. The putative tetrahedral quartic has four polar cubics as its complete kernel coordinates, forcing a projective identification on sixteen marks; at most fourteen identifications are possible."
   },
   "checks": [
     {
-      "command": "python computations/verify_quartic_octic_splitting.py",
+      "command": "python computations/verify_tetrahedral_quartic_exclusion.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Resolve the surviving sixteen-double-point quartic and tetrahedron, and the large-degree splittings. Continue exceptional finite middles and global AS coverage."
+    "Determine degree-five, six and seven factors by their marked triple points, and continue the other finite and general AS branches."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1039,
+      "nc-p3": 1040,
       "plan_ja": 24,
       "notes_ja": 39
     },

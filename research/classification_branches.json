@@ -2653,6 +2653,12 @@
       "current_result": "If all clean reduced opposite-octic factors have degree at most four then the only possible splitting is an irreducible quartic with sixteen marked double points plus the four faces of a tetrahedron, with four further marks at its vertices. In particular two irreducible quartics cannot occur.",
       "current_proof": "sections/quartic_octic_splitting.tex",
       "global_coverage": false
+    },
+    {
+      "id": "EXCLUDE-TETRAHEDRAL-QUARTIC",
+      "current_result": "A clean opposite octic on a reduced window has an irreducible factor of degree at least five. The putative tetrahedral quartic has four polar cubics as its complete kernel coordinates, forcing a projective identification on sixteen marks; at most fourteen identifications are possible.",
+      "current_proof": "sections/exclude_tetrahedral_quartic.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2710,7 +2716,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 597,
+  "version": 598,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
