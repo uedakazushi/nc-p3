@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 663,
+  "version": 664,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "a477774c3db2333aed6b06bc127b1e582ee8a107"
+    "source_commit": "217f3b6e402178954d36dd173e28017af6c337be"
   },
   "generation": {
     "result": "PASS",
-    "scope": "At full cofactor scheme degree nineteen, the only remaining kernels are birational quadrics with inverse system 2L+F and a length-four local complete intersection base scheme. The rank-one locus must contain a line, a smooth conic or two incident lines. These conclusions allow arbitrary cofactor thickenings and components."
+    "scope": "Scheme degree nineteen is impossible for the cofactor curve of any integral opposite octic in a reduced four-finite regular window, including reducible or thick excess. The finite Stein algebra would force a cubic surface through at least eighteen marks, singular at six of them, contradicting the point bounds for all cubic surface types. Thus the full degree is at most eighteen."
   },
   "checks": [
     {
-      "command": "python computations/verify_sectional_nineteen_model.py",
+      "command": "python computations/verify_sectional_nineteen_stein_cubics.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze positive triple fibers on the two quadric models via their finite Stein algebra, its quadratic relations and the independent cubic evaluations of the marked points."
+    "Resolve full scheme degree eighteen, separating sectional kernel degrees five and six using the trace defect, sectional endomorphism curve and finite algebra presentations."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1152,
+      "nc-p3": 1154,
       "plan_ja": 26,
       "notes_ja": 42
     },

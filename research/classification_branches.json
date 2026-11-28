@@ -3049,6 +3049,12 @@
       "current_result": "At full cofactor scheme degree nineteen, the only remaining kernels are birational quadrics with inverse system 2L+F and a length-four local complete intersection base scheme. The rank-one locus must contain a line, a smooth conic or two incident lines. These conclusions allow arbitrary cofactor thickenings and components.",
       "current_proof": "sections/sectional_nineteen_model.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SECTIONAL-NINETEEN-STEIN-CUBICS",
+      "current_result": "Scheme degree nineteen is impossible for the cofactor curve of any integral opposite octic in a reduced four-finite regular window, including reducible or thick excess. The finite Stein algebra would force a cubic surface through at least eighteen marks, singular at six of them, contradicting the point bounds for all cubic surface types. Thus the full degree is at most eighteen.",
+      "current_proof": "sections/sectional_nineteen_stein_cubics.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -3106,7 +3112,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 663,
+  "version": 664,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
