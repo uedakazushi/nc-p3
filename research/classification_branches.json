@@ -2563,6 +2563,12 @@
       "current_result": "All remaining nodal and cuspidal integral eight-cofactor opposite matrices have an explicit quartic pencil, including the compactified boundary Hankel determinant. The quadratic principal entry at the singular kernel point factors into two linear forms and is a square at a nodal order-two member or the cuspidal boundary. Every finite unbranched member has the displayed binary Bezout normal form; the general transform in each type is excluded by nineteen quartic minors.",
       "current_proof": "sections/singular_elliptic_cofactor_pencil.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SINGULAR-RESIDUAL-PENCILS",
+      "current_result": "For every reduced finite Frobenius window an integral eight-cofactor nodal or cuspidal kernel cannot have a finite unbranched pencil member. The normalization incidence covers even proportional conductor points. Removing constant eigenlines bounds every finite residual pencil by explicit Chern lengths, and distinct eigenlines cannot both have degree one. The reduced nodal cases left are order two and boundary, and the reduced cusp case left is boundary.",
+      "current_proof": "sections/singular_residual_pencils.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2620,7 +2626,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 582,
+  "version": 583,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

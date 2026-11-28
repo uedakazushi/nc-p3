@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 582,
+  "version": 583,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "0974a4938f1eec32db7c4659083232771c157dd5"
+    "source_commit": "fe1456c264a79e52e792b09dd11be1f0e2c77c1d"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All remaining nodal and cuspidal integral eight-cofactor opposite matrices have an explicit quartic pencil, including the compactified boundary Hankel determinant. The quadratic principal entry at the singular kernel point factors into two linear forms and is a square at a nodal order-two member or the cuspidal boundary. Every finite unbranched member has the displayed binary Bezout normal form; the general transform in each type is excluded by nineteen quartic minors."
+    "scope": "For every reduced finite Frobenius window an integral eight-cofactor nodal or cuspidal kernel cannot have a finite unbranched pencil member. The normalization incidence covers even proportional conductor points. Removing constant eigenlines bounds every finite residual pencil by explicit Chern lengths, and distinct eigenlines cannot both have degree one. The reduced nodal cases left are order two and boundary, and the reduced cusp case left is boundary."
   },
   "checks": [
     {
-      "command": "python computations/verify_singular_elliptic_cofactor_pencil.py",
+      "command": "python computations/verify_singular_residual_pencils.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Exclude or classify the exceptional nodal and cuspidal residual pencils, including conductor and boundary points, and continue higher-cofactor and reducible-octic branches."
+    "Resolve the singular boundary Hankel and nodal order-two members, and extend residual estimates to nonreduced conductor fibers. Continue higher-cofactor, reducible-octic and general-window coverage."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1015,
+      "nc-p3": 1016,
       "plan_ja": 23,
       "notes_ja": 38
     },
