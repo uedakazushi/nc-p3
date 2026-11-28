@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 656,
+  "version": 657,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "527c559a8709c322fd0d8efbfff3d4883fecd084"
+    "source_commit": "c071278dd7118910e5ed7bf25985db982d01dd65"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Degree 20 is excluded for every reduced finite standard regular window with integral generically reduced cofactor excess. All neighbors are binary Hankel edges. Distinct Hankel structures force the forbidden standard trisecant window; equal structures force the forbidden cubic-quintic fold. Only degree 21 survives in the integral-curve branch."
+    "scope": "No reduced four-finite standard regular window has an entire positive-dimensional cofactor locus which is an integral generically reduced curve. Degree 21 is excluded for arbitrary neighbors: their pulled-back rank-two bundles have a six-section quotient of class 5F or H-2F, giving the standard trisecant edge or simultaneous Hankel forms; both force the simple-module obstruction."
   },
   "checks": [
     {
-      "command": "python computations/verify_degree_twenty_hankel_pairs.py",
+      "command": "python computations/verify_bezout_scroll_neighbors.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Classify all finite determinantal formats on the degree-21 Bezout marks, starting with their quartic Veronese restriction to the secant plane sextic, and handle remaining nonintegral or thick excess."
+    "Move to the reducible or generically nonreduced cofactor curves, finite-excess windows and the remaining nonfinite windows, without imposing integrality or ordinary-singularity hypotheses."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1141,
+      "nc-p3": 1143,
       "plan_ja": 26,
       "notes_ja": 42
     },

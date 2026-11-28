@@ -3007,6 +3007,12 @@
       "current_result": "Degree 20 is excluded for every reduced finite standard regular window with integral generically reduced cofactor excess. All neighbors are binary Hankel edges. Distinct Hankel structures force the forbidden standard trisecant window; equal structures force the forbidden cubic-quintic fold. Only degree 21 survives in the integral-curve branch.",
       "current_proof": "sections/degree_twenty_hankel_pairs.tex",
       "global_coverage": false
+    },
+    {
+      "id": "EXCLUDE-INTEGRAL-COFACTOR-CURVES",
+      "current_result": "No reduced four-finite standard regular window has an entire positive-dimensional cofactor locus which is an integral generically reduced curve. Degree 21 is excluded for arbitrary neighbors: their pulled-back rank-two bundles have a six-section quotient of class 5F or H-2F, giving the standard trisecant edge or simultaneous Hankel forms; both force the simple-module obstruction.",
+      "current_proof": "sections/bezout_scroll_neighbors.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -3064,7 +3070,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 656,
+  "version": 657,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
