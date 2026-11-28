@@ -2773,6 +2773,12 @@
       "current_result": "The entire reduced rank-one curve support in every reduced finite window has degree at most three. This excludes all connected quartic and quintic unions and the disconnected degree-four and degree-five arrangements as well. At most degree two lies in any one plane.",
       "current_proof": "sections/rank_one_low_degree_arrangements.tex",
       "global_coverage": false
+    },
+    {
+      "id": "RANK-ONE-CUBIC-ARRANGEMENT-EXCLUSION",
+      "current_result": "For reduced four-edge finite Frobenius windows with generally invertible full-rank opposite root, the reduced rank-one curve support has total degree at most two.",
+      "current_proof": "sections/rank_one_cubic_arrangement_exclusion.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2830,7 +2836,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 617,
+  "version": 618,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
