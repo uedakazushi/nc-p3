@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-28",
-  "version": 546,
+  "version": 547,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -5384,6 +5384,15 @@
       "verification": [
         "computations/verify_main_domain_quartic_parameters.py"
       ]
+    },
+    {
+      "id": "PI-YONEDA-INJECTIVITY-AND-SEMIPRIME-THREE-MATRIX-CLASSIFICATION",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "On any regular finite-edge window with all corners satisfying the identities of four-by-four matrices, every balanced size-two or size-three simple has vertex Ext1 on at most one side. The only still possible mixed nonvertex profile under this bound is a rotation of (2,2,2,3). On every component the semiprime three-matrix-identity regular windows are exactly ordinary Clifford windows. The proof uses injectivity of Yoneda products through any family of PI-forbidden three-block chains and a bridge along a shortest vertex segment.",
+      "proof": "sections/pi_yoneda_bridges.tex",
+      "verification": [
+        "computations/verify_pi_yoneda_bridges.py"
+      ]
     }
   ],
   "document_paths": {
@@ -5447,7 +5456,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "7c7e641134daa40f561712c8efa996e98c84fb2c",
+  "reviewed_source_commit": "4139fb45212cddee51c32a2dcb796c0bc8ea386b",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -5456,14 +5465,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Decide the realizability and specialization of remaining polarized-center marks, transfer degree integrality to other components, and handle possible non-domain regular windows.",
+    "immediate_next_action": "Eliminate the remaining mixed (2,2,2,3) profile and analyze nilpotent PI extensions using the one-sided Ext criterion, as well as finite high-rank components.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/main_domain_quartic_parameters.tex",
-      "sections/singular_quadric_common_vertex.tex"
+      "sections/pi_yoneda_bridges.tex",
+      "sections/simple_linear_completion_growth.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "Every regular domain finite-edge window on the entire fifteen-dimensional closure has four quartic central parameters, including every exceptional value. Its center is a quartic hypersurface or a quadric double cover and the polarized center with Kummer mark classifies its indexed isomorphism type among realized centers. The all-degree domain recognition needs paths through 14, quotient through 13 and Koszul through 16. The proof excludes all basepointed images via integral curve degrees and a lower bound two for the H-squared degree of moving surfaces. Full classification remains open.",
+    "state_of_claim": "On any regular finite-edge window with all corners satisfying the identities of four-by-four matrices, every balanced size-two or size-three simple has vertex Ext1 on at most one side. The only still possible mixed nonvertex profile under this bound is a rotation of (2,2,2,3). On every component the semiprime three-matrix-identity regular windows are exactly ordinary Clifford windows. The proof uses injectivity of Yoneda products through any family of PI-forbidden three-block chains and a bridge along a shortest vertex segment. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

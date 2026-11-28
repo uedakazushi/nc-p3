@@ -2347,6 +2347,12 @@
       "current_result": "Every regular domain finite-edge window on the entire fifteen-dimensional closure has four quartic central parameters, including every exceptional value. Its center is a quartic hypersurface or a quadric double cover and the polarized center with Kummer mark classifies its indexed isomorphism type among realized centers. The all-degree domain recognition needs paths through 14, quotient through 13 and Koszul through 16. The proof excludes all basepointed images via integral curve degrees and a lower bound two for the H-squared degree of moving surfaces.",
       "current_proof": "sections/main_domain_quartic_parameters.tex",
       "global_coverage": false
+    },
+    {
+      "id": "PI-YONEDA-INJECTIVITY-AND-SEMIPRIME-THREE-MATRIX-CLASSIFICATION",
+      "current_result": "On any regular finite-edge window with all corners satisfying the identities of four-by-four matrices, every balanced size-two or size-three simple has vertex Ext1 on at most one side. The only still possible mixed nonvertex profile under this bound is a rotation of (2,2,2,3). On every component the semiprime three-matrix-identity regular windows are exactly ordinary Clifford windows. The proof uses injectivity of Yoneda products through any family of PI-forbidden three-block chains and a bridge along a shortest vertex segment.",
+      "current_proof": "sections/pi_yoneda_bridges.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2404,7 +2410,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 546,
+  "version": 547,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

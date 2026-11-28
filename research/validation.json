@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 546,
+  "version": 547,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "7c7e641134daa40f561712c8efa996e98c84fb2c"
+    "source_commit": "4139fb45212cddee51c32a2dcb796c0bc8ea386b"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every regular domain finite-edge window on the entire fifteen-dimensional closure has four quartic central parameters, including every exceptional value. Its center is a quartic hypersurface or a quadric double cover and the polarized center with Kummer mark classifies its indexed isomorphism type among realized centers. The all-degree domain recognition needs paths through 14, quotient through 13 and Koszul through 16. The proof excludes all basepointed images via integral curve degrees and a lower bound two for the H-squared degree of moving surfaces."
+    "scope": "On any regular finite-edge window with all corners satisfying the identities of four-by-four matrices, every balanced size-two or size-three simple has vertex Ext1 on at most one side. The only still possible mixed nonvertex profile under this bound is a rotation of (2,2,2,3). On every component the semiprime three-matrix-identity regular windows are exactly ordinary Clifford windows. The proof uses injectivity of Yoneda products through any family of PI-forbidden three-block chains and a bridge along a shortest vertex segment."
   },
   "checks": [
     {
-      "command": "python computations/verify_main_domain_quartic_parameters.py",
+      "command": "python computations/verify_pi_yoneda_bridges.py",
       "result": "PASS"
     },
     {
@@ -40,12 +40,12 @@
     }
   ],
   "open_mathematics": [
-    "Decide the realizability and specialization of remaining polarized-center marks, transfer degree integrality to other components, and handle possible non-domain regular windows."
+    "Eliminate the remaining mixed (2,2,2,3) profile and analyze nilpotent PI extensions using the one-sided Ext criterion, as well as finite high-rank components."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 949,
+      "nc-p3": 951,
       "plan_ja": 22,
       "notes_ja": 36
     },
