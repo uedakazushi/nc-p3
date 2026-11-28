@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-28",
-  "version": 665,
+  "version": 666,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -6455,6 +6455,15 @@
       "verification": [
         "computations/verify_sectional_trace_defect_one.py"
       ]
+    },
+    {
+      "id": "FOURFOLD-FIXED-RULING",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "Full cofactor scheme degree eighteen forces sectional kernel degree six. In the degree-five curve case the length-four trace divisor has a single input ruling; in both possible splitting cases a degree-four binary determinant bounds isolated triple fibers outside that ruling, contradicting the eleven required marks.",
+      "proof": "sections/fourfold_fixed_ruling.tex",
+      "verification": [
+        "computations/verify_fourfold_fixed_ruling.py"
+      ]
     }
   ],
   "document_paths": {
@@ -6518,7 +6527,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "030dd35c7c95d6ec4c966fa381385c6c04e0b5fc",
+  "reviewed_source_commit": "f7e9b1009c01236bbceca5f46ae4fa7f7bcbd9c1",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -6527,14 +6536,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Use the constant trace divisor on a rational quintic kernel to resolve the moving input line and exclude or classify the remaining rank-two ruling quotient.",
+    "immediate_next_action": "Resolve degree eighteen with sectional kernel degree six, beginning with the descent and simultaneous smoothing of the genus-three ruling and then the quadric, cubic and quartic surface models.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/sectional_trace_defect_one.tex",
-      "sections/sectional_nineteen_stein_cubics.tex"
+      "sections/fourfold_fixed_ruling.tex",
+      "sections/sectional_trace_defect_one.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "At scheme degree eighteen and sectional kernel degree five, the sectional normalization must be rational. The endomorphism curve has a unique nonnormal point with colength three; its normalization fiber is a collinear length-four scheme in kernel space supported over a single input point. All surface kernels are excluded. Full classification remains open.",
+    "state_of_claim": "Full cofactor scheme degree eighteen forces sectional kernel degree six. In the degree-five curve case the length-four trace divisor has a single input ruling; in both possible splitting cases a degree-four binary determinant bounds isolated triple fibers outside that ruling, contradicting the eleven required marks. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

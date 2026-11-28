@@ -3061,6 +3061,12 @@
       "current_result": "At scheme degree eighteen and sectional kernel degree five, the sectional normalization must be rational. The endomorphism curve has a unique nonnormal point with colength three; its normalization fiber is a collinear length-four scheme in kernel space supported over a single input point. All surface kernels are excluded.",
       "current_proof": "sections/sectional_trace_defect_one.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FOURFOLD-FIXED-RULING",
+      "current_result": "Full cofactor scheme degree eighteen forces sectional kernel degree six. In the degree-five curve case the length-four trace divisor has a single input ruling; in both possible splitting cases a degree-four binary determinant bounds isolated triple fibers outside that ruling, contradicting the eleven required marks.",
+      "current_proof": "sections/fourfold_fixed_ruling.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -3118,7 +3124,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 665,
+  "version": 666,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

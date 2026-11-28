@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 665,
+  "version": 666,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "030dd35c7c95d6ec4c966fa381385c6c04e0b5fc"
+    "source_commit": "f7e9b1009c01236bbceca5f46ae4fa7f7bcbd9c1"
   },
   "generation": {
     "result": "PASS",
-    "scope": "At scheme degree eighteen and sectional kernel degree five, the sectional normalization must be rational. The endomorphism curve has a unique nonnormal point with colength three; its normalization fiber is a collinear length-four scheme in kernel space supported over a single input point. All surface kernels are excluded."
+    "scope": "Full cofactor scheme degree eighteen forces sectional kernel degree six. In the degree-five curve case the length-four trace divisor has a single input ruling; in both possible splitting cases a degree-four binary determinant bounds isolated triple fibers outside that ruling, contradicting the eleven required marks."
   },
   "checks": [
     {
-      "command": "python computations/verify_sectional_trace_defect_one.py",
+      "command": "python computations/verify_fourfold_fixed_ruling.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Use the constant trace divisor on a rational quintic kernel to resolve the moving input line and exclude or classify the remaining rank-two ruling quotient."
+    "Resolve degree eighteen with sectional kernel degree six, beginning with the descent and simultaneous smoothing of the genus-three ruling and then the quadric, cubic and quartic surface models."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1154,
+      "nc-p3": 1156,
       "plan_ja": 26,
       "notes_ja": 42
     },
