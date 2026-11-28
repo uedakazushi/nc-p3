@@ -2989,6 +2989,12 @@
       "current_result": "Nonidentity opposite roots are infinitesimally rigid for all integral generically reduced cofactor curves, and also for finite cofactor support. Linearized adjugates force the conductor action and rigidity of the normalization line bundle; in finite support the constant double-point resolution controls the Veronese stabilizer.",
       "current_proof": "sections/conductor_root_tangents.tex",
       "global_coverage": false
+    },
+    {
+      "id": "MIDDLE-CONDUCTOR-RESOLUTION",
+      "current_result": "Even for reducible or multiple middle secants the resultant is an integral octic. Its full conductor is the degree-21 genus-50 Hilbert--Burch scheme of binary subresultants. Six linear syzygies exclude finite forward roots; the nonzero cone tangent excludes finite and classified integral reverse roots.",
+      "current_proof": "sections/middle_conductor_resolution.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -3046,7 +3052,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 653,
+  "version": 654,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
