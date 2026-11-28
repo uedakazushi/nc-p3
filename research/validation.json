@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 611,
+  "version": 612,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "ab67282e15fbb3ad653da45c5db371a6fc1ec0b2"
+    "source_commit": "95f81de7a61574f1bcf12518dcc2f0d24cfe7501"
   },
   "generation": {
     "result": "PASS",
-    "scope": "A smooth genus-two quintic cannot be a rank-one curve in a reduced finite window. Isotropic square-evaluation relations transfer the degree-four secant pencils; the remaining single- and double-intersection directions force an impossible pairing of seven outside marks."
+    "scope": "Every smooth integral quintic is excluded from the opposite rank-one locus in reduced finite windows. Elliptic projected models with nontrivial two-torsion have at most three common off-curve points, while six are required. Rational normalization is also excluded away from quadrics."
   },
   "checks": [
     {
-      "command": "python computations/verify_rank_one_genus_two_quintic.py",
+      "command": "python computations/verify_rank_one_projected_quintics.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Treat smooth elliptic and rational quintics and singular degree-five curves, then lower degrees, exceptional middles and all-degree AS coverage."
+    "Extend the arithmetic-genus-two secant argument across singular base points; then treat reducible total degree five, lower degrees and the global AS and isomorphism obligations."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1062,
+      "nc-p3": 1063,
       "plan_ja": 24,
       "notes_ja": 40
     },
