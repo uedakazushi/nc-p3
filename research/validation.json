@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 569,
+  "version": 570,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "7a41daeedffcf0f6a979512fa0009ac5ac2c4ac6"
+    "source_commit": "7280a341de275fd5fdb3527166a96cadb212e177"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every finite-dimensional simple with a vertex of dimension four on a regular finite window has dimension four at every vertex, without PI assumptions. Improved five-dimensional restriction ranks, simultaneous middle vertices avoiding a corner, and the rank-two middle product bound at dimension six give a finite dimension-profile proof. Five-matrix identities at only one designated corner now imply the full degree-32 criterion and index two or four."
+    "scope": "For every center-finite regular window, compressed scaling is faithful, its stabilizer orders away from the origin divide the vertex division index s, and all corner Veronese rings retain the same division degree. The fixed-stratum valuation inequality excludes every odd prime square index on finite edges. A uniform polynomial path cutoff 64u^4 decides regular Noetherian windows of bounded vertex index u on all components."
   },
   "checks": [
     {
-      "command": "python computations/verify_single_five_matrix_corner.py",
+      "command": "python computations/verify_central_stabilizer_strata.py",
       "result": "PASS"
     },
     {
@@ -36,13 +36,13 @@
     }
   ],
   "open_mathematics": [
-    "Analyze the first unbalanced dimension profiles with minimum at least five, larger composite PI indices, and general regular finite or nonfinite windows outside the known components."
+    "Investigate divisorial stabilizers at larger prime powers and use finite-edge geometry and simple dimension profiles to extend the classification beyond the bounded-index loci."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 986,
-      "plan_ja": 22,
+      "nc-p3": 988,
+      "plan_ja": 23,
       "notes_ja": 37
     },
     "scope": "LuaLaTeX built the manuscript, plan and research notes."
