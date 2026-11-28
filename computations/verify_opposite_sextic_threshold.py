@@ -58,6 +58,10 @@ def generic_edge():
         blocks.append(projection @ partial % P)
     assert len(reduced(np.vstack(blocks))[1]) == 80
 
+    assert alternation_rank(relations) == 24
+
+
+def alternation_rank(relations):
     pairs = monomials(2)
     wedge = [pair for pair in pairs if pair[0] < pair[1]]
     matrix = sp.zeros(24)
@@ -69,7 +73,7 @@ def generic_edge():
                         matrix[4*row+j, 4*k+i] += relations[4*a+j, k]
                     if i == a:
                         matrix[4*row+j, 4*k+i] -= relations[4*b+j, k]
-    assert len(reduced(coefficients_to_field(matrix))[1]) == 24
+    return len(reduced(coefficients_to_field(matrix))[1])
 
 
 def main():
