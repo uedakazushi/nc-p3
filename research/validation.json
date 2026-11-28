@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 650,
+  "version": 651,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "c20e99d64a341e52913dc3b3dba146ea583be488"
+    "source_commit": "f49f2a4e89f7cb4e6465fa58b54c49a1039a3471"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Both remaining integral generically reduced cofactor-curve models have exactly one nonidentity marked opposite root, including every exceptional parameter. In degree 21 the secant plane sextic, even singular, carries the pulled-back marked divisor of degree 60. The conductor then recovers the octic and its unique normalization module."
+    "scope": "For every actual degree-20 cone projection the canonical cubic middle edge is finite and reduced; the cone vertex cannot be a length-three mark. The folded canonical middle is excluded at every opposite rank by Pluecker secants and the fixed rank-six tangent, including exceptional parameters."
   },
   "checks": [
     {
-      "command": "python computations/verify_integral_conductor_identifiability.py",
+      "command": "python computations/verify_cone_fold_plucker.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Use opposite identifiability on residual middle extensions, including reducible secant schemes and the nonintegral cofactor branches."
+    "Determine when the canonical cone cubic has another square root, and handle residual smooth and degree-21 middle extensions and nonintegral cofactor curves."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1131,
+      "nc-p3": 1133,
       "plan_ja": 25,
       "notes_ja": 42
     },
