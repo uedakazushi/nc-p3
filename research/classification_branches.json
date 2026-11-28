@@ -2881,6 +2881,12 @@
       "current_result": "On a certified nonempty dense open of the smooth quadric projection parameter space, the marked opposite pair has no regular finite four-edge extension for any choice of middles. A twenty-one-degree nodal double curve with a unique determinant octic intrinsically reconstructs its nonidentity root via the unique ruling and its normalization module.",
       "current_proof": "sections/quadric_ruling_identifiability.tex",
       "global_coverage": false
+    },
+    {
+      "id": "COFACTOR-CURVE-KERNEL-ONLY-BEZOUT",
+      "current_result": "In the integral generically reduced cofactor case, curve kernel image occurs only for degree 21 and the seven-cofactor Bezout model. Degrees 18, 19 and 20 force surface image. The proof descends rulings to a partial normalization and smooths its marked triple fibers, including the singular canonical genus-four sextic.",
+      "current_proof": "sections/cofactor_singular_kernel_descent.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2938,7 +2944,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 635,
+  "version": 636,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
