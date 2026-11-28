@@ -2491,6 +2491,12 @@
       "current_result": "For every center-finite regular window, compressed scaling is faithful, its stabilizer orders away from the origin divide the vertex division index s, and all corner Veronese rings retain the same division degree. The fixed-stratum valuation inequality excludes every odd prime square index on finite edges. A uniform polynomial path cutoff 64u^4 decides regular Noetherian windows of bounded vertex index u on all components.",
       "current_proof": "sections/central_stabilizer_strata.tex",
       "global_coverage": false
+    },
+    {
+      "id": "NONSQUARE-OPPOSITE-DISCRIMINANT",
+      "current_result": "For every finite Frobenius configuration, even nonreduced, a distinct singular opposite quadratic matrix always has adjugate the symmetric square of four independent cubics. All nonsquare quadratic adjugate factors are impossible, including two planes and the singular vertex of a rank-three cone. The proof bounds local kernel sections on branched covers and eliminates the constant-kernel quadratic contact by its ternary block.",
+      "current_proof": "sections/nonsquare_opposite_discriminant.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2548,7 +2554,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 570,
+  "version": 571,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
