@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 562,
+  "version": 563,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "6b5d085b900ffd627692fa18775a2940742cf7b6"
+    "source_commit": "7b1ec30fc2beddccac31aced9c03382c07738d6d"
   },
   "generation": {
     "result": "PASS",
-    "scope": "On any finite Frobenius graph, including nonreduced ones, a full square-root matrix cannot have generic rank two. Split rank two would place length twenty in a doubled fixed-eigenline scheme, whose maximum possible length is eighteen under the finite graph section bounds. Thus a root of finite submaximal locus is the unique distinct full opposite root on every such graph and is unramified when cubic evaluation is an isomorphism."
+    "scope": "On every finite Frobenius window, reduced or not, a distinct actual opposite coordinate requires at least five sextics through the doubled projection. If the eighty conditions are independent the flip is forced and regular extension has a finite unique-candidate test. A general six-plane of bilinear relations has no standard regular extension, since finiteness of a single edge propagates in every standard regular window."
   },
   "checks": [
     {
-      "command": "python computations/verify_nonreduced_opposite_root_separation.py",
+      "command": "python computations/verify_opposite_sextic_threshold.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze the remaining nonreduced identically singular rank-three presentations and nonfinite submaximal loci, and determine global extension regularity."
+    "Determine the extension locus where the eighty double sextic conditions are dependent, and recover all regular windows and degenerations beyond the clean opposite-root locus."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 975,
+      "nc-p3": 977,
       "plan_ja": 22,
       "notes_ja": 37
     },

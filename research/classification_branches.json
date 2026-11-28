@@ -2443,6 +2443,12 @@
       "current_result": "On any finite Frobenius graph, including nonreduced ones, a full square-root matrix cannot have generic rank two. Split rank two would place length twenty in a doubled fixed-eigenline scheme, whose maximum possible length is eighteen under the finite graph section bounds. Thus a root of finite submaximal locus is the unique distinct full opposite root on every such graph and is unramified when cubic evaluation is an isomorphism.",
       "current_proof": "sections/nonreduced_opposite_root_separation.tex",
       "global_coverage": false
+    },
+    {
+      "id": "OPPOSITE-SEXTIC-THRESHOLD",
+      "current_result": "On every finite Frobenius window, reduced or not, a distinct actual opposite coordinate requires at least five sextics through the doubled projection. If the eighty conditions are independent the flip is forced and regular extension has a finite unique-candidate test. A general six-plane of bilinear relations has no standard regular extension, since finiteness of a single edge propagates in every standard regular window.",
+      "current_proof": "sections/opposite_sextic_threshold.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2500,7 +2506,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 562,
+  "version": 563,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
