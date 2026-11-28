@@ -3031,6 +3031,12 @@
       "current_result": "For every integral opposite octic in a reduced four-finite regular window the sectional kernel degree is at least five. The rank-weighted cofactor curve degree satisfies d+2j<=19, including arbitrary multiple or reducible support. The trace sections exclude a smooth rational quartic kernel even with positive-dimensional rank-one fibers.",
       "current_proof": "sections/sectional_cofactor_budget.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SECTIONAL-COFACTOR-LENGTH",
+      "current_result": "The full scheme degree d of the cofactors of an integral opposite octic in a reduced four-finite regular window is at most 24-HL, hence at most nineteen. The sectional endomorphism curve has arithmetic genus 21-d. At d=19 the sectional cokernel descends to a very ample degree-five line bundle embedding a Gorenstein genus-two curve on a unique quadric.",
+      "current_proof": "sections/sectional_cofactor_length.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -3088,7 +3094,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 660,
+  "version": 661,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

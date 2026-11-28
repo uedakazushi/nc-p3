@@ -1,0 +1,71 @@
+% !TeX root = ../papers/nc-p3.tex
+\section{横断余因子スキームの長さと自己準同型環}
+\label{sec:sectional-cofactor-length}
+\begin{theorem}\label{thm:sectional-cofactor-length}
+定理\ref{thm:sectional-cofactor-budget}の整八次を一般平面で切った整曲線を $E$、
+その正規化を $B$、種数を $g$ とする。$M$ を対称四行二次表示の平面制限の余核、
+$I$ を三行小行列式の $E$ 上のイデアルとする。$d=\operatorname{length}(\mathcal O_E/I)$ は
+重複度込みの余因子曲線の総次数であり、$\ell=HL$ は正規化上の核座標の次数である。
+$T=\mathcal End_E(M)$ とおくと $G=\operatorname{Spec}_E T$ は整な有限双有理曲線で
+\[
+  p_a(G)=21-d,\qquad d\le24-\ell\le19,\qquad g\le\ell-3.
+\]
+各点で正規化環を $V$、平面曲線の局所環を $A$ とし、分数イデアル表示を
+$A\subset M\subset V$, $MV=V$ と取れば、二つの差は正確に
+\[
+  24-\ell-d=\sum_x\operatorname{length}(M_x/T_x),\qquad
+  \ell-3-g=\sum_x\operatorname{length}(V_x/M_x)
+\]
+である。$d=24-\ell$ なら $M$ は $G$ 上の可逆層 $P$ の押出しで、
+$\omega_G=P^{\otimes2}(-H)$、$\deg P=\ell$、$h^0(G,P)=4$。
+特に $d=19$ なら $G$ は核座標により $\mathbb P^3$ に閉埋込みされる
+算術種数二の五次曲線で、ただ一つの二次曲面上にある。
+\end{theorem}
+\begin{proof}
+一般平面は余因子スキームの孤立点と埋没点を避ける。
+階数二以下の曲面成分は定理\ref{thm:rank-two-surface-excess-curves}で排除されており、
+行列式も $I$ に入るので、その平面切断の長さが $d$ である。
+各点では $M$ が有限生成する $V$ 上の分数イデアルは半局所Dedekind環上の主イデアルである。
+その生成元を $M$ の元から選べる。実際各正規化点で最小の枝位数を取る条件は
+生成元の線形結合について空でない開条件であり、枝は有限個である。
+この元で割って上記の局所表示を得る。
+
+$M^*=(A:M)$ と書く。標数零の整平面八次上で $M$ は階数一の極大Cohen--Macaulay加群で、
+Gorenstein双対について反射的である。対称表示の双対より局所的に $M^*=uM$ と書ける
+（階数一の同型は分数体上のスカラー $u$ の乗法）。
+跡イデアル $MM^*$ は $I$ に等しい。実際 $M\to A$ の四生成元上の値を並べると
+行列の左核となり、この核は余因子行列の行で生成される。これは表示行列と余因子行列の
+積が行列式倍の単位行列となる行列分解から従う。具体的に平面の正則局所環に持ち上げ、
+左核の持上げ $v$ について $vN=(\det N)w$ とすれば $v=w\operatorname{adj}N$ である。
+従って $IV=uV$ であり、
+\[
+       (A:I)=(M^{**}:M)=(M:M)=T,\qquad A\subset T\subset M.
+\]
+最後の包含は $1\in M$ による。有限余長の包含の双対で余長は保存される。
+これは一次元Gorenstein局所環で有限長加群の $\operatorname{Ext}^1(-,A)$ がその双対となり、
+極大Cohen--Macaulay加群の $\operatorname{Ext}^1(-,A)$ は消えるためである。従って
+\[
+  \operatorname{length}(T/A)=\operatorname{length}(A/I),\qquad
+  s:=\operatorname{length}(M/A)=\operatorname{length}(A/uM).
+\]
+$\delta=\operatorname{length}(V/A)$ と置き、$V/uM$ を $A$ あるいは $uV$ を挟んで計算すると
+$\delta+s=\operatorname{length}(V/uV)+\delta-s$。
+よって正規化上の余因子の固定次数はこの点でちょうど $2s$ である。
+一般平面上で移動部は核座標の平方であるから $2\sum s=48-2\ell$。
+$\sum\delta=21-g$ および定理\ref{thm:sectional-cofactor-budget}を併せれば全ての数値式を得る。
+$T$ は分数体内の有限中間環で、その構造層のEuler数は $\chi(\mathcal O_E)+d$ である。
+
+等号では各点で生成元を選び直した $M$ は $T$ 自身で、対応する $G$ 上の層 $P$ は可逆。
+$P$ の正規化への引戻しが核束なので次数は $\ell$、平面表示より切断数は四で、
+四つの表示生成元は $P$ を生成する。有限射の双対性と
+$\mathcal Hom_E(M,\omega_E)=M(-H)$ より $P^{-1}\omega_G=P(-H)$。
+この同型は分数体上の乗法で $T$ 線形である。従って $G$ はGorensteinである。
+$d=19$ なら $\ell=5$、$p_a(G)=2$。任意の長さ二の部分スキーム $Z$ のイデアルの双対は
+$\mathcal O_G$ を余長二で含む。$\omega_G P^{-1} I_Z^*$ は次数 $2-5+2=-1$ の
+階数一torsion-free層なので切断を持たない。Serre双対で $H^1(G,P I_Z)=0$、
+よって完全系は長さ二を分離する。この非退化な整五次曲線上では $h^0(P^2)=9$ で
+少なくとも一つの二次式が消える。二次曲面は非退化性より既約であり、異なる二つが
+五次曲線を含むことはBézoutの次数四に反する。
+\end{proof}
+\path{computations/verify_sectional_cofactor_length.py} は平面枝の分数単項式加群で
+跡、自己準同型環、正規化での固定次数を独立に算出する。
