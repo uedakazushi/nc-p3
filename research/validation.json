@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 616,
+  "version": 617,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "f55eea39debd167cb87a9d7d1f19f6e007b9e85b"
+    "source_commit": "7de21c54f340e919db2cad88259bc9e266d6fd5f"
   },
   "generation": {
     "result": "PASS",
-    "scope": "In all reduced four-edge finite windows with generally invertible opposite root, every rank-one curve component is a line or a plane conic and their total reduced degree is at most five. A smooth elliptic quartic would give a singular ternary pencil whose left and right kernels each span three dimensions, contradicting its quadratic adjugate."
+    "scope": "The entire reduced rank-one curve support in every reduced finite window has degree at most three. This excludes all connected quartic and quintic unions and the disconnected degree-four and degree-five arrangements as well. At most degree two lies in any one plane."
   },
   "checks": [
     {
-      "command": "python computations/verify_rank_one_elliptic_quartic_exclusion.py",
+      "command": "python computations/verify_rank_one_low_degree_arrangements.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Classify arrangements of lines and conics and their effect on rank-two and kernel loci, and continue exceptional middles and all-degree AS and global isomorphism coverage."
+    "Analyze the remaining connected and disconnected cubic supports, single conics and lines, rank-two excess, exceptional middles and all-degree AS coverage."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1069,
+      "nc-p3": 1071,
       "plan_ja": 24,
       "notes_ja": 40
     },
