@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-28",
-  "version": 669,
+  "version": 670,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -6491,6 +6491,15 @@
       "verification": [
         "computations/verify_sectional_hyperelliptic_norm.py"
       ]
+    },
+    {
+      "id": "SECTIONAL-HYPERELLIPTIC-GRID",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "Exclude all degree-eighteen birational quadric conic-bundle models with inverse system 2L+2F and genus-three strict section. The only potential equality case is a rectangular eight-point grid. A relative two-by-two presentation and its vertex fibers put both horizontal marks back on the same evaluation quadric, contradicting the fourteen-point bound.",
+      "proof": "sections/sectional_hyperelliptic_grid.tex",
+      "verification": [
+        "computations/verify_sectional_hyperelliptic_grid.py"
+      ]
     }
   ],
   "document_paths": {
@@ -6554,7 +6563,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "4089dedb13c106585be2bd500be583dae6ca5a91",
+  "reviewed_source_commit": "eb58956c694625f9ef115a31dcb56690513cb0eb",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -6563,14 +6572,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Analyze the resulting complete intersections of four fibers with a conic-bundle divisor, including multiple fibers, and the other degree-eighteen kernel surfaces.",
+    "immediate_next_action": "Handle degree-eighteen quadric models with a genus-four kernel section and the remaining cone double covers, then the cubic and nonnormal quartic kernels.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/sectional_hyperelliptic_norm.tex",
-      "sections/sectional_eighteen_kernel_graph.tex"
+      "sections/sectional_hyperelliptic_grid.tex",
+      "sections/sectional_hyperelliptic_norm.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "In both degree-eighteen quadric conic-bundle models A=2L+2F with embedded genus-three general section, the length-eight base scheme is a full intersection with a fixed four-fiber divisor, including multiplicities. The hyperelliptic norm forces any alternative into two fixed input points and degree-three or degree-four plane pencils, contradicted by quadratic evaluations on the marks. Full classification remains open.",
+    "state_of_claim": "Exclude all degree-eighteen birational quadric conic-bundle models with inverse system 2L+2F and genus-three strict section. The only potential equality case is a rectangular eight-point grid. A relative two-by-two presentation and its vertex fibers put both horizontal marks back on the same evaluation quadric, contradicting the fourteen-point bound. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

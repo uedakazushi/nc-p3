@@ -3085,6 +3085,12 @@
       "current_result": "In both degree-eighteen quadric conic-bundle models A=2L+2F with embedded genus-three general section, the length-eight base scheme is a full intersection with a fixed four-fiber divisor, including multiplicities. The hyperelliptic norm forces any alternative into two fixed input points and degree-three or degree-four plane pencils, contradicted by quadratic evaluations on the marks.",
       "current_proof": "sections/sectional_hyperelliptic_norm.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SECTIONAL-HYPERELLIPTIC-GRID",
+      "current_result": "Exclude all degree-eighteen birational quadric conic-bundle models with inverse system 2L+2F and genus-three strict section. The only potential equality case is a rectangular eight-point grid. A relative two-by-two presentation and its vertex fibers put both horizontal marks back on the same evaluation quadric, contradicting the fourteen-point bound.",
+      "current_proof": "sections/sectional_hyperelliptic_grid.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -3142,7 +3148,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 669,
+  "version": 670,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
