@@ -1,0 +1,134 @@
+% !TeX root = ../papers/nc-p3.tex
+\section{余因子の関係と階数二曲線上の外積の双対性}
+\label{sec:cofactor-curve-duality}
+\begin{theorem}\label{thm:cofactor-curve-duality}
+被約四辺有限窓の一般可逆な全階数反対根 $N$ とし、$Z$ をその三行小行列式のスキームとする。
+$M=\operatorname{coker}(\mathcal O(-2)^4\xrightarrow{N}\mathcal O^4)$、
+$W$ を $\bigwedge^2 M$ の最大零次元部分層を除いた商とする。
+六次余因子の包を $L_6$、入力の $j$ 次多項式空間を $S_j$ とし負次数では零とする。全ての $t$ で
+\[
+ \begin{split}
+ h^1(W(6-t))={}&10\dim S_{t-6}-15\dim S_{t-8}+6\dim S_{t-10}
+                         -\dim(S_{t-6}L_6),\\
+ \chi(\mathcal O_Z(t))+\chi(W(6-t))={}&80 .
+ \end{split}
+\]
+特に六次余因子の独立数は $10-h^1(W)$ で、八次の積の不足 $85-\dim(S_2L_6)$ は $h^1(W(-2))$ である。
+\end{theorem}
+\begin{proof}
+定理\ref{thm:double-point-opposite-reconstruction}の対称行列の複体を取り、
+左から $F_3=\mathcal O(-10)^6,F_2=\mathcal O(-8)^{15},F_1=\mathcal O(-6)^{10}$ とする。
+定理\ref{thm:rank-two-surface-excess-curves}により階数二以下の軌跡は余次元二以上であり、
+$F_3\to F_2\to F_1$ は左二項で完全である。実際両写像の一般階数は六と九、
+最左写像の階数低下は余次元二以上、次の階数低下も余次元一以上で、
+この二段のBuchsbaum--Eisenbud判定が使える。
+$K=\operatorname{coker}(F_2\to F_1)$、$T=\ker(K\to\mathcal I_Z)$ とする。
+階数三以上では元の複体が完全で $T$ の支持は高々曲線である。
+$K$ は長さ二の自由分解を持ち閉点で深さ一以上、従って部分層 $T$ は零か純一次元Cohen--Macaulay層である。
+
+この分解を $\omega=\mathcal O(-4)$ で双対化すると
+$\mathcal Ext^2(K,\omega)=(\bigwedge^2 M)(6)$。
+実際最左写像 $D\mapsto DN$（$D$ は交代行列）の双対の像は、$N$ の各列と各座標列の外積が張る。
+定数スカラー行列分を領域から除いても対称性により像は変わらない。
+一方 $\mathcal Ext^2(\mathcal I_Z,\omega)$ は零次元支持、
+$\mathcal Ext^3(\mathcal I_Z,\omega)=0$ である。これは $\mathcal I_Z\subset\mathcal O$ の商を使い、
+余次元二の一般点の正則局所環の次元が二であることから従う。
+よって $\mathcal Ext^2(T,\omega)$ は $\bigwedge^2 M(6)$（外積を取った後でひねる）の
+零次元部分を割った商 $W(6)$ と一致する。実際 $T$ の双対化層はまた純一次元である。
+曲線支持層のSerre双対性により $h^0(T(t))=h^1(W(6-t))$ および
+$\chi(T(t))=-\chi(W(6-t))$ を得る。
+三空間の線束の中間コホモロジー消滅により $H^0(K(t))$ は上の三自由項の大域切断の余核で、
+そこから $\mathcal O(t)$ への像が $S_{t-6}L_6$ である。これで第一式を得る。
+第二式は元の複体のEuler多項式が定数八十であることと
+$[\mathcal O_Z]-[T]=[\mathcal O]-[F_1]+[F_2]-[F_3]$ による。
+\end{proof}
+
+\begin{theorem}\label{thm:generically-reduced-rank-two-curves}
+$Z$ の曲線部分が非空で一般被約とし、その被約曲線を $C$、総次数を $d$ とする。
+$W$ は $C$ 上の大域生成された捩れなし階数一層で、
+$b=\chi(W)-\chi(\mathcal O_C)\ge0$ とすると
+\[
+  \sum_{p\in X\cap C}\bigl(1+\operatorname{edim}_p C\bigr)
+               \ \ge\ 6d+2\chi(\mathcal O_C)+b .
+\]
+特に、各既約成分 $C_i$ が滑らかで $H^1(C_i,\mathcal O_{C_i}(3))=0$、
+各連結成分の算術種数がその既約成分の種数の和であるような $C$ は生じない。
+これには孤立した滑らかな有理曲線・楕円曲線も、有理成分が木状につながる場合も含まれる。
+\end{theorem}
+\begin{proof}[八十条件と曲線に残る長さ]
+一般点の階数は二である。階数一なら局所消去で三行小行列式は極大イデアルの二乗に入り、
+曲線一般点で被約になれない。階数二の開集合では単元二行を消した残余対称二行の全成分が
+$Z$ を定め、二生成余核の第二外冪はその構造層である。
+従って $W$ は $C$ 上一般階数一であり、純性により $\mathcal I_C W=0$、かつ捩れなしである。
+六つの定数外積で生成され、一般切断 $\mathcal O_C\hookrightarrow W$ の余核は長さ $b$ である。
+$\mathcal O_Z\to\mathcal O_C$ の核の長さを $a$ とする。第一定理のEuler式で
+\[
+                    a+6d+2\chi(\mathcal O_C)+b=80 .
+\]
+また $Z$ は二重点 $2X=V(\mathcal I_X^2)$ を含む。実際各印では単元一行を消した残りの成分が全て消え、
+三行小行列式は二次以上である。$C\cup 2X\subseteq Z$ より
+$a\ge80-\operatorname{length}(C\cap 2X)$。後者の交叉は各印で $C$ の極大イデアルの二乗を割ったもので、
+これが所要の不等式を与える。
+\end{proof}
+\begin{proof}[成分のPlücker次数]
+各滑らかな成分 $C_i$ への $W$ の引戻しから捩れを除いた線束の次数を $b_i$ とする。
+$b\ge\sum b_i$ である。実際一般切断を各成分の交点の有限集合で線束の値が非零になるように選ぶと、
+その零因子は他の滑らかな点で余核長 $b$ の中に数えられる（単一成分上の非自由点も必要なら避ける）。
+この線束の六切断は一般余核二空間のPlücker座標を与える。
+$b_i=0$ なら一般像二空間が固定、$b_i=1$ なら像二空間はGrassmann多様体の直線上で動く。
+後者では全てが固定三空間に入る。実際Plücker直線の二つの二空間は直線を共有しその和が三空間である。
+余核側と像側は消去空間の対偶で同じ結論を与える。
+いずれも $C_i$ 上で一つの固定列が消え、定理\ref{thm:opposite-column-divisor}より $\deg C_i\le2$。
+従って $r$ 成分のうち直線・二次曲線の個数を $s$ とすると $b\ge2(r-s)$。
+
+$C$ の連結成分数を $k$ とすれば、仮定した種数加法性は
+$\chi(\mathcal O_C)=\sum_i\chi(\mathcal O_{C_i})-(r-k)$ を意味する。
+各成分の印数を $m_i$ として先の左辺は $2\sum_i m_i$ 以下である。
+一点が一成分だけに載ればそこは滑らかで重み二、複数成分の共有点なら埋込み次元は三以下で重み四以下だからである。
+三次評価の全射性と非特殊性より $m_i\le 3\deg C_i+\chi(\mathcal O_{C_i})$。
+直線・二次曲線では上界三・六が使え、各々でさらに一を引ける。
+よって長さ不等式に代入して $b\le 2(r-k)-2s$ を得る。
+これは $k\ge1$ のため下界 $2(r-s)$ に反する。
+\end{proof}
+
+\begin{corollary}\label{cor:all-smooth-rank-two-excess-exclusion}
+一般被約な正次元の $Z$ の曲線台は滑らかではあり得ない。滑らかな成分が互いに素な場合も、
+三次超平面切断が特殊な場合も含む。
+\end{corollary}
+\begin{proof}
+滑らかな各成分 $J$ について $d_J=\deg J$, $g_J=g(J)$、$m_J=|X\cap J|$ とする。
+一般核二空間のGrassmann射を $J$ 全体に延長した部分束を $U\subset\mathcal O_J^4$ とし、
+$L=\det U^*$ の次数を $b_J$ とする。これは $W|_J$ のPlücker束と一致する。
+実際余核二商は核の双対であり、六定数外積はこの線束を全点で生成する。
+成分が素で滑らかなら $b=\sum b_J$ である。$\bigwedge^2N|_J$ は像二平面の
+Plücker列の平方で、核のPlücker列とは固定した双対同型で移り合う。
+従ってスカラー部分は $\mathcal O_J(4)\otimes L^{-2}$ の非零切断であり、
+階数一の印を全て消す。特に $m_J\le4d_J-2b_J$。
+
+二次行列の微分を $U$ 上で両側から評価すると
+\[
+       N_{J/\mathbb P^3}\longrightarrow
+             \operatorname{Sym}^2 U^*\otimes\mathcal O_J(2)
+\]
+を得る。射影接ベクトルのリフトの差によるEuler項は $NU=0$ で消える。
+曲線接方向も $a^tNb=0$ を微分して消える（$a,b$ は $U$ の局所切断）。
+一般点で単元二行を消せば残りの対称二行の三成分が $Z$ を定め、
+その一次微分が法二方向を検出することは一般被約性から従う。
+よって上の射は一般点で単射である。外積と随伴により
+$\omega_J\hookrightarrow\operatorname{Sym}^2U^*\otimes L$。
+ここで階数二の束 $A$ に対する $\bigwedge^2\operatorname{Sym}^2 A
+\simeq\operatorname{Sym}^2 A\otimes\det A$ を使った。
+$U^*$ は四切断で生成されるので、それらと外積を取ると $U^*\hookrightarrow L^{\oplus4}$ は部分束となる。
+従って $\omega_J$ から $L^3$ への非零射があり、$2g_J-2\le3b_J$ である。
+
+前定理の長さ不等式は成分の
+$D_J=2m_J-6d_J+2g_J-2-b_J$ の和が非負であることを要求する。
+非特殊な $\mathcal O_J(3)$ では三次評価より $D_J\le-b_J$ である。
+$b_J=0$ なら像二平面が固定で、$J$ の平方の包は対称二行空間に入りベクトル次元三以下である。
+非直線曲線の平方の包は少なくとも五次元なので $J$ は直線、$m_J\le3$ からやはり $D_J<0$。
+特殊なら $2g_J-2\ge3d_J$ なので $b_J\ge d_J$。
+そこで $m_J\le4d_J-2b_J$ と $2g_J-2\le3b_J$ より $D_J\le2(d_J-b_J)\le0$。
+等号なら $b_J=d_J$, $2g_J-2=3d_J$ で、特殊性から $\omega_J\simeq\mathcal O_J(3)$、
+$h^1(\mathcal O_J(3))=1$ である。今度は三次評価とRiemann--Rochから $D_J\le 2-b_J$ なので
+等号には $d_J\le2$ が必要である。この次数で特殊性はない。これで全成分で $D_J<0$ となり矛盾する。
+\end{proof}

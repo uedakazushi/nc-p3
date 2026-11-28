@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 625,
+  "version": 626,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "12509d8cf9867b2d8963377ee2c5bff85cd78747"
+    "source_commit": "d150704ee53ac1c6646c94c2c9c4ba4dcc9ef4b3"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All but at most three off-plane triple marks lie on the nonnormal curve of the residual sextic; its reduced degree is at least four. The tangent cubic Picard groups at all marks participating in quadratic evaluation relations are uniformly multiplicative or uniformly additive. At most three off-plane triple points are ordinary."
+    "scope": "For every reduced finite window with a generally invertible opposite root the cofactor defects equal the first cohomology of the pure exterior-square cokernel, and its Euler characteristic determines the residual length. A positive-dimensional rank-two scheme cannot be both generically reduced and supported on a smooth curve, even for disconnected or cubically special curves. Nonspecial smooth components of additive arithmetic genus are also excluded."
   },
   "checks": [
     {
-      "command": "python computations/verify_residual_sextic_cubic_tangents.py",
+      "command": "python computations/verify_cofactor_curve_duality.py",
       "result": "PASS"
     },
     {
@@ -36,13 +36,13 @@
     }
   ],
   "open_mathematics": [
-    "Study conductor contributions, elliptic eight-point pencils and the two remaining tangent types; continue general AS coverage and exceptional middles."
+    "Analyze the normalizations, conductor corrections and Pluecker derivatives of singular reduced rank-two curves, as well as generically multiple components and exceptional all-degree extension."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1085,
-      "plan_ja": 24,
+      "nc-p3": 1087,
+      "plan_ja": 25,
       "notes_ja": 40
     },
     "scope": "LuaLaTeX built the manuscript, plan and research notes."

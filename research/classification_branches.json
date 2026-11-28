@@ -2821,6 +2821,12 @@
       "current_result": "All but at most three off-plane triple marks lie on the nonnormal curve of the residual sextic; its reduced degree is at least four. The tangent cubic Picard groups at all marks participating in quadratic evaluation relations are uniformly multiplicative or uniformly additive. At most three off-plane triple points are ordinary.",
       "current_proof": "sections/residual_sextic_cubic_tangents.tex",
       "global_coverage": false
+    },
+    {
+      "id": "COFACTOR-CURVE-DUALITY",
+      "current_result": "For every reduced finite window with a generally invertible opposite root the cofactor defects equal the first cohomology of the pure exterior-square cokernel, and its Euler characteristic determines the residual length. A positive-dimensional rank-two scheme cannot be both generically reduced and supported on a smooth curve, even for disconnected or cubically special curves. Nonspecial smooth components of additive arithmetic genus are also excluded.",
+      "current_proof": "sections/cofactor_curve_duality.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2878,7 +2884,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 625,
+  "version": 626,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
