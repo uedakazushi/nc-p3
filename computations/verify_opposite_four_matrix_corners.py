@@ -3,10 +3,10 @@
 from itertools import combinations, product
 
 
-def surviving_extensions(d, marked):
+def surviving_extensions(d, marked, *, separated=False):
     h = [2*d[i] - 4*d[i-1] - 4*d[(i+1)%4] + 6*d[(i+2)%4] for i in range(4)]
     euler = sum(x*y for x,y in zip(d, h))
-    strong = any(2*d[t] > 4 for t in marked)
+    strong = separated or any(2*d[t] > 4 for t in marked)
     if euler < 0:
         return []
     options = []

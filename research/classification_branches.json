@@ -2401,6 +2401,12 @@
       "current_result": "Polynomial growth forces generic first Ext between grading translates of every nonvertex finite dimensional simple to vanish and generic Yoneda products through vertex simples to be injective, without finite-edge or PI assumptions. A weighted path-algebra growth estimate also rules out generically detectable three-layer products through fixed grading-invariant vertex-supported modules.",
       "current_proof": "sections/polynomial_growth_extension_bridges.tex",
       "global_coverage": false
+    },
+    {
+      "id": "GENERIC-CORNER-SMALL-SIMPLES-AND-SINGLE-FOUR-MATRIX",
+      "current_result": "On every finite regular window, any nonvertex simple with a vertex dimension at most three is balanced, with globally one-sided vertex extensions in sizes two and three. Every single four-matrix corner already characterizes the center-finite domain branch of index two or four by the degree-32 test. Compression to a missing vertex gives generic separation without identities.",
+      "current_proof": "sections/generic_corner_small_simples.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2458,7 +2464,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 555,
+  "version": 556,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
