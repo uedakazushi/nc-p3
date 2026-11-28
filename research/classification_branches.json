@@ -2665,6 +2665,12 @@
       "current_result": "In the clean reduced case the opposite determinant is integral or splits as an irreducible quintic times an irreducible cubic. The rank-three orthogonal bundle excludes planes and all quadric factors, including a marked cone vertex via a branched double cover and length-two residual duality.",
       "current_proof": "sections/low_degree_octic_spinor.tex",
       "global_coverage": false
+    },
+    {
+      "id": "CUBIC-OCTIC-TANGENT-PLANES",
+      "current_result": "For each clean reduced octic component the general output three-space restriction has exactly m-6e nonmarked rank-one points counted with length. A cubic factor without a marked triple point is normal with (marks,marked double points) equal to (15,3),(14,4) or (15,4); the nonnormal ruled cubics are excluded.",
+      "current_proof": "sections/cubic_octic_tangent_planes.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2722,7 +2728,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 599,
+  "version": 600,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
