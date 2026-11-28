@@ -2863,6 +2863,12 @@
       "current_result": "For integral generically reduced cofactor curves degree seventeen is impossible. The plane-section kernel degree is exactly 24 minus the curve degree; degree twenty-one forces the seven-cofactor Bezout normal form, and degree twenty with surface image is birational to a quadric.",
       "current_proof": "sections/cofactor_extreme_degrees.tex",
       "global_coverage": false
+    },
+    {
+      "id": "QUADRIC-KERNEL-PROJECTION",
+      "current_result": "For degree twenty with surface kernel image, the normalized octic is the kernel quadric mapped by four quadratic sections. The symmetric matrix, equivalence up to base change, and marked triple fibers are recovered from this four-space, including quadric cones. An exact rational example has ten independent entries.",
+      "current_proof": "sections/quadric_kernel_projection.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2920,7 +2926,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 632,
+  "version": 633,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
