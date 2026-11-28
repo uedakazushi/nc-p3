@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 566,
+  "version": 567,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "7307a72ef068e815a8739b03a573da32505341ed"
+    "source_commit": "a69f2548afb64a037a6c0855b9e7969fe9697886"
   },
   "generation": {
     "result": "PASS",
-    "scope": "A generically rank-three distinct opposite matrix must have four linearly independent kernel coordinates on every finite Frobenius window. The ternary case would put a self-annihilating length-ten ideal on a determinantal cubic, where the rank-one condition forces impossible cubic identities. In particular every distinct opposite of an arbitrary curvilinear finite graph gives a nonzero triple octic, with no restriction on local lengths."
+    "scope": "No center-finite standard regular finite window has odd prime vertex division index. Every odd prime dividing the index forces a nonzero central character fixed by scaling of order that prime, while such a fiber cannot consist solely of one cyclic orbit of thin simples."
   },
   "checks": [
     {
-      "command": "python computations/verify_ternary_kernel_cubic_exclusion.py",
+      "command": "python computations/verify_odd_prime_finite_indices.py",
       "result": "PASS"
     },
     {
@@ -36,7 +36,7 @@
     }
   ],
   "open_mathematics": [
-    "Exclude or classify the four-coordinate generically singular presentations on noncurvilinear point configurations and reconstruct all finite regular extensions of edges with rank-drop curves."
+    "Determine center-finiteness without Noether assumptions under five-matrix corner identities, and analyze the composite-index stabilizer fibers."
   ],
   "tex": {
     "result": "PASS",

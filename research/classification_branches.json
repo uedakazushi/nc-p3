@@ -2467,6 +2467,12 @@
       "current_result": "A generically rank-three distinct opposite matrix must have four linearly independent kernel coordinates on every finite Frobenius window. The ternary case would put a self-annihilating length-ten ideal on a determinantal cubic, where the rank-one condition forces impossible cubic identities. In particular every distinct opposite of an arbitrary curvilinear finite graph gives a nonzero triple octic, with no restriction on local lengths.",
       "current_proof": "sections/ternary_kernel_cubic_exclusion.tex",
       "global_coverage": false
+    },
+    {
+      "id": "ODD-PRIME-FINITE-INDICES",
+      "current_result": "No center-finite standard regular finite window has odd prime vertex division index. Every odd prime dividing the index forces a nonzero central character fixed by scaling of order that prime, while such a fiber cannot consist solely of one cyclic orbit of thin simples.",
+      "current_proof": "sections/odd_prime_finite_indices.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2524,7 +2530,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 566,
+  "version": 567,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

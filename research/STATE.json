@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-28",
-  "version": 566,
+  "version": 567,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -5564,6 +5564,15 @@
       "verification": [
         "computations/verify_ternary_kernel_cubic_exclusion.py"
       ]
+    },
+    {
+      "id": "ODD-PRIME-FINITE-INDICES",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "No center-finite standard regular finite window has odd prime vertex division index. Every odd prime dividing the index forces a nonzero central character fixed by scaling of order that prime, while such a fiber cannot consist solely of one cyclic orbit of thin simples.",
+      "proof": "sections/odd_prime_finite_indices.tex",
+      "verification": [
+        "computations/verify_odd_prime_finite_indices.py"
+      ]
     }
   ],
   "document_paths": {
@@ -5627,7 +5636,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "7307a72ef068e815a8739b03a573da32505341ed",
+  "reviewed_source_commit": "a69f2548afb64a037a6c0855b9e7969fe9697886",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -5636,14 +5645,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Exclude or classify the four-coordinate generically singular presentations on noncurvilinear point configurations and reconstruct all finite regular extensions of edges with rank-drop curves.",
+    "immediate_next_action": "Determine center-finiteness without Noether assumptions under five-matrix corner identities, and analyze the composite-index stabilizer fibers.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/ternary_kernel_cubic_exclusion.tex",
-      "sections/singular_opposite_root_lengths.tex"
+      "sections/odd_prime_finite_indices.tex",
+      "sections/one_corner_clifford_classification.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "A generically rank-three distinct opposite matrix must have four linearly independent kernel coordinates on every finite Frobenius window. The ternary case would put a self-annihilating length-ten ideal on a determinantal cubic, where the rank-one condition forces impossible cubic identities. In particular every distinct opposite of an arbitrary curvilinear finite graph gives a nonzero triple octic, with no restriction on local lengths. Full classification remains open.",
+    "state_of_claim": "No center-finite standard regular finite window has odd prime vertex division index. Every odd prime dividing the index forces a nonzero central character fixed by scaling of order that prime, while such a fiber cannot consist solely of one cyclic orbit of thin simples. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
