@@ -2803,6 +2803,12 @@
       "current_result": "A repeated factor of a reduced finite opposite octic is a plane of multiplicity exactly two. Its residual sextic is geometrically integral and nonnormal. An integral quartic with a marked triple point has at most seven singular marks, and six marked triple points on an integral quintic form two skew collinear triples.",
       "current_proof": "sections/repeated_octic_plane_residual.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SEXTIC-RESIDUAL-TRIPLE-POLARS",
+      "current_result": "The integral nonnormal residual sextic has no point of multiplicity four or higher. Each of its at least thirteen off-plane marks is exactly triple and has a positive-dimensional intersection with both of its first two polar surfaces.",
+      "current_proof": "sections/sextic_residual_triple_polars.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2860,7 +2866,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 622,
+  "version": 623,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

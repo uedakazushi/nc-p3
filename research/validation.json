@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 622,
+  "version": 623,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "155ca96ebfdabcd0e90d642856808f465ae863a2"
+    "source_commit": "ca8b27d9f3cc9c932ada1560197a94098ede1baf"
   },
   "generation": {
     "result": "PASS",
-    "scope": "A repeated factor of a reduced finite opposite octic is a plane of multiplicity exactly two. Its residual sextic is geometrically integral and nonnormal. An integral quartic with a marked triple point has at most seven singular marks, and six marked triple points on an integral quintic form two skew collinear triples."
+    "scope": "The integral nonnormal residual sextic has no point of multiplicity four or higher. Each of its at least thirteen off-plane marks is exactly triple and has a positive-dimensional intersection with both of its first two polar surfaces."
   },
   "checks": [
     {
-      "command": "python computations/verify_repeated_octic_plane_residual.py",
+      "command": "python computations/verify_sextic_residual_triple_polars.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze the normalization and singular curves of the integral sextic with at least thirteen marked triple points, alongside all-degree regularity and exceptional middles."
+    "Analyze the polar curves through each prescribed center, separating triple curves, double curves with a common tangent plane, and moving triple contacts. Continue general AS coverage and exceptional middles."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1081,
+      "nc-p3": 1082,
       "plan_ja": 24,
       "notes_ja": 40
     },
