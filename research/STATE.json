@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-28",
-  "version": 661,
+  "version": 662,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -6419,6 +6419,15 @@
       "verification": [
         "computations/verify_sectional_cofactor_length.py"
       ]
+    },
+    {
+      "id": "GENUS-TWO-KERNEL-EXCESS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "At scheme degree nineteen the kernel cannot be a curve, even with nonreduced cofactor support and positive-dimensional rank-one fibers. The genus-two scroll would have at least fourteen isolated triple fibers, while a simultaneous smoothing of its ruling and generating sections has triple-fiber length twelve.",
+      "proof": "sections/genus_two_kernel_excess.tex",
+      "verification": [
+        "computations/verify_genus_two_kernel_excess.py"
+      ]
     }
   ],
   "document_paths": {
@@ -6482,7 +6491,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "31048c6dbe4a7a18ebad7c5ba081e88584249cac",
+  "reviewed_source_commit": "8ab0e08a470d932a1d3b832778d51cff0fb29d5f",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -6491,14 +6500,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Use the embedded genus-two sectional quintic and the exact trace defect to classify surface and curve kernels at full scheme degree nineteen, allowing rank-one curves.",
+    "immediate_next_action": "Determine the surface kernels at full scheme degree nineteen and their possible positive-dimensional triple fibers, using the embedded genus-two sectional quintic and the residual count on quadric models.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/sectional_cofactor_length.tex",
-      "sections/sectional_cofactor_budget.tex"
+      "sections/genus_two_kernel_excess.tex",
+      "sections/sectional_cofactor_length.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "The full scheme degree d of the cofactors of an integral opposite octic in a reduced four-finite regular window is at most 24-HL, hence at most nineteen. The sectional endomorphism curve has arithmetic genus 21-d. At d=19 the sectional cokernel descends to a very ample degree-five line bundle embedding a Gorenstein genus-two curve on a unique quadric. Full classification remains open.",
+    "state_of_claim": "At scheme degree nineteen the kernel cannot be a curve, even with nonreduced cofactor support and positive-dimensional rank-one fibers. The genus-two scroll would have at least fourteen isolated triple fibers, while a simultaneous smoothing of its ruling and generating sections has triple-fiber length twelve. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

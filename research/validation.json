@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 661,
+  "version": 662,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "31048c6dbe4a7a18ebad7c5ba081e88584249cac"
+    "source_commit": "8ab0e08a470d932a1d3b832778d51cff0fb29d5f"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The full scheme degree d of the cofactors of an integral opposite octic in a reduced four-finite regular window is at most 24-HL, hence at most nineteen. The sectional endomorphism curve has arithmetic genus 21-d. At d=19 the sectional cokernel descends to a very ample degree-five line bundle embedding a Gorenstein genus-two curve on a unique quadric."
+    "scope": "At scheme degree nineteen the kernel cannot be a curve, even with nonreduced cofactor support and positive-dimensional rank-one fibers. The genus-two scroll would have at least fourteen isolated triple fibers, while a simultaneous smoothing of its ruling and generating sections has triple-fiber length twelve."
   },
   "checks": [
     {
-      "command": "python computations/verify_sectional_cofactor_length.py",
+      "command": "python computations/verify_genus_two_kernel_excess.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Use the embedded genus-two sectional quintic and the exact trace defect to classify surface and curve kernels at full scheme degree nineteen, allowing rank-one curves."
+    "Determine the surface kernels at full scheme degree nineteen and their possible positive-dimensional triple fibers, using the embedded genus-two sectional quintic and the residual count on quadric models."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1149,
+      "nc-p3": 1151,
       "plan_ja": 26,
       "notes_ja": 42
     },

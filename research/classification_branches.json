@@ -3037,6 +3037,12 @@
       "current_result": "The full scheme degree d of the cofactors of an integral opposite octic in a reduced four-finite regular window is at most 24-HL, hence at most nineteen. The sectional endomorphism curve has arithmetic genus 21-d. At d=19 the sectional cokernel descends to a very ample degree-five line bundle embedding a Gorenstein genus-two curve on a unique quadric.",
       "current_proof": "sections/sectional_cofactor_length.tex",
       "global_coverage": false
+    },
+    {
+      "id": "GENUS-TWO-KERNEL-EXCESS",
+      "current_result": "At scheme degree nineteen the kernel cannot be a curve, even with nonreduced cofactor support and positive-dimensional rank-one fibers. The genus-two scroll would have at least fourteen isolated triple fibers, while a simultaneous smoothing of its ruling and generating sections has triple-fiber length twelve.",
+      "current_proof": "sections/genus_two_kernel_excess.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -3094,7 +3100,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 661,
+  "version": 662,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
