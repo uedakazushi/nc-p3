@@ -2575,6 +2575,12 @@
       "current_result": "On reduced four-edge finite Frobenius windows, all integral eight-cofactor opposite matrices are excluded, including both singular boundary Hankel members and the finite nodal order-two member. For arbitrary finite windows the boundary normal forms have length at most sixteen off the conductor input line.",
       "current_proof": "sections/singular_boundary_bezout.tex",
       "global_coverage": false
+    },
+    {
+      "id": "BOUNDARY-CONDUCTOR-RESIDUAL",
+      "current_result": "All singular boundary Hankel members of integral eight-cofactor matrices are excluded even on nonreduced finite Frobenius windows. The residual by the conductor line extends scheme-theoretically to the pole-free eigenvector surface and has length at most sixteen. The conductor cut itself has length at most three.",
+      "current_proof": "sections/boundary_conductor_residual.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2632,7 +2638,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 584,
+  "version": 585,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

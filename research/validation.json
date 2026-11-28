@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 584,
+  "version": 585,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "79927bea4c6fa5cf470b5f46c66e076dbdafd8ec"
+    "source_commit": "0cb81487ee78bde35a44097620df092e0b64017c"
   },
   "generation": {
     "result": "PASS",
-    "scope": "On reduced four-edge finite Frobenius windows, all integral eight-cofactor opposite matrices are excluded, including both singular boundary Hankel members and the finite nodal order-two member. For arbitrary finite windows the boundary normal forms have length at most sixteen off the conductor input line."
+    "scope": "All singular boundary Hankel members of integral eight-cofactor matrices are excluded even on nonreduced finite Frobenius windows. The residual by the conductor line extends scheme-theoretically to the pole-free eigenvector surface and has length at most sixteen. The conductor cut itself has length at most three."
   },
   "checks": [
     {
-      "command": "python computations/verify_singular_boundary_bezout.py",
+      "command": "python computations/verify_boundary_conductor_residual.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze conductor-supported nilpotents in the singular boundary normal forms, and test the singular finite pencils on nonreduced windows. Higher-cofactor, reducible determinants and general-window coverage remain open."
+    "Analyze singular finite pencil members on nonreduced windows through the binary quintic skew identity, the common cubic incidence, proportional pairs and constant scalar components. Higher-cofactor, reducible determinants and general windows remain open."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1020,
+      "nc-p3": 1021,
       "plan_ja": 23,
       "notes_ja": 38
     },
