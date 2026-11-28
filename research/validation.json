@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 605,
+  "version": 606,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "8d4a8cc444e7e4bdc3a775ab909f878dab398601"
+    "source_commit": "82713f6ce3fc663bff7bc12ab058c6ad3278dd6a"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For reduced finite windows with finite rank-one locus and integral determinant every smooth curve kernel is the twisted cubic; smooth nine- and ten-cofactor kernel curves are excluded, including exceptional generator lines. In the zero-defect case the triple-incidence scheme equals the marked scheme even for nonreduced windows."
+    "scope": "For reduced finite windows with finite rank-one locus the only possible rank-at-most-two surface components are planes. Each has at most two marks and its residual sextic cannot be normal integral. Independently reduced Bezout representations have geometrically integral determinant even with excess low rank, and column factors require at least three units of nilpotent length."
   },
   "checks": [
     {
-      "command": "python computations/verify_smooth_kernel_curve.py",
+      "command": "python computations/verify_low_rank_surface_factors.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Treat singular kernel curves via the normalization fibers, and rank-one curve excess; continue remaining surface kernels, exceptional middles and all-degree AS coverage."
+    "Test nonnormal or reducible residual sextics, singular kernel curves and rank-one curves; continue remaining surface kernels, exceptional middles and all-degree AS coverage."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1052,
+      "nc-p3": 1054,
       "plan_ja": 24,
       "notes_ja": 39
     },

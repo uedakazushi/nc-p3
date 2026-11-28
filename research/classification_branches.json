@@ -2701,6 +2701,12 @@
       "current_result": "For reduced finite windows with finite rank-one locus and integral determinant every smooth curve kernel is the twisted cubic; smooth nine- and ten-cofactor kernel curves are excluded, including exceptional generator lines. In the zero-defect case the triple-incidence scheme equals the marked scheme even for nonreduced windows.",
       "current_proof": "sections/smooth_kernel_curve_exclusion.tex",
       "global_coverage": false
+    },
+    {
+      "id": "LOW-RANK-SURFACE-FACTORS",
+      "current_result": "For reduced finite windows with finite rank-one locus the only possible rank-at-most-two surface components are planes. Each has at most two marks and its residual sextic cannot be normal integral. Independently reduced Bezout representations have geometrically integral determinant even with excess low rank, and column factors require at least three units of nilpotent length.",
+      "current_proof": "sections/low_rank_surface_factors.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2758,7 +2764,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 605,
+  "version": 606,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
