@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 606,
+  "version": 607,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "82713f6ce3fc663bff7bc12ab058c6ad3278dd6a"
+    "source_commit": "8d7162d3cb4c3ec7991d211fdaa6b4ef7d86c734"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For reduced finite windows with finite rank-one locus the only possible rank-at-most-two surface components are planes. Each has at most two marks and its residual sextic cannot be normal integral. Independently reduced Bezout representations have geometrically integral determinant even with excess low rank, and column factors require at least three units of nilpotent length."
+    "scope": "For every reduced four-edge finite Frobenius window with generally invertible opposite root and finite rank-one locus the rank-at-most-two locus has dimension at most one. The residual sextic of a hypothetical rank-two plane has no possible factor partition."
   },
   "checks": [
     {
-      "command": "python computations/verify_low_rank_surface_factors.py",
+      "command": "python computations/verify_low_rank_surface_exclusion.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Test nonnormal or reducible residual sextics, singular kernel curves and rank-one curves; continue remaining surface kernels, exceptional middles and all-degree AS coverage."
+    "Study the excess rank-two curves and the case of positive-dimensional rank one; continue singular kernel curves, exceptional middles and all-degree AS coverage."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1054,
+      "nc-p3": 1055,
       "plan_ja": 24,
       "notes_ja": 39
     },

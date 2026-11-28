@@ -2,7 +2,7 @@
 
 **共同研究：** 本リポジトリは大川新之介・植田一石の共同研究プロジェクトです。この表示は個々の論文の著者を確定するものではありません。
 
-**2026-11-28 / v606。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-28 / v607。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -769,7 +769,9 @@ PI正則窓が中心上有限になる必要十分条件を、非頂点単純と
 
 被約二十点で階数一軌跡が有限なら、整な八次式の滑らかな核曲線は有理正規三次に限られる。九・十余因子の滑らかな核曲線を例外母線ごと排除した。[特殊な母線と三次数の余核](sections/smooth_kernel_curve_exclusion.tex)
 
-階数一軌跡が有限な被約窓では、階数二以下の曲面成分は平面に限られ、残余六次は正規整ではあり得ない。被約なBezout表示の八次結果式は低階数軌跡の次元によらず整である。[曲面成分の証明](sections/low_rank_surface_factors.tex)・[結果式と非被約窓](sections/opposite_column_divisor.tex)
+被約なBezout表示の八次結果式は低階数軌跡の次元によらず整である。[結果式と非被約窓](sections/opposite_column_divisor.tex)
+
+被約窓で階数一軌跡が有限なら、階数二以下の軌跡は高々曲線である。平面を仮定した残余六次の全因子分割を排除した。[六行一次表示と核射の証明](sections/low_rank_surface_exclusion.tex)
 
 非恒等の平面グラフを基底に持つOre窓では、指定点を忘れた同型類も決定した。[正規形と平坦特殊化](sections/plane_graph_ore_windows.tex)・[検算](computations/verify_plane_graph_ore.py)
 
