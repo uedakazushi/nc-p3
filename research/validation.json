@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 645,
+  "version": 646,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "de67bfd75b232cc20682ee2fb6bf68d43c03266f"
+    "source_commit": "3bb2068b7a72608440ac35e0cf85f5b85ccc5386"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All four remaining cone double covers are excluded. The trace conductor on the vertex section and two-sheet arc comparisons rule out connected conics; tangency along a double input line forces a plane pencil of incompatible degree for split rulings. Degree 18 now requires a nonnormal cubic or quartic with non-descending inverse."
+    "scope": "The plane graph is Gorenstein with canonical bundle 2L-H. Nonnormal noncone cubic kernels are excluded, as is conic ruling degree on a nonnormal cubic cone. The conductor fixes a length-two fiber and adjunction places its residual on one ruling; singular base clusters still yield at least seventeen isolated triples against sixteen."
   },
   "checks": [
     {
-      "command": "python computations/verify_cofactor_cone_pencil.py",
+      "command": "python computations/verify_cofactor_cubic_conductor.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze the nonnormal cubic and quartic conductor branches at degree 18, exceptional degree-20 projections and nonintegral cofactor schemes."
+    "Resolve the line-ruling cubic cone and nonnormal quartic inverses, then degree-20 exceptional and nonintegral windows."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1121,
+      "nc-p3": 1123,
       "plan_ja": 25,
       "notes_ja": 41
     },

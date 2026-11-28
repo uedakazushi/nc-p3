@@ -2941,6 +2941,12 @@
       "current_result": "All four remaining cone double covers are excluded. The trace conductor on the vertex section and two-sheet arc comparisons rule out connected conics; tangency along a double input line forces a plane pencil of incompatible degree for split rulings. Degree 18 now requires a nonnormal cubic or quartic with non-descending inverse.",
       "current_proof": "sections/cofactor_eighteen_cone_pencil.tex",
       "global_coverage": false
+    },
+    {
+      "id": "COFACTOR-CUBIC-CONDUCTOR-BASE",
+      "current_result": "The plane graph is Gorenstein with canonical bundle 2L-H. Nonnormal noncone cubic kernels are excluded, as is conic ruling degree on a nonnormal cubic cone. The conductor fixes a length-two fiber and adjunction places its residual on one ruling; singular base clusters still yield at least seventeen isolated triples against sixteen.",
+      "current_proof": "sections/cofactor_cubic_conductor_base.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2998,7 +3004,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 645,
+  "version": 646,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
