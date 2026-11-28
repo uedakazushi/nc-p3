@@ -31,7 +31,7 @@ def edge():
     return sp.Matrix.hstack(*coefficients.nullspace())
 
 
-def finite_projection(rel):
+def finite_projection(rel, prime=None):
     x, y, z = sp.symbols("x y z")
     plane = [x, y, z, 2*x+3*y+5*z]
     evaluation = sp.Matrix([[sum(plane[i]*rel[4*i+j, k] for i in range(4))
@@ -40,7 +40,10 @@ def finite_projection(rel):
               for rows in combinations(range(6), 4)]
     exponents = [(i, j, 4-i-j) for i in range(5) for j in range(5-i)]
     coefficients = sp.Matrix([[p.coeff_monomial(e) for p in minors] for e in exponents])
-    assert rank(coefficients) == 15
+    domain_matrix = coefficients.to_DM()
+    if prime is not None:
+        domain_matrix = domain_matrix.convert_to(sp.GF(prime))
+    assert domain_matrix.rank() == 15
 
 
 def tangent_and_flip(rel):

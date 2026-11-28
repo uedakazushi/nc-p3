@@ -2521,6 +2521,12 @@
       "current_result": "An integral opposite octic requires at least seven independent sextic cofactors. At equality the quadratic matrix is precisely of binary-quartic Bezout type up to the stated necessary open conditions. Its marked matrix orbit is a symmetric-fourth-power double coset, and its two configurations consist of common trisecant planes to disjoint rational normal quartics. For the canonical middle edge the cubic overlap equals three plus the number of independent common quadrics of the curves, excluding generic parameters. Eight cofactors force an integral elliptic quartic kernel-image complete intersection (possibly singular).",
       "current_proof": "sections/seven_cofactor_trisecant_grassmannian.tex",
       "global_coverage": false
+    },
+    {
+      "id": "TRISECANT-MIDDLE-SIMPLE-OBSTRUCTION",
+      "current_result": "For every pair of distinct rational normal quartics the canonical trisecant middle edges admit no four-edge-finite standard regular extension, including all degenerate common quadrics and nonreduced intersections. An explicit small simple gives the obstruction. On a dense open set even arbitrary alternative middle coordinates are excluded by the trace pairing, an octic evaluation and a reproducible S20 certificate. A separate rational sample passes finite Frobenius and has a (3,2,2,3) simple.",
+      "current_proof": "sections/trisecant_middle_simple_obstruction.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2578,7 +2584,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 575,
+  "version": 576,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

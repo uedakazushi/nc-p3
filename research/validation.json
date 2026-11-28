@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 575,
+  "version": 576,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "e52bc3374285349aed11fd5b96b3823cd8d097e4"
+    "source_commit": "346e6ed694751eb9a4d81745eae62a33aa85534e"
   },
   "generation": {
     "result": "PASS",
-    "scope": "An integral opposite octic requires at least seven independent sextic cofactors. At equality the quadratic matrix is precisely of binary-quartic Bezout type up to the stated necessary open conditions. Its marked matrix orbit is a symmetric-fourth-power double coset, and its two configurations consist of common trisecant planes to disjoint rational normal quartics. For the canonical middle edge the cubic overlap equals three plus the number of independent common quadrics of the curves, excluding generic parameters. Eight cofactors force an integral elliptic quartic kernel-image complete intersection (possibly singular)."
+    "scope": "For every pair of distinct rational normal quartics the canonical trisecant middle edges admit no four-edge-finite standard regular extension, including all degenerate common quadrics and nonreduced intersections. An explicit small simple gives the obstruction. On a dense open set even arbitrary alternative middle coordinates are excluded by the trace pairing, an octic evaluation and a reproducible S20 certificate. A separate rational sample passes finite Frobenius and has a (3,2,2,3) simple."
   },
   "checks": [
     {
-      "command": "python computations/verify_seven_cofactor_trisecant_grassmannian.py",
+      "command": "python computations/verify_trisecant_middle_simple_obstruction.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Decide which common-quadric trisecant parameters yield regular canonical windows, and find or exclude additional middle roots on the same configurations. Continue higher cofactor, reducible-octic, and general finite-window coverage."
+    "Determine whether exceptional parameters admit other middle roots, including along the common-quadric locus. Continue integral higher-cofactor, reducible-octic, and general finite-window coverage."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 999,
+      "nc-p3": 1001,
       "plan_ja": 23,
       "notes_ja": 38
     },
