@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 626,
+  "version": 627,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "d150704ee53ac1c6646c94c2c9c4ba4dcc9ef4b3"
+    "source_commit": "811be6aa7bd0e6d271f2e0fa6de2cf21680c9eb5"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For every reduced finite window with a generally invertible opposite root the cofactor defects equal the first cohomology of the pure exterior-square cokernel, and its Euler characteristic determines the residual length. A positive-dimensional rank-two scheme cannot be both generically reduced and supported on a smooth curve, even for disconnected or cubically special curves. Nonspecial smooth components of additive arithmetic genus are also excluded."
+    "scope": "Every generically reduced positive-dimensional rank-two scheme in the reduced finite opposite-root setting has a component with moving image planes, and its cubic speciality exceeds the cubic restriction defect. This includes arbitrary singularities and reducible supports."
   },
   "checks": [
     {
-      "command": "python computations/verify_cofactor_curve_duality.py",
+      "command": "python computations/verify_cofactor_singular_curve.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze the normalizations, conductor corrections and Pluecker derivatives of singular reduced rank-two curves, as well as generically multiple components and exceptional all-degree extension."
+    "Exclude singular curves with moving image planes by adjunction at nonextending kernel directions; analyze generically nonreduced excess and all-degree extension for exceptional middles."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1087,
+      "nc-p3": 1089,
       "plan_ja": 25,
       "notes_ja": 40
     },

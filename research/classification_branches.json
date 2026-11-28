@@ -2827,6 +2827,12 @@
       "current_result": "For every reduced finite window with a generally invertible opposite root the cofactor defects equal the first cohomology of the pure exterior-square cokernel, and its Euler characteristic determines the residual length. A positive-dimensional rank-two scheme cannot be both generically reduced and supported on a smooth curve, even for disconnected or cubically special curves. Nonspecial smooth components of additive arithmetic genus are also excluded.",
       "current_proof": "sections/cofactor_curve_duality.tex",
       "global_coverage": false
+    },
+    {
+      "id": "COFACTOR-SINGULAR-SPECIAL",
+      "current_result": "Every generically reduced positive-dimensional rank-two scheme in the reduced finite opposite-root setting has a component with moving image planes, and its cubic speciality exceeds the cubic restriction defect. This includes arbitrary singularities and reducible supports.",
+      "current_proof": "sections/cofactor_singular_curve.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2884,7 +2890,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 626,
+  "version": 627,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
