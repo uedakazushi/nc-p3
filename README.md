@@ -2,7 +2,7 @@
 
 **共同研究：** 本リポジトリは大川新之介・植田一石の共同研究プロジェクトです。この表示は個々の論文の著者を確定するものではありません。
 
-**2026-11-28 / v647。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-28 / v648。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -850,6 +850,8 @@ PI正則窓が中心上有限になる必要十分条件を、非頂点単純と
 非正規な非錐三次の核像を排除した。非正規三次錐でも母線入力次数二の場合は生じない。[導手繊維と残余母線](sections/cofactor_cubic_conductor_base.tex)
 
 三重横断線を通る平面束の三母線行列式で、十八次の最後の三次核曲面を排除した。四次錐と四次核の一単純基点も排除される。[三重横断線の外の三母線](sections/cofactor_triple_transversal.tex)
+
+十八次の最後の非正規四次核曲面を排除した。整で一般被約な階数二曲線は二十次の二次曲面射影と二十一次のBezout表示だけに絞られる。[四次正規化と十八次の排除](sections/cofactor_eighteen_quartic_normalization.tex)
 
 非恒等の平面グラフを基底に持つOre窓では、指定点を忘れた同型類も決定した。[正規形と平坦特殊化](sections/plane_graph_ore_windows.tex)・[検算](computations/verify_plane_graph_ore.py)
 

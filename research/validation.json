@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 647,
+  "version": 648,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "3d53aa5cf5f71522d0fc9b8ca5a8879aaf1198d8"
+    "source_commit": "c7f413225333e4f06eaff4f926a5a5d20de7d398"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All cubic kernel surfaces at degree 18 are excluded. A cubic cone with line rulings would have at least seventeen triple fibers off a triple transversal; the residual ruling determinant has degree sixteen. Quartic cones and the square-nine branched inverse base are also excluded."
+    "scope": "Degree 18 is excluded in all kernel-image branches. For the last nonnormal quartics, irregular rulings, rational sections of genus two and one, and all genus-zero scroll projections contradict adjunction, trace or fixed sections. Integral generically reduced curve excess now has only the degree-20 quadric and degree-21 Bezout models."
   },
   "checks": [
     {
-      "command": "python computations/verify_cofactor_triple_transversal.py",
+      "command": "python computations/verify_cofactor_quartic_normalization.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine baseless square-eight inverses on smooth models of nonnormal noncone quartics at degree 18, and the other unresolved branches."
+    "Resolve the exceptional extensions on the degree-20 quadric and degree-21 Bezout models and the nonintegral or thick excess branches."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1125,
+      "nc-p3": 1127,
       "plan_ja": 25,
       "notes_ja": 42
     },

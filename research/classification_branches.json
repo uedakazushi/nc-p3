@@ -2953,6 +2953,12 @@
       "current_result": "All cubic kernel surfaces at degree 18 are excluded. A cubic cone with line rulings would have at least seventeen triple fibers off a triple transversal; the residual ruling determinant has degree sixteen. Quartic cones and the square-nine branched inverse base are also excluded.",
       "current_proof": "sections/cofactor_triple_transversal.tex",
       "global_coverage": false
+    },
+    {
+      "id": "COFACTOR-EXCLUDE-EIGHTEEN",
+      "current_result": "Degree 18 is excluded in all kernel-image branches. For the last nonnormal quartics, irregular rulings, rational sections of genus two and one, and all genus-zero scroll projections contradict adjunction, trace or fixed sections. Integral generically reduced curve excess now has only the degree-20 quadric and degree-21 Bezout models.",
+      "current_proof": "sections/cofactor_eighteen_quartic_normalization.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -3010,7 +3016,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 647,
+  "version": 648,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
