@@ -2743,6 +2743,12 @@
       "current_result": "Every smooth integral quintic is excluded from the opposite rank-one locus in reduced finite windows. Elliptic projected models with nontrivial two-torsion have at most three common off-curve points, while six are required. Rational normalization is also excluded away from quadrics.",
       "current_proof": "sections/rank_one_projected_quintics.tex",
       "global_coverage": false
+    },
+    {
+      "id": "RANK-ONE-SINGULAR-QUINTICS",
+      "current_result": "All geometrically integral quintic rank-one components, including singular curves, are impossible in every reduced four-edge finite window. At a singular length-one secant the two pencils trivialize the two-torsion after a single double-point blowup, forcing an impossible three-point partition. Irreducible rank-one components have degree at most four.",
+      "current_proof": "sections/rank_one_singular_quintics.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2800,7 +2806,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 612,
+  "version": 613,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
