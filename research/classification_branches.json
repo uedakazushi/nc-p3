@@ -2929,6 +2929,12 @@
       "current_result": "At degree 18 all normal cubic kernels, including cones, are impossible. The same holds for nonnormal cubics with genus-four sectional sextic or with genus-three section and inverse defined in codimension one. Hilbert-Burch incidence and quadric sections on a singular cubic deform to the degree-13/14 triple counts.",
       "current_proof": "sections/cofactor_eighteen_cubic_incidence.tex",
       "global_coverage": false
+    },
+    {
+      "id": "COFACTOR-EIGHTEEN-QUARTIC-CONE-RULING",
+      "current_result": "All normal quartic kernels in degree 18, and quartics with inverse regular in codimension one, are excluded by dualizing adjunction on the sectional sextic. The remaining double cone kernel has input degree two on a ruling, finite normalization, and branch class 2aE+2bF with a=0,1 and b=1,2.",
+      "current_proof": "sections/cofactor_eighteen_quartic_and_cone_degree.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2986,7 +2992,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 643,
+  "version": 644,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
