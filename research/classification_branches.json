@@ -2479,6 +2479,12 @@
       "current_result": "On every finite Frobenius window, standard regularity with five-matrix identities at all four corners is equivalent to the previous degree-32 four-matrix test. No Noetherianity is assumed. Balanced dimension-four simples are globally one-sided for vertex first extensions without PI. A remaining noncentral PI degeneration with only small simples would force infinitely many orthogonal binary intermediates in a fixed finite second Ext group.",
       "current_proof": "sections/five_matrix_finite_windows.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SINGLE-FIVE-MATRIX-CORNER",
+      "current_result": "Every finite-dimensional simple with a vertex of dimension four on a regular finite window has dimension four at every vertex, without PI assumptions. Improved five-dimensional restriction ranks, simultaneous middle vertices avoiding a corner, and the rank-two middle product bound at dimension six give a finite dimension-profile proof. Five-matrix identities at only one designated corner now imply the full degree-32 criterion and index two or four.",
+      "current_proof": "sections/single_five_matrix_corner.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2536,7 +2542,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 568,
+  "version": 569,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

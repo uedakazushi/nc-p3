@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 568,
+  "version": 569,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "c7d7f442ed6f21e6fc646e0a259f4b9b4a1a49e5"
+    "source_commit": "7a41daeedffcf0f6a979512fa0009ac5ac2c4ac6"
   },
   "generation": {
     "result": "PASS",
-    "scope": "On every finite Frobenius window, standard regularity with five-matrix identities at all four corners is equivalent to the previous degree-32 four-matrix test. No Noetherianity is assumed. Balanced dimension-four simples are globally one-sided for vertex first extensions without PI. A remaining noncentral PI degeneration with only small simples would force infinitely many orthogonal binary intermediates in a fixed finite second Ext group."
+    "scope": "Every finite-dimensional simple with a vertex of dimension four on a regular finite window has dimension four at every vertex, without PI assumptions. Improved five-dimensional restriction ranks, simultaneous middle vertices avoiding a corner, and the rank-two middle product bound at dimension six give a finite dimension-profile proof. Five-matrix identities at only one designated corner now imply the full degree-32 criterion and index two or four."
   },
   "checks": [
     {
-      "command": "python computations/verify_five_matrix_finite_windows.py",
+      "command": "python computations/verify_single_five_matrix_corner.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Remove the remaining multiple-corner hypotheses and handle larger PI indices, as well as non-PI and singular finite-edge extensions outside the covered loci."
+    "Analyze the first unbalanced dimension profiles with minimum at least five, larger composite PI indices, and general regular finite or nonfinite windows outside the known components."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 984,
+      "nc-p3": 986,
       "plan_ja": 22,
       "notes_ja": 37
     },
