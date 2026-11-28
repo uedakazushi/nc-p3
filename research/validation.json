@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 596,
+  "version": 597,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "f01f36bc3aa78351a2d9a54ba26a55a9b93d3a0c"
+    "source_commit": "6ee348126f789a5e937a7df6b4b476ac2fa7aebf"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For reduced finite windows with finite rank-at-most-two locus the opposite determinant is squarefree and has an irreducible factor of degree at least four. Its twenty tangent cubics are reduced; plane, quadric and cubic factors have total marked multiplicity at most 7, 14 and 22."
+    "scope": "If all clean reduced opposite-octic factors have degree at most four then the only possible splitting is an irreducible quartic with sixteen marked double points plus the four faces of a tetrahedron, with four further marks at its vertices. In particular two irreducible quartics cannot occur."
   },
   "checks": [
     {
-      "command": "python computations/verify_reducible_octic_factors.py",
+      "command": "python computations/verify_quartic_octic_splitting.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine the surviving large factors and their kernel maps, including quartic splittings. Continue the exceptional finite middles and global AS coverage."
+    "Resolve the surviving sixteen-double-point quartic and tetrahedron, and the large-degree splittings. Continue exceptional finite middles and global AS coverage."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1038,
+      "nc-p3": 1039,
       "plan_ja": 24,
       "notes_ja": 39
     },

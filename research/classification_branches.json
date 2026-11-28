@@ -2647,6 +2647,12 @@
       "current_result": "For reduced finite windows with finite rank-at-most-two locus the opposite determinant is squarefree and has an irreducible factor of degree at least four. Its twenty tangent cubics are reduced; plane, quadric and cubic factors have total marked multiplicity at most 7, 14 and 22.",
       "current_proof": "sections/reducible_octic_factors.tex",
       "global_coverage": false
+    },
+    {
+      "id": "QUARTIC-OCTIC-SPLITTING",
+      "current_result": "If all clean reduced opposite-octic factors have degree at most four then the only possible splitting is an irreducible quartic with sixteen marked double points plus the four faces of a tetrahedron, with four further marks at its vertices. In particular two irreducible quartics cannot occur.",
+      "current_proof": "sections/quartic_octic_splitting.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2704,7 +2710,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 596,
+  "version": 597,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
