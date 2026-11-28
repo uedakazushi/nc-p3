@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 601,
+  "version": 602,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "f65062ff9e3abca62e3b552cb31312bf60fecf1c"
+    "source_commit": "4fb17bfdb5a320b900a68d60889b3e03272d9ba1"
   },
   "generation": {
     "result": "PASS",
-    "scope": "A marked triple point on the cubic factor is impossible. The plane of each ruling kernel selects one factor of the tangent conic, excluding smooth elliptic bases. For a nodal base the binary degrees 1 and 2 give a compactified incidence with at most three residual points, contradicted by complete-intersection duality. Only normal cubics with the three marked double-point budgets remain."
+    "scope": "Every reduced finite window with finite rank-at-most-two locus has geometrically integral opposite determinant. A nondominant family of dual conics contradicts the ten-dimensional span; the degree-one Cayley cubic case contradicts the invariant residue on its degree-six del Pezzo double cover. This removes the integrality assumption from the canonical model on the entire reduced finite-low-rank locus."
   },
   "checks": [
     {
-      "command": "python computations/verify_marked_cubic_cone_exclusion.py",
+      "command": "python computations/verify_clean_octic_integrality.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Resolve the normal three- and four-double-point cubics paired with quintics, and continue the exceptional middles and all-degree AS coverage."
+    "Address positive-dimensional low-rank loci and nonreduced clean windows. Continue exceptional integral middles and all-degree AS coverage."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1046,
+      "nc-p3": 1047,
       "plan_ja": 24,
       "notes_ja": 39
     },

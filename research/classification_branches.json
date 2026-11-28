@@ -2677,6 +2677,12 @@
       "current_result": "A marked triple point on the cubic factor is impossible. The plane of each ruling kernel selects one factor of the tangent conic, excluding smooth elliptic bases. For a nodal base the binary degrees 1 and 2 give a compactified incidence with at most three residual points, contradicted by complete-intersection duality. Only normal cubics with the three marked double-point budgets remain.",
       "current_proof": "sections/marked_cubic_cone_exclusion.tex",
       "global_coverage": false
+    },
+    {
+      "id": "CLEAN-OCTIC-INTEGRALITY",
+      "current_result": "Every reduced finite window with finite rank-at-most-two locus has geometrically integral opposite determinant. A nondominant family of dual conics contradicts the ten-dimensional span; the degree-one Cayley cubic case contradicts the invariant residue on its degree-six del Pezzo double cover. This removes the integrality assumption from the canonical model on the entire reduced finite-low-rank locus.",
+      "current_proof": "sections/clean_octic_integrality.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2734,7 +2740,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 601,
+  "version": 602,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
