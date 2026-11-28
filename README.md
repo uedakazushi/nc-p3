@@ -2,7 +2,7 @@
 
 **共同研究：** 本リポジトリは大川新之介・植田一石の共同研究プロジェクトです。この表示は個々の論文の著者を確定するものではありません。
 
-**2026-11-28 / v641。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-28 / v642。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -838,6 +838,8 @@ PI正則窓が中心上有限になる必要十分条件を、非頂点単純と
 十八次の滑らかな二次核曲面では双有理の場合を二次数と全基点型にわたり排除した。[二次曲面への双有理核](sections/cofactor_eighteen_birational_quadric.tex)
 
 十八次の滑らかな二次核曲面は二重被覆の場合も生じない。非対称な母線次数と対称な三次母線を別々に排除した。[滑らかな二次曲面の二重被覆](sections/cofactor_eighteen_double_quadric.tex)
+
+十八次の二次錐への双有理核を、頂点でも有効な導手と重複度の等式で排除した。[二次錐の頂点と部分正規化](sections/cofactor_eighteen_cone_inverse.tex)
 
 非恒等の平面グラフを基底に持つOre窓では、指定点を忘れた同型類も決定した。[正規形と平坦特殊化](sections/plane_graph_ore_windows.tex)・[検算](computations/verify_plane_graph_ore.py)
 
