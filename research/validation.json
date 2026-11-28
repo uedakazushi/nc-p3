@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 551,
+  "version": 552,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "37173349297ccb52423bbd2345ea020ae7662ffa"
+    "source_commit": "b3b8b6a585f87b4b6f414c70cf719788181fc26c"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every finite-edge length-twenty configuration, including nonreduced ones, has no degree 2m hypersurface in its m-th ideal sheaf power for any m>0. Its four-secant lines are pairwise skew. The six bilinears restrict dominantly to every integral surface times the other projective three-space. In the four-matrix residual every size-two simple has identically singular compressed six-by-six pencils at all four positions, even at nonreduced point configurations."
+    "scope": "Across all components, finite regular windows satisfying four-matrix identities at every corner are always center-finite composable domains of vertex index two or four. They are recognized by the octic central normalization test (path degree 30, quotient degree 29, Koszul degree 32) and the generic corner degree. The periodic-tail Ext incidence with a fixed thin simple cannot escape to infinity in a size-two character cone with disjoint vertex-extension directions, so all bad size-two orbits are finite up to scale. A regular PI algebra cannot have only finitely many grading orbits of simple modules."
   },
   "checks": [
     {
-      "command": "python computations/verify_finite_edge_symbolic_powers.py",
+      "command": "python computations/verify_four_matrix_all_regular.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Use periodic-tail spectra over projectivized trace families to bound the size of the remaining bad simple locus, and analyze uncovered finite components."
+    "Remove the uniform four-corner hypothesis by studying single-corner matrix identities, and determine other finite components and their centers, periods and degenerations."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 957,
+      "nc-p3": 959,
       "plan_ja": 22,
       "notes_ja": 36
     },

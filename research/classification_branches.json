@@ -2377,6 +2377,12 @@
       "current_result": "Every finite-edge length-twenty configuration, including nonreduced ones, has no degree 2m hypersurface in its m-th ideal sheaf power for any m>0. Its four-secant lines are pairwise skew. The six bilinears restrict dominantly to every integral surface times the other projective three-space. In the four-matrix residual every size-two simple has identically singular compressed six-by-six pencils at all four positions, even at nonreduced point configurations.",
       "current_proof": "sections/finite_edge_symbolic_powers.tex",
       "global_coverage": false
+    },
+    {
+      "id": "FOUR-MATRIX-REGULAR-WINDOWS-ON-ALL-COMPONENTS",
+      "current_result": "Across all components, finite regular windows satisfying four-matrix identities at every corner are always center-finite composable domains of vertex index two or four. They are recognized by the octic central normalization test (path degree 30, quotient degree 29, Koszul degree 32) and the generic corner degree. The periodic-tail Ext incidence with a fixed thin simple cannot escape to infinity in a size-two character cone with disjoint vertex-extension directions, so all bad size-two orbits are finite up to scale. A regular PI algebra cannot have only finitely many grading orbits of simple modules.",
+      "current_proof": "sections/four_matrix_all_regular.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2434,7 +2440,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 551,
+  "version": 552,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
