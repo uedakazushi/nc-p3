@@ -61,7 +61,7 @@ def general_pair():
         assert sorted(f.degree() for f, _ in reduction.factor_list()[1]) == degrees
 
 
-def common_quadric():
+def common_quadric_transform():
     form = sp.zeros(5)
     form[0, 4] = form[4, 0] = 1
     form[1, 3] = form[3, 1] = 3
@@ -75,6 +75,11 @@ def common_quadric():
             transform = (sp.eye(5)-2*v*v.T*form/value)*transform
     transform = transform.T
     assert transform*form*transform.T == form
+    return transform
+
+
+def common_quadric():
+    transform = common_quadric_transform()
     hankel = [sp.Matrix(5, 5, lambda i, j: int(i+j == h)) for h in range(9)]
     equations = sp.Matrix.hstack(*(m.reshape(25, 1) for m in hankel+[-transform.T*h*transform for h in hankel]))
     coefficients = null_columns(equations)[9:, :]

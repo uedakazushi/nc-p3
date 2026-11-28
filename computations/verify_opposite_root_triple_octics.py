@@ -38,7 +38,7 @@ def quotient_projection(rel, degree):
     return basis, projection
 
 
-def octic_nullity(rel):
+def octic_evaluation(rel):
     six, projection = quotient_projection(rel, 6)
     eight = monomials(8)
     multipliers = monomials(2)
@@ -53,7 +53,12 @@ def octic_nullity(rel):
                 remaining.remove(j)
                 derivative[six[tuple(remaining)], k] = count
         blocks.append(projection@derivative % P)
-    return len(eight)-len(reduced(np.vstack(blocks))[1])
+    return np.vstack(blocks)
+
+
+def octic_nullity(rel):
+    matrix = octic_evaluation(rel)
+    return matrix.shape[1]-len(reduced(matrix)[1])
 
 
 def main():

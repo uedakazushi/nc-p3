@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-28",
-  "version": 576,
+  "version": 577,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -5654,6 +5654,15 @@
       "verification": [
         "computations/verify_trisecant_middle_simple_obstruction.py"
       ]
+    },
+    {
+      "id": "TRISECANT-COMMON-QUADRIC-LOCUS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "The locus of quartic curve pairs on a common quadric is irreducible of codimension four in PGL5. On its dense open set the canonical candidate is finite Frobenius and the odd configuration has a unique normal triple octic. Any regular completion of the marked even pair must then be the candidate or its reversal, both excluded. The two-order rigidity lemma applies to arbitrary finite candidates, including nonreduced ones, with a clean odd matrix.",
+      "proof": "sections/trisecant_common_quadric_locus.tex",
+      "verification": [
+        "computations/verify_trisecant_common_quadric_locus.py"
+      ]
     }
   ],
   "document_paths": {
@@ -5717,7 +5726,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "346e6ed694751eb9a4d81745eae62a33aa85534e",
+  "reviewed_source_commit": "3783cd4a77c1f756f8187ae784c85d0eb101ce4e",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -5726,14 +5735,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Determine whether exceptional parameters admit other middle roots, including along the common-quadric locus. Continue integral higher-cofactor, reducible-octic, and general finite-window coverage.",
+    "immediate_next_action": "Determine the remaining exceptional middle roots on the trisecant parameter space, and the effect of the opposite square-root scheme tangent on higher-cofactor and general windows.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/trisecant_middle_simple_obstruction.tex",
-      "sections/seven_cofactor_trisecant_grassmannian.tex"
+      "sections/trisecant_common_quadric_locus.tex",
+      "sections/trisecant_middle_simple_obstruction.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "For every pair of distinct rational normal quartics the canonical trisecant middle edges admit no four-edge-finite standard regular extension, including all degenerate common quadrics and nonreduced intersections. An explicit small simple gives the obstruction. On a dense open set even arbitrary alternative middle coordinates are excluded by the trace pairing, an octic evaluation and a reproducible S20 certificate. A separate rational sample passes finite Frobenius and has a (3,2,2,3) simple. Full classification remains open.",
+    "state_of_claim": "The locus of quartic curve pairs on a common quadric is irreducible of codimension four in PGL5. On its dense open set the canonical candidate is finite Frobenius and the odd configuration has a unique normal triple octic. Any regular completion of the marked even pair must then be the candidate or its reversal, both excluded. The two-order rigidity lemma applies to arbitrary finite candidates, including nonreduced ones, with a clean odd matrix. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

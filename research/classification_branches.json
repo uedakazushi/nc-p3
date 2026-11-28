@@ -2527,6 +2527,12 @@
       "current_result": "For every pair of distinct rational normal quartics the canonical trisecant middle edges admit no four-edge-finite standard regular extension, including all degenerate common quadrics and nonreduced intersections. An explicit small simple gives the obstruction. On a dense open set even arbitrary alternative middle coordinates are excluded by the trace pairing, an octic evaluation and a reproducible S20 certificate. A separate rational sample passes finite Frobenius and has a (3,2,2,3) simple.",
       "current_proof": "sections/trisecant_middle_simple_obstruction.tex",
       "global_coverage": false
+    },
+    {
+      "id": "TRISECANT-COMMON-QUADRIC-LOCUS",
+      "current_result": "The locus of quartic curve pairs on a common quadric is irreducible of codimension four in PGL5. On its dense open set the canonical candidate is finite Frobenius and the odd configuration has a unique normal triple octic. Any regular completion of the marked even pair must then be the candidate or its reversal, both excluded. The two-order rigidity lemma applies to arbitrary finite candidates, including nonreduced ones, with a clean odd matrix.",
+      "current_proof": "sections/trisecant_common_quadric_locus.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2584,7 +2590,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 576,
+  "version": 577,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

@@ -24,6 +24,10 @@ def plane_section(change, prime):
     for perm in permutations(range(4)):
         sign = (-1)**sum(perm[i] > perm[j] for i, j in combinations(range(4), 2))
         result += sign*prod(entries[PAIRS.index(tuple(sorted((i, perm[i]))))] for i in range(4))
+    smooth_plane_form(result, prime)
+
+
+def smooth_plane_form(result, prime):
     rows = []
     for i in range(3):
         derivative = result.derivative(i).to_dict()
