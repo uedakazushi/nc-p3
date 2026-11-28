@@ -2,7 +2,7 @@
 
 **共同研究：** 本リポジトリは大川新之介・植田一石の共同研究プロジェクトです。この表示は個々の論文の著者を確定するものではありません。
 
-**2026-11-28 / v548。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-28 / v549。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -32,6 +32,7 @@ Walsh基底を持つ隣接階数6の四窓は、符号付き平方行列 $N$ の
 
 Walsh三次元族を含む十五次元成分と、そこから出る周期2の成分では、次のことが分かっている。
 
+- この閉包の有限四辺では全正則点が中心有限な合成整域になり、正則性を例外値も含めて16次までで判定できる。実現した窓の添字保持同型は偏極中心とKummer印で決まる。[全正則点の証明](sections/main_regular_specialization.tex)
 - 十五次元成分では、指定の窓に法53で還元される持上げは全て正則で、最小周期4の正則な代数的閉点が稠密にある。[良い還元の判定](sections/unrestricted_good_reduction.tex)
 - 一般Walsh点から出る周期2の局所枝の次元は9、5、5、5である。後の三枝は大域では一つの成分に属し、二倍率と二つの二次式を満たす平面から一般窓を復元できる。[四つの周期層](sections/walsh_full_component.tex)・[成分の正規化](sections/half_period_components.tex)・[五次元成分の復元](sections/half_period_two_quadrics.tex)
 - 九次元成分の一般窓は滑らかな二次曲面、四直線枠と三自由重みで決まる。三重みを変えても中心商は一定で、枠のGram行列と逆行列の対角が全て非零なら全ての許容重みで正則である。[枠の復元](sections/half_period_frame.tex)・[共通中心商](sections/half_period_weight_fibers.tex)・[正則性の証明](sections/half_period_semisimple.tex)
@@ -665,6 +666,8 @@ PI正則窓が中心上有限になる必要十分条件を、非頂点単純と
 四行列恒等式の有限正則窓では二・三次元の均衡単純が頂点と第一拡張を持つ向きは高々一方である。三行列恒等式の場合、一隅半素なら任意の成分で通常Clifford窓になる。[証明](sections/pi_yoneda_bridges.tex)
 
 全四隅が四行列恒等式を持つ有限正則窓では、全非頂点単純が均衡し、根基を割った環は左右Noetherである。[次元型の排除と半素商](sections/four_matrix_balanced_simples.tex)
+
+十五次元閉包の有限四辺では、全正則点が合成整域になる。標準候補の正則性は経路14次・中心剰余13次・Koszul複体16次までの四次中心検査と同値で、正則軌跡は開である。[整域仮定を除く証明](sections/main_regular_specialization.tex)
 
 非恒等の平面グラフを基底に持つOre窓では、指定点を忘れた同型類も決定した。[正規形と平坦特殊化](sections/plane_graph_ore_windows.tex)・[検算](computations/verify_plane_graph_ore.py)
 

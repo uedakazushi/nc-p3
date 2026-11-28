@@ -2359,6 +2359,12 @@
       "current_result": "Every nonvertex simple on any finite regular window whose corners satisfy four-matrix identities has constant dimension vector. Every homogeneous prime quotient, and the quotient by the radical, are left and right Noetherian. A semiprime corner therefore implies a center-finite composable domain on every component. The remaining mixed profile (2,2,2,3) is excluded by incompatible lower and upper bounds on second Ext between universal head and socle extensions.",
       "current_proof": "sections/four_matrix_balanced_simples.tex",
       "global_coverage": false
+    },
+    {
+      "id": "MAIN-CLOSURE-ALL-FINITE-REGULAR-WINDOWS-QUARTIC-TEST",
+      "current_result": "On the entire finite-edge locus of the fifteen-dimensional closure every standard regular window is a center-finite composable domain of vertex index four. Regularity is equivalent to the quartic parameter test through path degree 14, parameter quotient degree 13 and Koszul degree 16, and is relatively open. Polarized centers with their origin-corner Kummer class distinguish all realized indexed isomorphism classes. Proof: no nonzero relative trace fiber can mix vertex and nonvertex simples; relative graded Nakayama gives a finite centralizing extension of the original order over a DVR, so Noetherianity descends before specialization.",
+      "current_proof": "sections/main_regular_specialization.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2416,7 +2422,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 548,
+  "version": 549,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

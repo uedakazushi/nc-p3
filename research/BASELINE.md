@@ -13,6 +13,10 @@ Izuru Mori and Adam Nyman, *A categorical characterization of quantum projective
 隣接Hom次元6,3,3,0,3,3の不一致は、添字を固定した成分ごとの有限局所自由な変形で保持される。
 これは既知定理の適用による標準14641型の外の例であり、nc-p3の主問題の解決でも新規性の主張でもない。
 
+## 有限中心化拡大に沿うNoether性の降下
+
+Formanek–Jategaonkar, *Subrings of Noetherian rings* の有限中心化拡大に対する降下を使う。包含 $R\subset S$ で、$R$ を中心化する有限個の元が $S$ を右 $R$ 加群として生成するとき、右Noetherな $S$ から右Noetherな $R$ が従う。反対環で左も同様である。原稿ではtrace環から素商へ、また離散付値環上のtrace環から経路格子へ適用する。双方とも生成係数は拡大環の中心にある。[相対格子での適用](../sections/main_regular_specialization.tex)
+
 ## 現行プロジェクトと確認範囲
 
 主原稿は `papers/nc-p3.tex`、証明の対応表は `research/STATE.json`、検証対象のcommit・コード・実行結果は `research/validation.json` に集約する。
