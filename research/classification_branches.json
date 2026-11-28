@@ -2593,6 +2593,12 @@
       "current_result": "At any rank-one point of an integral opposite octic with nonzero cubic tangent cone, a curve-valued generic kernel forces three lines. For nine cofactors the rank of the restricted kernel quadric determines the possible tangent nets. In particular a smooth cubic tangent cone forces ten independent cofactors and a surface-valued kernel.",
       "current_proof": "sections/cofactor_tangent_nets.tex",
       "global_coverage": false
+    },
+    {
+      "id": "OCTIC-KERNEL-IMAGE-DEGREE",
+      "current_result": "For an integral opposite octic with finite rank-at-most-two locus the kernel map has degree times image degree twelve, and a general target plane has an integral residual cover of arithmetic genus twenty-five. All four maps on the general fifteen-dimensional component are birational to degree-twelve surfaces; the plane-section algebra has conductor quotient length thirty. With a rank-two curve but finite rank-one scheme the moving degree is at most eleven.",
+      "current_proof": "sections/octic_kernel_image_degree.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2650,7 +2656,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 587,
+  "version": 588,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

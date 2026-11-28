@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 587,
+  "version": 588,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "d503f9ab08ee1066bb1766dbdd2c0bab0c01363d"
+    "source_commit": "16cc880945cc444ae7d12cdceb8856efe3ac693a"
   },
   "generation": {
     "result": "PASS",
-    "scope": "At any rank-one point of an integral opposite octic with nonzero cubic tangent cone, a curve-valued generic kernel forces three lines. For nine cofactors the rank of the restricted kernel quadric determines the possible tangent nets. In particular a smooth cubic tangent cone forces ten independent cofactors and a surface-valued kernel."
+    "scope": "For an integral opposite octic with finite rank-at-most-two locus the kernel map has degree times image degree twelve, and a general target plane has an integral residual cover of arithmetic genus twenty-five. All four maps on the general fifteen-dimensional component are birational to degree-twelve surfaces; the plane-section algebra has conductor quotient length thirty. With a rank-two curve but finite rank-one scheme the moving degree is at most eleven."
   },
   "checks": [
     {
-      "command": "python computations/verify_cofactor_tangent_nets.py",
+      "command": "python computations/verify_octic_kernel_image_degree.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Use the global cofactor quadric in the nine-dimensional case: reshape the smooth quadric moments into a three-by-three matrix and analyze the binary Bezout pencil on the cone. Excess singular eight-cofactor and general windows remain open."
+    "Analyze the smooth-quadric and quadric-cone nine-cofactor transfer matrices and the low-degree alternatives of the clean kernel incidence. Continue excess singular finite pencils and global regular-window coverage."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1024,
+      "nc-p3": 1025,
       "plan_ja": 23,
       "notes_ja": 38
     },
