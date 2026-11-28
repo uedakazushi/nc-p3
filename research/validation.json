@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 592,
+  "version": 593,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "63a9e5c1cf3546ccbaf7ebcad5a7ed1b639adbc9"
+    "source_commit": "15afe4327d12ed066cfa92182f3eac1d69af2c74"
   },
   "generation": {
     "result": "PASS",
-    "scope": "In every singular finite eight-cofactor pencil the fifteen common-cubic minors span at most eleven dimensions and their excess curve has degree at least four, with only lines and plane conics as irreducible supports. Excess Eagon-Northcott homology and the geometry of all line and plane projection centers give the bound even for nonreduced inputs."
+    "scope": "The entire rank-one scheme of every singular finite eight-cofactor member is the coincidence scheme on the projective bundle of sections through a residual point of the singular genus-one curve. Cartier four-point multiplication and relative torsion-free point ideals recover the conductor and infinitesimal lifts. Horizontal multiplicity is at most one, except for two distinct opposite scalar sections at nodal fourth torsion."
   },
   "checks": [
     {
-      "command": "python computations/verify_deficient_plucker_centers.py",
+      "command": "python computations/verify_singular_residual_gluing.py",
       "result": "PASS"
     },
     {
@@ -36,14 +36,14 @@
     }
   ],
   "open_mathematics": [
-    "Lift the common cubic incidence over the singular genus-one curve itself via rank-one torsion-free residual ideals, including proportional conductor supports. Continue global regularity and excess branches."
+    "Use the excess Koszul homology of the coincidence scheme and the cubic evaluation on its horizontal and vertical parts to decide all singular finite members on nonreduced windows."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1031,
-      "plan_ja": 23,
-      "notes_ja": 38
+      "nc-p3": 1033,
+      "plan_ja": 24,
+      "notes_ja": 39
     },
     "scope": "LuaLaTeX built the manuscript, plan and research notes."
   },

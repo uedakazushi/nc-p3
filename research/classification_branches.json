@@ -2623,6 +2623,12 @@
       "current_result": "In every singular finite eight-cofactor pencil the fifteen common-cubic minors span at most eleven dimensions and their excess curve has degree at least four, with only lines and plane conics as irreducible supports. Excess Eagon-Northcott homology and the geometry of all line and plane projection centers give the bound even for nonreduced inputs.",
       "current_proof": "sections/deficient_plucker_centers.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SINGULAR-RESIDUAL-GLUING",
+      "current_result": "The entire rank-one scheme of every singular finite eight-cofactor member is the coincidence scheme on the projective bundle of sections through a residual point of the singular genus-one curve. Cartier four-point multiplication and relative torsion-free point ideals recover the conductor and infinitesimal lifts. Horizontal multiplicity is at most one, except for two distinct opposite scalar sections at nodal fourth torsion.",
+      "current_proof": "sections/singular_residual_gluing.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2680,7 +2686,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 592,
+  "version": 593,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
