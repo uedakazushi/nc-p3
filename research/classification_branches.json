@@ -2569,6 +2569,12 @@
       "current_result": "For every reduced finite Frobenius window an integral eight-cofactor nodal or cuspidal kernel cannot have a finite unbranched pencil member. The normalization incidence covers even proportional conductor points. Removing constant eigenlines bounds every finite residual pencil by explicit Chern lengths, and distinct eigenlines cannot both have degree one. The reduced nodal cases left are order two and boundary, and the reduced cusp case left is boundary.",
       "current_proof": "sections/singular_residual_pencils.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SINGULAR-BOUNDARY-BEZOUT",
+      "current_result": "On reduced four-edge finite Frobenius windows, all integral eight-cofactor opposite matrices are excluded, including both singular boundary Hankel members and the finite nodal order-two member. For arbitrary finite windows the boundary normal forms have length at most sixteen off the conductor input line.",
+      "current_proof": "sections/singular_boundary_bezout.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2626,7 +2632,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 583,
+  "version": 584,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
