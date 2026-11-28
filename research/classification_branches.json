@@ -2857,6 +2857,12 @@
       "current_result": "Every integral generically reduced positive-dimensional cofactor locus in the reduced finite setting spans no quartic carrier, has degree 17 through 21, and forces an irreducible determinant octic. Its limiting image planes span the full Plucker space.",
       "current_proof": "sections/cofactor_integral_octic.tex",
       "global_coverage": false
+    },
+    {
+      "id": "COFACTOR-EXTREME-DEGREES",
+      "current_result": "For integral generically reduced cofactor curves degree seventeen is impossible. The plane-section kernel degree is exactly 24 minus the curve degree; degree twenty-one forces the seven-cofactor Bezout normal form, and degree twenty with surface image is birational to a quadric.",
+      "current_proof": "sections/cofactor_extreme_degrees.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2914,7 +2920,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 631,
+  "version": 632,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 631,
+  "version": 632,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "6d7cdccd4b942880b69ca4c7e01b2c9c0528a5f4"
+    "source_commit": "011d53c8578f0c8da66780c9fd404a093d62e6d5"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every integral generically reduced positive-dimensional cofactor locus in the reduced finite setting spans no quartic carrier, has degree 17 through 21, and forces an irreducible determinant octic. Its limiting image planes span the full Plucker space."
+    "scope": "For integral generically reduced cofactor curves degree seventeen is impossible. The plane-section kernel degree is exactly 24 minus the curve degree; degree twenty-one forces the seven-cofactor Bezout normal form, and degree twenty with surface image is birational to a quadric."
   },
   "checks": [
     {
-      "command": "python computations/verify_cofactor_integral_octic.py",
+      "command": "python computations/verify_cofactor_extreme_degrees.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine the kernel maps of the five remaining plane-section degrees, connect degree 21 to the Bezout window, and treat reconstruction, reducible and nonreduced supports."
+    "Construct the degree-twenty quadric normalization and its symmetric presentation, then determine the degree eighteen and nineteen graph branches and AS extension."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1095,
+      "nc-p3": 1096,
       "plan_ja": 25,
       "notes_ja": 41
     },
