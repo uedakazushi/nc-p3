@@ -2605,6 +2605,12 @@
       "current_result": "For a nine-cofactor smooth kernel quadric, a quartic three-by-three matrix vanishes on the window, has determinant d times the square of a trace quadric, and recovers the nine sextic moments. For a quadric cone the primitive binary cubic pencil has resultant f squared times d. The vertex fiber is nonempty and cannot be a simple singleton on a smooth trace quadric.",
       "current_proof": "sections/nine_cofactor_transfers.tex",
       "global_coverage": false
+    },
+    {
+      "id": "OCTIC-KERNEL-CANONICAL-MODEL",
+      "current_result": "The graph of a clean integral opposite octic is a canonically embedded Gorenstein surface with K squared 68, irregularity zero and geometric genus 15. Its two projections differ from the canonical bundle by a nontrivial two-torsion line bundle, yielding a canonically embedded etale double cover. The abstract graph with the input polarization and this torsion mark is a complete invariant of the opposite matrix, with finitely many matrix classes on each fixed surface.",
+      "current_proof": "sections/octic_kernel_canonical_model.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2662,7 +2668,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 589,
+  "version": 590,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
