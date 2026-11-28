@@ -2839,6 +2839,12 @@
       "current_result": "No quadric contains the whole generically reduced cofactor curve. An integral such curve has Plucker degree at least three and cubic speciality defect at least two. A locally complete intersection integral curve requires a rank-one singularity with nonextending kernel; no integral global complete intersection occurs.",
       "current_proof": "sections/cofactor_low_surfaces.tex",
       "global_coverage": false
+    },
+    {
+      "id": "COFACTOR-NO-INTEGRAL-CUBIC",
+      "current_result": "An integral generically reduced rank-two cofactor curve of a reduced finite generically invertible opposite root lies on no cubic surface, including nonnormal cubics. Any irreducible determinant cubic whose kernels lie in a fixed pencil forces a rank-two line carrying three marks.",
+      "current_proof": "sections/cofactor_cubic_surface.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2896,7 +2902,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 628,
+  "version": 629,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
