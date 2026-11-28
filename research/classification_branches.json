@@ -2515,6 +2515,12 @@
       "current_result": "All distinct opposite quadratic matrices on all finite Frobenius windows have nonzero determinant, without any assumptions on multiplicities or support. The remaining Gram pencil forces a length-four Frobenius algebra and a grid of two disjoint length-two divisors of the isotropic conic. The reduced grid and both nonreduced grids contradict injective cubic evaluation. Consequently octic-free finite edges have at most one standard regular extension, with a finite existence test across all components.",
       "current_proof": "sections/all_finite_opposite_octics.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SEVEN-COFACTOR-TRISECANT",
+      "current_result": "An integral opposite octic requires at least seven independent sextic cofactors. At equality the quadratic matrix is precisely of binary-quartic Bezout type up to the stated necessary open conditions. Its marked matrix orbit is a symmetric-fourth-power double coset, and its two configurations consist of common trisecant planes to disjoint rational normal quartics. For the canonical middle edge the cubic overlap equals three plus the number of independent common quadrics of the curves, excluding generic parameters. Eight cofactors force an integral elliptic quartic kernel-image complete intersection (possibly singular).",
+      "current_proof": "sections/seven_cofactor_trisecant_grassmannian.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2572,7 +2578,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 574,
+  "version": 575,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

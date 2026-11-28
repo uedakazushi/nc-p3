@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 574,
+  "version": 575,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "11be1916d828b641dbccea0d135ad56b84a0f63c"
+    "source_commit": "e52bc3374285349aed11fd5b96b3823cd8d097e4"
   },
   "generation": {
     "result": "PASS",
-    "scope": "All distinct opposite quadratic matrices on all finite Frobenius windows have nonzero determinant, without any assumptions on multiplicities or support. The remaining Gram pencil forces a length-four Frobenius algebra and a grid of two disjoint length-two divisors of the isotropic conic. The reduced grid and both nonreduced grids contradict injective cubic evaluation. Consequently octic-free finite edges have at most one standard regular extension, with a finite existence test across all components."
+    "scope": "An integral opposite octic requires at least seven independent sextic cofactors. At equality the quadratic matrix is precisely of binary-quartic Bezout type up to the stated necessary open conditions. Its marked matrix orbit is a symmetric-fourth-power double coset, and its two configurations consist of common trisecant planes to disjoint rational normal quartics. For the canonical middle edge the cubic overlap equals three plus the number of independent common quadrics of the curves, excluding generic parameters. Eight cofactors force an integral elliptic quartic kernel-image complete intersection (possibly singular)."
   },
   "checks": [
     {
-      "command": "python computations/verify_all_finite_opposite_octics.py",
+      "command": "python computations/verify_seven_cofactor_trisecant_grassmannian.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Use the universal nonzero triple octic to reconstruct all possible distinct opposite roots in further strata and decide regularity beyond the existing finite criteria. The unrestricted positive-dimensional branches and global specialization classification also remain open."
+    "Decide which common-quadric trisecant parameters yield regular canonical windows, and find or exclude additional middle roots on the same configurations. Continue higher cofactor, reducible-octic, and general finite-window coverage."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 996,
+      "nc-p3": 999,
       "plan_ja": 23,
       "notes_ja": 38
     },
