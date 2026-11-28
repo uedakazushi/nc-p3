@@ -3025,6 +3025,12 @@
       "current_result": "The quadric normalization module is excluded without any assumptions on rank-one fibers or cofactor-curve components. A corank-two curve in the associated quintic web has an invertible half-hyperplane twist with vanishing H1; its marked-length bound excludes every conic, quartic and thickening of the permitted support.",
       "current_proof": "sections/quintic_web_curve_excess.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SECTIONAL-COFACTOR-BUDGET",
+      "current_result": "For every integral opposite octic in a reduced four-finite regular window the sectional kernel degree is at least five. The rank-weighted cofactor curve degree satisfies d+2j<=19, including arbitrary multiple or reducible support. The trace sections exclude a smooth rational quartic kernel even with positive-dimensional rank-one fibers.",
+      "current_proof": "sections/sectional_cofactor_budget.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -3082,7 +3088,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 659,
+  "version": 660,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

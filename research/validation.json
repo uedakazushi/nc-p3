@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 659,
+  "version": 660,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "06084f14fef09e1fdbc5ad27b20fe2febeb9962b"
+    "source_commit": "59d663963823271dd3d45cd4b53571884000776e"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The quadric normalization module is excluded without any assumptions on rank-one fibers or cofactor-curve components. A corank-two curve in the associated quintic web has an invertible half-hyperplane twist with vanishing H1; its marked-length bound excludes every conic, quartic and thickening of the permitted support."
+    "scope": "For every integral opposite octic in a reduced four-finite regular window the sectional kernel degree is at least five. The rank-weighted cofactor curve degree satisfies d+2j<=19, including arbitrary multiple or reducible support. The trace sections exclude a smooth rational quartic kernel even with positive-dimensional rank-one fibers."
   },
   "checks": [
     {
-      "command": "python computations/verify_quintic_web_curve_excess.py",
+      "command": "python computations/verify_sectional_cofactor_budget.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Bound the sectional kernel degree in remaining integral octics, particularly low-degree singular curve kernels and multiple rank-two curves; continue finite and nonfinite coverage."
+    "Resolve sectional degree five for reducible and multiple cofactor support, separating quintic kernel curves and quadric or cubic kernel surfaces."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1147,
+      "nc-p3": 1148,
       "plan_ja": 26,
       "notes_ja": 42
     },
