@@ -2,7 +2,7 @@
 
 **共同研究：** 本リポジトリは大川新之介・植田一石の共同研究プロジェクトです。この表示は個々の論文の著者を確定するものではありません。
 
-**2026-11-28 / v623。標準14641型の完全分類は未完成。正本は GitHub main。**
+**2026-11-28 / v624。標準14641型の完全分類は未完成。正本は GitHub main。**
 
 ## 固定する最上位目標
 
@@ -802,6 +802,8 @@ PI正則窓が中心上有限になる必要十分条件を、非頂点単純と
 反対八次式の重複平面はちょうど二重で、残余は必ず非正規な整六次になる。[五次の三重点配置と残余分割](sections/repeated_octic_plane_residual.tex)
 
 六次残余には四重点以上の点がなく、各平面外印を中心とする一階・二階極の共通切断は必ず曲線を含む。[方向ごとの交数](sections/sextic_residual_triple_polars.tex)
+
+六次残余の三重点は有限個である。三重直線・二次曲線・有理正規三次を全て排除した。[三重曲線の全分割](sections/sextic_residual_triple_curves.tex)
 
 非恒等の平面グラフを基底に持つOre窓では、指定点を忘れた同型類も決定した。[正規形と平坦特殊化](sections/plane_graph_ore_windows.tex)・[検算](computations/verify_plane_graph_ore.py)
 
