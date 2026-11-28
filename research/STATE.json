@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-28",
-  "version": 595,
+  "version": 596,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -5825,6 +5825,15 @@
       "verification": [
         "computations/verify_trisecant_middle_degeneracy.py"
       ]
+    },
+    {
+      "id": "REDUCIBLE-OCTIC-FACTORS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "For reduced finite windows with finite rank-at-most-two locus the opposite determinant is squarefree and has an irreducible factor of degree at least four. Its twenty tangent cubics are reduced; plane, quadric and cubic factors have total marked multiplicity at most 7, 14 and 22.",
+      "proof": "sections/reducible_octic_factors.tex",
+      "verification": [
+        "computations/verify_reducible_octic_factors.py"
+      ]
     }
   ],
   "document_paths": {
@@ -5888,7 +5897,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "9844fea769ce848b2fac740872cec0036839641b",
+  "reviewed_source_commit": "f01f36bc3aa78351a2d9a54ba26a55a9b93d3a0c",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -5897,14 +5906,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Analyze the branch and collision loci of the remaining canonical middle schemes and rule out or construct noncanonical middles. Continue nine- and ten-cofactor, reducible-octic and all-degree coverage.",
+    "immediate_next_action": "Determine the surviving large factors and their kernel maps, including quartic splittings. Continue the exceptional finite middles and global AS coverage.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/trisecant_middle_degeneracy.tex",
-      "sections/eight_cofactor_excess.tex"
+      "sections/reducible_octic_factors.tex",
+      "sections/octic_kernel_canonical_model.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "Every admissible integral seven-cofactor pair has rank exactly three on its full canonical middle scheme, also for nonreduced inputs. The internal cubic Koszul quotient forces the length-twenty scheme isomorphisms. Middle rank two cuts out an irreducible codimension-five excluded locus among disjoint quartic pairs and occurs even for integral octics. Full classification remains open.",
+    "state_of_claim": "For reduced finite windows with finite rank-at-most-two locus the opposite determinant is squarefree and has an irreducible factor of degree at least four. Its twenty tangent cubics are reduced; plane, quadric and cubic factors have total marked multiplicity at most 7, 14 and 22. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

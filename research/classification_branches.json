@@ -2641,6 +2641,12 @@
       "current_result": "Every admissible integral seven-cofactor pair has rank exactly three on its full canonical middle scheme, also for nonreduced inputs. The internal cubic Koszul quotient forces the length-twenty scheme isomorphisms. Middle rank two cuts out an irreducible codimension-five excluded locus among disjoint quartic pairs and occurs even for integral octics.",
       "current_proof": "sections/trisecant_middle_degeneracy.tex",
       "global_coverage": false
+    },
+    {
+      "id": "REDUCIBLE-OCTIC-FACTORS",
+      "current_result": "For reduced finite windows with finite rank-at-most-two locus the opposite determinant is squarefree and has an irreducible factor of degree at least four. Its twenty tangent cubics are reduced; plane, quadric and cubic factors have total marked multiplicity at most 7, 14 and 22.",
+      "current_proof": "sections/reducible_octic_factors.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2698,7 +2704,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 595,
+  "version": 596,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

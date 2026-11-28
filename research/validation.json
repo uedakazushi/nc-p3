@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 595,
+  "version": 596,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "9844fea769ce848b2fac740872cec0036839641b"
+    "source_commit": "f01f36bc3aa78351a2d9a54ba26a55a9b93d3a0c"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every admissible integral seven-cofactor pair has rank exactly three on its full canonical middle scheme, also for nonreduced inputs. The internal cubic Koszul quotient forces the length-twenty scheme isomorphisms. Middle rank two cuts out an irreducible codimension-five excluded locus among disjoint quartic pairs and occurs even for integral octics."
+    "scope": "For reduced finite windows with finite rank-at-most-two locus the opposite determinant is squarefree and has an irreducible factor of degree at least four. Its twenty tangent cubics are reduced; plane, quadric and cubic factors have total marked multiplicity at most 7, 14 and 22."
   },
   "checks": [
     {
-      "command": "python computations/verify_trisecant_middle_degeneracy.py",
+      "command": "python computations/verify_reducible_octic_factors.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze the branch and collision loci of the remaining canonical middle schemes and rule out or construct noncanonical middles. Continue nine- and ten-cofactor, reducible-octic and all-degree coverage."
+    "Determine the surviving large factors and their kernel maps, including quartic splittings. Continue the exceptional finite middles and global AS coverage."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1036,
+      "nc-p3": 1038,
       "plan_ja": 24,
       "notes_ja": 39
     },
