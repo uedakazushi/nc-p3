@@ -2509,6 +2509,12 @@
       "current_result": "Every singular distinct opposite matrix on any finite window is a global Gram matrix UU^t for a four-by-three matrix of linear forms. The isotropic determinant pencil is a nonzero binary octic and its cubic minors have a common divisor of degree two, three or four. The proof uses the local alternating trace pairing on a planar contact quotient and the length at most three on any line.",
       "current_proof": "sections/opposite_gram_pencil.tex",
       "global_coverage": false
+    },
+    {
+      "id": "ALL-FINITE-OPPOSITE-OCTICS",
+      "current_result": "All distinct opposite quadratic matrices on all finite Frobenius windows have nonzero determinant, without any assumptions on multiplicities or support. The remaining Gram pencil forces a length-four Frobenius algebra and a grid of two disjoint length-two divisors of the isotropic conic. The reduced grid and both nonreduced grids contradict injective cubic evaluation. Consequently octic-free finite edges have at most one standard regular extension, with a finite existence test across all components.",
+      "current_proof": "sections/all_finite_opposite_octics.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2566,7 +2572,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 573,
+  "version": 574,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
