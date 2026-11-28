@@ -2947,6 +2947,12 @@
       "current_result": "The plane graph is Gorenstein with canonical bundle 2L-H. Nonnormal noncone cubic kernels are excluded, as is conic ruling degree on a nonnormal cubic cone. The conductor fixes a length-two fiber and adjunction places its residual on one ruling; singular base clusters still yield at least seventeen isolated triples against sixteen.",
       "current_proof": "sections/cofactor_cubic_conductor_base.tex",
       "global_coverage": false
+    },
+    {
+      "id": "COFACTOR-EIGHTEEN-NO-CUBIC",
+      "current_result": "All cubic kernel surfaces at degree 18 are excluded. A cubic cone with line rulings would have at least seventeen triple fibers off a triple transversal; the residual ruling determinant has degree sixteen. Quartic cones and the square-nine branched inverse base are also excluded.",
+      "current_proof": "sections/cofactor_triple_transversal.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -3004,7 +3010,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 646,
+  "version": 647,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

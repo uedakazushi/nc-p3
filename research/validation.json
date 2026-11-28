@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 646,
+  "version": 647,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "3bb2068b7a72608440ac35e0cf85f5b85ccc5386"
+    "source_commit": "3d53aa5cf5f71522d0fc9b8ca5a8879aaf1198d8"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The plane graph is Gorenstein with canonical bundle 2L-H. Nonnormal noncone cubic kernels are excluded, as is conic ruling degree on a nonnormal cubic cone. The conductor fixes a length-two fiber and adjunction places its residual on one ruling; singular base clusters still yield at least seventeen isolated triples against sixteen."
+    "scope": "All cubic kernel surfaces at degree 18 are excluded. A cubic cone with line rulings would have at least seventeen triple fibers off a triple transversal; the residual ruling determinant has degree sixteen. Quartic cones and the square-nine branched inverse base are also excluded."
   },
   "checks": [
     {
-      "command": "python computations/verify_cofactor_cubic_conductor.py",
+      "command": "python computations/verify_cofactor_triple_transversal.py",
       "result": "PASS"
     },
     {
@@ -36,14 +36,14 @@
     }
   ],
   "open_mathematics": [
-    "Resolve the line-ruling cubic cone and nonnormal quartic inverses, then degree-20 exceptional and nonintegral windows."
+    "Determine baseless square-eight inverses on smooth models of nonnormal noncone quartics at degree 18, and the other unresolved branches."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1123,
+      "nc-p3": 1125,
       "plan_ja": 25,
-      "notes_ja": 41
+      "notes_ja": 42
     },
     "scope": "LuaLaTeX built the manuscript, plan and research notes."
   },
