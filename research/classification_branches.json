@@ -2713,6 +2713,12 @@
       "current_result": "For every reduced four-edge finite Frobenius window with generally invertible opposite root and finite rank-one locus the rank-at-most-two locus has dimension at most one. The residual sextic of a hypothetical rank-two plane has no possible factor partition.",
       "current_proof": "sections/low_rank_surface_exclusion.tex",
       "global_coverage": false
+    },
+    {
+      "id": "RANK-ONE-SURFACE-EXCLUSION",
+      "current_result": "For every reduced four-edge finite window with generally invertible full opposite root the rank-one locus has dimension at most one, without assumptions on the other rank strata. On a rank-two plane containing a rank-one curve its rank-one ideal is exactly a conic and the matrix is a linear square plus a quadratic times a fixed square.",
+      "current_proof": "sections/rank_one_surface_exclusion.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2770,7 +2776,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 607,
+  "version": 608,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

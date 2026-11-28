@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 607,
+  "version": 608,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "8d7162d3cb4c3ec7991d211fdaa6b4ef7d86c734"
+    "source_commit": "801a9149832165bd025744b86ad1fea07a01202b"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For every reduced four-edge finite Frobenius window with generally invertible opposite root and finite rank-one locus the rank-at-most-two locus has dimension at most one. The residual sextic of a hypothetical rank-two plane has no possible factor partition."
+    "scope": "For every reduced four-edge finite window with generally invertible full opposite root the rank-one locus has dimension at most one, without assumptions on the other rank strata. On a rank-two plane containing a rank-one curve its rank-one ideal is exactly a conic and the matrix is a linear square plus a quadratic times a fixed square."
   },
   "checks": [
     {
-      "command": "python computations/verify_low_rank_surface_exclusion.py",
+      "command": "python computations/verify_rank_one_surface_exclusion.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Study the excess rank-two curves and the case of positive-dimensional rank one; continue singular kernel curves, exceptional middles and all-degree AS coverage."
+    "Treat the remaining rank-one curves and their intersections with rank-two surfaces, then rank-two curve excess, singular kernel curves, exceptional middles and all-degree AS coverage."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1055,
+      "nc-p3": 1056,
       "plan_ja": 24,
       "notes_ja": 39
     },
