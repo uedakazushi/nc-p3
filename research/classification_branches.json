@@ -2755,6 +2755,12 @@
       "current_result": "Every integral cubic rank-one component is impossible in reduced finite windows. The twisted-cubic quadratic net must simultaneously diagonalize over a complete quadrilateral, and the six alternating evaluations on its tetrahedral edges contradict the marked bounds.",
       "current_proof": "sections/rank_one_twisted_cubic_exclusion.tex",
       "global_coverage": false
+    },
+    {
+      "id": "RANK-ONE-QUARTIC-NORMALIZATION",
+      "current_result": "An integral quartic rank-one component in a reduced finite window must be a smooth elliptic quartic with a nontrivial two-torsion change of polarization. The common quadratic pencil groups outside marks by ruling lines, at most two per group except one possible three-mark line.",
+      "current_proof": "sections/rank_one_quartic_normalization.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2812,7 +2818,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 614,
+  "version": 615,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
