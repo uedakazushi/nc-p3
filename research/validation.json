@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 648,
+  "version": 649,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "c7f413225333e4f06eaff4f926a5a5d20de7d398"
+    "source_commit": "73e93e164453fab98a9fe2654e903af970f971a4"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Degree 18 is excluded in all kernel-image branches. For the last nonnormal quartics, irregular rulings, rational sections of genus two and one, and all genus-zero scroll projections contradict adjunction, trace or fixed sections. Integral generically reduced curve excess now has only the degree-20 quadric and degree-21 Bezout models."
+    "scope": "Generic cone projections in degree 20 are excluded for all choices of the middle coordinates. The cubic-quintic resultant forces a unique middle by a degree-three bound on its smooth plane secant sextic and a linear syzygy on its ruling scroll. The folded edge has a universal rank-six tangent."
   },
   "checks": [
     {
-      "command": "python computations/verify_cofactor_quartic_normalization.py",
+      "command": "python computations/verify_quadric_cone_middle.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Resolve the exceptional extensions on the degree-20 quadric and degree-21 Bezout models and the nonintegral or thick excess branches."
+    "Treat special smooth and cone projections and special degree-21 Bezout extensions, as well as nonintegral or thick cofactor excess."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1127,
+      "nc-p3": 1129,
       "plan_ja": 25,
       "notes_ja": 42
     },
