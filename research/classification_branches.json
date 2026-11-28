@@ -2797,6 +2797,12 @@
       "current_result": "In every reduced four-edge finite Frobenius window with generally invertible full-rank opposite root, the rank-at-most-two locus has dimension at most one, including all rank-one excess curves.",
       "current_proof": "sections/rank_two_surface_excess_curves.tex",
       "global_coverage": false
+    },
+    {
+      "id": "REPEATED-OCTIC-PLANE-RESIDUAL",
+      "current_result": "A repeated factor of a reduced finite opposite octic is a plane of multiplicity exactly two. Its residual sextic is geometrically integral and nonnormal. An integral quartic with a marked triple point has at most seven singular marks, and six marked triple points on an integral quintic form two skew collinear triples.",
+      "current_proof": "sections/repeated_octic_plane_residual.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2854,7 +2860,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 621,
+  "version": 622,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
