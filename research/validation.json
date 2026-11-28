@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 553,
+  "version": 554,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "b56ce3ae6174d6bf08efb2e23a38fec740401dfb"
+    "source_commit": "5d6ee5afaa4db856d88498d5c021eee40d58df8e"
   },
   "generation": {
     "result": "PASS",
-    "scope": "A finite-edge standard candidate is regular with the identities of three-by-three matrices at one single corner if and only if it is an ordinary Clifford window from a basepoint-free web with finite rank-at-most-two locus. No identity bound at the other three corners and no semiprimeness hypothesis are needed. Two-endpoint matrix compression and the Segre inequalities reduce all mixed simple dimensions to the universal extensions already excluded."
+    "scope": "Two opposite corners with four-matrix identities already imply that every finite regular window is a center-finite domain of index at most four, with the same degree-32 recognition test. Any two such corners force all simple dimensions to be balanced. With only one bounded corner every size-three simple there is balanced and vertex-orthogonal, and only three mixed size-two profiles up to rotation survive. Essential ranks of Yoneda products through the large vertex sharpen the universal endpoint inequalities."
   },
   "checks": [
     {
-      "command": "python computations/verify_single_three_matrix_windows.py",
+      "command": "python computations/verify_opposite_four_matrix_corners.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze regular finite windows with a single four-matrix corner, including mixed dimension vectors, and identify uncovered components beyond polynomial-identity criteria."
+    "Settle the remaining single-corner and adjacent-corner four-matrix profiles and pursue finite components beyond these identities."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 960,
+      "nc-p3": 962,
       "plan_ja": 22,
       "notes_ja": 36
     },

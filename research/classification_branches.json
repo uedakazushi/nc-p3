@@ -2389,6 +2389,12 @@
       "current_result": "A finite-edge standard candidate is regular with the identities of three-by-three matrices at one single corner if and only if it is an ordinary Clifford window from a basepoint-free web with finite rank-at-most-two locus. No identity bound at the other three corners and no semiprimeness hypothesis are needed. Two-endpoint matrix compression and the Segre inequalities reduce all mixed simple dimensions to the universal extensions already excluded.",
       "current_proof": "sections/single_three_matrix_windows.tex",
       "global_coverage": false
+    },
+    {
+      "id": "OPPOSITE-FOUR-MATRIX-CORNERS-ALL-REGULAR-WINDOWS",
+      "current_result": "Two opposite corners with four-matrix identities already imply that every finite regular window is a center-finite domain of index at most four, with the same degree-32 recognition test. Any two such corners force all simple dimensions to be balanced. With only one bounded corner every size-three simple there is balanced and vertex-orthogonal, and only three mixed size-two profiles up to rotation survive. Essential ranks of Yoneda products through the large vertex sharpen the universal endpoint inequalities.",
+      "current_proof": "sections/opposite_four_matrix_corners.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2446,7 +2452,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 553,
+  "version": 554,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

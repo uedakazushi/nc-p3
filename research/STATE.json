@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-28",
-  "version": 553,
+  "version": 554,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -5447,6 +5447,15 @@
       "verification": [
         "computations/verify_single_three_matrix_windows.py"
       ]
+    },
+    {
+      "id": "OPPOSITE-FOUR-MATRIX-CORNERS-ALL-REGULAR-WINDOWS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "Two opposite corners with four-matrix identities already imply that every finite regular window is a center-finite domain of index at most four, with the same degree-32 recognition test. Any two such corners force all simple dimensions to be balanced. With only one bounded corner every size-three simple there is balanced and vertex-orthogonal, and only three mixed size-two profiles up to rotation survive. Essential ranks of Yoneda products through the large vertex sharpen the universal endpoint inequalities.",
+      "proof": "sections/opposite_four_matrix_corners.tex",
+      "verification": [
+        "computations/verify_opposite_four_matrix_corners.py"
+      ]
     }
   ],
   "document_paths": {
@@ -5510,7 +5519,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "b56ce3ae6174d6bf08efb2e23a38fec740401dfb",
+  "reviewed_source_commit": "5d6ee5afaa4db856d88498d5c021eee40d58df8e",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -5519,14 +5528,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Analyze regular finite windows with a single four-matrix corner, including mixed dimension vectors, and identify uncovered components beyond polynomial-identity criteria.",
+    "immediate_next_action": "Settle the remaining single-corner and adjacent-corner four-matrix profiles and pursue finite components beyond these identities.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/single_three_matrix_windows.tex",
-      "sections/four_matrix_all_regular.tex"
+      "sections/opposite_four_matrix_corners.tex",
+      "sections/single_three_matrix_windows.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "A finite-edge standard candidate is regular with the identities of three-by-three matrices at one single corner if and only if it is an ordinary Clifford window from a basepoint-free web with finite rank-at-most-two locus. No identity bound at the other three corners and no semiprimeness hypothesis are needed. Two-endpoint matrix compression and the Segre inequalities reduce all mixed simple dimensions to the universal extensions already excluded. Full classification remains open.",
+    "state_of_claim": "Two opposite corners with four-matrix identities already imply that every finite regular window is a center-finite domain of index at most four, with the same degree-32 recognition test. Any two such corners force all simple dimensions to be balanced. With only one bounded corner every size-three simple there is balanced and vertex-orthogonal, and only three mixed size-two profiles up to rotation survive. Essential ranks of Yoneda products through the large vertex sharpen the universal endpoint inequalities. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
