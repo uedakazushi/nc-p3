@@ -2683,6 +2683,12 @@
       "current_result": "Every reduced finite window with finite rank-at-most-two locus has geometrically integral opposite determinant. A nondominant family of dual conics contradicts the ten-dimensional span; the degree-one Cayley cubic case contradicts the invariant residue on its degree-six del Pezzo double cover. This removes the integrality assumption from the canonical model on the entire reduced finite-low-rank locus.",
       "current_proof": "sections/clean_octic_integrality.tex",
       "global_coverage": false
+    },
+    {
+      "id": "OPPOSITE-COLUMN-DIVISOR",
+      "current_result": "For reduced finite windows no constant column combination of a generically invertible opposite matrix has a common factor. Without reducedness any such combination forces a double plane with the proportional contraction. Every fixed-kernel curve in a reduced window has degree at most two, and the quartics in a Bezout presentation are disjoint or, for nonreduced windows, meet only tangentially.",
+      "current_proof": "sections/opposite_column_divisor.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2740,7 +2746,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 602,
+  "version": 603,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

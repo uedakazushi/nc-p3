@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 602,
+  "version": 603,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "4fb17bfdb5a320b900a68d60889b3e03272d9ba1"
+    "source_commit": "574e6fc3d2fb272cd6a195cc846b677626ba3468"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Every reduced finite window with finite rank-at-most-two locus has geometrically integral opposite determinant. A nondominant family of dual conics contradicts the ten-dimensional span; the degree-one Cayley cubic case contradicts the invariant residue on its degree-six del Pezzo double cover. This removes the integrality assumption from the canonical model on the entire reduced finite-low-rank locus."
+    "scope": "For reduced finite windows no constant column combination of a generically invertible opposite matrix has a common factor. Without reducedness any such combination forces a double plane with the proportional contraction. Every fixed-kernel curve in a reduced window has degree at most two, and the quartics in a Bezout presentation are disjoint or, for nonreduced windows, meet only tangentially."
   },
   "checks": [
     {
-      "command": "python computations/verify_clean_octic_integrality.py",
+      "command": "python computations/verify_opposite_column_divisor.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Address positive-dimensional low-rank loci and nonreduced clean windows. Continue exceptional integral middles and all-degree AS coverage."
+    "Classify the excess kernel loci using the line/conic fiber bound, and resolve the residual seven-cofactor parameters and general AS coverage."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1047,
+      "nc-p3": 1049,
       "plan_ja": 24,
       "notes_ja": 39
     },
