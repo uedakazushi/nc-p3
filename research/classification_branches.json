@@ -3073,6 +3073,12 @@
       "current_result": "At full cofactor degree eighteen the kernel image must be a surface. A putative sextic curve kernel descends to a genus-three Gorenstein base with semistable degree-eight ruling quotient; unobstructed smoothing and a dimension count give eight triple fibers against at least fourteen isolated marks.",
       "current_proof": "sections/genus_three_kernel_excess.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SECTIONAL-EIGHTEEN-KERNEL-GRAPH",
+      "current_result": "At full scheme degree eighteen the sectional endomorphism curve is exactly the scheme-theoretic input-kernel graph. It excludes degree-two maps to smooth quadric kernels for arbitrary cofactor support and all quartic kernels whose inverse input map is regular in codimension one, in particular every normal quartic.",
+      "current_proof": "sections/sectional_eighteen_kernel_graph.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -3130,7 +3136,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 667,
+  "version": 668,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

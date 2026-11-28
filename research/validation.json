@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 667,
+  "version": 668,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "de6deed81a91e936a4a9b8d0741ba71fd6465960"
+    "source_commit": "91b4ed7bcbeeee96a1310d7c0033097200f881a1"
   },
   "generation": {
     "result": "PASS",
-    "scope": "At full cofactor degree eighteen the kernel image must be a surface. A putative sextic curve kernel descends to a genus-three Gorenstein base with semistable degree-eight ruling quotient; unobstructed smoothing and a dimension count give eight triple fibers against at least fourteen isolated marks."
+    "scope": "At full scheme degree eighteen the sectional endomorphism curve is exactly the scheme-theoretic input-kernel graph. It excludes degree-two maps to smooth quadric kernels for arbitrary cofactor support and all quartic kernels whose inverse input map is regular in codimension one, in particular every normal quartic."
   },
   "checks": [
     {
-      "command": "python computations/verify_genus_three_kernel_excess.py",
+      "command": "python computations/verify_sectional_eighteen_kernel_graph.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Resolve the remaining degree-eighteen surface kernels using sectional Gorenstein duality, base clusters, and the finite-algebra cubic constraints."
+    "Analyze the length-eight conic-bundle base schemes for birational quadric kernels via the genus-three hyperelliptic norm, and the unresolved cubic and nonnormal quartic models."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1157,
+      "nc-p3": 1158,
       "plan_ja": 26,
       "notes_ja": 43
     },
