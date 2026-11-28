@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 598,
+  "version": 599,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "08cdd9811f2be64c43aa034b405b16ff1205910b"
+    "source_commit": "b4efe4ec852c6fd100a24a7bf64c8c7669fe305f"
   },
   "generation": {
     "result": "PASS",
-    "scope": "A clean opposite octic on a reduced window has an irreducible factor of degree at least five. The putative tetrahedral quartic has four polar cubics as its complete kernel coordinates, forcing a projective identification on sixteen marks; at most fourteen identifications are possible."
+    "scope": "In the clean reduced case the opposite determinant is integral or splits as an irreducible quintic times an irreducible cubic. The rank-three orthogonal bundle excludes planes and all quadric factors, including a marked cone vertex via a branched double cover and length-two residual duality."
   },
   "checks": [
     {
-      "command": "python computations/verify_tetrahedral_quartic_exclusion.py",
+      "command": "python computations/verify_low_degree_octic_spinor.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Determine degree-five, six and seven factors by their marked triple points, and continue the other finite and general AS branches."
+    "Resolve the quintic-cubic splitting, beginning with the cubic factor and its spinor incidence. Continue exceptional finite middles and all-degree AS coverage."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1040,
+      "nc-p3": 1042,
       "plan_ja": 24,
       "notes_ja": 39
     },

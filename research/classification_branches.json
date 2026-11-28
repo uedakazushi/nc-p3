@@ -2659,6 +2659,12 @@
       "current_result": "A clean opposite octic on a reduced window has an irreducible factor of degree at least five. The putative tetrahedral quartic has four polar cubics as its complete kernel coordinates, forcing a projective identification on sixteen marks; at most fourteen identifications are possible.",
       "current_proof": "sections/exclude_tetrahedral_quartic.tex",
       "global_coverage": false
+    },
+    {
+      "id": "LOW-DEGREE-OCTIC-SPINOR",
+      "current_result": "In the clean reduced case the opposite determinant is integral or splits as an irreducible quintic times an irreducible cubic. The rank-three orthogonal bundle excludes planes and all quadric factors, including a marked cone vertex via a branched double cover and length-two residual duality.",
+      "current_proof": "sections/low_degree_octic_spinor.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2716,7 +2722,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 598,
+  "version": 599,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
