@@ -3079,6 +3079,12 @@
       "current_result": "At full scheme degree eighteen the sectional endomorphism curve is exactly the scheme-theoretic input-kernel graph. It excludes degree-two maps to smooth quadric kernels for arbitrary cofactor support and all quartic kernels whose inverse input map is regular in codimension one, in particular every normal quartic.",
       "current_proof": "sections/sectional_eighteen_kernel_graph.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SECTIONAL-HYPERELLIPTIC-NORM",
+      "current_result": "In both degree-eighteen quadric conic-bundle models A=2L+2F with embedded genus-three general section, the length-eight base scheme is a full intersection with a fixed four-fiber divisor, including multiplicities. The hyperelliptic norm forces any alternative into two fixed input points and degree-three or degree-four plane pencils, contradicted by quadratic evaluations on the marks.",
+      "current_proof": "sections/sectional_hyperelliptic_norm.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -3136,7 +3142,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 668,
+  "version": 669,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

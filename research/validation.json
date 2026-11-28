@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 668,
+  "version": 669,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "91b4ed7bcbeeee96a1310d7c0033097200f881a1"
+    "source_commit": "4089dedb13c106585be2bd500be583dae6ca5a91"
   },
   "generation": {
     "result": "PASS",
-    "scope": "At full scheme degree eighteen the sectional endomorphism curve is exactly the scheme-theoretic input-kernel graph. It excludes degree-two maps to smooth quadric kernels for arbitrary cofactor support and all quartic kernels whose inverse input map is regular in codimension one, in particular every normal quartic."
+    "scope": "In both degree-eighteen quadric conic-bundle models A=2L+2F with embedded genus-three general section, the length-eight base scheme is a full intersection with a fixed four-fiber divisor, including multiplicities. The hyperelliptic norm forces any alternative into two fixed input points and degree-three or degree-four plane pencils, contradicted by quadratic evaluations on the marks."
   },
   "checks": [
     {
-      "command": "python computations/verify_sectional_eighteen_kernel_graph.py",
+      "command": "python computations/verify_sectional_hyperelliptic_norm.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze the length-eight conic-bundle base schemes for birational quadric kernels via the genus-three hyperelliptic norm, and the unresolved cubic and nonnormal quartic models."
+    "Analyze the resulting complete intersections of four fibers with a conic-bundle divisor, including multiple fibers, and the other degree-eighteen kernel surfaces."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1158,
+      "nc-p3": 1160,
       "plan_ja": 26,
       "notes_ja": 43
     },
