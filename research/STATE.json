@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-28",
-  "version": 593,
+  "version": 594,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -5807,6 +5807,15 @@
       "verification": [
         "computations/verify_singular_residual_gluing.py"
       ]
+    },
+    {
+      "id": "EIGHT-COFACTOR-EXCESS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "No integral opposite octic of a four-edge finite Frobenius window has eight independent cofactors, with no reducedness assumption. The compactified singular pencil has virtual length sixteen. Its excess curve meets a general ruling in length at most three after subtracting the residual point; vertical thickenings and conductor gluing bound all cubic sections by nineteen or eighteen. The remaining integral cofactor counts are seven, nine and ten.",
+      "proof": "sections/eight_cofactor_excess.tex",
+      "verification": [
+        "computations/verify_eight_cofactor_excess.py"
+      ]
     }
   ],
   "document_paths": {
@@ -5870,7 +5879,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "15afe4327d12ed066cfa92182f3eac1d69af2c74",
+  "reviewed_source_commit": "ce0be8b129ffb77e42430cfab00a2eb50da28652",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -5879,14 +5888,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Use the excess Koszul homology of the coincidence scheme and the cubic evaluation on its horizontal and vertical parts to decide all singular finite members on nonreduced windows.",
+    "immediate_next_action": "Establish whether the finite canonical middle of every admissible seven-cofactor pair is everywhere rank three using its degree-three Koszul quotient, and address alternate middles. Nine and ten cofactors, reducible octics and global AS coverage remain open.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/singular_residual_gluing.tex",
-      "sections/deficient_plucker_centers.tex"
+      "sections/eight_cofactor_excess.tex",
+      "sections/singular_residual_gluing.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "The entire rank-one scheme of every singular finite eight-cofactor member is the coincidence scheme on the projective bundle of sections through a residual point of the singular genus-one curve. Cartier four-point multiplication and relative torsion-free point ideals recover the conductor and infinitesimal lifts. Horizontal multiplicity is at most one, except for two distinct opposite scalar sections at nodal fourth torsion. Full classification remains open.",
+    "state_of_claim": "No integral opposite octic of a four-edge finite Frobenius window has eight independent cofactors, with no reducedness assumption. The compactified singular pencil has virtual length sixteen. Its excess curve meets a general ruling in length at most three after subtracting the residual point; vertical thickenings and conductor gluing bound all cubic sections by nineteen or eighteen. The remaining integral cofactor counts are seven, nine and ten. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

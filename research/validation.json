@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 593,
+  "version": 594,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "15afe4327d12ed066cfa92182f3eac1d69af2c74"
+    "source_commit": "ce0be8b129ffb77e42430cfab00a2eb50da28652"
   },
   "generation": {
     "result": "PASS",
-    "scope": "The entire rank-one scheme of every singular finite eight-cofactor member is the coincidence scheme on the projective bundle of sections through a residual point of the singular genus-one curve. Cartier four-point multiplication and relative torsion-free point ideals recover the conductor and infinitesimal lifts. Horizontal multiplicity is at most one, except for two distinct opposite scalar sections at nodal fourth torsion."
+    "scope": "No integral opposite octic of a four-edge finite Frobenius window has eight independent cofactors, with no reducedness assumption. The compactified singular pencil has virtual length sixteen. Its excess curve meets a general ruling in length at most three after subtracting the residual point; vertical thickenings and conductor gluing bound all cubic sections by nineteen or eighteen. The remaining integral cofactor counts are seven, nine and ten."
   },
   "checks": [
     {
-      "command": "python computations/verify_singular_residual_gluing.py",
+      "command": "python computations/verify_eight_cofactor_excess.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Use the excess Koszul homology of the coincidence scheme and the cubic evaluation on its horizontal and vertical parts to decide all singular finite members on nonreduced windows."
+    "Establish whether the finite canonical middle of every admissible seven-cofactor pair is everywhere rank three using its degree-three Koszul quotient, and address alternate middles. Nine and ten cofactors, reducible octics and global AS coverage remain open."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1033,
+      "nc-p3": 1035,
       "plan_ja": 24,
       "notes_ja": 39
     },

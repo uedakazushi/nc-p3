@@ -2629,6 +2629,12 @@
       "current_result": "The entire rank-one scheme of every singular finite eight-cofactor member is the coincidence scheme on the projective bundle of sections through a residual point of the singular genus-one curve. Cartier four-point multiplication and relative torsion-free point ideals recover the conductor and infinitesimal lifts. Horizontal multiplicity is at most one, except for two distinct opposite scalar sections at nodal fourth torsion.",
       "current_proof": "sections/singular_residual_gluing.tex",
       "global_coverage": false
+    },
+    {
+      "id": "EIGHT-COFACTOR-EXCESS",
+      "current_result": "No integral opposite octic of a four-edge finite Frobenius window has eight independent cofactors, with no reducedness assumption. The compactified singular pencil has virtual length sixteen. Its excess curve meets a general ruling in length at most three after subtracting the residual point; vertical thickenings and conductor gluing bound all cubic sections by nineteen or eighteen. The remaining integral cofactor counts are seven, nine and ten.",
+      "current_proof": "sections/eight_cofactor_excess.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2686,7 +2692,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 593,
+  "version": 594,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
