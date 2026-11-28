@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 579,
+  "version": 580,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "210f2126756e58d8a9b7806b64f73309f8c8a1cc"
+    "source_commit": "d88117669d9d586fa03eabb9e13b0752cf873c83"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For a unique integral triple octic, if the sextic double-point series gives the indicated complete rational or genus-one cofactor curve, all actual opposite matrices are recovered from square roots of its polarization and adjugate division. There are at most 1, 4, 3, or 2 nontrivial choices for the rational sextic, smooth, nodal, or cuspidal elliptic octic respectively. The generic trisecant source satisfies the seven-sextic condition and has a unique nontrivial square matrix. The smooth elliptic case gives a quartic pencil with at least three nonzero reconstructed quadratic matrices when one opposite exists."
+    "scope": "For every smooth elliptic eight-cofactor integral opposite matrix the elliptic quartic pencil selects one nontrivial two-torsion or order-four parameter, without a completeness or unique-octic assumption. Every unbranched parameter has an elliptic Bezout normal form. A surface degeneracy calculation bounds finite residual configurations by sixteen even on nonreduced sources, and excludes order three for the residual translation using the degree-four orbit curve."
   },
   "checks": [
     {
-      "command": "python computations/verify_cofactor_curve_reconstruction.py",
+      "command": "python computations/verify_elliptic_bezout_torsion.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze the existence and regularity of the eight-cofactor elliptic candidates, distinguish complete and deficient cofactor series including higher-dimensional images, and continue other finite-window coverage."
+    "Resolve the two-torsion pencil member and the surviving order-four horizontal double cover. Analyze singular elliptic, higher-cofactor, and remaining general windows."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1007,
+      "nc-p3": 1010,
       "plan_ja": 23,
       "notes_ja": 38
     },

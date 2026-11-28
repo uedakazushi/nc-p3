@@ -2545,6 +2545,12 @@
       "current_result": "For a unique integral triple octic, if the sextic double-point series gives the indicated complete rational or genus-one cofactor curve, all actual opposite matrices are recovered from square roots of its polarization and adjugate division. There are at most 1, 4, 3, or 2 nontrivial choices for the rational sextic, smooth, nodal, or cuspidal elliptic octic respectively. The generic trisecant source satisfies the seven-sextic condition and has a unique nontrivial square matrix. The smooth elliptic case gives a quartic pencil with at least three nonzero reconstructed quadratic matrices when one opposite exists.",
       "current_proof": "sections/cofactor_curve_reconstruction.tex",
       "global_coverage": false
+    },
+    {
+      "id": "ELLIPTIC-BEZOUT-TORSION",
+      "current_result": "For every smooth elliptic eight-cofactor integral opposite matrix the elliptic quartic pencil selects one nontrivial two-torsion or order-four parameter, without a completeness or unique-octic assumption. Every unbranched parameter has an elliptic Bezout normal form. A surface degeneracy calculation bounds finite residual configurations by sixteen even on nonreduced sources, and excludes order three for the residual translation using the degree-four orbit curve.",
+      "current_proof": "sections/elliptic_bezout_torsion.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2602,7 +2608,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 579,
+  "version": 580,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-28",
-  "version": 579,
+  "version": 580,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -5681,6 +5681,15 @@
       "verification": [
         "computations/verify_cofactor_curve_reconstruction.py"
       ]
+    },
+    {
+      "id": "ELLIPTIC-BEZOUT-TORSION",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "For every smooth elliptic eight-cofactor integral opposite matrix the elliptic quartic pencil selects one nontrivial two-torsion or order-four parameter, without a completeness or unique-octic assumption. Every unbranched parameter has an elliptic Bezout normal form. A surface degeneracy calculation bounds finite residual configurations by sixteen even on nonreduced sources, and excludes order three for the residual translation using the degree-four orbit curve.",
+      "proof": "sections/elliptic_bezout_torsion.tex",
+      "verification": [
+        "computations/verify_elliptic_bezout_torsion.py"
+      ]
     }
   ],
   "document_paths": {
@@ -5744,7 +5753,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "210f2126756e58d8a9b7806b64f73309f8c8a1cc",
+  "reviewed_source_commit": "d88117669d9d586fa03eabb9e13b0752cf873c83",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -5753,14 +5762,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Analyze the existence and regularity of the eight-cofactor elliptic candidates, distinguish complete and deficient cofactor series including higher-dimensional images, and continue other finite-window coverage.",
+    "immediate_next_action": "Resolve the two-torsion pencil member and the surviving order-four horizontal double cover. Analyze singular elliptic, higher-cofactor, and remaining general windows.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/cofactor_curve_reconstruction.tex",
-      "sections/tangent_determinantal_octics.tex"
+      "sections/elliptic_bezout_torsion.tex",
+      "sections/cofactor_curve_reconstruction.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "For a unique integral triple octic, if the sextic double-point series gives the indicated complete rational or genus-one cofactor curve, all actual opposite matrices are recovered from square roots of its polarization and adjugate division. There are at most 1, 4, 3, or 2 nontrivial choices for the rational sextic, smooth, nodal, or cuspidal elliptic octic respectively. The generic trisecant source satisfies the seven-sextic condition and has a unique nontrivial square matrix. The smooth elliptic case gives a quartic pencil with at least three nonzero reconstructed quadratic matrices when one opposite exists. Full classification remains open.",
+    "state_of_claim": "For every smooth elliptic eight-cofactor integral opposite matrix the elliptic quartic pencil selects one nontrivial two-torsion or order-four parameter, without a completeness or unique-octic assumption. Every unbranched parameter has an elliptic Bezout normal form. A surface degeneracy calculation bounds finite residual configurations by sixteen even on nonreduced sources, and excludes order three for the residual translation using the degree-four orbit curve. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {
