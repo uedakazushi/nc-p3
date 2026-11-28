@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-28",
-  "version": 557,
+  "version": 558,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -5483,6 +5483,15 @@
       "verification": [
         "computations/verify_one_sided_pi_noether_criterion.py"
       ]
+    },
+    {
+      "id": "FINITE-SQUARE-TANGENTS-AND-INSTANTON-COLLISIONS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "For every finite Frobenius window, the tangent space of a normalized opposite square root is an explicit linear space of alternating forms on the ten-dimensional edge quotient. Nonzero ranks are six, eight or ten; the rank-ten direction is a charge-four mathematical instanton recovering the edge. Collision of different opposite roots forces this obstruction. A rational single-edge example realizes rank ten with directional tangent dimensions one and zero.",
+      "proof": "sections/finite_square_tangent_instantons.tex",
+      "verification": [
+        "computations/verify_finite_square_tangent_instantons.py"
+      ]
     }
   ],
   "document_paths": {
@@ -5546,7 +5555,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "4798cdb408f285ba440616190cf619368b734fb4",
+  "reviewed_source_commit": "049a4a2c0b0f18ff0b69ee5d246a50ce96126e0d",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -5555,14 +5564,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Identify obstructions involving both orientations, including higher-dimensional finite-edge simple modules, and classify residual non-PI components.",
+    "immediate_next_action": "Classify the instanton and lower-rank collision strata that actually extend, and determine the remaining regular components.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/one_sided_pi_noether_criterion.tex",
-      "sections/generic_corner_small_simples.tex"
+      "sections/finite_square_tangent_instantons.tex",
+      "sections/finite_window_rigidity.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "For every PI regular window on any component, vanishing of just one fixed direction of first Ext between all nonvertex simples and vertex simples is equivalent to either one-sided Noetherianity and to being a center-finite composable domain. Pure trace fibers, degree-one Tor for a finite filtration of each prime quotient, and a nilpotent prime product descend right Noetherianity to the original ring. Full classification remains open.",
+    "state_of_claim": "For every finite Frobenius window, the tangent space of a normalized opposite square root is an explicit linear space of alternating forms on the ten-dimensional edge quotient. Nonzero ranks are six, eight or ten; the rank-ten direction is a charge-four mathematical instanton recovering the edge. Collision of different opposite roots forces this obstruction. A rational single-edge example realizes rank ten with directional tangent dimensions one and zero. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

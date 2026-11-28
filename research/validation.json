@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 557,
+  "version": 558,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "4798cdb408f285ba440616190cf619368b734fb4"
+    "source_commit": "049a4a2c0b0f18ff0b69ee5d246a50ce96126e0d"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For every PI regular window on any component, vanishing of just one fixed direction of first Ext between all nonvertex simples and vertex simples is equivalent to either one-sided Noetherianity and to being a center-finite composable domain. Pure trace fibers, degree-one Tor for a finite filtration of each prime quotient, and a nilpotent prime product descend right Noetherianity to the original ring."
+    "scope": "For every finite Frobenius window, the tangent space of a normalized opposite square root is an explicit linear space of alternating forms on the ten-dimensional edge quotient. Nonzero ranks are six, eight or ten; the rank-ten direction is a charge-four mathematical instanton recovering the edge. Collision of different opposite roots forces this obstruction. A rational single-edge example realizes rank ten with directional tangent dimensions one and zero."
   },
   "checks": [
     {
-      "command": "python computations/verify_one_sided_pi_noether_criterion.py",
+      "command": "python computations/verify_finite_square_tangent_instantons.py",
       "result": "PASS"
     },
     {
@@ -36,14 +36,14 @@
     }
   ],
   "open_mathematics": [
-    "Identify obstructions involving both orientations, including higher-dimensional finite-edge simple modules, and classify residual non-PI components."
+    "Classify the instanton and lower-rank collision strata that actually extend, and determine the remaining regular components."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 967,
+      "nc-p3": 969,
       "plan_ja": 22,
-      "notes_ja": 36
+      "notes_ja": 37
     },
     "scope": "LuaLaTeX built the manuscript, plan and research notes."
   },
