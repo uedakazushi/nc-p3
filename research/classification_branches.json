@@ -2785,6 +2785,12 @@
       "current_result": "Two skew rank-one lines are impossible in a reduced four-edge finite Frobenius window with generally invertible full-rank opposite root. All remaining rank-one curve supports are planar of degree at most two.",
       "current_proof": "sections/rank_one_skew_pair_exclusion.tex",
       "global_coverage": false
+    },
+    {
+      "id": "RANK-TWO-PLANE-BORDERED-QUARTIC",
+      "current_result": "A rank-two plane cannot contain any rank-one curve in a reduced four-edge finite Frobenius window with a generally invertible opposite root. The bordered quartic excludes reduced determinants, and cubic interpolation excludes nonreduced and identically singular ones.",
+      "current_proof": "sections/rank_two_plane_bordered_quartic.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2842,7 +2848,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 619,
+  "version": 620,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
