@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-28",
-  "version": 586,
+  "version": 587,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -5744,6 +5744,15 @@
       "verification": [
         "computations/verify_singular_quintic_pfaffians.py"
       ]
+    },
+    {
+      "id": "COFACTOR-TANGENT-NETS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "At any rank-one point of an integral opposite octic with nonzero cubic tangent cone, a curve-valued generic kernel forces three lines. For nine cofactors the rank of the restricted kernel quadric determines the possible tangent nets. In particular a smooth cubic tangent cone forces ten independent cofactors and a surface-valued kernel.",
+      "proof": "sections/cofactor_tangent_nets.tex",
+      "verification": [
+        "computations/verify_cofactor_tangent_nets.py"
+      ]
     }
   ],
   "document_paths": {
@@ -5807,7 +5816,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "b8911a5afc8441f91b5c353ec91d397b23225409",
+  "reviewed_source_commit": "d503f9ab08ee1066bb1766dbdd2c0bab0c01363d",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -5816,14 +5825,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Study the excess degeneracy curves and the proportional conductor points on singular finite members. Investigate the smooth-quadric and quadric-cone alternatives for nine cofactors as well as general-window coverage.",
+    "immediate_next_action": "Use the global cofactor quadric in the nine-dimensional case: reshape the smooth quadric moments into a three-by-three matrix and analyze the binary Bezout pencil on the cone. Excess singular eight-cofactor and general windows remain open.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/singular_quintic_pfaffians.tex",
-      "sections/boundary_conductor_residual.tex"
+      "sections/cofactor_tangent_nets.tex",
+      "sections/seven_cofactor_trisecant_grassmannian.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "A singular finite eight-cofactor member, including nodal order two, must have a positive-dimensional common-cubic degeneracy. All fifteen binary-quintic Pfaffians vanish scheme-theoretically on the point window, with span at most fourteen and a bound depending on conductor length. Away from proportional pairs the residual cubic and scalar incidence lift also on nonreduced supports. Full classification remains open.",
+    "state_of_claim": "At any rank-one point of an integral opposite octic with nonzero cubic tangent cone, a curve-valued generic kernel forces three lines. For nine cofactors the rank of the restricted kernel quadric determines the possible tangent nets. In particular a smooth cubic tangent cone forces ten independent cofactors and a surface-valued kernel. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

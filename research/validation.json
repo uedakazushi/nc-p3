@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 586,
+  "version": 587,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "b8911a5afc8441f91b5c353ec91d397b23225409"
+    "source_commit": "d503f9ab08ee1066bb1766dbdd2c0bab0c01363d"
   },
   "generation": {
     "result": "PASS",
-    "scope": "A singular finite eight-cofactor member, including nodal order two, must have a positive-dimensional common-cubic degeneracy. All fifteen binary-quintic Pfaffians vanish scheme-theoretically on the point window, with span at most fourteen and a bound depending on conductor length. Away from proportional pairs the residual cubic and scalar incidence lift also on nonreduced supports."
+    "scope": "At any rank-one point of an integral opposite octic with nonzero cubic tangent cone, a curve-valued generic kernel forces three lines. For nine cofactors the rank of the restricted kernel quadric determines the possible tangent nets. In particular a smooth cubic tangent cone forces ten independent cofactors and a surface-valued kernel."
   },
   "checks": [
     {
-      "command": "python computations/verify_singular_quintic_pfaffians.py",
+      "command": "python computations/verify_cofactor_tangent_nets.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Study the excess degeneracy curves and the proportional conductor points on singular finite members. Investigate the smooth-quadric and quadric-cone alternatives for nine cofactors as well as general-window coverage."
+    "Use the global cofactor quadric in the nine-dimensional case: reshape the smooth quadric moments into a three-by-three matrix and analyze the binary Bezout pencil on the cone. Excess singular eight-cofactor and general windows remain open."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1023,
+      "nc-p3": 1024,
       "plan_ja": 23,
       "notes_ja": 38
     },

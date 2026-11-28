@@ -2587,6 +2587,12 @@
       "current_result": "A singular finite eight-cofactor member, including nodal order two, must have a positive-dimensional common-cubic degeneracy. All fifteen binary-quintic Pfaffians vanish scheme-theoretically on the point window, with span at most fourteen and a bound depending on conductor length. Away from proportional pairs the residual cubic and scalar incidence lift also on nonreduced supports.",
       "current_proof": "sections/singular_quintic_pfaffians.tex",
       "global_coverage": false
+    },
+    {
+      "id": "COFACTOR-TANGENT-NETS",
+      "current_result": "At any rank-one point of an integral opposite octic with nonzero cubic tangent cone, a curve-valued generic kernel forces three lines. For nine cofactors the rank of the restricted kernel quadric determines the possible tangent nets. In particular a smooth cubic tangent cone forces ten independent cofactors and a surface-valued kernel.",
+      "current_proof": "sections/cofactor_tangent_nets.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2644,7 +2650,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 586,
+  "version": 587,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
