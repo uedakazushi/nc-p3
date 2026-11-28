@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 657,
+  "version": 658,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "c071278dd7118910e5ed7bf25985db982d01dd65"
+    "source_commit": "8073e41a1145e5812cdc1f605b268d462f6f9f95"
   },
   "generation": {
     "result": "PASS",
-    "scope": "No reduced four-finite standard regular window has an entire positive-dimensional cofactor locus which is an integral generically reduced curve. Degree 21 is excluded for arbitrary neighbors: their pulled-back rank-two bundles have a six-section quotient of class 5F or H-2F, giving the standard trisecant edge or simultaneous Hankel forms; both force the simple-module obstruction."
+    "scope": "A reduced regular finite window admits no nonidentity binary quartic Bezout root, without restrictions on cofactor components, rank-one fibers or the determinant. Integral determinant octics have exactly nine or ten independent cofactors. Any five-by-five linear symmetroid whose corank-two scheme is the twenty marks also forces equivalent opposite configurations, even for multiple quintic factors."
   },
   "checks": [
     {
-      "command": "python computations/verify_bezout_scroll_neighbors.py",
+      "command": "python computations/verify_unrestricted_binary_formats.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Move to the reducible or generically nonreduced cofactor curves, finite-excess windows and the remaining nonfinite windows, without imposing integrality or ordinary-singularity hypotheses."
+    "Analyze the remaining nine- and ten-cofactor positive-excess branches without assuming pure integral support, and test further geometry of finite and nonfinite windows."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1143,
+      "nc-p3": 1145,
       "plan_ja": 26,
       "notes_ja": 42
     },

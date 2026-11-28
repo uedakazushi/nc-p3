@@ -2,7 +2,7 @@
   "schema_version": 3,
   "project_id": "nc-p3",
   "date": "2026-11-28",
-  "version": 657,
+  "version": 658,
   "status": "active_classification_incomplete",
   "canonical": "github:uedakazushi/nc-p3/main",
   "delivery_status": "See research/validation.json; re-read current main at each restart.",
@@ -6383,6 +6383,15 @@
       "verification": [
         "computations/verify_bezout_scroll_neighbors.py"
       ]
+    },
+    {
+      "id": "UNRESTRICTED-BINARY-FORMATS",
+      "status": "proved_under_stated_hypotheses",
+      "statement": "A reduced regular finite window admits no nonidentity binary quartic Bezout root, without restrictions on cofactor components, rank-one fibers or the determinant. Integral determinant octics have exactly nine or ten independent cofactors. Any five-by-five linear symmetroid whose corank-two scheme is the twenty marks also forces equivalent opposite configurations, even for multiple quintic factors.",
+      "proof": "sections/unrestricted_binary_formats.tex",
+      "verification": [
+        "computations/verify_unrestricted_binary_formats.py"
+      ]
     }
   ],
   "document_paths": {
@@ -6446,7 +6455,7 @@
     "Generic minimal period two does not imply deformation-disconnectedness from period one. Every existing nine/seven-family member specializes within the regular locus to period one. A standard 14641 deformation-connected component disjoint from period one has not been established. The rank-obstructed P1 x P2 helix example in the notes lies outside the standard numerical type.",
     "The classification-atlas design is a protocol, not a proved exhaustive stratification. Each branch's coverage and indexed-isomorphism sufficiency must be proved separately."
   ],
-  "reviewed_source_commit": "c071278dd7118910e5ed7bf25985db982d01dd65",
+  "reviewed_source_commit": "8073e41a1145e5812cdc1f605b268d462f6f9f95",
   "verification_policy": "status records whether a proof is present, not a claim of exhaustive verification. Current targeted proof audit and exact reexecutions are recorded once in research/validation.json.",
   "reuse_policy": "External as4 is accessed on demand only through the small, pinned research/BASELINE.md dependency index. Do not read as4/AGENTS.md or clone/sync/sweep the full repository by default; fetch precise results and code only when relevant. See AGENTS.md.",
   "scalability_policy": "Even if nc-p3 outgrows as4: keep a small active entrypoint, split current proofs/branches by mathematical module only as needed, load only the target branch and its dependencies, track classification-coverage and mathematical-proof dependencies separately, and rerun affected checks instead of repository-wide scans; see research/classification_architecture.md.",
@@ -6455,14 +6464,14 @@
     "task_id": "Z4-AS-004",
     "status": "active_rank_ten_branching_and_finite_marks",
     "objective": "Effectivize the two-window all-degree AS criterion and build coverage outside Zsym, in both low and high opposite ranks.",
-    "immediate_next_action": "Move to the reducible or generically nonreduced cofactor curves, finite-excess windows and the remaining nonfinite windows, without imposing integrality or ordinary-singularity hypotheses.",
+    "immediate_next_action": "Analyze the remaining nine- and ten-cofactor positive-excess branches without assuming pure integral support, and test further geometry of finite and nonfinite windows.",
     "read_first": [
       "research/plan_ja.tex",
-      "sections/bezout_scroll_neighbors.tex",
-      "sections/degree_twenty_hankel_pairs.tex"
+      "sections/unrestricted_binary_formats.tex",
+      "sections/bezout_scroll_neighbors.tex"
     ],
     "known_obstruction": "All windows through opposite rank nine have finite AS and indexed-isomorphism tests. At rank ten residual rank two permits new curve corridors, and at finite points neither marked pair need align. Higher-rank normal forms, period strata, components and specialization remain open.",
-    "state_of_claim": "No reduced four-finite standard regular window has an entire positive-dimensional cofactor locus which is an integral generically reduced curve. Degree 21 is excluded for arbitrary neighbors: their pulled-back rank-two bundles have a six-section quotient of class 5F or H-2F, giving the standard trisecant edge or simultaneous Hankel forms; both force the simple-module obstruction. Full classification remains open.",
+    "state_of_claim": "A reduced regular finite window admits no nonidentity binary quartic Bezout root, without restrictions on cofactor components, rank-one fibers or the determinant. Integral determinant octics have exactly nine or ten independent cofactors. Any five-by-five linear symmetroid whose corank-two scheme is the twenty marks also forces equivalent opposite configurations, even for multiple quintic factors. Full classification remains open.",
     "handoff_rule": "Overwrite with the next concrete proof action before task termination; no chronological run log."
   },
   "execution_policy": {

@@ -3013,6 +3013,12 @@
       "current_result": "No reduced four-finite standard regular window has an entire positive-dimensional cofactor locus which is an integral generically reduced curve. Degree 21 is excluded for arbitrary neighbors: their pulled-back rank-two bundles have a six-section quotient of class 5F or H-2F, giving the standard trisecant edge or simultaneous Hankel forms; both force the simple-module obstruction.",
       "current_proof": "sections/bezout_scroll_neighbors.tex",
       "global_coverage": false
+    },
+    {
+      "id": "UNRESTRICTED-BINARY-FORMATS",
+      "current_result": "A reduced regular finite window admits no nonidentity binary quartic Bezout root, without restrictions on cofactor components, rank-one fibers or the determinant. Integral determinant octics have exactly nine or ten independent cofactors. Any five-by-five linear symmetroid whose corank-two scheme is the twenty marks also forces equivalent opposite configurations, even for multiple quintic factors.",
+      "current_proof": "sections/unrestricted_binary_formats.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -3070,7 +3076,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 657,
+  "version": 658,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
