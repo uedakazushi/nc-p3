@@ -3019,6 +3019,12 @@
       "current_result": "A reduced regular finite window admits no nonidentity binary quartic Bezout root, without restrictions on cofactor components, rank-one fibers or the determinant. Integral determinant octics have exactly nine or ten independent cofactors. Any five-by-five linear symmetroid whose corank-two scheme is the twenty marks also forces equivalent opposite configurations, even for multiple quintic factors.",
       "current_proof": "sections/unrestricted_binary_formats.tex",
       "global_coverage": false
+    },
+    {
+      "id": "QUINTIC-WEB-CURVE-EXCESS",
+      "current_result": "The quadric normalization module is excluded without any assumptions on rank-one fibers or cofactor-curve components. A corank-two curve in the associated quintic web has an invertible half-hyperplane twist with vanishing H1; its marked-length bound excludes every conic, quartic and thickening of the permitted support.",
+      "current_proof": "sections/quintic_web_curve_excess.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -3076,7 +3082,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 658,
+  "version": 659,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
