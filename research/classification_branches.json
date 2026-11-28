@@ -2965,6 +2965,12 @@
       "current_result": "Generic cone projections in degree 20 are excluded for all choices of the middle coordinates. The cubic-quintic resultant forces a unique middle by a degree-three bound on its smooth plane secant sextic and a linear syzygy on its ruling scroll. The folded edge has a universal rank-six tangent.",
       "current_proof": "sections/quadric_cone_middle.tex",
       "global_coverage": false
+    },
+    {
+      "id": "INTEGRAL-CONDUCTOR-IDENTIFIABILITY",
+      "current_result": "Both remaining integral generically reduced cofactor-curve models have exactly one nonidentity marked opposite root, including every exceptional parameter. In degree 21 the secant plane sextic, even singular, carries the pulled-back marked divisor of degree 60. The conductor then recovers the octic and its unique normalization module.",
+      "current_proof": "sections/integral_conductor_identifiability.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -3022,7 +3028,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 649,
+  "version": 650,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
