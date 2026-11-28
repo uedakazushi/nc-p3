@@ -1,0 +1,49 @@
+% !TeX root = ../papers/nc-p3.tex
+\section{余長一の跡の欠損と四点直線}
+\label{sec:sectional-trace-defect-one}
+\begin{theorem}\label{thm:sectional-trace-defect-one}
+定理\ref{thm:sectional-cofactor-length}で $d=18$, $HL=5$ とする。
+一般平面八次の正規化 $B$ は有理である。自己準同型曲線 $G$ にはただ一つの非正規点 $z$ があり、
+その極大イデアル $\mathfrak m$ が $B$ 上で切る長さ四の因子は入力の一点に写る。
+核座標はこの因子を一本の直線に閉埋込みする。核曲面の場合は生じない。
+\end{theorem}
+\begin{proof}[標準加群の自己準同型]
+前記の長さ公式から、$G$ 上の対応する階数一層が非可逆となる点はただ一つで、
+そこで、局所環 $T$ と規格化した加群 $M$ について $M=T+Tv$、$M/T=k$ となる。
+詳しくは一般平面八次の各局所環で $1\in M$ と規格化した包含 $T\subset M$ を
+有限半局所環 $T$ の各極大点で局所化する。総余長が一なので、他では可逆である。
+以下この一つの点で計算する。$\mathfrak m v\subset\mathfrak m$ である。
+実際 $\mathfrak m v\subset T$ で、もし単元を含めば $\mathfrak m$ は主イデアル、
+$T$ は正規な離散付値環となり整閉包に入る $v\notin T$ に反する。
+よって $S=T[v]$ では $\mathfrak mS=\mathfrak m$。
+$M^2$ は分数イデアルとして $T$ の標準加群に同型である。
+元のGorenstein平面局所環 $A$ について $(A:T)=I=M M^*=uM^2$ であり、
+有限双対性でこれは $T$ の標準加群となるからである。
+従って $(M^2:M^2)=T$（標準加群の双対性を構造層に適用）。
+$v^2\notin M$ でなければ $M$ は環となり $(M:M)=T$ に反する。
+同様に $v^3\notin M^2$ でなければ $M^2=S$ は環となり標準加群の自己準同型に反する。
+従って $1,v,v^2,v^3$ は $S/\mathfrak m$ で独立で $\operatorname{length}(S/T)\ge3$。
+一方 $G$ の全正規化余長は $3-g(B)$。よって $g(B)=0$、$S$ がここでの正規化環で、
+他の点は全て正規である。$S/\mathfrak m=k[v]/(p_4(v))$ で $p_4$ は四次である。
+$M$ の四つの核座標は $A$ 上で生成し、$S/\mathfrak m$ 上の値は
+規格化の単元倍を除いて $1,v$ の包を生成する。この因子は入力一点に写り、
+核射が与える $[1:v]$ は因子の閉埋込みである。
+
+\end{proof}
+\begin{proof}[核曲面の跡]
+曲面核なら $8\deg(K)\deg(B_{\rm surf}\to K)\le25$（$B_{\rm surf}$ は核グラフの解消）
+により二次または三次への双有理射である。
+三次の場合、定理\ref{thm:cofactor-nineteen-surface}の $AL=5$, $A^2\ge8$ での計算から
+非正規非錐の $\mathbb F_1$, $A=2E+3F$ だけが可能であり、
+基点のない一般切断の正規化が種数一なので矛盾する。
+二次なら滑らかな場合は $(1,4),(2,3)$、錐なら $E+5F,2E+5F$ に限られる。
+後二者のうち各モデルで $A=2L+F$ となる場合の切断は算術種数二であり、
+$\sum m_i^2=4$ の基点解消で下がる種数は $\sum m_i(m_i-1)/2\le1$。
+残る二つのモデルはともに $A^2=8$、基点なし豊富であり、入力射 $f:S_0\to D$ は有限である。
+どちらも $K_{S_0}=-2L$ であり、$M_D\hookrightarrow f_*L$ の有限双対と
+$\mathcal Hom_D(M_D,\omega_D)=M_D(-2)$ から、分数体上の乗法で
+$2L-K_{S_0}-2A$ の非零切断が得られる（定理\ref{thm:kernel-curve-scroll}の跡包含）。
+しかしこの類とnefな $L$ の交点は $4L^2-2AL=8-10=-2$ である。
+\end{proof}
+\path{computations/verify_sectional_trace_defect_one.py} は余長三の局所代数と
+種数・交点の排除を検算する。

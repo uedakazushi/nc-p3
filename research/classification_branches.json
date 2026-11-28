@@ -3055,6 +3055,12 @@
       "current_result": "Scheme degree nineteen is impossible for the cofactor curve of any integral opposite octic in a reduced four-finite regular window, including reducible or thick excess. The finite Stein algebra would force a cubic surface through at least eighteen marks, singular at six of them, contradicting the point bounds for all cubic surface types. Thus the full degree is at most eighteen.",
       "current_proof": "sections/sectional_nineteen_stein_cubics.tex",
       "global_coverage": false
+    },
+    {
+      "id": "SECTIONAL-TRACE-DEFECT-ONE",
+      "current_result": "At scheme degree eighteen and sectional kernel degree five, the sectional normalization must be rational. The endomorphism curve has a unique nonnormal point with colength three; its normalization fiber is a collinear length-four scheme in kernel space supported over a single input point. All surface kernels are excluded.",
+      "current_proof": "sections/sectional_trace_defect_one.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -3112,7 +3118,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 664,
+  "version": 665,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 664,
+  "version": 665,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "217f3b6e402178954d36dd173e28017af6c337be"
+    "source_commit": "030dd35c7c95d6ec4c966fa381385c6c04e0b5fc"
   },
   "generation": {
     "result": "PASS",
-    "scope": "Scheme degree nineteen is impossible for the cofactor curve of any integral opposite octic in a reduced four-finite regular window, including reducible or thick excess. The finite Stein algebra would force a cubic surface through at least eighteen marks, singular at six of them, contradicting the point bounds for all cubic surface types. Thus the full degree is at most eighteen."
+    "scope": "At scheme degree eighteen and sectional kernel degree five, the sectional normalization must be rational. The endomorphism curve has a unique nonnormal point with colength three; its normalization fiber is a collinear length-four scheme in kernel space supported over a single input point. All surface kernels are excluded."
   },
   "checks": [
     {
-      "command": "python computations/verify_sectional_nineteen_stein_cubics.py",
+      "command": "python computations/verify_sectional_trace_defect_one.py",
       "result": "PASS"
     },
     {
@@ -36,7 +36,7 @@
     }
   ],
   "open_mathematics": [
-    "Resolve full scheme degree eighteen, separating sectional kernel degrees five and six using the trace defect, sectional endomorphism curve and finite algebra presentations."
+    "Use the constant trace divisor on a rational quintic kernel to resolve the moving input line and exclude or classify the remaining rank-two ruling quotient."
   ],
   "tex": {
     "result": "PASS",
