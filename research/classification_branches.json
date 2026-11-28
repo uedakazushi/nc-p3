@@ -2497,6 +2497,12 @@
       "current_result": "For every finite Frobenius configuration, even nonreduced, a distinct singular opposite quadratic matrix always has adjugate the symmetric square of four independent cubics. All nonsquare quadratic adjugate factors are impossible, including two planes and the singular vertex of a rank-three cone. The proof bounds local kernel sections on branched covers and eliminates the constant-kernel quadratic contact by its ternary block.",
       "current_proof": "sections/nonsquare_opposite_discriminant.tex",
       "global_coverage": false
+    },
+    {
+      "id": "OPPOSITE-CONTACT-SUPPORT",
+      "current_result": "On every finite Frobenius window with at least ten geometric points, a distinct opposite root must yield a nonzero octic vanishing triply on the configuration. This includes arbitrary embedded multiplicities. A local contact annihilator, the planar Newton polygon bound, and projection from a nonplanar site eliminate all singular matrices there. Octic-free finite edges in this range have at most one regular extension on all components.",
+      "current_proof": "sections/opposite_contact_support.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2554,7 +2560,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 571,
+  "version": 572,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [

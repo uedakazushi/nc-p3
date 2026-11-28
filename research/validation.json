@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 571,
+  "version": 572,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "e7d721ad78291f2656e5cceac604e1520cff2307"
+    "source_commit": "82349be8435e749d1e8c4f3158b23ddb939febbe"
   },
   "generation": {
     "result": "PASS",
-    "scope": "For every finite Frobenius configuration, even nonreduced, a distinct singular opposite quadratic matrix always has adjugate the symmetric square of four independent cubics. All nonsquare quadratic adjugate factors are impossible, including two planes and the singular vertex of a rank-three cone. The proof bounds local kernel sections on branched covers and eliminates the constant-kernel quadratic contact by its ternary block."
+    "scope": "On every finite Frobenius window with at least ten geometric points, a distinct opposite root must yield a nonzero octic vanishing triply on the configuration. This includes arbitrary embedded multiplicities. A local contact annihilator, the planar Newton polygon bound, and projection from a nonplanar site eliminate all singular matrices there. Octic-free finite edges in this range have at most one regular extension on all components."
   },
   "checks": [
     {
-      "command": "python computations/verify_nonsquare_opposite_discriminant.py",
+      "command": "python computations/verify_opposite_contact_support.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Analyze the remaining four cubic sections with pairwise products in the square of the finite-scheme ideal and sharpen octic reconstruction outside the curvilinear locus. Continue the unrestricted regularity and isomorphism analysis on uncovered components."
+    "Study the residual configurations on at most nine sites using contact annihilators and projections from fat sites, and continue unrestricted regularity and component classification."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 990,
+      "nc-p3": 992,
       "plan_ja": 23,
       "notes_ja": 37
     },
