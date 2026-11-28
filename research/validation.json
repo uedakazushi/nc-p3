@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "version": 640,
+  "version": 641,
   "date": "2026-11-28",
   "reviewed_input": {
-    "source_commit": "6bca59ecb82e74afdb8dbc597db364b3dfe7329e"
+    "source_commit": "a8756dc7799fe03e68bdc261d13cd46fde599667"
   },
   "generation": {
     "result": "PASS",
-    "scope": "A smooth quadric kernel image at degree 18 must be a double cover. Both birational bidegrees are excluded: the conic bundle has at most six exceptional inputs against twelve triples, and the defective (3,3) base reduces to a plane quartic inverse with at most four exceptional inputs against thirteen triples."
+    "scope": "No smooth quadric kernel at degree 18: asymmetric double covers violate finite trace duality; symmetric ruling degrees exclude elliptic pencils, and the remaining weak degree-four del Pezzo double cover violates plane evaluation even over its rational double points."
   },
   "checks": [
     {
-      "command": "python computations/verify_cofactor_eighteen_quadric.py",
+      "command": "python computations/verify_cofactor_eighteen_double_quadric.py",
       "result": "PASS"
     },
     {
@@ -36,12 +36,12 @@
     }
   ],
   "open_mathematics": [
-    "Resolve the degree-two kernel cover, quadric cone, singular cubic and non-Du-Val quartic branches together with exceptional and nonintegral cases."
+    "Resolve the degree-18 quadric cone and singular cubic/quartic kernel surfaces, then remaining exceptional and nonintegral windows."
   ],
   "tex": {
     "result": "PASS",
     "pages": {
-      "nc-p3": 1111,
+      "nc-p3": 1113,
       "plan_ja": 25,
       "notes_ja": 41
     },

@@ -2911,6 +2911,12 @@
       "current_result": "A smooth quadric kernel image at degree 18 must be a double cover. Both birational bidegrees are excluded: the conic bundle has at most six exceptional inputs against twelve triples, and the defective (3,3) base reduces to a plane quartic inverse with at most four exceptional inputs against thirteen triples.",
       "current_proof": "sections/cofactor_eighteen_birational_quadric.tex",
       "global_coverage": false
+    },
+    {
+      "id": "COFACTOR-EIGHTEEN-NO-SMOOTH-QUADRIC",
+      "current_result": "No smooth quadric kernel at degree 18: asymmetric double covers violate finite trace duality; symmetric ruling degrees exclude elliptic pencils, and the remaining weak degree-four del Pezzo double cover violates plane evaluation even over its rational double points.",
+      "current_proof": "sections/cofactor_eighteen_double_quadric.tex",
+      "global_coverage": false
     }
   ],
   "presentation_components": {
@@ -2968,7 +2974,7 @@
     ]
   },
   "date": "2026-11-27",
-  "version": 640,
+  "version": 641,
   "finite_point_correspondences": {
     "scope": "All four adjacent point schemes finite; no prescribed opposite rank.",
     "proofs": [
